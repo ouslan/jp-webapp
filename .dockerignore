@@ -1,0 +1,23 @@
+notebooks/
+
+# Ignore all pkl files
+*.pkl
+
+# Ignore all database files
+*.db
+*.sqlite
+*.sqlite3
+*.dbf
+*.db-journal
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore WakaTime log file
+.wakatime-project
+
+# Ignore environment file
+.yaml
+.env

@@ -1,0 +1,15 @@
+name: jp-env
+channels:
+  - conda-forge
+dependencies:
+  - pip=23.3.1
+  - python=3.12
+  - numpy=1.26.4
+  - pandas=2.1.4
+  - scipy=1.11.4
+  - plotly=5.18.0
+  - pytest=8.0.0
+  - ipykernel=6.28.0 
+  - pip:
+      - psycopg2-binary==2.9.9
+      - Django==5.0.3
