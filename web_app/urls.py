@@ -5,6 +5,6 @@ from web_app import urls
 from web_app import views
 
 urlpatterns = [
-    path("", views.signin, name="signin"),
-    path("home/", views.home, name="home"),
+    path("", views.home, name="home"),
+    path("signin/", views.signin, name="signin"),
 ]

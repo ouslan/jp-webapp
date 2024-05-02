@@ -1,4 +1,5 @@
 from django.forms import ModelForm, CharField
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import Order
 from django import forms
@@ -14,7 +15,8 @@ class OrderForm(ModelForm):
 class SignInForm(forms.Form):
     username = forms.CharField(label="Username")
     password = forms.CharField(label="Password", widget=forms.PasswordInput)
-    
+
+class CreateUserForm(UserCreationForm):
     
     def clean_email(self):
         email = self.cleaned_data.get('email')
