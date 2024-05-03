@@ -28,7 +28,7 @@
         <br>
 
         <div>
-            <input name="PRODUCTO BRUTO (EN MILLONES $)" list="PRODUCTO BRUTO (EN MILLONES $)" placeholder="PRODUCTO BRUTO (EN MILLONES $)">
+            <input id="dataInput" name="PRODUCTO BRUTO (EN MILLONES $)" list="PRODUCTO BRUTO (EN MILLONES $)" placeholder="PRODUCTO BRUTO (EN MILLONES $)" onclick="clearInput()">
             <datalist id="PRODUCTO BRUTO (EN MILLONES $)">
                 <option value="PRODUCTO BRUTO (EN MILLONES $)">
                 <option value="INGRESO NETO (EN MILLONES $)">
@@ -129,6 +129,11 @@
         <p class="block">Se supone que esto es la graph 1</p> 
         <p class="block">Se supone que esto es la graph 2</p> 
 
+        <script>
+            function clearInput() {
+                document.getElementById("dataInput").value = "";
+            }
+        </script>
 
 
        
