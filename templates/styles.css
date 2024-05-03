@@ -1,0 +1,23 @@
+
+body {
+    font-family: "Arial", sans-serif; /* Arial font, with sans-serif as fallback */
+}
+
+h1, h2 {
+    font-family: "Times New Roman", serif; /* Times New Roman font for headings */
+}
+
+p {
+    font-family: "Verdana", sans-serif; /* Verdana font for paragraphs */
+}
+
+.custom-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the default text color */
+}
+
+.custom-link:hover {
+    color: blue; /* Change color to blue on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
