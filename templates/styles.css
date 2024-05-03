@@ -1,6 +1,6 @@
 
 body {
-    font-family: "Arial", sans-serif; /* Arial font, with sans-serif as fallback */
+    font-family: "Verdana", sans-serif; /* Verdana font, with sans-serif as fallback */
 }
 
 h1, h2 {
@@ -20,4 +20,12 @@ p {
     color: blue; /* Change color to blue on hover */
     cursor: pointer; /* Change cursor to pointer on hover */
     text-decoration: none; /* Remove underline on hover */
+}
+
+.block {
+    background-color: lightgreen;
+    width: 400px;
+    height: 400px;
+    padding: 100px;
+    margin: 20px;
 }
