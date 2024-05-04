@@ -175,7 +175,7 @@
         <br>
         <br>
         <div>
-            <input id="dataInput" name="PRODUCTO BRUTO (EN MILLONES $)" list="PRODUCTO BRUTO (EN MILLONES $)" placeholder="PRODUCTO BRUTO (EN MILLONES $)" onclick="clearInput()">
+            <input id="dataInput1" name="PRODUCTO BRUTO (EN MILLONES $)" list="PRODUCTO BRUTO (EN MILLONES $)" placeholder="PRODUCTO BRUTO (EN MILLONES $)" onclick="clearInput()">
             <datalist id="PRODUCTO BRUTO (EN MILLONES $)">
                 <option value="PRODUCTO BRUTO (EN MILLONES $)">
                 <option value="INGRESO NETO (EN MILLONES $)">
@@ -320,6 +320,46 @@
                 <option value="INDICE DE PRECIOS AL CONSUMIDOR (DIC 2006=100)">
         </div>
         <br>
+
+
+        <div>
+            <input id="dataInput2" name="Producto bruto corriente" list="Producto bruto corriente" placeholder="Producto bruto corriente" onclick="clearInput()">
+            <datalist id="Producto bruto corriente">
+                <option value="Producto bruto corriente">
+                <option value="Producto bruto constante">
+                <option value="Producto interno bruto corriente">
+                <option value="Producto interno bruto constante">
+                <option value="Ingreso personal corriente">
+                <option value="Ingreso personal constante">
+                <option value="Ingreso personal disponible corriente">
+                <option value="Ingreso personal disponible constante">
+                <option value="Gastos de consumo personal corriente">
+                <option value="Gastos de consumo personal constante">
+                <option value="Artículos duraderos corriente">
+                <option value="Artículos duraderos constante">
+                <option value="Servicios corriente">
+                <option value="Servicios constante">
+                <option value="Gastos de consumo del gobierno corriente">
+                <option value="Gastos de consumo del gobierno constante">
+                <option value="Inversión interna bruta total corriente">
+                <option value="Inversión interna bruta total constante">
+                <option value="Cambio en inventarios corriente">
+                <option value="Cambio en inventarios constante">
+                <option value="Inversión interna bruta de capital fijo corriente">
+                <option value="Inversión interna bruta de capital fijo constante">
+                <option value="Construcción corriente">
+                <option value="Construcción constante">
+                <option value="Maquinaria y equipo corriente">
+                <option value="Maquinaria y equipo constante">
+                <option value="Ventas netas al resto del mundo corriente">
+                <option value="Ventas netas al resto del mundo constantes">
+                <option value="Ventas al resto del mundo corriente">
+                <option value="Ventas al resto del mundo constante">
+                <option value="Compras al resto del mundo corriente">
+                <option value="Compras al resto del mundo constante">
+        </div>
+                
+        <br>
         <br>
         <p class="block">Se supone que esto es la graph 1</p> 
         <p class="block">Se supone que esto es la graph 2</p> 
@@ -327,6 +367,8 @@
         <script>
             function clearInput() {
                 document.getElementById("dataInput").value = "";
+                document.getElementById("dataInput1").value = "";
+                document.getElementById("dataInput2").value = "";
             }
         </script>
 
