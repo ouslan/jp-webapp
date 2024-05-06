@@ -36,4 +36,7 @@ def home(request):
 def macro(request):
     return render(request, "macro.html")
 
+def ciclos_economicos(request):
+    return render(request, "ciclos_economicos.html")
+
 
