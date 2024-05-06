@@ -33,3 +33,7 @@ def signin(request):
 def home(request):
     return render(request, "home.html")
 
+def macro(request):
+    return render(request, "macro.html")
+
+
