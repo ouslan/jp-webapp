@@ -1,18 +1,88 @@
 <!DOCTYPE html>
-
 {% load static %}
 
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Ciclos Económicos</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'ciclos_economicos.css' %}">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Ciclos Económicos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ciclos_economicos.css' %}">
 
-    <body>
-        <header>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <a href="#" class="header-button" onclick="goBack()">
             <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
+        </a>
+    </header>
 
-        </header>
-    </body>
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- TITLE -->
+        <section>
+            <h1>Ciclos Económicos</h1>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section>
+            <p>
+                Se provee una herramienta de trabajo que asiste la observación de los ciclos económicos y 
+                en particular el comportamiento de variables como: índice coincidente, índice de actividad 
+                económica, empleo total, índice de precios, generación de energía eléctrica, consumo de gasolina, 
+                exportaciones, importaciones, índice coincidente de manufactura, empleo en manufactura, nómina 
+                en manufactura, horas trabajadas en manufactura, empleo en construcción, producción de cemento, 
+                ventas de cemento, ventas de materiales de construcción, valor de permisos de construcción, 
+                índice coincidente de turismo, empleo en turismo, registro de hoteles y paradores. Esta 
+                herramienta permite la ilustración gráfica de las series de tiempo para predecir el comportamiento 
+                de la economía a corto plazo. Las series de tiempo pueden incluir componentes cíclicos, estacionales, 
+                aleatorios y de tendencia. Los economistas prestan particular atención al componente cíclico de 
+                las series de tiempo para predecir el comportamiento de la economía a corto plazo. Las cuatro fases 
+                de los ciclos económicos son: (1) la desaceleración (verde), (2) la recesión (violeta), (3) la 
+                recuperación (amarillo) y (4) la expansión (anaranjado).
+            </p>
+        </section>
+
+        <!-- SUBBODY 1 -->
+        <section>
+            <h2>Fases de los Ciclos Económicos</h2>
+<p>
+    Los ciclos económicos tienen cuatro fases: 
+    (1) la desaceleración (verde), 
+    (2) la recesión (violeta), 
+    (3) la recuperación (amarillo) y 
+    (4) la expansión (anaranjado).
+</p>
+
+            
+            <img src="{% static 'ciclos_fases.jpg' %}" alt="ciclos" id="body-image">
+        </section>
+
+        <!-- SUBBODY 2 -->
+        <section>
+            <h2>Instrucciones</h2>
+            <p>
+                1. Para seleccionar la variable que interesa representar gráficamente 
+                debe cursar encima del nombre de la variable continuo al eje vertical (horizontal).
+            </p>
+            <p>
+                2. Si desea comparar el dato de la variable presentada con el dato de 
+                las otras variables disponibles debe cursar encima del par ordenado (el punto en la gráfica).
+            </p>
+            <p>
+                3. También, puede elegir el mes para el cual usted interesa la representación gráfica seleccionando 
+                el botón “Todos los meses”, ubicado debajo del eje horizontal. Nota: La serie que aparece en la 
+                gráfica no es la variable original, es una serie calculada. Esta serie es la diferencia entre 
+                la variable original y la tendencia. Por lo que si la serie original asume valores menores 
+                que la tendencia entonces la serie calculada (lo que aparece en la gráfica) tiene que asumir valores negativos.
+            </p>
+        </section>
+    </main>
+
+</body>
 </html>
