@@ -1,0 +1,9 @@
+body, header {
+    margin: 0;
+    padding: 0;
+}
+
+#header-image {
+    width: 100vw;
+    height: auto;
+}
