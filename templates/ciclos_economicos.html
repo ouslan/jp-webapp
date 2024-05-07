@@ -6,20 +6,12 @@
     <meta charset="UTF-8">
     <title>Ciclos Económicos</title>
     <link rel="stylesheet" type="text/css" href="{% static 'ciclos_economicos.css' %}">
-
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
 </head>
 
 <body>
     <!-- HEADER -->
     <header>
-        <a href="#" class="header-button" onclick="goBack()">
-            <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
-        </a>
+        <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
     </header>
 
     <!-- MAIN CONTENT -->
@@ -50,17 +42,20 @@
 
         <!-- SUBBODY 1 -->
         <section>
-            <h2>Fases de los Ciclos Económicos</h2>
-<p>
-    Los ciclos económicos tienen cuatro fases: 
-    (1) la desaceleración (verde), 
-    (2) la recesión (violeta), 
-    (3) la recuperación (amarillo) y 
-    (4) la expansión (anaranjado).
-</p>
+            <h2>
+                Fases de los Ciclos Económicos
+            </h2>
 
+            <p>
+                Los ciclos económicos tienen cuatro fases: 
+                (1) la desaceleración (verde), 
+                (2) la recesión (violeta), 
+                (3) la recuperación (amarillo) y 
+                (4) la expansión (anaranjado).
+            </p>
             
             <img src="{% static 'ciclos_fases.jpg' %}" alt="ciclos económicos" id="body-image">
+
         </section>
 
         <!-- SUBBODY 2 -->

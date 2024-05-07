@@ -8,20 +8,6 @@ header {
     padding: 0;
 }
 
-#header-image {
-    width: 100vw;
-    height: auto;
-}
-
-#body-image {
-    width: 60vw;
-    margin-top: 4vw;
-    margin-bottom: 4vw;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
 h1 {
     font-size: 3em;
     font-family: Arial, Helvetica, sans-serif;
@@ -48,9 +34,17 @@ p {
     line-height: 1.5;
 }
 
-.header-button {
-    display: inline-block;
-    text-decoration: none; /* Remove underline from link */
-    color: #333;
-    font-weight: bold;
+/* ID */
+#header-image {
+    width: 100vw;
+    height: auto;
+}
+
+#body-image {
+    width: 60vw;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
