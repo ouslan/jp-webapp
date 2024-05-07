@@ -1,4 +1,9 @@
-body, header {
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
     margin: 0;
     padding: 0;
 }
@@ -6,4 +11,46 @@ body, header {
 #header-image {
     width: 100vw;
     height: auto;
+}
+
+#body-image {
+    width: 60vw;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 4vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 4vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+p {
+    display: block;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    line-height: 1.5;
+}
+
+.header-button {
+    display: inline-block;
+    text-decoration: none; /* Remove underline from link */
+    color: #333;
+    font-weight: bold;
 }
