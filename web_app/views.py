@@ -33,10 +33,14 @@ def signin(request):
 def home(request):
     return render(request, "home.html")
 
+
 def macro(request):
     return render(request, "macro.html")
+
 
 def ciclos_economicos(request):
     return render(request, "ciclos_economicos.html")
 
 
+def indicadores(request):
+    return render(request, "indicadores.html")

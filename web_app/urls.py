@@ -9,4 +9,5 @@ urlpatterns = [
     path("signin/", views.signin, name="signin"),
     path("centro-de-datos-macroeconomicos/", views.macro, name="macro"),
     path("ciclos-economicos/", views.ciclos_economicos, name="ciclos_economicos"),
+    path("indicadores-mensuales/", views.indicadores, name="indicadores"),
 ]
