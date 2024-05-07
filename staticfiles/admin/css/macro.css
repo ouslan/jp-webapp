@@ -1,15 +1,36 @@
 
-body {
-    font-family: "Verdana", sans-serif; /* Verdana font, with sans-serif as fallback */
+body, header {
+    font-family: Arial, Helvetica, sans-serif; /* Arial font, with Helvetica and sans-serif as fallback */
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2 {
-    font-family: "Times New Roman", serif; /* Times New Roman font for headings */
+h1 {
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 4vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
 }
 
-p {
-    font-family: "Verdana", sans-serif; /* Verdana font for paragraphs */
+h2 {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2.5vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
 }
+
+p, div {
+    display: block;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    line-height: 1.5;
+}
+
 
 .custom-link {
     text-decoration: none; /* Remove underline */
@@ -31,10 +52,7 @@ p {
 }
 
 
-body, header {
-    margin: 0;
-    padding: 0;
-}
+
 
 #header-image {
     width: 100vw;
@@ -42,11 +60,3 @@ body, header {
 
 }
 
-h1 {
-    margin-top: 15px;
-    margin-left: 20px;
-}
-
-p, h2, a, div{
-    margin-left: 20px;
-}

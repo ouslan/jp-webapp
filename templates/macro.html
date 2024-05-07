@@ -8,29 +8,38 @@
     <head>
         <title>Centro de Datos Macroeconómicos</title>
 
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+
     </head>
     <body>
-        <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
+    <!-- HEADER -->
+    <header>
+        <a href="#" class="header-button" onclick="goBack()">
+            <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
+        </a>
+    </header>
 
         <h1>Centro de Datos Macroeconómicos</h1>
         
-        <p>La Junta de Planificación, a través de su Programa de Planificación Económica y Social, publica información sobre las variables macroeconómicas de Puerto Rico. Se incluyen variables como: Producto Bruto, Producto no Bruto, inversión en construcción, gasto de consumo e ingreso neto.</p>
-        <br>
-        <br>
-        <p>Para información adicional puede comunicarse vía email <a href="mailto:diaz_a@jp.pr.gov" class="custom-link">diaz_a@jp.pr.gov</a> y <a href="mailto:perez_m@jp.pr.gov" class="custom-link">perez_m@jp.pr.gov</a>.</p>
+        <p>
+            La Junta de Planificación, a través de su Programa de Planificación Económica y Social, publica información sobre las variables macroeconómicas de Puerto Rico. Se incluyen variables como: Producto Bruto, Producto no Bruto, inversión en construcción, gasto de consumo e ingreso neto.
+            Para información adicional puede comunicarse vía email <a href="mailto:diaz_a@jp.pr.gov" class="custom-link">diaz_a@jp.pr.gov</a> y <a href="mailto:perez_m@jp.pr.gov" class="custom-link">perez_m@jp.pr.gov</a>.
+        </p>
 
-        <br>
         <h2> Documentos</h2>
-        <br>
-        <a href="https://jp.pr.gov/wp-content/uploads/2024/03/Series-Historicas-Seleccionadas-2001-2023p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 2001-2023)</a>
 
-        <br>
-        <a href="https://jp.pr.gov/wp-content/uploads/2021/09/Series-historicas-1950-al-2011p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 1950-2011)</a>
-        <br>
-        <br>
+        <p>
+            <a href="https://jp.pr.gov/wp-content/uploads/2024/03/Series-Historicas-Seleccionadas-2001-2023p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 2001-2023)</a>
+            <br>
+            <a href="https://jp.pr.gov/wp-content/uploads/2021/09/Series-historicas-1950-al-2011p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 1950-2011)</a>
+        </p>
+
         <h2>Gráficas</h2>
-        <br>
-        <br>
+
 
         <div>
             <input id="dataInput" name="PRODUCTO BRUTO (EN MILLONES $)" list="PRODUCTO BRUTO (EN MILLONES $)" placeholder="PRODUCTO BRUTO (EN MILLONES $)" onclick="clearInput()">
