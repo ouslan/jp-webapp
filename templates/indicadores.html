@@ -2,6 +2,21 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'indicadores.css' %}">
 
-<div>Grupo Trabajador Ajustado Estacionalmente</div>
+<body>
+    <header>
+        <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
+    </header>
+</body>
+
+<h1>Encusta de Trabajador-Ajustada Estacionalmente</h1>
+<h2>Índice de Actividad Económica del Banco de Desarrollo Económico</h2>
+
+{% block content %}
+    <div class="graph">
+        {{ indicadores|safe }}
+    </div>
+{% endblock %}
+
+
 
 
