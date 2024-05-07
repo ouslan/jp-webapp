@@ -39,4 +39,14 @@ body, header {
 #header-image {
     width: 100vw;
     height: auto;
+
+}
+
+h1 {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+p, h2, a, div{
+    margin-left: 20px;
 }
