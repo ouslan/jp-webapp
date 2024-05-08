@@ -17,14 +17,27 @@ h1 {
 
 h2 {
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 3vw;
+    margin-left: 2vw;
     margin-top: 3vw;
     margin-bottom: 5px;
     font-size: 25px;
 }
 
-.graph {
-    display: flex;
-    height: 100%;
-    margin-left: 3vw;
+p {
+    display: block;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-left: 2vw;
+    margin-right: 8vw;
+    line-height: 1.5;
 }
+
+.graph-container {
+    margin-top: 10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+
