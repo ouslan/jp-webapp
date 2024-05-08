@@ -8,7 +8,7 @@
     </header>
 </body>
 
-<h1>Encusta de Trabajador-Ajustada Estacionalmente</h1>
+<h1>Índice De Actividad Económica</h1>
 
 <h2>Índice de Actividad Económica del Banco de Desarrollo Económico</h2>
 
@@ -20,11 +20,30 @@
     a lo largo del tiempo y una comprensión más completa de la dinámica económica.
 </p>
 
-{% block content %}
+{% block content%}
     <div class="graph-container">
         {{ indicadores|safe }}
     </div>
 {% endblock %}
+
+<h1>Encuesta De Grupo Trabajador-Ajustada Estacionalmente</h1>
+
+<h2>Grupo Trabajador</h2>
+
+<p>La Encuesta de Grupo Trabajador Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally 
+    Adjusted, es un instrumento utilizado para medir la fuerza laboral en una determinada área geográfica. Se ajusta 
+    estacionalmente para eliminar las variaciones predecibles que ocurren regularmente en ciertos momentos del año, 
+    como las relacionadas con las estaciones o festividades, lo que permite una comparación más precisa del rendimiento 
+    laboral a lo largo del tiempo. Los datos se presentan en miles de personas y se pueden analizar en años fiscales, 
+    años calendario y años de referencia para evaluar tendencias y cambios en la fuerza laboral.
+</p>
+
+{% block content1 %}
+    <div class="graph-container">
+        {{ indicadores2|safe }}
+    </div>
+{% endblock %}
+
 
 
 

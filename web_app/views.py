@@ -57,8 +57,8 @@ def indicadores(request):
            11, 4, 2, 1],
         mode='lines+markers',
         name='test',
-        line=dict(color='firebrick', width=4),
-        marker=dict(size=15, color='LightSkyBlue'),
+        line=dict(color='#FF2525', width=3),
+        marker=dict(size=10, color='#00CDFF'),
         hoverinfo='text',
     ))
 
@@ -107,6 +107,7 @@ def indicadores(request):
     )
     
     indicadores_html = fig.to_html()
+    indicadores_html2 = fig.to_html()
 
-    context = {'indicadores': indicadores_html}
+    context = {'indicadores': indicadores_html, 'indicadores2': indicadores_html2}
     return render(request, "indicadores.html", context)
