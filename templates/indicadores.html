@@ -12,6 +12,7 @@
     </header>
 </body>
 
+{% comment %} BLOCK 1 {% endcomment %}
 <h1>Índice De Actividad Económica</h1>
 
 <h2>Índice de Actividad Económica del Banco de Desarrollo Económico</h2>
@@ -24,15 +25,18 @@
     a lo largo del tiempo y una comprensión más completa de la dinámica económica.
 </p>
 
-{% block content%}
+{% block content %}
     <div class="graph-container">
         {{ indicadores|safe }}
     </div>
 {% endblock %}
 
+
+
+{% comment %} BLOCK 2 {% endcomment %}
 <h1>Encuesta De Grupo Trabajador-Ajustada Estacionalmente</h1>
 
-<h2>Grupo Trabajador</h2>
+<h2>Grupo Trabajador (Miles de Personas)</h2>
 
 <p>La Encuesta de Grupo Trabajador Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally 
     Adjusted, es un instrumento utilizado para medir la fuerza laboral en una determinada área geográfica. Se ajusta 
@@ -50,5 +54,313 @@
 
 
 
+{% comment %} BLOCK 3 {% endcomment %}
+<h1>Encuesta De Grupo Trabajador</h1>
+
+<h2>Población Civil No-Institucional (Miles de Personas)</h2>
+
+<p>La Encuesta de Grupo Trabajador, también conocida como Labor Force Survey, es un método utilizado para recopilar datos 
+    sobre la fuerza laboral en una región específica. Mide la población civil no institucionalizada, es decir, personas 
+    en edad laboral y no confinadas en instituciones como prisiones o cuarteles militares. Los datos se expresan típicamente 
+    en miles de personas y pueden analizarse en diferentes períodos de tiempo, como años fiscales, años calendario y años 
+    de referencia, para comprender las tendencias y cambios en la población activa.
+</p>
+
+{% block content2 %}
+    <div class="graph-container">
+        {{ indicadores3|safe }}
+    </div>
+{% endblock %}
 
 
+
+{% comment %} BLOCK 4 {% endcomment %}
+<h1>Encuesta De Establecimiento-Ajustados Estacionalmente</h1>
+
+<h2>Empleo No Agrícola: Todas las Industrias (Miles de Personas)</h2>
+
+<p>La Encuesta de Establecimientos Ajustada Estacionalmente, también conocida como Establishments Survey - Seasonally Adjusted, 
+    es un instrumento utilizado para recopilar datos sobre el empleo no agrícola en todas las industrias en una región determinada. 
+    Se ajusta estacionalmente para eliminar las fluctuaciones regulares previsibles que pueden ocurrir en ciertos momentos del año, 
+    permitiendo una comparación más precisa del empleo a lo largo del tiempo. Los datos se presentan en miles de personas y se 
+    pueden analizar en varios períodos, como años fiscales, años calendario y años de referencia, para comprender las tendencias 
+    y cambios en el empleo no agrícola.
+</p>
+
+{% block content3 %}
+    <div class="graph-container">
+        {{ indicadores4|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 5 {% endcomment %}
+<h1>Encuestas De Establecimiento</h1>
+
+<h2>Empleo No Agrícola: Todas las Industrias (Miles de Personas)</h2>
+
+<p>La Encuesta de Establecimientos, también conocida como Establishments Survey, es un instrumento utilizado para recopilar datos 
+    sobre el empleo no agrícola en todas las industrias en una región determinada. Estos datos se refieren a la cantidad de personas 
+    empleadas en sectores que no están relacionados con la agricultura. Se expresan típicamente en miles de personas y se pueden 
+    analizar en diferentes períodos de tiempo, como años fiscales, años calendario y años de referencia, lo que permite una comprensión 
+    detallada de las tendencias y cambios en el empleo no agrícola a lo largo del tiempo.
+</p>
+
+{% block content4 %}
+    <div class="graph-container">
+        {{ indicadores5|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 6 {% endcomment %}
+<h1>Indicadores De Turismo</h1>
+
+<h2>Total de Registros en Hoteles y Paradores</h2>
+
+<p>Los Indicadores de Turismo que incluyen el "Total de Registros en Hoteles y Paradores" representan la cantidad total de registros 
+de huéspedes en hoteles y paradores durante un período específico. Estos registros pueden abarcar diversas métricas, como el número 
+de noches reservadas, la ocupación por habitación o el número total de huéspedes. Los datos se pueden presentar en diferentes períodos 
+de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite un análisis detallado de la actividad turística en 
+una región particular a lo largo del tiempo.
+</p>
+
+{% block content5 %}
+    <div class="graph-container">
+        {{ indicadores6|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 7 {% endcomment %}
+<h1>Indicadores De Construcción</h1>
+
+<h2>Número de Unidades de Vivienda Vendidas en Puerto Rico</h2>
+
+<p>Los Indicadores de Construcción que incluyen el "Número de Unidades de Vivienda Vendidas en Puerto Rico" ofrecen información crucial 
+    sobre la demanda de vivienda en la región. Estos indicadores reflejan el total de unidades de vivienda vendidas durante un período 
+    determinado, proporcionando una visión detallada de la actividad del mercado inmobiliario. Los datos se pueden presentar en diferentes 
+    períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite un análisis exhaustivo de las tendencias 
+    y cambios en la demanda de vivienda a lo largo del tiempo en Puerto Rico.
+</p>
+
+{% block content6 %}
+    <div class="graph-container">
+        {{ indicadores7|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 8 {% endcomment %}
+<h1>Indicadores De Energía Eléctrica</h1>
+
+<h2>Generación de Energía Eléctrica (Millones de Kilovatios / Hora)</h2>
+
+<p>Los Indicadores de Energía Eléctrica que incluyen la "Generación de Energía Eléctrica" representan la cantidad total de electricidad 
+    producida en un área específica durante un período determinado. Estos indicadores proporcionan información vital sobre la capacidad 
+    de generación y el consumo de energía eléctrica. Los datos se expresan típicamente en millones de kilovatios-hora (kWh) y se pueden 
+    analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite un seguimiento 
+    detallado de la producción y el suministro de electricidad a lo largo del tiempo.
+</p>
+
+{% block content7 %}
+    <div class="graph-container">
+        {{ indicadores8|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 9 {% endcomment %}
+<h1>Indicadores De Ingresos Netos</h1>
+
+<h2>Ingreso Neto al Fondo General-Miles de Dólares</h2>
+
+<p>Los Indicadores de Ingresos Netos, que comprenden el "Ingreso Neto al Fondo General", ofrecen una medida crucial de los ingresos financieros 
+    disponibles para el fondo general en un área específica. Estos indicadores representan la cantidad neta de ingresos generados después de 
+    deducir los gastos y las obligaciones financieras correspondientes. Se expresan típicamente en miles de dólares y se pueden analizar en 
+    diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que proporciona una visión detallada de la 
+    situación financiera y la capacidad de financiamiento del fondo general a lo largo del tiempo.
+</p>
+
+{% block content8 %}
+    <div class="graph-container">
+        {{ indicadores9|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 10 {% endcomment %}
+<h1>Indicadores De Comercio Exterior</h1>
+
+<h2>Total de Exportaciones-Miles de Dólares</h2>
+
+<p>Los Indicadores de Comercio Exterior que incluyen el "Total de Exportaciones" ofrecen una visión fundamental de las actividades comerciales 
+    internacionales de un país o región. Representan la cantidad total de bienes y servicios vendidos fuera del país o región en un período 
+    determinado, expresada típicamente en miles de dólares. Estos indicadores pueden analizarse en diferentes períodos de tiempo, como años 
+    fiscales, años calendario y períodos acumulados, lo que permite un seguimiento detallado de la evolución de las exportaciones a lo largo 
+    del tiempo y su impacto en la economía local o nacional.
+</p>
+
+{% block content9 %}
+    <div class="graph-container">
+        {{ indicadores10|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 11 {% endcomment %}
+<h1>Indicadores De Ventas Al Detalle (A Precios Corrientes)</h1>
+
+<h2>Total de Ventas al Detalle</h2>
+
+<p>Los Indicadores de Ventas al Detalle (a precios corrientes) reflejan la suma total de ventas realizadas en el sector minorista de una 
+    economía durante un período específico. Estas ventas incluyen todas las transacciones comerciales en los puntos de venta minorista y se 
+    expresan en términos monetarios actuales, sin ajustes por inflación. Los datos se pueden analizar en diferentes períodos de tiempo, como 
+    años fiscales, años calendario y períodos acumulados, lo que proporciona información valiosa sobre la actividad económica en el sector 
+    minorista y su contribución a la economía en general.
+</p>
+
+{% block content10 %}
+    <div class="graph-container">
+        {{ indicadores11|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 12 {% endcomment %}
+<h1>Indicadores de Quiebras</h1>
+
+<h2>Número Total de Quiebras en Puerto Rico</h2>
+
+<p>Los Indicadores de Quiebras, que comprenden el "Número Total de Quiebras en Puerto Rico", ofrecen una visión de la salud financiera y 
+    económica de la región. Estos indicadores representan el recuento total de procesos de quiebra que se han registrado en un período específico. 
+    Se pueden analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite una evaluación 
+    exhaustiva de las tendencias y cambios en la actividad de quiebra en Puerto Rico a lo largo del tiempo. Estos datos son importantes para 
+    comprender la estabilidad financiera de las empresas y los individuos en la región.
+</p>
+
+{% block content11 %}
+    <div class="graph-container">
+        {{ indicadores12|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 13 {% endcomment %}
+<h1>Índice De Precios Al Consumidor 2006 = 100</h1>
+
+<h2>Índice de Precios al Consumidor - Todos los Grupos</h2>
+
+<p>El Índice de Precios al Consumidor (IPC) es una medida estadística que examina los cambios promedio en los precios pagados por los consumidores por una 
+    canasta representativa de bienes y servicios a lo largo del tiempo. En este caso, el IPC está basado en el año 2006 como base (con 2006 = 100), lo que 
+    significa que el índice se calcula comparando los precios actuales con los precios en 2006.
+
+    Este índice incluye todos los grupos de bienes y servicios, lo que significa que abarca una amplia gama de productos y servicios que los consumidores 
+    típicamente adquieren. Se puede analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite 
+    evaluar los cambios en el nivel general de precios y la inflación a lo largo del tiempo.
+</p>
+
+{% block content12 %}
+    <div class="graph-container">
+        {{ indicadores13|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 14 {% endcomment %}
+<h1>Precios Promedios Mensuales De Gasolina Al Detal En Puerto Rico (Centavos Por Litro Y Por Galón)</h1>
+
+<h2>Promedio General (centavos por litro)</h2>
+
+<p>El "Promedio General (centavos por litro)" representa el costo promedio en centavos por litro de un determinado producto, 
+    como combustible, alimentos líquidos u otras mercancías que se venden en unidades de volumen. Este indicador es útil para 
+    rastrear cambios en los precios de productos líquidos y compararlos a lo largo del tiempo.
+
+    Se puede analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, 
+    lo que facilita la comprensión de las tendencias de precios y la inflación en el costo de bienes y servicios líquidos 
+    en un área específica.
+</p>
+
+{% block content13 %}
+    <div class="graph-container">
+        {{ indicadores14|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 15 {% endcomment %}
+<h1>Indicadores De Trasportación</h1>
+
+<h2>Movimiento de pasajeros en el aeropuerto Luis Muñoz Marín (SJU)</h2>
+
+<p>Los Indicadores de Transportación que incluyen el "Movimiento de pasajeros en el aeropuerto Luis Muñoz Marín (SJU)" ofrecen 
+    información esencial sobre el flujo de viajeros que utilizan ese aeropuerto en un período dado. Estos indicadores proporcionan 
+    datos sobre la cantidad total de pasajeros que llegan, parten o transitan por el aeropuerto durante un período específico.
+
+    Los datos se pueden analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, 
+    lo que permite una evaluación detallada de las tendencias de tráfico aéreo y la actividad económica relacionada con el transporte 
+    en la región. Este indicador es fundamental para comprender la demanda de servicios de transporte aéreo y su impacto en la 
+    economía local.
+</p>
+
+{% block content14 %}
+    <div class="graph-container">
+        {{ indicadores15|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 16 {% endcomment %}
+<h1>Índices Coincidentes De Actividad Económica</h1>
+
+<h2>Índice Coincidente de Actividad Económica de la Junta de Planificación</h2>
+
+<p>Los Índices Coincidentes de Actividad Económica, como el "Índice Coincidente de Actividad Económica de la Junta de Planificación", 
+    son herramientas utilizadas para evaluar el estado general de la economía en una región específica. Estos índices incorporan una 
+    variedad de indicadores económicos clave, como la producción industrial, el empleo, las ventas minoristas y otros, para proporcionar 
+    una imagen compuesta de la actividad económica en tiempo real.
+
+    El índice coincidente es especialmente útil porque refleja la situación económica actual y se actualiza regularmente. Se puede 
+    analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos promediados, lo que permite un seguimiento 
+    de las tendencias económicas a lo largo del tiempo y una comprensión más completa de la dinámica económica de la región. Este índice 
+    es valioso para los responsables de la formulación de políticas, los analistas económicos y otros interesados en la salud económica 
+    de Puerto Rico.
+</p>
+
+{% block content15 %}
+    <div class="graph-container">
+        {{ indicadores16|safe }}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} BLOCK 17 {% endcomment %}
+<h1>Encuesta De Establecimientos Manufactura</h1>   
+
+<h2>Manufactura (Miles de Personas)</h2>
+
+<p>La Encuesta de Establecimientos Manufactureros proporciona datos sobre el empleo en el sector manufacturero. El número de 
+    empleados en este sector se expresa en miles de personas y se puede analizar en diferentes períodos de tiempo, incluidos años 
+    fiscales, años naturales y períodos promediados. Esto permite comprender la evolución del empleo en la industria manufacturera 
+    a lo largo del tiempo y evaluar su contribución a la economía en general. Estos datos son cruciales para comprender la salud y 
+    la dinámica del sector manufacturero en una región específica.
+</p>
+
+{% block content16 %}
+    <div class="graph-container">
+        {{ indicadores17|safe }}
+    </div>
+{% endblock %}  
