@@ -41,14 +41,13 @@ p {
 }
 
 .dropdown {
-    height: 20vw;
-    width: 40vw;
+    max-width: 30vw;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 1vw;
     margin-top: 3vw;
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -58,7 +57,7 @@ p {
 
 .select {
     background: white;
-    color: black;
+    color: "#E6E6E6";
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,13 +69,13 @@ p {
 }
 
 .select-clicked {
-    border: 2px solid black;
-    box-shadow: 0 0 0 0.8em black;
+    border: 2px solid "#E6E6E6";
+    box-shadow: 0 0 0 0.8em "#E6E6E6";
 }
 
 .select:hover {
-    background: black;
-    color: white;
+    background: #E6E6E6;
+    color: black;
 }
 
 .caret {
@@ -95,11 +94,11 @@ p {
 .menu {
     list-style: none;
     padding: 0.2em 0.5em;
-    background: black;
-    border: 1px solid black;
+    background: #E6E6E6;
+    border: 1px solid #E6E6E6;
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
     border-radius: 0.5em;
-    color:white;
+    color:black;
     position: absolute;
     top: 3em;
     left: 50%;
@@ -119,11 +118,11 @@ p {
 }
 
 .menu li:hover {
-    background: black;
+    background: #E6E6E6;
 }
 
 .active {
-    background: black;
+    background: #E6E6E6;
 }
 
 .menu-open {
