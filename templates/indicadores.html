@@ -12,6 +12,7 @@
     </header>
 </body>
 
+
 {% comment %} BLOCK 1 {% endcomment %}
 <h1>Índice De Actividad Económica</h1>
 
@@ -36,7 +37,18 @@
 {% comment %} BLOCK 2 {% endcomment %}
 <h1>Encuesta De Grupo Trabajador-Ajustada Estacionalmente</h1>
 
-<h2>Grupo Trabajador (Miles de Personas)</h2>
+<div class="dropdown">
+    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span class="selected">Grupo Trabajador (Miles de Personas)</span>
+        <div class="caret"></div>
+    </div>
+    <ul class="menu">
+        <li>Empleo Total (Miles de Personas)</li>
+        <li>Desempleo (Miles de Personas)</li>
+        <li class="active">Grupo Trabajador (Miles de Personas)</li>
+        <li>Tasa de Desempleo (porciento)</li>
+    </ul>
+</div>  
 
 <p>La Encuesta de Grupo Trabajador Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally 
     Adjusted, es un instrumento utilizado para medir la fuerza laboral en una determinada área geográfica. Se ajusta 
@@ -364,3 +376,45 @@ una región particular a lo largo del tiempo.
         {{ indicadores17|safe }}
     </div>
 {% endblock %}  
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            const select = dropdown.querySelector('.select');
+            const caret = dropdown.querySelector('.caret');
+            const menu = dropdown.querySelector('.menu');
+            const options = dropdown.querySelectorAll('.menu li');
+            const selected = dropdown.querySelector('.selected');
+
+            select.addEventListener('click', () => {
+                menu.classList.toggle('menu-open');
+                caret.classList.toggle('caret-rotate');
+            });
+
+            options.forEach(option => {
+                option.addEventListener('click', () => {
+                    selected.innerText = option.innerText;
+                    menu.classList.remove('menu-open');
+                    caret.classList.remove('caret-rotate');
+                    options.forEach(option => {
+                        option.classList.remove('active');
+                    });
+                    option.classList.add('active');
+                });
+            });
+        });
+
+        document.addEventListener('click', function (event) {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.contains(event.target)) {
+                    const menu = dropdown.querySelector('.menu');
+                    const caret = dropdown.querySelector('.caret');
+                    menu.classList.remove('menu-open');
+                    caret.classList.remove('caret-rotate');
+                }
+            });
+        });
+    });
+</script>
