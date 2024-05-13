@@ -41,10 +41,11 @@ p {
 }
 
 .dropdown {
-    max-width: 50vw;
+    max-width: auto;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 1vw;
+    margin-right: 1vw;
     margin-top: 3vw;
     margin-bottom: 5px;
     font-size: 25px;
@@ -56,6 +57,7 @@ p {
 }
 
 .select {
+    max-height: 20px;
     background: white;
     color: "#E6E6E6";
     display: flex;
