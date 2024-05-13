@@ -69,7 +69,29 @@
 {% comment %} BLOCK 3 {% endcomment %}
 <h1>Encuesta De Grupo Trabajador</h1>
 
-<h2>Población Civil No-Institucional (Miles de Personas)</h2>
+<div class="dropdown">
+    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span class="selected">Población Civil No-Institucional (Miles de Personas)</span>
+        <div class="caret"></div>
+    </div>
+    <ul class="menu">
+        <li>Grupo Trabajador (Miles de Personas)</li>
+        <li>Empleo Total (Miles de Personas)</li>
+        <li class="active">Población Civil No-Institucional (Miles de Personas)</li>
+        <li>Empleo Agrícola (Miles de Personas)</li>
+        <li>Empleo en Construcción (Miles de Personas)</li>
+        <li>Empleo en Manufactura (Miles de Personas)</li>
+        <li>Empleo en Comercio (Miles de Personas)</li>
+        <li>Empleo en Finanzas, Seguros y Bienes Raíces (Miles de Personas)</li>
+        <li>Empleo en Transportación, Comunicaciones y Utilidades Públicas (Miles de Personas)</li>
+        <li>Empleo en Servicios (Miles de Personas)</li>
+        <li>Empleo en Administración Pública (Miles de Personas)</li>
+        <li>Empleo por Cuenta Propia (Miles de Personas)</li>
+        <li>Desempleo (Miles de Personas)</li>
+        <li>Tasa de Desempleo (porciento)</li>
+        <li>Tasa de Participación (porciento)</li>    
+    </ul>
+</div>  
 
 <p>La Encuesta de Grupo Trabajador, también conocida como Labor Force Survey, es un método utilizado para recopilar datos 
     sobre la fuerza laboral en una región específica. Mide la población civil no institucionalizada, es decir, personas 

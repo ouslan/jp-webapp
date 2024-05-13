@@ -41,13 +41,13 @@ p {
 }
 
 .dropdown {
-    max-width: 30vw;
+    max-width: 50vw;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 1vw;
     margin-top: 3vw;
     margin-bottom: 5px;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -92,6 +92,7 @@ p {
 }
 
 .menu {
+    font-size: 18px;
     list-style: none;
     padding: 0.2em 0.5em;
     background: #E6E6E6;
@@ -101,13 +102,13 @@ p {
     color:black;
     position: absolute;
     top: 3em;
-    left: 50%;
-    width: 100%;
+    left: 70%;
     transform: translateX(-50%);
     opacity: 0;
     display: none;
     transition: 0.2s;
     z-index: 1;
+    width: 30vw;
 }
 
 .menu li {
@@ -129,4 +130,5 @@ p {
     display: block;
     opacity: 1;
 }
+
 
