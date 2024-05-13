@@ -44,10 +44,10 @@ p {
     max-width: auto;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
     margin-top: 3vw;
-    margin-bottom: 5px;
+    margin-bottom: 1vw;
     font-size: 25px;
     font-weight: bold;
 }
@@ -83,6 +83,8 @@ p {
 .caret {
     width: 0;
     height: 0;
+    margin-left: 25px;
+    margin-right: auto;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 6px solid black;
