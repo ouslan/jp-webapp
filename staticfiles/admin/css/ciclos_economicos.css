@@ -34,6 +34,26 @@ p {
     line-height: 1.5;
 }
 
+/* Dropdown select styling */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 0.5em;
+    font-size: .9em;
+    cursor: pointer;
+    border-radius: 0.25em;
+    position: relative;
+}
+
+/* Style for when the dropdown is open */
+select:focus {
+    outline: none;
+    border-color: #495057;
+}
+
 /* ID */
 #header-image {
     width: 100vw;
@@ -49,97 +69,27 @@ p {
     display: block;
 }
 
-.dropdown {
-    max-width: 30%;
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    margin-top: 3vw;
-    margin-bottom: 1vw;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.dropdown * {
-    box-sizing: border-box;
-}
-
-.select {
-    max-height: 20px;
-    background: white;
-    color: "#E6E6E6";
+#dropdowns-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    border: 2px solid white;
-    border-radius: 0.5em;
-    padding: 1em;
-    cursor: pointer;
-    transition: background 0.3s;
+    margin-bottom: 20px; /* Add margin for spacing */
 }
 
-.select-clicked {
-    border: 2px solid "#E6E6E6";
-    box-shadow: 0 0 0 0.8em "#E6E6E6";
+#variableX {
+    margin-left: 2rem;
 }
 
-.select:hover {
-    background: #E6E6E6;
-    color: black;
+#variableY {
+    margin-left: 2rem;
 }
 
-.caret {
-    width: 0;
-    height: 0;
-    margin-left: 25px;
-    margin-right: auto;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid black;
-    transition: 0.3s;
+#timeRange {
+    margin-left: 2rem;
 }
 
-.caret-rotate {
-    transform: rotate(180deg);
-}
-
-.menu {
-    font-size: 15px;
-    list-style: none;
-    padding: 0.2em 0.5em;
-    background: #E6E6E6;
-    border: 1px solid #E6E6E6;
-    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-    border-radius: 0.5em;
-    color:black;
-    position: absolute;
-    top: 1.5em;
-    left: 60%;
-    transform: translateX(-50%);
-    opacity: 0;
-    display: none;
-    transition: 0.2s;
-    z-index: 1;
-    width: 24vw;
-}
-
-.menu li {
-    padding: 0.7em 0.5em;
-    margin: 0.3em 0;
-    border-radius: 0.5em;
-    cursor: pointer;
-}
-
-.menu li:hover {
-    background: #CBCBCB;
-}
-
-.active {
-    background: #CBCBCB;
-}
-
-.menu-open {
-    display: block;
-    opacity: 1;
-}
+.graph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
