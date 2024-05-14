@@ -113,6 +113,8 @@ p {
     transition: 0.2s;
     z-index: 1;
     width: 30vw;
+    max-height: 250px;
+    overflow-y: auto;
 }
 
 .menu li {
