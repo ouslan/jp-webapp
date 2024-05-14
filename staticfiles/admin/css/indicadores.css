@@ -137,13 +137,18 @@ p {
     opacity: 1;
 }
 
-.form button {
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container .form button {
     border: none;
     background: none;
     color: #8b8ba7;
   }
   /* styling of whole input container */
-  .form {
+.container .form {
     --timing: 0.3s;
     --width-of-input: 200px;
     --height-of-input: 40px;
@@ -163,7 +168,7 @@ p {
     background: var(--input-bg, #fff);
     background-color: #E6E6E6;
     margin-top: 1vw;
-    margin-left: 81vw;
+    margin-left: 75vw;
   }
   /* styling of Input */
   .input {
@@ -218,6 +223,67 @@ p {
   .form svg {
     width: 17px;
     margin-top: 3px;
+  }
+
+.container .burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+    margin-left: 3vw;
+  }
+  
+  .burger input {
+    display: none;
+  }
+  
+  .burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: rgb(182, 182, 182);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+  }
+  
+  .burger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .burger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
   }
 
 
