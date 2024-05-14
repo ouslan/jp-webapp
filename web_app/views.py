@@ -123,6 +123,7 @@ def indicadores(request):
     indicadores_html15 = fig.to_html()
     indicadores_html16 = fig.to_html()
     indicadores_html17 = fig.to_html()
+    indicadores_html18 = fig.to_html()
 
     context = {'indicadores': indicadores_html, 
                'indicadores2': indicadores_html2, 
@@ -141,5 +142,6 @@ def indicadores(request):
                'indicadores15': indicadores_html15,
                'indicadores16': indicadores_html16,
                'indicadores17': indicadores_html17,
+               'indicadores18': indicadores_html18,
                }
     return render(request, "indicadores.html", context)
