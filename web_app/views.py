@@ -43,7 +43,6 @@ def ciclos_economicos(request):
            2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
         y=[14, 55, 44, 13, 29, 20, 45, 39, 29, 10, 50, 60, 39, 36, 49, 18, 49, 50, 69, 18, 13,
            11, 4, 2, 1],
-        labels={'x': 'Time', 'y': 'Values'},
     )
 
     fig.add_trace(go.Scatter(
@@ -64,7 +63,6 @@ def ciclos_economicos(request):
         hovermode='x',
         
         xaxis = dict(
-            title = 'Año',
             color = 'black',
             showgrid=True,
             showticklabels=True,
@@ -78,7 +76,6 @@ def ciclos_economicos(request):
             ),
         ),
         yaxis = dict(
-            title='Índice',
             color='black',
             showline=True,
             showgrid=True,
@@ -92,14 +89,6 @@ def ciclos_economicos(request):
                 color='black'
             ),
         ),
-        legend={
-            'orientation': 'h',
-            'xanchor': 'center', 'x': 0.5, 'y': -0.3},
-                font = dict(
-                family='Arial',
-                size=12,
-                color='black'
-            )
     )
     
     ciclos_economicos = fig.to_html()

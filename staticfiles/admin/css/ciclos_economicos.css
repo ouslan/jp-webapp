@@ -80,17 +80,26 @@ select:focus {
     margin-left: 2rem;
 }
 
-#variableY {
-    margin-left: 2rem;
+.container #variableY {
+    transform: rotate(270deg);
 }
 
 #timeRange {
     margin-left: 2rem;
 }
-
+  
+/* Container for the graph */
 .graph-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding-bottom: 4rem;
-  }
+    flex-direction: column;
+    width: 100%;
+    position: relative; /* Add relative positioning */
+    padding-bottom: 10rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+}
