@@ -164,6 +164,40 @@ def indicadores(request):
     
     indicadores_html = fig.to_html()
     indicadores_html2 = fig.to_html()
+    indicadores_html3 = fig.to_html()
+    indicadores_html4 = fig.to_html()
+    indicadores_html5 = fig.to_html()
+    indicadores_html6 = fig.to_html()
+    indicadores_html7 = fig.to_html()
+    indicadores_html8 = fig.to_html()
+    indicadores_html9 = fig.to_html()
+    indicadores_html10 = fig.to_html()
+    indicadores_html11 = fig.to_html()
+    indicadores_html12 = fig.to_html()
+    indicadores_html13 = fig.to_html()
+    indicadores_html14 = fig.to_html()
+    indicadores_html15 = fig.to_html()
+    indicadores_html16 = fig.to_html()
+    indicadores_html17 = fig.to_html()
+    indicadores_html18 = fig.to_html()
 
-    context = {'indicadores': indicadores_html, 'indicadores2': indicadores_html2}
+    context = {'indicadores': indicadores_html, 
+               'indicadores2': indicadores_html2, 
+               'indicadores3': indicadores_html3, 
+               'indicadores4': indicadores_html4, 
+               'indicadores5': indicadores_html5, 
+               'indicadores6': indicadores_html6,
+               'indicadores7': indicadores_html7,
+               'indicadores8': indicadores_html8,
+               'indicadores9': indicadores_html9,
+               'indicadores10': indicadores_html10,
+               'indicadores11': indicadores_html11,
+               'indicadores12': indicadores_html12,
+               'indicadores13': indicadores_html13,
+               'indicadores14': indicadores_html14,
+               'indicadores15': indicadores_html15,
+               'indicadores16': indicadores_html16,
+               'indicadores17': indicadores_html17,
+               'indicadores18': indicadores_html18,
+               }
     return render(request, "indicadores.html", context)
