@@ -34,6 +34,26 @@ p {
     line-height: 1.5;
 }
 
+/* Dropdown select styling */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 0.5em;
+    font-size: .9em;
+    cursor: pointer;
+    border-radius: 0.25em;
+    position: relative;
+}
+
+/* Style for when the dropdown is open */
+select:focus {
+    outline: none;
+    border-color: #495057;
+}
+
 /* ID */
 #header-image {
     width: 100vw;
@@ -47,4 +67,39 @@ p {
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+
+#dropdowns-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+#variableX {
+    margin-left: 2rem;
+}
+
+.container #variableY {
+    transform: rotate(270deg);
+}
+
+#timeRange {
+    margin-left: 2rem;
+}
+  
+/* Container for the graph */
+.graph-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative; /* Add relative positioning */
+    padding-bottom: 10rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
 }
