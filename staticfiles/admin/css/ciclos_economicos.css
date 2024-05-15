@@ -68,36 +68,31 @@ select:focus {
     display: block;
 }
 
-#dropdowns-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-#variableX {
-    margin-left: 2rem;
-}
-
-.container #variableY {
+#variableY {
+    left: 8%;
     transform: rotate(270deg);
 }
 
+#variableX {
+    top: 8%;
+}
+
 #timeRange {
-    margin-left: 2rem;
+    top: 0;
+    right: 0;
 }
   
-.graph-container {
+.container {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
     position: relative;
-    padding-bottom: 10rem;
+    padding-bottom: 0.5rem;
 }
 
-.container {
+.graph-container {
     display: flex;
     align-items: center;
-    margin-left: 2vw;
+    margin-left: 8vw;
 }
