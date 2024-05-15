@@ -5,27 +5,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>Ciclos Económicos</title>
+    
     <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
     <link rel="icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
     <link rel="icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
     <link rel="icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
     <link rel="icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'ciclos_economicos.css' %}"
-    />
+    <link rel="stylesheet" type="text/css" href="{% static 'ciclos_economicos.css' %}" />
   </head>
 
   <body>
     <!-- HEADER -->
     <header>
-      <img
-        src="{% static 'header_banner.png' %}"
-        alt="banner"
-        id="header-image"
-      />
+      <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image" />
     </header>
 
     <!-- MAIN CONTENT -->
@@ -69,11 +62,7 @@
           (4) la expansión (anaranjado).
         </p>
 
-        <img
-          src="{% static 'ciclos_fases.jpg' %}"
-          alt="ciclos económicos"
-          id="body-image"
-        />
+        <img src="{% static 'ciclos_fases.jpg' %}" alt="ciclos económicos" id="body-image" />
       </section>
 
       <!-- SUBBODY 2 -->
@@ -146,6 +135,7 @@
           <option value="registro_hoteles_ct">Registro de hoteles (CT)</option>
           <option value="registro_paradores_ct">Registro de paradores (CT)</option>
         </select>
+        
         {{ ciclos_economicos|safe }}
       </section>
 
@@ -178,6 +168,9 @@
           <option value="registro_paradores_ct">Registro de paradores (CT)</option>
         </select>
       </section>
+
+      <footer>
+      </footer>
     </main>
   </body>
 </html>
