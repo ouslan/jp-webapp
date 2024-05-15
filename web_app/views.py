@@ -58,12 +58,13 @@ def ciclos_economicos(request):
     ))
 
     fig.update_layout(
+        margin=dict(l=0, r=1, t=25, b=0),
         plot_bgcolor='#F7F7F7',
         titlefont=dict(size=16, color='rgb(20, 24, 54)', family='Arial'),
         hovermode='x',
         
         xaxis = dict(
-            color = 'black',
+            color = 'white',
             showgrid=True,
             showticklabels=True,
             linecolor='black',
@@ -76,7 +77,7 @@ def ciclos_economicos(request):
             ),
         ),
         yaxis = dict(
-            color='black',
+            color='white',
             showline=True,
             showgrid=True,
             showticklabels=True,
