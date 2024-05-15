@@ -316,20 +316,19 @@ p {
     color:black;
     position: absolute;
     top: 5.8em;
-    left: 20%;
+    left: 21%;
     transform: translateX(-50%);
     opacity: 0;
     display: none;
     transition: 0.2s;
     z-index: 1;
-    width: 25vw;
+    width: 28vw;
 }
 
-.burger_menu li {
+.burger_menu a {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0.7em 0.5em;
     border-radius: 0.5em;
-    margin-left: 2vw;
     cursor: pointer;
 }
 
@@ -338,8 +337,22 @@ p {
     opacity: 1;
 }
 
-.burger_menu li:hover {
+.burger_menu a:hover {
+    width: auto;
+    transition: 0.3s;
+    font-size: 23px;
     background: #CBCBCB;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border: none;
+    background: none;
+    flex-direction: column;
+    display: flex; 
+    text-decoration: none;
+    color: black;
 }
 
 
