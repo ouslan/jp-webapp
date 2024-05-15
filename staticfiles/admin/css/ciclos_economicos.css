@@ -48,7 +48,6 @@ select {
     position: relative;
 }
 
-/* Style for when the dropdown is open */
 select:focus {
     outline: none;
     border-color: #495057;
@@ -73,7 +72,7 @@ select:focus {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 20px; /* Add margin for spacing */
+    margin-bottom: 20px;
 }
 
 #variableX {
@@ -88,13 +87,12 @@ select:focus {
     margin-left: 2rem;
 }
   
-/* Container for the graph */
 .graph-container {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    position: relative; /* Add relative positioning */
+    position: relative;
     padding-bottom: 10rem;
 }
 
