@@ -13,12 +13,18 @@
 </body>
 
 <div class="container">
-    <label class="burger" for="burger">
-        <input type="checkbox" id="burger">
+    <div class="burger" onclick="toggleBurgerMenu()">
         <span></span>
         <span></span>
         <span></span>
-    </label>
+    </div>
+    <ul class="burger_menu">
+        <li>Home</li>
+        <li>Centro De Datos Macroeconómicos</li>
+        <li>Ciclos Económicos</li>
+        <li>Indicadores Mensuales</li>
+        <li>Datos Demográficos</li>
+    </ul>
 
     <form class="form">
         <button>
@@ -782,4 +788,28 @@
             });
         });
     });
+
+    function toggleBurgerMenu() {
+        const burgerMenu = document.querySelector('.burger_menu');
+        burgerMenu.classList.toggle('burger_menu-open');
+    }
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        const burgerOptions = document.querySelectorAll('.burger_menu li');
+    
+        burgerOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const burgerMenu = document.querySelector('.burger_menu');
+                burgerMenu.classList.remove('burger_menu-open');
+            });
+        });
+    
+        document.addEventListener('click', function (event) {
+            const burger = document.querySelector('.burger');
+            const burgerMenu = document.querySelector('.burger_menu');
+            if (!burger.contains(event.target) && !burgerMenu.contains(event.target)) {
+                burgerMenu.classList.remove('burger_menu-open');
+            }
+        });
+    });    
 </script>

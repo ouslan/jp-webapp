@@ -225,7 +225,7 @@ p {
     margin-top: 3px;
   }
 
-.container .burger {
+  .container .burger {
     position: relative;
     width: 40px;
     height: 30px;
@@ -285,6 +285,62 @@ p {
     top: 28px;
     left: 5px;
   }
+
+  .burger_select {
+    max-height: 20px;
+    background: white;
+    color: "#E6E6E6";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.burger_select-clicked {
+    border: 2px solid "#E6E6E6";
+    box-shadow: 0 0 0 0.8em "#E6E6E6";
+}
+
+.burger_menu {
+    font-size: 18px;
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #E6E6E6;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color:black;
+    position: absolute;
+    top: 5.8em;
+    left: 20%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+    width: 25vw;
+}
+
+.burger_menu li {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.7em 0.5em;
+    border-radius: 0.5em;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+
+.burger_menu-open {
+    display: block;
+    opacity: 1;
+}
+
+.burger_menu li:hover {
+    background: #CBCBCB;
+}
 
 
 
