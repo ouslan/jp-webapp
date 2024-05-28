@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-
-
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'macro.css' %}">
 
 <html lang="es">
     <head>
+        <meta charset="UTF-8" />
         <title>Centro de Datos Macroeconómicos</title>
 
-        <script>
-            function goBack() {
-                window.history.back();
-            }
-        </script>
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
+        <link rel="stylesheet" type="text/css" href="{% static 'macro.css' %}">
     </head>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
     <body>
     <!-- HEADER -->
     <header>
