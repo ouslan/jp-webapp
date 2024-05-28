@@ -47,7 +47,8 @@
 
 <h2>Índice de Actividad Económica del Banco de Desarrollo Económico</h2>
 
-<p>El Índice de Actividad Económica del Banco de Desarrollo Económico es una medida que evalúa 
+<p>
+    El Índice de Actividad Económica del Banco de Desarrollo Económico es una medida que evalúa 
     el nivel de actividad económica en una región específica. Este índice puede basarse en diversos 
     indicadores económicos, como el empleo, la producción industrial, las ventas minoristas y otros 
     factores relevantes para determinar el estado general de la economía. Se calcula para períodos 
@@ -68,19 +69,20 @@
 <h1>Encuesta De Grupo Trabajador-Ajustada Estacionalmente</h1>
 
 <div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+    <div class="select">
         <span class="selected">Grupo Trabajador</span>
         <div class="caret"></div>
     </div>
     <ul class="menu">
-        <li class="active">Grupo Trabajador</li>
-        <li>Empleo Total</li>
-        <li>Desempleo</li>
-        <li>Tasa de Desempleo (porciento)</li>
+        <li data-value="grupo-trabajador" class="active">Grupo Trabajador</li>
+        <li data-value="empleo-total">Empleo Total</li>
+        <li data-value="desempleo">Desempleo</li>
+        <li data-value="tasa-desempleo">Tasa de Desempleo (porciento)</li>
     </ul>
-</div>  
+</div>   
 
-<p>La Encuesta de Grupo Trabajador Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally 
+<p id="description">
+    La Encuesta de Grupo Trabajador Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally 
     Adjusted, es un instrumento utilizado para medir la fuerza laboral en una determinada área geográfica. Se ajusta 
     estacionalmente para eliminar las variaciones predecibles que ocurren regularmente en ciertos momentos del año, 
     como las relacionadas con las estaciones o festividades, lo que permite una comparación más precisa del rendimiento 
@@ -809,6 +811,95 @@
             const burgerMenu = document.querySelector('.burger_menu');
             if (!burger.contains(event.target) && !burgerMenu.contains(event.target)) {
                 burgerMenu.classList.remove('burger_menu-open');
+            }
+        });
+    });    
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropdown = document.querySelector('.dropdown');
+        const select = dropdown.querySelector('.select');
+        const menu = dropdown.querySelector('.menu');
+        const options = menu.querySelectorAll('li');
+        const selectedText = select.querySelector('.selected');
+        const description = document.getElementById('description');
+        const graphContainer = document.getElementById('graph-container');
+
+        const grupo_trabajador_GT = `
+            La Encuesta de Grupo Trabajador Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally Adjusted,
+            es un instrumento utilizado para medir la fuerza laboral en una determinada área geográfica. Se ajusta estacionalmente para
+            eliminar las variaciones predecibles que ocurren regularmente en ciertos momentos del año, como las relacionadas con las
+            estaciones o festividades, lo que permite una comparación más precisa del rendimiento laboral a lo largo del tiempo.
+            Los datos se presentan en miles de personas y se pueden analizar en años fiscales, años calendario y años de referencia
+            para evaluar tendencias y cambios en la fuerza laboral.
+        `;
+
+        const empleo_total_GT = `
+            La Encuesta de Grupo Trabajador - Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally Adjusted, es 
+            una herramienta crucial para analizar la dinámica del empleo en una economía. En esta encuesta, se examina el Empleo Total, 
+            expresado en miles de personas. Este dato está ajustado estacionalmente para eliminar las variaciones predecibles debido a factores 
+            como las estaciones del año o festividades, lo que proporciona una visión más clara de las tendencias subyacentes en el mercado 
+            laboral. Este indicador es esencial para comprender la salud y la dirección del empleo en la economía.
+        `;
+
+        const desempleo_GT = `
+            La Encuesta de Grupo Trabajador - Ajustada Estacionalmente, comúnmente referida como Labor Force Survey - Seasonally Adjusted, 
+            es una herramienta fundamental para comprender la dinámica del desempleo en una economía. Este estudio analiza el número de 
+            personas desempleadas, expresado en miles. Los datos están ajustados estacionalmente para eliminar las variaciones predecibles 
+            debido a factores como las estaciones del año o festividades, lo que proporciona una evaluación más precisa de las tendencias 
+            subyacentes en el mercado laboral. Este indicador es crucial para evaluar la salud y la dirección del mercado laboral y la 
+            economía en su conjunto.
+        `;
+
+        const tasa_desempleo_GT = `
+            La Encuesta de Grupo Trabajador - Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally Adjusted, 
+            ofrece una visión detallada de la Tasa de Desempleo, expresada en porcentaje. Estos datos son ajustados estacionalmente 
+            para eliminar fluctuaciones predecibles relacionadas con factores como las estaciones del año o festividades. Esto permite
+            una evaluación más precisa de las tendencias subyacentes en el mercado laboral. La Tasa de Desempleo es un indicador clave 
+            que proporciona información sobre la salud general del mercado laboral y la economía, ayudando a guiar políticas y decisiones
+            empresariales.
+        `;
+    
+    
+        const data = {
+            'grupo-trabajador': {
+                description: grupo_trabajador_GT,
+                graph: '<!-- Graph content for Grupo Trabajador -->'
+            },
+            'empleo-total': {
+                description: empleo_total_GT,
+                graph: '<!-- Graph content for Empleo Total -->'
+            },
+            'desempleo': {
+                description: desempleo_GT,
+                graph: '<!-- Graph content for Desempleo -->'
+            },
+            'tasa-desempleo': {
+                description: tasa_desempleo_GT,
+                graph: '<!-- Graph content for Tasa de Desempleo -->'
+            }
+        };
+    
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove active class from all options
+                options.forEach(option => option.classList.remove('active'));
+                // Add active class to clicked option
+                this.classList.add('active');
+                // Update the selected text
+                selectedText.textContent = this.textContent;
+                // Close the menu
+                menu.classList.remove('open');
+    
+                // Update the description and graph based on selected option
+                const value = this.getAttribute('data-value');
+                description.textContent = data[value].description;
+                graphContainer.innerHTML = data[value].graph;
+            });
+        });
+    
+        document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target)) {
+                menu.classList.remove('open');
             }
         });
     });    
