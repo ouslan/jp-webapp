@@ -1,33 +1,57 @@
 <!DOCTYPE html>
-
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'macro.css' %}">
 
 <html lang="es">
     <head>
+        <meta charset="UTF-8" />
         <title>Centro de Datos Macroeconómicos</title>
 
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
+
+        <link rel="stylesheet" type="text/css" href="{% static 'macro.css' %}">
     </head>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function clearInput() {
+            document.getElementById("dataInput").value = "";
+            document.getElementById("dataInput1").value = "";
+            document.getElementById("dataInput2").value = "";
+        }
+    </script>
+
     <body>
+    <!-- HEADER -->
+    <header>
+        <a href="#" class="header-button" onclick="goBack()">
+            <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
+        </a>
+    </header>
+
         <h1>Centro de Datos Macroeconómicos</h1>
         
-        La Junta de Planificación, a través de su Programa de Planificación Económica y Social, publica información sobre las variables macroeconómicas de Puerto Rico. Se incluyen variables como: Producto Bruto, Producto no Bruto, inversión en construcción, gasto de consumo e ingreso neto.
-        <br>
-        <br>
-        <p>Para información adicional puede comunicarse vía email <a href="mailto:diaz_a@jp.pr.gov" class="custom-link">diaz_a@jp.pr.gov</a> y <a href="mailto:perez_m@jp.pr.gov" class="custom-link">perez_m@jp.pr.gov</a>.</p>
+        <p>
+            La Junta de Planificación, a través de su Programa de Planificación Económica y Social, publica información sobre las variables macroeconómicas de Puerto Rico. Se incluyen variables como: Producto Bruto, Producto no Bruto, inversión en construcción, gasto de consumo e ingreso neto.
+            Para información adicional puede comunicarse vía email <a href="mailto:diaz_a@jp.pr.gov" class="custom-link">diaz_a@jp.pr.gov</a> y <a href="mailto:perez_m@jp.pr.gov" class="custom-link">perez_m@jp.pr.gov</a>.
+        </p>
 
-        <br>
         <h2> Documentos</h2>
-        <br>
-        <a href="https://jp.pr.gov/wp-content/uploads/2024/03/Series-Historicas-Seleccionadas-2001-2023p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 2001-2023)</a>
 
-        <br>
-        <a href="https://jp.pr.gov/wp-content/uploads/2021/09/Series-historicas-1950-al-2011p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 1950-2011)</a>
-        <br>
-        <br>
+        <p>
+            <a href="https://jp.pr.gov/wp-content/uploads/2024/03/Series-Historicas-Seleccionadas-2001-2023p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 2001-2023)</a>
+            <br>
+            <a href="https://jp.pr.gov/wp-content/uploads/2021/09/Series-historicas-1950-al-2011p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 1950-2011)</a>
+        </p>
+
         <h2>Gráficas</h2>
-        <br>
-        <br>
+
 
         <div>
             <input id="dataInput" name="PRODUCTO BRUTO (EN MILLONES $)" list="PRODUCTO BRUTO (EN MILLONES $)" placeholder="PRODUCTO BRUTO (EN MILLONES $)" onclick="clearInput()">
@@ -322,7 +346,7 @@
                 <option value="INDICE DE PRECIOS AL CONSUMIDOR (DIC 2006=100)">
         </div>
         <br>
-        Los dos selection box de arriba corresponden al graph 1
+        <p>Los dos selection box de arriba corresponden al graph 1</p>
         <p class="block">Se supone que esto es la graph 1</p> 
 
 
@@ -371,14 +395,52 @@
         los dos selection bars de arriba corresponden al graph 2
         <p class="block">Se supone que esto es la graph 2</p> 
 
-        <script>
-            function clearInput() {
-                document.getElementById("dataInput").value = "";
-                document.getElementById("dataInput1").value = "";
-                document.getElementById("dataInput2").value = "";
-            }
-        </script>
 
-
-       
+        <footer>
+            <h1>Contáctenos</h1>
+            <div class="footer-container">
+                <div class="left-container">
+                    <h2>Oficiales de Información <br> (Ley 141-2019)</h2>
+                    <p>
+                        Sr. Edgardo Vázquez Rivera <br>
+                        Secretario Oficina de Secretaría <br>
+                        <a href="mailto:Vazquez_e@jp.pr.gov" class="custom-link">Vazquez_e@jp.pr.gov</a> <br>
+                        787 723-6200 ext. 16637 <br><br>
+        
+                        Plan. Erika Rivera Felicié <br>
+                        Ayudante Especial <br>
+                        <a href="mailto:ivera_e1@jp.pr.gov" class="custom-link">ivera_e1@jp.pr.gov</a> <br><br>
+        
+                        Lcda Aida Silver Cintrón <br>
+                        Abogada Oficina Asuntos Legales <br>
+                        <a href="mailto:Silver_A@jp.pr.gov" class="custom-link">Silver_A@jp.pr.gov</a> <br>
+                        787 723-6200 ext. 16016
+                    </p>
+                    <h2>Oficina de Datos PRITS</h2>
+                    <p>
+                        Carlos Castillo Domena <br>
+                        Director Oficina de Administración Interna <br>
+                        <a href="mailto:castillo_r@jp.pr.gov" class="custom-link">castillo_r@jp.pr.gov</a> <br>
+                        787 723-6200 ext. 16019 <br><br>
+                        <a href="https://jppr.sharepoint.com/sites/BibliotecaDigital" class="custom-link">BDV (Uso interno)</a>
+                    </p>
+                </div>
+                <div class="right-container">
+                    <h2><strong>Dirección Postal</strong></h2>
+                    <p>
+                        PO Box 4119 <br>
+                        San Juan P.R. 00940-1119 <br>
+                        Tel: (787) 723-6200 (Cuadro)<br>
+                        <h2><strong>Dirección Física</strong></h2>
+                        <p>
+                            Centro Gubernamental<br>
+                            Roberto Sánchez Vilella<br>
+                            Ave. De Diego, Pda 22, <br>
+                            Santurce<br>
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
