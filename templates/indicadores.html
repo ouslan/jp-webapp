@@ -1,934 +1,1079 @@
 <!DOCTYPE html>
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'indicadores.css' %}">
-<head>
-    <meta charset="UTF-8">
-    <title>Índice de Actividad Económica</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
-    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
-    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
-    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
-    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
-</head>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Índice de Actividad Económica</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
-<body>
-    <header>
-        <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
-    </header>
-</body>
+    </head>
 
-<div class="container">
-    <div class="burger" onclick="toggleBurgerMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+    <body>
+        <header>
+            <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
+        </header>
+    </body>
+
+    <div class="container">
+        <div class="burger" onclick="toggleBurgerMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="burger_menu">
+            <a href='/'>Home</a>
+            <a href='centro-de-datos-macroeconomicos/'>Centro De Datos Macroeconómicos</a>
+            <a href='ciclos-economicos/'>Ciclos Económicos</a>
+            <a href='indicadores-mensuales/'>Indicadores Mensuales</a>
+            <a>Datos Demográficos</a>
+        </ul>
+
+        <form class="form">
+            <button>
+                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <input class="input" placeholder="Type your text" required="" type="text">
+            <button class="reset" type="reset">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </form>
     </div>
-    <ul class="burger_menu">
-        <a href='/'>Home</a>
-        <a href='centro-de-datos-macroeconomicos/'>Centro De Datos Macroeconómicos</a>
-        <a href='ciclos-economicos/'>Ciclos Económicos</a>
-        <a href='indicadores-mensuales/'>Indicadores Mensuales</a>
-        <a>Datos Demográficos</a>
-    </ul>
-
-    <form class="form">
-        <button>
-            <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
-                <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-        </button>
-        <input class="input" placeholder="Type your text" required="" type="text">
-        <button class="reset" type="reset">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
-    </form>
-</div>
 
 
-{% comment %} BLOCK 1 {% endcomment %}
-<h1>Índice De Actividad Económica</h1>
+    {% comment %} BLOCK 1 {% endcomment %}
+    <h1>Índice De Actividad Económica</h1>
 
-<h2>Índice de Actividad Económica del Banco de Desarrollo Económico</h2>
+    <h2>Índice de Actividad Económica del Banco de Desarrollo Económico</h2>
 
-<p>
-    El Índice de Actividad Económica del Banco de Desarrollo Económico es una medida que evalúa 
-    el nivel de actividad económica en una región específica. Este índice puede basarse en diversos 
-    indicadores económicos, como el empleo, la producción industrial, las ventas minoristas y otros 
-    factores relevantes para determinar el estado general de la economía. Se calcula para períodos 
-    de años fiscales, años calendario y años de referencia, lo que permite un análisis comparativo 
-    a lo largo del tiempo y una comprensión más completa de la dinámica económica.
-</p>
+    <p>
+        El Índice de Actividad Económica del Banco de Desarrollo Económico es una medida que evalúa 
+        el nivel de actividad económica en una región específica. Este índice puede basarse en diversos 
+        indicadores económicos, como el empleo, la producción industrial, las ventas minoristas y otros 
+        factores relevantes para determinar el estado general de la economía. Se calcula para períodos 
+        de años fiscales, años calendario y años de referencia, lo que permite un análisis comparativo 
+        a lo largo del tiempo y una comprensión más completa de la dinámica económica.
+    </p>
 
-{% block content %}
-    <div class="graph-container">
-        {{ indicadores|safe }}
+    {% block content %}
+        <div class="graph-container">
+            {{ indicadores|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 2 {% endcomment %}
+    {% comment %} (Miles de Personas) {% endcomment %}
+    <h1>Encuesta De Grupo Trabajador-Ajustada Estacionalmente</h1>
+
+    <div class="dropdown dropdown-block-2">
+        <div class="select">
+            <span class="selected">Grupo Trabajador</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li data-value="grupo-trabajador" class="active">Grupo Trabajador</li>
+            <li data-value="empleo-total">Empleo Total</li>
+            <li data-value="desempleo">Desempleo</li>
+            <li data-value="tasa-desempleo">Tasa de Desempleo (porciento)</li>
+        </ul>
+    </div>   
+
+    <p id="description-block-2">
+        La Encuesta de Grupo Trabajador Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally 
+        Adjusted, es un instrumento utilizado para medir la fuerza laboral en una determinada área geográfica. Se ajusta 
+        estacionalmente para eliminar las variaciones predecibles que ocurren regularmente en ciertos momentos del año, 
+        como las relacionadas con las estaciones o festividades, lo que permite una comparación más precisa del rendimiento 
+        laboral a lo largo del tiempo. Los datos se presentan en miles de personas y se pueden analizar en años fiscales, 
+        años calendario y años de referencia para evaluar tendencias y cambios en la fuerza laboral.
+    </p>
+
+    {% block content1 %}
+        <div class="graph-container">
+            {{ indicadores2|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 3 {% endcomment %}
+    {% comment %} (Miles de Personas) {% endcomment %}
+    <h1>Encuesta De Grupo Trabajador</h1>
+
+    <div class="dropdown dropdown-block-3">
+        <div class="select">
+            <span class="selected">Población Civil No-Institucional</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li data-value="poblacion-civil-GT" class="active">Población Civil No-Institucional</li>
+            <li data-value="grupo-trabajador-GT">Grupo Trabajador</li>
+            <li data-value="empleo-total-GT">Empleo Total</li>
+            <li data-value="empleo-agricola-GT">Empleo Agrícola</li>
+            <li data-value="empleo-construccion-GT">Empleo en Construcción</li>
+            <li data-value="empleo-manufactura-GT">Empleo en Manufactura</li>
+            <li data-value="empleo-comercio-GT">Empleo en Comercio</li>
+            <li data-value="empleo-finanzas-GT">Empleo en Finanzas, Seguros y Bienes Raíces</li>
+            <li data-value="empleo-transportacion-GT">Empleo en Transportación, Comunicaciones y Utilidades Públicas</li>
+            <li data-value="empleo-servicios-GT">Empleo en Servicios</li>
+            <li data-value="empleo-administracion-GT">Empleo en Administración Pública</li>
+            <li data-value="empleo-cuenta-GT">Empleo por Cuenta Propia</li>
+            <li data-value="desempleo-GT">Desempleo</li>
+            <li data-value="tasa-desempleo-GT">Tasa de Desempleo (porciento)</li>
+            <li data-value="tasa-participacion-GT">Tasa de Participación (porciento)</li>
+        </ul>
+    </div>  
+
+    <p id="description-block-3">
+        La Encuesta de Grupo Trabajador, también conocida como Labor Force Survey, es un método utilizado para recopilar datos 
+        sobre la fuerza laboral en una región específica. Mide la población civil no institucionalizada, es decir, personas 
+        en edad laboral y no confinadas en instituciones como prisiones o cuarteles militares. Los datos se expresan típicamente 
+        en miles de personas y pueden analizarse en diferentes períodos de tiempo, como años fiscales, años calendario y años 
+        de referencia, para comprender las tendencias y cambios en la población activa.
+    </p>
+
+    {% block content2 %}
+        <div class="graph-container">
+            {{ indicadores3|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 4 {% endcomment %}
+    {% comment %} (Miles de Personas) {% endcomment %}
+    <h1>Encuesta De Establecimiento-Ajustados Estacionalmente</h1>
+
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Empleo No Agrícola: Todas las Industrias</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Empleo No Agrícola: Todas las Industrias</li>
+            <li>Empleo No Agrícola: Minería, Tala y Construcción</li>
+            <li>Empleo No Agrícola: Manufactura</li>
+            <li>Empleo en Comercio, Transportación y Utilidades</li>
+            <li>Empleo en Comercio al Por Mayor</li>
+            <li>Empleo en Comercio al Detalle</li>
+            <li>Empleo en Información</li>
+            <li>Empleo en Actividades Financieras</li>
+            <li>Empleo en Finanzas y Seguros</li>
+            <li>Empleo en Bienes Raíces, Alquiler y Arrendamiento</li>
+            <li>Empleo en Servicios Profesionales y Comerciales</li>
+            <li>Empleo en Servicios Educativos y de Salud</li>
+            <li>Empleo en Servicios Educativos</li>
+            <li>Empleo en Recreación y Alojamiento</li>
+            <li>Empleo en Hospederías y Restaurantes</li>
+            <li>Empleo en Otros Servicios</li>
+            <li>Empleo en Gobierno</li>
+            <li>Empleo en Gobierno Federal</li>
+            <li>Empleo en Gobierno Estatal</li>
+            <li>Empleo en Gobierno Municipal</li>
+        </ul>
+    </div> 
+
+    <p>La Encuesta de Establecimientos Ajustada Estacionalmente, también conocida como Establishments Survey - Seasonally Adjusted, 
+        es un instrumento utilizado para recopilar datos sobre el empleo no agrícola en todas las industrias en una región determinada. 
+        Se ajusta estacionalmente para eliminar las fluctuaciones regulares previsibles que pueden ocurrir en ciertos momentos del año, 
+        permitiendo una comparación más precisa del empleo a lo largo del tiempo. Los datos se presentan en miles de personas y se 
+        pueden analizar en varios períodos, como años fiscales, años calendario y años de referencia, para comprender las tendencias 
+        y cambios en el empleo no agrícola.
+    </p>
+
+    {% block content3 %}
+        <div class="graph-container">
+            {{ indicadores4|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 5 {% endcomment %}
+    {% comment %} (Miles de Personas) {% endcomment %}
+    <h1>Encuestas De Establecimiento</h1>
+
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Empleo No Agrícola: Todas las Industrias</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Empleo No Agrícola: Todas las Industrias</li>
+            <li>Minería, Tala de Árboles y Construcción</li>
+            <li>Manufactura</li>
+            <li>Comercio, Transportación y Utilidades</li>
+            <li>Información</li>
+            <li>Actividades Financieras</li>
+            <li>Servicios Profesionales y Comerciales</li>
+            <li>Servicios Educativos y de Salud</li>
+            <li>Recreación y Alojamiento</li>
+            <li>Recreación y Alojamiento</li>
+            <li>Recreación y Alojamiento</li>
+            <li>Gobierno Federal</li>
+            <li>Gobierno Estatal</li>
+            <li>Gobierno Municipal</li>     
+        </ul>
     </div>
-{% endblock %}
+
+    <p>La Encuesta de Establecimientos, también conocida como Establishments Survey, es un instrumento utilizado para recopilar datos 
+        sobre el empleo no agrícola en todas las industrias en una región determinada. Estos datos se refieren a la cantidad de personas 
+        empleadas en sectores que no están relacionados con la agricultura. Se expresan típicamente en miles de personas y se pueden 
+        analizar en diferentes períodos de tiempo, como años fiscales, años calendario y años de referencia, lo que permite una comprensión 
+        detallada de las tendencias y cambios en el empleo no agrícola a lo largo del tiempo.
+    </p>
+
+    {% block content4 %}
+        <div class="graph-container">
+            {{ indicadores5|safe }}
+        </div>
+    {% endblock %}
 
 
 
-{% comment %} BLOCK 2 {% endcomment %}
-{% comment %} (Miles de Personas) {% endcomment %}
-<h1>Encuesta De Grupo Trabajador-Ajustada Estacionalmente</h1>
+    {% comment %} BLOCK 6 {% endcomment %}
+    <h1>Indicadores De Turismo</h1>
 
-<div class="dropdown dropdown-block-2">
-    <div class="select">
-        <span class="selected">Grupo Trabajador</span>
-        <div class="caret"></div>
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Total de Registros en Hoteles y Paradores</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Total de Registros en Hoteles y Paradores</li>
+            <li>Total de Registros de NO RESIDENTES en Hoteles y Paradores</li>
+            <li>Total de Registros de RESIDENTES en Hoteles y Paradores</li>
+            <li>Número de Unidades de Vivienda Vendidas en Puerto Rico</li>
+            <li>Habitaciones Disponibles en Hoteles y Paradores - Promedio Diario</li>
+            <li>Habitaciones Ocupadas en Hoteles y Paradores - Promedio Diario</li>
+            <li>Total de Registros en Hoteles</li>
+            <li>Total de Registros de NO RESIDENTES en Hoteles</li>
+            <li>Total de Registros de RESIDENTES en Hoteles</li>
+            <li>Tasa de Ocupación en Hoteles</li>
+            <li>Habitaciones Disponibles en Hoteles - Promedio Diario</li>
+            <li>Habitaciones Ocupadas en Hoteles - Promedio Diario</li>
+            <li>Total de Registros en Paradores</li>
+            <li>Total de Registros de NO RESIDENTES en Paradores</li>
+            <li>Total de Registros de RESIDENTES en Paradores</li>
+            <li>Tasa de Ocupación en Paradores</li>
+            <li>Habitaciones Disponibles en Paradores - Promedio Diario</li>
+            <li>Habitaciones Ocupadas en Paradores - Promedio Diario</li>
+        </ul>
+    </div> 
+
+    <p>Los Indicadores de Turismo que incluyen el "Total de Registros en Hoteles y Paradores" representan la cantidad total de registros 
+        de huéspedes en hoteles y paradores durante un período específico. Estos registros pueden abarcar diversas métricas, como el número 
+        de noches reservadas, la ocupación por habitación o el número total de huéspedes. Los datos se pueden presentar en diferentes períodos 
+        de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite un análisis detallado de la actividad turística en 
+        una región particular a lo largo del tiempo.
+    </p>
+
+    {% block content5 %}
+        <div class="graph-container">
+            {{ indicadores6|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 7 {% endcomment %}
+    <h1>Indicadores De Construcción</h1>
+
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Número de Unidades de Vivienda Vendidas en Puerto Rico</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Número de Unidades de Vivienda Vendidas en Puerto Rico</li>
+            <li>Número de Unidades de Vivienda Vendidas en Puerto Rico - Nueva Construcción</li>
+            <li>Número de Unidades de Vivienda Vendidas en Puerto Rico - Existentes</li>
+            <li>Valor de las Unidades de Vivienda Vendidas en Puerto Rico (dólares)</li>
+            <li>Valor de las Unidades de Vivienda Vendidas en Puerto Rico - Nueva Construcción (dólares)</li>
+            <li>Valor de las Unidades de Vivienda Vendidas en Puerto Rico - Existentes (dólares)</li>       
+            <li>Número de Unidades Residenciales Reposeídas</li>
+            <li>Producción de Cemento (Miles de Sacos de 94 libras)</li>
+            <li>Ventas de Cemento (Miles de Sacos de 94 libras)</li>
+            <li>Total de Permisos de Construcción en Puerto Rico</li>
+            <li>Permisos de Construcción Públicos en Puerto Rico</li>
+            <li>Permisos de Construcción Privados en Puerto Rico</li>
+            <li>Permisos de Construcción APP en Puerto Rico</li>
+            <li>Valor Total de Permisos de Construcción en Puerto Rico - Miles de Dólares</li>
+            <li>Valor de Permisos de Construcción Públicos en Puerto Rico - Miles de Dólares</li>
+            <li>Valor de Permisos de Construcción Privados en Puerto Rico - Miles de Dólares</li>
+            <li>Valor de Permisos de Construcción APP en Puerto Rico - Miles de Dólares</li>
+            <li>Total de Permisos de Construcción en Unidades de Vivienda en Puerto Rico</li>
+            <li>Permisos de Construcción Públicos en Unidades de Vivienda en Puerto Rico</li>
+            <li>Permisos de Construcción Privados en Unidades de Vivienda en Puerto Rico</li>
+            <li>Permisos de Construcción APP en Unidades de Vivienda en Puerto Rico</li>
+            <li>Número Total de Permisos de Construcción</li>
+            <li>Número Total de Permisos de Construcción Privados</li>
+            <li>Número Total de Permisos de Construcción Públicos</li>
+            <li>Valor Total de Permisos de Construcción - Miles de Dólares</li>
+            <li>Valor Total de Permisos de Construcción Privados - Miles de Dólares</li>
+            <li>Valor Total de Permisos de Construcción Públicos - Miles de Dólares</li>
+            <li>Número de Unidades de Vivienda</li>
+            <li>Número de Unidades de Vivienda Privadas</li>
+            <li>Número de Unidades de Vivienda Públicas</li>
+        </ul>
+    </div>  
+
+    <p>Los Indicadores de Construcción que incluyen el "Número de Unidades de Vivienda Vendidas en Puerto Rico" ofrecen información crucial 
+        sobre la demanda de vivienda en la región. Estos indicadores reflejan el total de unidades de vivienda vendidas durante un período 
+        determinado, proporcionando una visión detallada de la actividad del mercado inmobiliario. Los datos se pueden presentar en diferentes 
+        períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite un análisis exhaustivo de las tendencias 
+        y cambios en la demanda de vivienda a lo largo del tiempo en Puerto Rico.
+    </p>
+
+    {% block content6 %}
+        <div class="graph-container">
+            {{ indicadores7|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 8 {% endcomment %}
+    {% comment %} (Millones de Kilovatios / Hora) {% endcomment %}
+    <h1>Indicadores De Energía Eléctrica</h1>
+
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Generación de Energía Eléctrica</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Generación de Energía Eléctrica</li>
+            <li>Consumo de Energía Eléctrica Total</li>
+            <li>Consumo de Energía Eléctrica Residencial</li>
+            <li>Consumo de Energía Eléctrica Comercial</li>
+            <li>Consumo de Energía Eléctrica Industrial </li>
+            <li>Consumo de Energía Eléctrica en la Agricultura </li>
+        </ul>
     </div>
-    <ul class="menu">
-        <li data-value="grupo-trabajador" class="active">Grupo Trabajador</li>
-        <li data-value="empleo-total">Empleo Total</li>
-        <li data-value="desempleo">Desempleo</li>
-        <li data-value="tasa-desempleo">Tasa de Desempleo (porciento)</li>
-    </ul>
-</div>   
 
-<p id="description-block-2">
-    La Encuesta de Grupo Trabajador Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally 
-    Adjusted, es un instrumento utilizado para medir la fuerza laboral en una determinada área geográfica. Se ajusta 
-    estacionalmente para eliminar las variaciones predecibles que ocurren regularmente en ciertos momentos del año, 
-    como las relacionadas con las estaciones o festividades, lo que permite una comparación más precisa del rendimiento 
-    laboral a lo largo del tiempo. Los datos se presentan en miles de personas y se pueden analizar en años fiscales, 
-    años calendario y años de referencia para evaluar tendencias y cambios en la fuerza laboral.
-</p>
+    <p>Los Indicadores de Energía Eléctrica que incluyen la "Generación de Energía Eléctrica" representan la cantidad total de electricidad 
+        producida en un área específica durante un período determinado. Estos indicadores proporcionan información vital sobre la capacidad 
+        de generación y el consumo de energía eléctrica. Los datos se expresan típicamente en millones de kilovatios-hora (kWh) y se pueden 
+        analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite un seguimiento 
+        detallado de la producción y el suministro de electricidad a lo largo del tiempo.
+    </p>
 
-{% block content1 %}
-    <div class="graph-container">
-        {{ indicadores2|safe }}
+    {% block content7 %}
+        <div class="graph-container">
+            {{ indicadores8|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 9 {% endcomment %}
+    {% comment %} Miles de Dólares {% endcomment %}
+    <h1>Indicadores De Ingresos Netos</h1>
+
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Ingreso Neto al Fondo General</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Ingreso Neto al Fondo General</li>
+            <li>Fuentes Estatales</li>
+            <li>Contribución sobre Ingresos</li>
+            <li>Contribución sobre Ingresos Retenida a Individuos</li>
+            <li>Contribución sobre Ingreso Retenida a Corporaciones</li>
+            <li>Contribución sobre Ingresos Retenida a Sociedades</li>
+            <li>Contribución sobre Ingresos Retenida a No Residentes</li>
+            <li>Arbitrios, Gran Total</li>
+            <li>Arbitrios - Bebidas Alcohólicas</li>
+            <li>Arbitrios - Vehículos de Motor</li>
+            <li>Licencias</li>
+            <li>No Contributivos</li>
+            <li>De otras Fuentes</li>
+            <li>Recaudos por concepto del Impuesto sobre Ventas y Usos (IVU) Tasa del 7.0%</li>
+            <li>Recaudos por concepto del Impuesto sobre Ventas y Usos (IVU) Tasa del 11.5%</li>
+        </ul>
     </div>
-{% endblock %}
+
+    <p>Los Indicadores de Ingresos Netos, que comprenden el "Ingreso Neto al Fondo General", ofrecen una medida crucial de los ingresos financieros 
+        disponibles para el fondo general en un área específica. Estos indicadores representan la cantidad neta de ingresos generados después de 
+        deducir los gastos y las obligaciones financieras correspondientes. Se expresan típicamente en miles de dólares y se pueden analizar en 
+        diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que proporciona una visión detallada de la 
+        situación financiera y la capacidad de financiamiento del fondo general a lo largo del tiempo.
+    </p>
+
+    {% block content8 %}
+        <div class="graph-container">
+            {{ indicadores9|safe }}
+        </div>
+    {% endblock %}
 
 
 
-{% comment %} BLOCK 3 {% endcomment %}
-{% comment %} (Miles de Personas) {% endcomment %}
-<h1>Encuesta De Grupo Trabajador</h1>
+    {% comment %} BLOCK 10 {% endcomment %}
+    {% comment %} Miles de Dólares {% endcomment %}
+    <h1>Indicadores De Comercio Exterior</h1>
 
-<div class="dropdown dropdown-block-3">
-    <div class="select">
-        <span class="selected">Población Civil No-Institucional</span>
-        <div class="caret"></div>
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Total de Exportaciones</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Total de Exportaciones</li>
+            <li>Total de Importaciones</li>
+            <li>Balance Comercial</li>
+        </ul>
     </div>
-    <ul class="menu">
-        <li data-value="poblacion-civil-GT" class="active">Población Civil No-Institucional</li>
-        <li data-value="grupo-trabajador-GT">Grupo Trabajador</li>
-        <li data-value="empleo-total-GT">Empleo Total</li>
-        <li data-value="empleo-agricola-GT">Empleo Agrícola</li>
-        <li data-value="empleo-construccion-GT">Empleo en Construcción</li>
-        <li data-value="empleo-manufactura-GT">Empleo en Manufactura</li>
-        <li data-value="empleo-comercio-GT">Empleo en Comercio</li>
-        <li data-value="empleo-finanzas-GT">Empleo en Finanzas, Seguros y Bienes Raíces</li>
-        <li data-value="empleo-transportacion-GT">Empleo en Transportación, Comunicaciones y Utilidades Públicas</li>
-        <li data-value="empleo-servicios-GT">Empleo en Servicios</li>
-        <li data-value="empleo-administracion-GT">Empleo en Administración Pública</li>
-        <li data-value="empleo-propia-GT">Empleo por Cuenta Propia</li>
-        <li data-value="desempleo-GT">Desempleo</li>
-        <li data-value="tasa-desempleo-GT">Tasa de Desempleo (porciento)</li>
-        <li data-value="tasa-participacion-GT">Tasa de Participación (porciento)</li>
-    </ul>
-</div>  
 
-<p id="description-block-3">
-    La Encuesta de Grupo Trabajador, también conocida como Labor Force Survey, es un método utilizado para recopilar datos 
-    sobre la fuerza laboral en una región específica. Mide la población civil no institucionalizada, es decir, personas 
-    en edad laboral y no confinadas en instituciones como prisiones o cuarteles militares. Los datos se expresan típicamente 
-    en miles de personas y pueden analizarse en diferentes períodos de tiempo, como años fiscales, años calendario y años 
-    de referencia, para comprender las tendencias y cambios en la población activa.
-</p>
+    <p>Los Indicadores de Comercio Exterior que incluyen el "Total de Exportaciones" ofrecen una visión fundamental de las actividades comerciales 
+        internacionales de un país o región. Representan la cantidad total de bienes y servicios vendidos fuera del país o región en un período 
+        determinado, expresada típicamente en miles de dólares. Estos indicadores pueden analizarse en diferentes períodos de tiempo, como años 
+        fiscales, años calendario y períodos acumulados, lo que permite un seguimiento detallado de la evolución de las exportaciones a lo largo 
+        del tiempo y su impacto en la economía local o nacional.
+    </p>
 
-{% block content2 %}
-    <div class="graph-container">
-        {{ indicadores3|safe }}
+    {% block content9 %}
+        <div class="graph-container">
+            {{ indicadores10|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 11 {% endcomment %}
+    {% comment %} A precios corrientes {% endcomment %}
+    <h1>Indicadores De Ventas Al Detalle</h1>
+
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Total de Ventas al Detalle - A precios corrientes</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Total de Ventas al Detalle - A precios corrientes</li>
+            <li>Ventas al Detalle Vehículos de Motor Nuevos y Usados - A precios corrientes</li>
+            <li>Tiendas de Piezas  para Autos - A precios corrientes</li>
+            <li>Mueblerías - A precios corrientes</li>
+            <li>Tiendas de Artículos Electrónicos - A precios corrientes</li>
+            <li>Ferreterías y Materiales para el Hogar - A precios corrientes</li>
+            <li>Equipo de Patio y Jardinería - A precios corrientes</li>
+            <li>Supermercados y Tiendas de Bebidas Alcohólicas - A precios corrientes</li>
+            <li>Tiendas de Alimentos Especiales - A precios corrientes</li>
+            <li>Farmacias y Droguerías - A precios corrientes</li>
+            <li>Tiendas de Cosméticos, Productos de Belleza y Perfumes - A precios corrientes</li>
+            <li>Gasolineras y Tiendas de Conveniencia - A precios corrientes</li>
+            <li>Tiendas de Ropa - A precios corrientes</li>
+            <li>Tiendas de Calzado - A precios corrientes</li>
+            <li>Tiendas de Joyería, Equipaje y Artículos de Cuero - A precios corrientes</li>
+            <li>Tiendas de Deporte, Instrumentos Musicales y de Entretenimiento - A precios corrientes</li>
+            <li>Tiendas por Departamento y otros Artículos Misceláneos - A precios corrientes</li>
+            <li>Distribuidores de Combustible - A precios corrientes</li>
+            <li>Restaurantes y Lugares de Bebidas Alcohólicas - A precios corrientes</li>
+        </ul>
     </div>
-{% endblock %}
 
+    <p>Los Indicadores de Ventas al Detalle (a precios corrientes) reflejan la suma total de ventas realizadas en el sector minorista de una 
+        economía durante un período específico. Estas ventas incluyen todas las transacciones comerciales en los puntos de venta minorista y se 
+        expresan en términos monetarios actuales, sin ajustes por inflación. Los datos se pueden analizar en diferentes períodos de tiempo, como 
+        años fiscales, años calendario y períodos acumulados, lo que proporciona información valiosa sobre la actividad económica en el sector 
+        minorista y su contribución a la economía en general.
+    </p>
 
+    {% block content10 %}
+        <div class="graph-container">
+            {{ indicadores11|safe }}
+        </div>
+    {% endblock %}
 
-{% comment %} BLOCK 4 {% endcomment %}
-{% comment %} (Miles de Personas) {% endcomment %}
-<h1>Encuesta De Establecimiento-Ajustados Estacionalmente</h1>
+    {% comment %} BLOCK 12 {% endcomment %}
+    {% comment %} Miles de Dólares {% endcomment %}
+    <h1>Indicadores De Ventas Al Detalle - Metodología Vieja</h1>
 
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Empleo No Agrícola: Todas las Industrias</span>
-        <div class="caret"></div>
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Total de Ventas al Detalle</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Total de Ventas al Detalle</li>
+            <li>Ventas al Detalle de Materiales de Construcción</li>
+            <li>Ventas al Detalle en Tiendas por Departamento</li>
+            <li>Ventas al Detalle en Tiendas de Alimentos</li>
+            <li>Ventas al Detalle de Vehículos de Motor Nuevos y Usados</li>
+            <li>Ventas al Detalle en Estaciones de Gasolina</li>
+            <li>Ventas al Detalle en Tiendas de Ropa y Tiendas de Calzado</li>
+            <li>Ventas al Detalle en Mueblerías</li>
+            <li>Ventas al Detalle en Tiendas de Radios, Televisores y Computadoras</li>
+            <li>Ventas al Detalle en Cafeterías y Restaurantes</li>
+            <li>Ventas al Detalle en Farmacias</li>
+        </ul>
     </div>
-    <ul class="menu">
-        <li class="active">Empleo No Agrícola: Todas las Industrias</li>
-        <li>Empleo No Agrícola: Minería, Tala y Construcción</li>
-        <li>Empleo No Agrícola: Manufactura</li>
-        <li>Empleo en Comercio, Transportación y Utilidades</li>
-        <li>Empleo en Comercio al Por Mayor</li>
-        <li>Empleo en Comercio al Detalle</li>
-        <li>Empleo en Información</li>
-        <li>Empleo en Actividades Financieras</li>
-        <li>Empleo en Finanzas y Seguros</li>
-        <li>Empleo en Bienes Raíces, Alquiler y Arrendamiento</li>
-        <li>Empleo en Servicios Profesionales y Comerciales</li>
-        <li>Empleo en Servicios Educativos y de Salud</li>
-        <li>Empleo en Servicios Educativos</li>
-        <li>Empleo en Recreación y Alojamiento</li>
-        <li>Empleo en Hospederías y Restaurantes</li>
-        <li>Empleo en Otros Servicios</li>
-        <li>Empleo en Gobierno</li>
-        <li>Empleo en Gobierno Federal</li>
-        <li>Empleo en Gobierno Estatal</li>
-        <li>Empleo en Gobierno Municipal</li>
-    </ul>
-</div> 
 
-<p>La Encuesta de Establecimientos Ajustada Estacionalmente, también conocida como Establishments Survey - Seasonally Adjusted, 
-    es un instrumento utilizado para recopilar datos sobre el empleo no agrícola en todas las industrias en una región determinada. 
-    Se ajusta estacionalmente para eliminar las fluctuaciones regulares previsibles que pueden ocurrir en ciertos momentos del año, 
-    permitiendo una comparación más precisa del empleo a lo largo del tiempo. Los datos se presentan en miles de personas y se 
-    pueden analizar en varios períodos, como años fiscales, años calendario y años de referencia, para comprender las tendencias 
-    y cambios en el empleo no agrícola.
-</p>
+    <p>Los Indicadores de Ventas al Detalle (a precios corrientes) reflejan la suma total de ventas realizadas en el sector minorista de una 
+        economía durante un período específico. Estas ventas incluyen todas las transacciones comerciales en los puntos de venta minorista y se 
+        expresan en términos monetarios actuales, sin ajustes por inflación. Los datos se pueden analizar en diferentes períodos de tiempo, como 
+        años fiscales, años calendario y períodos acumulados, lo que proporciona información valiosa sobre la actividad económica en el sector 
+        minorista y su contribución a la economía en general.
+    </p>
 
-{% block content3 %}
-    <div class="graph-container">
-        {{ indicadores4|safe }}
+    {% block content11 %}
+        <div class="graph-container">
+            {{ indicadores12|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 13 {% endcomment %}
+    <h1>Indicadores de Quiebras</h1>
+
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Número Total de Quiebras en Puerto Rico</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Número Total de Quiebras en Puerto Rico</li>
+            <li>Quiebras en Puerto Rico - Capítulo 7</li>
+            <li>Quiebras en Puerto Rico - Capítulo 11</li>
+            <li>Quiebras en Puerto Rico - Capítulo 12</li>
+            <li>Quiebras en Puerto Rico - Capítulo 13</li>
+        </ul>
     </div>
-{% endblock %}
+
+    <p>Los Indicadores de Quiebras, que comprenden el "Número Total de Quiebras en Puerto Rico", ofrecen una visión de la salud financiera y 
+        económica de la región. Estos indicadores representan el recuento total de procesos de quiebra que se han registrado en un período específico. 
+        Se pueden analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite una evaluación 
+        exhaustiva de las tendencias y cambios en la actividad de quiebra en Puerto Rico a lo largo del tiempo. Estos datos son importantes para 
+        comprender la estabilidad financiera de las empresas y los individuos en la región.
+    </p>
+
+    {% block content12 %}
+        <div class="graph-container">
+            {{ indicadores13|safe }}
+        </div>
+    {% endblock %}
 
 
 
-{% comment %} BLOCK 5 {% endcomment %}
-{% comment %} (Miles de Personas) {% endcomment %}
-<h1>Encuestas De Establecimiento</h1>
+    {% comment %} BLOCK 14 {% endcomment %}
+    <h1>Índice De Precios Al Consumidor 2006 = 100</h1>
 
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Empleo No Agrícola: Todas las Industrias</span>
-        <div class="caret"></div>
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Todos los Grupos</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Todos los Grupos</li>
+            <li>Alimentos y Bebidas</li>
+            <li>Alojamiento</li>
+            <li>Ropa</li>
+            <li>Transportación</li>
+            <li>Cuidado Médico</li>
+            <li>Entretenimiento</li>
+            <li>Educación y Comunicación</li>
+            <li>Otros Artículos y Servicios</li>
+        </ul>
     </div>
-    <ul class="menu">
-        <li class="active">Empleo No Agrícola: Todas las Industrias</li>
-        <li>Minería, Tala de Árboles y Construcción</li>
-        <li>Manufactura</li>
-        <li>Comercio, Transportación y Utilidades</li>
-        <li>Información</li>
-        <li>Actividades Financieras</li>
-        <li>Servicios Profesionales y Comerciales</li>
-        <li>Servicios Educativos y de Salud</li>
-        <li>Recreación y Alojamiento</li>
-        <li>Recreación y Alojamiento</li>
-        <li>Recreación y Alojamiento</li>
-        <li>Gobierno Federal</li>
-        <li>Gobierno Estatal</li>
-        <li>Gobierno Municipal</li>     
-    </ul>
-</div>
 
-<p>La Encuesta de Establecimientos, también conocida como Establishments Survey, es un instrumento utilizado para recopilar datos 
-    sobre el empleo no agrícola en todas las industrias en una región determinada. Estos datos se refieren a la cantidad de personas 
-    empleadas en sectores que no están relacionados con la agricultura. Se expresan típicamente en miles de personas y se pueden 
-    analizar en diferentes períodos de tiempo, como años fiscales, años calendario y años de referencia, lo que permite una comprensión 
-    detallada de las tendencias y cambios en el empleo no agrícola a lo largo del tiempo.
-</p>
+    <p>El Índice de Precios al Consumidor (IPC) es una medida estadística que examina los cambios promedio en los precios pagados por los consumidores por una 
+        canasta representativa de bienes y servicios a lo largo del tiempo. En este caso, el IPC está basado en el año 2006 como base (con 2006 = 100), lo que 
+        significa que el índice se calcula comparando los precios actuales con los precios en 2006.
 
-{% block content4 %}
-    <div class="graph-container">
-        {{ indicadores5|safe }}
+        Este índice incluye todos los grupos de bienes y servicios, lo que significa que abarca una amplia gama de productos y servicios que los consumidores 
+        típicamente adquieren. Se puede analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite 
+        evaluar los cambios en el nivel general de precios y la inflación a lo largo del tiempo.
+    </p>
+
+    {% block content13 %}
+        <div class="graph-container">
+            {{ indicadores14|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 15 {% endcomment %}
+    {% comment %} centavos por litro {% endcomment %}
+    <h1>Precios Promedios Mensuales De Gasolina Al Detal En Puerto Rico</h1>
+
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Promedio General</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Promedio General</li>
+            <li>Sin Plomo Regular</li>
+            <li>Sin Plomo Super</li>
+            <li>Diesel</li>
+            <li>Consumo de Gasolina (en galones)</li>
+        </ul>
     </div>
-{% endblock %}
+
+    <p>El "Promedio General (centavos por litro)" representa el costo promedio en centavos por litro de un determinado producto, 
+        como combustible, alimentos líquidos u otras mercancías que se venden en unidades de volumen. Este indicador es útil para 
+        rastrear cambios en los precios de productos líquidos y compararlos a lo largo del tiempo.
+
+        Se puede analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, 
+        lo que facilita la comprensión de las tendencias de precios y la inflación en el costo de bienes y servicios líquidos 
+        en un área específica.
+    </p>
+
+    {% block content14 %}
+        <div class="graph-container">
+            {{ indicadores15|safe }}
+        </div>
+    {% endblock %}
 
 
 
-{% comment %} BLOCK 6 {% endcomment %}
-<h1>Indicadores De Turismo</h1>
+    {% comment %} BLOCK 16 {% endcomment %}
+    <h1>Indicadores De Trasportación</h1>
 
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Total de Registros en Hoteles y Paradores</span>
-        <div class="caret"></div>
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Movimiento de pasajeros en el aeropuerto Luis Muñoz Marín (SJU)</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Movimiento de pasajeros en el aeropuerto Luis Muñoz Marín (SJU)</li>
+            <li>Movimiento de pasajeros en el aeropuerto Rafael Hernández (BQN)</li>
+            <li>Movimiento de pasajeros en el aeropuerto Mercedita (PSE)</li>
+            <li>Movimiento de pasajeros en el aeropuerto Eugenio María de Hostos (MAZ)</li>
+            <li>Movimiento de pasajeros en el aeropuerto Benjamín Rivera Noriega (CPX)</li>
+            <li>Movimiento de pasajeros en el aeropuerto José Aponte de la Torre (NRR)</li>
+            <li>Movimiento de pasajeros en el aeropuerto de Humacao (HUC)</li>
+            <li>Movimiento de pasajeros en el aeropuerto Antonio Nery Juarbe Pol (ARE)</li>
+            <li>Movimiento de pasajeros en el aeropuerto Antonio Rivera Rodríguez (VQS)</li>
+            <li>Movimiento de pasajeros en el aeropuerto Fernando Luis Ribas Dominicci (SIG)</li>
+            <li>Movimiento de pasajeros en barcos cruceros (Puerto de San Juan)</li>
+            <li>Número de barcos cruceros (Puerto de San Juan)</li>
+            <li>Movimiento de carga: Puerto de San Juan (Toneladas)</li>
+        </ul>
     </div>
-    <ul class="menu">
-        <li class="active">Total de Registros en Hoteles y Paradores</li>
-        <li>Total de Registros de NO RESIDENTES en Hoteles y Paradores</li>
-        <li>Total de Registros de RESIDENTES en Hoteles y Paradores</li>
-        <li>Número de Unidades de Vivienda Vendidas en Puerto Rico</li>
-        <li>Habitaciones Disponibles en Hoteles y Paradores - Promedio Diario</li>
-        <li>Habitaciones Ocupadas en Hoteles y Paradores - Promedio Diario</li>
-        <li>Total de Registros en Hoteles</li>
-        <li>Total de Registros de NO RESIDENTES en Hoteles</li>
-        <li>Total de Registros de RESIDENTES en Hoteles</li>
-        <li>Tasa de Ocupación en Hoteles</li>
-        <li>Habitaciones Disponibles en Hoteles - Promedio Diario</li>
-        <li>Habitaciones Ocupadas en Hoteles - Promedio Diario</li>
-        <li>Total de Registros en Paradores</li>
-        <li>Total de Registros de NO RESIDENTES en Paradores</li>
-        <li>Total de Registros de RESIDENTES en Paradores</li>
-        <li>Tasa de Ocupación en Paradores</li>
-        <li>Habitaciones Disponibles en Paradores - Promedio Diario</li>
-        <li>Habitaciones Ocupadas en Paradores - Promedio Diario</li>
-    </ul>
-</div> 
 
-<p>Los Indicadores de Turismo que incluyen el "Total de Registros en Hoteles y Paradores" representan la cantidad total de registros 
-    de huéspedes en hoteles y paradores durante un período específico. Estos registros pueden abarcar diversas métricas, como el número 
-    de noches reservadas, la ocupación por habitación o el número total de huéspedes. Los datos se pueden presentar en diferentes períodos 
-    de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite un análisis detallado de la actividad turística en 
-    una región particular a lo largo del tiempo.
-</p>
+    <p>Los Indicadores de Transportación que incluyen el "Movimiento de pasajeros en el aeropuerto Luis Muñoz Marín (SJU)" ofrecen 
+        información esencial sobre el flujo de viajeros que utilizan ese aeropuerto en un período dado. Estos indicadores proporcionan 
+        datos sobre la cantidad total de pasajeros que llegan, parten o transitan por el aeropuerto durante un período específico.
 
-{% block content5 %}
-    <div class="graph-container">
-        {{ indicadores6|safe }}
+        Los datos se pueden analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, 
+        lo que permite una evaluación detallada de las tendencias de tráfico aéreo y la actividad económica relacionada con el transporte 
+        en la región. Este indicador es fundamental para comprender la demanda de servicios de transporte aéreo y su impacto en la 
+        economía local.
+    </p>
+
+    {% block content15 %}
+        <div class="graph-container">
+            {{ indicadores16|safe }}
+        </div>
+    {% endblock %}
+
+
+
+    {% comment %} BLOCK 17 {% endcomment %}
+    <h1>Índices Coincidentes De Actividad Económica</h1>
+
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Índice Coincidente de Actividad Económica de la Junta de Planificación</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Índice Coincidente de Actividad Económica de la Junta de Planificación</li>
+            <li>Índice de Actividad Económica en la Construcción</li>
+            <li>Índice de Actividad Económica en el Turismo</li>
+            <li>Índice Coincidente de Actividad Económica en la Manufactura</li>
+        </ul>
     </div>
-{% endblock %}
+
+    <p>Los Índices Coincidentes de Actividad Económica, como el "Índice Coincidente de Actividad Económica de la Junta de Planificación", 
+        son herramientas utilizadas para evaluar el estado general de la economía en una región específica. Estos índices incorporan una 
+        variedad de indicadores económicos clave, como la producción industrial, el empleo, las ventas minoristas y otros, para proporcionar 
+        una imagen compuesta de la actividad económica en tiempo real.
+
+        El índice coincidente es especialmente útil porque refleja la situación económica actual y se actualiza regularmente. Se puede 
+        analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos promediados, lo que permite un seguimiento 
+        de las tendencias económicas a lo largo del tiempo y una comprensión más completa de la dinámica económica de la región. Este índice 
+        es valioso para los responsables de la formulación de políticas, los analistas económicos y otros interesados en la salud económica 
+        de Puerto Rico.
+    </p>
+
+    {% block content16 %}
+        <div class="graph-container">
+            {{ indicadores17|safe }}
+        </div>
+    {% endblock %}
 
 
 
-{% comment %} BLOCK 7 {% endcomment %}
-<h1>Indicadores De Construcción</h1>
+    {% comment %} BLOCK 18 {% endcomment %}
+    {% comment %} Miles de Dólares {% endcomment %}
+    <h1>Encuesta De Establecimientos Manufactura</h1>   
 
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Número de Unidades de Vivienda Vendidas en Puerto Rico</span>
-        <div class="caret"></div>
+    <div class="dropdown">
+        <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
+            <span class="selected">Manufactura</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <li class="active">Manufactura</li>
+            <li>Empleo: Manufactura de Bienes Duraderos</li>
+            <li>Empleo: Manufactura de Minerales No - Metálicos</li>
+            <li>Empleo: Manufactura de Productos de Metales</li>
+            <li>Empleo: Manufactura de Computadoras y  Productos Electrónicos</li>
+            <li>Empleo: Manufactura de Equipos, Aparatos y Accesorios Eléctrónicos</li>
+            <li>Empleo:  Manufactura De Bienes Duraderos Misceláneos</li>
+            <li>Empleo: Manufactura de Bienes No - Duraderos</li>
+            <li>Empleo: Manufactura de Alimentos</li>
+            <li>Empleo: Manufactura de Bebidas y Tabaco</li>
+            <li>Empleo: Manufactura de Ropa</li>
+            <li>Empleo: Manufactura de Químicos</li>
+            <li>Nómina de los Trabajadores de Producció</li>
+            <li>Horas - Hombre Mensuales Trabajadas en la Manufactura (miles)</li>
+        </ul>
     </div>
-    <ul class="menu">
-        <li class="active">Número de Unidades de Vivienda Vendidas en Puerto Rico</li>
-        <li>Número de Unidades de Vivienda Vendidas en Puerto Rico - Nueva Construcción</li>
-        <li>Número de Unidades de Vivienda Vendidas en Puerto Rico - Existentes</li>
-        <li>Valor de las Unidades de Vivienda Vendidas en Puerto Rico (dólares)</li>
-        <li>Valor de las Unidades de Vivienda Vendidas en Puerto Rico - Nueva Construcción (dólares)</li>
-        <li>Valor de las Unidades de Vivienda Vendidas en Puerto Rico - Existentes (dólares)</li>       
-        <li>Número de Unidades Residenciales Reposeídas</li>
-        <li>Producción de Cemento (Miles de Sacos de 94 libras)</li>
-        <li>Ventas de Cemento (Miles de Sacos de 94 libras)</li>
-        <li>Total de Permisos de Construcción en Puerto Rico</li>
-        <li>Permisos de Construcción Públicos en Puerto Rico</li>
-        <li>Permisos de Construcción Privados en Puerto Rico</li>
-        <li>Permisos de Construcción APP en Puerto Rico</li>
-        <li>Valor Total de Permisos de Construcción en Puerto Rico - Miles de Dólares</li>
-        <li>Valor de Permisos de Construcción Públicos en Puerto Rico - Miles de Dólares</li>
-        <li>Valor de Permisos de Construcción Privados en Puerto Rico - Miles de Dólares</li>
-        <li>Valor de Permisos de Construcción APP en Puerto Rico - Miles de Dólares</li>
-        <li>Total de Permisos de Construcción en Unidades de Vivienda en Puerto Rico</li>
-        <li>Permisos de Construcción Públicos en Unidades de Vivienda en Puerto Rico</li>
-        <li>Permisos de Construcción Privados en Unidades de Vivienda en Puerto Rico</li>
-        <li>Permisos de Construcción APP en Unidades de Vivienda en Puerto Rico</li>
-        <li>Número Total de Permisos de Construcción</li>
-        <li>Número Total de Permisos de Construcción Privados</li>
-        <li>Número Total de Permisos de Construcción Públicos</li>
-        <li>Valor Total de Permisos de Construcción - Miles de Dólares</li>
-        <li>Valor Total de Permisos de Construcción Privados - Miles de Dólares</li>
-        <li>Valor Total de Permisos de Construcción Públicos - Miles de Dólares</li>
-        <li>Número de Unidades de Vivienda</li>
-        <li>Número de Unidades de Vivienda Privadas</li>
-        <li>Número de Unidades de Vivienda Públicas</li>
-    </ul>
-</div>  
 
-<p>Los Indicadores de Construcción que incluyen el "Número de Unidades de Vivienda Vendidas en Puerto Rico" ofrecen información crucial 
-    sobre la demanda de vivienda en la región. Estos indicadores reflejan el total de unidades de vivienda vendidas durante un período 
-    determinado, proporcionando una visión detallada de la actividad del mercado inmobiliario. Los datos se pueden presentar en diferentes 
-    períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite un análisis exhaustivo de las tendencias 
-    y cambios en la demanda de vivienda a lo largo del tiempo en Puerto Rico.
-</p>
-
-{% block content6 %}
-    <div class="graph-container">
-        {{ indicadores7|safe }}
-    </div>
-{% endblock %}
-
-
-
-{% comment %} BLOCK 8 {% endcomment %}
-{% comment %} (Millones de Kilovatios / Hora) {% endcomment %}
-<h1>Indicadores De Energía Eléctrica</h1>
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Generación de Energía Eléctrica</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Generación de Energía Eléctrica</li>
-        <li>Consumo de Energía Eléctrica Total</li>
-        <li>Consumo de Energía Eléctrica Residencial</li>
-        <li>Consumo de Energía Eléctrica Comercial</li>
-        <li>Consumo de Energía Eléctrica Industrial </li>
-        <li>Consumo de Energía Eléctrica en la Agricultura </li>
-    </ul>
-</div>
-
-<p>Los Indicadores de Energía Eléctrica que incluyen la "Generación de Energía Eléctrica" representan la cantidad total de electricidad 
-    producida en un área específica durante un período determinado. Estos indicadores proporcionan información vital sobre la capacidad 
-    de generación y el consumo de energía eléctrica. Los datos se expresan típicamente en millones de kilovatios-hora (kWh) y se pueden 
-    analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite un seguimiento 
-    detallado de la producción y el suministro de electricidad a lo largo del tiempo.
-</p>
-
-{% block content7 %}
-    <div class="graph-container">
-        {{ indicadores8|safe }}
-    </div>
-{% endblock %}
-
-
-
-{% comment %} BLOCK 9 {% endcomment %}
-{% comment %} Miles de Dólares {% endcomment %}
-<h1>Indicadores De Ingresos Netos</h1>
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Ingreso Neto al Fondo General</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Ingreso Neto al Fondo General</li>
-        <li>Fuentes Estatales</li>
-        <li>Contribución sobre Ingresos</li>
-        <li>Contribución sobre Ingresos Retenida a Individuos</li>
-        <li>Contribución sobre Ingreso Retenida a Corporaciones</li>
-        <li>Contribución sobre Ingresos Retenida a Sociedades</li>
-        <li>Contribución sobre Ingresos Retenida a No Residentes</li>
-        <li>Arbitrios, Gran Total</li>
-        <li>Arbitrios - Bebidas Alcohólicas</li>
-        <li>Arbitrios - Vehículos de Motor</li>
-        <li>Licencias</li>
-        <li>No Contributivos</li>
-        <li>De otras Fuentes</li>
-        <li>Recaudos por concepto del Impuesto sobre Ventas y Usos (IVU) Tasa del 7.0%</li>
-        <li>Recaudos por concepto del Impuesto sobre Ventas y Usos (IVU) Tasa del 11.5%</li>
-    </ul>
-</div>
-
-<p>Los Indicadores de Ingresos Netos, que comprenden el "Ingreso Neto al Fondo General", ofrecen una medida crucial de los ingresos financieros 
-    disponibles para el fondo general en un área específica. Estos indicadores representan la cantidad neta de ingresos generados después de 
-    deducir los gastos y las obligaciones financieras correspondientes. Se expresan típicamente en miles de dólares y se pueden analizar en 
-    diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que proporciona una visión detallada de la 
-    situación financiera y la capacidad de financiamiento del fondo general a lo largo del tiempo.
-</p>
-
-{% block content8 %}
-    <div class="graph-container">
-        {{ indicadores9|safe }}
-    </div>
-{% endblock %}
-
-
-
-{% comment %} BLOCK 10 {% endcomment %}
-{% comment %} Miles de Dólares {% endcomment %}
-<h1>Indicadores De Comercio Exterior</h1>
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Total de Exportaciones</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Total de Exportaciones</li>
-        <li>Total de Importaciones</li>
-        <li>Balance Comercial</li>
-    </ul>
-</div>
-
-<p>Los Indicadores de Comercio Exterior que incluyen el "Total de Exportaciones" ofrecen una visión fundamental de las actividades comerciales 
-    internacionales de un país o región. Representan la cantidad total de bienes y servicios vendidos fuera del país o región en un período 
-    determinado, expresada típicamente en miles de dólares. Estos indicadores pueden analizarse en diferentes períodos de tiempo, como años 
-    fiscales, años calendario y períodos acumulados, lo que permite un seguimiento detallado de la evolución de las exportaciones a lo largo 
-    del tiempo y su impacto en la economía local o nacional.
-</p>
-
-{% block content9 %}
-    <div class="graph-container">
-        {{ indicadores10|safe }}
-    </div>
-{% endblock %}
-
-
-
-{% comment %} BLOCK 11 {% endcomment %}
-{% comment %} A precios corrientes {% endcomment %}
-<h1>Indicadores De Ventas Al Detalle</h1>
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Total de Ventas al Detalle - A precios corrientes</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Total de Ventas al Detalle - A precios corrientes</li>
-        <li>Ventas al Detalle Vehículos de Motor Nuevos y Usados - A precios corrientes</li>
-        <li>Tiendas de Piezas  para Autos - A precios corrientes</li>
-        <li>Mueblerías - A precios corrientes</li>
-        <li>Tiendas de Artículos Electrónicos - A precios corrientes</li>
-        <li>Ferreterías y Materiales para el Hogar - A precios corrientes</li>
-        <li>Equipo de Patio y Jardinería - A precios corrientes</li>
-        <li>Supermercados y Tiendas de Bebidas Alcohólicas - A precios corrientes</li>
-        <li>Tiendas de Alimentos Especiales - A precios corrientes</li>
-        <li>Farmacias y Droguerías - A precios corrientes</li>
-        <li>Tiendas de Cosméticos, Productos de Belleza y Perfumes - A precios corrientes</li>
-        <li>Gasolineras y Tiendas de Conveniencia - A precios corrientes</li>
-        <li>Tiendas de Ropa - A precios corrientes</li>
-        <li>Tiendas de Calzado - A precios corrientes</li>
-        <li>Tiendas de Joyería, Equipaje y Artículos de Cuero - A precios corrientes</li>
-        <li>Tiendas de Deporte, Instrumentos Musicales y de Entretenimiento - A precios corrientes</li>
-        <li>Tiendas por Departamento y otros Artículos Misceláneos - A precios corrientes</li>
-        <li>Distribuidores de Combustible - A precios corrientes</li>
-        <li>Restaurantes y Lugares de Bebidas Alcohólicas - A precios corrientes</li>
-    </ul>
-</div>
-
-<p>Los Indicadores de Ventas al Detalle (a precios corrientes) reflejan la suma total de ventas realizadas en el sector minorista de una 
-    economía durante un período específico. Estas ventas incluyen todas las transacciones comerciales en los puntos de venta minorista y se 
-    expresan en términos monetarios actuales, sin ajustes por inflación. Los datos se pueden analizar en diferentes períodos de tiempo, como 
-    años fiscales, años calendario y períodos acumulados, lo que proporciona información valiosa sobre la actividad económica en el sector 
-    minorista y su contribución a la economía en general.
-</p>
-
-{% block content10 %}
-    <div class="graph-container">
-        {{ indicadores11|safe }}
-    </div>
-{% endblock %}
-
-{% comment %} BLOCK 12 {% endcomment %}
-{% comment %} Miles de Dólares {% endcomment %}
-<h1>Indicadores De Ventas Al Detalle - Metodología Vieja</h1>
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Total de Ventas al Detalle</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Total de Ventas al Detalle</li>
-        <li>Ventas al Detalle de Materiales de Construcción</li>
-        <li>Ventas al Detalle en Tiendas por Departamento</li>
-        <li>Ventas al Detalle en Tiendas de Alimentos</li>
-        <li>Ventas al Detalle de Vehículos de Motor Nuevos y Usados</li>
-        <li>Ventas al Detalle en Estaciones de Gasolina</li>
-        <li>Ventas al Detalle en Tiendas de Ropa y Tiendas de Calzado</li>
-        <li>Ventas al Detalle en Mueblerías</li>
-        <li>Ventas al Detalle en Tiendas de Radios, Televisores y Computadoras</li>
-        <li>Ventas al Detalle en Cafeterías y Restaurantes</li>
-        <li>Ventas al Detalle en Farmacias</li>
-    </ul>
-</div>
-
-<p>Los Indicadores de Ventas al Detalle (a precios corrientes) reflejan la suma total de ventas realizadas en el sector minorista de una 
-    economía durante un período específico. Estas ventas incluyen todas las transacciones comerciales en los puntos de venta minorista y se 
-    expresan en términos monetarios actuales, sin ajustes por inflación. Los datos se pueden analizar en diferentes períodos de tiempo, como 
-    años fiscales, años calendario y períodos acumulados, lo que proporciona información valiosa sobre la actividad económica en el sector 
-    minorista y su contribución a la economía en general.
-</p>
-
-{% block content11 %}
-    <div class="graph-container">
-        {{ indicadores12|safe }}
-    </div>
-{% endblock %}
-
-
-
-{% comment %} BLOCK 13 {% endcomment %}
-<h1>Indicadores de Quiebras</h1>
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Número Total de Quiebras en Puerto Rico</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Número Total de Quiebras en Puerto Rico</li>
-        <li>Quiebras en Puerto Rico - Capítulo 7</li>
-        <li>Quiebras en Puerto Rico - Capítulo 11</li>
-        <li>Quiebras en Puerto Rico - Capítulo 12</li>
-        <li>Quiebras en Puerto Rico - Capítulo 13</li>
-    </ul>
-</div>
-
-<p>Los Indicadores de Quiebras, que comprenden el "Número Total de Quiebras en Puerto Rico", ofrecen una visión de la salud financiera y 
-    económica de la región. Estos indicadores representan el recuento total de procesos de quiebra que se han registrado en un período específico. 
-    Se pueden analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite una evaluación 
-    exhaustiva de las tendencias y cambios en la actividad de quiebra en Puerto Rico a lo largo del tiempo. Estos datos son importantes para 
-    comprender la estabilidad financiera de las empresas y los individuos en la región.
-</p>
-
-{% block content12 %}
-    <div class="graph-container">
-        {{ indicadores13|safe }}
-    </div>
-{% endblock %}
-
-
-
-{% comment %} BLOCK 14 {% endcomment %}
-<h1>Índice De Precios Al Consumidor 2006 = 100</h1>
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Todos los Grupos</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Todos los Grupos</li>
-        <li>Alimentos y Bebidas</li>
-        <li>Alojamiento</li>
-        <li>Ropa</li>
-        <li>Transportación</li>
-        <li>Cuidado Médico</li>
-        <li>Entretenimiento</li>
-        <li>Educación y Comunicación</li>
-        <li>Otros Artículos y Servicios</li>
-    </ul>
-</div>
-
-<p>El Índice de Precios al Consumidor (IPC) es una medida estadística que examina los cambios promedio en los precios pagados por los consumidores por una 
-    canasta representativa de bienes y servicios a lo largo del tiempo. En este caso, el IPC está basado en el año 2006 como base (con 2006 = 100), lo que 
-    significa que el índice se calcula comparando los precios actuales con los precios en 2006.
-
-    Este índice incluye todos los grupos de bienes y servicios, lo que significa que abarca una amplia gama de productos y servicios que los consumidores 
-    típicamente adquieren. Se puede analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, lo que permite 
-    evaluar los cambios en el nivel general de precios y la inflación a lo largo del tiempo.
-</p>
-
-{% block content13 %}
-    <div class="graph-container">
-        {{ indicadores14|safe }}
-    </div>
-{% endblock %}
-
-
-
-{% comment %} BLOCK 15 {% endcomment %}
-{% comment %} centavos por litro {% endcomment %}
-<h1>Precios Promedios Mensuales De Gasolina Al Detal En Puerto Rico</h1>
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Promedio General</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Promedio General</li>
-        <li>Sin Plomo Regular</li>
-        <li>Sin Plomo Super</li>
-        <li>Diesel</li>
-        <li>Consumo de Gasolina (en galones)</li>
-    </ul>
-</div>
-
-<p>El "Promedio General (centavos por litro)" representa el costo promedio en centavos por litro de un determinado producto, 
-    como combustible, alimentos líquidos u otras mercancías que se venden en unidades de volumen. Este indicador es útil para 
-    rastrear cambios en los precios de productos líquidos y compararlos a lo largo del tiempo.
-
-    Se puede analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, 
-    lo que facilita la comprensión de las tendencias de precios y la inflación en el costo de bienes y servicios líquidos 
-    en un área específica.
-</p>
-
-{% block content14 %}
-    <div class="graph-container">
-        {{ indicadores15|safe }}
-    </div>
-{% endblock %}
-
-
-
-{% comment %} BLOCK 16 {% endcomment %}
-<h1>Indicadores De Trasportación</h1>
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Movimiento de pasajeros en el aeropuerto Luis Muñoz Marín (SJU)</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Movimiento de pasajeros en el aeropuerto Luis Muñoz Marín (SJU)</li>
-        <li>Movimiento de pasajeros en el aeropuerto Rafael Hernández (BQN)</li>
-        <li>Movimiento de pasajeros en el aeropuerto Mercedita (PSE)</li>
-        <li>Movimiento de pasajeros en el aeropuerto Eugenio María de Hostos (MAZ)</li>
-        <li>Movimiento de pasajeros en el aeropuerto Benjamín Rivera Noriega (CPX)</li>
-        <li>Movimiento de pasajeros en el aeropuerto José Aponte de la Torre (NRR)</li>
-        <li>Movimiento de pasajeros en el aeropuerto de Humacao (HUC)</li>
-        <li>Movimiento de pasajeros en el aeropuerto Antonio Nery Juarbe Pol (ARE)</li>
-        <li>Movimiento de pasajeros en el aeropuerto Antonio Rivera Rodríguez (VQS)</li>
-        <li>Movimiento de pasajeros en el aeropuerto Fernando Luis Ribas Dominicci (SIG)</li>
-        <li>Movimiento de pasajeros en barcos cruceros (Puerto de San Juan)</li>
-        <li>Número de barcos cruceros (Puerto de San Juan)</li>
-        <li>Movimiento de carga: Puerto de San Juan (Toneladas)</li>
-    </ul>
-</div>
-
-<p>Los Indicadores de Transportación que incluyen el "Movimiento de pasajeros en el aeropuerto Luis Muñoz Marín (SJU)" ofrecen 
-    información esencial sobre el flujo de viajeros que utilizan ese aeropuerto en un período dado. Estos indicadores proporcionan 
-    datos sobre la cantidad total de pasajeros que llegan, parten o transitan por el aeropuerto durante un período específico.
-
-    Los datos se pueden analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos acumulados, 
-    lo que permite una evaluación detallada de las tendencias de tráfico aéreo y la actividad económica relacionada con el transporte 
-    en la región. Este indicador es fundamental para comprender la demanda de servicios de transporte aéreo y su impacto en la 
-    economía local.
-</p>
-
-{% block content15 %}
-    <div class="graph-container">
-        {{ indicadores16|safe }}
-    </div>
-{% endblock %}
-
-
-
-{% comment %} BLOCK 17 {% endcomment %}
-<h1>Índices Coincidentes De Actividad Económica</h1>
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Índice Coincidente de Actividad Económica de la Junta de Planificación</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Índice Coincidente de Actividad Económica de la Junta de Planificación</li>
-        <li>Índice de Actividad Económica en la Construcción</li>
-        <li>Índice de Actividad Económica en el Turismo</li>
-        <li>Índice Coincidente de Actividad Económica en la Manufactura</li>
-    </ul>
-</div>
-
-<p>Los Índices Coincidentes de Actividad Económica, como el "Índice Coincidente de Actividad Económica de la Junta de Planificación", 
-    son herramientas utilizadas para evaluar el estado general de la economía en una región específica. Estos índices incorporan una 
-    variedad de indicadores económicos clave, como la producción industrial, el empleo, las ventas minoristas y otros, para proporcionar 
-    una imagen compuesta de la actividad económica en tiempo real.
-
-    El índice coincidente es especialmente útil porque refleja la situación económica actual y se actualiza regularmente. Se puede 
-    analizar en diferentes períodos de tiempo, como años fiscales, años calendario y períodos promediados, lo que permite un seguimiento 
-    de las tendencias económicas a lo largo del tiempo y una comprensión más completa de la dinámica económica de la región. Este índice 
-    es valioso para los responsables de la formulación de políticas, los analistas económicos y otros interesados en la salud económica 
-    de Puerto Rico.
-</p>
-
-{% block content16 %}
-    <div class="graph-container">
-        {{ indicadores17|safe }}
-    </div>
-{% endblock %}
-
-
-
-{% comment %} BLOCK 18 {% endcomment %}
-{% comment %} Miles de Dólares {% endcomment %}
-<h1>Encuesta De Establecimientos Manufactura</h1>   
-
-<div class="dropdown">
-    <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
-        <span class="selected">Manufactura</span>
-        <div class="caret"></div>
-    </div>
-    <ul class="menu">
-        <li class="active">Manufactura</li>
-        <li>Empleo: Manufactura de Bienes Duraderos</li>
-        <li>Empleo: Manufactura de Minerales No - Metálicos</li>
-        <li>Empleo: Manufactura de Productos de Metales</li>
-        <li>Empleo: Manufactura de Computadoras y  Productos Electrónicos</li>
-        <li>Empleo: Manufactura de Equipos, Aparatos y Accesorios Eléctrónicos</li>
-        <li>Empleo:  Manufactura De Bienes Duraderos Misceláneos</li>
-        <li>Empleo: Manufactura de Bienes No - Duraderos</li>
-        <li>Empleo: Manufactura de Alimentos</li>
-        <li>Empleo: Manufactura de Bebidas y Tabaco</li>
-        <li>Empleo: Manufactura de Ropa</li>
-        <li>Empleo: Manufactura de Químicos</li>
-        <li>Nómina de los Trabajadores de Producció</li>
-        <li>Horas - Hombre Mensuales Trabajadas en la Manufactura (miles)</li>
-    </ul>
-</div>
-
-<p>La Encuesta de Establecimientos Manufactureros proporciona datos sobre el empleo en el sector manufacturero. El número de 
-    empleados en este sector se expresa en miles de personas y se puede analizar en diferentes períodos de tiempo, incluidos años 
-    fiscales, años naturales y períodos promediados. Esto permite comprender la evolución del empleo en la industria manufacturera 
-    a lo largo del tiempo y evaluar su contribución a la economía en general. Estos datos son cruciales para comprender la salud y 
-    la dinámica del sector manufacturero en una región específica.
-</p>
-
-{% block content17 %}
-    <div class="graph-container">
-        {{ indicadores18|safe }}
-    </div>
-{% endblock %}  
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const dropdowns = document.querySelectorAll('.dropdown');
-        dropdowns.forEach(dropdown => {
-            const select = dropdown.querySelector('.select');
-            const caret = dropdown.querySelector('.caret');
-            const menu = dropdown.querySelector('.menu');
-            const options = dropdown.querySelectorAll('.menu li');
-            const selected = dropdown.querySelector('.selected');
-
-            select.addEventListener('click', () => {
-                menu.classList.toggle('menu-open');
-                caret.classList.toggle('caret-rotate');
-            });
-
-            options.forEach(option => {
-                option.addEventListener('click', () => {
-                    selected.innerText = option.innerText;
-                    menu.classList.remove('menu-open');
-                    caret.classList.remove('caret-rotate');
-                    options.forEach(option => {
-                        option.classList.remove('active');
-                    });
-                    option.classList.add('active');
-                });
-            });
-        });
-
-        document.addEventListener('click', function (event) {
+    <p>La Encuesta de Establecimientos Manufactureros proporciona datos sobre el empleo en el sector manufacturero. El número de 
+        empleados en este sector se expresa en miles de personas y se puede analizar en diferentes períodos de tiempo, incluidos años 
+        fiscales, años naturales y períodos promediados. Esto permite comprender la evolución del empleo en la industria manufacturera 
+        a lo largo del tiempo y evaluar su contribución a la economía en general. Estos datos son cruciales para comprender la salud y 
+        la dinámica del sector manufacturero en una región específica.
+    </p>
+
+    {% block content17 %}
+        <div class="graph-container">
+            {{ indicadores18|safe }}
+        </div>
+    {% endblock %}  
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
             const dropdowns = document.querySelectorAll('.dropdown');
             dropdowns.forEach(dropdown => {
-                if (!dropdown.contains(event.target)) {
-                    const menu = dropdown.querySelector('.menu');
-                    const caret = dropdown.querySelector('.caret');
-                    menu.classList.remove('menu-open');
-                    caret.classList.remove('caret-rotate');
-                }
-            });
-        });
-    });
+                const select = dropdown.querySelector('.select');
+                const caret = dropdown.querySelector('.caret');
+                const menu = dropdown.querySelector('.menu');
+                const options = dropdown.querySelectorAll('.menu li');
+                const selected = dropdown.querySelector('.selected');
 
-    function toggleBurgerMenu() {
-        const burgerMenu = document.querySelector('.burger_menu');
-        burgerMenu.classList.toggle('burger_menu-open');
-    }
-    
-    document.addEventListener("DOMContentLoaded", function () {
-        const burgerOptions = document.querySelectorAll('.burger_menu li');
-    
-        burgerOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                const burgerMenu = document.querySelector('.burger_menu');
-                burgerMenu.classList.remove('burger_menu-open');
-            });
-        });
-    
-        document.addEventListener('click', function (event) {
-            const burger = document.querySelector('.burger');
-            const burgerMenu = document.querySelector('.burger_menu');
-            if (!burger.contains(event.target) && !burgerMenu.contains(event.target)) {
-                burgerMenu.classList.remove('burger_menu-open');
-            }
-        });
-    });    
+                select.addEventListener('click', () => {
+                    menu.classList.toggle('menu-open');
+                    caret.classList.toggle('caret-rotate');
+                });
 
-    document.addEventListener('DOMContentLoaded', function() {
-        // Function to handle dropdown changes for a specific block
-        function setupDropdown(dropdownClass, descriptionId, graphContainerClass, data) {
-            const dropdown = document.querySelector(dropdownClass);
-            const select = dropdown.querySelector('.select');
-            const menu = dropdown.querySelector('.menu');
-            const options = menu.querySelectorAll('li');
-            const selectedText = select.querySelector('.selected');
-            const description = document.getElementById(descriptionId);
-            const graphContainer = document.querySelector(graphContainerClass);
-    
-            options.forEach(option => {
-                option.addEventListener('click', function() {
-                    options.forEach(option => option.classList.remove('active'));
-                    this.classList.add('active');
-                    selectedText.textContent = this.textContent;
-                    menu.classList.remove('open');
-    
-                    const value = this.getAttribute('data-value');
-                    description.innerHTML = data[value].description;
-                    graphContainer.innerHTML = data[value].graph;
+                options.forEach(option => {
+                    option.addEventListener('click', () => {
+                        selected.innerText = option.innerText;
+                        menu.classList.remove('menu-open');
+                        caret.classList.remove('caret-rotate');
+                        options.forEach(option => {
+                            option.classList.remove('active');
+                        });
+                        option.classList.add('active');
+                    });
                 });
             });
-    
-            document.addEventListener('click', function(e) {
-                if (!dropdown.contains(e.target)) {
-                    menu.classList.remove('open');
+
+            document.addEventListener('click', function (event) {
+                const dropdowns = document.querySelectorAll('.dropdown');
+                dropdowns.forEach(dropdown => {
+                    if (!dropdown.contains(event.target)) {
+                        const menu = dropdown.querySelector('.menu');
+                        const caret = dropdown.querySelector('.caret');
+                        menu.classList.remove('menu-open');
+                        caret.classList.remove('caret-rotate');
+                    }
+                });
+            });
+        });
+
+        function toggleBurgerMenu() {
+            const burgerMenu = document.querySelector('.burger_menu');
+            burgerMenu.classList.toggle('burger_menu-open');
+        }
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            const burgerOptions = document.querySelectorAll('.burger_menu li');
+        
+            burgerOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const burgerMenu = document.querySelector('.burger_menu');
+                    burgerMenu.classList.remove('burger_menu-open');
+                });
+            });
+        
+            document.addEventListener('click', function (event) {
+                const burger = document.querySelector('.burger');
+                const burgerMenu = document.querySelector('.burger_menu');
+                if (!burger.contains(event.target) && !burgerMenu.contains(event.target)) {
+                    burgerMenu.classList.remove('burger_menu-open');
                 }
             });
-        }
-    
-        // Data for BLOCK 2
-        const dataBlock2 = {
-            'grupo-trabajador': {
-                description: `
-                    La Encuesta de Grupo Trabajador Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally Adjusted,
-                    es un instrumento utilizado para medir la fuerza laboral en una determinada área geográfica. Se ajusta estacionalmente para
-                    eliminar las variaciones predecibles que ocurren regularmente en ciertos momentos del año, como las relacionadas con las
-                    estaciones o festividades, lo que permite una comparación más precisa del rendimiento laboral a lo largo del tiempo.
-                    Los datos se presentan en miles de personas y se pueden analizar en años fiscales, años calendario y años de referencia
-                    para evaluar tendencias y cambios en la fuerza laboral.
-                `,
-                graph: '<!-- Graph content for Grupo Trabajador -->'
-            },
-            'empleo-total': {
-                description: `
-                    La Encuesta de Grupo Trabajador - Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally Adjusted, es 
-                    una herramienta crucial para analizar la dinámica del empleo en una economía. En esta encuesta, se examina el Empleo Total, 
-                    expresado en miles de personas. Este dato está ajustado estacionalmente para eliminar las variaciones predecibles debido a factores 
-                    como las estaciones del año o festividades, lo que proporciona una visión más clara de las tendencias subyacentes en el mercado 
-                    laboral. Este indicador es esencial para comprender la salud y la dirección del empleo en la economía.
-                `,
-                graph: '<!-- Graph content for Empleo Total -->'
-            },
-            'desempleo': {
-                description: `
-                    La Encuesta de Grupo Trabajador - Ajustada Estacionalmente, comúnmente referida como Labor Force Survey - Seasonally Adjusted, 
-                    es una herramienta fundamental para comprender la dinámica del desempleo en una economía. Este estudio analiza el número de 
-                    personas desempleadas, expresado en miles. Los datos están ajustados estacionalmente para eliminar las variaciones predecibles 
-                    debido a factores como las estaciones del año o festividades, lo que proporciona una evaluación más precisa de las tendencias 
-                    subyacentes en el mercado laboral. Este indicador es crucial para evaluar la salud y la dirección del mercado laboral y la 
-                    economía en su conjunto.
-                `,
-                graph: '<!-- Graph content for Desempleo -->'
-            },
-            'tasa-desempleo': {
-                description: `
-                    La Encuesta de Grupo Trabajador - Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally Adjusted, 
-                    ofrece una visión detallada de la Tasa de Desempleo, expresada en porcentaje. Estos datos son ajustados estacionalmente 
-                    para eliminar fluctuaciones predecibles relacionadas con factores como las estaciones del año o festividades. Esto permite
-                    una evaluación más precisa de las tendencias subyacentes en el mercado laboral. La Tasa de Desempleo es un indicador clave 
-                    que proporciona información sobre la salud general del mercado laboral y la economía, ayudando a guiar políticas y decisiones
-                    empresariales.
-                `,
-                graph: '<!-- Graph content for Tasa de Desempleo -->'
+        });    
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to handle dropdown changes for a specific block
+            function setupDropdown(dropdownClass, descriptionId, graphContainerClass, data) {
+                const dropdown = document.querySelector(dropdownClass);
+                const select = dropdown.querySelector('.select');
+                const menu = dropdown.querySelector('.menu');
+                const options = menu.querySelectorAll('li');
+                const selectedText = select.querySelector('.selected');
+                const description = document.getElementById(descriptionId);
+                const graphContainer = document.querySelector(graphContainerClass);
+        
+                options.forEach(option => {
+                    option.addEventListener('click', function() {
+                        options.forEach(option => option.classList.remove('active'));
+                        this.classList.add('active');
+                        selectedText.textContent = this.textContent;
+                        menu.classList.remove('open');
+        
+                        const value = this.getAttribute('data-value');
+                        description.innerHTML = data[value].description;
+                        graphContainer.innerHTML = data[value].graph;
+                    });
+                });
+        
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        menu.classList.remove('open');
+                    }
+                });
             }
-        };
-    
-        // Data for BLOCK 3
-        const dataBlock3 = {
-            'poblacion-civil-GT': {
-                description: `
-                    La Encuesta de Grupo Trabajador, también conocida como Labor Force Survey, es una herramienta crucial para comprender la 
-                    dinámica demográfica de la fuerza laboral durante el año fiscal. Este estudio analiza la Población Civil No-Institucional, expresada en miles 
-                    de personas. La Población Civil No-Institucional incluye a aquellos que no están en instituciones militares, correccionales 
-                    o de atención a largo plazo. Esta encuesta proporciona una visión amplia y detallada de la composición de la fuerza laboral, 
-                    lo que permite a los responsables de la toma de decisiones comprender mejor las tendencias demográficas y laborales de una 
-                    población determinada.
-                `,
-                graph: '<!-- Graph content for Población Civil No-Institucional -->'
-            },
-            'grupo-trabajador-GT': {
-                description: `
-                    La Encuesta de Grupo Trabajador, también conocida como Labor Force Survey, es un instrumento esencial para comprender la 
-                    dinámica del mercado laboral durante los años fiscales. Este estudio examina el Grupo Trabajador, expresado en miles de 
-                    personas, durante períodos financieros específicos. El Grupo Trabajador abarca a aquellas personas que están empleadas o 
-                    activamente buscando empleo durante el año fiscal correspondiente. Esta encuesta proporciona una visión detallada de la 
-                    fuerza laboral de una población durante el período fiscal, lo que permite analizar la participación y la situación laboral 
-                    de la comunidad durante ese período. Es una herramienta fundamental para comprender la salud y la dirección del mercado 
-                    laboral durante el año fiscal y para orientar políticas y decisiones empresariales.
-                `,
-                graph: '<!-- Graph content for Grupo Trabajador -->'
-            },
-        };
-    
-        // Setup dropdowns
-        setupDropdown('.dropdown-block-2', 'description-block-2', '.graph-container-block-2', dataBlock2);
-        setupDropdown('.dropdown-block-3', 'description-block-3', '.graph-container-block-3', dataBlock3);
-    });    
-</script>
+        
+            // Data for BLOCK 2
+            const dataBlock2 = {
+                'grupo-trabajador': {
+                    description: `
+                        La Encuesta de Grupo Trabajador Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally Adjusted,
+                        es un instrumento utilizado para medir la fuerza laboral en una determinada área geográfica. Se ajusta estacionalmente para
+                        eliminar las variaciones predecibles que ocurren regularmente en ciertos momentos del año, como las relacionadas con las
+                        estaciones o festividades, lo que permite una comparación más precisa del rendimiento laboral a lo largo del tiempo.
+                        Los datos se presentan en miles de personas y se pueden analizar en años fiscales, años calendario y años de referencia
+                        para evaluar tendencias y cambios en la fuerza laboral.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-total': {
+                    description: `
+                        La Encuesta de Grupo Trabajador - Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally Adjusted, es 
+                        una herramienta crucial para analizar la dinámica del empleo en una economía. En esta encuesta, se examina el Empleo Total, 
+                        expresado en miles de personas. Este dato está ajustado estacionalmente para eliminar las variaciones predecibles debido a factores 
+                        como las estaciones del año o festividades, lo que proporciona una visión más clara de las tendencias subyacentes en el mercado 
+                        laboral. Este indicador es esencial para comprender la salud y la dirección del empleo en la economía.
+                    `,
+                    graph: '<!-- Graph content for Empleo Total -->'
+                },
+                'desempleo': {
+                    description: `
+                        La Encuesta de Grupo Trabajador - Ajustada Estacionalmente, comúnmente referida como Labor Force Survey - Seasonally Adjusted, 
+                        es una herramienta fundamental para comprender la dinámica del desempleo en una economía. Este estudio analiza el número de 
+                        personas desempleadas, expresado en miles. Los datos están ajustados estacionalmente para eliminar las variaciones predecibles 
+                        debido a factores como las estaciones del año o festividades, lo que proporciona una evaluación más precisa de las tendencias 
+                        subyacentes en el mercado laboral. Este indicador es crucial para evaluar la salud y la dirección del mercado laboral y la 
+                        economía en su conjunto.
+                    `,
+                    graph: '<!-- Graph content for Desempleo -->'
+                },
+                'tasa-desempleo': {
+                    description: `
+                        La Encuesta de Grupo Trabajador - Ajustada Estacionalmente, también conocida como Labor Force Survey - Seasonally Adjusted, 
+                        ofrece una visión detallada de la Tasa de Desempleo, expresada en porcentaje. Estos datos son ajustados estacionalmente 
+                        para eliminar fluctuaciones predecibles relacionadas con factores como las estaciones del año o festividades. Esto permite
+                        una evaluación más precisa de las tendencias subyacentes en el mercado laboral. La Tasa de Desempleo es un indicador clave 
+                        que proporciona información sobre la salud general del mercado laboral y la economía, ayudando a guiar políticas y decisiones
+                        empresariales.
+                    `,
+                    graph: '<!-- Graph content for Tasa de Desempleo -->'
+                }
+            };
+        
+            // Data for BLOCK 3
+            const dataBlock3 = {
+                'poblacion-civil-GT': {
+                    description: `
+                        La Encuesta de Grupo Trabajador, o Labor Force Survey, es una herramienta crucial para comprender la dinámica demográfica de 
+                        la fuerza laboral durante el año fiscal. Este estudio analiza la Población Civil No-Institucional, expresada en miles de 
+                        personas durante el período fiscal correspondiente. La Población Civil No-Institucional incluye a aquellos que no están en 
+                        instituciones militares, correccionales o de atención a largo plazo. Esta métrica específica proporciona una visión amplia 
+                        y detallada de la composición de la fuerza laboral, permitiendo analizar las tendencias y cambios demográficos y laborales 
+                        de una población determinada. Los datos recopilados son fundamentales para la formulación de políticas y la toma de decisiones 
+                        estratégicas en el ámbito empresarial y gubernamental.
+                    `,
+                    graph: '<!-- Graph content for Población Civil No-Institucional -->'
+                },
+                'grupo-trabajador-GT': {
+                    description: `
+                        La Encuesta de Grupo Trabajador, también conocida como Labor Force Survey, es un instrumento esencial para comprender la 
+                        dinámica del mercado laboral durante los años fiscales. Este estudio examina el Grupo Trabajador, expresado en miles de 
+                        personas, durante períodos financieros específicos. El Grupo Trabajador abarca a aquellas personas que están empleadas o 
+                        activamente buscando empleo durante el año fiscal correspondiente. Esta encuesta proporciona una visión detallada de la 
+                        fuerza laboral de una población durante el período fiscal, lo que permite analizar la participación y la situación laboral 
+                        de la comunidad durante ese período. Es una herramienta fundamental para comprender la salud y la dirección del mercado 
+                        laboral durante el año fiscal y para orientar políticas y decisiones empresariales.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-total-GT': {
+                    description: `
+                        La Encuesta de Grupo Trabajador es una herramienta fundamental para analizar la dinámica del mercado laboral. Este 
+                        estudio mide el empleo total, expresado en miles de personas, ofreciendo datos detallados sobre la cantidad de individuos 
+                        empleados en diferentes sectores económicos. La encuesta abarca a todas las personas que están empleadas o buscan 
+                        activamente empleo durante el período fiscal correspondiente. Al proporcionar una visión comprensiva de la fuerza 
+                        laboral, esta encuesta permite evaluar la participación laboral y las condiciones de empleo dentro de una comunidad. 
+                        La información obtenida es crucial para entender la salud del mercado laboral y para tomar decisiones informadas en 
+                        políticas públicas y estrategias empresariales.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-agricola-GT': {
+                    description: `
+                        La Encuesta de Grupo Trabajador, también conocida como Labor Force Survey, es un estudio esencial para entender la 
+                        estructura del empleo en distintos sectores. Una de sus métricas clave es el Empleo Agrícola, que se expresa en 
+                        miles de personas durante el período fiscal correspondiente. Esta métrica específica ofrece una visión detallada sobre 
+                        el número de individuos empleados en el sector agrícola, permitiendo analizar las tendencias y la evolución del empleo 
+                        en este importante sector económico. Los datos recopilados son fundamentales para formular políticas agrícolas y laborales, 
+                        así como para tomar decisiones empresariales informadas.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-construccion-GT': {
+                    description: `
+                        La Encuesta de Grupo Trabajador, o Labor Force Survey, es un estudio clave para analizar el mercado laboral en diferentes 
+                        sectores. Una de sus métricas destacadas es el Empleo en Construcción, expresado en miles de personas durante el período 
+                        fiscal correspondiente. Esta métrica proporciona información detallada sobre el número de individuos empleados en el sector 
+                        de la construcción, permitiendo evaluar las tendencias y cambios en este campo vital. Los datos obtenidos son esenciales 
+                        para el desarrollo de políticas laborales y económicas, así como para la toma de decisiones estratégicas en el ámbito 
+                        empresarial y gubernamental.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-manufactura-GT': {
+                    description:`
+                        La Encuesta de Grupo Trabajador, o Labor Force Survey, es un estudio esencial para evaluar el mercado laboral en diversos 
+                        sectores. Entre sus métricas clave se encuentra el Empleo en Manufactura, expresado en miles de personas durante el período fiscal 
+                        correspondiente. Esta métrica específica proporciona información detallada sobre el número de individuos empleados en el sector 
+                        manufacturero, permitiendo analizar las tendencias y cambios en esta área crítica de la economía. Los datos recopilados son 
+                        fundamentales para la formulación de políticas industriales y laborales, así como para la toma de decisiones estratégicas en el 
+                        ámbito empresarial y gubernamental.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-comercio-GT': {
+                    description:`
+                        La Encuesta de Grupo Trabajador, también conocida como Labor Force Survey, es un instrumento crucial para comprender la 
+                        dinámica del mercado laboral. Uno de los aspectos que analiza es el Empleo en Comercio, expresado en miles de personas
+                        durante el período fiscal. Esta métrica proporciona información sobre la cantidad de individuos empleados en el sector 
+                        comercial, permitiendo un análisis detallado de las tendencias y la evolución del empleo en este ámbito. Los datos 
+                        recopilados son fundamentales para informar políticas económicas y laborales, así como para la toma de decisiones 
+                        estratégicas en el ámbito empresarial y gubernamental.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-finanzas-GT': {
+                    description:`
+                        La Encuesta de Grupo Trabajador, conocida como Labor Force Survey, es un instrumento esencial para comprender la dinámica del 
+                        mercado laboral. Uno de sus aspectos clave es el Empleo en Finanzas, Seguros y Bienes Raíces, medido en miles de personas durante 
+                        el período fiscal. Esta métrica ofrece una visión detallada del número de individuos empleados en estos sectores, permitiendo un 
+                        análisis exhaustivo de las tendencias y cambios en áreas cruciales de la economía. Los datos recopilados son fundamentales para 
+                        orientar políticas laborales, económicas y de desarrollo, así como para la toma de decisiones estratégicas en empresas y organismos 
+                        gubernamentales.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-transportacion-GT': {
+                    description:`
+                        La Encuesta de Grupo Trabajador, o Labor Force Survey, es un estudio vital para comprender el panorama laboral en diversos 
+                        sectores. Una de sus métricas principales es el Empleo en Transportación, Comunicaciones y Utilidades Públicas, medido 
+                        en miles de personas durante el período fiscal. Esta métrica ofrece una visión detallada del número de personas empleadas en 
+                        sectores críticos como el transporte, las comunicaciones y las utilidades públicas. Estos datos son esenciales para comprender 
+                        la dinámica laboral en estos sectores clave y para informar la formulación de políticas y estrategias empresariales.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-servicios-GT':{
+                    description:`
+                        La Encuesta de Grupo Trabajador, conocida como Labor Force Survey, es un recurso clave para comprender la dinámica laboral en 
+                        diversos sectores. Una métrica importante que proporciona es el Empleo en Servicios, expresado en miles de personas durante 
+                        el período fiscal. Esta cifra ofrece una visión detallada del número de individuos empleados en el sector de servicios, 
+                        permitiendo analizar las tendencias y la evolución del empleo en esta área crucial de la economía. Los datos recopilados son 
+                        esenciales para informar políticas laborales y económicas, así como para respaldar decisiones estratégicas tanto en el ámbito 
+                        empresarial como gubernamental.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-administracion-GT': {
+                    description:`
+                        La Encuesta de Grupo Trabajador, conocida como Labor Force Survey, es un instrumento crucial para entender el panorama laboral 
+                        en diferentes sectores. Uno de los indicadores que analiza es el Empleo en Administración Pública, medido en miles de personas 
+                        durante el período fiscal. Este dato ofrece una visión específica sobre la cantidad de individuos empleados en la administración 
+                        pública, permitiendo evaluar la dimensión y dinámica de este sector. La información obtenida es fundamental para la formulación 
+                        de políticas públicas y la toma de decisiones estratégicas tanto en el ámbito gubernamental como en el empresarial.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'empleo-cuenta-GT': {
+                    description:`
+                        La Encuesta de Grupo Trabajador, también conocida como Labor Force Survey, es un instrumento fundamental para comprender 
+                        la dinámica del mercado laboral. Uno de los aspectos clave que mide es el Empleo por Cuenta Propia, expresado en miles 
+                        de personas durante el período fiscal. Esta métrica proporciona una visión detallada sobre el número de individuos que 
+                        trabajan por cuenta propia, lo que incluye empresarios individuales y autónomos. Estos datos son esenciales para entender 
+                        la estructura del empleo y el espíritu emprendedor en una economía, lo que permite formular políticas laborales y económicas 
+                        más efectivas.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'desempleo-GT': {
+                    description:`
+                        La Encuesta de Grupo Trabajador, conocida como Labor Force Survey, es un recurso crucial para comprender el mercado laboral. 
+                        Uno de los indicadores principales que proporciona esta encuesta es el Desempleo, medido en miles de personas durante el período 
+                        fiscal. Este dato ofrece una visión detallada de la cantidad de personas que están desempleadas durante un período específico, 
+                        lo que permite analizar las tendencias y la salud general del mercado laboral. La información obtenida es fundamental para informar 
+                        políticas públicas, estrategias de empleo y toma de decisiones tanto en el ámbito gubernamental como empresarial.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'tasa-desempleo-GT': {
+                    description: `
+                        La Encuesta de Grupo Trabajador, o Labor Force Survey, es un estudio crucial para comprender el mercado laboral. Una de sus 
+                        métricas más importantes es la Tasa de Desempleo, expresada en porcentaje durante el período fiscal. Esta métrica proporciona 
+                        una visión clara de la proporción de personas que están desempleadas en relación con la fuerza laboral total. La tasa de 
+                        desempleo es un indicador clave de la salud económica de un país y es fundamental para la formulación de políticas laborales 
+                        y económicas. Los datos obtenidos ayudan a los gobiernos, empresas y organizaciones a tomar decisiones informadas sobre empleo 
+                        y desarrollo económico.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                },
+                'tasa-participacion-GT': {
+                    description: `
+                        La Encuesta de Grupo Trabajador, o Labor Force Survey, es un instrumento fundamental para comprender el mercado laboral. 
+                        Uno de los indicadores clave que proporciona esta encuesta es la Tasa de Participación, expresada en porcentaje durante el 
+                        período fiscal. Esta tasa refleja la proporción de la población en edad de trabajar que está empleada o activamente buscando 
+                        empleo. Es un indicador crucial para evaluar la dinámica de la fuerza laboral y la participación de la población en la 
+                        actividad económica. Los datos de la tasa de participación son utilizados para analizar la salud del mercado laboral y 
+                        orientar políticas públicas y estrategias empresariales.
+                    `,
+                    graph: '<!-- Graph content for Grupo Trabajador -->'
+                }
+            };
+        
+            // Setup dropdowns
+            setupDropdown('.dropdown-block-2', 'description-block-2', '.graph-container-block-2', dataBlock2);
+            setupDropdown('.dropdown-block-3', 'description-block-3', '.graph-container-block-3', dataBlock3);
+        });    
+    </script>
+</html>
