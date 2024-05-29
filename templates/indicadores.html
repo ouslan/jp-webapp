@@ -154,32 +154,32 @@
     {% comment %} (Miles de Personas) {% endcomment %}
     <h1>Encuesta De Establecimiento-Ajustados Estacionalmente</h1>
 
-    <div class="dropdown">
+    <div class="dropdown dropdown-block-4">
         <div class="select" onclick="this.nextElementSibling.classList.toggle('open')">
             <span class="selected">Empleo No Agrícola: Todas las Industrias</span>
             <div class="caret"></div>
         </div>
         <ul class="menu">
-            <li class="active">Empleo No Agrícola: Todas las Industrias</li>
-            <li>Empleo No Agrícola: Minería, Tala y Construcción</li>
-            <li>Empleo No Agrícola: Manufactura</li>
-            <li>Empleo en Comercio, Transportación y Utilidades</li>
-            <li>Empleo en Comercio al Por Mayor</li>
-            <li>Empleo en Comercio al Detalle</li>
-            <li>Empleo en Información</li>
-            <li>Empleo en Actividades Financieras</li>
-            <li>Empleo en Finanzas y Seguros</li>
-            <li>Empleo en Bienes Raíces, Alquiler y Arrendamiento</li>
-            <li>Empleo en Servicios Profesionales y Comerciales</li>
-            <li>Empleo en Servicios Educativos y de Salud</li>
-            <li>Empleo en Servicios Educativos</li>
-            <li>Empleo en Recreación y Alojamiento</li>
-            <li>Empleo en Hospederías y Restaurantes</li>
-            <li>Empleo en Otros Servicios</li>
-            <li>Empleo en Gobierno</li>
-            <li>Empleo en Gobierno Federal</li>
-            <li>Empleo en Gobierno Estatal</li>
-            <li>Empleo en Gobierno Municipal</li>
+            <li  data-value="empleo-agricola-todas" class="active">Empleo No Agrícola: Todas las Industrias</li>
+            <li data-value="empleo-agricola-mineria">Empleo No Agrícola: Minería, Tala y Construcción</li>
+            <li data-value="empleo-agricola-manufactura">Empleo No Agrícola: Manufactura</li>
+            <li data-value="empleo-comericio">Empleo en Comercio, Transportación y Utilidades</li>
+            <li data-value="empleo-comericio-mayor">Empleo en Comercio al Por Mayor</li>
+            <li data-value="empleo-comercio-detalle">Empleo en Comercio al Detalle</li>
+            <li data-value="empleo-informacion">Empleo en Información</li>
+            <li data-value="empleo-actividades">Empleo en Actividades Financieras</li>
+            <li data-value="empleo-finanzas">Empleo en Finanzas y Seguros</li>
+            <li data-value="empleo-bienes">Empleo en Bienes Raíces, Alquiler y Arrendamiento</li>
+            <li data-value="empleo-servicios-profesionales">Empleo en Servicios Profesionales y Comerciales</li>
+            <li data-value="empleo-servicios-educativos-salud">Empleo en Servicios Educativos y de Salud</li>
+            <li data-value="empleo-servicios-educativos">Empleo en Servicios Educativos</li>
+            <li data-value="empleo-recreacion">Empleo en Recreación y Alojamiento</li>
+            <li data-value="empleo-hospederia">Empleo en Hospederías y Restaurantes</li>
+            <li data-value="empleo-otros">Empleo en Otros Servicios</li>
+            <li data-value="empleo-gobierno">Empleo en Gobierno</li>
+            <li data-value="empleo-gobierno-federal">Empleo en Gobierno Federal</li>
+            <li data-value="empleo-gobierno-estatal">Empleo en Gobierno Estatal</li>
+            <li data-value="empleo-gobierno-municipal">Empleo en Gobierno Municipal</li>
         </ul>
     </div> 
 
@@ -1070,10 +1070,15 @@
                     graph: '<!-- Graph content for Grupo Trabajador -->'
                 }
             };
+
+            const dataBlock4 = {
+
+            };
         
             // Setup dropdowns
             setupDropdown('.dropdown-block-2', 'description-block-2', '.graph-container-block-2', dataBlock2);
             setupDropdown('.dropdown-block-3', 'description-block-3', '.graph-container-block-3', dataBlock3);
+            setupDropdown('.dropdown-block-4', 'description-block-4', '.graph-container-block-4', dataBlock4);
         });    
     </script>
 </html>
