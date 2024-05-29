@@ -38,6 +38,11 @@ footer {
     background-color: #E6E6E6;
 }
 
+footer h1 {
+    text-align: center;
+    padding-top: 30px;
+}
+
 .footer-container {
     display: flex;
     justify-content: space-between;
