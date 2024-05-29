@@ -30,8 +30,6 @@ p {
     line-height: 1.5;
 }
 
-
-
 footer {
     background-color: #C7C7C7
 }
@@ -41,25 +39,41 @@ footer {
     justify-content: space-between;
 }
 
-.left-container, .right-container {
+.left-container {
     width: 48%;
+    padding-top: 1px;
+    padding-left: 150px;
+} 
+
+.right-container {
+    width: 48%;
+    padding-top: 5px;
     padding: 10px;
-    /* background-color: rgb(126, 106, 81); */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    */
 }
 
 
 .custom-link {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Use the default text color */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 .custom-link:hover {
-    color: blue; /* Change color to blue on hover */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    text-decoration: none; /* Remove underline on hover */
+    color: blue; 
+    cursor: pointer; 
+    text-decoration: none; 
 }
 
+footer h1 {
+    font-size: 35px;
+    padding-left: 150px;
+    padding-top: 40px;
+    margin-bottom: 1px;
+}
+
+.maps {
+    padding-top: 50px;
+}
+   
 .block {
     background-color: lightgreen;
     width: 500px;
@@ -67,13 +81,6 @@ footer {
     padding: 100px;
     margin: 20px;
 }
-
-footer h1 {
-    text-align: center;
-    padding-top: 30px;
-}
-
-
 
 #header-image {
     width: 100vw;
