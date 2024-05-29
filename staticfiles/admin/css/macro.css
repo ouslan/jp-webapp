@@ -1,4 +1,3 @@
-
 body, header {
     font-family: Arial, Helvetica, sans-serif; /* Arial font, with Helvetica and sans-serif as fallback */
     margin: 0;
@@ -16,12 +15,12 @@ h1 {
 h2 {
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 2.5vw;
+    margin-top: 4vw;
     margin-left: 8vw;
     margin-right: 8vw;
 }
 
-p, div {
+p {
     display: block;
     font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,6 +28,24 @@ p, div {
     margin-left: 8vw;
     margin-right: 8vw;
     line-height: 1.5;
+}
+
+
+
+footer {
+    background-color: #C7C7C7
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container, .right-container {
+    width: 48%;
+    padding: 10px;
+    /* background-color: rgb(126, 106, 81); */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    */
 }
 
 
@@ -45,12 +62,16 @@ p, div {
 
 .block {
     background-color: lightgreen;
-    width: 400px;
+    width: 500px;
     height: 400px;
     padding: 100px;
     margin: 20px;
 }
 
+footer h1 {
+    text-align: center;
+    padding-top: 30px;
+}
 
 
 
@@ -59,4 +80,3 @@ p, div {
     height: auto;
 
 }
-
