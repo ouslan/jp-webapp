@@ -1,408 +1,402 @@
- body, header {
-    margin: 0;
-    padding: 0;
+body, header {
+  margin: 0;
+  padding: 0;
 }
 
 #header-image {
-    width: 100vw;
-    height: auto;
+  width: 100vw;
+  height: auto;
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 2vw;
-    margin-top: 4vw;
-    font-size: 3em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 2vw;
+  margin-top: 4vw;
+  font-size: 3em;
 }
 
 h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 2vw;
-    margin-top: 3vw;
-    margin-bottom: 5px;
-    font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 2vw;
+  margin-top: 3vw;
+  margin-bottom: 5px;
+  font-size: 25px;
 }
 
 p {
-    display: block;
-    font-size: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    margin-left: 2vw;
-    margin-right: 8vw;
-    line-height: 1.5;
+  display: block;
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  margin-left: 2vw;
+  margin-right: 8vw;
+  line-height: 1.5;
 }
 
 .graph-container {
-    margin-top: 10px;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+  margin-top: 10px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .dropdown {
-    max-width: auto;
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    margin-top: 3vw;
-    margin-bottom: 1vw;
-    font-size: 25px;
-    font-weight: bold;
+  max-width: auto;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  margin-top: 3vw;
+  margin-bottom: 1vw;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .dropdown * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .select {
-    max-height: 20px;
-    background: white;
-    color: "#E6E6E6";
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid white;
-    border-radius: 0.5em;
-    padding: 1em;
-    cursor: pointer;
-    transition: background 0.3s;
+  max-height: 20px;
+  background: white;
+  color: "#E6E6E6";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .select-clicked {
-    border: 2px solid "#E6E6E6";
-    box-shadow: 0 0 0 0.8em "#E6E6E6";
+  border: 2px solid "#E6E6E6";
+  box-shadow: 0 0 0 0.8em "#E6E6E6";
 }
 
 .select:hover {
-    background: #E6E6E6;
-    color: black;
+  background: #E6E6E6;
+  color: black;
 }
 
 .caret {
-    width: 0;
-    height: 0;
-    margin-left: 25px;
-    margin-right: auto;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid black;
-    transition: 0.3s;
+  width: 0;
+  height: 0;
+  margin-left: 25px;
+  margin-right: auto;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid black;
+  transition: 0.3s;
 }
 
 .caret-rotate {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .menu {
-    font-size: 18px;
-    list-style: none;
-    padding: 0.2em 0.5em;
-    background: #E6E6E6;
-    border: 1px solid #E6E6E6;
-    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-    border-radius: 0.5em;
-    color:black;
-    position: absolute;
-    top: 3em;
-    left: 84.5%;
-    transform: translateX(-50%);
-    opacity: 0;
-    display: none;
-    transition: 0.2s;
-    z-index: 1;
-    width: 30vw;
-    max-height: 250px;
-    overflow-y: auto;
+  font-size: 18px;
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: #E6E6E6;
+  border: 1px solid #E6E6E6;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color:black;
+  position: absolute;
+  top: 3em;
+  left: 84.5%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+  width: 30vw;
+  max-height: 250px;
+  overflow-y: auto;
 }
 
 .menu li {
-    padding: 0.7em 0.5em;
-    margin: 0.3em 0;
-    border-radius: 0.5em;
-    cursor: pointer;
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
 }
 
 .menu li:hover {
-    background: #CBCBCB;
+  background: #CBCBCB;
 }
 
 .active {
-    background: #CBCBCB;
+  background: #CBCBCB;
 }
 
 .menu-open {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 
 .container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .container .form button {
-    border: none;
-    background: none;
-    color: #8b8ba7;
-  }
-  /* styling of whole input container */
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
 .container .form {
-    --timing: 0.3s;
-    --width-of-input: 200px;
-    --height-of-input: 40px;
-    --border-height: 2px;
-    --input-bg: #fff;
-    --border-color: #4A95A1;
-    --border-radius: 30px;
-    --after-border-radius: 1px;
-    position: relative;
-    width: var(--width-of-input);
-    height: var(--height-of-input);
-    display: flex;
-    align-items: center;
-    padding-inline: 0.8em;
-    border-radius: var(--border-radius);
-    transition: border-radius 0.5s ease;
-    background: var(--input-bg, #fff);
-    background-color: #E6E6E6;
-    margin-top: 1vw;
-    margin-left: 75vw;
-  }
-  /* styling of Input */
-  .input {
-    font-size: 0.9rem;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    padding-inline: 0.5em;
-    padding-block: 0.7em;
-    border: none;
-  }
-  /* styling of animated border */
-  .form:before {
-    content: "";
-    position: absolute;
-    background: var(--border-color);
-    transform: scaleX(0);
-    transform-origin: center;
-    width: 100%;
-    height: var(--border-height);
-    left: 0;
-    bottom: 0;
-    border-radius: 1px;
-    transition: transform var(--timing) ease;
-  }
-  /* Hover on Input */
-  .form:focus-within {
-    border-radius: var(--after-border-radius);
-  }
-  
-  input:focus {
-    outline: none;
-  }
-  /* here is code of animated border */
-  .form:focus-within:before {
-    transform: scale(1);
-  }
-  /* styling of close button */
-  /* == you can click the close button to remove text == */
-  .reset {
-    border: none;
-    background: none;
-    opacity: 0;
-    visibility: hidden;
-  }
-  /* close button shown when typing */
-  input:not(:placeholder-shown) ~ .reset {
-    opacity: 1;
-    visibility: visible;
-  }
-  /* sizing svg icons */
-  .form svg {
-    width: 17px;
-    margin-top: 3px;
-  }
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #4A95A1;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+  background-color: #E6E6E6;
+  margin-top: 1vw;
+  margin-left: 75vw;
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
 
-  .container .burger {
-    position: relative;
-    width: 40px;
-    height: 30px;
-    background: transparent;
-    cursor: pointer;
-    display: block;
-    margin-left: 3vw;
-  }
-  
-  .burger input {
-    display: none;
-  }
-  
-  .burger span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: rgb(182, 182, 182);
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-  }
-  
-  .burger span:nth-of-type(1) {
-    top: 0px;
-    transform-origin: left center;
-  }
-  
-  .burger span:nth-of-type(2) {
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: left center;
-  }
-  
-  .burger span:nth-of-type(3) {
-    top: 100%;
-    transform-origin: left center;
-    transform: translateY(-100%);
-  }
-  
-  .burger input:checked ~ span:nth-of-type(1) {
-    transform: rotate(45deg);
-    top: 0px;
-    left: 5px;
-  }
-  
-  .burger input:checked ~ span:nth-of-type(2) {
-    width: 0%;
-    opacity: 0;
-  }
-  
-  .burger input:checked ~ span:nth-of-type(3) {
-    transform: rotate(-45deg);
-    top: 28px;
-    left: 5px;
-  }
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
 
-  .burger_select {
-    max-height: 20px;
-    background: white;
-    color: "#E6E6E6";
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 2px solid white;
-    border-radius: 0.5em;
-    padding: 1em;
-    cursor: pointer;
-    transition: background 0.3s;
+.container .burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  margin-left: 3vw;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: rgb(182, 182, 182);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+.burger_select {
+  max-height: 20px;
+  background: white;
+  color: "#E6E6E6";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .burger_select-clicked {
-    border: 2px solid "#E6E6E6";
-    box-shadow: 0 0 0 0.8em "#E6E6E6";
+  border: 2px solid "#E6E6E6";
+  box-shadow: 0 0 0 0.8em "#E6E6E6";
 }
 
 .burger_menu {
-    font-size: 18px;
-    list-style: none;
-    padding: 0.2em 0.5em;
-    background: #E6E6E6;
-    border: 1px solid #E6E6E6;
-    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-    border-radius: 0.5em;
-    color:black;
-    position: absolute;
-    top: 5.8em;
-    left: 21%;
-    transform: translateX(-50%);
-    opacity: 0;
-    display: none;
-    transition: 0.2s;
-    z-index: 1;
-    width: 28vw;
+  font-size: 18px;
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: #E6E6E6;
+  border: 1px solid #E6E6E6;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color:black;
+  position: absolute;
+  top: 5.8em;
+  left: 21%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+  width: 28vw;
 }
 
 .burger_menu a {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0.7em 0.5em;
-    border-radius: 0.5em;
-    cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.7em 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
 }
 
 .burger_menu-open {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 
 .burger_menu a:hover {
-    width: auto;
-    transition: 0.3s;
-    font-size: 23px;
-    background: #CBCBCB;
+  width: auto;
+  transition: 0.3s;
+  font-size: 23px;
+  background: #CBCBCB;
 }
 
 a {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    border: none;
-    background: none;
-    flex-direction: column;
-    display: flex; 
-    text-decoration: none;
-    color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  border: none;
+  background: none;
+  flex-direction: column;
+  display: flex; 
+  text-decoration: none;
+  color: black;
 }
 
 footer {
-  background-color: #C7C7C7
+background-color: #C7C7C7
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
+display: flex;
+justify-content: space-between;
 }
 
 .left-container {
-  width: 48%;
-  padding-left: 150px;
+width: 48%;
+padding-top: 1px;
+padding-left: 150px;
 } 
 
 .right-container {
-  width: 48%;
-  padding-top: 5px;
-  padding: 10px;
+width: 48%;
+padding-top: 5px;
+padding: 10px;
 }
 
 
 .custom-link {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Use the default text color */
+text-decoration: none; 
+color: inherit; 
 }
 
 .custom-link:hover {
-  color: blue; /* Change color to blue on hover */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  text-decoration: none; /* Remove underline on hover */
-}
-
-.block {
-  background-color: lightgreen;
-  width: 500px;
-  height: 400px;
-  padding: 100px;
-  margin: 20px;
+color: blue; 
+cursor: pointer; 
+text-decoration: none; 
 }
 
 footer h1 {
-  font-size: 35px;
-  padding-left: 150px;
-  padding-top: 40px;
+font-size: 35px;
+padding-left: 150px;
+padding-top: 40px;
+margin-bottom: 1px;
 }
 
 .maps {
-  padding-top: 50px;
+padding-top: 50px;
 }
 
 
