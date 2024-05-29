@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html >
+{% load static %}
+
+<html lang="es" >
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -242,7 +244,7 @@
         <!--LOGO-->
         <div class="logo-button">
             <header>
-                <img src="imageLogo.png" width= 265 alt="JPLogo" class="logo">
+                <img src="{% static 'imageLogo.png' %}" width= 265 alt="JPLogo" class="logo">
             </header>
         </div>
     
@@ -271,31 +273,31 @@
 
     <!-- WEB APPS -->
     <div id="container">
-        <a href="1 CiclosEcon.html">
+        <a href="/ciclos-economicos/">
             <div class="image-container">
-                <img src="imageCiclo.png" width="265" alt="Ciclos App" class="logo">
+                <img src="{% static 'imageCiclo.png' %}" width="265" alt="Ciclos App" class="logo" />
                 <span class="image-name">Ciclos Económicos</span>
             </div>
         </a>
 
-        <a href="2 Demografico.html">
+        <a href="/datos-demograficos/">
             <div class="image-container">
-                <img src="imageDemografico.jpeg" width="265" alt="Demográfico App" class="logo">
+                <img src="{% static 'imageDemografico.jpeg' %}" width="265" alt="Demográfico App" class="logo" />
                 <span class="image-name">Demográfico</span>
             </div>
         </a>
 
-        <a href="3 Indicadores.html">
+        <a href="/indicadores-mensuales/">
             <div class="image-container">
-                <img src="imageIndicadores.jpeg" width="265" alt="Indicadores App" class="logo">
+                <img src="{% static 'imageindicadores.jpeg' %}" width="265" alt="Indicadores App" class="logo">
                 <span class="image-name">Indicadores Económicos</span>
             </div>
         </a>
 
-        <a href="4 Macro.html">
+        <a href="/centro-de-datos-macroeconomicos/">
             <div class="image-container">
-                <img src="imageMacro.jpeg" width="265" alt="Macro App" class="logo">
-                <span class="image-name">Macro Economía</span>
+                <img src="{% static 'imageMacro.jpeg' %}" width="265" alt="Macro App" class="logo">
+                <span class="image-name">Macroeconómia</span>
             </div>
         </a>
 

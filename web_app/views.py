@@ -36,6 +36,9 @@ def home(request):
 def macro(request):
     return render(request, "macro.html")
 
+def datos_demograficos(request):
+    return render(request, "demograficos.html")
+
 
 def ciclos_economicos(request):
     fig = px.scatter(
@@ -96,8 +99,7 @@ def ciclos_economicos(request):
 
     context = {'ciclos_economicos': ciclos_economicos}
     return render(request, "ciclos_economicos.html", context)
-
-
+    
 def indicadores(request):
     fig = px.scatter(
         x=[2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
