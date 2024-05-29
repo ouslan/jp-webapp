@@ -1,14 +1,339 @@
 <!DOCTYPE html>
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
 
-<div class="container"> 
-    <div class="buttons-container">
-        <h1>Pages</h1>
-        <button onclick = "window.location.href='signin/'" class = "button">Sign In</button>
-        <button onclick = "window.location.href='centro-de-datos-macroeconomicos/'" class = "button">Centro De Datos Macroeconómicos</button>
-        <button onclick = "window.location.href='ciclos-economicos/'" class="button">Ciclos Económicos</button>
-        <button onclick="window.location.href='indicadores-mensuales/'" class="button">Indicadores Mensuales</button>
-        <button class="button">default</button>
+<html lang="es" >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body {
+                background-color: #ffffff;
+                padding-top: 200px;
+                font-family: 'Helvetica', sans-serif;
+            }
+
+            @font-face {
+                font-family: 'Dita Wd Medium';
+                src: url('path/to/font/DitaWd-Medium.ttf') format('truetype');
+            }
+
+            button {
+                padding: 10px 20px;
+                margin: 20px 0 0 20px; 
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 600;
+                background-color: #5713f4;
+                color: #fff;
+                position: absolute;
+                top: 10px;
+            }
+
+            h1 {
+                font-size: 30px; 
+                font-style: helvetica;
+                font-weight: 600;
+                margin-bottom: 20px;
+                /* font-family: inherit;  */
+                background-color: white;
+            }
+
+            .header {
+            background-color: white;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 200px; 
+            transition: height 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            }
+
+            .options {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+
+            .graph {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+
+            .search-bar {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                position: relative;
+                right: 200px;
+                z-index: 20px;
+            }
+
+            .search-bar input[type="text"] {
+                padding: 10px;
+                border: none;
+                border-radius: 20px;
+                font-size: 16px;
+                width: 200px;
+                background-color: #d8d6d6;
+                color: #000000
+            }
+
+            .search-bar button {
+                padding: 10px 20px;
+                margin-left: 225px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 600;
+                background-color: #1e83ae;
+                color: #f6f4f4;
+                top: -20px;
+                left: 20px;
+            }
+
+            .search-bar button:hover {
+                color: rgb(212, 209, 209);
+            }
+
+            .logo-button {
+                width: auto;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                margin-right: 300px;
+                margin-left: 0px;
+                overflow: hidden;
+                
+            }
+
+            .logo {
+                /* max-width: auto; */
+                width: 100%;
+                height: auto;
+            }
+
+            .hamburger-menu {
+                width: 30px;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;    
+            }
+
+            .lines {
+                padding: 2px 1px;
+                margin: 0px; 
+                border: none;
+                width: 80%;
+                background-color: #ed179b;
+                border-radius: 20px;
+                position: relative;
+                z-index: 1000;
+                
+            }
+
+            .menu {
+                position: fixed;
+                top: 150px;
+                left: -250px;
+                width: 200px;
+                height: 17%;
+                background-color: #c8e2cc;
+                transition: left 0.3s ease;
+                font-family: 'Dita Wd Small', sans-serif;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 100;
+            }
+
+            .menu-item {
+                padding: 10px;
+                margin: 0px;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                text-decoration: none;
+                background-color: transparent;
+                color: rgb(54, 112, 63);
+                font-family: 'Dita Wd Small', sans-serif;
+            }
+
+            .menu-item:hover {
+                color: rgb(19, 30, 17);
+            }
+
+            .menu.active {
+                left: 0;
+            }
+
+            #container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            #container > div:hover {
+                background-color: rgb(141, 130, 140);
+            }
+
+            #container a {
+                width: calc(50% - 20px);
+                margin: 10px;
+            }
+
+            .image-container {
+                text-align: center;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-name {
+                margin-top: 10px;
+                font-size: 16px;
+                color: black;
+            }
+
+            @media screen and (min-width: 768px) {
+                #container a {
+                    width: calc(50% - 30px); /* Adjust width as needed for three images per row */
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                #container a {
+                    width: calc(25% - 30px); /* Adjust width as needed for four images per row */
+                }
+            }
+            
+
+        </style>
+    </head>
+
+<body>
+    
+    <div class="header" id="header">
+
+
+        <!--NAVIGATION MENU-->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="lines"></div>
+            <div class="lines"></div>
+            <div class="lines"></div>
+        </div>
+    
+
+        <!--LOGO-->
+        <div class="logo-button">
+            <header>
+                <img src="{% static 'imageLogo.png' %}" width= 265 alt="JPLogo" class="logo">
+            </header>
+        </div>
+    
+
+        <!--POP-OUT MENU-->
+        <div class="menu" id="menu">
+            <a class="menu-item" href="home.html">Home</a>
+            <a class="menu-item" href="/destination2">Tables</a>
+            <a class="menu-item" href="/destination3">Graphs</a>
+            <a class="menu-item" href="/destination4">Download PDF</a>
+        </div>
+    
+
+        <!--SEARCH BAR-->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button onclick="search()">Search</button>
+        </div>
+        
     </div>
-</div>
+
+</body>
+
+<body>
+
+
+    <!-- WEB APPS -->
+    <div id="container">
+        <a href="/ciclos-economicos/">
+            <div class="image-container">
+                <img src="{% static 'imageCiclo.png' %}" width="265" alt="Ciclos App" class="logo" />
+                <span class="image-name">Ciclos Económicos</span>
+            </div>
+        </a>
+
+        <a href="/datos-demograficos/">
+            <div class="image-container">
+                <img src="{% static 'imageDemografico.jpeg' %}" width="265" alt="Demográfico App" class="logo" />
+                <span class="image-name">Demográfico</span>
+            </div>
+        </a>
+
+        <a href="/indicadores-mensuales/">
+            <div class="image-container">
+                <img src="{% static 'imageindicadores.jpeg' %}" width="265" alt="Indicadores App" class="logo">
+                <span class="image-name">Indicadores Económicos</span>
+            </div>
+        </a>
+
+        <a href="/centro-de-datos-macroeconomicos/">
+            <div class="image-container">
+                <img src="{% static 'imageMacro.jpeg' %}" width="265" alt="Macro App" class="logo">
+                <span class="image-name">Macroeconómia</span>
+            </div>
+        </a>
+
+    </div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("header").style.height = "85px"; //Make the header smaller
+            } 
+            
+            else {
+                document.getElementById("header").style.height = "125px"; //Reset the header
+            }
+        }
+
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+        
+        function search() {
+            
+            // Value of the search input
+            var searchTerm = document.getElementById('searchInput').value;
+
+            // Implement your search functionality here
+            // For example, you can log the search term to the console
+            console.log('Search term:', searchTerm);
+            
+            // Clears the search input after searching
+            document.getElementById('searchInput').value = '';
+        }
+    </script>
+
+</body>
+</html>

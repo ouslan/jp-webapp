@@ -35,11 +35,33 @@ p {
 }
 
 footer {
-    background-color: #E6E6E6;
+    background-color: #C7C7C7;
 }
 
 footer h1 {
     text-align: center;
+    padding-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container, .right-container {
+    width: 48%;
+    padding: 10px;
+}
+
+.custom-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the default text color */
+}
+
+.custom-link:hover {
+    color: blue; /* Change color to blue on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-decoration: none; /* Remove underline on hover */
 }
 
 /* Dropdown select styling */
