@@ -15,7 +15,7 @@ h1 {
 h2 {
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 2.5vw;
+    margin-top: 4vw;
     margin-left: 8vw;
     margin-right: 8vw;
 }
@@ -44,6 +44,18 @@ footer {
     background-color: pink;
 }
 
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container, .right-container {
+    width: 48%;
+    padding: 10px;
+    /* background-color: bisque;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
 
 .custom-link {
     text-decoration: none; /* Remove underline */
@@ -58,20 +70,29 @@ footer {
 
 .block {
     background-color: lightgreen;
-    width: 400px;
+    width: 500px;
     height: 400px;
     padding: 100px;
     margin: 20px;
 }
 
-.infoBlock {
-    background-color: lightgreen;
-    width: 900px;
-    height: 900px;
-    /* padding: 100px; */
-    margin: 20px;
-}
+/* .info-block { */
+    /* background-color: rgb(211, 209, 243); */
+    /* width: 600px; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* height: 900px; */
+    /* padding: 20px; */
+    /* margin: 20px; */
+/* } */
 
+/* .info-block2 { */
+    /* background-color: rgb(88, 86, 110); */
+    /* width: 600px; */
+    /* height: 900px; */
+    /* padding: 20px; */
+    /* margin: 20px; */
+/* } */
 
 
 
