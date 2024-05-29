@@ -38,8 +38,14 @@ footer {
     background-color: #E6E6E6;
 }
 
-footer h1 {
-    text-align: center;
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container, .right-container {
+    width: 48%;
+    padding: 10px;
 }
 
 /* Dropdown select styling */
