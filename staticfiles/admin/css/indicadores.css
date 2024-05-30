@@ -160,9 +160,13 @@ p {
 }
 
 .container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
 }
 
 .container .form button {
@@ -172,7 +176,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .container .form {
@@ -342,8 +345,8 @@ input:not(:placeholder-shown) ~ .reset {
   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
   border-radius: 0.5em;
   color:black;
+  margin-top: 226px;
   position: absolute;
-  top: 5.8em;
   left: 21%;
   transform: translateX(-50%);
   opacity: 0;
