@@ -137,17 +137,44 @@ p {
   opacity: 1;
 }
 
+.container .search-button {
+  background-color: #4A95A1;
+  border: none;
+  border-radius: 30px;
+  width: 100px;
+  height: 14px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding-bottom: 13px;
+  padding-top: 10px;
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.search-button:hover {
+  background-color: #3A7D84;
+}
+
 .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .container .form button {
   border: none;
   background: none;
   color: #8b8ba7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
-/* styling of whole input container */
+
 .container .form {
   --timing: 0.3s;
   --width-of-input: 200px;
@@ -158,8 +185,6 @@ p {
   --border-radius: 30px;
   --after-border-radius: 1px;
   position: relative;
-  width: var(--width-of-input);
-  height: var(--height-of-input);
   display: flex;
   align-items: center;
   padding-inline: 0.8em;
@@ -168,13 +193,15 @@ p {
   background: var(--input-bg, #fff);
   background-color: #E6E6E6;
   margin-top: 1vw;
-  margin-left: 75vw;
+  margin-left: 68vw;
+  width: 15vw;
+  position: relative;
 }
 /* styling of Input */
 .input {
   font-size: 0.9rem;
   background-color: transparent;
-  width: 100%;
+  width: 7vw;
   height: 100%;
   padding-inline: 0.5em;
   padding-block: 0.7em;
@@ -218,6 +245,7 @@ input:focus {
 input:not(:placeholder-shown) ~ .reset {
   opacity: 1;
   visibility: visible;
+  margin-left:50px;
 }
 /* sizing svg icons */
 .form svg {
@@ -227,12 +255,12 @@ input:not(:placeholder-shown) ~ .reset {
 
 .container .burger {
   position: relative;
-  width: 40px;
-  height: 30px;
+  width: 42px;
+  height: 29px;
   background: transparent;
   cursor: pointer;
   display: block;
-  margin-left: 3vw;
+  margin-left: 2vw;
 }
 
 .burger input {
