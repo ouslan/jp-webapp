@@ -55,8 +55,8 @@ def ciclos_economicos(request):
            11, 4, 2, 1],
         mode='lines+markers',
         name='test',
-        line=dict(color='#FF2525', width=3),
-        marker=dict(size=10, color='#00CDFF'),
+        line=dict(color='#000000', width=3),
+        marker=dict(size=10, color='#0080FF'),
         hoverinfo='text',
     ))
 
