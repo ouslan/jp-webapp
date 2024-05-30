@@ -125,7 +125,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [BASE_DIR / 'staticfiles/admin/css', BASE_DIR / 'staticfiles/admin/img', BASE_DIR / 'staticfiles/admin/favicon_io']
+STATICFILES_DIRS = [BASE_DIR / 'staticfiles/admin/css', 
+                    BASE_DIR / 'staticfiles/admin/img', 
+                    BASE_DIR / 'staticfiles/admin/favicon_io',
+                    BASE_DIR / 'staticfiles/admin/scripts',
+                    ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
