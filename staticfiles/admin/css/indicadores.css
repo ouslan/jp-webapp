@@ -369,9 +369,6 @@ input:not(:placeholder-shown) ~ .reset {
 }
 
 .burger_menu a:hover {
-  width: auto;
-  transition: 0.3s;
-  font-size: 23px;
   background: #CBCBCB;
 }
 
