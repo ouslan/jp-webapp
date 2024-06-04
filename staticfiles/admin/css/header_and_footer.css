@@ -1,5 +1,4 @@
 a {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     border: none;
     background: none;
@@ -7,7 +6,7 @@ a {
     display: flex;
     text-decoration: none;
     color: black;
-}
+  }
 
 
 /* SEARCH BAR */
@@ -264,7 +263,6 @@ input:not(:placeholder-shown)~.reset {
 /* FOOTER */
 footer {
     background-color: #C7C7C7;
-    box-shadow: 0 -10px 10px -10px rgba(131, 131, 131, 0.5);
 }
 
 footer h1 {
@@ -272,7 +270,7 @@ footer h1 {
     padding-left: 150px;
     padding-top: 40px;
     margin-bottom: 1px;
-}
+    }
 
 .footer-container {
     display: flex;
@@ -283,26 +281,26 @@ footer h1 {
     width: 48%;
     padding-top: 1px;
     padding-left: 150px;
-}
-
+} 
+    
 .right-container {
     width: 48%;
     padding-top: 5px;
     padding: 10px;
 }
 
+.maps {
+    padding-top: 50px;
+}
 
 .custom-link {
-    text-decoration: none;
-    color: inherit;
+    display: inline-block;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the default text color */
 }
 
 .custom-link:hover {
-    color: blue;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.maps {
-    padding-top: 50px;
+    color: blue; /* Change color to blue on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-decoration: none; /* Remove underline on hover */
 }

@@ -9,16 +9,6 @@ header {
   overflow-x: hidden;
 }
 
-a {
-  font-size: 18px;
-  border: none;
-  background: none;
-  flex-direction: column;
-  display: flex;
-  text-decoration: none;
-  color: black;
-}
-
 h1 {
   font-size: 3em;
   margin-top: 4vw;
