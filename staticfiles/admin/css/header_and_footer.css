@@ -9,6 +9,7 @@ a {
     color: black;
 }
 
+
 /* SEARCH BAR */
 .container {
     position: sticky;
@@ -139,6 +140,7 @@ input:not(:placeholder-shown)~.reset {
     margin-top: 3px;
 }
 
+
 /* BURGER */
 .container .burger {
     position: relative;
@@ -220,6 +222,7 @@ input:not(:placeholder-shown)~.reset {
     box-shadow: 0 0 0 0.8em "#E6E6E6";
 }
 
+
 /* BURGER MENU */
 .burger_menu {
     font-size: 18px;
@@ -257,7 +260,19 @@ input:not(:placeholder-shown)~.reset {
     background: #CBCBCB;
 }
 
+
 /* FOOTER */
+footer {
+    background-color: #C7C7C7;
+}
+
+footer h1 {
+    font-size: 35px;
+    padding-left: 150px;
+    padding-top: 40px;
+    margin-bottom: 1px;
+}
+
 .footer-container {
     display: flex;
     justify-content: space-between;
