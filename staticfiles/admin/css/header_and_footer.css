@@ -294,6 +294,7 @@ footer h1 {
 .custom-link {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
 }
 
 .custom-link:hover {
