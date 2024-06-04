@@ -19,6 +19,7 @@ a {
     justify-content: space-between;
     height: 5vw;
     background-color: white;
+    box-shadow: 0 10px 10px -10px rgba(131, 131, 131, 0.5);
 }
 
 .container .search-button {
