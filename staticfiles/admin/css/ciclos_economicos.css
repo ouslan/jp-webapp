@@ -82,8 +82,10 @@ select:focus {
 
 /* GRAPH */
 #variableY {
-  left: 8%;
+  left: 5%;
   transform: rotate(270deg);
+  align-items: center;
+  justify-items: center;
 }
 
 #variableX {
@@ -107,6 +109,7 @@ select:focus {
 .container-time {
   display: flex;
   align-items: center;
+  justify-items: center;
   flex-direction: column;
   width: 100%;
   position: relative;
@@ -115,5 +118,6 @@ select:focus {
 .graph-container {
   display: flex;
   align-items: center;
-  margin-left: 8vw;
+  justify-items: center;
+  margin-left: 90px;
 }
