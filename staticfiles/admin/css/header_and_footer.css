@@ -6,7 +6,7 @@ a {
     display: flex;
     text-decoration: none;
     color: black;
-  }
+}
 
 
 /* SEARCH BAR */
@@ -271,7 +271,7 @@ footer h1 {
     padding-left: 150px;
     padding-top: 40px;
     margin-bottom: 1px;
-    }
+}
 
 .footer-container {
     display: flex;
@@ -282,8 +282,8 @@ footer h1 {
     width: 48%;
     padding-top: 1px;
     padding-left: 150px;
-} 
-    
+}
+
 .right-container {
     width: 48%;
     padding-top: 5px;
@@ -296,12 +296,17 @@ footer h1 {
 
 .custom-link {
     display: inline-block;
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Use the default text color */
+    text-decoration: none;
+    /* Remove underline */
+    color: inherit;
+    /* Use the default text color */
 }
 
 .custom-link:hover {
-    color: blue; /* Change color to blue on hover */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    text-decoration: none; /* Remove underline on hover */
+    color: blue;
+    /* Change color to blue on hover */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    text-decoration: none;
+    /* Remove underline on hover */
 }
