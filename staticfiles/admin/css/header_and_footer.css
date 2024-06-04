@@ -264,6 +264,7 @@ input:not(:placeholder-shown)~.reset {
 /* FOOTER */
 footer {
     background-color: #C7C7C7;
+    box-shadow: 0 -10px 10px -10px rgba(131, 131, 131, 0.5);
 }
 
 footer h1 {
