@@ -1,3 +1,6 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
 #header-image {
   width: 100vw;
   height: auto;
@@ -9,27 +12,13 @@ body, header {
   overflow-x: hidden;
 }
 
-footer h1 {
-  font-size: 35px;
-  padding-left: 150px;
-  padding-top: 40px;
-  margin-bottom: 1px
-}
-
-
-footer {
-  background-color: #C7C7C7
-}
-
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
   margin-left: 2vw;
   margin-top: 4vw;
   font-size: 3em;
 }
 
 h2 {
-  font-family: Arial, Helvetica, sans-serif;
   margin-left: 2vw;
   margin-top: 3vw;
   margin-bottom: 5px;
@@ -39,7 +28,6 @@ h2 {
 p {
   display: block;
   font-size: 1.2em;
-  font-family: Arial, Helvetica, sans-serif;
   text-align: justify;
   margin-left: 2vw;
   margin-right: 8vw;
@@ -58,7 +46,6 @@ p {
 .dropdown {
   max-width: auto;
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
   margin-left: 0.5vw;
   margin-right: 0.5vw;
   margin-top: 3vw;
