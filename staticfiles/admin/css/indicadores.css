@@ -1,11 +1,33 @@
+#header-image {
+  width: 100vw;
+  height: auto;
+}
+
 body, header {
   margin: 0;
   padding: 0;
 }
 
-#header-image {
-  width: 100vw;
-  height: auto;
+footer h1 {
+  font-size: 35px;
+  padding-left: 150px;
+  padding-top: 40px;
+  margin-bottom: 1px;
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  border: none;
+  background: none;
+  flex-direction: column;
+  display: flex; 
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  background-color: #C7C7C7
 }
 
 h1 {
@@ -33,6 +55,7 @@ p {
   line-height: 1.5;
 }
 
+/* GRAPH */
 .graph-container {
   margin-top: 10px;
   display: flex; 
@@ -40,6 +63,7 @@ p {
   align-items: center; 
 }
 
+/* DROPDOWNS */
 .dropdown {
   max-width: auto;
   position: relative;
@@ -95,6 +119,7 @@ p {
   transform: rotate(180deg);
 }
 
+/* DROPDOWN MENUS */
 .menu {
   font-size: 18px;
   list-style: none;
@@ -137,6 +162,18 @@ p {
   opacity: 1;
 }
 
+/* SEARCH BAR */
+.container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vw;
+  background-color: white;
+}
+
 .container .search-button {
   background-color: #4A95A1;
   border: none;
@@ -146,7 +183,7 @@ p {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 5px;
   padding-bottom: 13px;
   padding-top: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -158,16 +195,6 @@ p {
 
 .search-button:hover {
   background-color: #3A7D84;
-}
-
-.container {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
 }
 
 .container .form button {
@@ -196,7 +223,7 @@ p {
   transition: border-radius 0.5s ease;
   background: var(--input-bg, #fff);
   background-color: #E6E6E6;
-  margin-top: 1vw;
+  margin-top: 5px;
   margin-left: 68vw;
   width: 15vw;
   position: relative;
@@ -257,6 +284,7 @@ input:not(:placeholder-shown) ~ .reset {
   margin-top: 3px;
 }
 
+/* BURGER */
 .container .burger {
   position: relative;
   width: 42px;
@@ -337,6 +365,7 @@ input:not(:placeholder-shown) ~ .reset {
   box-shadow: 0 0 0 0.8em "#E6E6E6";
 }
 
+/* BURGER MENU */
 .burger_menu {
   font-size: 18px;
   list-style: none;
@@ -373,21 +402,7 @@ input:not(:placeholder-shown) ~ .reset {
   background: #CBCBCB;
 }
 
-a {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  border: none;
-  background: none;
-  flex-direction: column;
-  display: flex; 
-  text-decoration: none;
-  color: black;
-}
-
-footer {
-  background-color: #C7C7C7
-}
-
+/* FOOTER */
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -415,13 +430,6 @@ footer {
   color: blue; 
   cursor: pointer; 
   text-decoration: none; 
-}
-
-footer h1 {
-  font-size: 35px;
-  padding-left: 150px;
-  padding-top: 40px;
-  margin-bottom: 1px;
 }
 
 .maps {
