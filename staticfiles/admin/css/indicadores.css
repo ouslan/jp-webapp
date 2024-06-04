@@ -12,17 +12,6 @@ body, header {
   overflow-x: hidden;
 }
 
-footer h1 {
-  font-size: 35px;
-  padding-left: 150px;
-  padding-top: 40px;
-  margin-bottom: 1px
-}
-
-footer {
-  background-color: #C7C7C7
-}
-
 h1 {
   margin-left: 2vw;
   margin-top: 4vw;
