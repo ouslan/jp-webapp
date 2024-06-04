@@ -52,302 +52,305 @@
 
         <h2>Gráficas</h2>
 
+        <div class="block">
+            <section class="graph-container">
+                <select id="variableY">
+                    <option value="blank" class="active">Blank</option>
+                    <option value="producto_bruto">PRODUCTO BRUTO (EN MILLONES $)</option>
+                    <option value="ingreso_neto">INGRESO NETO (EN MILLONES $)</option>
+                    <option value="ingreso_personal">INGRESO PERSONAL (EN MILLONES $)</option>
+                    <option value="ingreso_personal_disponible">INGRESO PERSONAL DISPONIBLE (EN MILLONES $)</option>
+                    <option value="producto_bruto_interno">PRODUCTO BRUTO INTERNO (EN MILLONES $)</option>
+                    <option value="inversion_interna_bruta_de_capital_fijo">INVERSION INTERNA BRUTA DE CAPITAL FIJO (EN MILLONES $)</option>
+                    <option value="ingreso_promedio_por_familia">INGRESO PROMEDIO POR FAMILIA (EN DOLARES)</option>
+                    <option value="numero_promedio_de_personas_por_familia">NUMERO PROMEDIO DE PERSONAS POR FAMILIA</option>
+                    <option value="sueldos_y_jornales">SUELDOS Y JORNALES(EN MILLONES $)</option>
+                    <option value="empleo_total">EMPLEO TOTAL (EN MILES $)</option>
+                    <option value="productividad_pbi_constante">PRODUCTIVIDAD[PBI CONSTANTE/EMPTOT (EN DOLARES)]</option>
+                    <option value="poblacion">POBLACION (EN MILES)</option>
+                    <option value="gasto_consumo_personal_total">GASTO CONSUMO PERSONAL TOTAL (EN MILLONES $)</option>
+                    <option value="gasto_consumo_articulos_duraderos">GASTO CONSUMO ARTICULOS DURADEROS (EN MILLONES $)</option>
+                    <option value="gasto_consumo_articulos_no_duraderos">GASTO CONSUMO ARTICULOS NO DURADEROS (EN MILLONES $)</option>
+                    <option value="gasto_consumo_servicios">GASTO CONSUMO SERVICIOS (EN MILLONES $)</option>
+                    <option value="gasto_consumo_gobierno_total">GASTO CONSUMO GOBIERNO TOTAL (EN MILLONES $)</option>
+                    <option value="gasto_consumo_gob_ela">GASTO CONSUMO GOB. E.L.A. (EN MILLONES $)</option>
+                    <option value="gasto_consumo_gob_municipios">GASTO CONSUMO GOB. MUNICIPIOS (EN MILLONES $)</option>
+                    <option value="inversion_interna_bruta_total">INVERSION INTERNA BRUTA, TOTAL (EN MILLONES $)</option>
+                    <option value="cambjo_en_inventario">CAMBIO EN INVENTARIO</option>
+                    <option value="construccion_total">CONSTRUCCION TOTAL (EN MILLONES $)</option>
+                    <option value="construccion_empresas_privadas">CONSTRUCCION EMPRESAS PRIVADAS (EN MILLONES $)</option>
+                    <option value="construccion_empresas_publicas">CONSTRUCCION EMPRESAS PUBLICAS (EN MILLONES $)</option>
+                    <option value="construccion_gobierno">CONSTRUCCION GOBIERNO (EN MILLONES $)</option>
+                    <option value="construccion_ela">CONSTRUCCION ELA (EN MILLONES $)</option>
+                    <option value="construccion_municipios">CONSTRUCCION MUNICIPIOS (EN MILLONES $)</option>
+                    <option value="maquinaria_equipo">MAQUINARIA EQUIPO (EN MILLONES $)</option>
+                    <option value="maq_empresas_privadas">MAQ. EMPRESAS PRIVADAS (EN MILLONES $)</option>
+                    <option value="maq_empresas_publicas">MAQ. EMPRESAS PUBLICAS (EN MILLONES $)</option>
+                    <option value="maq_gobierno">MAQ. GOBIERNO (EN MILLONES $)</option>
+                    <option value="maquela_maq_ela">MAQELA = MAQ. ELA (EN MILLONES $)</option>
+                    <option value="maq_municipios">MAQ. MUNICIPIOS (EN MILLONES $)</option>
+                    <option value="ventas_netas_al_resto_del_mundo">VENTAS NETAS AL RESTO DEL MUNDO (EN MILLONES $)</option>
+                    <option value="ventas_totales_al_resto_del_mundo">VENTAS TOTALES AL RESTO DEL MUNDO (EN MILLONES $)</option>
+                    <option value="ventas_gob_federal">VENTAS GOB. FEDERAL (EN MILLONES $)</option>
+                    <option value="ventas_otros_no_residentes">VENTAS OTROS NO RESIDENTES (EN MILLONES $)</option>
+                    <option value="compras_resto_del_mundo">COMPRAS RESTO DEL MUNDO TOTAL (EN MILLONES $)</option>
+                    <option value="compras_gob_federal">COMPRAS GOB. FEDERAL (EN MILLONES $)</option>
+                    <option value="compras_otros_no_residentes">COMPRAS OTROS NO RESIDENTES (EN MILLONES $)</option>
+                    <option value="indices_deflacion_producto_bruto">INDICES DEFLACION PRODUCTO BRUTO (54=100)</option>
+                    <option value="indices_deflacion_gasto_personal">INDICES DEFLACION GASTO CONSUMO PERSONAL (54=100)</option>
+                    <option value="indices_deflacion_articulos_duradero">INDICES DEFLACION ARTICULOS DURADERO (54=100)</option>
+                    <option value="indices_deflacion_articulos_no_duradero">INDICES DEFLACION ARTICULOS NO DURADEROS (54=100)</option>
+                    <option value="indices_deflacion_servicios">INDICES DEFLACION SERVICIOS (54=100)</option>
+                    <option value="indices_deflacion_gasto_consumo_gob_total">INDICES DEFLACION GASTO CONSUMO GOB. TOTAL (54=100)</option>
+                    <option value="indices_deflacion_gcgob_ela">INDICES DEFLACION G.C.GOB. ELA (54=100)</option>
+                    <option value="indices_deflacion_gcgob_municipios">INDICES DEFLACION G.C.GOB MUNICIPIOS (54=100)</option>
+                    <option value="indices_deflacion_inver_interna_bruta_total">INDICES DEFLACION INVER. INTERNA BRUTA,TOTAL (54=100)</option>
+                    <option value="indices_defl_inver_interna_bruta_total">INDICES DEFL. INVER. INTERNA BRUTA,TOTAL (54=100)</option>
+                    <option value="indices_deflacion_construccion_54=100">INDICES DEFLACION CONSTRUCCION (54=100)</option>
+                    <option value="indices_deflacion_maq_y_equipo_54=100">INDICES DEFLACION MAQ. Y EQUIPO (54=100)</option>
+                    <option value="indices_deflacion_ventas_netas">INDICES DEFLACION VENTAS NETAS (54=100)</option>
+                    <option value="indices_deflacion_ventas_resto_del_mundo">INDICES DEFLACION VENTAS RESTO DEL MUNDO (54=100)</option>
+                    <option value="indices_deflacion_ventas_gob_personal_54=100">INDICES DEFLACION VENTAS GOB FEDERAL (54=100)</option>
+                    <option value="indices_defl_ventas_otros_no_residentes">DICES DEFL. VENTAS OTROS NO RESIDENTES (54=100)</option>
+                    <option value="gasto_consumo_personal_alimento">GASTO CONSUMO PERSONAL ALIMENTO (EN MILLONES $)</option>
+                    <option value="gcp_alcoholicas_y_tabaco">G.C.P. ALCOHOLICAS Y TABACO (EN MILLONES $)</option>
+                    <option value="gcp_ropa">G.C.P. ROPA</option>
+                    <option value="gcp_cuidado_personal">G.C.P. CUIDADO PERSONAL (EN MILLONES $)</option>
+                    <option value="gcp_vivienda">G.C.P. VIVIENDA (EN MILLONES $)</option>
+                    <option value="gcp_funcionamiento_del_hogar">G.C.P. FUNCIONAMIENTO DEL HOGAR (EN MILLONES $)</option>
+                    <option value="gcp_servicios_medicos_funerarios">G.C.P. SERVICIOS MEDICOS FUNERARIOS (EN MILLONES $)</option>
+                    <option value="gcp_servicios_comerciales">G.C.P. SERVICIOS COMERCIALES (EN MILLONES $)</option>
+                    <option value="gcp_transportacion">G.C.P. TRANSPORTACION (EN MILLONES $)</option>
+                    <option value="gcp_recreacion">G.C.P. RECREACION (EN MILLONES $)"</option>
+                    <option value="gcp_educacion">G.C.P. EDUCACION (EN MILLONES $)</option>
+                    <option value="gcp_instituciones_religiosas">G.C.P. INSTITUCIONES RELIGIOSAS (EN MILLONES $)</option>
+                    <option value="gcp_viajes_al_exterior">G.C.P. VIAJES AL EXTERIOR (EN MILLONES $)</option>
+                    <option value="gcp_compras_miscelaneas">G.C.P. COMPRAS MISCELANEAS (EN MILLONES $)</option>
+                    <option value="gcp_totales_residentes_y_no_res">G.C.P. TOTALES RESIDENTES Y NO RES. (EN MILLONES $)</option>
+                    <option value="gcp_de_no_residentes">G.C.P. DE NO RESIDENTES (EN MILLONES $)</option>
+                    <option value="indices_deflacion_alimentos">INDICES DEFLACION ALIMENTOS (54=100)</option>
+                    <option value="indices_deflacion_alcoholicas_y_tabaco">INDICES DEFLACION ALCOHOLICAS Y TABACO (54=100)</option>
+                    <option value="indices_deflacion_ropa_accesorio">INDICES DEFLACION ROPA ACCESORIO (54=100)</option>
+                    <option value="indices_deflacion_cuidado_personal">INDICES DEFLACION CUIDADO PERSONAL (54=100)</option>
+                    <option value="indices_deflacion_vivienda">INDICES DEFLACION VIVIENDA (54=100)</option>
+                    <option value="indice_deflacion_funcionamiento_del_hogar">INDICE DEFLACION FUNCIONAMIENTO DEL HOGAR (54=100)</option>
+                    <option value="indice_defl_servicios_medicos_y_funerarios">INDICE DEFL. SERVICIOS MEDICOS Y FUNERARIOS (54=100)</option>
+                    <option value="indice_deflacion_servicios_comerciales">INDICE DEFLACION SERVICIOS COMERCIALES (54=100)</option>
+                    <option value="indice_deflacion_transportacion">INDICE DEFLACION TRANSPORTACION (54=100)</option>
+                    <option value="indice_deflacion_recreacion">INDICE DEFLACION RECREACION (54=100)</option>
+                    <option value="indice_deflacion_educacion">INDICE DEFLACION EDUCACION (54=100)</option>
+                    <option value="indice_deflacion_institucionales_religiosas">INDICE DEFLACION INSTITUCIONES RELIGIOSAS (54=100)</option>
+                    <option value="indice_deflacion_viajes_al_exterior">INDICE DEFLACION VIAJES AL EXTERIOR (54=100)</option>
+                    <option value="indice_deflacion_compras_misclenaneas">INDICE DEFLACION COMPRAS MISCELANEAS (54=100)</option>
+                    <option value="indice_deflacion_residentes_y_no_residentes">INDICE DEFLACION RESIDENTES Y NO RESIDENTES (54=100)</option>
+                    <option value="indice_deflacion_de_no_residente">INDICE DEFLACION DE NO RESIDENTE (54=100)</option>
+                    <option value="total_importaciones_ajustadas">TOTAL IMPORTACIONES AJUSTADAS (EN MILLONES $)</option>
+                    <option value="import_ajustada_articulos_de_consumo">IMPORT AJUSTADA ARTICULOS DE CONSUMO (EN MILLONES)</option>
+                    <option value="import_ajustadas_duraderos">IMPORT AJUSTADAS DURADEROS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_automoviles">IMPORT AJUSTADAS AUTOMOVILES (EN MILLONES $)</option>
+                    <option value="import_ajustadas_enseres_electricos">IMPORT AJUSTADAS ENSERES ELECTRICOS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_articulos_no_duraderos">IMPORT AJUSTADAS ARTICULOS NO DURADEROS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_articulos_duraderos">IMPORT AJUSTADAS ARTICULOS DURADEROS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_alimentos">IMPORT AJUSTADAS ALIMENTOS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_alcoholicas_y_tabaco">IMPORT AJUSTADAS ALCOHOLICAS Y TABACO (EN MILLONES $)</option>
+                    <option value="import_ajustadas_otros_articulos_no_duraderos">IMPORT AJUSTADAS OTROS ARTICULOS NO DURADEROS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_bienes_de_capital">IMPORT AJUSTADAS BIENES DE CAPITAL (EN MILLONES $)</option>
+                    <option value="import_ajustadas_materia_prima_e_intermedios">IMPORT AJUSTADAS MATERIA PRIMA E INTERMEDIOS (EN MILLONES $)</option>
+                    <option value="pagos_derechos_de_pasaportes">PAGOS DERECHOS DE PASAPORTES (T-21 EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_agricultura">INGRESO NETO INTERNO AGRICULTURA (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_manufactura">INGRESO NETO INTERNO MANUFACTURA (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_comercio">INGRESO NETO INTERNO COMERCIO (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_gobierno">INGRESO NETO INTERNO GOBIERNO (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_mineria">INGRESO NETO INTERNO MINERIA (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_cosntruccion">INGRESO NETO INTERNO CONSTRUCCION (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_transportacion">INGRESO NETO INTERNO TRANSPORTACION (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_finanzas">INGRESO NETO INTERNO FINANZAS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_informatica">INGRESO NETO INTERNO INFORMATICA (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_finanzas_y_seguros">INGRESO NETO INTERNO FINANZAS Y SEGUROS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_bienes_raices_renta_y_arrendamiento">INGRESO NETO INTERNO BIENES RAICES, RENTA Y ARRENDAMIENTO (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_servicios_profesionales_cientificos_y_tecnicos">INGRESO NETO INTERNO SERVICIOS PROFESIONALES, CIENTIFICOS Y TECNICOS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_administracion_de_companias_y_empresas">INGRESO NETO INTERNO ADMINISTRACION DE COMPAÑIAS Y EMPRESAS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_servicios_administrativos">INGRESO NETO INTERNO SERVICIOS ADMINISTRATIVOS Y  DE APOYO (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_servicios_educativos">INGRESO NETO INTERNO SERVICIOS EDUCATIVOS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_servicios_salud_y_servicios_sociales">INGRESO NETO INTERNO SERVICIOS SALUD Y SERVICIOS SOCIALES (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_arte_entretenimiento_y_recreacion">INGRESO NETO INTERNO ARTE, ENTRETENIMIENTO Y RECREACION (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_alojamiento_y_restaurantes">INGRESO NETO INTERNO ALOJAMIENTO Y RESTAURANTES (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_otros_servicios">INGRESO NETO INTERNO OTROS SERVICIOS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_gobierno">INGRESO NETO INTERNO GOBIERNO (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_gobierno_ela">INGRESO NETO INTERNO GOBIERNO ELA (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_gobierno_municipios">INGRESO NETO INTERNO GOBIERNO MUNICIPIOS (EN MILLONES $)</option>
+                    <option value="total_transf_fed_recibidas_por_el_gob">TOTAL TRANSF. FED. RECIBIDAS POR EL GOB. (T-22 EN MILLONES $)</option>
+                    <option value="total_import_mecanicas_registradas">TOTAL IMPORT. MERCANICAS REGISTRADAS (EN MILLONES $)</option>
+                    <option value="imr_articulos_de_consumo">I.M.R. ARTICULOS DE CONSUMO</option>
+                    <option value="imr_bienes_de_capital">I.M.R. BIENES DE CAPITAL</option>
+                    <option value="imr_materias_primas_y_productos_intermedios">I.M.R. MATERIAS PRIMAS Y PRODUCTOS INTERMEDIOS</option>
+                    <option value="imr_articulos_duraderos">I.M.R. ARTICULOS DURADEROS</option>
+                    <option value="imr_articulos_no_duraderos">I.M.R. ARTICULOS NO DURADEROS</option>
+                    <option value="imr_automoviles">I.M.R. AUTOMOVILES</option>
+                    <option value="imr_enseres_electricos">I.M.R. ENSERES ELECTRICOS</option>
+                    <option value="imr_otros_articulos_duraderos">I.M.R. OTROS ARTICULOS DURADEROS</option>
+                    <option value="imr_alimentos">I.M.R. ALIMENTOS</option>
+                    <option value="imr_bebidas_alcoholicas_y_productos_de_tabaco">I.M.R. BEBIDAS ALCOHOLICAS Y PRODUCTOS DE TABACO</option>
+                    <option value="imr_otros_articulos_no_duraderos">I.M.R. OTROS ARTICULOS NO DURADEROS</option>
+                    <option value="gcp_bebidas_alcoholicas">G.C.P. BEBIDAS ALCOHOLICAS</option>
+                    <option value="gsp_bebidas_alcoholicas_constante">G.C.P. BEBIDAS ALCOHOLICAS CONSTANTE (54=100)</option>
+                    <option value="gcp_tabaco">G.C.P. TABACO</option>
+                    <option value="gcp_tabaco_constante">G.C.P. TABACO CONSTANTE (54=100)</option>
+                    <option value="indice_de_precios_al_consumidos">INDICE DE PRECIOS AL CONSUMIDOR (DIC 2006=100)</option>
+                </select>
+                {{ macro1|safe }}
+            </section>
 
-        <div>
-            <input id="dataInput" name="PRODUCTO BRUTO (EN MILLONES $)" list="PRODUCTO BRUTO (EN MILLONES $)" placeholder="PRODUCTO BRUTO (EN MILLONES $)" onclick="clearInput()">
-            <datalist id="PRODUCTO BRUTO (EN MILLONES $)">
-                <option value="PRODUCTO BRUTO (EN MILLONES $)">
-                <option value="INGRESO NETO (EN MILLONES $)">
-                <option value="INGRESO PERSONAL (EN MILLONES $)">
-                <option value="INGRESO PERSONAL DISPONIBLE (EN MILLONES $)">
-                <option value="PRODUCTO BRUTO INTERNO (EN MILLONES $)">
-                <option value="INVERSION INTERNA BRUTA DE CAPITAL FIJO (EN MILLONES $)">
-                <option value="INGRESO PROMEDIO POR FAMILIA (EN DOLARES)">
-                <option value="NUMERO PROMEDIO DE PERSONAS POR FAMILIA">
-                <option value="SUELDOS Y JORNALES(EN MILLONES $)">
-                <option value="EMPLEO TOTAL (EN MILES $)">
-                <option value="PRODUCTIVIDAD[PBI CONSTANTE/EMPTOT (EN DOLARES)]">
-                <option value="POBLACION (EN MILES)">
-                <option value="GASTO CONSUMO PERSONAL TOTAL (EN MILLONES $)">
-                <option value="GASTO CONSUMO ARTICULOS DURADEROS (EN MILLONES $)">
-                <option value="GASTO CONSUMO ARTICULOS NO DURADEROS (EN MILLONES $)">
-                <option value="GASTO CONSUMO SERVICIOS (EN MILLONES $)">
-                <option value="GASTO CONSUMO GOBIERNO TOTAL (EN MILLONES $)">
-                <option value="GASTO CONSUMO GOB. E.L.A. (EN MILLONES $)">
-                <option value="GASTO CONSUMO GOB. MUNICIPIOS (EN MILLONES $)">
-                <option value="INVERSION INTERNA BRUTA, TOTAL (EN MILLONES $)">
-                <option value="CAMBIO EN INVENTARIO">
-                <option value="CONSTRUCCION TOTAL (EN MILLONES $)">
-                <option value="CONSTRUCCION EMPRESAS PRIVADAS (EN MILLONES $)">
-                <option value="CONSTRUCCION EMPRESAS PUBLICAS (EN MILLONES $)">
-                <option value="CONSTRUCCION GOBIERNO (EN MILLONES $)">
-                <option value="CONSTRUCCION ELA (EN MILLONES $)">
-                <option value="CONSTRUCCION MUNICIPIOS (EN MILLONES $)">
-                <option value="MAQUINARIA EQUIPO (EN MILLONES $)">
-                <option value="MAQ. EMPRESAS PRIVADAS (EN MILLONES $)">
-                <option value="MAQ. EMPRESAS PUBLICAS (EN MILLONES $)">
-                <option value="MAQ. GOBIERNO (EN MILLONES $)">
-                <option value="MAQELA = MAQ. ELA (EN MILLONES $)">
-                <option value="MAQ. MUNICIPIOS (EN MILLONES $)">
-                <option value="VENTAS NETAS AL RESTO DEL MUNDO (EN MILLONES $)">
-                <option value="VENTAS TOTALES AL RESTO DEL MUNDO (EN MILLONES $)">
-                <option value="VENTAS GOB. FEDERAL (EN MILLONES $)">
-                <option value="VENTAS OTROS NO RESIDENTES (EN MILLONES $)">
-                <option value="COMPRAS RESTO DEL MUNDO TOTAL (EN MILLONES $)">
-                <option value="COMPRAS GOB. FEDERAL (EN MILLONES $)">
-                <option value="COMPRAS OTROS NO RESIDENTES (EN MILLONES $)">
-                <option value="INDICES DEFLACION PRODUCTO BRUTO (54=100)">
-                <option value="INDICES DEFLACION GASTO CONSUMO PERSONAL (54=100)">
-                <option value="INDICES DEFLACION ARTICULOS DURADERO (54=100)">
-                <option value="INDICES DEFLACION ARTICULOS NO DURADEROS (54=100)">
-                <option value="INDICES DEFLACION SERVICIOS (54=100)">
-                <option value="INDICES DEFLACION GASTO CONSUMO GOB. TOTAL (54=100)">
-                <option value="INDICES DEFLACION G.C.GOB. ELA (54=100)">
-                <option value="INDICES DEFLACION G.C.GOB MUNICIPIOS (54=100)">
-                <option value="INDICES DEFLACION INVER. INTERNA BRUTA,TOTAL (54=100)">
-                <option value="INDICES DEFL. INVER. INTERNA BRUTA,TOTAL (54=100)">
-                <option value="INDICES DEFLACION CONSTRUCCION (54=100)">
-                <option value="INDICES DEFLACION MAQ. Y EQUIPO (54=100)">
-                <option value="INDICES DEFLACION VENTAS NETAS (54=100)">
-                <option value="INDICES DEFLACION VENTAS RESTO DEL MUNDO (54=100)">
-                <option value="INDICES DEFLACION VENTAS GOB FEDERAL (54=100)">
-                <option value="INDICES DEFL. VENTAS OTROS NO RESIDENTES (54=100)">
-                <option value="GASTO CONSUMO PERSONAL ALIMENTO (EN MILLONES $)">
-                <option value="G.C.P. ALCOHOLICAS Y TABACO (EN MILLONES $)">
-                <option value="G.C.P. ROPA">
-                <option value="G.C.P. CUIDADO PERSONAL (EN MILLONES $)">
-                <option value="G.C.P. VIVIENDA (EN MILLONES $)">
-                <option value="G.C.P. FUNCIONAMIENTO DEL HOGAR (EN MILLONES $)">
-                <option value="G.C.P. SERVICIOS MEDICOS FUNERARIOS (EN MILLONES $)">
-                <option value="G.C.P. SERVICIOS COMERCIALES (EN MILLONES $)">
-                <option value="G.C.P. TRANSPORTACION (EN MILLONES $)">
-                <option value="G.C.P. RECREACION (EN MILLONES $)">
-                <option value="G.C.P. EDUCACION (EN MILLONES $)">
-                <option value="G.C.P. INSTITUCIONES RELIGIOSAS (EN MILLONES $)">
-                <option value="G.C.P. VIAJES AL EXTERIOR (EN MILLONES $)">
-                <option value="G.C.P. COMPRAS MISCELANEAS (EN MILLONES $)">
-                <option value="G.C.P. TOTALES RESIDENTES Y NO RES. (EN MILLONES $)">
-                <option value="G.C.P. DE NO RESIDENTES (EN MILLONES $)">
-                <option value="INDICES DEFLACION ALIMENTOS (54=100)">
-                <option value="INDICES DEFLACION ALCOHOLICAS Y TABACO (54=100)">
-                <option value="INDICES DEFLACION ROPA ACCESORIO (54=100)">
-                <option value="INDICES DEFLACION CUIDADO PERSONAL (54=100)">
-                <option value="INDICES DEFLACION VIVIENDA (54=100)">
-                <option value="INDICE DEFLACION FUNCIONAMIENTO DEL HOGAR (54=100)">
-                <option value="-------INDICE DEFL. SERVICIOS MEDICOS Y FUNERARIOS (54=100)">
-                <option value="INDICE DEFLACION SERVICIOS COMERCIALES (54=100)">
-                <option value="INDICE DEFLACION TRANSPORTACION (54=100)">
-                <option value="INDICE DEFLACION RECREACION (54=100)">
-                <option value="INDICE DEFLACION EDUCACION (54=100)">
-                <option value="INDICE DEFLACION INSTITUCIONES RELIGIOSAS (54=100)">
-                <option value="INDICE DEFLACION VIAJES AL EXTERIOR (54=100)">
-                <option value="INDICE DEFLACION COMPRAS MESCELANEAS (54=100)">
-                <option value="INDICE DEFLACION RESIDENTES Y NO RESIDENTES (54=100)">
-                <option value="INDICE DEFLACION DE NO RESIDENTE (54=100)">
-                <option value="TOTAL IMPORTACIONES AJUSTADAS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADA ARTICULOS DE CONSUMO (EN MILLONES)">
-                <option value="---------IMPORT AJUSTADAS DURADEROS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS AUTOMOVILES (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS ENSERES ELECTRICOS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS ARTICULOS NO DURADEROS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS ARTICULOS DURADEROS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS ALIMENTOS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS ALCOHOLICAS Y TABACO (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS OTROS ARTICULOS NO DURADEROS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS BIENES DE CAPITAL (EN MILLONES $)">  
-                <option value="IMPORT AJUSTADAS MATERIA PRIMA E INTERMEDIOS (EN MILLONES $)">
-                <option value="PAGOS DERECHOS DE PASAPORTES (T-21 EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO AGRICULTURA (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO MANUFACTURA (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO COMERCIO (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO GOBIERNO (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO MINERIA (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO CONSTRUCCION (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO TRANSPORTACION (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO FINANZAS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO INFORMATICA (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO FINANZAS Y SEGUROS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO BIENES RAICES, RENTA Y ARRENDAMIENTO (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO SERVICIOS PROFESIONALES, CIENTIFICOS Y TECNICOS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO ADMINISTRACION DE COMPAÑIAS Y EMPRESAS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO SERVICIOS ADMINISTRATIVOS Y  DE APOYO (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO SERVICIOS EDUCATIVOS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO SERVICIOS SALUD Y SERVICIOS SOCIALES (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO ARTE, ENTRETENIMIENTO Y RECREACION (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO ALOJAMIENTO Y RESTAURANTES (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO OTROS SERVICIOS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO GOBIERNO (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO GOBIERNO ELA (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO GOBIERNO MUNICIPIOS (EN MILLONES $)">
-                <option value="TOTAL TRANSF. FED. RECIBIDAS POR EL GOB. (T-22 EN MILLONES $)">
-                <option value="TOTAL IMPORT. MERCANCIAS REGISTRADAS (EN MILLONES $)">
-                <option value="I.M.R. ARTICULOS DE CONSUMO">
-                <option value="I.M.R. BIENES DE CAPITAL">
-                <option value="I.M.R. MATERIAS PRIMAS Y PRODUCTOS INTERMEDIOS">
-                <option value="I.M.R. ARTICULOS DURADEROS">
-                <option value="I.M.R. ARTICULOS NO DURADEROS">
-                <option value="I.M.R. AUTOMOVILES">
-                <option value="I.M.R. ENSERES ELECTRICOS">
-                <option value="I.M.R. OTROS ARTICULOS DURADEROS">
-                <option value="I.M.R. ALIMENTOS">
-                <option value="I.M.R. BEBIDAS ALCOHOLICAS Y PRODUCTOS DE TABACO">
-                <option value="I.M.R. OTROS ARTICULOS NO DURADEROS">
-                <option value="G.C.P. BEBIDAS ALCOHOLICAS">
-                <option value="G.C.P. BEBIDAS ALCOHOLICAS CONSTANTE (54=100)">
-                <option value="G.C.P. TABACO">
-                <option value="G.C.P. TABACO CONSTANTE (54=100)">
-                <option value="INDICE DE PRECIOS AL CONSUMIDOR (DIC 2006=100)">
+
+
+            <section class="container-X">
+                <select id="variableX">
+                    <option value="blank" class="active">Blank</option>
+                    <option value="producto_bruto">PRODUCTO BRUTO (EN MILLONES $)</option>
+                    <option value="ingreso_neto">INGRESO NETO (EN MILLONES $)</option>
+                    <option value="ingreso_personal">INGRESO PERSONAL (EN MILLONES $)</option>
+                    <option value="ingreso_personal_disponible">INGRESO PERSONAL DISPONIBLE (EN MILLONES $)</option>
+                    <option value="producto_bruto_interno">PRODUCTO BRUTO INTERNO (EN MILLONES $)</option>
+                    <option value="inversion_interna_bruta_de_capital_fijo">INVERSION INTERNA BRUTA DE CAPITAL FIJO (EN MILLONES $)</option>
+                    <option value="ingreso_promedio_por_familia">INGRESO PROMEDIO POR FAMILIA (EN DOLARES)</option>
+                    <option value="numero_promedio_de_personas_por_familia">NUMERO PROMEDIO DE PERSONAS POR FAMILIA</option>
+                    <option value="sueldos_y_jornales">SUELDOS Y JORNALES(EN MILLONES $)</option>
+                    <option value="empleo_total">EMPLEO TOTAL (EN MILES $)</option>
+                    <option value="productividad_pbi_constante">PRODUCTIVIDAD[PBI CONSTANTE/EMPTOT (EN DOLARES)]</option>
+                    <option value="poblacion">POBLACION (EN MILES)</option>
+                    <option value="gasto_consumo_personal_total">GASTO CONSUMO PERSONAL TOTAL (EN MILLONES $)</option>
+                    <option value="gasto_consumo_articulos_duraderos">GASTO CONSUMO ARTICULOS DURADEROS (EN MILLONES $)</option>
+                    <option value="gasto_consumo_articulos_no_duraderos">GASTO CONSUMO ARTICULOS NO DURADEROS (EN MILLONES $)</option>
+                    <option value="gasto_consumo_servicios">GASTO CONSUMO SERVICIOS (EN MILLONES $)</option>
+                    <option value="gasto_consumo_gobierno_total">GASTO CONSUMO GOBIERNO TOTAL (EN MILLONES $)</option>
+                    <option value="gasto_consumo_gob_ela">GASTO CONSUMO GOB. E.L.A. (EN MILLONES $)</option>
+                    <option value="gasto_consumo_gob_municipios">GASTO CONSUMO GOB. MUNICIPIOS (EN MILLONES $)</option>
+                    <option value="inversion_interna_bruta_total">INVERSION INTERNA BRUTA, TOTAL (EN MILLONES $)</option>
+                    <option value="cambjo_en_inventario">CAMBIO EN INVENTARIO</option>
+                    <option value="construccion_total">CONSTRUCCION TOTAL (EN MILLONES $)</option>
+                    <option value="construccion_empresas_privadas">CONSTRUCCION EMPRESAS PRIVADAS (EN MILLONES $)</option>
+                    <option value="construccion_empresas_publicas">CONSTRUCCION EMPRESAS PUBLICAS (EN MILLONES $)</option>
+                    <option value="construccion_gobierno">CONSTRUCCION GOBIERNO (EN MILLONES $)</option>
+                    <option value="construccion_ela">CONSTRUCCION ELA (EN MILLONES $)</option>
+                    <option value="construccion_municipios">CONSTRUCCION MUNICIPIOS (EN MILLONES $)</option>
+                    <option value="maquinaria_equipo">MAQUINARIA EQUIPO (EN MILLONES $)</option>
+                    <option value="maq_empresas_privadas">MAQ. EMPRESAS PRIVADAS (EN MILLONES $)</option>
+                    <option value="maq_empresas_publicas">MAQ. EMPRESAS PUBLICAS (EN MILLONES $)</option>
+                    <option value="maq_gobierno">MAQ. GOBIERNO (EN MILLONES $)</option>
+                    <option value="maquela_maq_ela">MAQELA = MAQ. ELA (EN MILLONES $)</option>
+                    <option value="maq_municipios">MAQ. MUNICIPIOS (EN MILLONES $)</option>
+                    <option value="ventas_netas_al_resto_del_mundo">VENTAS NETAS AL RESTO DEL MUNDO (EN MILLONES $)</option>
+                    <option value="ventas_totales_al_resto_del_mundo">VENTAS TOTALES AL RESTO DEL MUNDO (EN MILLONES $)</option>
+                    <option value="ventas_gob_federal">VENTAS GOB. FEDERAL (EN MILLONES $)</option>
+                    <option value="ventas_otros_no_residentes">VENTAS OTROS NO RESIDENTES (EN MILLONES $)</option>
+                    <option value="compras_resto_del_mundo">COMPRAS RESTO DEL MUNDO TOTAL (EN MILLONES $)</option>
+                    <option value="compras_gob_federal">COMPRAS GOB. FEDERAL (EN MILLONES $)</option>
+                    <option value="compras_otros_no_residentes">COMPRAS OTROS NO RESIDENTES (EN MILLONES $)</option>
+                    <option value="indices_deflacion_producto_bruto">INDICES DEFLACION PRODUCTO BRUTO (54=100)</option>
+                    <option value="indices_deflacion_gasto_personal">INDICES DEFLACION GASTO CONSUMO PERSONAL (54=100)</option>
+                    <option value="indices_deflacion_articulos_duradero">INDICES DEFLACION ARTICULOS DURADERO (54=100)</option>
+                    <option value="indices_deflacion_articulos_no_duradero">INDICES DEFLACION ARTICULOS NO DURADEROS (54=100)</option>
+                    <option value="indices_deflacion_servicios">INDICES DEFLACION SERVICIOS (54=100)</option>
+                    <option value="indices_deflacion_gasto_consumo_gob_total">INDICES DEFLACION GASTO CONSUMO GOB. TOTAL (54=100)</option>
+                    <option value="indices_deflacion_gcgob_ela">INDICES DEFLACION G.C.GOB. ELA (54=100)</option>
+                    <option value="indices_deflacion_gcgob_municipios">INDICES DEFLACION G.C.GOB MUNICIPIOS (54=100)</option>
+                    <option value="indices_deflacion_inver_interna_bruta_total">INDICES DEFLACION INVER. INTERNA BRUTA,TOTAL (54=100)</option>
+                    <option value="indices_defl_inver_interna_bruta_total">INDICES DEFL. INVER. INTERNA BRUTA,TOTAL (54=100)</option>
+                    <option value="indices_deflacion_construccion_54=100">INDICES DEFLACION CONSTRUCCION (54=100)</option>
+                    <option value="indices_deflacion_maq_y_equipo_54=100">INDICES DEFLACION MAQ. Y EQUIPO (54=100)</option>
+                    <option value="indices_deflacion_ventas_netas">INDICES DEFLACION VENTAS NETAS (54=100)</option>
+                    <option value="indices_deflacion_ventas_resto_del_mundo">INDICES DEFLACION VENTAS RESTO DEL MUNDO (54=100)</option>
+                    <option value="indices_deflacion_ventas_gob_personal_54=100">INDICES DEFLACION VENTAS GOB FEDERAL (54=100)</option>
+                    <option value="indices_defl_ventas_otros_no_residentes">DICES DEFL. VENTAS OTROS NO RESIDENTES (54=100)</option>
+                    <option value="gasto_consumo_personal_alimento">GASTO CONSUMO PERSONAL ALIMENTO (EN MILLONES $)</option>
+                    <option value="gcp_alcoholicas_y_tabaco">G.C.P. ALCOHOLICAS Y TABACO (EN MILLONES $)</option>
+                    <option value="gcp_ropa">G.C.P. ROPA</option>
+                    <option value="gcp_cuidado_personal">G.C.P. CUIDADO PERSONAL (EN MILLONES $)</option>
+                    <option value="gcp_vivienda">G.C.P. VIVIENDA (EN MILLONES $)</option>
+                    <option value="gcp_funcionamiento_del_hogar">G.C.P. FUNCIONAMIENTO DEL HOGAR (EN MILLONES $)</option>
+                    <option value="gcp_servicios_medicos_funerarios">G.C.P. SERVICIOS MEDICOS FUNERARIOS (EN MILLONES $)</option>
+                    <option value="gcp_servicios_comerciales">G.C.P. SERVICIOS COMERCIALES (EN MILLONES $)</option>
+                    <option value="gcp_transportacion">G.C.P. TRANSPORTACION (EN MILLONES $)</option>
+                    <option value="gcp_recreacion">G.C.P. RECREACION (EN MILLONES $)"</option>
+                    <option value="gcp_educacion">G.C.P. EDUCACION (EN MILLONES $)</option>
+                    <option value="gcp_instituciones_religiosas">G.C.P. INSTITUCIONES RELIGIOSAS (EN MILLONES $)</option>
+                    <option value="gcp_viajes_al_exterior">G.C.P. VIAJES AL EXTERIOR (EN MILLONES $)</option>
+                    <option value="gcp_compras_miscelaneas">G.C.P. COMPRAS MISCELANEAS (EN MILLONES $)</option>
+                    <option value="gcp_totales_residentes_y_no_res">G.C.P. TOTALES RESIDENTES Y NO RES. (EN MILLONES $)</option>
+                    <option value="gcp_de_no_residentes">G.C.P. DE NO RESIDENTES (EN MILLONES $)</option>
+                    <option value="indices_deflacion_alimentos">INDICES DEFLACION ALIMENTOS (54=100)</option>
+                    <option value="indices_deflacion_alcoholicas_y_tabaco">INDICES DEFLACION ALCOHOLICAS Y TABACO (54=100)</option>
+                    <option value="indices_deflacion_ropa_accesorio">INDICES DEFLACION ROPA ACCESORIO (54=100)</option>
+                    <option value="indices_deflacion_cuidado_personal">INDICES DEFLACION CUIDADO PERSONAL (54=100)</option>
+                    <option value="indices_deflacion_vivienda">INDICES DEFLACION VIVIENDA (54=100)</option>
+                    <option value="indice_deflacion_funcionamiento_del_hogar">INDICE DEFLACION FUNCIONAMIENTO DEL HOGAR (54=100)</option>
+                    <option value="indice_defl_servicios_medicos_y_funerarios">INDICE DEFL. SERVICIOS MEDICOS Y FUNERARIOS (54=100)</option>
+                    <option value="indice_deflacion_servicios_comerciales">INDICE DEFLACION SERVICIOS COMERCIALES (54=100)</option>
+                    <option value="indice_deflacion_transportacion">INDICE DEFLACION TRANSPORTACION (54=100)</option>
+                    <option value="indice_deflacion_recreacion">INDICE DEFLACION RECREACION (54=100)</option>
+                    <option value="indice_deflacion_educacion">INDICE DEFLACION EDUCACION (54=100)</option>
+                    <option value="indice_deflacion_institucionales_religiosas">INDICE DEFLACION INSTITUCIONES RELIGIOSAS (54=100)</option>
+                    <option value="indice_deflacion_viajes_al_exterior">INDICE DEFLACION VIAJES AL EXTERIOR (54=100)</option>
+                    <option value="indice_deflacion_compras_misclenaneas">INDICE DEFLACION COMPRAS MISCELANEAS (54=100)</option>
+                    <option value="indice_deflacion_residentes_y_no_residentes">INDICE DEFLACION RESIDENTES Y NO RESIDENTES (54=100)</option>
+                    <option value="indice_deflacion_de_no_residente">INDICE DEFLACION DE NO RESIDENTE (54=100)</option>
+                    <option value="total_importaciones_ajustadas">TOTAL IMPORTACIONES AJUSTADAS (EN MILLONES $)</option>
+                    <option value="import_ajustada_articulos_de_consumo">IMPORT AJUSTADA ARTICULOS DE CONSUMO (EN MILLONES)</option>
+                    <option value="import_ajustadas_duraderos">IMPORT AJUSTADAS DURADEROS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_automoviles">IMPORT AJUSTADAS AUTOMOVILES (EN MILLONES $)</option>
+                    <option value="import_ajustadas_enseres_electricos">IMPORT AJUSTADAS ENSERES ELECTRICOS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_articulos_no_duraderos">IMPORT AJUSTADAS ARTICULOS NO DURADEROS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_articulos_duraderos">IMPORT AJUSTADAS ARTICULOS DURADEROS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_alimentos">IMPORT AJUSTADAS ALIMENTOS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_alcoholicas_y_tabaco">IMPORT AJUSTADAS ALCOHOLICAS Y TABACO (EN MILLONES $)</option>
+                    <option value="import_ajustadas_otros_articulos_no_duraderos">IMPORT AJUSTADAS OTROS ARTICULOS NO DURADEROS (EN MILLONES $)</option>
+                    <option value="import_ajustadas_bienes_de_capital">IMPORT AJUSTADAS BIENES DE CAPITAL (EN MILLONES $)</option>
+                    <option value="import_ajustadas_materia_prima_e_intermedios">IMPORT AJUSTADAS MATERIA PRIMA E INTERMEDIOS (EN MILLONES $)</option>
+                    <option value="pagos_derechos_de_pasaportes">PAGOS DERECHOS DE PASAPORTES (T-21 EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_agricultura">INGRESO NETO INTERNO AGRICULTURA (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_manufactura">INGRESO NETO INTERNO MANUFACTURA (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_comercio">INGRESO NETO INTERNO COMERCIO (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_gobierno">INGRESO NETO INTERNO GOBIERNO (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_mineria">INGRESO NETO INTERNO MINERIA (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_cosntruccion">INGRESO NETO INTERNO CONSTRUCCION (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_transportacion">INGRESO NETO INTERNO TRANSPORTACION (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_finanzas">INGRESO NETO INTERNO FINANZAS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_informatica">INGRESO NETO INTERNO INFORMATICA (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_finanzas_y_seguros">INGRESO NETO INTERNO FINANZAS Y SEGUROS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_bienes_raices_renta_y_arrendamiento">INGRESO NETO INTERNO BIENES RAICES, RENTA Y ARRENDAMIENTO (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_servicios_profesionales_cientificos_y_tecnicos">INGRESO NETO INTERNO SERVICIOS PROFESIONALES, CIENTIFICOS Y TECNICOS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_administracion_de_companias_y_empresas">INGRESO NETO INTERNO ADMINISTRACION DE COMPAÑIAS Y EMPRESAS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_servicios_administrativos">INGRESO NETO INTERNO SERVICIOS ADMINISTRATIVOS Y  DE APOYO (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_servicios_educativos">INGRESO NETO INTERNO SERVICIOS EDUCATIVOS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_servicios_salud_y_servicios_sociales">INGRESO NETO INTERNO SERVICIOS SALUD Y SERVICIOS SOCIALES (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_arte_entretenimiento_y_recreacion">INGRESO NETO INTERNO ARTE, ENTRETENIMIENTO Y RECREACION (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_alojamiento_y_restaurantes">INGRESO NETO INTERNO ALOJAMIENTO Y RESTAURANTES (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_otros_servicios">INGRESO NETO INTERNO OTROS SERVICIOS (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_gobierno">INGRESO NETO INTERNO GOBIERNO (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_gobierno_ela">INGRESO NETO INTERNO GOBIERNO ELA (EN MILLONES $)</option>
+                    <option value="ingreso_neto_interno_gobierno_municipios">INGRESO NETO INTERNO GOBIERNO MUNICIPIOS (EN MILLONES $)</option>
+                    <option value="total_transf_fed_recibidas_por_el_gob">TOTAL TRANSF. FED. RECIBIDAS POR EL GOB. (T-22 EN MILLONES $)</option>
+                    <option value="total_import_mecanicas_registradas">TOTAL IMPORT. MERCANICAS REGISTRADAS (EN MILLONES $)</option>
+                    <option value="imr_articulos_de_consumo">I.M.R. ARTICULOS DE CONSUMO</option>
+                    <option value="imr_bienes_de_capital">I.M.R. BIENES DE CAPITAL</option>
+                    <option value="imr_materias_primas_y_productos_intermedios">I.M.R. MATERIAS PRIMAS Y PRODUCTOS INTERMEDIOS</option>
+                    <option value="imr_articulos_duraderos">I.M.R. ARTICULOS DURADEROS</option>
+                    <option value="imr_articulos_no_duraderos">I.M.R. ARTICULOS NO DURADEROS</option>
+                    <option value="imr_automoviles">I.M.R. AUTOMOVILES</option>
+                    <option value="imr_enseres_electricos">I.M.R. ENSERES ELECTRICOS</option>
+                    <option value="imr_otros_articulos_duraderos">I.M.R. OTROS ARTICULOS DURADEROS</option>
+                    <option value="imr_alimentos">I.M.R. ALIMENTOS</option>
+                    <option value="imr_bebidas_alcoholicas_y_productos_de_tabaco">I.M.R. BEBIDAS ALCOHOLICAS Y PRODUCTOS DE TABACO</option>
+                    <option value="imr_otros_articulos_no_duraderos">I.M.R. OTROS ARTICULOS NO DURADEROS</option>
+                    <option value="gcp_bebidas_alcoholicas">G.C.P. BEBIDAS ALCOHOLICAS</option>
+                    <option value="gsp_bebidas_alcoholicas_constante">G.C.P. BEBIDAS ALCOHOLICAS CONSTANTE (54=100)</option>
+                    <option value="gcp_tabaco">G.C.P. TABACO</option>
+                    <option value="gcp_tabaco_constante">G.C.P. TABACO CONSTANTE (54=100)</option>
+                    <option value="indice_de_precios_al_consumidos">INDICE DE PRECIOS AL CONSUMIDOR (DIC 2006=100)</option>
+                </select>
+                <!-- {{ macro2|safe }} -->
+            </section>
         </div>
-        <br>
-        <br>
-        <div>
-            <input id="dataInput1" name="PRODUCTO BRUTO (EN MILLONES $)" list="PRODUCTO BRUTO (EN MILLONES $)" placeholder="PRODUCTO BRUTO (EN MILLONES $)" onclick="clearInput()">
-            <datalist id="PRODUCTO BRUTO (EN MILLONES $)">
-                <option value="PRODUCTO BRUTO (EN MILLONES $)">
-                <option value="INGRESO NETO (EN MILLONES $)">
-                <option value="INGRESO PERSONAL (EN MILLONES $)">
-                <option value="INGRESO PERSONAL DISPONIBLE (EN MILLONES $)">
-                <option value="PRODUCTO BRUTO INTERNO (EN MILLONES $)">
-                <option value="INVERSION INTERNA BRUTA DE CAPITAL FIJO (EN MILLONES $)">
-                <option value="INGRESO PROMEDIO POR FAMILIA (EN DOLARES)">
-                <option value="NUMERO PROMEDIO DE PERSONAS POR FAMILIA">
-                <option value="SUELDOS Y JORNALES(EN MILLONES $)">
-                <option value="EMPLEO TOTAL (EN MILES $)">
-                <option value="PRODUCTIVIDAD[PBI CONSTANTE/EMPTOT (EN DOLARES)]">
-                <option value="POBLACION (EN MILES)">
-                <option value="GASTO CONSUMO PERSONAL TOTAL (EN MILLONES $)">
-                <option value="GASTO CONSUMO ARTICULOS DURADEROS (EN MILLONES $)">
-                <option value="GASTO CONSUMO ARTICULOS NO DURADEROS (EN MILLONES $)">
-                <option value="GASTO CONSUMO SERVICIOS (EN MILLONES $)">
-                <option value="GASTO CONSUMO GOBIERNO TOTAL (EN MILLONES $)">
-                <option value="GASTO CONSUMO GOB. E.L.A. (EN MILLONES $)">
-                <option value="GASTO CONSUMO GOB. MUNICIPIOS (EN MILLONES $)">
-                <option value="INVERSION INTERNA BRUTA, TOTAL (EN MILLONES $)">
-                <option value="CAMBIO EN INVENTARIO">
-                <option value="CONSTRUCCION TOTAL (EN MILLONES $)">
-                <option value="CONSTRUCCION EMPRESAS PRIVADAS (EN MILLONES $)">
-                <option value="CONSTRUCCION EMPRESAS PUBLICAS (EN MILLONES $)">
-                <option value="CONSTRUCCION GOBIERNO (EN MILLONES $)">
-                <option value="CONSTRUCCION ELA (EN MILLONES $)">
-                <option value="CONSTRUCCION MUNICIPIOS (EN MILLONES $)">
-                <option value="MAQUINARIA EQUIPO (EN MILLONES $)">
-                <option value="MAQ. EMPRESAS PRIVADAS (EN MILLONES $)">
-                <option value="MAQ. EMPRESAS PUBLICAS (EN MILLONES $)">
-                <option value="MAQ. GOBIERNO (EN MILLONES $)">
-                <option value="MAQELA = MAQ. ELA (EN MILLONES $)">
-                <option value="MAQ. MUNICIPIOS (EN MILLONES $)">
-                <option value="VENTAS NETAS AL RESTO DEL MUNDO (EN MILLONES $)">
-                <option value="VENTAS TOTALES AL RESTO DEL MUNDO (EN MILLONES $)">
-                <option value="VENTAS GOB. FEDERAL (EN MILLONES $)">
-                <option value="VENTAS OTROS NO RESIDENTES (EN MILLONES $)">
-                <option value="COMPRAS RESTO DEL MUNDO TOTAL (EN MILLONES $)">
-                <option value="COMPRAS GOB. FEDERAL (EN MILLONES $)">
-                <option value="COMPRAS OTROS NO RESIDENTES (EN MILLONES $)">
-                <option value="INDICES DEFLACION PRODUCTO BRUTO (54=100)">
-                <option value="INDICES DEFLACION GASTO CONSUMO PERSONAL (54=100)">
-                <option value="INDICES DEFLACION ARTICULOS DURADERO (54=100)">
-                <option value="INDICES DEFLACION ARTICULOS NO DURADEROS (54=100)">
-                <option value="INDICES DEFLACION SERVICIOS (54=100)">
-                <option value="INDICES DEFLACION GASTO CONSUMO GOB. TOTAL (54=100)">
-                <option value="INDICES DEFLACION G.C.GOB. ELA (54=100)">
-                <option value="INDICES DEFLACION G.C.GOB MUNICIPIOS (54=100)">
-                <option value="INDICES DEFLACION INVER. INTERNA BRUTA,TOTAL (54=100)">
-                <option value="INDICES DEFL. INVER. INTERNA BRUTA,TOTAL (54=100)">
-                <option value="INDICES DEFLACION CONSTRUCCION (54=100)">
-                <option value="INDICES DEFLACION MAQ. Y EQUIPO (54=100)">
-                <option value="INDICES DEFLACION VENTAS NETAS (54=100)">
-                <option value="INDICES DEFLACION VENTAS RESTO DEL MUNDO (54=100)">
-                <option value="INDICES DEFLACION VENTAS GOB FEDERAL (54=100)">
-                <option value="INDICES DEFL. VENTAS OTROS NO RESIDENTES (54=100)">
-                <option value="GASTO CONSUMO PERSONAL ALIMENTO (EN MILLONES $)">
-                <option value="G.C.P. ALCOHOLICAS Y TABACO (EN MILLONES $)">
-                <option value="G.C.P. ROPA">
-                <option value="G.C.P. CUIDADO PERSONAL (EN MILLONES $)">
-                <option value="G.C.P. VIVIENDA (EN MILLONES $)">
-                <option value="G.C.P. FUNCIONAMIENTO DEL HOGAR (EN MILLONES $)">
-                <option value="G.C.P. SERVICIOS MEDICOS FUNERARIOS (EN MILLONES $)">
-                <option value="G.C.P. SERVICIOS COMERCIALES (EN MILLONES $)">
-                <option value="G.C.P. TRANSPORTACION (EN MILLONES $)">
-                <option value="G.C.P. RECREACION (EN MILLONES $)">
-                <option value="G.C.P. EDUCACION (EN MILLONES $)">
-                <option value="G.C.P. INSTITUCIONES RELIGIOSAS (EN MILLONES $)">
-                <option value="G.C.P. VIAJES AL EXTERIOR (EN MILLONES $)">
-                <option value="G.C.P. COMPRAS MISCELANEAS (EN MILLONES $)">
-                <option value="G.C.P. TOTALES RESIDENTES Y NO RES. (EN MILLONES $)">
-                <option value="G.C.P. DE NO RESIDENTES (EN MILLONES $)">
-                <option value="INDICES DEFLACION ALIMENTOS (54=100)">
-                <option value="INDICES DEFLACION ALCOHOLICAS Y TABACO (54=100)">
-                <option value="INDICES DEFLACION ROPA ACCESORIO (54=100)">
-                <option value="INDICES DEFLACION CUIDADO PERSONAL (54=100)">
-                <option value="INDICES DEFLACION VIVIENDA (54=100)">
-                <option value="INDICE DEFLACION FUNCIONAMIENTO DEL HOGAR (54=100)">
-                <option value="-------INDICE DEFL. SERVICIOS MEDICOS Y FUNERARIOS (54=100)">
-                <option value="INDICE DEFLACION SERVICIOS COMERCIALES (54=100)">
-                <option value="INDICE DEFLACION TRANSPORTACION (54=100)">
-                <option value="INDICE DEFLACION RECREACION (54=100)">
-                <option value="INDICE DEFLACION EDUCACION (54=100)">
-                <option value="INDICE DEFLACION INSTITUCIONES RELIGIOSAS (54=100)">
-                <option value="INDICE DEFLACION VIAJES AL EXTERIOR (54=100)">
-                <option value="INDICE DEFLACION COMPRAS MESCELANEAS (54=100)">
-                <option value="INDICE DEFLACION RESIDENTES Y NO RESIDENTES (54=100)">
-                <option value="INDICE DEFLACION DE NO RESIDENTE (54=100)">
-                <option value="TOTAL IMPORTACIONES AJUSTADAS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADA ARTICULOS DE CONSUMO (EN MILLONES)">
-                <option value="---------IMPORT AJUSTADAS DURADEROS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS AUTOMOVILES (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS ENSERES ELECTRICOS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS ARTICULOS NO DURADEROS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS ARTICULOS DURADEROS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS ALIMENTOS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS ALCOHOLICAS Y TABACO (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS OTROS ARTICULOS NO DURADEROS (EN MILLONES $)">
-                <option value="IMPORT AJUSTADAS BIENES DE CAPITAL (EN MILLONES $)">  
-                <option value="IMPORT AJUSTADAS MATERIA PRIMA E INTERMEDIOS (EN MILLONES $)">
-                <option value="PAGOS DERECHOS DE PASAPORTES (T-21 EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO AGRICULTURA (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO MANUFACTURA (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO COMERCIO (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO GOBIERNO (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO MINERIA (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO CONSTRUCCION (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO TRANSPORTACION (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO FINANZAS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO INFORMATICA (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO FINANZAS Y SEGUROS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO BIENES RAICES, RENTA Y ARRENDAMIENTO (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO SERVICIOS PROFESIONALES, CIENTIFICOS Y TECNICOS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO ADMINISTRACION DE COMPAÑIAS Y EMPRESAS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO SERVICIOS ADMINISTRATIVOS Y  DE APOYO (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO SERVICIOS EDUCATIVOS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO SERVICIOS SALUD Y SERVICIOS SOCIALES (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO ARTE, ENTRETENIMIENTO Y RECREACION (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO ALOJAMIENTO Y RESTAURANTES (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO OTROS SERVICIOS (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO GOBIERNO (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO GOBIERNO ELA (EN MILLONES $)">
-                <option value="INGRESO NETO INTERNO GOBIERNO MUNICIPIOS (EN MILLONES $)">
-                <option value="TOTAL TRANSF. FED. RECIBIDAS POR EL GOB. (T-22 EN MILLONES $)">
-                <option value="TOTAL IMPORT. MERCANCIAS REGISTRADAS (EN MILLONES $)">
-                <option value="I.M.R. ARTICULOS DE CONSUMO">
-                <option value="I.M.R. BIENES DE CAPITAL">
-                <option value="I.M.R. MATERIAS PRIMAS Y PRODUCTOS INTERMEDIOS">
-                <option value="I.M.R. ARTICULOS DURADEROS">
-                <option value="I.M.R. ARTICULOS NO DURADEROS">
-                <option value="I.M.R. AUTOMOVILES">
-                <option value="I.M.R. ENSERES ELECTRICOS">
-                <option value="I.M.R. OTROS ARTICULOS DURADEROS">
-                <option value="I.M.R. ALIMENTOS">
-                <option value="I.M.R. BEBIDAS ALCOHOLICAS Y PRODUCTOS DE TABACO">
-                <option value="I.M.R. OTROS ARTICULOS NO DURADEROS">
-                <option value="G.C.P. BEBIDAS ALCOHOLICAS">
-                <option value="G.C.P. BEBIDAS ALCOHOLICAS CONSTANTE (54=100)">
-                <option value="G.C.P. TABACO">
-                <option value="G.C.P. TABACO CONSTANTE (54=100)">
-                <option value="INDICE DE PRECIOS AL CONSUMIDOR (DIC 2006=100)">
-        </div>
-        <br>
-        <p>Los dos selection box de arriba corresponden al graph 1</p>
-        <p class="block">Se supone que esto es la graph 1</p> 
 
 
 
@@ -393,8 +396,8 @@
         falta 1 selection bar
         <br>
         los dos selection bars de arriba corresponden al graph 2
-        <p class="block">Se supone que esto es la graph 2</p> 
 
+        <!-- {{ macro2|safe }} -->
 
         <footer>
             <h1>Contáctenos</h1>
