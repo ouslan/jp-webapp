@@ -21,7 +21,6 @@ def ciclos_economicos(request):
            11, 4, 2, 1]
     
     x_title = ''
-    
     y_title = ''
     
     fig = gf.graph(x, y, x_title, y_title)
@@ -38,7 +37,6 @@ def indicadores(request):
            11, 4, 2, 1]
     
     x_title = 'Años'
-    
     y_title = 'Indices'
     
     fig = gf.graph(x, y, x_title, y_title)
