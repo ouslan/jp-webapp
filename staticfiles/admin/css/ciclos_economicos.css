@@ -9,16 +9,6 @@ header {
   overflow-x: hidden;
 }
 
-a {
-  font-size: 18px;
-  border: none;
-  background: none;
-  flex-direction: column;
-  display: flex;
-  text-decoration: none;
-  color: black;
-}
-
 h1 {
   font-size: 3em;
   margin-top: 4vw;
@@ -82,8 +72,10 @@ select:focus {
 
 /* GRAPH */
 #variableY {
-  left: 8%;
+  left: 5%;
   transform: rotate(270deg);
+  align-items: center;
+  justify-items: center;
 }
 
 #variableX {
@@ -107,6 +99,7 @@ select:focus {
 .container-time {
   display: flex;
   align-items: center;
+  justify-items: center;
   flex-direction: column;
   width: 100%;
   position: relative;
@@ -115,5 +108,6 @@ select:focus {
 .graph-container {
   display: flex;
   align-items: center;
-  margin-left: 8vw;
+  justify-items: center;
+  margin-left: 90px;
 }

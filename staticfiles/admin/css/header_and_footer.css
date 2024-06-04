@@ -1,5 +1,4 @@
 a {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     border: none;
     background: none;
@@ -264,6 +263,7 @@ input:not(:placeholder-shown)~.reset {
 /* FOOTER */
 footer {
     background-color: #C7C7C7;
+    box-shadow: 0 -10px 10px -10px rgba(131, 131, 131, 0.5);
 }
 
 footer h1 {
@@ -290,19 +290,18 @@ footer h1 {
     padding: 10px;
 }
 
+.maps {
+    padding-top: 50px;
+}
 
 .custom-link {
+    display: inline-block;
     text-decoration: none;
     color: inherit;
-    display: inline-block;
 }
 
 .custom-link:hover {
     color: blue;
     cursor: pointer;
     text-decoration: none;
-}
-
-.maps {
-    padding-top: 50px;
 }
