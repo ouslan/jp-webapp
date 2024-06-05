@@ -13,86 +13,75 @@
         <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
         <link rel="stylesheet" type="text/css" href="{% static 'macro.css' %}">
-
         <link rel="stylesheet" href="{% static 'header_and_footer.css' %}" />
-
-        <script src="{% static 'menu_burger.js' %}"></script>
     </head>
 
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-
-        function clearInput() {
-            document.getElementById("dataInput").value = "";
-            document.getElementById("dataInput1").value = "";
-            document.getElementById("dataInput2").value = "";
-        }
-    </script>
-
     <body>
-    
-        
-    <!-- HEADER -->
+        <!-- --------------------- HEADER --------------------- -->
         <header>
-            <a href="#" class="header-button" onclick="goBack()">
                 <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
-            </a>
         </header>
 
-            <!-- NAVIGATION -->
-            <div class="container">
-                <div class="burger" onclick="toggleBurgerMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="burger_menu">
-                    <a href='/'>Home</a>
-                    <a href='/centro-de-datos-macroeconomicos/'>Centro De Datos Macroeconómicos</a>
-                    <a href='/ciclos-economicos/'>Ciclos Económicos</a>
-                    <a href='/indicadores-mensuales/'>Indicadores Mensuales</a>
-                    <a>Datos Demográficos</a>
-                </ul>
-        
-                <form class="form">
-                    <button>
-                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
-                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </button>
-                    <input class="input" placeholder="Type your text" required="" type="text">
-                    <button class="reset" type="reset">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </form>
-                <section class="search-button">Search</section>
+        <!-- --------------------- NAVIGATION ----------------- -->
+        <div class="container">
+            <div class="burger" onclick="toggleBurgerMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="burger_menu">
+                <a href='/'>Home</a>
+                <a href='/centro-de-datos-macroeconomicos/'>Centro De Datos Macroeconómicos</a>
+                <a href='/ciclos-economicos/'>Ciclos Económicos</a>
+                <a href='/indicadores-mensuales/'>Indicadores Mensuales</a>
+                <a>Datos Demográficos</a>
+            </ul>
+    
+            <form class="form">
+                <button>
+                    <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+                <input class="input" placeholder="Type your text" required="" type="text">
+                <button class="reset" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
+            <section class="search-button">Search</section>
+        </div>
 
-            <main>
-
+        <main>
+            <section>
                 <h1>Centro de Datos Macroeconómicos</h1>
-                
+            </section>
+
+            <section>
                 <p>
                     La Junta de Planificación, a través de su Programa de Planificación Económica y Social, publica información sobre las variables macroeconómicas de Puerto Rico. Se incluyen variables como: Producto Bruto, Producto no Bruto, inversión en construcción, gasto de consumo e ingreso neto.
                     Para información adicional puede comunicarse vía email <a href="mailto:diaz_a@jp.pr.gov" class="custom-link">diaz_a@jp.pr.gov</a> y <a href="mailto:perez_m@jp.pr.gov" class="custom-link">perez_m@jp.pr.gov</a>.
                 </p>
+            </section>
 
+            <section>
                 <h2> Documentos</h2>
                 <p>
                     <a href="https://jp.pr.gov/wp-content/uploads/2024/03/Series-Historicas-Seleccionadas-2001-2023p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 2001-2023)</a><br>
                     <a href="https://jp.pr.gov/wp-content/uploads/2021/09/Series-historicas-1950-al-2011p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 1950-2011)</a>
                 </p>
 
+            </section>
+
+            <section>
                 <h2>Gráficas</h2>
+            </section>
 
-                <!-- --------------------------------------------   FIRST GRAPH   ----------------------------------------- -->
-
+            <!-- ----------------- FIRST GRAPH ----------------- -->
+            <section>
                 <div class="block">
-                    <section class="graph-container">
+                    <div class="graph-container">
                         <select id="variableY">
                             <option value="blank" class="active">Blank</option>
                             <option value="producto_bruto">PRODUCTO BRUTO (EN MILLONES $)</option>
@@ -238,11 +227,11 @@
                             <option value="indice_de_precios_al_consumidos">INDICE DE PRECIOS AL CONSUMIDOR (DIC 2006=100)</option>
                         </select>
                         {{ macro1|safe }}
-                    </section>
+                    </div>
 
 
 
-                    <section class="container-X">
+                    <div class="container-X">
                         <select id="variableX">
                             <option value="blank" class="active">Blank</option>
                             <option value="producto_bruto">PRODUCTO BRUTO (EN MILLONES $)</option>
@@ -387,14 +376,16 @@
                             <option value="gcp_tabaco_constante">G.C.P. TABACO CONSTANTE (54=100)</option>
                             <option value="indice_de_precios_al_consumidos">INDICE DE PRECIOS AL CONSUMIDOR (DIC 2006=100)</option>
                         </select>
-                    </section>
+                    </div>
                 </div>
-                <!-- -----------------------------------------   END OF FIRST GRAPH   ----------------------------------------- -->
+            </section>
+            <!-- ------------------ END OF FIRST GRAPH --------------------- -->
 
-
-                <!-- -----------------------------------------   SECOND GRAPH   ----------------------------------------- -->
+            <!-- ------------------ START OF SECOND GRAPH --------------------- -->
+            <section>
                 <div class="block"> 
                     <section class="graph-container">
+                        <!-- Y axis -->
                         <select id="variableY">
                             <option value="blank" class="active">Blank</option>
                             <option value="producto_bruto_corriente">Producto bruto corriente</option>
@@ -432,9 +423,8 @@
                         </select>
                         {{ macro2|safe }}
                     </section>
-                
 
-
+                    <!-- X axis -->
                     <section class="container-X">
                         <select id="variableX">
                             <option value="blank" class="active">Blank</option>
@@ -473,63 +463,71 @@
                         </select>
                 </section>
                 </div>
-                <!-- -----------------------------------------  END OF SECOND GRAPH   ----------------------------------------- -->
-            
-                <!-- -----------------------------------------   FOOTER   ----------------------------------------- -->
-                <footer>
-                    <h1>Contáctanos</h1>
-                    <div class="footer-container">
-                        <div class="left-container">
-                            <h2>Oficiales de Información <br> (Ley 141-2019)</h2>
-                            <p>
-                                Sr. Edgardo Vázquez Rivera <br>
-                                Secretario Oficina de Secretaría <br>
-                                <a href="mailto:Vazquez_e@jp.pr.gov" class="custom-link">Vazquez_e@jp.pr.gov</a> <br>
-                                787 723-6200 ext. 16637 <br><br>
-                
-                                Plan. Erika Rivera Felicié <br>
-                                Ayudante Especial <br>
-                                <a href="mailto:ivera_e1@jp.pr.gov" class="custom-link">ivera_e1@jp.pr.gov</a> <br><br>
-                
-                                Lcda Aida Silver Cintrón <br>
-                                Abogada Oficina Asuntos Legales <br>
-                                <a href="mailto:Silver_A@jp.pr.gov" class="custom-link">Silver_A@jp.pr.gov</a> <br>
-                                787 723-6200 ext. 16016
-                            </p>
-                            <h2>Oficina de Datos PRITS</h2>
-                            <p>
-                                Carlos Castillo Domena <br>
-                                Director Oficina de Administración Interna <br>
-                                <a href="mailto:castillo_r@jp.pr.gov" class="custom-link">castillo_r@jp.pr.gov</a> <br>
-                                787 723-6200 ext. 16019 <br><br>
-                                <a href="https://jppr.sharepoint.com/sites/BibliotecaDigital" class="custom-link">BDV (Uso interno)</a>
-                            </p>
-                        </div>
-                        <div class="right-container">
-                            <h2><strong>Dirección Postal</strong></h2>
-                            <p>
-                                PO Box 4119 <br>
-                                San Juan P.R. 00940-1119 <br>
-                                Tel: (787) 723-6200 (Cuadro)<br>
-                                <h2><strong>Dirección Física</strong></h2>
+            </section>
+            <!-- ------------------ END OF SECOND GRAPH --------------------- -->
+        </main>
+            <!-- ------------------ FOOTER --------------------- -->
+            <footer>
+                <main>
+                    <section>
+                        <h1>Contáctanos</h1>
+                    </section>
+                    <section>
+                        <div class="footer-container">
+                            <div class="left-container">
+                                <h2>Oficiales de Información <br> (Ley 141-2019)</h2>
                                 <p>
-                                    Centro Gubernamental<br>
-                                    Roberto Sánchez Vilella<br>
-                                    Ave. De Diego, Pda 22, <br>
-                                    Santurce<br>
+                                    Sr. Edgardo Vázquez Rivera <br>
+                                    Secretario Oficina de Secretaría <br>
+                                    <a href="mailto:Vazquez_e@jp.pr.gov" class="custom-link">Vazquez_e@jp.pr.gov</a> <br>
+                                    787 723-6200 ext. 16637 <br><br>
+                    
+                                    Plan. Erika Rivera Felicié <br>
+                                    Ayudante Especial <br>
+                                    <a href="mailto:ivera_e1@jp.pr.gov" class="custom-link">ivera_e1@jp.pr.gov</a> <br><br>
+                    
+                                    Lcda Aida Silver Cintrón <br>
+                                    Abogada Oficina Asuntos Legales <br>
+                                    <a href="mailto:Silver_A@jp.pr.gov" class="custom-link">Silver_A@jp.pr.gov</a> <br>
+                                    787 723-6200 ext. 16016
                                 </p>
-                            </p>
-                            <section class="maps">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.7501887340845!2d-66.0698374248245!3d18.
-                                        449648171336893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c036f497801a7b7%3A0x68ace32a0663b72f!2sGov
-                                        ernor%20Roberto%20S%C3%A1nchez%20Vilella%20Government%20Center!5e0!3m2!1sen!2sus!4v1717000266481!5m2!1sen!2sus"
-                                        width="490" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
-                            </section>
+                                <h2>Oficina de Datos PRITS</h2>
+                                <p>
+                                    Carlos Castillo Domena <br>
+                                    Director Oficina de Administración Interna <br>
+                                    <a href="mailto:castillo_r@jp.pr.gov" class="custom-link">castillo_r@jp.pr.gov</a> <br>
+                                    787 723-6200 ext. 16019 <br><br>
+                                    <a href="https://jppr.sharepoint.com/sites/BibliotecaDigital" class="custom-link">BDV (Uso interno)</a>
+                                </p>
+                            </div>
+                            <div class="right-container">
+                                <h2><strong>Dirección Postal</strong></h2>
+                                <p>
+                                    PO Box 4119 <br>
+                                    San Juan P.R. 00940-1119 <br>
+                                    Tel: (787) 723-6200 (Cuadro)<br>
+                                    <h2><strong>Dirección Física</strong></h2>
+                                    <p>
+                                        Centro Gubernamental<br>
+                                        Roberto Sánchez Vilella<br>
+                                        Ave. De Diego, Pda 22, <br>
+                                        Santurce<br>
+                                    </p>
+                                </p>
+                                <section class="maps">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.7501887340845!2d-66.0698374248245!3d18.
+                                            449648171336893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c036f497801a7b7%3A0x68ace32a0663b72f!2sGov
+                                            ernor%20Roberto%20S%C3%A1nchez%20Vilella%20Government%20Center!5e0!3m2!1sen!2sus!4v1717000266481!5m2!1sen!2sus"
+                                            width="490" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </section>
+                            </div>
                         </div>
-                    </div>
-                </footer>
-        <!-- -----------------------------------------   END OF FOOTER   ----------------------------------------- -->
-            </main>
-    </body>
+                    </section>
+                </main>
+            </footer>
+            <!-- ------------------ END OF FOOTER --------------------- -->
+
+        <script src="{% static 'menu_burger.js' %}"></script>
+    </body>    
 </html>
