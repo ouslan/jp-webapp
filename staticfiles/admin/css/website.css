@@ -257,6 +257,23 @@ footer h1 {
     font-size: 35px;
     padding-top: 40px;
     margin-bottom: 1px;
+    margin-left: 8vw;
+}
+
+footer h2 {
+    font-size: 2em;
+    margin-top: 4vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+footer p {
+    display: block;
+    font-size: 1.2em;
+    text-align: justify;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    line-height: 1.5;
 }
 
 .footer-container {
