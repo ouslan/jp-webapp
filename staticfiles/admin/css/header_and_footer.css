@@ -23,7 +23,7 @@ a {
     box-shadow: 0 10px 10px -10px rgba(131, 131, 131, 0.5);
 }
 
-.container .form button {
+.container .search button {
     border: none;
     background: none;
     color: #868686;
@@ -32,7 +32,7 @@ a {
     justify-content: space-between;
 }
 
-.container .form {
+.container .search {
     --timing: 0.3s;
     --width-of-input: 200px;
     --height-of-input: 40px;
@@ -67,7 +67,7 @@ a {
 }
 
 /* styling of animated border */
-.form:before {
+.search:before {
     content: "";
     position: absolute;
     background: var(--border-color);
@@ -82,7 +82,7 @@ a {
 }
 
 /* Hover on Input */
-.form:focus-within {
+.search:focus-within {
     border-radius: var(--after-border-radius);
 }
 
@@ -91,7 +91,7 @@ input:focus {
 }
 
 /* here is code of animated border */
-.form:focus-within:before {
+.search:focus-within:before {
     transform: scale(1);
 }
 
@@ -112,11 +112,46 @@ input:not(:placeholder-shown)~.reset {
 }
 
 /* sizing svg icons */
-.form svg {
+.search svg {
     width: 17px;
     margin-top: 3px;
 }
 
+.search_menu {
+    font-size: 18px;
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #E6E6E6;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: black;
+    margin-top: 226px;
+    position: absolute;
+    left: 21%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+    width: 28vw;
+}
+
+.search_menu li {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.7em 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.search_menu-open {
+    display: block;
+    opacity: 1;
+}
+
+.search_menu li:hover {
+    background: #CBCBCB;
+}
 
 /* BURGER */
 .container .burger {
