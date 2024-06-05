@@ -162,15 +162,22 @@ input:not(:placeholder-shown)~.reset {
     transition: 0.3s;
 }
 
-.dropdown li {
+/* .dropdown li {
     font-size: 1rem;
     font-weight: normal;
-    margin-top: 15px;
+    margin: auto;
+    justify-content: space-between;
+    align-content: center;
+    align-items: last baseline;
+    justify-items: center;
+    text-align: justify;
+    display: block;
     cursor: pointer;
     width: 22vw;
-    height: 14px;
+    height: 40px;
     border-radius: 0.5em;
-}
+    padding-left: 3px;
+} */
 
 .dropdown li:hover {
     background-color: #CBCBCB;
@@ -279,7 +286,8 @@ input:not(:placeholder-shown)~.reset {
     width: 28vw;
 }
 
-.burger_menu a {
+.dropdown li, .burger_menu a {
+    font-weight: normal;
     font-size: 1rem;
     padding: 0.7em 0.5em;
     border-radius: 0.5em;
