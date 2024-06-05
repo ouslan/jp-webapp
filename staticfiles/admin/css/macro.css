@@ -33,10 +33,19 @@ p {
 }
 
 .block {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
 
     /* display: flex; */
     justify-content: center;
+}
+
+
+
+main {
+    max-width: 100%;
+    width: 1500px;
+    margin: 0 auto;
+
 }
 
 #header-image {
@@ -57,21 +66,22 @@ p {
     margin-left: 8vw;
 
     justify-content: center;
-    align-items: center;
     text-align: center;
     margin-right: 250px;
 }
 
 #variableY {
     /* left: 1%; */
-    margin-right: -80px;
+    margin-right: -115px;
+    /* margin-left: 115px; */
     transform: rotate(270deg);
-    width: 200px;
+    width: 250px;
 }
 
 #variableX {
     top: 8%;
-    width: 500px;
+    width: 300px;
+    margin-left: 50px;
 }
 
 .container-X {
