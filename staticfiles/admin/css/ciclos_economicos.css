@@ -32,6 +32,11 @@ p {
   line-height: 1.5;
 }
 
+main {
+  max-width: 100%;
+  width: 1500px;
+  margin: 0 auto;
+}
 
 /* Dropdown select styling */
 select {
