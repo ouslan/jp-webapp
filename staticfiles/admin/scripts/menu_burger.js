@@ -21,23 +21,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const searchMenu = document.getElementById('search-menu');
-    const toggleSearchButton = document.getElementById('search-bar'); // replace with the actual ID of your button or link
-
-    document.addEventListener('click', function (event) {
-        if (!searchMenu.contains(event.target) && !toggleSearchButton.contains(event.target)) {
-            searchMenu.style.display = 'none';
-        }
-    });
-});
-
-function toggleSearchMenu() {
-    var searchMenu = document.getElementById('search-menu');
-    if (searchMenu.style.display === 'none') {
-        searchMenu.style.display = 'block';
-    } else {
-        searchMenu.style.display = 'none';
-    }
-}
