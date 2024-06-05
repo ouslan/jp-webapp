@@ -12,6 +12,12 @@ body, header {
   overflow-x: hidden;
 }
 
+main {
+  max-width: 100%;
+  width: 1500px;
+  margin: 0 auto;
+}
+
 h1 {
   margin-left: 2vw;
   margin-top: 4vw;
