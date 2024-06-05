@@ -64,14 +64,17 @@ select:focus {
 }
 
 
-/* CLICOS ECONOMICOS */
-#body-image {
-  width: 60vw;
-  margin-top: 4vw;
-  margin-bottom: 4vw;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.image-container {
+  width: 100%;
+  max-width: 800px; /* You can adjust this value based on your needs */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 

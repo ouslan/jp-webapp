@@ -268,7 +268,6 @@ footer {
 
 footer h1 {
     font-size: 35px;
-    padding-left: 150px;
     padding-top: 40px;
     margin-bottom: 1px;
 }
@@ -281,13 +280,11 @@ footer h1 {
 .left-container {
     width: 48%;
     padding-top: 1px;
-    padding-left: 150px;
 }
 
 .right-container {
     width: 48%;
     padding-top: 5px;
-    padding: 10px;
 }
 
 .maps {
