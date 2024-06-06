@@ -4,7 +4,9 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+        
         <title>Índice de Actividad Económica</title>
+
         <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
         <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
         <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
@@ -16,10 +18,6 @@
     </head>
 
     <body>
-        <header>
-            <img src="{% static 'header_banner.png' %}" alt="banner" id="header-image">
-        </header>
-
         <div class="container">
             <div class="burger" onclick="toggleBurgerMenu()">
                 <span></span>
@@ -67,6 +65,7 @@
                 <li>Índices Coincidentes De Actividad Económica</li>
                 <li>Encuesta De Establecimientos Manufactura</li>
             </ul>
+            <img src="{% static 'gobierno_de_puerto_rico.png' %}" alt="logo" id="logo" />
         </div>
 
         <main>
@@ -838,6 +837,6 @@
         </footer>
         
         <script src="{% static 'indicadores.js' %}" defer></script>
-        <script src="{% static 'menu_burger.js' %}" defer></script>
+        <script src="{% static 'header_menu.js' %}" defer></script>
     </body>
 </html>
