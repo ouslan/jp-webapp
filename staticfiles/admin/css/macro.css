@@ -1,12 +1,5 @@
-body, header {
-    font-family: Arial, Helvetica, sans-serif; /* Arial font, with Helvetica and sans-serif as fallback */
-    margin: 0;
-    padding: 0;
-}
-
 h1 {
     font-size: 3em;
-    font-family: Arial, Helvetica, sans-serif;
     margin-top: 4vw;
     margin-left: 8vw;
     margin-right: 8vw;
@@ -14,7 +7,6 @@ h1 {
 
 h2 {
     font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
     margin-top: 4vw;
     margin-left: 8vw;
     margin-right: 8vw;
@@ -22,64 +14,27 @@ h2 {
 
 p {
     display: block;
-    font-size: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
     text-align: justify;
     margin-left: 8vw;
     margin-right: 8vw;
     line-height: 1.5;
 }
 
-footer {
-    background-color: #C7C7C7
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.left-container {
-    width: 48%;
-    padding-top: 1px;
-    padding-left: 150px;
-} 
-
-.right-container {
-    width: 48%;
-    padding-top: 5px;
-    padding: 10px;
-}
-
-
-.custom-link {
-    text-decoration: none; 
-    color: inherit; 
-}
-
-.custom-link:hover {
-    color: blue; 
-    cursor: pointer; 
-    text-decoration: none; 
-}
-
-footer h1 {
-    font-size: 35px;
-    padding-left: 150px;
-    padding-top: 40px;
-    margin-bottom: 1px;
-}
-
-.maps {
-    padding-top: 50px;
-}
-   
 .block {
-    background-color: lightgreen;
-    width: 500px;
-    height: 400px;
-    padding: 100px;
-    margin: 20px;
+    /* background-color: lightgreen; */
+
+    /* display: flex; */
+    justify-content: center;
+}
+
+
+
+main {
+    max-width: 100%;
+    width: 1500px;
+    margin: 0 auto;
+
 }
 
 #header-image {
@@ -87,3 +42,44 @@ footer h1 {
     height: auto;
 
 }
+
+/* .graph-container {
+        margin-top: 10px;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    } */
+.graph-container {
+    display: flex;
+    align-items: center;
+    margin-left: 8vw;
+
+    justify-content: center;
+    text-align: center;
+    margin-right: 250px;
+}
+
+#variableY {
+    /* left: 1%; */
+    margin-right: -115px;
+    /* margin-left: 115px; */
+    transform: rotate(270deg);
+    width: 250px;
+}
+
+#variableX {
+    top: 8%;
+    width: 300px;
+    margin-left: 50px;
+}
+
+.container-X {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    padding-bottom: 6rem;
+}
+
+/* } */
