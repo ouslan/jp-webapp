@@ -70,8 +70,7 @@ a {
     transition: border-bottom-right-radius 0.5s ease;
     background: var(--input-bg, #fff);
     background-color: #E6E6E6;
-    margin-left: 68vw;
-    margin-right: 1vw;
+    margin-right: 8vw;
     width: 23vw;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -157,7 +156,7 @@ input:not(:placeholder-shown)~.reset {
     padding-inline: 0.8em;
     background: var(--input-bg, #fff);
     background-color: #E6E6E6;
-    margin-left: 73.15vw;
+    margin-left: 66.18vw;
     margin-right: 1vw;
     width: 23vw;
     height: 15vw;
