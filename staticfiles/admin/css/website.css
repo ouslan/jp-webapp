@@ -18,6 +18,13 @@ a {
     color: black;
 }
 
+#logo {
+    height: 70px;
+    width: auto;
+    position: absolute;
+    justify-content: center;
+    right: 2%;
+}
 
 /* SEARCH BAR */
 .container {
@@ -30,6 +37,7 @@ a {
     height: 5vw;
     background-color: white;
     box-shadow: 0 10px 10px -10px rgba(131, 131, 131, 0.5);
+    display: flex;
 }
 
 .container .form button {
@@ -48,24 +56,30 @@ a {
     --border-height: 2px;
     --input-bg: #fff;
     --border-color: #4A95A1;
-    --border-radius: 30px;
-    --after-border-radius: 1px;
+    --border-bottom-left-radius: 30px;
+    --after-border-bottom-left-radius: 1px;
+    --border-bottom-right-radius: 30px;
+    --after-border-bottom-right-radius: 1px;
     position: relative;
     display: flex;
     align-items: center;
     padding-inline: 0.8em;
-    border-radius: var(--border-radius);
-    transition: border-radius 0.5s ease;
+    border-bottom-left-radius: var(--border-bottom-left-radius);
+    transition: border-bottom-left-radius 0.5s ease;
+    border-bottom-right-radius: var(--border-bottom-right-radius);
+    transition: border-bottom-right-radius 0.5s ease;
     background: var(--input-bg, #fff);
     background-color: #E6E6E6;
     margin-left: 68vw;
     margin-right: 1vw;
-    width: 15vw;
+    width: 23vw;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 /* styling of Input */
 .input {
-    font-size: 0.9rem;
+    font-size: 1rem;
     background-color: transparent;
     width: 7vw;
     height: 100%;
@@ -85,13 +99,19 @@ a {
     height: var(--border-height);
     left: 0;
     bottom: 0;
-    border-radius: 1px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
     transition: transform var(--timing) ease;
 }
 
 /* Hover on Input */
 .form:focus-within {
-    border-radius: var(--after-border-radius);
+    border-bottom-left-radius: var(--after-border-bottom-left-radius);
+    border-bottom-right-radius: var(--after-border-bottom-right-radius);
+    border-top-left-radius: 16.1px;
+    border-top-right-radius: 16.1px;
 }
 
 input:focus {
@@ -123,6 +143,34 @@ input:not(:placeholder-shown)~.reset {
 .form svg {
     width: 17px;
     margin-top: 3px;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+    list-style: none;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    align-items: center;
+    padding-inline: 0.8em;
+    background: var(--input-bg, #fff);
+    background-color: #E6E6E6;
+    margin-left: 73.15vw;
+    margin-right: 1vw;
+    width: 23vw;
+    height: 15vw;
+    margin-top: 17.8vw;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: 0.3s;
+}
+
+.dropdown li:hover {
+    background-color: #CBCBCB;
 }
 
 
@@ -210,15 +258,14 @@ input:not(:placeholder-shown)~.reset {
 
 /* BURGER MENU */
 .burger_menu {
-    font-size: 18px;
     list-style: none;
     padding: 0.2em 0.5em;
     background: #E6E6E6;
     border: 1px solid #E6E6E6;
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-    border-radius: 0.5em;
+    border-radius: 1em;
     color: black;
-    margin-top: 226px;
+    margin-top: 195px;
     position: absolute;
     left: 21%;
     transform: translateX(-50%);
@@ -229,8 +276,9 @@ input:not(:placeholder-shown)~.reset {
     width: 28vw;
 }
 
-.burger_menu a {
-    font-family: Arial, Helvetica, sans-serif;
+.dropdown li, .burger_menu a {
+    font-weight: normal;
+    font-size: 1rem;
     padding: 0.7em 0.5em;
     border-radius: 0.5em;
     cursor: pointer;
