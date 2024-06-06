@@ -47,15 +47,6 @@ select:focus {
   border-color: #495057;
 }
 
-#logo {
-  height: 70px;
-  width: auto;
-  position: absolute;
-  justify-content: center;
-  right: 2%;
-}
-
-
 .image-container {
   width: 100%;
   max-width: 800px;

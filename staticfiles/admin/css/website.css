@@ -18,6 +18,13 @@ a {
     color: black;
 }
 
+#logo {
+    height: 70px;
+    width: auto;
+    position: absolute;
+    justify-content: center;
+    right: 2%;
+}
 
 /* SEARCH BAR */
 .container {
