@@ -47,10 +47,12 @@ select:focus {
   border-color: #495057;
 }
 
-
-#header-image {
-  width: 100vw;
-  height: auto;
+#logo {
+  height: 70px;
+  width: auto;
+  position: absolute;
+  justify-content: center;
+  right: 2%;
 }
 
 
