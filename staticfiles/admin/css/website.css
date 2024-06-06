@@ -19,7 +19,7 @@ a {
 }
 
 #logo {
-    height: 70px;
+    height: 9vh;
     width: auto;
     position: absolute;
     justify-content: center;
@@ -147,10 +147,10 @@ input:not(:placeholder-shown)~.reset {
     display: none;
     list-style: none;
     background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.504em 1.008em rgba(0, 0, 0, 0.2);
     position: absolute;
     z-index: 1000;
-    max-height: 200px;
+    max-height: 12.6em;
     overflow-y: auto;
     align-items: center;
     padding-inline: 0.8em;
