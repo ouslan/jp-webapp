@@ -28,7 +28,7 @@ a {
 
 /* SEARCH BAR */
 .container {
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
     display: flex;
@@ -146,21 +146,17 @@ input:not(:placeholder-shown)~.reset {
 .dropdown {
     display: none;
     list-style: none;
-    background-color: white;
+    background-color: #E6E6E6;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     position: absolute;
     z-index: 1000;
     max-height: 200px;
     overflow-y: auto;
-    align-items: center;
     padding-inline: 0.8em;
-    background: var(--input-bg, #fff);
-    background-color: #E6E6E6;
-    margin-left: 66.18vw;
-    margin-right: 1vw;
-    width: 23vw;
-    height: 15vw;
-    margin-top: 17.8vw;
+    width: 317px; /* Use a fixed width or percentage */
+    height: 200px; /* Use a fixed height or percentage */
+    top: 13.5px; /* Adjust this value as needed */
+    right: 109px; /* Position relative to the parent container */
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     transition: 0.3s;
