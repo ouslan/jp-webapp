@@ -21,18 +21,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const input = document.querySelector('.input');
-    const dropdown = document.querySelector('.dropdown');
-
-    input.addEventListener('click', function() {
-        dropdown.style.display = 'block';
-    });
-
-    document.addEventListener('click', function(event) {
-        if (!input.contains(event.target) && !dropdown.contains(event.target)) {
-            dropdown.style.display = 'none';
-        }
-    });
-});
