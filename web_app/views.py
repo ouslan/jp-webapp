@@ -49,10 +49,12 @@ def ciclos_economicos(request):
     return render(request, "ciclos_economicos.html", context)
     
 def indicadores(request):
-    x = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
-           2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
-    y =[14, 55, 44, 13, 29, 20, 45, 39, 29, 10, 50, 60, 39, 36, 49, 18, 49, 50, 69, 18, 13,
-           11, 4, 2, 1]
+    df = pd.read_csv('src/data/indicadores.csv')
+    df_x = df.melt(var_name='Year')
+    df_y = df.melt(value_name='Value')
+    
+    x = df_x['Year']
+    y = df_y['Value']
     
     x_title = 'Años'
     y_title = 'Indices'
