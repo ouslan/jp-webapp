@@ -106,5 +106,9 @@ def indicadores(request):
     return render(request, "indicadores.html", context)
 
 
-def cuestionarios_balanza_de_pagos(request):
-    return render(request, "cuestionarios/JP-304.html")
+def JP_304(request):
+    return render(request, "cuestionarios/balanza_de_pagos/JP-304.html")
+
+
+def IP_110(request):
+    return render(request, "cuestionarios/ingreso_neto/IP-110.html")
