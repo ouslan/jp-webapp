@@ -90,9 +90,11 @@ body {
     box-sizing: border-box;
     font-size: 16px;
     resize: vertical;
+    margin-left: 18px;
 }
 
-#text-box-5 {
+
+#text-box-5, #text-box-4 {
     margin-left: 19px;
 }
 
@@ -111,6 +113,10 @@ body {
     width: 3%;
     border: 1px solid #ccc;
     resize: vertical;
+}
+
+.first_div_container {
+    margin-left: 16px;
 }
 
 .second_div_container {
@@ -137,6 +143,11 @@ body {
     margin-left: 2px;
 }
 
+.section_divider {
+    margin-top: 90px;
+    text-align: center;
+}
+
 hr {
     width: 110%;
     height: 1px;
@@ -158,4 +169,14 @@ hr {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+}
+
+.custom-line {
+    border: none; 
+    height: 2px; 
+    background-color: #000; 
+    margin: 20px 0; 
+    margin-right: 44px;
+    margin-left: 44px;
+    text-align: center;
 }

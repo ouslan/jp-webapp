@@ -107,16 +107,19 @@
       </section>
 
       
-      {% comment %} DIV 1 {% endcomment %}
+      <!-- DIV 1 -->
       <section class="first_section">
         <div>
           1. Numero de Seguro Social/Social Security Number: <input class="text-box space-between" id="text-box-1" placeholder="Enter your text here..."></input>
-          Tel: <input type="tel" class="text-box space-between" id="text-box-1" placeholder="Enter your text here..."></input>
-          Fax: <input type="tel" class="text-box space-between" id="text-box-1" placeholder="Enter your text here..."></input>
+
+          <div class="first_div_container">
+            Tel: <input type="tel" class="text-box space-between" id="text-box-1-2" placeholder="Enter your text here..."></input>
+            Fax: <input type="tel" class="text-box space-between" id="text-box-1-2" placeholder="Enter your text here..."></input>
+          </div>
         </div>
 
 
-        {% comment %} DIV 2 {% endcomment %}
+        <!-- DIV 2 -->
         <div class="second_div">
           2. Forma legal de organización: - Legal form of organization: 
           <br>
@@ -130,7 +133,7 @@
         </div>
 
 
-        {% comment %} DIV 3 {% endcomment %}
+        <!-- DIV 3 -->
         <div class="third_div">
             3. Corporaciones Extranjeras Controladas (CEC)/Controlled Foreign Corporations: 
             <input type="radio" id="radio-2" name="radio-2" value="Corporaciones Extranjeras">Si
@@ -138,14 +141,14 @@
         </div>
 
 
-        {% comment %} DIV 4 {% endcomment %}
+        <!-- DIV 4 -->
         <div class="fourth_div">
           4. Clase de negocio/Type of business:
-          <input class="text-box space-between" placeholder="Enter your text here..."></input>
+          <input class="text-box space-between" id="text-box-4" placeholder="Enter your text here..."></input>
         </div>
 
 
-        {% comment %} DIV 5 {% endcomment %}
+        <!-- DIV 5 -->
         <div class="fifth_div">
           5. Describa brevemente la función principal del negocio/Explain briefly the main function of the business activity:
           <br>
@@ -153,12 +156,21 @@
         </div>
         
 
-        {% comment %} DIV 6 {% endcomment %}
+        <!-- DIV 6 -->
         <div class="six_div">
           6. ¿Opera sucursuales esta firma? - Do you have branch operations?
           <input type="radio" id="radio-3" name="radio-3" value="operaciones">Si
           <input type="radio" id="radio-3" name="radio-3" value="operaciones">No
         </div>
+      </section>
+
+      <!-- SECTION DIVIDER -->
+       <section>
+        <div class="section_divider">
+          ESTADO DE INGRESO Y GASTOS - INCOME AND EXPENSE STATEMENT
+        </div>
+
+        <div class="custom-line"></div>
       </section>
 
       <section class="second_section">
