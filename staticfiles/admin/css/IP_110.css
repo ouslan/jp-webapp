@@ -1,6 +1,8 @@
 .body_header {
     display: block;
     justify-content: space-around;
+    margin-top: 30px;
+    margin-left: 15px;
 }
 
 .space-between {
@@ -16,11 +18,10 @@
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
-    resize: vertical; /* Allows users to resize the box vertically */
+    resize: vertical;
 }
 
 .big-box {
-    /* background-color: rgb(168, 234, 168); */
     display: flex;
     justify-content: center;
     box-shadow: 0 10px 10px -10px rgba(131, 131, 131, 0.5);
@@ -28,14 +29,12 @@
 
 
 .webleft-container {
-    /* width: 60%; */
     padding-top: 1px;
     line-height: 1.5;
     margin-right: 19vh;
 }
 
 .webright-container {
-    /* width: 70%; */
     padding-top: 5px;
     line-height: 1.5;
     margin-left: 22vh;
