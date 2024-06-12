@@ -62,6 +62,10 @@
     resize: vertical;
 }
 
+#text-box-5 {
+    margin-left: 19px;
+}
+
 #radio-1 {
     margin-left: 50px;
     margin-top: 18px;
@@ -71,6 +75,16 @@
     width: 3%;
     border: 1px solid #ccc;
     resize: vertical;
+}
+
+#radio-3 {
+    width: 3%;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.second_div_container {
+   margin-left: -30px;
 }
 
 .second_div {
@@ -85,6 +99,11 @@
 
 .fourth_div {
     margin-top: 44px;
+    margin-left: 2px;
+}
+
+.fifth_div {
+    margin-top: 28px;
     margin-left: 2px;
 }
 
