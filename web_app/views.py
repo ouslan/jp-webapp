@@ -104,3 +104,7 @@ def indicadores(request):
                'indicadores18': indicadores_html18,
                }
     return render(request, "indicadores.html", context)
+
+
+def cuestionarios_balanza_de_pagos(request):
+    return render(request, "cuestionarios/JP-304.html")
