@@ -16,35 +16,6 @@
     <link rel="stylesheet" href="{% static 'IP_110.css' %}" />
     <link rel="stylesheet" href="{% static 'website.css' %}" />
 
-    <style>
-    body {
-      font-family: Arial, sans-serif;
-  }
-  .section {
-      margin-bottom: 20px;
-  }
-  .item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 5px;
-  }
-  .item label {
-      width: 70%;
-  }
-  .item input {
-      width: 25%;
-  }
-  .header-container {
-      display: flex;
-      justify-content: space-between;
-  }
-  .text-box {
-      display: block;
-      margin-bottom: 10px;
-  }
-
-  </style>
-
   </head>
 
   <body>
@@ -92,16 +63,16 @@
     <main>
       <section>
         <div class="body_header">
-          Nombre compañia/Company Name:
+          Nombre compañía / Company Name:
           <input class="text-box space-between" placeholder="Enter your text here..."></input>
           <br>
-          Dirección/Address:
+          Dirección / Address:
           <input class="text-box space-between" placeholder="Enter your text here..."></input>
           <br>
-          Correo electrónico/Email:
+          Correo electrónico / Email:
           <input type="email" class="text-box space-between" placeholder="Enter your text here..."></input>
           <br>
-          Persona contacto/Liaison officer:
+          Persona contacto / Liaison officer:
           <input class="text-box space-between" placeholder="Enter your text here..."></input>
         </div>
       </section>
@@ -110,11 +81,10 @@
       <!-- DIV 1 -->
       <section class="first_section">
         <div>
-          1. Numero de Seguro Social/Social Security Number: <input class="text-box space-between" id="text-box-1" placeholder="Enter your text here..."></input>
-
+          1. Numero de Seguro Social / Social Security Number: <input class="text-box space-between" id="text-box-1" placeholder="Enter your text here..."></input>
           <div class="first_div_container">
-            Tel: <input type="tel" class="text-box space-between" id="text-box-1-2" placeholder="Enter your text here..."></input>
-            Fax: <input type="tel" class="text-box space-between" id="text-box-1-2" placeholder="Enter your text here..."></input>
+          Tel: <input type="tel" class="text-box space-between" id="text-box-1-2" placeholder="Enter your text here..."></input>
+          Fax: <input type="tel" class="text-box space-between" id="text-box-1-2" placeholder="Enter your text here..."></input>
           </div>
         </div>
 
@@ -124,11 +94,11 @@
           2. Forma legal de organización: - Legal form of organization: 
           <br>
           <div class="second_div_container">
-            <input type="radio" id="radio-1" name="radio-1" value="Corporación/Corporation">Corporación/Corporation
-            <input type="radio" id="radio-1" name="radio-1" value="Sociedad/Partnership">Sociedad/Partnership
-            <input type="radio" id="radio-1" name="radio-1" value="Cooperativa/Cooperativa">Cooperativa/Cooperativa
-            <input type="radio" id="radio-1" name="radio-1" value="Empresa Individual/Individual enterprise">Empresa Individual/Individual enterprise
-            <input type="radio" id="radio-1" name="radio-1" value="Empresa sin fines pecuniarios/Nonprofit organization">Corporación/Corporation
+            <input type="radio" id="radio-1" name="radio-1" value="Corporación/Corporation">Corporación / Corporation
+            <input type="radio" id="radio-1" name="radio-1" value="Sociedad/Partnership">Sociedad / Partnership
+            <input type="radio" id="radio-1" name="radio-1" value="Cooperativa/Cooperativa">Cooperativa / Cooperativa
+            <input type="radio" id="radio-1" name="radio-1" value="Empresa Individual/Individual enterprise">Empresa Individual / Individual enterprise
+            <input type="radio" id="radio-1" name="radio-1" value="Empresa sin fines pecuniarios/Nonprofit organization">Corporación / Corporation
           </div>
         </div>
 
@@ -162,15 +132,17 @@
           <input type="radio" id="radio-3" name="radio-3" value="operaciones">Si
           <input type="radio" id="radio-3" name="radio-3" value="operaciones">No
         </div>
-      </section>
-
-      <!-- SECTION DIVIDER -->
-       <section>
-        <div class="section_divider">
-          ESTADO DE INGRESO Y GASTOS - INCOME AND EXPENSE STATEMENT
+        
+        <!-- DIV 7 -->
+        <div class="seven_div">
+          7. Fecha de cierre de sus libros - Your accounting period closing date:
+          <input type="date" id="date" name="trip-start" value="YEAR-MM-DD" min="2014-01-01" max="2024-12-31" />
         </div>
 
-        <div class="custom-line"></div>
+        <!-- DIV 8 -->
+        <div class="eight_div">
+          8. Favor de detallar la siguiente información - Please provide the following information:
+        </div>
       </section>
 
       <section class="second_section">

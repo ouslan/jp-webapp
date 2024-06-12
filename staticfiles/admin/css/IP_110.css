@@ -143,6 +143,21 @@ body {
     margin-left: 2px;
 }
 
+.six_div {
+    margin-top: 28px;
+    margin-left: 2px;
+}
+
+.seven_div {
+    margin-top: 28px;
+    margin-left: 2px;
+}
+
+.eight_div {
+    margin-top: 28px;
+    margin-left: 2px;
+}
+
 .section_divider {
     margin-top: 90px;
     text-align: center;
@@ -169,6 +184,34 @@ hr {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.item label {
+    width: 70%;
+}
+.item input {
+    width: 25%;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+.text-box {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#date {
+    width: 10%;
+    height: 38px;
 }
 
 .custom-line {
