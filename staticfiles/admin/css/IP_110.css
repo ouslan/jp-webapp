@@ -1,0 +1,9 @@
+.body_header {
+    display: block;
+    justify-content: space-around;
+}
+
+#space-between {
+    justify-content: space-between;
+    line-height: 0.5;
+}
