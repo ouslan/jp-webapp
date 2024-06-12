@@ -83,4 +83,24 @@
     margin-left: 2px;
 }
 
+hr {
+    width: 110%;
+    height: 1px;
+    background-color: #000;
+    border: none;
+}
 
+#signature {
+    width: 130%;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+.big-box-bottom {
+    display: flex;
+    justify-content: center;
+}
