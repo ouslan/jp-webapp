@@ -10,4 +10,5 @@ urlpatterns = [
     re_path(r"^datos-demograficos/$", views.datos_demograficos, name="datos_demograficos"),
     re_path(r"^cuestionario-relacion-de-aportaciones-federales/$", views.JP_304, name="JP-304"),
     re_path(r"^cuestionario-agricultura/$", views.IP_110, name="IP-110"),
+    re_path(r"^cuestionario-valor-de-la-inversion-en-obras-de-construccion/$", views.JP_541, name="JP-541"),
 ]

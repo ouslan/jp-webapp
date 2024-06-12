@@ -112,3 +112,6 @@ def JP_304(request):
 
 def IP_110(request):
     return render(request, "cuestionarios/ingreso_neto/IP-110.html")
+
+def JP_541(request):
+    return render(request, "cuestionarios/construccion/JP_541.html")
