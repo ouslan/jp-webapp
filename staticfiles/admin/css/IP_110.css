@@ -45,4 +45,25 @@
     line-height: 1.5;
 }
 
+hr {
+    width: 110%;
+    height: 1px;
+    background-color: #000;
+    border: none;
+}
 
+#signature {
+    width: 130%;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+.big-box-bottom {
+    display: flex;
+    justify-content: center;
+    /* box-shadow: 0 10px 10px -10px rgba(131, 131, 131, 0.5); */
+}
