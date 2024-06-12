@@ -1,8 +1,12 @@
+body {
+    overflow-x: hidden;
+}
+
 .body_header {
     display: block;
     justify-content: space-around;
     margin-top: 30px;
-    margin-left: 15px;
+    margin-left: 40px;
 }
 
 .space-between {
@@ -45,9 +49,6 @@
     line-height: 1.5;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
 .section {
     margin-bottom: 20px;
 }
@@ -74,4 +75,87 @@ body {
   margin-left: 60px;
 }
 
+.first_section, .second_section {
+    margin-top: 45px;
+    margin-left: 40px;
+}
 
+#text-box-1 {
+    width: 40%;
+    max-width: 250px;
+    height: 38px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: vertical;
+}
+
+#text-box-5 {
+    margin-left: 19px;
+}
+
+#radio-1 {
+    margin-left: 50px;
+    margin-top: 18px;
+}
+
+#radio-2 {
+    width: 3%;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+#radio-3 {
+    width: 3%;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.second_div_container {
+   margin-left: -30px;
+}
+
+.second_div {
+    margin-top: 28px;
+    margin-left: 2px;
+}
+
+.third_div {
+    margin-top: 44px;
+    margin-left: 2px;
+}
+
+.fourth_div {
+    margin-top: 44px;
+    margin-left: 2px;
+}
+
+.fifth_div {
+    margin-top: 28px;
+    margin-left: 2px;
+}
+
+hr {
+    width: 110%;
+    height: 1px;
+    background-color: #000;
+    border: none;
+}
+
+#signature {
+    width: 130%;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+.big-box-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
