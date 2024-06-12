@@ -16,6 +16,35 @@
     <link rel="stylesheet" href="{% static 'IP_110.css' %}" />
     <link rel="stylesheet" href="{% static 'website.css' %}" />
 
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+  }
+  .section {
+      margin-bottom: 20px;
+  }
+  .item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+  }
+  .item label {
+      width: 70%;
+  }
+  .item input {
+      width: 25%;
+  }
+  .header-container {
+      display: flex;
+      justify-content: space-between;
+  }
+  .text-box {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  </style>
+
   </head>
 
   <body>
@@ -80,8 +109,189 @@
       <section>
       </section>
 
+
+      <!-- SECTION 2 Parte A, B, C, D (Adriana)-->
+
       <section>
-      </section>
-    </main>
-  </body>
+
+        <!-- SECTION A -->
+        <div class="section">
+          <h2>A. Ingresos - Income</h2></label>
+
+            <div class="item">
+                <label>1. Ingresos por servicios - Services rendered</label>
+                <input type="text" name="services_2012" placeholder="2012">
+                <input type="text" name="services_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>a. A industrias y negocios - To industries and businesses</label>
+                <input type="text" name="industries_2012" placeholder="2012">
+                <input type="text" name="industries_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>b. A personas - To persons</label>
+                <input type="text" name="persons_2012" placeholder="2012">
+                <input type="text" name="persons_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>2. Ventas - From sale of merchandise</label>
+                <input type="text" name="sales_2012" placeholder="2012">
+                <input type="text" name="sales_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>3. Renta de terreno y edificio - Rent of land and building</label>
+                <input type="text" name="rents_2012" placeholder="2012">
+                <input type="text" name="rents_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>4. Intereses - Interests</label>
+                <input type="text" name="interests_2012" placeholder="2012">
+                <input type="text" name="interests_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>5. Ganancia o pérdida de capital - Capital gain or loss</label>
+                <input type="text" name="dividends_2012" placeholder="2012">
+                <input type="text" name="dividends_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>6. Otros ingresos de operación - Other operating income</label>
+                <input type="text" name="others_2012" placeholder="2012">
+                <input type="text" name="others_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>7. Total de ingresos - Total income</label>
+                <input type="text" name="total_income_2012" placeholder="2012">
+                <input type="text" name="total_income_2013" placeholder="2013">
+            </div>
+
+        </div>
+
+        <!-- SECTION B -->
+        <div class="section">
+      
+            <div class="item">
+              <label><h2>B. Gastos - Expenses</h2></label>
+              <input type="text" name="salaries_2012" placeholder="2012">
+              <input type="text" name="salaries_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>1. Salarios, jornales, bono de Navidad y comisiones - Salaries, wages, Christmas bonus, and commissions</label>
+                <input type="text" name="salaries_2012" placeholder="2012">
+                <input type="text" name="salaries_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>2. Intereses - Interests</label>
+                <input type="text" name="interests_2012" placeholder="2012">
+                <input type="text" name="interests_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>3. Renta de terreno y edificio - Rent of land and building</label>
+                <input type="text" name="rents_2012" placeholder="2012">
+                <input type="text" name="rents_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>4. Depreciación - Depreciation </label>
+                <input type="text" name="depreciation_2012" placeholder="2012">
+                <input type="text" name="depreciation_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>5. Cuentas incobrables - Bad debts</label>
+                <input type="text" name="bad_debts_2012" placeholder="2012">
+                <input type="text" name="bad_debts_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>6. Donativos - Donations</label>
+                <input type="text" name="donations_2012" placeholder="2012">
+                <input type="text" name="donations_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>7. Impuesto sobre la venta y uso - sales and use tax</label>
+                <input type="text" name="sales_tax_2012" placeholder="2012">
+                <input type="text" name="sales_tax_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>a. Por Compra de maquinaria y equipo - On purchases of machinery and equipment</label>
+                <input type="text" name="machinery_2012" placeholder="2012">
+                <input type="text" name="machinery_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>b. Por otras compras - On other purchases</label>
+                <input type="text" name="other_purchases_2012" placeholder="2012">
+                <input type="text" name="other_purchases_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>8. Licencias y patentes - Licenses and patents</label>
+                <input type="text" name="licenses_2012" placeholder="2012">
+                <input type="text" name="licenses_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>9. Otros gastos de operación - Other operating expenses</label>
+                <input type="text" name="other_expenses_2012" placeholder="2012">
+                <input type="text" name="other_expenses_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>10. Total de gastos - Total expenses</label>
+                <input type="text" name="total_expenses_2012" placeholder="2012">
+                <input type="text" name="total_expenses_2013" placeholder="2013">
+            </div>
+
+        </div>
+
+        <!-- SECTION C -->
+        <div class="section">
+
+            <div class="item">
+              <label><h2>C. Ganancia o pérdida neta ( + ó - ) - Net profit or loss ( + or - )</h2></label>
+              <input type="text" name="salaries_2012" placeholder="2012">
+              <input type="text" name="salaries_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>1. Contribución sobre ingresos - Income tax</label>
+                <input type="text" name="income_tax_2012" placeholder="2012">
+                <input type="text" name="income_tax_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>2. Ganancia después de contribución sobre ingresos - Profit after income tax</label>
+                <input type="text" name="profit_after_tax_2012" placeholder="2012">
+                <input type="text" name="profit_after_tax_2013" placeholder="2013">
+            </div>
+
+        </div>
+
+        <!-- SECTION D -->
+        <div class="section">
+
+            <div class="item">
+                <label><h2>D. Impuesto sobre ventas y uso retenido - Sales and use tax Withheld</h2></label>
+                <input type="text" name="withheld_tax_2012" placeholder="2012">
+                <input type="text" name="withheld_tax_2013" placeholder="2013">
+            </div>
+
+        </div>
+
+    </section>
+</main>
+</body>
 </html>

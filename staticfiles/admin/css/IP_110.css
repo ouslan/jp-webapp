@@ -45,4 +45,33 @@
     line-height: 1.5;
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+.section {
+    margin-bottom: 20px;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.item label {
+    width: 70%;
+}
+.item input {
+    width: 25%;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+.text-box {
+    display: block;
+    margin-bottom: 10px;
+}
+.indent {
+  margin-left: 60px;
+}
+
 
