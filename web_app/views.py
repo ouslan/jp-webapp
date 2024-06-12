@@ -56,13 +56,17 @@ def indicadores(request):
     x = df_x['Year']
     y = df_y['Value']
     
+    x_1 = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013]
+    y_1 = [14, 55, 44, 13, 29, 20, 45, 39, 29, 10, 50, 60, 39, 12]
+    
     x_title = 'Años'
     y_title = 'Indices'
     
     fig = gf.graph(x, y, x_title, y_title)
+    fig_1 = gf.graph(x_1, y_1, x_title, y_title)
     
     indicadores_html = fig.to_html()
-    indicadores_html2 = fig.to_html()
+    indicadores_html2 = fig_1.to_html()
     indicadores_html3 = fig.to_html()
     indicadores_html4 = fig.to_html()
     indicadores_html5 = fig.to_html()

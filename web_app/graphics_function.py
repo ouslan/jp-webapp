@@ -13,7 +13,7 @@ def graph(x_axis, y_axis, x_title, y_title):
         y= y_axis,
         mode='lines+markers',
         line=dict(color='#FF2525', width=3),
-        marker=dict(size=7, color='#00CDFF'),
+        marker=dict(size=4, color='#00CDFF'),
         hoverinfo='text',
     ))
 
