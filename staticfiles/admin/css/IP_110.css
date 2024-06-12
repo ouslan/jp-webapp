@@ -45,4 +45,21 @@
     line-height: 1.5;
 }
 
+.first_section {
+    margin-top: 45px;
+    margin-left: 15px;
+}
+
+#text-box-1 {
+    width: 40%;
+    max-width: 250px;
+    height: 38px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: vertical;
+}
+
 
