@@ -66,3 +66,21 @@
     margin-left: 50px;
     margin-top: 10px;
 }
+
+#radio-2 {
+    width: 3%;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.second_div {
+    margin-top: 15px;
+    margin-left: 2px;
+}
+
+.third_div {
+    margin-top: 36px;
+    margin-left: 2px;
+}
+
+
