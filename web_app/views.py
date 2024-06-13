@@ -143,9 +143,13 @@ def IP_110(request):
                              business_function, branches, closing_date])  # Include all other form fields here
 
         # Redirect or render a success message
-        return HttpResponse("Form submitted successfully!")
+        return render(request, "cuestionarios/succesfull.html")
 
     return render(request, "cuestionarios/ingreso_neto/IP-110.html")
+
+
+def succesfull_page(request):
+    return render(request, "cuestionarios/succesfull.html")
 
 
 
