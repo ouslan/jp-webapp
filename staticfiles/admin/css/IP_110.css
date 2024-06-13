@@ -43,27 +43,38 @@ main {
      10px 0 10px -10px rgba(131, 131, 131, 0.5);
 }
 
-
-.webleft-container {
+.left-container {
     padding-top: 1px;
     line-height: 1.5;
-    margin-right: 19vh;
+    margin-right: 200px;
 }
 
-.webright-container {
-    padding-top: 5px;
+.right-container {
+    padding-top: 1px;
     line-height: 1.5;
-    margin-left: 22vh;
+    margin-left: 250px;
 }
 
-.webmiddle-container {
+.middle-container {
     margin-top: 190px;
+    line-height: 1.5;
+}
+
+.left-signature {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-right: 500px;
+}
+
+.right-signature {
+    padding-top: 1px;
     line-height: 1.5;
 }
 
 .section {
     margin-bottom: 20px;
 }
+
 .item {
     display: flex;
     justify-content: space-between;
@@ -199,13 +210,16 @@ hr {
 .big-box-bottom {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .section {
     margin-bottom: 20px;
 }
 
+#text_button {
+    text-align: center;
+}
 .item {
     display: flex;
     justify-content: space-between;
