@@ -32,9 +32,14 @@ main {
 }
 
 .big-box {
+    max-width: 100%;
+    width: 1500px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    box-shadow: 0 10px 10px -10px rgba(131, 131, 131, 0.5);
+    box-shadow: 0 10px 10px -10px rgba(131, 131, 131, 0.5), 
+    -10px 0 10px -10px rgba(131, 131, 131, 0.5), 
+     10px 0 10px -10px rgba(131, 131, 131, 0.5);
 }
 
 
@@ -181,7 +186,7 @@ hr {
 }
 
 #signature {
-    width: 130%;
+    width: 110%;
     border: none;
     margin-top: 5px;
     font-size: 30px; 
