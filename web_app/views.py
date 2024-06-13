@@ -129,20 +129,23 @@ def IP_110(request):
         business_function = request.POST.get('business_function')
         branches = request.POST.get('branches')
         closing_date = request.POST.get('closing_date')
+        services_revenues_12 = request.POST.get('services_revenues_12')
+        services_revenues_13 = request.POST.get('services_revenues_13')
+        industries_businesses_12 = request.POST.get('industries_businesses_12')
+        industries_businesses_13 = request.POST.get('industries_businesses_13')
         
-
-        # Define the CSV file path
         csv_file_path = 'src/data/IP_110_data.csv'
 
-        # Open the CSV file and write the form data
         with open(csv_file_path, mode='a', newline='') as file:
             writer = csv.writer(file)
-            # Add ssn to the writer.writerow call
+            
             writer.writerow([company_name, address, email, liaison_officer, 
                              ssn, tel, fax, legal_form, cfc, business_type,
-                             business_function, branches, closing_date])  # Include all other form fields here
+                             business_function, branches, closing_date,
+                             services_revenues_12, services_revenues_13,
+                             industries_businesses_12, industries_businesses_13
+                            ])  
 
-        # Redirect or render a success message
         return render(request, "cuestionarios/succesfull.html")
 
     return render(request, "cuestionarios/ingreso_neto/IP-110.html")

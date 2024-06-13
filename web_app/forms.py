@@ -20,5 +20,8 @@ class AgricultureForm(forms.Form):
     )
     branches = forms.ChoiceField(label='¿Opera sucursuales esta firma? / Do you have branch operations?', choices=[('Si', 'Si'), ('No', 'No')])
     closing_date = forms.DateField(label='Fecha de cierre de sus libros / Your accounting period closing date', widget=forms.SelectDateWidget)
+    services_revenues_12 = forms.CharField(label='Ingresos por servicios - Services rendered'),
+    services_revenues_13 = forms.CharField(label='Ingresos por servicios - Services rendered'),
+    industries_businesses_12 = forms.CharField(label='Industrias y negocios - Industries and businesses'),
     
 
