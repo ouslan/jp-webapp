@@ -59,318 +59,321 @@
         </div>
       </section>
     </header>
-
+    
     <main>
-      <section>
-        <div class="body_header">
-          Nombre compañía / Company Name:
-          <input class="text-box space-between" placeholder="Enter your text here..."></input>
-          <br>
-          Dirección / Address:
-          <input class="text-box space-between" placeholder="Enter your text here..."></input>
-          <br>
-          Correo electrónico / Email:
-          <input type="email" class="text-box space-between" placeholder="Enter your text here..."></input>
-          <br>
-          Persona contacto / Liaison officer:
-          <input class="text-box space-between" placeholder="Enter your text here..."></input>
-        </div>
-      </section>
-
-      <br>
-      <div class="custom-line"></div>
-
-      <section class="first_section">
-        <!-- DIV 1 -->
-        <div>
-          1. Numero de Seguro Social / Social Security Number: <input class="text-box space-between" id="text-box-1" minlength="9" maxlength="9" placeholder="Enter your text here..." required></input>
-          <div class="first_div_container">
-          Tel: <input type="tel" class="text-box space-between" id="text-box-1-2" maxlength="15" placeholder="Enter your text here..." required>
-          Fax: <input type="tel" class="text-box space-between" id="text-box-1-2" maxlength="15" placeholder="Enter your text here..." required>
+      <form method="POST" action="{% url 'IP-110' %}">
+        {% csrf_token %}
+        <section>
+          <div class="body_header">
+            Nombre compañía / Company Name:
+            <input class="text-box space-between" name="company_name" placeholder="Enter your text here...">
+            <br>
+            Dirección / Address:
+            <input class="text-box space-between" name="address" placeholder="Enter your text here...">
+            <br>
+            Correo electrónico / Email:
+            <input type="email" class="text-box space-between" name="email" placeholder="Enter your text here...">
+            <br>
+            Persona contacto / Liaison officer:
+            <input class="text-box space-between" name="liaison_officer" placeholder="Enter your text here...">
           </div>
-        </div>
+        </section>
 
-        <!-- DIV 2 -->
-        <div class="second_div">
-          2. Forma legal de organización: - Legal form of organization: 
-          <br>
-          <div class="second_div_container">
-            <input type="radio" id="radio-1" name="radio-1" value="Corporación/Corporation">Corporación / Corporation
-            <input type="radio" id="radio-1" name="radio-1" value="Sociedad/Partnership">Sociedad / Partnership
-            <input type="radio" id="radio-1" name="radio-1" value="Cooperativa/Cooperativa">Cooperativa / Cooperativa
-            <input type="radio" id="radio-1" name="radio-1" value="Empresa Individual/Individual enterprise">Empresa Individual / Individual enterprise
-            <input type="radio" id="radio-1" name="radio-1" value="Empresa sin fines pecuniarios/Nonprofit organization">Corporación / Corporation
-          </div>
-        </div>
-
-        <!-- DIV 3 -->
-        <div class="third_div">
-            3. Corporaciones Extranjeras Controladas (CEC)/Controlled Foreign Corporations: 
-            <input type="radio" id="radio-2" name="radio-2" value="Corporaciones Extranjeras">Si
-            <input type="radio" id="radio-2" name="radio-2" value="Corporaciones Extranjeras">No
-        </div>
-
-        <!-- DIV 4 -->
-        <div class="fourth_div">
-          4. Clase de negocio/Type of business:
-          <input class="text-box space-between" id="text-box-4" placeholder="Enter your text here...">
-        </div>
-
-        <!-- DIV 5 -->
-        <div class="fifth_div">
-          5. Describa brevemente la función principal del negocio/Explain briefly the main function of the business activity:
-          <br>
-          <textarea class="text-box space-between" id="text-box-5" style="height:120px"placeholder="Enter your text here..."></textarea>
-        </div>
-
-        <!-- DIV 6 -->
-        <div class="six_div">
-          6. ¿Opera sucursuales esta firma? - Do you have branch operations?
-          <input type="radio" id="radio-3" name="radio-3" value="operaciones">Si
-          <input type="radio" id="radio-3" name="radio-3" value="operaciones">No
-        </div>
-        
-        <!-- DIV 7 -->
-        <div class="seven_div">
-          7. Fecha de cierre de sus libros - Your accounting period closing date:
-          <input type="month" id="date" name="trip-start"/>
-          <br>
-          <br>
-          &emsp;Nota: La información solicitada se refiere a las operaciones en Puerto Rico solamente - 
-          The information requested refers to operations in Puerto Rico only
-        </div>
-
-        <!-- DIV 8 -->
-        <div class="eight_div">
-          8. Favor de detallar la siguiente información - Please provide the following information:
-        </div>
-      </section>
-
-      <section>
-        <div class="section_divider">
-          ESTADO DE INGRESO Y GASTOS - INCOME AND EXPENSES STATEMENT
-        </div>
+        <br>
         <div class="custom-line"></div>
-      </section>
 
-      <section class="divider-container">
-        <div class="section_divider_1" id="label">
-          Partida - Item
-        </div>
-
-        <div class="section_divider_2" id="label">
-          Año - Year
-          <br>
-          <div id="year">2012</div>
-        </div>
-
-        <div class="section_divider_3" id="label">
-          Año - Year
-          <br>
-          <div id="year">2013</div>
-      </section>
-
-      <section class="second_section">
-        <!-- SECTION A -->
-        <div class="section">
-          <h2>A. Ingresos - Income</h2></label>
-
-          <div class="item">
-              <label>1. Ingresos por servicios - Services rendered</label>
-              <input type="text" name="services_2012" placeholder="2012">
-              <input type="text" name="services_2013" placeholder="2013">
+        <section class="first_section">
+          <!-- DIV 1 -->
+          <div>
+            1. Numero de Seguro Social / Social Security Number: <input class="text-box space-between" id="text-box-1" minlength="9" maxlength="9" name="ssn" placeholder="Enter your text here..." required></input>
+            <div class="first_div_container">
+            Tel: <input type="tel" class="text-box space-between" id="text-box-1-2" maxlength="15" name="tel" placeholder="Enter your text here..." required>
+            Fax: <input type="tel" class="text-box space-between" id="text-box-1-2" maxlength="15" name="fax" placeholder="Enter your text here..." required>
+            </div>
           </div>
 
-          <div class="item">
-              <label>&emsp;a. A industrias y negocios - To industries and businesses</label>
-              <input type="text" name="industries_2012" placeholder="2012">
-              <input type="text" name="industries_2013" placeholder="2013">
+          <!-- DIV 2 -->
+          <div class="second_div">
+            2. Forma legal de organización: - Legal form of organization: 
+            <br>
+            <div class="second_div_container">
+              <input type="radio" id="radio-1" name="radio-1" value="Corporación/Corporation">Corporación / Corporation
+              <input type="radio" id="radio-1" name="radio-1" value="Sociedad/Partnership">Sociedad / Partnership
+              <input type="radio" id="radio-1" name="radio-1" value="Cooperativa/Cooperativa">Cooperativa / Cooperativa
+              <input type="radio" id="radio-1" name="radio-1" value="Empresa Individual/Individual enterprise">Empresa Individual / Individual enterprise
+              <input type="radio" id="radio-1" name="radio-1" value="Empresa sin fines pecuniarios/Nonprofit organization">Corporación / Corporation
+            </div>
           </div>
 
-          <div class="item">
-              <label>&emsp;b. A personas - To persons</label>
-              <input type="text" name="persons_2012" placeholder="2012">
-              <input type="text" name="persons_2013" placeholder="2013">
+          <!-- DIV 3 -->
+          <div class="third_div">
+              3. Corporaciones Extranjeras Controladas (CEC)/Controlled Foreign Corporations: 
+              <input type="radio" id="radio-2" name="radio-2" value="Corporaciones Extranjeras">Si
+              <input type="radio" id="radio-2" name="radio-2" value="Corporaciones Extranjeras">No
           </div>
 
-          <div class="item">
-              <label>2. Ventas - From sale of merchandise</label>
-              <input type="text" name="sales_2012" placeholder="2012">
-              <input type="text" name="sales_2013" placeholder="2013">
+          <!-- DIV 4 -->
+          <div class="fourth_div">
+            4. Clase de negocio/Type of business:
+            <input class="text-box space-between" id="text-box-4" placeholder="Enter your text here...">
           </div>
 
-          <div class="item">
-              <label>3. Renta de terreno y edificio - Rent of land and building</label>
-              <input type="text" name="rents_2012" placeholder="2012">
-              <input type="text" name="rents_2013" placeholder="2013">
+          <!-- DIV 5 -->
+          <div class="fifth_div">
+            5. Describa brevemente la función principal del negocio/Explain briefly the main function of the business activity:
+            <br>
+            <textarea class="text-box space-between" id="text-box-5" style="height:120px"placeholder="Enter your text here..."></textarea>
           </div>
 
-          <div class="item">
-              <label>4. Intereses - Interests</label>
-              <input type="text" name="interests_2012" placeholder="2012">
-              <input type="text" name="interests_2013" placeholder="2013">
+          <!-- DIV 6 -->
+          <div class="six_div">
+            6. ¿Opera sucursuales esta firma? - Do you have branch operations?
+            <input type="radio" id="radio-3" name="radio-3" value="operaciones">Si
+            <input type="radio" id="radio-3" name="radio-3" value="operaciones">No
+          </div>
+          
+          <!-- DIV 7 -->
+          <div class="seven_div">
+            7. Fecha de cierre de sus libros - Your accounting period closing date:
+            <input type="month" id="date" name="trip-start"/>
+            <br>
+            <br>
+            &emsp;Nota: La información solicitada se refiere a las operaciones en Puerto Rico solamente - 
+            The information requested refers to operations in Puerto Rico only
           </div>
 
-          <div class="item">
-              <label>5. Ganancia o pérdida de capital - Capital gain or loss</label>
-              <input type="text" name="dividends_2012" placeholder="2012">
-              <input type="text" name="dividends_2013" placeholder="2013">
+          <!-- DIV 8 -->
+          <div class="eight_div">
+            8. Favor de detallar la siguiente información - Please provide the following information:
+          </div>
+        </section>
+
+        <section>
+          <div class="section_divider">
+            ESTADO DE INGRESO Y GASTOS - INCOME AND EXPENSES STATEMENT
+          </div>
+          <div class="custom-line"></div>
+        </section>
+
+        <section class="divider-container">
+          <div class="section_divider_1" id="label">
+            Partida - Item
           </div>
 
-          <div class="item">
-              <label>6. Otros ingresos de operación - Other operating income</label>
-              <input type="text" name="others_2012" placeholder="2012">
-              <input type="text" name="others_2013" placeholder="2013">
+          <div class="section_divider_2" id="label">
+            Año - Year
+            <br>
+            <div id="year">2012</div>
           </div>
 
-          <div class="item">
-              <label>7. Total de ingresos - Total income</label>
-              <input type="text" name="total_income_2012" placeholder="2012">
-              <input type="text" name="total_income_2013" placeholder="2013">
-          </div>
-        </div>
+          <div class="section_divider_3" id="label">
+            Año - Year
+            <br>
+            <div id="year">2013</div>
+        </section>
 
-        <!-- SECTION B -->
-        <div class="section">
-          <div class="item">
-            <label><h2>B. Gastos - Expenses</h2></label>
-            <input type="text" name="salaries_2012" placeholder="2012">
-            <input type="text" name="salaries_2013" placeholder="2013">
+        <section class="second_section">
+          <!-- SECTION A -->
+          <div class="section">
+            <h2>A. Ingresos - Income</h2></label>
+
+            <div class="item">
+                <label>1. Ingresos por servicios - Services rendered</label>
+                <input type="text" name="services_2012" placeholder="2012">
+                <input type="text" name="services_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>&emsp;a. A industrias y negocios - To industries and businesses</label>
+                <input type="text" name="industries_2012" placeholder="2012">
+                <input type="text" name="industries_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>&emsp;b. A personas - To persons</label>
+                <input type="text" name="persons_2012" placeholder="2012">
+                <input type="text" name="persons_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>2. Ventas - From sale of merchandise</label>
+                <input type="text" name="sales_2012" placeholder="2012">
+                <input type="text" name="sales_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>3. Renta de terreno y edificio - Rent of land and building</label>
+                <input type="text" name="rents_2012" placeholder="2012">
+                <input type="text" name="rents_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>4. Intereses - Interests</label>
+                <input type="text" name="interests_2012" placeholder="2012">
+                <input type="text" name="interests_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>5. Ganancia o pérdida de capital - Capital gain or loss</label>
+                <input type="text" name="dividends_2012" placeholder="2012">
+                <input type="text" name="dividends_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>6. Otros ingresos de operación - Other operating income</label>
+                <input type="text" name="others_2012" placeholder="2012">
+                <input type="text" name="others_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>7. Total de ingresos - Total income</label>
+                <input type="text" name="total_income_2012" placeholder="2012">
+                <input type="text" name="total_income_2013" placeholder="2013">
+            </div>
           </div>
 
-          <div class="item">
-              <label>1. Salarios, jornales, bono de Navidad y comisiones - Salaries, wages, Christmas bonus, and commissions</label>
+          <!-- SECTION B -->
+          <div class="section">
+            <div class="item">
+              <label><h2>B. Gastos - Expenses</h2></label>
               <input type="text" name="salaries_2012" placeholder="2012">
               <input type="text" name="salaries_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>1. Salarios, jornales, bono de Navidad y comisiones - Salaries, wages, Christmas bonus, and commissions</label>
+                <input type="text" name="salaries_2012" placeholder="2012">
+                <input type="text" name="salaries_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>2. Intereses - Interests</label>
+                <input type="text" name="interests_2012" placeholder="2012">
+                <input type="text" name="interests_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>3. Renta de terreno y edificio - Rent of land and building</label>
+                <input type="text" name="rents_2012" placeholder="2012">
+                <input type="text" name="rents_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>4. Depreciación - Depreciation </label>
+                <input type="text" name="depreciation_2012" placeholder="2012">
+                <input type="text" name="depreciation_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>5. Cuentas incobrables - Bad debts</label>
+                <input type="text" name="bad_debts_2012" placeholder="2012">
+                <input type="text" name="bad_debts_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>6. Donativos - Donations</label>
+                <input type="text" name="donations_2012" placeholder="2012">
+                <input type="text" name="donations_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>7. Impuesto sobre la venta y uso - sales and use tax</label>
+                <input type="text" name="sales_tax_2012" placeholder="2012">
+                <input type="text" name="sales_tax_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>&emsp;a. Por Compra de maquinaria y equipo - On purchases of machinery and equipment</label>
+                <input type="text" name="machinery_2012" placeholder="2012">
+                <input type="text" name="machinery_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>&emsp;b. Por otras compras - On other purchases</label>
+                <input type="text" name="other_purchases_2012" placeholder="2012">
+                <input type="text" name="other_purchases_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>8. Licencias y patentes - Licenses and patents</label>
+                <input type="text" name="licenses_2012" placeholder="2012">
+                <input type="text" name="licenses_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>9. Otros gastos de operación - Other operating expenses</label>
+                <input type="text" name="other_expenses_2012" placeholder="2012">
+                <input type="text" name="other_expenses_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>10. Total de gastos - Total expenses</label>
+                <input type="text" name="total_expenses_2012" placeholder="2012">
+                <input type="text" name="total_expenses_2013" placeholder="2013">
+            </div>
           </div>
 
-          <div class="item">
-              <label>2. Intereses - Interests</label>
-              <input type="text" name="interests_2012" placeholder="2012">
-              <input type="text" name="interests_2013" placeholder="2013">
+          <!-- SECTION C -->
+          <div class="section">
+            <div class="item">
+              <label><h2>C. Ganancia o pérdida neta ( + ó - ) - Net profit or loss ( + or - )</h2></label>
+              <input type="text" name="salaries_2012" placeholder="2012">
+              <input type="text" name="salaries_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>1. Contribución sobre ingresos - Income tax</label>
+                <input type="text" name="income_tax_2012" placeholder="2012">
+                <input type="text" name="income_tax_2013" placeholder="2013">
+            </div>
+
+            <div class="item">
+                <label>2. Ganancia después de contribución sobre ingresos - Profit after income tax</label>
+                <input type="text" name="profit_after_tax_2012" placeholder="2012">
+                <input type="text" name="profit_after_tax_2013" placeholder="2013">
+            </div>
           </div>
 
-          <div class="item">
-              <label>3. Renta de terreno y edificio - Rent of land and building</label>
-              <input type="text" name="rents_2012" placeholder="2012">
-              <input type="text" name="rents_2013" placeholder="2013">
+          <!-- SECTION D -->
+          <div class="section">
+            <div class="item">
+                <label><h2>D. Impuesto sobre ventas y uso retenido - Sales and use tax Withheld</h2></label>
+                <input type="text" name="withheld_tax_2012" placeholder="2012">
+                <input type="text" name="withheld_tax_2013" placeholder="2013">
+            </div>
           </div>
+        </section>
 
-          <div class="item">
-              <label>4. Depreciación - Depreciation </label>
-              <input type="text" name="depreciation_2012" placeholder="2012">
-              <input type="text" name="depreciation_2013" placeholder="2013">
-          </div>
-
-          <div class="item">
-              <label>5. Cuentas incobrables - Bad debts</label>
-              <input type="text" name="bad_debts_2012" placeholder="2012">
-              <input type="text" name="bad_debts_2013" placeholder="2013">
-          </div>
-
-          <div class="item">
-              <label>6. Donativos - Donations</label>
-              <input type="text" name="donations_2012" placeholder="2012">
-              <input type="text" name="donations_2013" placeholder="2013">
-          </div>
-
-          <div class="item">
-              <label>7. Impuesto sobre la venta y uso - sales and use tax</label>
-              <input type="text" name="sales_tax_2012" placeholder="2012">
-              <input type="text" name="sales_tax_2013" placeholder="2013">
-          </div>
-
-          <div class="item">
-              <label>&emsp;a. Por Compra de maquinaria y equipo - On purchases of machinery and equipment</label>
-              <input type="text" name="machinery_2012" placeholder="2012">
-              <input type="text" name="machinery_2013" placeholder="2013">
-          </div>
-
-          <div class="item">
-              <label>&emsp;b. Por otras compras - On other purchases</label>
-              <input type="text" name="other_purchases_2012" placeholder="2012">
-              <input type="text" name="other_purchases_2013" placeholder="2013">
-          </div>
-
-          <div class="item">
-              <label>8. Licencias y patentes - Licenses and patents</label>
-              <input type="text" name="licenses_2012" placeholder="2012">
-              <input type="text" name="licenses_2013" placeholder="2013">
-          </div>
-
-          <div class="item">
-              <label>9. Otros gastos de operación - Other operating expenses</label>
-              <input type="text" name="other_expenses_2012" placeholder="2012">
-              <input type="text" name="other_expenses_2013" placeholder="2013">
-          </div>
-
-          <div class="item">
-              <label>10. Total de gastos - Total expenses</label>
-              <input type="text" name="total_expenses_2012" placeholder="2012">
-              <input type="text" name="total_expenses_2013" placeholder="2013">
-          </div>
+        <div class="custom-line"></div>
+        <div id="text_button">
+        * Incluya Intereses Tributables y no tributables - Include taxable and non-taxable interests
         </div>
+        <section>
+          <div class="big-box-bottom">
+            <div class="left-signature">
+              <input id="signature" placeholder="Nombre"></input> <!-- Signature Input -->
+              <hr> <!-- Signature Line -->
+              <p>
+                Nombre de persona que suministra la información<br>
+                Name of person furnishing information<br>
+              </p>
+            </div>
 
-        <!-- SECTION C -->
-        <div class="section">
-          <div class="item">
-            <label><h2>C. Ganancia o pérdida neta ( + ó - ) - Net profit or loss ( + or - )</h2></label>
-            <input type="text" name="salaries_2012" placeholder="2012">
-            <input type="text" name="salaries_2013" placeholder="2013">
+            <div class="right-signature">
+              <input id="signature" placeholder="Rango"></input> <!-- Signature Input -->
+              <hr> <!-- Signature Line -->
+              <p>
+                Rango o posición que ocupa en la empresa<br>
+                Rank or position<br>
+              </p>
+            </div>
           </div>
+        </section>
 
-          <div class="item">
-              <label>1. Contribución sobre ingresos - Income tax</label>
-              <input type="text" name="income_tax_2012" placeholder="2012">
-              <input type="text" name="income_tax_2013" placeholder="2013">
-          </div>
-
-          <div class="item">
-              <label>2. Ganancia después de contribución sobre ingresos - Profit after income tax</label>
-              <input type="text" name="profit_after_tax_2012" placeholder="2012">
-              <input type="text" name="profit_after_tax_2013" placeholder="2013">
-          </div>
-        </div>
-
-        <!-- SECTION D -->
-        <div class="section">
-          <div class="item">
-              <label><h2>D. Impuesto sobre ventas y uso retenido - Sales and use tax Withheld</h2></label>
-              <input type="text" name="withheld_tax_2012" placeholder="2012">
-              <input type="text" name="withheld_tax_2013" placeholder="2013">
-          </div>
-        </div>
-      </section>
-
-      <div class="custom-line"></div>
-      <div id="text_button">
-      * Incluya Intereses Tributables y no tributables - Include taxable and non-taxable interests
-      </div>
-      <section>
-        <div class="big-box-bottom">
-          <div class="left-signature">
-            <input id="signature" placeholder="Nombre"></input> <!-- Signature Input -->
-            <hr> <!-- Signature Line -->
-            <p>
-              Nombre de persona que suministra la información<br>
-              Name of person furnishing information<br>
-            </p>
-          </div>
-
-          <div class="right-signature">
-            <input id="signature" placeholder="Rango"></input> <!-- Signature Input -->
-            <hr> <!-- Signature Line -->
-            <p>
-              Rango o posición que ocupa en la empresa<br>
-              Rank or position<br>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class = 'submit-button-container'>
-        <input type="submit" value="SUBMIT" class="submit-button"></input>
-      </section>
+        <section class = 'submit-button-container'>
+          <input type="submit" value="SUBMIT" class="submit-button"></input>
+        </section>
+      <form>
     </main>
   </body>
 </html>

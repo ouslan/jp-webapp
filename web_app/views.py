@@ -2,6 +2,9 @@ import pandas as pd
 from django.shortcuts import render
 from .models import *
 from web_app import graphics_function as gf
+import csv
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
 
 def home(request):
     return render(request, "home.html")
@@ -111,4 +114,30 @@ def JP_304(request):
 
 
 def IP_110(request):
+    if request.method == "POST":
+        # Retrieve form data
+        company_name = request.POST.get('company_name')
+        address = request.POST.get('address')
+        email = request.POST.get('email')
+        liaison_officer = request.POST.get('liaison_officer')
+        ssn = request.POST.get('ssn')
+        tel = request.POST.get('tel')
+        fax = request.POST.get('fax')
+        # Retrieve other fields similarly
+
+        # Define the CSV file path
+        csv_file_path = 'src/data/IP_110_data.csv'
+
+        # Open the CSV file and write the form data
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            # Add ssn to the writer.writerow call
+            writer.writerow([company_name, address, email, liaison_officer, ssn, tel, fax])  # Include all other form fields here
+
+        # Redirect or render a success message
+        return HttpResponse("Form submitted successfully!")
+
     return render(request, "cuestionarios/ingreso_neto/IP-110.html")
+
+
+
