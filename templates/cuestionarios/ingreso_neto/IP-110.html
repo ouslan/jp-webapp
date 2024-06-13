@@ -97,45 +97,46 @@
             2. Forma legal de organización: - Legal form of organization: 
             <br>
             <div class="second_div_container">
-              <input type="radio" id="radio-1" name="radio-1" value="Corporación/Corporation">Corporación / Corporation
-              <input type="radio" id="radio-1" name="radio-1" value="Sociedad/Partnership">Sociedad / Partnership
-              <input type="radio" id="radio-1" name="radio-1" value="Cooperativa/Cooperativa">Cooperativa / Cooperativa
-              <input type="radio" id="radio-1" name="radio-1" value="Empresa Individual/Individual enterprise">Empresa Individual / Individual enterprise
-              <input type="radio" id="radio-1" name="radio-1" value="Empresa sin fines pecuniarios/Nonprofit organization">Corporación / Corporation
+              <input type="radio" id="radio-1" name="legal_form" value="Corporación/Corporation">Corporación / Corporation
+              <input type="radio" id="radio-1" name="legal_form" value="Sociedad/Partnership">Sociedad / Partnership
+              <input type="radio" id="radio-1" name="legal_form" value="Cooperativa/Cooperativa">Cooperativa / Cooperativa
+              <br>
+              <input type="radio" id="radio-1" name="legal_form" value="Empresa Individual/Individual enterprise">Empresa Individual / Individual enterprise
+              <input type="radio" id="radio-1" name="legal_form" value="Empresa sin fines pecuniarios/Nonprofit organization">Empresa sin fines pecuniarios / Nonprofit organization
             </div>
           </div>
 
           <!-- DIV 3 -->
           <div class="third_div">
               3. Corporaciones Extranjeras Controladas (CEC)/Controlled Foreign Corporations: 
-              <input type="radio" id="radio-2" name="radio-2" value="Corporaciones Extranjeras">Si
-              <input type="radio" id="radio-2" name="radio-2" value="Corporaciones Extranjeras">No
+              <input type="radio" id="radio-2" name="cfc" value="Si">Si
+              <input type="radio" id="radio-2" name="cfc" value="No">No
           </div>
 
           <!-- DIV 4 -->
           <div class="fourth_div">
             4. Clase de negocio/Type of business:
-            <input class="text-box space-between" id="text-box-4" placeholder="Enter your text here...">
+            <input class="text-box space-between" id="text-box-4" name="business_type" placeholder="Enter your text here...">
           </div>
 
           <!-- DIV 5 -->
           <div class="fifth_div">
             5. Describa brevemente la función principal del negocio/Explain briefly the main function of the business activity:
             <br>
-            <textarea class="text-box space-between" id="text-box-5" style="height:120px"placeholder="Enter your text here..."></textarea>
+            <textarea class="text-box space-between" id="text-box-5" style="height:120px" name="business_function" placeholder="Enter your text here..."></textarea>
           </div>
 
           <!-- DIV 6 -->
           <div class="six_div">
             6. ¿Opera sucursuales esta firma? - Do you have branch operations?
-            <input type="radio" id="radio-3" name="radio-3" value="operaciones">Si
-            <input type="radio" id="radio-3" name="radio-3" value="operaciones">No
+            <input type="radio" id="radio-3" name="branches" value="Si">Si
+            <input type="radio" id="radio-3" name="branches" value="No">No
           </div>
           
           <!-- DIV 7 -->
           <div class="seven_div">
             7. Fecha de cierre de sus libros - Your accounting period closing date:
-            <input type="month" id="date" name="trip-start"/>
+            <input type="month" id="date" name="closing_date"/>
             <br>
             <br>
             &emsp;Nota: La información solicitada se refiere a las operaciones en Puerto Rico solamente - 

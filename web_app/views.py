@@ -123,7 +123,13 @@ def IP_110(request):
         ssn = request.POST.get('ssn')
         tel = request.POST.get('tel')
         fax = request.POST.get('fax')
-        # Retrieve other fields similarly
+        legal_form = request.POST.get('legal_form')
+        cfc = request.POST.get('cfc')
+        business_type = request.POST.get('business_type')
+        business_function = request.POST.get('business_function')
+        branches = request.POST.get('branches')
+        closing_date = request.POST.get('closing_date')
+        
 
         # Define the CSV file path
         csv_file_path = 'src/data/IP_110_data.csv'
@@ -132,7 +138,9 @@ def IP_110(request):
         with open(csv_file_path, mode='a', newline='') as file:
             writer = csv.writer(file)
             # Add ssn to the writer.writerow call
-            writer.writerow([company_name, address, email, liaison_officer, ssn, tel, fax])  # Include all other form fields here
+            writer.writerow([company_name, address, email, liaison_officer, 
+                             ssn, tel, fax, legal_form, cfc, business_type,
+                             business_function, branches, closing_date])  # Include all other form fields here
 
         # Redirect or render a success message
         return HttpResponse("Form submitted successfully!")
