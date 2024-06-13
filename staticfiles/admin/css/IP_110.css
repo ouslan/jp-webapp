@@ -189,11 +189,17 @@ hr {
 .section {
     margin-bottom: 20px;
 }
+
 .item {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
 }
+
+.item, #sub_item {
+    margin-left: 20px;
+}
+
 .item label {
     width: 70%;
 }
