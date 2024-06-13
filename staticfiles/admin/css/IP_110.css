@@ -57,9 +57,7 @@ body {
     justify-content: space-between;
     margin-bottom: 5px;
 }
-.item label {
-    width: 70%;
-}
+
 .item input {
     width: 25%;
 }
@@ -75,9 +73,15 @@ body {
   margin-left: 60px;
 }
 
-.first_section, .second_section {
+.first_section {
     margin-top: 45px;
     margin-left: 40px;
+    margin-right: 40px;
+}
+
+.second_section {
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 #text-box-1 {
@@ -228,4 +232,34 @@ hr {
     margin-right: 44px;
     margin-left: 44px;
     text-align: center;
+}
+
+#label {
+    margin-top: 20px;
+}
+
+#year {
+    margin-left: 20px;
+}
+
+.divider-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.section_divider_1 {
+    margin-left: 300px;
+    justify-content: space-around;
+}
+
+.section_divider_2 {
+    margin-left: 220px;
+    margin-right: -100px;
+    justify-content: space-around;
+}
+
+.section_divider_3 {
+    margin-right: 100px;
+    justify-content: space-around;
 }
