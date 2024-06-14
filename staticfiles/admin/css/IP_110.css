@@ -121,10 +121,15 @@ main {
 }
 
 
-#text-box-5, #text-box-4 {
+#text-box-4 {
     margin-left: 19px;
 }
 
+#text-box-5 {
+    margin-left: 19px;
+    min-height:120px;
+    max-height:120px;
+}
 #radio-1 {
     margin-left: 50px;
     margin-top: 18px;
