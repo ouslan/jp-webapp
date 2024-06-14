@@ -72,3 +72,5 @@ class AgricultureForm(forms.Form):
     profit_after_tax_13 = forms.CharField(label='2. Ganancia después de contribución sobre ingresos - Profit after income tax'),
     withheld_tax_12 = forms.CharField(label='D. Impuesto sobre ventas y uso retenido - Sales and use tax Withheld'),
     withheld_tax_13 = forms.CharField(label='D. Impuesto sobre ventas y uso retenido - Sales and use tax Withheld'),
+    signature = forms.CharField(label='Nombre de persona que suministra la información - Name of person furnishing information', max_length=100)
+    rank = forms.CharField(label='Rango - Title')

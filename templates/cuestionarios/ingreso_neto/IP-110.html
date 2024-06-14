@@ -66,16 +66,16 @@
         <section>
           <div class="body_header">
             Nombre compañía / Company Name:
-            <input class="text-box space-between" name="company_name" placeholder="Enter your text here...">
+            <input class="text-box space-between" name="company_name" placeholder="Company Name" required>
             <br>
             Dirección / Address:
-            <input class="text-box space-between" name="address" placeholder="Enter your text here...">
+            <input class="text-box space-between" name="address" placeholder="Address" required>
             <br>
             Correo electrónico / Email:
-            <input type="email" class="text-box space-between" name="email" placeholder="sophie@example.com">
+            <input type="email" class="text-box space-between" name="email" placeholder="sophie@example.com" required>
             <br>
             Persona contacto / Liaison officer:
-            <input class="text-box space-between" name="liaison_officer" placeholder="Enter your text here...">
+            <input class="text-box space-between" name="liaison_officer" placeholder="Liaison Officer Name" required>
           </div>
         </section>
 
@@ -116,14 +116,14 @@
           <!-- DIV 4 -->
           <div class="fourth_div">
             4. Clase de negocio/Type of business:
-            <input class="text-box space-between" id="text-box-4" name="business_type" placeholder="Enter your text here...">
+            <input class="text-box space-between" id="text-box-4" name="business_type" placeholder="Enter your text here..." required>
           </div>
 
           <!-- DIV 5 -->
           <div class="fifth_div">
             5. Describa brevemente la función principal del negocio/Explain briefly the main function of the business activity:
             <br>
-            <textarea class="text-box space-between" id="text-box-5" style="height:120px" name="business_function" placeholder="Enter your text here..."></textarea>
+            <textarea class="text-box space-between" id="text-box-5" style="height:120px" name="business_function" placeholder="Enter your text here..." required></textarea>
           </div>
 
           <!-- DIV 6 -->
@@ -136,7 +136,7 @@
           <!-- DIV 7 -->
           <div class="seven_div">
             7. Fecha de cierre de sus libros - Your accounting period closing date:
-            <input type="month" id="date" name="closing_date"/>
+            <input type="month" id="date" name="closing_date" required/>
             <br>
             <br>
             &emsp;Nota: La información solicitada se refiere a las operaciones en Puerto Rico solamente - 
@@ -180,56 +180,56 @@
 
             <div class="item">
                 <label>1. Ingresos por servicios - Services Revenues</label>
-                <input type="number" name="services_revenues_12" placeholder="$">
-                <input type="number" name="services_revenues_13" placeholder="$">
+                <input type="number" name="services_revenues_12" placeholder="$" required>
+                <input type="number" name="services_revenues_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>&emsp;a. A industrias y negocios - To industries and businesses</label>
-                <input type="number" name="industries_businesses_12" placeholder="$">
-                <input type="number" name="industries_businesses_13" placeholder="$">
+                <input type="number" name="industries_businesses_12" placeholder="$" required>
+                <input type="number" name="industries_businesses_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>&emsp;b. A personas - To persons</label>
-                <input type="number" name="people_12" placeholder="$">
-                <input type="number" name="people_13" placeholder="$">
+                <input type="number" name="people_12" placeholder="$" required>
+                <input type="number" name="people_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>2. Ventas - From sale of merchandise</label>
-                <input type="number" name="sales_12" placeholder="$">
-                <input type="number" name="sales_13" placeholder="$">
+                <input type="number" name="sales_12" placeholder="$" required>
+                <input type="number" name="sales_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>3. Renta de terreno y edificio - Rent of land and building</label>
-                <input type="number" name="incomes_rents_12" placeholder="$">
-                <input type="number" name="incomes_rents_13" placeholder="$">
+                <input type="number" name="incomes_rents_12" placeholder="$" required>
+                <input type="number" name="incomes_rents_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>4. Intereses - Interests</label>
-                <input type="number" name="incomes_interests_12" placeholder="$">
-                <input type="number" name="incomes_interests_13" placeholder="$">
+                <input type="number" name="incomes_interests_12" placeholder="$" required>
+                <input type="number" name="incomes_interests_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>5. Ganancia o pérdida de capital - Capital gain or loss</label>
-                <input type="number" name="dividends_12" placeholder="$">
-                <input type="number" name="dividends_13" placeholder="$">
+                <input type="number" name="dividends_12" placeholder="$" required>
+                <input type="number" name="dividends_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>6. Otros ingresos de operación - Other operating income</label>
-                <input type="number" name="others_incomes_12" placeholder="$">
-                <input type="number" name="others_incomes_13" placeholder="$">
+                <input type="number" name="others_incomes_12" placeholder="$" required>
+                <input type="number" name="others_incomes_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>7. Total de ingresos - Total income</label>
-                <input type="number" name="total_income_12" placeholder="$">
-                <input type="number" name="total_income_13" placeholder="$">
+                <input type="number" name="total_income_12" placeholder="$" required>
+                <input type="number" name="total_income_13" placeholder="$" required>
             </div>
           </div>
 
@@ -237,80 +237,80 @@
           <div class="section">
             <div class="item">
               <label><h2>B. Gastos - Expenses</h2></label>
-              <input type="number" name="expenses_12" placeholder="$">
-              <input type="number" name="expenses_13" placeholder="$">
+              <input type="number" name="expenses_12" placeholder="$" required>
+              <input type="number" name="expenses_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>1. Salarios, jornales, bono de Navidad y comisiones - Salaries, wages, Christmas bonus, and commissions</label>
-                <input type="number" name="salaries_2012" placeholder="$">
-                <input type="number" name="salaries_2013" placeholder="$">
+                <input type="number" name="salaries_2012" placeholder="$" required>
+                <input type="number" name="salaries_2013" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>2. Intereses - Interests</label>
-                <input type="number" name="expenses_interests_12" placeholder="$">
-                <input type="number" name="expenses_interests_13" placeholder="$">
+                <input type="number" name="expenses_interests_12" placeholder="$" required>
+                <input type="number" name="expenses_interests_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>3. Renta de terreno y edificio - Rent of land and building</label>
-                <input type="number" name="expenses_rents_12" placeholder="$">
-                <input type="number" name="expenses_rents_13" placeholder="$">
+                <input type="number" name="expenses_rents_12" placeholder="$" required>
+                <input type="number" name="expenses_rents_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>4. Depreciación - Depreciation </label>
-                <input type="number" name="depreciation_12" placeholder="$">
-                <input type="number" name="depreciation_13" placeholder="$">
+                <input type="number" name="depreciation_12" placeholder="$" required>
+                <input type="number" name="depreciation_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>5. Cuentas incobrables - Bad debts</label>
-                <input type="number" name="bad_debts_12" placeholder="$">
-                <input type="number" name="bad_debts_13" placeholder="$">
+                <input type="number" name="bad_debts_12" placeholder="$" required>
+                <input type="number" name="bad_debts_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>6. Donativos - Donations</label>
-                <input type="number" name="donations_12" placeholder="$">
-                <input type="number" name="donations_13" placeholder="$">
+                <input type="number" name="donations_12" placeholder="$" required>
+                <input type="number" name="donations_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>7. Impuesto sobre la venta y uso - sales and use tax</label>
-                <input type="number" name="sales_tax_12" placeholder="$">
-                <input type="number" name="sales_tax_13" placeholder="$">
+                <input type="number" name="sales_tax_12" placeholder="$" required>
+                <input type="number" name="sales_tax_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>&emsp;a. Por Compra de maquinaria y equipo - On purchases of machinery and equipment</label>
-                <input type="number" name="machinery_12" placeholder="$">
-                <input type="number" name="machinery_13" placeholder="$">
+                <input type="number" name="machinery_12" placeholder="$" required>
+                <input type="number" name="machinery_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>&emsp;b. Por otras compras - On other purchases</label>
-                <input type="number" name="other_purchases_12" placeholder="$">
-                <input type="number" name="other_purchases_13" placeholder="$">
+                <input type="number" name="other_purchases_12" placeholder="$" required>
+                <input type="number" name="other_purchases_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>8. Licencias y patentes - Licenses and patents</label>
-                <input type="number" name="licenses_12" placeholder="$">
-                <input type="number" name="licenses_13" placeholder="$">
+                <input type="number" name="licenses_12" placeholder="$" required>
+                <input type="number" name="licenses_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>9. Otros gastos de operación - Other operating expenses</label>
-                <input type="number" name="other_expenses_12" placeholder="$">
-                <input type="number" name="other_expenses_13" placeholder="$">
+                <input type="number" name="other_expenses_12" placeholder="$" required>
+                <input type="number" name="other_expenses_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>10. Total de gastos - Total expenses</label>
-                <input type="number" name="total_expenses_12" placeholder="$">
-                <input type="number" name="total_expenses_13" placeholder="$">
+                <input type="number" name="total_expenses_12" placeholder="$" required>
+                <input type="number" name="total_expenses_13" placeholder="$" required>
             </div>
           </div>
 
@@ -318,20 +318,20 @@
           <div class="section">
             <div class="item">
               <label><h2>C. Ganancia o pérdida neta ( + ó - ) - Net profit or loss ( + or - )</h2></label>
-              <input type="number" name="net_profit_12" placeholder="$">
-              <input type="number" name="net_profit_13" placeholder="$">
+              <input type="number" name="net_profit_12" placeholder="$" required>
+              <input type="number" name="net_profit_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>1. Contribución sobre ingresos - Income tax</label>
-                <input type="number" name="income_tax_12" placeholder="$">
-                <input type="number" name="income_tax_13" placeholder="$">
+                <input type="number" name="income_tax_12" placeholder="$" required>
+                <input type="number" name="income_tax_13" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>2. Ganancia después de contribución sobre ingresos - Profit after income tax</label>
-                <input type="number" name="profit_after_tax_12" placeholder="$">
-                <input type="number" name="profit_after_tax_13" placeholder="$">
+                <input type="number" name="profit_after_tax_12" placeholder="$" required>
+                <input type="number" name="profit_after_tax_13" placeholder="$" required>
             </div>
           </div>
 
@@ -339,8 +339,8 @@
           <div class="section">
             <div class="item">
                 <label><h2>D. Impuesto sobre ventas y uso retenido - Sales and use tax Withheld</h2></label>
-                <input type="number" name="withheld_tax_12" placeholder="$">
-                <input type="number" name="withheld_tax_13" placeholder="$">
+                <input type="number" name="withheld_tax_12" placeholder="$" required>
+                <input type="number" name="withheld_tax_13" placeholder="$" required>
             </div>
           </div>
         </section>
@@ -352,7 +352,7 @@
         <section>
           <div class="big-box-bottom">
             <div class="left-signature">
-              <input id="signature" placeholder="Nombre"></input> <!-- Signature Input -->
+              <input id="signature" name="signature" placeholder="Nombre" required></input> <!-- Signature Input -->
               <hr> <!-- Signature Line -->
               <p>
                 Nombre de persona que suministra la información<br>
@@ -361,7 +361,7 @@
             </div>
 
             <div class="right-signature">
-              <input id="signature" placeholder="Rango"></input> <!-- Signature Input -->
+              <input id="signature" name="rank" placeholder="Rango" required></input> <!-- Signature Input -->
               <hr> <!-- Signature Line -->
               <p>
                 Rango o posición que ocupa en la empresa<br>

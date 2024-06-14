@@ -181,6 +181,8 @@ def IP_110(request):
         profit_after_tax_13 = request.POST.get('profit_after_tax_13')
         withheld_tax_12 = request.POST.get('withheld_tax_12')
         withheld_tax_13 = request.POST.get('withheld_tax_13')
+        signature = request.POST.get('signature')
+        rank = request.POST.get('rank')
         
         
         csv_file_path = 'src/data/IP_110_data.csv'
@@ -215,7 +217,8 @@ def IP_110(request):
                              net_profit_12, net_profit_13,
                              income_tax_12, income_tax_13,
                              profit_after_tax_12, profit_after_tax_13,
-                             withheld_tax_12, withheld_tax_13
+                             withheld_tax_12, withheld_tax_13,
+                             signature, rank
                             ])  
 
         return render(request, "cuestionarios/succesfull.html")
