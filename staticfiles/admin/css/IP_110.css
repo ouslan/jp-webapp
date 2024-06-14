@@ -47,16 +47,17 @@ main {
     padding-top: 1px;
     line-height: 1.5;
     margin-right: 200px;
+    text-align: left;
 }
 
 .right-container {
     padding-top: 1px;
     line-height: 1.5;
     margin-left: 250px;
+    text-align: right;
 }
 
 .middle-container {
-    margin-top: 190px;
     line-height: 1.5;
     text-align: center;
 }
