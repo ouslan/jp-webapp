@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
-    <link rel="stylesheet" href="{% static 'JP_541.css' %}" />
+    <link rel="stylesheet" href="{% static 'JP-304.css' %}" />
     <link rel="stylesheet" href="{% static 'website.css' %}" />
 </head>
 
@@ -23,73 +23,87 @@
         <header class="big-box">
             <section>
             <div class="webleft-container">
-                <p>
-                JP-304 Rev. (julio 2017)<br>
-                Junta de Planificación<br>
-                Subprograma de Análisis Económico<br>
+                <p id="letter-header">
+                    JP-304 Rev.<br>
+                    Junta de Planificación<br>
+                    Subprograma de Análisis Económico<br>
                 </p>
             </div>
             </section>
     
             <section>
             <div class="webmiddle-container">
-                <p>
+                <p id="middle-header">
                 RELACIÓN DE APORTACIONES FEDERALES APROBADAS, RECIBIDAS Y GASTADAS<br>
-                Orden Ejecutiva 12372<br><br>
-                Trimestre de 
-                <select id="meses">
-                    <option value="mes" class="active">mes</option>
-                    <option value="enero">enero</option>
-                    <option value="febrero">febrero</option>
-                    <option value="marzo">marzo</option>
-                    <option value="abril">abril</option>
-                    <option value="mayo">mayo</option>
-                    <option value="junio">junio</option>
-                    <option value="julio">julio</option>
-                    <option value="julio">julio</option>
-                    <option value="agosto">agosto</option>
-                    <option value="septiembre">septiembre</option>
-                    <option value="octubre">octubre</option>
-                    <option value="noviembre">noviembre</option>
-                    <option value="diciembre">diciembre</option>
-                    </select> a 
-                <select id="meses">
-                    <option value="mes" class="active">mes</option>
-                    <option value="enero">enero</option>
-                    <option value="febrero">febrero</option>
-                    <option value="marzo">marzo</option>
-                    <option value="abril">abril</option>
-                    <option value="mayo">mayo</option>
-                    <option value="junio">junio</option>
-                    <option value="julio">julio</option>
-                    <option value="julio">julio</option>
-                    <option value="agosto">agosto</option>
-                    <option value="septiembre">septiembre</option>
-                    <option value="octubre">octubre</option>
-                    <option value="noviembre">noviembre</option>
-                    <option value="diciembre">diciembre</option>
-                    </select> de 
-                    <input type="text" id="año" name="año" maxlength="4" placeholder="año / year">
-                </p>
+                Orden Ejecutiva 12372<br><br><br><br>
             </div>
             </section>
     
             <section>
             <div class="webright-container">
-                <p>
-                FOTOOOOOOOOO <br>
-                Centro Gubernamental Roberto Sánchez Vilella<br>
-                Apartado 41119<br>
-                San Juan, Puerto Rico 00940-1119
+                <p id="letter-header">
+                    <img src="{% static 'JPposter.jpg' %}" alt="Logo Junta Planificación" id="posterJp"/><br>
+                    Centro Gubernamental Roberto Sánchez Vilella<br>
+                    Apartado 41119<br>
+                    San Juan, Puerto Rico 00940-1119
                 </p>
             </div>
             </section>
         </header>
 
+         <section class="trimester">
+            Trimestre de 
+                    <select id="meses" required>
+                        <option value="mes" class="active">mes</option>
+                        <option value="enero">enero</option>
+                        <option value="febrero">febrero</option>
+                        <option value="marzo">marzo</option>
+                        <option value="abril">abril</option>
+                        <option value="mayo">mayo</option>
+                        <option value="junio">junio</option>
+                        <option value="julio">julio</option>
+                        <option value="julio">julio</option>
+                        <option value="agosto">agosto</option>
+                        <option value="septiembre">septiembre</option>
+                        <option value="octubre">octubre</option>
+                        <option value="noviembre">noviembre</option>
+                        <option value="diciembre">diciembre</option>
+                        </select> a 
+                    <select id="meses" required>
+                        <option value="mes" class="active">mes</option>
+                        <option value="enero">enero</option>
+                        <option value="febrero">febrero</option>
+                        <option value="marzo">marzo</option>
+                        <option value="abril">abril</option>
+                        <option value="mayo">mayo</option>
+                        <option value="junio">junio</option>
+                        <option value="julio">julio</option>
+                        <option value="julio">julio</option>
+                        <option value="agosto">agosto</option>
+                        <option value="septiembre">septiembre</option>
+                        <option value="octubre">octubre</option>
+                        <option value="noviembre">noviembre</option>
+                        <option value="diciembre">diciembre</option>
+                        </select> de 
+                        <input type="text" id="año" name="año" maxlength="4" placeholder="año / year" required>
+                    </p>
+        </section>
+
+            <table>
+                <tr>
+                    <th id="left" colspan="2">Nombre de la Agencia, Corporación o Municipio: <input type="text" id="nombre" name="nombre" placeholder="Nombre de la Agencia, Corporación o Municipio" required></th>
+                    
+                    <th id="right">Dirección: <input type="text" id="direccion" name="dirección" placeholder="Dirección" required></th>
+                </tr>
+                <tr>
+                    <th id="left">Persona de Contacto: <input type="text" id="contacto" name="contacto" placeholder="Persona de Contacto" required></th>
+                    <th id="no-background">Título: <input type="text" id="titulo" name="titulo" placeholder="Título" required></th>
+                    <th id="right">Teléfono: <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="tel" placeholder="123-456-7890" required></th>
+
+                </tr>
+            </table>
             <section>
                 <p>
-                    Nombre de la Agencia, Corporación o Municipio: <input type="text" id="nombre" name"nombre" placeholder="Nombre de la Agencia, Corporación o Municipio"> Dirección: <input type="text" id="direccion" name="dirección" placeholder="Dirección"><br>
-                    Persona de Contacto: <input type="text" id="contacto" name"contacto" placeholder="Persona de Contacto"> Título: <input type="text" id="titulo" name"titulo" placeholder="Título"> Teléfono: <input type="text" id="telefono" name"telefono" placeholder="Teléfono"><br><br>
                     I. APORTACIONES FEDERALES DIRECTAS (de la agencia federal a la dependencia estatal): En miles de dólares ($000)
                 </p>
             </section>
@@ -143,7 +157,7 @@
                 <td>
                     <p>
                         Fecha de<br>
-                        Aptobación
+                        Aprobación
                     </p>
                 </td>
                 <td>
@@ -173,15 +187,15 @@
                     </p>
             </tr>
             <tr>
-                <td> <textarea type="text" id="agencia_federal_table_box" name="nombre_agencia_federal" placeholder=""> </textarea></td>
-                <td> <textarea type="text" id="catalogo_federal_table_box" name="catalogo_federal" placeholder=""> </textarea></td>
-                <td> <textarea type="text" id="sai_federal_table_box" name="sai_federal" placeholder=""> </textarea></td>
-                <td> <textarea type="text" id="titulo_federal_table_box" name="titulo_federal" placeholder=""> </textarea></td>
-                <td> <textarea type="text" id="aportacion_aprobada_federal_table_box" name="aportacion_aprobada_federal" placeholder=""> </textarea></td>
-                <td> <textarea type="text" id="fecha_aprobacion_federal_table_box" name="fecha_aprobacion_federal" placeholder=""> </textarea></td>
-                <td> <textarea type="text" id="aportacion_recibida_federal_table_box" name="aportacion_recibida_federal" placeholder=""> </textarea></td>
-                <td> <textarea type="text" id="fecha_recibo_federal_table_box" name="fecha_recibo_federal" placeholder=""> </textarea></td>
-                <td> <textarea type="text" id="aportacion_gastada_federal_table_box" name="aportacion_gastada_federal" placeholder=""> </textarea></td>
+                <td> <textarea type="text" id="agencia_federal_table_box" name="nombre_agencia_federal" placeholder="" required></textarea></td>
+                <td> <textarea type="text" id="catalogo_federal_table_box" name="catalogo_federal" placeholder="" required></textarea></td>
+                <td> <textarea type="text" id="sai_federal_table_box" name="sai_federal" placeholder="" required></textarea></td>
+                <td> <textarea type="text" id="titulo_federal_table_box" name="titulo_federal" placeholder="" required></textarea></td>
+                <td> <textarea type="text" id="aportacion_aprobada_federal_table_box" name="aportacion_aprobada_federal" placeholder="" required></textarea></td>
+                <td> <textarea type="text" id="fecha_aprobacion_federal_table_box" name="fecha_aprobacion_federal" placeholder="" required></textarea></td>
+                <td> <textarea type="text" id="aportacion_recibida_federal_table_box" name="aportacion_recibida_federal" placeholder="" required></textarea></td>
+                <td> <textarea type="text" id="fecha_recibo_federal_table_box" name="fecha_recibo_federal" placeholder="" required></textarea></td>
+                <td> <textarea type="text" id="aportacion_gastada_federal_table_box" name="aportacion_gastada_federal" placeholder="" required></textarea></td>
                 <td> <textarea type="text" id="fecha_gasto_federal_table_box" name="fecha_gasto_federal" placeholder=""> </textarea></td>
 
             </tr>
