@@ -1,0 +1,97 @@
+#logo_table {
+    width: 30px;
+    height: auto;
+}
+
+.big-box {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 10px 10px -10px rgba(131, 131, 131, 0.5);
+}
+
+
+.webleft-container {
+    padding-top: 1px;
+    font-size: 0.8em;
+    width: 400px;
+    margin-left: 50px;
+}
+
+.webright-container {
+    padding-top: 5px;
+    font-size: 0.8em;
+    width: 300px;
+    margin-left: 50px;
+
+}
+
+.webmiddle-container {
+    width: 550px;
+    margin-left: 90px;
+}
+
+#año {
+    width: 180px;
+    border: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.header, .sub-header {
+    text-align: center;
+}
+.header img {
+    width: 150px;
+}
+
+#agencia_federal_table_box, #agencia_local_table_box, #numero_cuenta_local_table_box, 
+#catalogo_local_table_box, #catalogo_federal_table_box, #titulo_federal_table_box {
+    max-height: 700px;
+    min-height: 700px;
+    min-width: 200px;
+    max-width: 200px;
+    border: none;
+}
+
+
+#sai_federal_table_box, #aportacion_aprobada_federal_table_box, #fecha_aprobacion_federal_table_box, 
+#aportacion_recibida_federal_table_box, #fecha_recibo_federal_table_box, #aportacion_gastada_federal_table_box, 
+#fecha_gasto_federal_table_box {
+    max-height: 700px;
+    min-height: 700px;
+    min-width: 50px;
+    max-width: 50px;
+    border: none;
+
+}
+
+#programa_local_table_box,  #aportacion_federal_aprobada_local_table_box, #fecha_aprobacion_local_table_box, 
+#aportacion_federal_recibida_local_table_box, #fecha_recibo_local_table_box, #aportacion_federal_gastada_local_table_box,
+#fecha_gasto_local_table_box {
+    max-height: 700px;
+    min-height: 700px;
+    min-width: 50px;
+    max-width: 50px;
+    border: none;
+}
+
+td, th {
+    max-width: 100%;
+    width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
