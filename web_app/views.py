@@ -138,7 +138,7 @@ def IP_110(request):
         sales_12 = request.POST.get('sales_12')
         sales_13 = request.POST.get('sales_13')
         incomes_rents_12 = request.POST.get('incomes_rents_12')
-        incomes_rents_12 = request.POST.get('incomes_rents_12')
+        incomes_rents_13 = request.POST.get('incomes_rents_12')
         incomes_interests_12 = request.POST.get('incomes_interests_12')
         incomes_interests_13 = request.POST.get('incomes_interests_13')
         dividends_12 = request.POST.get('dividends_12')
@@ -194,7 +194,7 @@ def IP_110(request):
                              services_revenues_12, services_revenues_13,
                              industries_businesses_12, industries_businesses_13,
                              people_12, people_13, sales_12, sales_13,
-                             incomes_rents_12, incomes_rents_12,
+                             incomes_rents_12, incomes_rents_13,
                              incomes_interests_12, incomes_interests_13,
                              dividends_12, dividends_13,
                              others_incomes_12, others_incomes_13,
