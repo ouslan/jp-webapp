@@ -60,6 +60,7 @@ main {
 .middle-container {
     line-height: 1.5;
     text-align: center;
+    margin-top: 20px;
 }
 
 .left-signature {
@@ -314,4 +315,9 @@ hr {
 
 .submit-button:hover {
     background-color: rgb(6, 122, 255);
+}
+
+#poster_JP {
+    width: 75px;
+    height: 75px;
 }
