@@ -1,0 +1,176 @@
+body {
+    overflow-x: hidden;
+}
+
+#logo_table {
+    width: 30px;
+    height: auto;
+}
+
+.big-box {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 10px 10px -10px rgba(131, 131, 131, 0.5);
+}
+
+.trimester {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.webleft-container {
+    padding-top: 1px;
+    font-size: 0.8em;
+    width: 400px;
+    text-align: left;
+}
+
+.webright-container {
+    padding-top: 5px;
+    font-size: 0.8em;
+    width: 300px;
+    margin-left: 150px;
+    text-align: right;
+}
+
+.webmiddle-container {
+    width: 550px;
+    margin-left: 90px;
+}
+
+#año {
+    width: 61px;
+}
+
+#letter-header {
+    font-size: 1.5em;
+}
+
+#middle-header {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.header, .sub-header {
+    text-align: center;
+}
+
+.header img {
+    width: 150px;
+}
+
+#agencia_federal_table_box, #agencia_local_table_box, #numero_cuenta_local_table_box, 
+#catalogo_local_table_box, #catalogo_federal_table_box, #titulo_federal_table_box {
+    max-height: 650px;
+    min-height: 650px;
+    min-width: 200px;
+    max-width: 200px;
+    border: none;
+}
+
+
+#sai_federal_table_box, #aportacion_aprobada_federal_table_box, #fecha_aprobacion_federal_table_box, 
+#aportacion_recibida_federal_table_box, #fecha_recibo_federal_table_box, #aportacion_gastada_federal_table_box, 
+#fecha_gasto_federal_table_box {
+    max-height: 650px;
+    min-height: 650px;
+    min-width: 100px;
+    max-width: 100px;
+    border: none;
+
+}
+
+#programa_local_table_box,  #aportacion_federal_aprobada_local_table_box, #fecha_aprobacion_local_table_box, 
+#aportacion_federal_recibida_local_table_box, #fecha_recibo_local_table_box, #aportacion_federal_gastada_local_table_box,
+#fecha_gasto_local_table_box {
+    max-height: 650px;
+    min-height: 650px;
+    min-width: 100px;
+    max-width: 100px;
+    border: none;
+}
+
+td, th {
+    max-width: 100%;
+    width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#left {
+    text-align: left;
+    border: none;
+    background-color: white;
+}
+
+#no-background {
+    background-color: white;
+    border: none;
+}
+
+#right {
+    text-align: right;
+    border: none;
+    background-color: white;
+}
+
+#nombre {
+    width: 360px;
+}
+#contacto {
+    width: 300px;
+}
+
+#titulo {
+    width: 300px;
+}
+
+#direccion {
+    width: 300px;
+}
+
+#telefono {
+    width: 300px;
+}
+
+.submit-button-container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.submit-button {
+    font-size: 20px;
+    width: 120px;
+    height: 35px;
+    border: 0.5px solid #5a5a5a;
+    border-radius: 30px;
+    background-color: rgb(44, 143, 255);
+}
+
+.submit-button:hover {
+    background-color: rgb(6, 122, 255);
+}
+
+#posterJp {
+    width: 50px;
+    height: 50px;
+}
