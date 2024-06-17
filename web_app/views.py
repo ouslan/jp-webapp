@@ -310,6 +310,23 @@ def IP_110(request):
 
 
 def JP_541(request):
+    if request.method == "POST":
+        # Retrieve form data
+        
+        csv_file_path = 'src/data/construcción/JP-541.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                ])
+            
+            writer.writerow([
+                             ])  
+
+        return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/construcción/JP-541.html")
 
 
