@@ -75,4 +75,50 @@ class IP_110(forms.Form):
     signature = forms.CharField(label='Nombre de persona que suministra la información - Name of person furnishing information', max_length=100)
     rank = forms.CharField(label='Rango - Title')
 
+class JP_304(forms.Form):
+    
+    MONTH_CHOICES = [
+        ('mes', 'mes'),
+        ('enero', 'enero'),
+        ('febrero', 'febrero'),
+        ('marzo', 'marzo'),
+        ('abril', 'abril'),
+        ('mayo', 'mayo'),
+        ('junio', 'junio'),
+        ('julio', 'julio'),
+        ('agosto', 'agosto'),
+        ('septiembre', 'septiembre'),
+        ('octubre', 'octubre'),
+        ('noviembre', 'noviembre'),
+        ('diciembre', 'diciembre'),
+    ]
+
+    start_month = forms.ChoiceField(choices=MONTH_CHOICES, required=True)
+    end_month = forms.ChoiceField(choices=MONTH_CHOICES, required=True)
+    year = forms.IntegerField(required=True)
+    name = forms.CharField(label='Nombre / Name', max_length=100)
+    direction = forms.CharField(label='Dirección / Address', max_length=200)
+    liaison_officer = forms.CharField(label='Persona contacto / Liaison officer', max_length=100)
+    title = forms.CharField(label='Título / Title', max_length=100)
+    tel = forms.CharField(label='Tel', max_length=20)
+    nombre_agencia_federal = forms.CharField(label='Nombre de la agencia federal / Name of federal agency', max_length=100)
+    catalogo_federal = forms.CharField(label='Número de catálogo federal / Federal catalog number', max_length=100)
+    sai_federal = forms.CharField(label='Número de SAI federal / Federal SAI number', max_length=100)
+    titulo_federal = forms.CharField(label='Título federal / Federal title', max_length=100)
+    aportacion_aprobada_federal = forms.CharField(label='Aportación aprobada federal / Federal approved contribution', max_length=100)
+    fecha_aprobacion_federal = forms.DateField(label='Fecha de aprobación federal / Federal approval date', widget=forms.SelectDateWidget)
+    aportacion_recibida_federal = forms.CharField(label='Aportación recibida federal / Federal contribution received', max_length=100)
+    fecha_recibo_federal = forms.DateField(label='Fecha de recibo federal / Federal receipt date', widget=forms.SelectDateWidget)
+    aportacion_gastada_federal = forms.CharField(label='Aportación gastada federal / Federal contribution spent', max_length=100)
+    fecha_gasto_federal = forms.DateField(label='Fecha de gasto federal / Federal spending date', widget=forms.SelectDateWidget)
+    agencia_local_table_box = forms.CharField(label='Agencia local / Local agency', max_length=100)
+    catalogo_local = forms.CharField(label='Número de catálogo local / Local catalog number', max_length=100)
+    programa_local = forms.CharField(label='Programa local / Local program', max_length=100)
+    aportacion_federal_aprobada_local = forms.CharField(label='Aportación aprobada federal local / Local federal approved contribution', max_length=100)
+    fecha_aprobacion_local = forms.DateField(label='Fecha de aprobación local / Local approval date', widget=forms.SelectDateWidget)
+    aportacion_federal_recibida_local = forms.CharField(label='Aportación recibida federal local / Local federal contribution received', max_length=100)
+    fecha_recibo_local = forms.DateField(label='Fecha de recibo federal local / Local federal receipt date', widget=forms.SelectDateWidget)
+    aportacion_federal_gastada_local = forms.CharField(label='Aportación gastada federal local / Local federal contribution spent', max_length=100)
+    fecha_gasto_local = forms.DateField(label='Fecha de gasto federal local / Local federal spending date', widget=forms.SelectDateWidget)
+    numero_cuenta_local = forms.CharField(label='Número de cuenta local / Local account number', max_length=100)
     

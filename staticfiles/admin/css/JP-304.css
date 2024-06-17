@@ -150,6 +150,19 @@ td, th {
     width: 300px;
 }
 
+.submit-button {
+    font-size: 20px;
+    width: 120px;
+    height: 35px;
+    border: 0.5px solid #5a5a5a;
+    border-radius: 30px;
+    background-color: rgb(44, 143, 255);
+}
+
+.submit-button:hover {
+    background-color: rgb(6, 122, 255);
+}
+
 #posterJp {
     width: 50px;
     height: 50px;

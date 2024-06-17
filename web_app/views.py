@@ -113,13 +113,49 @@ def indicadores(request):
 def JP_304(request):
     if request.method == "POST":
         # Retrieve form data
+        start_month = request.POST.get('start_month')
+        end_month = request.POST.get('end_month')
+        year = request.POST.get('year')
+        name = request.POST.get('name')
+        direction = request.POST.get('direction')
+        liaison_officer = request.POST.get('liaison_officer')
+        title = request.POST.get('title')
+        tel = request.POST.get('tel')
+        nombre_agencia_federal = request.POST.get('nombre_agencia_federal')
+        catalogo_federal = request.POST.get('catalogo_federal')
+        sai_federal = request.POST.get('sai_federal')
+        titulo_federal = request.POST.get('titulo_federal')
+        aportacion_aprobada_federal = request.POST.get('aportacion_aprobada_federal')
+        fecha_aprobacion_federal = request.POST.get('fecha_aprobacion_federal')
+        aportacion_recibida_federal = request.POST.get('aportacion_recibida_federal')
+        fecha_recibo_federal = request.POST.get('fecha_recibo_federal')
+        aportacion_gastada_federal = request.POST.get('aportacion_gastada_federal')
+        fecha_gasto_federal = request.POST.get('fecha_gasto_federal')
+        agencia_local_table_box = request.POST.get('agencia_local_table_box')
+        catalogo_local = request.POST.get('catalogo_local')
+        programa_local = request.POST.get('programa_local')
+        aportacion_federal_aprobada_local = request.POST.get('aportacion_federal_aprobada_local')
+        fecha_aprobacion_local = request.POST.get('fecha_aprobacion_local')
+        aportacion_federal_recibida_local = request.POST.get('aportacion_federal_recibida_local')
+        fecha_recibo_local = request.POST.get('fecha_recibo_local')
+        aportacion_federal_gastada_local = request.POST.get('aportacion_federal_gastada_local')
+        fecha_gasto_local = request.POST.get('fecha_gasto_local')
+        numero_cuenta_local = request.POST.get('numero_cuenta_local')
         
         csv_file_path = 'src/data/balanza_de_pago_data/JP-304.csv'
 
         with open(csv_file_path, mode='a', newline='') as file:
             writer = csv.writer(file)
             
-            writer.writerow([])  
+            writer.writerow([start_month, end_month, year, name,
+                             direction, liaison_officer, title, tel,
+                             nombre_agencia_federal, catalogo_federal, sai_federal,
+                             titulo_federal, aportacion_aprobada_federal, fecha_aprobacion_federal,
+                             aportacion_recibida_federal, fecha_recibo_federal, aportacion_gastada_federal,
+                             fecha_gasto_federal, agencia_local_table_box, catalogo_local, programa_local,
+                             aportacion_federal_aprobada_local, fecha_aprobacion_local, aportacion_federal_recibida_local,
+                             fecha_recibo_local, aportacion_federal_gastada_local, fecha_gasto_local, numero_cuenta_local
+                             ])  
 
         return render(request, "cuestionarios/succesfull.html")
     

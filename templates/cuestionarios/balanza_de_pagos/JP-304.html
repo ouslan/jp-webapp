@@ -56,7 +56,7 @@
             {% csrf_token %}
                 <section class="trimester">
                     Trimestre de 
-                            <select id="meses" required>
+                            <select id="meses" name="start_month" required>
                                 <option value="mes" class="active">mes</option>
                                 <option value="enero">enero</option>
                                 <option value="febrero">febrero</option>
@@ -72,7 +72,7 @@
                                 <option value="noviembre">noviembre</option>
                                 <option value="diciembre">diciembre</option>
                                 </select> a 
-                            <select id="meses" required>
+                            <select id="meses" name="end_month" required>
                                 <option value="mes" class="active">mes</option>
                                 <option value="enero">enero</option>
                                 <option value="febrero">febrero</option>
@@ -88,20 +88,20 @@
                                 <option value="noviembre">noviembre</option>
                                 <option value="diciembre">diciembre</option>
                                 </select> de 
-                                <input type="text" id="año" name="año" maxlength="4" placeholder="año / year" required>
+                                <input type="text" id="año" name="year" maxlength="4" placeholder="año / year" required>
                             </p>
                 </section>
 
                     <table>
                         <tr>
-                            <th id="left" colspan="2">Nombre de la Agencia, Corporación o Municipio: <input type="text" id="nombre" name="nombre" placeholder="Nombre de la Agencia, Corporación o Municipio" required></th>
+                            <th id="left" colspan="2">Nombre de la Agencia, Corporación o Municipio: <input type="text" id="nombre" name="name" placeholder="Nombre de la Agencia, Corporación o Municipio" required></th>
                             
-                            <th id="right">Dirección: <input type="text" id="direccion" name="dirección" placeholder="Dirección" required></th>
+                            <th id="right">Dirección: <input type="text" id="direccion" name="direction" placeholder="Dirección" required></th>
                         </tr>
                         <tr>
-                            <th id="left">Persona de Contacto: <input type="text" id="contacto" name="contacto" placeholder="Persona de Contacto" required></th>
-                            <th id="no-background">Título: <input type="text" id="titulo" name="titulo" placeholder="Título" required></th>
-                            <th id="right">Teléfono: <input type="tel" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="tel" placeholder="123-456-7890" required></th>
+                            <th id="left">Persona de Contacto: <input type="text" id="contacto" name="liaison_officer" placeholder="Persona de Contacto" required></th>
+                            <th id="no-background">Título: <input type="text" id="title" name="title" placeholder="Título" required></th>
+                            <th id="right">Teléfono: <input type="tel" id="telefono" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="tel" placeholder="123-456-7890" required></th>
 
                         </tr>
                     </table>
@@ -113,16 +113,16 @@
 
                 <table>
                     <tr>
-                        <th>1</input></th>
-                        <th>2</input></th>
-                        <th>3</input></th>
-                        <th>4</input></th>
-                        <th>5</input></th>
-                        <th>6</input></th>
-                        <th>7</input></th>
-                        <th>8</input></th>
-                        <th>9</input></th>
-                        <th>10</input></th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
                     </tr>
                     <tr>
                         <td>
@@ -160,7 +160,8 @@
                         <td>
                             <p>
                                 Fecha de<br>
-                                Aprobación
+                                Aprobación<br>
+                                (MM/DD/YYYY)
                             </p>
                         </td>
                         <td>
@@ -173,7 +174,8 @@
                         <td>
                             <p>
                                 Fecha de<br>
-                                Recibo
+                                Recibo<br>
+                                (MM/DD/YYYY)
                             </p>
                         </td>
                         <td>
@@ -186,7 +188,8 @@
                         <td>
                             <p>
                                 Fecha del<br>
-                                Gasto
+                                Gasto<br>
+                                (MM/DD/YYYY)
                             </p>
                     </tr>
                     <tr>
@@ -264,6 +267,7 @@
                             <p>
                                 Fecha de<br>
                                 Aprobación<br>
+                                (DD/MM/YYYY)
                             </p>
                         </td>
                         <td>
@@ -276,7 +280,8 @@
                         <td>
                             <p>
                                 Fecha de<br>
-                                Recibo
+                                Recibo<br>
+                                (MM/DD/YYYY)
                             </p>
                         </td>
                         <td>
@@ -289,7 +294,8 @@
                         <td>
                             <p>
                                 Fecha de<br>
-                                Gasto
+                                Gasto<br>
+                                (MM/DD/YYYY)
                             </p>
                         </td>
                         <td>
@@ -319,6 +325,10 @@
                     3- Cuando los fondos son aprobados una vez al año, indique la cantidad total aprobada para el año con su fecha correspondiente.<br>
                     4- Favor ver instrucciones en hoja aparte.
                 </p>
+
+                <section class = 'submit-button-container'>
+                    <input type="submit" value="SUBMIT" class="submit-button"></input>
+                </section>
             </form>
         </main>
     </body>
