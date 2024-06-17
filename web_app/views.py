@@ -109,6 +109,9 @@ def indicadores(request):
 def JP_304(request):
     return render(request, "cuestionarios/balanza_de_pagos/JP-304.html")
 
+def JP_361(request):
+    return render(request, "cuestionarios/balanza_de_pagos/JP-361.html")
+
 
 def IP_110(request):
     return render(request, "cuestionarios/ingreso_neto/IP-110.html")
