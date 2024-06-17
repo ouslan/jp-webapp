@@ -1,6 +1,6 @@
 from django import forms
 
-class AgricultureForm(forms.Form):
+class IP_110(forms.Form):
     company_name = forms.CharField(label='Nombre compañía / Company Name', max_length=100)
     address = forms.CharField(label='Dirección / Address', max_length=200)
     email = forms.EmailField(label='Correo electrónico / Email')
@@ -74,3 +74,5 @@ class AgricultureForm(forms.Form):
     withheld_tax_13 = forms.CharField(label='D. Impuesto sobre ventas y uso retenido - Sales and use tax Withheld'),
     signature = forms.CharField(label='Nombre de persona que suministra la información - Name of person furnishing information', max_length=100)
     rank = forms.CharField(label='Rango - Title')
+
+    

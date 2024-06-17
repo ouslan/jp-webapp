@@ -5,6 +5,7 @@ from web_app import graphics_function as gf
 import csv
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+import os
 
 def home(request):
     return render(request, "home.html")
@@ -110,6 +111,18 @@ def indicadores(request):
 
 
 def JP_304(request):
+    if request.method == "POST":
+        # Retrieve form data
+        
+        csv_file_path = 'src/data/balanza_de_pago_data/JP-304.csv'
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            writer.writerow([])  
+
+        return render(request, "cuestionarios/succesfull.html")
+    
     return render(request, "cuestionarios/balanza_de_pagos/JP-304.html")
 
 
@@ -185,10 +198,29 @@ def IP_110(request):
         rank = request.POST.get('rank')
         
         
-        csv_file_path = 'src/data/IP_110_data.csv'
+        csv_file_path = 'src/data/ingreso_neto_data/IP_110_data.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
             writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow(['company_name','address','email','liaison_officer','ssn','tel','fax',
+                                 'legal_form','cfc','business_type','business_function','branches',
+                                 'closing_date','services_revenues_12','services_revenues_13',
+                                 'industries_businesses_12','industries_businesses_13','people_12',
+                                 'people_13','sales_12','sales_13','incomes_rents_12','incomes_rents_13'
+                                 ,'incomes_interests_12','incomes_interests_13','dividends_12','dividends_13',
+                                 'others_incomes_12','others_incomes_13','total_income_12','total_income_13',
+                                 'expenses_12','expenses_13','salaries_2012','salaries_2013','expenses_interests_12'
+                                 ,'expenses_interests_13','expenses_rents_12','expenses_rents_13','depreciation_12',
+                                 'depreciation_13','bad_debts_12','bad_debts_13','donations_12','donations_13','sales_tax_12'
+                                 ,'sales_tax_13','machinery_12','machinery_13','other_purchases_12','other_purchases_13',
+                                 'licenses_12','licenses_13','other_expenses_12','other_expenses_13','total_expenses_12',
+                                 'total_expenses_13','net_profit_12','net_profit_13','income_tax_12','income_tax_13',
+                                 'profit_after_tax_12','profit_after_tax_13','withheld_tax_12','withheld_tax_13',
+                                 'signature','rank'
+                                ])
             
             writer.writerow([company_name, address, email, liaison_officer, 
                              ssn, tel, fax, legal_form, cfc, business_type,
@@ -224,6 +256,7 @@ def IP_110(request):
         return render(request, "cuestionarios/succesfull.html")
 
     return render(request, "cuestionarios/ingreso_neto/IP-110.html")
+
 
 def JP_541(request):
     return render(request, "cuestionarios/construccion/JP_541.html")
