@@ -19,3 +19,32 @@ th {
 .header img {
     width: 100px;
 }
+#signature {
+    width: 110%;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+}
+.big-box-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.left-signature {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-right: 300px;
+}
+
+.right-signature {
+    padding-top: 1px;
+    line-height: 1.5;
+}
+.middle-signature {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-right: 250px;
+    
+}
