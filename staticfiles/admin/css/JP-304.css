@@ -182,3 +182,18 @@ td, th {
     background-color: white;
     border: none;
 }
+
+#left_text {
+    text-align: left;
+    font-weight: normal;
+    background-color: white;
+    border: none;
+}
+
+#left_text_title {
+    text-align: left;
+    font-weight: normal;
+    background-color: white;
+    border: none;
+    text-decoration: underline;
+}
