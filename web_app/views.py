@@ -143,9 +143,21 @@ def JP_304(request):
         numero_cuenta_local = request.POST.get('numero_cuenta_local')
         
         csv_file_path = 'src/data/balanza_de_pago_data/JP-304.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
             writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow(['start_month', 'end_month', 'year', 'name',
+                                'direction', 'liaison_officer', 'title', 'tel',
+                                'nombre_agencia_federal', 'catalogo_federal', 'sai_federal',
+                                'titulo_federal', 'aportacion_aprobada_federal', 'fecha_aprobacion_federal',
+                                'aportacion_recibida_federal', 'fecha_recibo_federal', 'aportacion_gastada_federal',
+                                'fecha_gasto_federal', 'agencia_local_table_box', 'catalogo_local', 'programa_local',
+                                'aportacion_federal_aprobada_local', 'fecha_aprobacion_local', 'aportacion_federal_recibida_local',
+                                'fecha_recibo_local', 'aportacion_federal_gastada_local', 'fecha_gasto_local', 'numero_cuenta_local'
+                                ])
             
             writer.writerow([start_month, end_month, year, name,
                              direction, liaison_officer, title, tel,
