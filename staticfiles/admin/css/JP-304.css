@@ -150,6 +150,13 @@ td, th {
     width: 300px;
 }
 
+.submit-button-container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
 .submit-button {
     font-size: 20px;
     width: 120px;
