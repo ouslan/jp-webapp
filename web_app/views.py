@@ -310,7 +310,7 @@ def IP_110(request):
 
 
 def JP_541(request):
-    return render(request, "cuestionarios/construccion/JP_541.html")
+    return render(request, "cuestionarios/construcción/JP-541.html")
 
 
 def succesfull_page(request):
