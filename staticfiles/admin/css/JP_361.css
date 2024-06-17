@@ -48,3 +48,9 @@ th {
     margin-right: 250px;
     
 }
+.input-short {
+    width: 35%; /* Adjust this value to your liking */
+}
+.td-short {
+    width: 150px;
+}
