@@ -18,631 +18,630 @@
 </head>
 
 <!-- PAGE 1 -->
-<body>
-    <form method="POST" action="{% url 'JP-541' %}">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td colspan="2" class="header"><strong>Encuesta sobre Actividad Industria de la Construcción</strong></td>
-                <td rowspan="4" class="header"><img src="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png" alt="Logo"></td>
-                <td colspan="2" rowspan="4" class="header">
-                    <p>
-                        <label>Encuesta :</label>
-                        <input type="text" name="form_1" placeholder="Año / Year">
-                    </p>
-                    <p>Hoja 1</p>
-                    <p>
-                        <label>Año Fiscal :</label>
-                        <input type="text" name="fiscal_year_1" placeholder="Año / Year">
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="header">
-                    <p><strong>GOBIERNO DE PUERTO RICO</strong><br>
-                    <strong>JUNTA DE PLANIFICACIÓN DE PUERTO RICO</strong><br>
-                    Subprograma de Análisis Económico<br>
-                    Unidad de Estadísticas Sobre Construcción<br>
-                    Apartado 41119, San Juan, Puerto Rico 00940-1119</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Nombre de la Empresa:</label>
-                    <input type="text" name="company_name_1" placeholder="">
-                </td>
+		<body>
+			<form method="POST" action="{% url 'JP-541' %}">
+			{% csrf_token %}
+			<table>
+				<tr>
+					<td colspan="2" class="header"><strong>Encuesta sobre Actividad Industria de la Construcción</strong></td>
+					<td rowspan="4" class="header"><img src="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png" alt="Logo"></td>
+					<td colspan="2" rowspan="4" class="header">
+						<p>
+							<label>Encuesta :</label>
+							<input type="text" name="form_1" placeholder="Año / Year">
+						</p>
+						<p>Hoja 1</p>
+						<p>
+							<label>Año Fiscal :</label>
+							<input type="text" name="fiscal_year_1" placeholder="Año / Year">
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="header">
+						<p><strong>GOBIERNO DE PUERTO RICO</strong><br>
+						<strong>JUNTA DE PLANIFICACIÓN DE PUERTO RICO</strong><br>
+						Subprograma de Análisis Económico<br>
+						Unidad de Estadísticas Sobre Construcción<br>
+						Apartado 41119, San Juan, Puerto Rico 00940-1119</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+							<label>Nombre de la Empresa:</label>
+							<input type="text" name="company_name_1" placeholder="">
+					</td>
 
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                <label>Persona de Contacto:</label>
-                <input type="text" name="liaison_officer_1" placeholder="">
-                </td>
-                
-                <td>
-                <label>Teléfono:</label>
-                <input type="text" name="tel_1" placeholder="">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-                <td>
-                    <label>Proyecto por:</label>
-                    <input type="text" name="project_1" placeholder="">
-                </td>
-                <td>
-                    <input type="radio" id="radio-3" name="branches_1" value="contrato">Contrato
-                    <input type="radio" id="radio-3" name="branches_1" value="administación">Administración
-                </td>
-            </tr>
-        </table>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<label>Persona de Contacto:</label>
+						<input type="text" name="liaison_officer_1" placeholder="">
+					</td>
+					
+					<td>
+						<label>Teléfono:</label>
+						<input type="text" name="tel_1" placeholder="">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"></td>
+					<td>
+						<label>Proyecto por:</label>
+						<input type="text" name="project_1" placeholder="">
+					</td>
+					<td>
+						<input type="radio" id="radio-3" name="branches_1" value="contrato">Contrato
+						<input type="radio" id="radio-3" name="branches_1" value="administación">Administración
+					</td>
+				</tr>
+			</table>
 
-        <table>
-            <tr>
-                <th colspan="9" class="sub-header">ENCUESTA SOBRE EL VALOR DE LA INVERSION EN OBRAS DE CONSTRUCCION<br>(En miles de dólares)</th>
-            </tr>
-            <tr>
-                <th rowspan="2">Nombre del Proyecto</th>
-                <th rowspan="2">Municipio</th>
-                <th rowspan="2">Número total de proyectos</th>
-                <th rowspan="2">Costo total estimado</th>
-                <th colspan="2">Fecha</th>
-                <th colspan="4">Valor de la inversión realizada o/a realizarse</th>
-            </tr>
-            <tr>
-                <th>Comienzo</th>
-                <th>Terminación</th>
-                <th>julio a septiembre </th>
-                <th>octubre a dic. </th>
-                <th>enero a marzo </th>
-                <th>abril a junio </th>
-            </tr>
-            
-            <!-- Line 1 -->
-            <tr>
-                <td><input type="text" name="project_name_1_1" placeholder=""></td>
-                <td><input type="text" name="city_1_1" placeholder=""></td>
-                <td><input type="text" name="total_number_project_1_1" placeholder=""></td>
-                <td><input type="text" name="total_cost_1_1" placeholder=""></td>
-                <td><input type="text" name="start_date_1_1" placeholder=""></td>
-                <td><input type="text" name="end_date_1_1" placeholder=""></td>
-                <td><input type="text" name="value_first_trimester_1_1" placeholder=""></td>
-                <td><input type="text" name="value_second_trimester_1_1" placeholder=""></td>
-                <td><input type="text" name="value_third_trimester_1_1" placeholder=""></td>
-                <td><input type="text" name="value_fourth_trimester_1_1" placeholder=""></td>
-            </tr>
+			<table>
+				<tr>
+					<th colspan="9" class="sub-header">ENCUESTA SOBRE EL VALOR DE LA INVERSION EN OBRAS DE CONSTRUCCION<br>(En miles de dólares)</th>
+				</tr>
+				<tr>
+					<th rowspan="2">Nombre del Proyecto</th>
+					<th rowspan="2">Municipio</th>
+					<th rowspan="2">Número total de proyectos</th>
+					<th rowspan="2">Costo total estimado</th>
+					<th colspan="2">Fecha</th>
+					<th colspan="4">Valor de la inversión realizada o/a realizarse</th>
+				</tr>
+				<tr>
+					<th>Comienzo</th>
+					<th>Terminación</th>
+					<th>julio a septiembre </th>
+					<th>octubre a dic. </th>
+					<th>enero a marzo </th>
+					<th>abril a junio </th>
+				</tr>
+				
+				<!-- Line 1 -->
+				<tr>
+					<td><input type="text" name="project_name_1_1" placeholder=""></td>
+					<td><input type="text" name="city_1_1" placeholder=""></td>
+					<td><input type="text" name="total_number_project_1_1" placeholder=""></td>
+					<td><input type="text" name="total_cost_1_1" placeholder=""></td>
+					<td><input type="text" name="start_date_1_1" placeholder=""></td>
+					<td><input type="text" name="end_date_1_1" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_1_1" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_1_1" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_1_1" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_1_1" placeholder=""></td>
+				</tr>
 
-            <!-- Line 2 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
+				<!-- Line 2 -->
+				<tr>
+					<td><input type="text" name="project_name_1_2" placeholder=""></td>
+					<td><input type="text" name="city_1_2" placeholder=""></td>
+					<td><input type="text" name="total_number_project_1_2" placeholder=""></td>
+					<td><input type="text" name="total_cost_1_2" placeholder=""></td>
+					<td><input type="text" name="start_date_1_2" placeholder=""></td>
+					<td><input type="text" name="end_date_1_2" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_1_2" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_1_2" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_1_2" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_1_2" placeholder=""></td>
+				</tr>
 
-            <!-- Line 3 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-            
-            <!-- Line 4 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-            
-            <!-- Line 5 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-        </table>
+				<!-- Line 3 -->
+				<tr>
+					<td><input type="text" name="project_name_1_3" placeholder=""></td>
+					<td><input type="text" name="city_1_3" placeholder=""></td>
+					<td><input type="text" name="total_number_project_1_3" placeholder=""></td>
+					<td><input type="text" name="total_cost_1_3" placeholder=""></td>
+					<td><input type="text" name="start_date_1_3" placeholder=""></td>
+					<td><input type="text" name="end_date_1_3" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_1_3" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_1_3" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_1_3" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_1_3" placeholder=""></td>
+				</tr>
+				
+				<!-- Line 4 -->
+				<tr>
+					<td><input type="text" name="project_name_1_4" placeholder=""></td>
+					<td><input type="text" name="city_1_4" placeholder=""></td>
+					<td><input type="text" name="total_number_project_1_4" placeholder=""></td>
+					<td><input type="text" name="total_cost_1_4" placeholder=""></td>
+					<td><input type="text" name="start_date_1_4" placeholder=""></td>
+					<td><input type="text" name="end_date_1_4" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_1_4" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_1_4" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_1_4" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_1_4" placeholder=""></td>
+				</tr>
+				
+				<!-- Line 5 -->
+				<tr>
+					<td><input type="text" name="project_name_1_5" placeholder=""></td>
+					<td><input type="text" name="city_1_5" placeholder=""></td>
+					<td><input type="text" name="total_number_project_1_5" placeholder=""></td>
+					<td><input type="text" name="total_cost_1_5" placeholder=""></td>
+					<td><input type="text" name="start_date_1_5" placeholder=""></td>
+					<td><input type="text" name="end_date_1_5" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_1_5" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_1_5" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_1_5" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_1_5" placeholder=""></td>
+				</tr>
+			</table>
     </body>
 
     <!-- PAGE 2 -->
     <div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
     <body>
         <table>
-            <tr>
-                <td colspan="2" class="header"><strong>Encuesta sobre Actividad Industria de la Construcción</strong></td>
-                <td rowspan="4" class="header"><img src="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png" alt="Logo"></td>
-                <td colspan="2" rowspan="4" class="header">
-                    <p>
-                        <label>Encuesta :</label>
-                        <input type="text" name="services_2012" placeholder="Año / Year">
-                    </p>
-                    <p>Hoja 2</p>
-                    <p>
-                        <label>Año Fiscal :</label>
-                        <input type="text" name="services_2012" placeholder="Año / Year">
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="header">
-                    <p><strong>GOBIERNO DE PUERTO RICO</strong><br>
-                    <strong>JUNTA DE PLANIFICACIÓN DE PUERTO RICO</strong><br>
-                    Subprograma de Análisis Económico<br>
-                    Unidad de Estadísticas Sobre Construcción<br>
-                    Apartado 41119, San Juan, Puerto Rico 00940-1119</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Nombre de la Empresa:</label>
-                    <input type="text" name="services_2012" placeholder="">
-                </td>
+					<tr>
+						<td colspan="2" class="header"><strong>Encuesta sobre Actividad Industria de la Construcción</strong></td>
+						<td rowspan="4" class="header"><img src="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png" alt="Logo"></td>
+						<td colspan="2" rowspan="4" class="header">
+							<p>
+								<label>Encuesta :</label>
+								<input type="text" name="form_2" placeholder="Año / Year">
+							</p>
+							<p>Hoja 2</p>
+							<p>
+								<label>Año Fiscal :</label>
+								<input type="text" name="fiscal_year_2" placeholder="Año / Year">
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="header">
+							<p><strong>GOBIERNO DE PUERTO RICO</strong><br>
+							<strong>JUNTA DE PLANIFICACIÓN DE PUERTO RICO</strong><br>
+							Subprograma de Análisis Económico<br>
+							Unidad de Estadísticas Sobre Construcción<br>
+							Apartado 41119, San Juan, Puerto Rico 00940-1119</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Nombre de la Empresa:</label>
+							<input type="text" name="company_name_2" placeholder="">
+						</td>
 
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                <label>Persona de Contacto:</label>
-                <input type="text" name="services_2012" placeholder="">
-                </td>
-                
-                <td>
-                <label>Teléfono:</label>
-                <input type="text" name="services_2012" placeholder="">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-                <td>
-                    <label>Proyecto por:</label>
-                    <input type="text" name="services_2012" placeholder="">
-                </td>
-                <td>
-                    <input type="radio" id="radio-3" name="branches" value="Si">Contrato
-                    <input type="radio" id="radio-3" name="branches" value="No">Administración
-                </td>
-            </tr>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<label>Persona de Contacto:</label>
+							<input type="text" name="liaison_officer_2" placeholder="">
+						</td>
+						
+						<td>
+							<label>Teléfono:</label>
+							<input type="text" name="tel_2" placeholder="">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3"></td>
+						<td>
+							<label>Proyecto por:</label>
+							<input type="text" name="project_2" placeholder="">
+						</td>
+						<td>
+							<input type="radio" id="radio-3" name="branches_2" value="contrato">Contrato
+							<input type="radio" id="radio-3" name="branches_2" value="administación">Administración
+						</td>
+					</tr>
         </table>
 
-        <table>
-            <tr>
-                <th colspan="9" class="sub-header">ENCUESTA SOBRE EL VALOR DE LA INVERSION EN OBRAS DE CONSTRUCCION<br>(En miles de dólares)</th>
-            </tr>
-            <tr>
-                <th rowspan="2">Nombre del Proyecto</th>
-                <th rowspan="2">Municipio</th>
-                <th rowspan="2">Número total de proyectos</th>
-                <th rowspan="2">Costo total estimado</th>
-                <th colspan="2">Fecha</th>
-                <th colspan="4">Valor de la inversión realizada o/a realizarse</th>
-            </tr>
-            <tr>
-                <th>Comienzo</th>
-                <th>Terminación</th>
-                <th>julio a septiembre </th>
-                <th>octubre a dic. </th>
-                <th>enero a marzo </th>
-                <th>abril a junio </th>
-            </tr>
-            
-            <!-- Line 1 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
+			<table>
+				<tr>
+					<th colspan="9" class="sub-header">ENCUESTA SOBRE EL VALOR DE LA INVERSION EN OBRAS DE CONSTRUCCION<br>(En miles de dólares)</th>
+				</tr>
+				<tr>
+					<th rowspan="2">Nombre del Proyecto</th>
+					<th rowspan="2">Municipio</th>
+					<th rowspan="2">Número total de proyectos</th>
+					<th rowspan="2">Costo total estimado</th>
+					<th colspan="2">Fecha</th>
+					<th colspan="4">Valor de la inversión realizada o/a realizarse</th>
+				</tr>
+				<tr>
+					<th>Comienzo</th>
+					<th>Terminación</th>
+					<th>julio a septiembre </th>
+					<th>octubre a dic. </th>
+					<th>enero a marzo </th>
+					<th>abril a junio </th>
+				</tr>
+				
+				<!-- Line 1 -->
+				<tr>
+					<td><input type="text" name="project_name_2_1" placeholder=""></td>
+					<td><input type="text" name="city_2_1" placeholder=""></td>
+					<td><input type="text" name="total_number_project_2_1" placeholder=""></td>
+					<td><input type="text" name="total_cost_2_1" placeholder=""></td>
+					<td><input type="text" name="start_date_2_1" placeholder=""></td>
+					<td><input type="text" name="end_date_2_1" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_2_1" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_2_1" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_2_1" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_2_1" placeholder=""></td>
+				</tr>
 
-            <!-- Line 2 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
+				<!-- Line 2 -->
+				<tr>
+					<td><input type="text" name="project_name_2_2" placeholder=""></td>
+					<td><input type="text" name="city_2_2" placeholder=""></td>
+					<td><input type="text" name="total_number_project_2_2" placeholder=""></td>
+					<td><input type="text" name="total_cost_2_2" placeholder=""></td>
+					<td><input type="text" name="start_date_2_2" placeholder=""></td>
+					<td><input type="text" name="end_date_2_2" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_2_2" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_2_2" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_2_2" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_2_2" placeholder=""></td>
+				</tr>
 
-            <!-- Line 3 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-            
-            <!-- Line 4 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-            
-            <!-- Line 5 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-        </table>
+				<!-- Line 3 -->
+				<tr>
+					<td><input type="text" name="project_name_2_3" placeholder=""></td>
+					<td><input type="text" name="city_2_3" placeholder=""></td>
+					<td><input type="text" name="total_number_project_2_3" placeholder=""></td>
+					<td><input type="text" name="total_cost_2_3" placeholder=""></td>
+					<td><input type="text" name="start_date_2_3" placeholder=""></td>
+					<td><input type="text" name="end_date_2_3" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_2_3" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_2_3" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_2_3" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_2_3" placeholder=""></td>
+				</tr>
+				
+				<!-- Line 4 -->
+				<tr>
+					<td><input type="text" name="project_name_2_4" placeholder=""></td>
+					<td><input type="text" name="city_2_4" placeholder=""></td>
+					<td><input type="text" name="total_number_project_2_4" placeholder=""></td>
+					<td><input type="text" name="total_cost_2_4" placeholder=""></td>
+					<td><input type="text" name="start_date_2_4" placeholder=""></td>
+					<td><input type="text" name="end_date_2_4" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_2_4" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_2_4" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_2_4" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_2_4" placeholder=""></td>
+				</tr>
+				
+				<!-- Line 5 -->
+				<tr>
+					<td><input type="text" name="project_name_2_5" placeholder=""></td>
+					<td><input type="text" name="city_2_5" placeholder=""></td>
+					<td><input type="text" name="total_number_project_2_5" placeholder=""></td>
+					<td><input type="text" name="total_cost_2_5" placeholder=""></td>
+					<td><input type="text" name="start_date_2_5" placeholder=""></td>
+					<td><input type="text" name="end_date_2_5" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_2_5" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_2_5" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_2_5" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_2_5" placeholder=""></td>
+				</tr>
+			</table>
     </body>
 
     <!-- PAGE 3 -->
     <div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
     <body>
-        <table>
-            <tr>
-                <td colspan="2" class="header"><strong>Encuesta sobre Actividad Industria de la Construcción</strong></td>
-                <td rowspan="4" class="header"><img src="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png" alt="Logo"></td>
-                <td colspan="2" rowspan="4" class="header">
-                    <p>
-                        <label>Encuesta :</label>
-                        <input type="text" name="services_2012" placeholder="Año / Year">
-                    </p>
-                    <p>Hoja 3</p>
-                    <p>
-                        <label>Año Fiscal :</label>
-                        <input type="text" name="services_2012" placeholder="Año / Year">
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="header">
-                    <p><strong>GOBIERNO DE PUERTO RICO</strong><br>
-                    <strong>JUNTA DE PLANIFICACIÓN DE PUERTO RICO</strong><br>
-                    Subprograma de Análisis Económico<br>
-                    Unidad de Estadísticas Sobre Construcción<br>
-                    Apartado 41119, San Juan, Puerto Rico 00940-1119</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Nombre de la Empresa:</label>
-                    <input type="text" name="services_2012" placeholder="">
-                </td>
+			<table>
+				<tr>
+					<td colspan="2" class="header"><strong>Encuesta sobre Actividad Industria de la Construcción</strong></td>
+					<td rowspan="4" class="header"><img src="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png" alt="Logo"></td>
+					<td colspan="2" rowspan="4" class="header">
+						<p>
+							<label>Encuesta :</label>
+							<input type="text" name="form_3" placeholder="Año / Year">
+						</p>
+						<p>Hoja 3</p>
+						<p>
+							<label>Año Fiscal :</label>
+							<input type="text" name="fiscal_year_3" placeholder="Año / Year">
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="header">
+						<p><strong>GOBIERNO DE PUERTO RICO</strong><br>
+						<strong>JUNTA DE PLANIFICACIÓN DE PUERTO RICO</strong><br>
+						Subprograma de Análisis Económico<br>
+						Unidad de Estadísticas Sobre Construcción<br>
+						Apartado 41119, San Juan, Puerto Rico 00940-1119</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Nombre de la Empresa:</label>
+						<input type="text" name="company_name_3" placeholder="">
+					</td>
 
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                <label>Persona de Contacto:</label>
-                <input type="text" name="services_2012" placeholder="">
-                </td>
-                
-                <td>
-                <label>Teléfono:</label>
-                <input type="text" name="services_2012" placeholder="">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-                <td>
-                    <label>Proyecto por:</label>
-                    <input type="text" name="services_2012" placeholder="">
-                </td>
-                <td>
-                    <input type="radio" id="radio-3" name="branches" value="Si">Contrato
-                    <input type="radio" id="radio-3" name="branches" value="No">Administración
-                </td>
-            </tr>
-        </table>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<label>Persona de Contacto:</label>
+						<input type="text" name="liaison_officer_3" placeholder="">
+					</td>
+					
+					<td>
+						<label>Teléfono:</label>
+						<input type="text" name="tel_3" placeholder="">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"></td>
+					<td>
+						<label>Proyecto por:</label>
+						<input type="text" name="project_3" placeholder="">
+					</td>
+					<td>
+						<input type="radio" id="radio-3" name="branches_3" value="Si">Contrato
+						<input type="radio" id="radio-3" name="branches_3" value="No">Administración
+					</td>
+				</tr>
+			</table>
 
-        <table>
-            <tr>
-                <th colspan="9" class="sub-header">ENCUESTA SOBRE EL VALOR DE LA INVERSION EN OBRAS DE CONSTRUCCION<br>(En miles de dólares)</th>
-            </tr>
-            <tr>
-                <th rowspan="2">Nombre del Proyecto</th>
-                <th rowspan="2">Municipio</th>
-                <th rowspan="2">Número total de proyectos</th>
-                <th rowspan="2">Costo total estimado</th>
-                <th colspan="2">Fecha</th>
-                <th colspan="4">Valor de la inversión realizada o/a realizarse</th>
-            </tr>
-            <tr>
-                <th>Comienzo</th>
-                <th>Terminación</th>
-                <th>julio a septiembre </th>
-                <th>octubre a dic. </th>
-                <th>enero a marzo </th>
-                <th>abril a junio </th>
-            </tr>
-            
-            <!-- Line 1 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
+			<table>
+				<tr>
+					<th colspan="9" class="sub-header">ENCUESTA SOBRE EL VALOR DE LA INVERSION EN OBRAS DE CONSTRUCCION<br>(En miles de dólares)</th>
+				</tr>
+				<tr>
+					<th rowspan="2">Nombre del Proyecto</th>
+					<th rowspan="2">Municipio</th>
+					<th rowspan="2">Número total de proyectos</th>
+					<th rowspan="2">Costo total estimado</th>
+					<th colspan="2">Fecha</th>
+					<th colspan="4">Valor de la inversión realizada o/a realizarse</th>
+				</tr>
+				<tr>
+					<th>Comienzo</th>
+					<th>Terminación</th>
+					<th>julio a septiembre </th>
+					<th>octubre a dic. </th>
+					<th>enero a marzo </th>
+					<th>abril a junio </th>
+				</tr>
+				
+				<!-- Line 1 -->
+				<tr>
+					<td><input type="text" name="project_name_3_1" placeholder=""></td>
+					<td><input type="text" name="city_3_1" placeholder=""></td>
+					<td><input type="text" name="total_number_project_3_1" placeholder=""></td>
+					<td><input type="text" name="total_cost_3_1" placeholder=""></td>
+					<td><input type="text" name="start_date_3_1" placeholder=""></td>
+					<td><input type="text" name="end_date_3_1" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_3_1" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_3_1" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_3_1" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_3_1" placeholder=""></td>
+				</tr>
 
-            <!-- Line 2 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
+				<!-- Line 2 -->
+				<tr>
+					<td><input type="text" name="project_name_3_2" placeholder=""></td>
+					<td><input type="text" name="city_3_2" placeholder=""></td>
+					<td><input type="text" name="total_number_project_3_2" placeholder=""></td>
+					<td><input type="text" name="total_cost_3_2" placeholder=""></td>
+					<td><input type="text" name="start_date_3_2" placeholder=""></td>
+					<td><input type="text" name="end_date_3_2" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_3_2" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_3_2" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_3_2" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_3_2" placeholder=""></td>
+				</tr>
 
-            <!-- Line 3 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-            
-            <!-- Line 4 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-            
-            <!-- Line 5 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-        </table>
+				<!-- Line 3 -->
+				<tr>
+					<td><input type="text" name="project_name_3_3" placeholder=""></td>
+					<td><input type="text" name="city_3_3" placeholder=""></td>
+					<td><input type="text" name="total_number_project_3_3" placeholder=""></td>
+					<td><input type="text" name="total_cost_3_3" placeholder=""></td>
+					<td><input type="text" name="start_date_3_3" placeholder=""></td>
+					<td><input type="text" name="end_date_3_3" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_3_3" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_3_3" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_3_3" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_3_3" placeholder=""></td>
+				</tr>
+				
+				<!-- Line 4 -->
+				<tr>
+					<td><input type="text" name="project_name_3_4" placeholder=""></td>
+					<td><input type="text" name="city_3_4" placeholder=""></td>
+					<td><input type="text" name="total_number_project_3_4" placeholder=""></td>
+					<td><input type="text" name="total_cost_3_4" placeholder=""></td>
+					<td><input type="text" name="start_date_3_4" placeholder=""></td>
+					<td><input type="text" name="end_date_3_4" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_3_4" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_3_4" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_3_4" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_3_4" placeholder=""></td>
+				</tr>
+				
+				<!-- Line 5 -->
+				<tr>
+					<td><input type="text" name="project_name_3_5" placeholder=""></td>
+					<td><input type="text" name="city_3_5" placeholder=""></td>
+					<td><input type="text" name="total_number_project_3_5" placeholder=""></td>
+					<td><input type="text" name="total_cost_3_5" placeholder=""></td>
+					<td><input type="text" name="start_date_3_5" placeholder=""></td>
+					<td><input type="text" name="end_date_3_5" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_3_5" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_3_5" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_3_5" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_3_5" placeholder=""></td>
+				</tr>
+			</table>
     </body>
 
 
     <!-- PAGE 4 -->
     <div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
     <body>
-        <table>
-            <tr>
-                <td colspan="2" class="header"><strong>Encuesta sobre Actividad Industria de la Construcción</strong></td>
-                <td rowspan="4" class="header"><img src="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png" alt="Logo"></td>
-                <td colspan="2" rowspan="4" class="header">
-                    <p>
-                        <label>Encuesta :</label>
-                        <input type="text" name="services_2012" placeholder="Año / Year">
-                    </p>
-                    <p>Hoja 4</p>
-                    <p>
-                        <label>Año Fiscal :</label>
-                        <input type="text" name="services_2012" placeholder="Año / Year">
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="header">
-                    <p><strong>GOBIERNO DE PUERTO RICO</strong><br>
-                    <strong>JUNTA DE PLANIFICACIÓN DE PUERTO RICO</strong><br>
-                    Subprograma de Análisis Económico<br>
-                    Unidad de Estadísticas Sobre Construcción<br>
-                    Apartado 41119, San Juan, Puerto Rico 00940-1119</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Nombre de la Empresa:</label>
-                    <input type="text" name="services_2012" placeholder="">
-                </td>
+			<table>
+				<tr>
+					<td colspan="2" class="header"><strong>Encuesta sobre Actividad Industria de la Construcción</strong></td>
+					<td rowspan="4" class="header"><img src="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png" alt="Logo"></td>
+					<td colspan="2" rowspan="4" class="header">
+						<p>
+							<label>Encuesta :</label>
+							<input type="text" name="form_4" placeholder="Año / Year">
+						</p>
+						<p>Hoja 4</p>
+						<p>
+							<label>Año Fiscal :</label>
+							<input type="text" name="fiscal_year_4" placeholder="Año / Year">
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="header">
+						<p><strong>GOBIERNO DE PUERTO RICO</strong><br>
+						<strong>JUNTA DE PLANIFICACIÓN DE PUERTO RICO</strong><br>
+						Subprograma de Análisis Económico<br>
+						Unidad de Estadísticas Sobre Construcción<br>
+						Apartado 41119, San Juan, Puerto Rico 00940-1119</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Nombre de la Empresa:</label>
+						<input type="text" name="company_name_4" placeholder="">
+					</td>
 
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                <label>Persona de Contacto:</label>
-                <input type="text" name="services_2012" placeholder="">
-                </td>
-                
-                <td>
-                <label>Teléfono:</label>
-                <input type="text" name="services_2012" placeholder="">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-                <td>
-                    <label>Proyecto por:</label>
-                    <input type="text" name="services_2012" placeholder="">
-                </td>
-                <td>
-                    <input type="radio" id="radio-3" name="branches" value="Si">Contrato
-                    <input type="radio" id="radio-3" name="branches" value="No">Administración
-                </td>
-            </tr>
-        </table>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<label>Persona de Contacto:</label>
+						<input type="text" name="liaison_officer_4" placeholder="">
+					</td>
+					<td>
+						<label>Teléfono:</label>
+						<input type="text" name="services_2012" placeholder="">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"></td>
+					<td>
+						<label>Proyecto por:</label>
+						<input type="text" name="project_4" placeholder="">
+					</td>
+					<td>
+						<input type="radio" id="radio-3" name="branches_4" value="Si">Contrato
+						<input type="radio" id="radio-3" name="branches_4" value="No">Administración
+					</td>
+				</tr>
+			</table>
 
-        <table>
-            <tr>
-                <th colspan="9" class="sub-header">ENCUESTA SOBRE EL VALOR DE LA INVERSION EN OBRAS DE CONSTRUCCION<br>(En miles de dólares)</th>
-            </tr>
-            <tr>
-                <th rowspan="2">Nombre del Proyecto</th>
-                <th rowspan="2">Municipio</th>
-                <th rowspan="2">Número total de proyectos</th>
-                <th rowspan="2">Costo total estimado</th>
-                <th colspan="2">Fecha</th>
-                <th colspan="4">Valor de la inversión realizada o/a realizarse</th>
-            </tr>
-            <tr>
-                <th>Comienzo</th>
-                <th>Terminación</th>
-                <th>julio a septiembre </th>
-                <th>octubre a dic. </th>
-                <th>enero a marzo </th>
-                <th>abril a junio </th>
-            </tr>
-            
-            <!-- Line 1 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
+			<table>
+				<tr>
+					<th colspan="9" class="sub-header">ENCUESTA SOBRE EL VALOR DE LA INVERSION EN OBRAS DE CONSTRUCCION<br>(En miles de dólares)</th>
+				</tr>
+				<tr>
+					<th rowspan="2">Nombre del Proyecto</th>
+					<th rowspan="2">Municipio</th>
+					<th rowspan="2">Número total de proyectos</th>
+					<th rowspan="2">Costo total estimado</th>
+					<th colspan="2">Fecha</th>
+					<th colspan="4">Valor de la inversión realizada o/a realizarse</th>
+				</tr>
+				<tr>
+					<th>Comienzo</th>
+					<th>Terminación</th>
+					<th>julio a septiembre </th>
+					<th>octubre a dic. </th>
+					<th>enero a marzo </th>
+					<th>abril a junio </th>
+				</tr>
+					
+				<!-- Line 1 -->
+				<tr>
+					<td><input type="text" name="project_name_4_1" placeholder=""></td>
+					<td><input type="text" name="city_4_1" placeholder=""></td>
+					<td><input type="text" name="total_number_project_4_1" placeholder=""></td>
+					<td><input type="text" name="total_cost_4_1" placeholder=""></td>
+					<td><input type="text" name="start_date_4_1" placeholder=""></td>
+					<td><input type="text" name="end_date_4_1" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_4_1" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_4_1" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_4_1" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_4_1" placeholder=""></td>
+				</tr>
 
-            <!-- Line 2 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
+				<!-- Line 2 -->
+				<tr>
+					<td><input type="text" name="project_name_4_2" placeholder=""></td>
+					<td><input type="text" name="city_4_2" placeholder=""></td>
+					<td><input type="text" name="total_number_project_4_2" placeholder=""></td>
+					<td><input type="text" name="total_cost_4_2" placeholder=""></td>
+					<td><input type="text" name="start_date_4_2" placeholder=""></td>
+					<td><input type="text" name="end_date_4_2" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_4_2" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_4_2" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_4_2" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_4_2" placeholder=""></td>
+				</tr>
 
-            <!-- Line 3 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-            
-            <!-- Line 4 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-            
-            <!-- Line 5 -->
-            <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-            </tr>
-        </table>
+				<!-- Line 3 -->
+				<tr>
+					<td><input type="text" name="project_name_4_3" placeholder=""></td>
+					<td><input type="text" name="city_4_3" placeholder=""></td>
+					<td><input type="text" name="total_number_project_4_3" placeholder=""></td>
+					<td><input type="text" name="total_cost_4_3" placeholder=""></td>
+					<td><input type="text" name="start_date_4_3" placeholder=""></td>
+					<td><input type="text" name="end_date_4_3" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_4_3" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_4_3" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_4_3" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_4_3" placeholder=""></td>
+				</tr>
+				
+				<!-- Line 4 -->
+				<tr>
+					<td><input type="text" name="project_name_4_4" placeholder=""></td>
+					<td><input type="text" name="city_4_4" placeholder=""></td>
+					<td><input type="text" name="total_number_project_4_4" placeholder=""></td>
+					<td><input type="text" name="total_cost_4_4" placeholder=""></td>
+					<td><input type="text" name="start_date_4_4" placeholder=""></td>
+					<td><input type="text" name="end_date_4_4" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_4_4" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_4_4" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_4_4" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_4_4" placeholder=""></td>
+				</tr>
+					
+				<!-- Line 5 -->
+				<tr>
+					<td><input type="text" name="project_name_4_5" placeholder=""></td>
+					<td><input type="text" name="city_4_5" placeholder=""></td>
+					<td><input type="text" name="total_number_project_4_5" placeholder=""></td>
+					<td><input type="text" name="total_cost_4_5" placeholder=""></td>
+					<td><input type="text" name="start_date_4_5" placeholder=""></td>
+					<td><input type="text" name="end_date_4_5" placeholder=""></td>
+					<td><input type="text" name="value_first_trimester_4_5" placeholder=""></td>
+					<td><input type="text" name="value_second_trimester_4_5" placeholder=""></td>
+					<td><input type="text" name="value_third_trimester_4_5" placeholder=""></td>
+					<td><input type="text" name="value_fourth_trimester_4_5" placeholder=""></td>
+				</tr>
+			</table>
         
-        <section class = 'submit-button-container'>
-            <input type="submit" value="SUBMIT" class="submit-button"></input>
-        </section>
+			<section class = 'submit-button-container'>
+					<input type="submit" value="SUBMIT" class="submit-button"></input>
+			</section>
     </form>
-</body>
+	</body>
 </html>
 
