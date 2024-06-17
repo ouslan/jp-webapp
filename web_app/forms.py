@@ -74,9 +74,9 @@ class IP_110(forms.Form):
     withheld_tax_13 = forms.CharField(label='D. Impuesto sobre ventas y uso retenido - Sales and use tax Withheld'),
     signature = forms.CharField(label='Nombre de persona que suministra la información - Name of person furnishing information', max_length=100)
     rank = forms.CharField(label='Rango - Title')
+    
 
 class JP_304(forms.Form):
-    
     MONTH_CHOICES = [
         ('mes', 'mes'),
         ('enero', 'enero'),
@@ -121,4 +121,6 @@ class JP_304(forms.Form):
     aportacion_federal_gastada_local = forms.CharField(label='Aportación gastada federal local / Local federal contribution spent', max_length=100)
     fecha_gasto_local = forms.DateField(label='Fecha de gasto federal local / Local federal spending date', widget=forms.SelectDateWidget)
     numero_cuenta_local = forms.CharField(label='Número de cuenta local / Local account number', max_length=100)
-    
+
+
+class JP_541(forms.Form):
