@@ -28,12 +28,12 @@
 					<td colspan="2" rowspan="4" class="header">
 						<p>
 							<label>Encuesta :</label>
-							<input type="text" name="form_1" placeholder="Año / Year">
+							<input type="text" name="form_1" required minlength="4" maxlength="4" size="10" placeholder="Año / Year">
 						</p>
 						<p>Hoja 1</p>
 						<p>
 							<label>Año Fiscal :</label>
-							<input type="text" name="fiscal_year_1" placeholder="Año / Year">
+							<input type="text" name="fiscal_year_1" required minlength="4" maxlength="4" size="10" placeholder="Año / Year">
 						</p>
 					</td>
 				</tr>
@@ -49,7 +49,7 @@
 				<tr>
 					<td>
 							<label>Nombre de la Empresa:</label>
-							<input type="text" name="company_name_1" placeholder="">
+							<input type="text" name="company_name_1" placeholder="Company Name">
 					</td>
 
 					<td></td>
@@ -57,12 +57,12 @@
 				<tr>
 					<td>
 						<label>Persona de Contacto:</label>
-						<input type="text" name="liaison_officer_1" placeholder="">
+						<input type="text" name="liaison_officer_1" placeholder="Liaison Officer Name">
 					</td>
 					
 					<td>
 						<label>Teléfono:</label>
-						<input type="text" name="tel_1" placeholder="">
+						<input type="text" name="tel_1" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" required placeholder="123-456-7890">
 					</td>
 				</tr>
 				<tr>
@@ -101,72 +101,72 @@
 				
 				<!-- Line 1 -->
 				<tr>
-					<td><input type="text" name="project_name_1_1" placeholder=""></td>
-					<td><input type="text" name="city_1_1" placeholder=""></td>
+					<td><input type="text" name="project_name_1_1" placeholder="Project Name"></td>
+					<td><input type="text" name="city_1_1" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_1_1" placeholder=""></td>
-					<td><input type="text" name="total_cost_1_1" placeholder=""></td>
-					<td><input type="text" name="start_date_1_1" placeholder=""></td>
-					<td><input type="text" name="end_date_1_1" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_1_1" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_1_1" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_1_1" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_1_1" placeholder=""></td>
+					<td><input type="text" name="total_cost_1_1" placeholder="$"></td>
+					<td><input type="text" name="start_date_1_1" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_1_1" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_1_1" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_1_1" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_1_1" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_1_1" placeholder="$"></td>
 				</tr>
 
 				<!-- Line 2 -->
 				<tr>
-					<td><input type="text" name="project_name_1_2" placeholder=""></td>
-					<td><input type="text" name="city_1_2" placeholder=""></td>
+					<td><input type="text" name="project_name_1_2" placeholder="Project Name"></td>
+					<td><input type="text" name="city_1_2" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_1_2" placeholder=""></td>
-					<td><input type="text" name="total_cost_1_2" placeholder=""></td>
-					<td><input type="text" name="start_date_1_2" placeholder=""></td>
-					<td><input type="text" name="end_date_1_2" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_1_2" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_1_2" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_1_2" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_1_2" placeholder=""></td>
+					<td><input type="text" name="total_cost_1_2" placeholder="$"></td>
+					<td><input type="text" name="start_date_1_2" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_1_2" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_1_2" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_1_2" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_1_2" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_1_2" placeholder="$"></td>
 				</tr>
 
 				<!-- Line 3 -->
 				<tr>
-					<td><input type="text" name="project_name_1_3" placeholder=""></td>
-					<td><input type="text" name="city_1_3" placeholder=""></td>
+					<td><input type="text" name="project_name_1_3" placeholder="Project Name"></td>
+					<td><input type="text" name="city_1_3" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_1_3" placeholder=""></td>
-					<td><input type="text" name="total_cost_1_3" placeholder=""></td>
-					<td><input type="text" name="start_date_1_3" placeholder=""></td>
-					<td><input type="text" name="end_date_1_3" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_1_3" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_1_3" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_1_3" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_1_3" placeholder=""></td>
+					<td><input type="text" name="total_cost_1_3" placeholder="$"></td>
+					<td><input type="text" name="start_date_1_3" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_1_3" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_1_3" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_1_3" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_1_3" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_1_3" placeholder="$"></td>
 				</tr>
 				
 				<!-- Line 4 -->
 				<tr>
-					<td><input type="text" name="project_name_1_4" placeholder=""></td>
-					<td><input type="text" name="city_1_4" placeholder=""></td>
+					<td><input type="text" name="project_name_1_4" placeholder="Project Name"></td>
+					<td><input type="text" name="city_1_4" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_1_4" placeholder=""></td>
-					<td><input type="text" name="total_cost_1_4" placeholder=""></td>
-					<td><input type="text" name="start_date_1_4" placeholder=""></td>
-					<td><input type="text" name="end_date_1_4" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_1_4" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_1_4" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_1_4" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_1_4" placeholder=""></td>
+					<td><input type="text" name="total_cost_1_4" placeholder="$"></td>
+					<td><input type="text" name="start_date_1_4" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_1_4" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_1_4" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_1_4" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_1_4" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_1_4" placeholder="$"></td>
 				</tr>
 				
 				<!-- Line 5 -->
 				<tr>
-					<td><input type="text" name="project_name_1_5" placeholder=""></td>
-					<td><input type="text" name="city_1_5" placeholder=""></td>
+					<td><input type="text" name="project_name_1_5" placeholder="Project Name"></td>
+					<td><input type="text" name="city_1_5" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_1_5" placeholder=""></td>
-					<td><input type="text" name="total_cost_1_5" placeholder=""></td>
-					<td><input type="text" name="start_date_1_5" placeholder=""></td>
-					<td><input type="text" name="end_date_1_5" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_1_5" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_1_5" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_1_5" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_1_5" placeholder=""></td>
+					<td><input type="text" name="total_cost_1_5" placeholder="$"></td>
+					<td><input type="text" name="start_date_1_5" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_1_5" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_1_5" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_1_5" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_1_5" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_1_5" placeholder="$"></td>
 				</tr>
 			</table>
     </body>
@@ -184,12 +184,12 @@
 						<td colspan="2" rowspan="4" class="header">
 							<p>
 								<label>Encuesta :</label>
-								<input type="text" name="form_2" placeholder="Año / Year">
+								<input type="text" name="form_2" required minlength="4" maxlength="4" size="10" placeholder="Año / Year">
 							</p>
 							<p>Hoja 2</p>
 							<p>
 								<label>Año Fiscal :</label>
-								<input type="text" name="fiscal_year_2" placeholder="Año / Year">
+								<input type="text" name="fiscal_year_2" required minlength="4" maxlength="4" size="10" placeholder="Año / Year">
 							</p>
 						</td>
 					</tr>
@@ -205,7 +205,7 @@
 					<tr>
 						<td>
 							<label>Nombre de la Empresa:</label>
-							<input type="text" name="company_name_2" placeholder="">
+							<input type="text" name="company_name_2" placeholder="Company Name">
 						</td>
 
 						<td></td>
@@ -213,12 +213,12 @@
 					<tr>
 						<td>
 							<label>Persona de Contacto:</label>
-							<input type="text" name="liaison_officer_2" placeholder="">
+							<input type="text" name="liaison_officer_2" placeholder="Liaison Officer Name">
 						</td>
 						
 						<td>
 							<label>Teléfono:</label>
-							<input type="text" name="tel_2" placeholder="">
+							<input type="text" name="tel_2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" required placeholder="123-456-7890">
 						</td>
 					</tr>
 					<tr>
@@ -257,72 +257,72 @@
 				
 				<!-- Line 1 -->
 				<tr>
-					<td><input type="text" name="project_name_2_1" placeholder=""></td>
-					<td><input type="text" name="city_2_1" placeholder=""></td>
+					<td><input type="text" name="project_name_2_1" placeholder="Project Name"></td>
+					<td><input type="text" name="city_2_1" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_2_1" placeholder=""></td>
-					<td><input type="text" name="total_cost_2_1" placeholder=""></td>
-					<td><input type="text" name="start_date_2_1" placeholder=""></td>
-					<td><input type="text" name="end_date_2_1" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_2_1" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_2_1" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_2_1" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_2_1" placeholder=""></td>
+					<td><input type="text" name="total_cost_2_1" placeholder="$"></td>
+					<td><input type="text" name="start_date_2_1" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_2_1" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_2_1" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_2_1" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_2_1" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_2_1" placeholder="$"></td>
 				</tr>
 
 				<!-- Line 2 -->
 				<tr>
-					<td><input type="text" name="project_name_2_2" placeholder=""></td>
-					<td><input type="text" name="city_2_2" placeholder=""></td>
+					<td><input type="text" name="project_name_2_2" placeholder="Project Name"></td>
+					<td><input type="text" name="city_2_2" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_2_2" placeholder=""></td>
-					<td><input type="text" name="total_cost_2_2" placeholder=""></td>
-					<td><input type="text" name="start_date_2_2" placeholder=""></td>
-					<td><input type="text" name="end_date_2_2" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_2_2" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_2_2" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_2_2" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_2_2" placeholder=""></td>
+					<td><input type="text" name="total_cost_2_2" placeholder="$"></td>
+					<td><input type="text" name="start_date_2_2" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_2_2" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_2_2" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_2_2" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_2_2" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_2_2" placeholder="$"></td>
 				</tr>
 
 				<!-- Line 3 -->
 				<tr>
-					<td><input type="text" name="project_name_2_3" placeholder=""></td>
-					<td><input type="text" name="city_2_3" placeholder=""></td>
+					<td><input type="text" name="project_name_2_3" placeholder="Project Name"></td>
+					<td><input type="text" name="city_2_3" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_2_3" placeholder=""></td>
-					<td><input type="text" name="total_cost_2_3" placeholder=""></td>
-					<td><input type="text" name="start_date_2_3" placeholder=""></td>
-					<td><input type="text" name="end_date_2_3" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_2_3" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_2_3" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_2_3" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_2_3" placeholder=""></td>
+					<td><input type="text" name="total_cost_2_3" placeholder="$"></td>
+					<td><input type="text" name="start_date_2_3" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_2_3" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_2_3" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_2_3" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_2_3" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_2_3" placeholder="$"></td>
 				</tr>
 				
 				<!-- Line 4 -->
 				<tr>
-					<td><input type="text" name="project_name_2_4" placeholder=""></td>
-					<td><input type="text" name="city_2_4" placeholder=""></td>
+					<td><input type="text" name="project_name_2_4" placeholder="Project Name"></td>
+					<td><input type="text" name="city_2_4" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_2_4" placeholder=""></td>
-					<td><input type="text" name="total_cost_2_4" placeholder=""></td>
-					<td><input type="text" name="start_date_2_4" placeholder=""></td>
-					<td><input type="text" name="end_date_2_4" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_2_4" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_2_4" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_2_4" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_2_4" placeholder=""></td>
+					<td><input type="text" name="total_cost_2_4" placeholder="$"></td>
+					<td><input type="text" name="start_date_2_4" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_2_4" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_2_4" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_2_4" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_2_4" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_2_4" placeholder="$"></td>
 				</tr>
 				
 				<!-- Line 5 -->
 				<tr>
-					<td><input type="text" name="project_name_2_5" placeholder=""></td>
-					<td><input type="text" name="city_2_5" placeholder=""></td>
+					<td><input type="text" name="project_name_2_5" placeholder="Project Name"></td>
+					<td><input type="text" name="city_2_5" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_2_5" placeholder=""></td>
-					<td><input type="text" name="total_cost_2_5" placeholder=""></td>
-					<td><input type="text" name="start_date_2_5" placeholder=""></td>
-					<td><input type="text" name="end_date_2_5" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_2_5" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_2_5" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_2_5" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_2_5" placeholder=""></td>
+					<td><input type="text" name="total_cost_2_5" placeholder="$"></td>
+					<td><input type="text" name="start_date_2_5" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_2_5" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_2_5" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_2_5" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_2_5" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_2_5" placeholder="$"></td>
 				</tr>
 			</table>
     </body>
@@ -340,12 +340,12 @@
 					<td colspan="2" rowspan="4" class="header">
 						<p>
 							<label>Encuesta :</label>
-							<input type="text" name="form_3" placeholder="Año / Year">
+							<input type="text" name="form_3" required minlength="4" maxlength="4" size="10" placeholder="Año / Year">
 						</p>
 						<p>Hoja 3</p>
 						<p>
 							<label>Año Fiscal :</label>
-							<input type="text" name="fiscal_year_3" placeholder="Año / Year">
+							<input type="text" name="fiscal_year_3" required minlength="4" maxlength="4" size="10" placeholder="Año / Year">
 						</p>
 					</td>
 				</tr>
@@ -361,7 +361,7 @@
 				<tr>
 					<td>
 						<label>Nombre de la Empresa:</label>
-						<input type="text" name="company_name_3" placeholder="">
+						<input type="text" name="company_name_3" placeholder="Company Name">
 					</td>
 
 					<td></td>
@@ -369,12 +369,12 @@
 				<tr>
 					<td>
 						<label>Persona de Contacto:</label>
-						<input type="text" name="liaison_officer_3" placeholder="">
+						<input type="text" name="liaison_officer_3" placeholder="Liaison Officer Name">
 					</td>
 					
 					<td>
 						<label>Teléfono:</label>
-						<input type="text" name="tel_3" placeholder="">
+						<input type="text" name="tel_3" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" required placeholder="123-456-7890">
 					</td>
 				</tr>
 				<tr>
@@ -413,72 +413,72 @@
 				
 				<!-- Line 1 -->
 				<tr>
-					<td><input type="text" name="project_name_3_1" placeholder=""></td>
-					<td><input type="text" name="city_3_1" placeholder=""></td>
+					<td><input type="text" name="project_name_3_1" placeholder="Project Name"></td>
+					<td><input type="text" name="city_3_1" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_3_1" placeholder=""></td>
-					<td><input type="text" name="total_cost_3_1" placeholder=""></td>
-					<td><input type="text" name="start_date_3_1" placeholder=""></td>
-					<td><input type="text" name="end_date_3_1" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_3_1" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_3_1" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_3_1" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_3_1" placeholder=""></td>
+					<td><input type="text" name="total_cost_3_1" placeholder="$"></td>
+					<td><input type="text" name="start_date_3_1" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_3_1" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_3_1" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_3_1" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_3_1" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_3_1" placeholder="$"></td>
 				</tr>
 
 				<!-- Line 2 -->
 				<tr>
-					<td><input type="text" name="project_name_3_2" placeholder=""></td>
-					<td><input type="text" name="city_3_2" placeholder=""></td>
+					<td><input type="text" name="project_name_3_2" placeholder="Project Name"></td>
+					<td><input type="text" name="city_3_2" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_3_2" placeholder=""></td>
-					<td><input type="text" name="total_cost_3_2" placeholder=""></td>
-					<td><input type="text" name="start_date_3_2" placeholder=""></td>
-					<td><input type="text" name="end_date_3_2" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_3_2" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_3_2" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_3_2" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_3_2" placeholder=""></td>
+					<td><input type="text" name="total_cost_3_2" placeholder="$"></td>
+					<td><input type="text" name="start_date_3_2" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_3_2" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_3_2" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_3_2" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_3_2" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_3_2" placeholder="$"></td>
 				</tr>
 
 				<!-- Line 3 -->
 				<tr>
-					<td><input type="text" name="project_name_3_3" placeholder=""></td>
-					<td><input type="text" name="city_3_3" placeholder=""></td>
+					<td><input type="text" name="project_name_3_3" placeholder="Project Name"></td>
+					<td><input type="text" name="city_3_3" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_3_3" placeholder=""></td>
-					<td><input type="text" name="total_cost_3_3" placeholder=""></td>
-					<td><input type="text" name="start_date_3_3" placeholder=""></td>
-					<td><input type="text" name="end_date_3_3" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_3_3" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_3_3" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_3_3" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_3_3" placeholder=""></td>
+					<td><input type="text" name="total_cost_3_3" placeholder="$"></td>
+					<td><input type="text" name="start_date_3_3" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_3_3" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_3_3" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_3_3" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_3_3" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_3_3" placeholder="$"></td>
 				</tr>
 				
 				<!-- Line 4 -->
 				<tr>
-					<td><input type="text" name="project_name_3_4" placeholder=""></td>
-					<td><input type="text" name="city_3_4" placeholder=""></td>
+					<td><input type="text" name="project_name_3_4" placeholder="Project Name"></td>
+					<td><input type="text" name="city_3_4" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_3_4" placeholder=""></td>
-					<td><input type="text" name="total_cost_3_4" placeholder=""></td>
-					<td><input type="text" name="start_date_3_4" placeholder=""></td>
-					<td><input type="text" name="end_date_3_4" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_3_4" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_3_4" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_3_4" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_3_4" placeholder=""></td>
+					<td><input type="text" name="total_cost_3_4" placeholder="$"></td>
+					<td><input type="text" name="start_date_3_4" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_3_4" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_3_4" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_3_4" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_3_4" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_3_4" placeholder="$"></td>
 				</tr>
 				
 				<!-- Line 5 -->
 				<tr>
-					<td><input type="text" name="project_name_3_5" placeholder=""></td>
-					<td><input type="text" name="city_3_5" placeholder=""></td>
+					<td><input type="text" name="project_name_3_5" placeholder="Project Name"></td>
+					<td><input type="text" name="city_3_5" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_3_5" placeholder=""></td>
-					<td><input type="text" name="total_cost_3_5" placeholder=""></td>
-					<td><input type="text" name="start_date_3_5" placeholder=""></td>
-					<td><input type="text" name="end_date_3_5" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_3_5" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_3_5" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_3_5" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_3_5" placeholder=""></td>
+					<td><input type="text" name="total_cost_3_5" placeholder="$"></td>
+					<td><input type="text" name="start_date_3_5" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_3_5" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_3_5" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_3_5" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_3_5" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_3_5" placeholder="$"></td>
 				</tr>
 			</table>
     </body>
@@ -497,12 +497,12 @@
 					<td colspan="2" rowspan="4" class="header">
 						<p>
 							<label>Encuesta :</label>
-							<input type="text" name="form_4" placeholder="Año / Year">
+							<input type="text" name="form_4" required minlength="4" maxlength="4" size="10" placeholder="Año / Year">
 						</p>
 						<p>Hoja 4</p>
 						<p>
 							<label>Año Fiscal :</label>
-							<input type="text" name="fiscal_year_4" placeholder="Año / Year">
+							<input type="text" name="fiscal_year_4" required minlength="4" maxlength="4" size="10" placeholder="Año / Year">
 						</p>
 					</td>
 				</tr>
@@ -518,7 +518,7 @@
 				<tr>
 					<td>
 						<label>Nombre de la Empresa:</label>
-						<input type="text" name="company_name_4" placeholder="">
+						<input type="text" name="company_name_4" placeholder="Company Name">
 					</td>
 
 					<td></td>
@@ -526,11 +526,11 @@
 				<tr>
 					<td>
 						<label>Persona de Contacto:</label>
-						<input type="text" name="liaison_officer_4" placeholder="">
+						<input type="text" name="liaison_officer_4" placeholder="Liaison Officer Name">
 					</td>
 					<td>
 						<label>Teléfono:</label>
-						<input type="text" name="services_2012" placeholder="">
+						<input type="text" name="tel_4" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" required placeholder="123-456-7890">
 					</td>
 				</tr>
 				<tr>
@@ -569,72 +569,72 @@
 					
 				<!-- Line 1 -->
 				<tr>
-					<td><input type="text" name="project_name_4_1" placeholder=""></td>
-					<td><input type="text" name="city_4_1" placeholder=""></td>
+					<td><input type="text" name="project_name_4_1" placeholder="Project Name"></td>
+					<td><input type="text" name="city_4_1" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_4_1" placeholder=""></td>
-					<td><input type="text" name="total_cost_4_1" placeholder=""></td>
-					<td><input type="text" name="start_date_4_1" placeholder=""></td>
-					<td><input type="text" name="end_date_4_1" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_4_1" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_4_1" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_4_1" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_4_1" placeholder=""></td>
+					<td><input type="text" name="total_cost_4_1" placeholder="$"></td>
+					<td><input type="text" name="start_date_4_1" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_4_1" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_4_1" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_4_1" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_4_1" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_4_1" placeholder="$"></td>
 				</tr>
 
 				<!-- Line 2 -->
 				<tr>
-					<td><input type="text" name="project_name_4_2" placeholder=""></td>
-					<td><input type="text" name="city_4_2" placeholder=""></td>
+					<td><input type="text" name="project_name_4_2" placeholder="Project Name"></td>
+					<td><input type="text" name="city_4_2" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_4_2" placeholder=""></td>
-					<td><input type="text" name="total_cost_4_2" placeholder=""></td>
-					<td><input type="text" name="start_date_4_2" placeholder=""></td>
-					<td><input type="text" name="end_date_4_2" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_4_2" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_4_2" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_4_2" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_4_2" placeholder=""></td>
+					<td><input type="text" name="total_cost_4_2" placeholder="$"></td>
+					<td><input type="text" name="start_date_4_2" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_4_2" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_4_2" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_4_2" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_4_2" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_4_2" placeholder="$"></td>
 				</tr>
 
 				<!-- Line 3 -->
 				<tr>
-					<td><input type="text" name="project_name_4_3" placeholder=""></td>
-					<td><input type="text" name="city_4_3" placeholder=""></td>
+					<td><input type="text" name="project_name_4_3" placeholder="Project Name"></td>
+					<td><input type="text" name="city_4_3" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_4_3" placeholder=""></td>
-					<td><input type="text" name="total_cost_4_3" placeholder=""></td>
-					<td><input type="text" name="start_date_4_3" placeholder=""></td>
-					<td><input type="text" name="end_date_4_3" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_4_3" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_4_3" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_4_3" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_4_3" placeholder=""></td>
+					<td><input type="text" name="total_cost_4_3" placeholder="$"></td>
+					<td><input type="text" name="start_date_4_3" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_4_3" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_4_3" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_4_3" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_4_3" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_4_3" placeholder="$"></td>
 				</tr>
 				
 				<!-- Line 4 -->
 				<tr>
-					<td><input type="text" name="project_name_4_4" placeholder=""></td>
-					<td><input type="text" name="city_4_4" placeholder=""></td>
+					<td><input type="text" name="project_name_4_4" placeholder="Project Name"></td>
+					<td><input type="text" name="city_4_4" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_4_4" placeholder=""></td>
-					<td><input type="text" name="total_cost_4_4" placeholder=""></td>
-					<td><input type="text" name="start_date_4_4" placeholder=""></td>
-					<td><input type="text" name="end_date_4_4" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_4_4" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_4_4" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_4_4" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_4_4" placeholder=""></td>
+					<td><input type="text" name="total_cost_4_4" placeholder="$"></td>
+					<td><input type="text" name="start_date_4_4" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_4_4" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_4_4" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_4_4" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_4_4" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_4_4" placeholder="$"></td>
 				</tr>
 					
 				<!-- Line 5 -->
 				<tr>
-					<td><input type="text" name="project_name_4_5" placeholder=""></td>
-					<td><input type="text" name="city_4_5" placeholder=""></td>
+					<td><input type="text" name="project_name_4_5" placeholder="Project Name"></td>
+					<td><input type="text" name="city_4_5" placeholder="City Name"></td>
 					<td><input type="text" name="total_number_project_4_5" placeholder=""></td>
-					<td><input type="text" name="total_cost_4_5" placeholder=""></td>
-					<td><input type="text" name="start_date_4_5" placeholder=""></td>
-					<td><input type="text" name="end_date_4_5" placeholder=""></td>
-					<td><input type="text" name="value_first_trimester_4_5" placeholder=""></td>
-					<td><input type="text" name="value_second_trimester_4_5" placeholder=""></td>
-					<td><input type="text" name="value_third_trimester_4_5" placeholder=""></td>
-					<td><input type="text" name="value_fourth_trimester_4_5" placeholder=""></td>
+					<td><input type="text" name="total_cost_4_5" placeholder="$"></td>
+					<td><input type="text" name="start_date_4_5" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="end_date_4_5" placeholder="(MM/DD/YYYY)"></td>
+					<td><input type="text" name="value_first_trimester_4_5" placeholder="$"></td>
+					<td><input type="text" name="value_second_trimester_4_5" placeholder="$"></td>
+					<td><input type="text" name="value_third_trimester_4_5" placeholder="$"></td>
+					<td><input type="text" name="value_fourth_trimester_4_5" placeholder="$"></td>
 				</tr>
 			</table>
         
