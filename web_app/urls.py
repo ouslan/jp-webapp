@@ -12,5 +12,5 @@ urlpatterns = [
     re_path(r"^JP-304-relacion-de-aportaciones-federales/$", views.JP_304, name="JP-304"),
     re_path(r"^IP-110-agricultura/$", views.IP_110, name="IP-110"),
     re_path(r"^JP-541-valor-de-la-inversion-en-obras-de-construccion/$", views.JP_541, name="JP-541"),
-    re_path(r"^cuestionario-servicios/$", views.JP_361, name="JP-361"),
+    re_path(r"^JP-361-transactions-in-pr-of-external-insurance-companies/$", views.JP_361, name="JP-361"),
 ]
