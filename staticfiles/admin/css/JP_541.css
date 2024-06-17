@@ -3,7 +3,8 @@ body {
 }
 
 table {
-    width: 100%;
+    table-layout: fixed;
+    width: 90%; /* Sets width to 90% of the available space */
     border-collapse: collapse;
 }
 
@@ -11,6 +12,24 @@ th, td {
     border: 1px solid rgb(9, 8, 8);
     padding: 5px;
     text-align: left;
+    max-width: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+    border:0.5px solid #5a5a5a;
+}
+
+#year {
+    width: 80px;
+}
+
+#choice {
+    justify-content: center;
+    text-align: center;
 }
 
 th {
