@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 #logo_table {
     width: 30px;
     height: auto;
@@ -49,24 +53,25 @@
     text-align: center;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
 table {
     width: 100%;
     border-collapse: collapse;
 }
+
 th, td {
     border: 1px solid black;
     padding: 5px;
     text-align: left;
 }
+
 th {
     background-color: #f2f2f2;
 }
+
 .header, .sub-header {
     text-align: center;
 }
+
 .header img {
     width: 150px;
 }
@@ -107,7 +112,6 @@ td, th {
     width: 1500px;
     margin: 0 auto;
     text-align: center;
-    /* padding: -40px; */
 }
 
 #left {
