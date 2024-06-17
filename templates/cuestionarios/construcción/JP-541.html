@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encuesta sobre el Valor de la Inversión en Obras de Construcción</title>
 
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
+
     <link rel="stylesheet" href="{% static 'JP_541.css' %}" />
     <link rel="stylesheet" href="{% static 'website.css' %}" />
 </head>
@@ -22,12 +28,12 @@
                 <td colspan="2" rowspan="4" class="header">
                     <p>
                         <label>Encuesta :</label>
-                        <input type="text" name="services_2012" placeholder="Año / Year">
+                        <input type="text" name="form_1" placeholder="Año / Year">
                     </p>
                     <p>Hoja 1</p>
                     <p>
                         <label>Año Fiscal :</label>
-                        <input type="text" name="services_2012" placeholder="Año / Year">
+                        <input type="text" name="fiscal_year_1" placeholder="Año / Year">
                     </p>
                 </td>
             </tr>
@@ -43,7 +49,7 @@
             <tr>
                 <td>
                     <label>Nombre de la Empresa:</label>
-                    <input type="text" name="services_2012" placeholder="">
+                    <input type="text" name="company_name_1" placeholder="">
                 </td>
 
                 <td></td>
@@ -51,21 +57,24 @@
             <tr>
                 <td>
                 <label>Persona de Contacto:</label>
-                <input type="text" name="services_2012" placeholder="">
+                <input type="text" name="liaison_officer_1" placeholder="">
                 </td>
                 
                 <td>
                 <label>Teléfono:</label>
-                <input type="text" name="services_2012" placeholder="">
+                <input type="text" name="tel_1" placeholder="">
                 </td>
             </tr>
             <tr>
                 <td colspan="3"></td>
                 <td>
                     <label>Proyecto por:</label>
-                    <input type="text" name="services_2012" placeholder="">
-                    </td>
-                <td>Contrato <input type="checkbox"> Administración <input type="checkbox"></td>
+                    <input type="text" name="project_1" placeholder="">
+                </td>
+                <td>
+                    <input type="radio" id="radio-3" name="branches_1" value="contrato">Contrato
+                    <input type="radio" id="radio-3" name="branches_1" value="administación">Administración
+                </td>
             </tr>
         </table>
 
@@ -92,16 +101,16 @@
             
             <!-- Line 1 -->
             <tr>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
-                <td><input type="text" name="services_2012" placeholder=""></td>
+                <td><input type="text" name="project_name_1_1" placeholder=""></td>
+                <td><input type="text" name="city_1_1" placeholder=""></td>
+                <td><input type="text" name="total_number_project_1_1" placeholder=""></td>
+                <td><input type="text" name="total_cost_1_1" placeholder=""></td>
+                <td><input type="text" name="start_date_1_1" placeholder=""></td>
+                <td><input type="text" name="end_date_1_1" placeholder=""></td>
+                <td><input type="text" name="value_first_trimester_1_1" placeholder=""></td>
+                <td><input type="text" name="value_second_trimester_1_1" placeholder=""></td>
+                <td><input type="text" name="value_third_trimester_1_1" placeholder=""></td>
+                <td><input type="text" name="value_fourth_trimester_1_1" placeholder=""></td>
             </tr>
 
             <!-- Line 2 -->
@@ -217,8 +226,11 @@
                 <td>
                     <label>Proyecto por:</label>
                     <input type="text" name="services_2012" placeholder="">
-                    </td>
-                <td>Contrato <input type="checkbox"> Administración <input type="checkbox"></td>
+                </td>
+                <td>
+                    <input type="radio" id="radio-3" name="branches" value="Si">Contrato
+                    <input type="radio" id="radio-3" name="branches" value="No">Administración
+                </td>
             </tr>
         </table>
 
@@ -370,8 +382,11 @@
                 <td>
                     <label>Proyecto por:</label>
                     <input type="text" name="services_2012" placeholder="">
-                    </td>
-                <td>Contrato <input type="checkbox"> Administración <input type="checkbox"></td>
+                </td>
+                <td>
+                    <input type="radio" id="radio-3" name="branches" value="Si">Contrato
+                    <input type="radio" id="radio-3" name="branches" value="No">Administración
+                </td>
             </tr>
         </table>
 
@@ -524,8 +539,11 @@
                 <td>
                     <label>Proyecto por:</label>
                     <input type="text" name="services_2012" placeholder="">
-                    </td>
-                <td>Contrato <input type="checkbox"> Administración <input type="checkbox"></td>
+                </td>
+                <td>
+                    <input type="radio" id="radio-3" name="branches" value="Si">Contrato
+                    <input type="radio" id="radio-3" name="branches" value="No">Administración
+                </td>
             </tr>
         </table>
 
