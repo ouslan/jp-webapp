@@ -32,6 +32,12 @@ input {
     text-align: center;
 }
 
+#radio-3 {
+    border: 1px solid #ccc;
+    resize: vertical;
+    width: 5%;
+}
+
 th {
     background-color: #f2f2f2;
 }
