@@ -63,7 +63,6 @@ td {
     border: 1px solid black;
     padding: 5px;
     text-align: left;
-    max-width: 100%;
     width: 1500px;
     margin: 0 auto;
     text-align: center;
@@ -74,7 +73,6 @@ th {
     border: 1px solid black;
     padding: 5px;
     text-align: left;
-    max-width: 90%;
     width: 1500px;
     margin: 0 auto;
     text-align: center;
@@ -203,3 +201,5 @@ th {
     border: none;
     text-decoration: underline;
 }
+
+
