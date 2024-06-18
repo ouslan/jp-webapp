@@ -88,16 +88,19 @@ body {
     margin-top: 80px;
 }
 .left-signature {
+    width: 290px;
     padding-top: 1px;
     line-height: 1.5;
     margin-right: 50px;
 }
 
 .right-signature {
+    width: 290px;
     padding-top: 1px;
     line-height: 1.5;
 }
 .middle-signature {
+    width: 290px;
     padding-top: 1px;
     line-height: 1.5;
     margin-right: 50px;
