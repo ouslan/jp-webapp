@@ -55,7 +55,6 @@ body {
 }
 
 table {
-    table-layout: fixed;
     width: 1500px;
     border-collapse: collapse;
 }
