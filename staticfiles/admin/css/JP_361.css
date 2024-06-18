@@ -1,12 +1,14 @@
 table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
+    margin-left: 60px;
 }
 
 th, td {
     border: 1px solid black;
     padding: 5px;
     text-align: left;
+    width: 50px;
 }
 
 th {
@@ -18,10 +20,14 @@ body {
     margin: 0 auto;
     padding: 0;
     background-color: #f9f9f9;
-    width: 90%;
     margin-bottom: 40px;
+    width: 90%;
     align-items: center;
     justify-content: center;
+}
+
+#center-item {
+    text-align: center;
 }
 
 .header, main {
@@ -35,7 +41,6 @@ body {
 .header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -45,22 +50,20 @@ body {
 }
 
 .header div img {
-    max-width: 100px;
+    max-width: 80px;
     margin-bottom: 10px;
 }
 
 .left-header {
-    margin-left: -90px;
+   text-align: left;
 }
 
 .right-header {
-    margin-top: 1px;
-    text-align: center;
-    margin-left: 300px;
+    text-align: right;
 }
 
 .header img {
-    width: 100px;
+    width: 80px;
 }
 
 .header-bottom {
@@ -82,12 +85,12 @@ body {
 .big-box-bottom {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .left-signature {
     padding-top: 1px;
     line-height: 1.5;
-    margin-right: 300px;
+    margin-right: 50px;
 }
 
 .right-signature {
@@ -97,6 +100,6 @@ body {
 .middle-signature {
     padding-top: 1px;
     line-height: 1.5;
-    margin-right: 250px;
+    margin-right: 50px;
     
 }
