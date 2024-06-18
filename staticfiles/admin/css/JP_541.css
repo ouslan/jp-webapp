@@ -38,6 +38,10 @@ input {
     width: 5%;
 }
 
+#sheet {
+    font-size: 22px;
+}
+
 th {
     background-color: #f2f2f2;
     text-align: center;
