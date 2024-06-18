@@ -59,14 +59,25 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+td {
     border: 1px solid black;
     padding: 5px;
     text-align: left;
+    max-width: 100%;
+    width: 1500px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 th {
     background-color: #f2f2f2;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+    max-width: 90%;
+    width: 1500px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .header, .sub-header {
@@ -108,12 +119,7 @@ th {
     border: none;
 }
 
-td, th {
-    max-width: 100%;
-    width: 1500px;
-    margin: 0 auto;
-    text-align: center;
-}
+
 
 #left {
     text-align: left;
