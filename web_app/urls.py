@@ -13,4 +13,6 @@ urlpatterns = [
     re_path(r"^IP-110-agricultura/$", views.IP_110, name="IP-110"),
     re_path(r"^JP-541-valor-de-la-inversion-en-obras-de-construccion/$", views.JP_541, name="JP-541"),
     re_path(r"^JP-361-transactions-in-pr-of-external-insurance-companies/$", views.JP_361, name="JP-361"),
+    re_path(r"^JP-362-transacciones-con-el-exterior/$", views.JP_362, name="JP-361"),
 ]
+
