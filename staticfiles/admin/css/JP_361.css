@@ -1,24 +1,76 @@
-body {
-    font-family: Arial, sans-serif;
-}
 table {
     width: 100%;
     border-collapse: collapse;
 }
+
 th, td {
     border: 1px solid black;
     padding: 5px;
     text-align: left;
 }
+
 th {
     background-color: #f2f2f2;
 }
+
+body {
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f9f9f9;
+    width: 90%;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header, main {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 26px;
+    border-radius: 8px;
+}
 .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header div {
+    flex: 1;
     text-align: center;
 }
+
+.header div img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.left-header {
+    margin-left: -90px;
+}
+
+.right-header {
+    margin-top: 1px;
+    text-align: center;
+    margin-left: 300px;
+}
+
 .header img {
     width: 100px;
 }
+
+.header-bottom {
+    text-align: center;
+}
+
+.second-table {
+    margin-top: 70px;
+}
+
 #signature {
     width: 110%;
     border: none;
