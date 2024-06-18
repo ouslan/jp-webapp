@@ -320,4 +320,5 @@ def succesfull_page(request):
     return render(request, "cuestionarios/succesfull.html")
 
 
-
+def Forms(request):
+    return render(request, "forms.html")
