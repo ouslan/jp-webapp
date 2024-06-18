@@ -4,7 +4,7 @@ body {
 
 table {
     table-layout: fixed;
-    width: 100%; /* Sets width to 90% of the available space */
+    width: 100%;
     border-collapse: collapse;
 }
 
