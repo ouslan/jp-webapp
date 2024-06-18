@@ -18,10 +18,17 @@ a {
     color: black;
 }
 
+#logo {
+    height: 9vh;
+    width: auto;
+    position: absolute;
+    justify-content: center;
+    right: 2%;
+}
 
 /* SEARCH BAR */
 .container {
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
     display: flex;
@@ -58,24 +65,22 @@ a {
     transition: border-radius 0.5s ease;
     background: var(--input-bg, #fff);
     background-color: #E6E6E6;
-    margin-left: 68vw;
-    margin-right: 1vw;
-    width: 15vw;
-    position: relative;
+    margin-right: 8vw;
+    width: 23vw;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
-/* styling of Input */
 .input {
     font-size: 0.9rem;
     background-color: transparent;
-    width: 7vw;
+    width: 15vw;
     height: 100%;
     padding-inline: 0.5em;
     padding-block: 0.7em;
     border: none;
 }
 
-/* styling of animated border */
 .form:before {
     content: "";
     position: absolute;
@@ -217,9 +222,9 @@ input:not(:placeholder-shown)~.reset {
     background: #E6E6E6;
     border: 1px solid #E6E6E6;
     box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-    border-radius: 0.5em;
+    border-radius: 1em;
     color: black;
-    margin-top: 226px;
+    margin-top: 195px;
     position: absolute;
     left: 21%;
     transform: translateX(-50%);
@@ -244,6 +249,35 @@ input:not(:placeholder-shown)~.reset {
 
 .burger_menu a:hover {
     background: #CBCBCB;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+.section {
+    margin-bottom: 20px;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.item label {
+    width: 70%;
+}
+.item input {
+    width: 25%;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+.text-box {
+    display: block;
+    margin-bottom: 10px;
+}
+.indent {
+  margin-left: 60px;
 }
 
 
@@ -298,16 +332,11 @@ footer p {
 .custom-link {
     display: inline-block;
     text-decoration: none;
-    /* Remove underline */
     color: inherit;
-    /* Use the default text color */
 }
 
 .custom-link:hover {
     color: blue;
-    /* Change color to blue on hover */
     cursor: pointer;
-    /* Change cursor to pointer on hover */
     text-decoration: none;
-    /* Remove underline on hover */
 }

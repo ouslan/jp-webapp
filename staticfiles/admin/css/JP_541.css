@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid rgb(9, 8, 8);
+    padding: 5px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.header, .sub-header {
+    text-align: center;
+}
+.header img {
+    width: 150px;
+}

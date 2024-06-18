@@ -47,16 +47,9 @@ select:focus {
   border-color: #495057;
 }
 
-
-#header-image {
-  width: 100vw;
-  height: auto;
-}
-
-
 .image-container {
   width: 100%;
-  max-width: 800px; /* You can adjust this value based on your needs */
+  max-width: 1000px;
   margin: 0 auto;
   overflow: hidden;
 }
