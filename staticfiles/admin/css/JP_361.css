@@ -30,6 +30,10 @@ body {
     text-align: center;
 }
 
+#center-item-1 {
+    margin-top: 18.5px;
+}
+
 .header, main {
     margin-bottom: 30px;
     background: #fff;
@@ -82,16 +86,18 @@ body {
     font-style: italic;
     font-family: 'Dancing Script', cursive;
 }
+
 .big-box-bottom {
     display: flex;
     justify-content: center;
     margin-top: 80px;
 }
+
 .left-signature {
     width: 290px;
     padding-top: 1px;
     line-height: 1.5;
-    margin-right: 50px;
+    margin-right: 140px;
 }
 
 .right-signature {
@@ -99,10 +105,31 @@ body {
     padding-top: 1px;
     line-height: 1.5;
 }
+
 .middle-signature {
     width: 290px;
     padding-top: 1px;
     line-height: 1.5;
-    margin-right: 50px;
+    margin-right: 140px;
     
+}
+
+.submit-button-container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.submit-button {
+    font-size: 20px;
+    width: 120px;
+    height: 35px;
+    border: 0.5px solid #5a5a5a;
+    border-radius: 30px;
+    background-color: rgb(44, 143, 255);
+}
+
+.submit-button:hover {
+    background-color: rgb(6, 122, 255);
 }
