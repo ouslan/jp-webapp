@@ -180,3 +180,8 @@ td {
     margin-bottom: 30px;
 }
 
+#page-number {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 60px;
+}
