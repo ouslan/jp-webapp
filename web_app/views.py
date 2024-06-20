@@ -256,7 +256,7 @@ def JP_361(request):
         accrued_dividends_2 = request.POST.get('accrued_dividends_2')
         signature = request.POST.get('signature')
         date = request.POST.get('date')
-        position_telephone = request.POST.get('position_telephone')
+        
         
         csv_file_path = 'src/data/balanza_de_pago_data/JP-361.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
@@ -290,7 +290,7 @@ def JP_361(request):
                                 'policy_loans_2', 'policy_loans_3', 'policy_loans_4', 'other_specify_1',
                                 'other_specify_2', 'other_specify_3', 'other_specify_4', 'policy_reserves_1',
                                 'policy_reserves_2', 'accrued_dividends_1', 'accrued_dividends_2',
-                                'signature', 'date', 'position_telephone'
+                                'signature', 'date'
                                 ])
             
             writer.writerow([
@@ -318,7 +318,7 @@ def JP_361(request):
                             policy_loans_2, policy_loans_3, policy_loans_4, other_specify_1,
                             other_specify_2, other_specify_3, other_specify_4, policy_reserves_1,
                             policy_reserves_2, accrued_dividends_1, accrued_dividends_2,
-                            signature, date, position_telephone
+                            signature, date
                             ])  
 
         return render(request, "cuestionarios/succesfull.html")
