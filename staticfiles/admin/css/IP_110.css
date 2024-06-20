@@ -155,6 +155,7 @@ header p {
     margin-left: 19px;
     min-height:120px;
     max-height:120px;
+    resize: none;
 }
 #radio-1 {
     margin-left: 50px;
