@@ -11,29 +11,26 @@ body {
 
 .header, main {
     margin-bottom: 30px;
-    margin-top: 26px;
     background: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 26px;
     border-radius: 8px;
 }
-
 .header {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
+
 .header div {
     flex: 1;
     text-align: center;
 }
+
 .header div img {
-    max-width: 100px;
+    max-width: 80px;
     margin-bottom: 10px;
-}
-.header p {
-    font-size: 0.9em;
-    line-height: 1.4;
 }
 
 table {
@@ -173,3 +170,13 @@ td {
     border: none;
     text-decoration: underline;
 }
+
+#second-table {
+    margin-top: 26px;
+}
+
+#intruction-page {
+    margin-top: 26px;
+    margin-bottom: 30px;
+}
+
