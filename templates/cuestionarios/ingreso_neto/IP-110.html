@@ -18,10 +18,11 @@
   </head>
 
   <body>
-    <header class="big-box">
-      <section>
-        <div class="left-container">
-          <p>
+    <!-- Header -->
+    <section class="header">
+      <table>
+        <tr>
+          <td id="header_left">
             I.P. -110<br>
             Gobierno de Puerto Rico<br>
             OFICINA DEL GOBERNADOR<br>
@@ -29,23 +30,13 @@
             Subprograma de Análisis Económico<br>
             PO BOX 41119<br>
             SAN JUAN PR  00940-1119<br>
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div class="middle-container">
-          <img src="{% static 'JP_poster.jpg' %}" alt="Logo Junta Planificación" id="poster_JP"/><br>
-          <p>
+          </td>
+          <td id="header_center">
+            <img src="{% static 'JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
             AGRICULTURA, SILVICULTURA, PESCA Y CAZA<br>
             AGRICULTURE, FORESTRY, FISHING AND HUNTING<br>
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <div class="right-container">
-          <p>
+          </td>
+          <td id="header_right">
             Goverment of Puerto Rico<br>
             OFFICE OF THE GOVERNOR<br>
             Puerto Rico Planning Board<br>
@@ -55,10 +46,10 @@
             Tel. (787) 722-1970<br>
             Fax. (787) 727-8046<br>
             <a href="mailto:santiago_m@jp.pr.gov" class="custom-link">santiago_m@jp.pr.gov</a><br>
-          </p>
-        </div>
-      </section>
-    </header>
+          </td>
+        </tr>
+      </table>
+    </section>
     
     <main>
       <form method="POST" action="{% url 'IP-110' %}">

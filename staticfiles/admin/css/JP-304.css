@@ -60,12 +60,6 @@ td {
     height: 50px;
 }
 
-#header_row {
-    display:flex;
-    align-items: center;
-    background-color: bisque;
-}
-
 #header_left {
     padding-top: 1px;
     line-height: 1.5;

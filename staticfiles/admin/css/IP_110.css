@@ -9,30 +9,82 @@ body {
     margin-bottom: 40px;
 }
 
-header, main {
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+
+}
+
+.header, main {
     margin-bottom: 30px;
     background: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-top: 260px;
+    margin-top: 26px;
     border-radius: 8px;
 }
-header {
+.header {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-header div {
+
+.header div {
     flex: 1;
     text-align: center;
 }
-header div img {
-    max-width: 100px;
+
+.header div img {
+    max-width: 80px;
     margin-bottom: 10px;
 }
-header p {
+
+.header p {
     font-size: 0.9em;
     line-height: 1.4;
+}
+
+/* HEADER */
+#header_image {
+    width: 50px;
+    height: 50px;
+}
+
+#header_left {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-right: 30%;
+    text-align: left;
+    border:none;
+}
+
+#header_center {
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+    border:none;
+}
+
+#header_right {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-left: 30%;
+    text-align: right;
+    border:none;
 }
 
 .body_header {
