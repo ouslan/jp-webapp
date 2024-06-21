@@ -34,6 +34,8 @@
     </section>
 
     <main>
+      <form method="POST" action="{% url 'JP-304' %}">
+        {% csrf_token %}
         <section>
             <p id="title">JP-363: INVESTMENT IN SECURITIES OF THE CENTRAL GOVERNMENT, MUNICIPIOS***, PUBLIC CORPORATIONS AND OTHER AGENCIES</p>
             <table>
@@ -277,6 +279,7 @@
         <section class = 'submit-button-container'>
             <input type="submit" value="SUBMIT" class="submit-button"></input>
         </section>
+      </form>
     </main>
   </body>
 </html>
