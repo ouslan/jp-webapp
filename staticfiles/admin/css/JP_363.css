@@ -133,3 +133,7 @@ td {
 .submit-button:hover {
   background-color: rgb(6, 122, 255);
 }
+
+#table-header {
+  background-color: #f2f2f2;
+}
