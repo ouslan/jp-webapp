@@ -795,6 +795,10 @@ def JP_541(request):
     return render(request, "cuestionarios/construcción/JP-541.html")
 
 
+def JP_363(request):    
+    return render(request, "cuestionarios/balanza_de_pagos/JP-363.html")
+
+
 def succesfull_page(request):
     return render(request, "cuestionarios/succesfull.html")
 
