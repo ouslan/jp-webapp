@@ -535,6 +535,7 @@ class JP_363(forms.Form):
     HFC_notes_right = forms.CharField(label='Notas de la HFC', max_length=100)
     HFC_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
 
+    other = forms.CharField(label='Otros', max_length=100)
     other_bonds_left = forms.CharField(label='Otros Bonos', max_length=100)
     other_bonds_right = forms.CharField(label='Otros Bonos', max_length=100)
     other_notes_left = forms.CharField(label='Otras Notas', max_length=100)
@@ -561,6 +562,7 @@ class JP_363(forms.Form):
     GNMA_notes_right = forms.CharField(label='Notas de la GNMA', max_length=100)
     GNMA_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
 
+    other5 = forms.CharField(label='Otros', max_length=100)
     other5_bonds_left = forms.CharField(label='Otros', max_length=100)
     other5_bonds_right = forms.CharField(label='Otros', max_length=100)
     other5_notes_left = forms.CharField(label='Otros', max_length=100)
