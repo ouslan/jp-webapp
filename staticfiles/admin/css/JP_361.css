@@ -94,6 +94,14 @@ input {
     font-family: 'Dancing Script', cursive;
 }
 
+#position, #phone, #date {
+    width: 110%;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
+}
+
 #signature-bottom {
     margin-top: 10px;
 }
