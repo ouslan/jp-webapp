@@ -468,3 +468,6 @@ class JP_361(forms.Form):
     date = forms.CharField(label='Date', max_length=100)
     phone = forms.CharField(label='Phone Number', max_length=100)
     position = forms.CharField(label='Position', max_length=100)
+    
+class JP_363(forms.Form):
+    

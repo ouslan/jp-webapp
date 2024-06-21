@@ -796,6 +796,23 @@ def JP_541(request):
 
 
 def JP_363(request):    
+    if request.method == "POST":
+        # Retrieve form data
+        
+        csv_file_path = 'src/data/balanza_de_pago_data/JP-363.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                ])
+            
+            writer.writerow([
+                            ])  
+
+        return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/balanza_de_pagos/JP-363.html")
 
 
