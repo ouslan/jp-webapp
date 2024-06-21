@@ -177,6 +177,155 @@ def JP_304(request):
     return render(request, "cuestionarios/balanza_de_pagos/JP-304.html")
 
 def JP_361(request):
+    if request.method == "POST":
+        # Retrieve form data
+        income_expenses_year_1 = request.POST.get('income_expenses_year_1')
+        income_expenses_year_2 = request.POST.get('income_expenses_year_2')
+        income_life_1 = request.POST.get('income_life_1')
+        income_life_2 = request.POST.get('income_life_2')
+        income_disability_1 = request.POST.get('income_disability_1')
+        income_disability_2 = request.POST.get('income_disability_2')
+        income_auto_1 = request.POST.get('income_auto_1')
+        income_auto_2 = request.POST.get('income_auto_2')
+        income_other_1 = request.POST.get('income_other_1')
+        income_other_2 = request.POST.get('income_other_2')
+        income_interest_1 = request.POST.get('income_interest_1')
+        income_interest_2 = request.POST.get('income_interest_2')
+        income_rent_1 = request.POST.get('income_rent_1')
+        income_rent_2 = request.POST.get('income_rent_2')
+        income_other_2_1 = request.POST.get('income_other_2_1')
+        income_other_2_2 = request.POST.get('income_other_2_2')
+        total_income_1 = request.POST.get('total_income_1')
+        total_income_2 = request.POST.get('total_income_2')
+        expenses_life_1 = request.POST.get('expenses_life_1')
+        expenses_life_2 = request.POST.get('expenses_life_2')
+        expenses_disability_1 = request.POST.get('expenses_disability_1')
+        expenses_disability_2 = request.POST.get('expenses_disability_2')
+        expenses_auto_1 = request.POST.get('expenses_auto_1')
+        expenses_auto_2 = request.POST.get('expenses_auto_2')
+        expenses_other_1 = request.POST.get('expenses_other_1')
+        expenses_other_2 = request.POST.get('expenses_other_2')
+        expenses_salaries_1 = request.POST.get('expenses_salaries_1')
+        expenses_salaries_2 = request.POST.get('expenses_salaries_2')
+        expenses_interes_1 = request.POST.get('expenses_interes_1')
+        expenses_interes_2 = request.POST.get('expenses_interes_2')
+        expenses_rent_1 = request.POST.get('expenses_rent_1')
+        expenses_rent_2 = request.POST.get('expenses_rent_2')
+        expenses_depreciation_1 = request.POST.get('expenses_depreciation_1')
+        expenses_depreciation_2 = request.POST.get('expenses_depreciation_2')
+        expenses_donations_1 = request.POST.get('expenses_donations_1')
+        expenses_donations_2 = request.POST.get('expenses_donations_2')
+        expenses_commissions_1 = request.POST.get('expenses_commissions_1')
+        expenses_commissions_2 = request.POST.get('expenses_commissions_2')
+        expenses_employees_1 = request.POST.get('expenses_employees_1')
+        expenses_employees_2 = request.POST.get('expenses_employees_2')
+        expenses_brokers_1 = request.POST.get('expenses_brokers_1')
+        expenses_brokers_2 = request.POST.get('expenses_brokers_2')
+        expenses_other_operational_1 = request.POST.get('expenses_other_operational_1')
+        expenses_other_operational_2 = request.POST.get('expenses_other_operational_2')
+        total_expenses_1 = request.POST.get('total_expenses_1')
+        total_expenses_2 = request.POST.get('total_expenses_2')
+        net_profit_1 = request.POST.get('net_profit_1')
+        net_profit_2 = request.POST.get('net_profit_2')
+        balance_year_1 = request.POST.get('balance_year_1')
+        balance_year_2 = request.POST.get('balance_year_2')
+        guaranteed_1 = request.POST.get('guaranteed_1')
+        guaranteed_2 = request.POST.get('guaranteed_2')
+        guaranteed_3 = request.POST.get('guaranteed_3')
+        guaranteed_4 = request.POST.get('guaranteed_4')
+        veterans_1 = request.POST.get('veterans_1')
+        veterans_2 = request.POST.get('veterans_2')
+        veterans_3 = request.POST.get('veterans_3')
+        veterans_4 = request.POST.get('veterans_4')
+        conventional_1 = request.POST.get('conventional_1')
+        conventional_2 = request.POST.get('conventional_2')
+        conventional_3 = request.POST.get('conventional_3')
+        conventional_4 = request.POST.get('conventional_4')
+        other_1 = request.POST.get('other_1')
+        other_2 = request.POST.get('other_2')
+        other_3 = request.POST.get('other_3')
+        other_4 = request.POST.get('other_4')
+        policy_loans_1 = request.POST.get('policy_loans_1')
+        policy_loans_2 = request.POST.get('policy_loans_2')
+        policy_loans_3 = request.POST.get('policy_loans_3')
+        policy_loans_4 = request.POST.get('policy_loans_4')
+        other_specify_1 = request.POST.get('other_specify_1')
+        other_specify_2 = request.POST.get('other_specify_2')
+        other_specify_3 = request.POST.get('other_specify_3')
+        other_specify_4 = request.POST.get('other_specify_4')
+        policy_reserves_1 = request.POST.get('policy_reserves_1')
+        policy_reserves_2 = request.POST.get('policy_reserves_2')
+        accrued_dividends_1 = request.POST.get('accrued_dividends_1')
+        accrued_dividends_2 = request.POST.get('accrued_dividends_2')
+        signature = request.POST.get('signature')
+        date = request.POST.get('date')
+        phone = request.POST.get('phone')
+        position = request.POST.get('position')
+        
+        csv_file_path = 'src/data/balanza_de_pago_data/JP-361.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                'income_expenses_year_1', 'income_expenses_year_2',
+                                'income_life_1', 'income_life_2', 'income_disability_1',
+                                'income_disability_2', 'income_auto_1', 'income_auto_2',
+                                'income_other_1', 'income_other_2', 'income_interest_1', 
+                                'income_interest_2', 'income_rent_1', 'income_rent_2',
+                                'income_other_2_1', 'income_other_2_2', 'total_income_1', 
+                                'total_income_2', 'expenses_life_1', 'expenses_life_2',
+                                'expenses_disability_1', 'expenses_disability_2', 
+                                'expenses_auto_1', 'expenses_auto_2', 'expenses_other_1',
+                                'expenses_other_2', 'expenses_salaries_1', 'expenses_salaries_2',
+                                'expenses_interes_1', 'expenses_interes_2', 'expenses_rent_1',  
+                                'expenses_rent_2', 'expenses_depreciation_1', 'expenses_depreciation_2',
+                                'expenses_donations_1', 'expenses_donations_2', 'expenses_commissions_1',
+                                'expenses_commissions_2', 'expenses_employees_1', 'expenses_employees_2',
+                                'expenses_brokers_1', 'expenses_brokers_2', 'expenses_other_operational_1',
+                                'expenses_other_operational_2', 'total_expenses_1', 'total_expenses_2',
+                                'net_profit_1', 'net_profit_2', 'balance_year_1', 'balance_year_2',
+                                'guaranteed_1', 'guaranteed_2', 'guaranteed_3', 'guaranteed_4',
+                                'veterans_1', 'veterans_2', 'veterans_3', 'veterans_4', 
+                                'conventional_1', 'conventional_2', 'conventional_3', 'conventional_4',
+                                'other_1', 'other_2', 'other_3', 'other_4', 'policy_loans_1',
+                                'policy_loans_2', 'policy_loans_3', 'policy_loans_4', 'other_specify_1',
+                                'other_specify_2', 'other_specify_3', 'other_specify_4', 'policy_reserves_1',
+                                'policy_reserves_2', 'accrued_dividends_1', 'accrued_dividends_2',
+                                'signature', 'date', 'phone', 'position'
+                                ])
+            
+            writer.writerow([
+                            income_expenses_year_1, income_expenses_year_2,
+                            income_life_1, income_life_2, income_disability_1, 
+                            income_disability_2, income_auto_1, income_auto_2, 
+                            income_other_1, income_other_2, income_interest_1, 
+                            income_interest_2, income_rent_1, income_rent_2,
+                            income_other_2_1, income_other_2_2, total_income_1,
+                            total_income_2, expenses_life_1, expenses_life_2,
+                            expenses_disability_1, expenses_disability_2,
+                            expenses_auto_1, expenses_auto_2, expenses_other_1,
+                            expenses_other_2, expenses_salaries_1, expenses_salaries_2,
+                            expenses_interes_1, expenses_interes_2, expenses_rent_1,
+                            expenses_rent_2, expenses_depreciation_1, expenses_depreciation_2,
+                            expenses_donations_1, expenses_donations_2, expenses_commissions_1,
+                            expenses_commissions_2, expenses_employees_1, expenses_employees_2,
+                            expenses_brokers_1, expenses_brokers_2, expenses_other_operational_1,
+                            expenses_other_operational_2, total_expenses_1, total_expenses_2,
+                            net_profit_1, net_profit_2, balance_year_1, balance_year_2,
+                            guaranteed_1, guaranteed_2, guaranteed_3, guaranteed_4,
+                            veterans_1, veterans_2, veterans_3, veterans_4,
+                            conventional_1, conventional_2, conventional_3, conventional_4,
+                            other_1, other_2, other_3, other_4, policy_loans_1,
+                            policy_loans_2, policy_loans_3, policy_loans_4, other_specify_1,
+                            other_specify_2, other_specify_3, other_specify_4, policy_reserves_1,
+                            policy_reserves_2, accrued_dividends_1, accrued_dividends_2,
+                            signature, date, phone, position
+                            ])  
+
+        return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/balanza_de_pagos/JP-361.html")
 
 
@@ -313,7 +462,340 @@ def IP_110(request):
 
 
 def JP_541(request):
-    return render(request, "cuestionarios/construccion/JP_541.html")
+    if request.method == "POST":
+        # Retrieve form data
+        
+        #TABLE 1
+        form_1 = request.POST.get('form_1')
+        fiscal_year_1 = request.POST.get('fiscal_year_1')
+        company_name_1 = request.POST.get('company_name_1')
+        liaison_officer_1 = request.POST.get('liaison_officer_1')
+        tel_1 = request.POST.get('tel_1')
+        project_1 = request.POST.get('project_1')
+        branches_1 = request.POST.get('branches_1')
+        
+        project_name_1_1 = request.POST.get('project_name_1_1')
+        city_1_1 = request.POST.get('city_1_1')
+        total_number_project_1_1 = request.POST.get('total_number_project_1_1')
+        total_cost_1_1 = request.POST.get('total_cost_1_1')
+        start_date_1_1 = request.POST.get('start_date_1_1')
+        end_date_1_1 = request.POST.get('end_date_1_1')
+        value_first_trimester_1_1 = request.POST.get('value_first_trimester_1_1')
+        value_second_trimester_1_1 = request.POST.get('value_second_trimester_1_1')
+        value_third_trimester_1_1 = request.POST.get('value_third_trimester_1_1')
+        value_fourth_trimester_1_1 = request.POST.get('value_fourth_trimester_1_1')
+        
+        project_name_1_2 = request.POST.get('project_name_1_2')
+        city_1_2 = request.POST.get('city_1_2')
+        total_number_project_1_2 = request.POST.get('total_number_project_1_2')
+        total_cost_1_2 = request.POST.get('total_cost_1_2')
+        start_date_1_2 = request.POST.get('start_date_1_2')
+        end_date_1_2 = request.POST.get('end_date_1_2')
+        value_first_trimester_1_2 = request.POST.get('value_first_trimester_1_2')
+        value_second_trimester_1_2 = request.POST.get('value_second_trimester_1_2')
+        value_third_trimester_1_2 = request.POST.get('value_third_trimester_1_2')
+        value_fourth_trimester_1_2 = request.POST.get('value_fourth_trimester_1_2')
+        
+        project_name_1_3 = request.POST.get('project_name_1_3')
+        city_1_3 = request.POST.get('city_1_3')
+        total_number_project_1_3 = request.POST.get('total_number_project_1_3')
+        total_cost_1_3 = request.POST.get('total_cost_1_3')
+        start_date_1_3 = request.POST.get('start_date_1_3')
+        end_date_1_3 = request.POST.get('end_date_1_3')
+        value_first_trimester_1_3 = request.POST.get('value_first_trimester_1_3')
+        value_second_trimester_1_3 = request.POST.get('value_second_trimester_1_3')
+        value_third_trimester_1_3 = request.POST.get('value_third_trimester_1_3')
+        value_fourth_trimester_1_3 = request.POST.get('value_fourth_trimester_1_3')
+        
+        project_name_1_4 = request.POST.get('project_name_1_4')
+        city_1_4 = request.POST.get('city_1_4')
+        total_number_project_1_4 = request.POST.get('total_number_project_1_4')
+        total_cost_1_4 = request.POST.get('total_cost_1_4')
+        start_date_1_4 = request.POST.get('start_date_1_4')
+        end_date_1_4 = request.POST.get('end_date_1_4')
+        value_first_trimester_1_4 = request.POST.get('value_first_trimester_1_4')
+        value_second_trimester_1_4 = request.POST.get('value_second_trimester_1_4')
+        value_third_trimester_1_4 = request.POST.get('value_third_trimester_1_4')
+        value_fourth_trimester_1_4 = request.POST.get('value_fourth_trimester_1_4')
+        
+        project_name_1_5 = request.POST.get('project_name_1_5')
+        city_1_5 = request.POST.get('city_1_5')
+        total_number_project_1_5 = request.POST.get('total_number_project_1_5')
+        total_cost_1_5 = request.POST.get('total_cost_1_5')
+        start_date_1_5 = request.POST.get('start_date_1_5')
+        end_date_1_5 = request.POST.get('end_date_1_5')
+        value_first_trimester_1_5 = request.POST.get('value_first_trimester_1_5')
+        value_second_trimester_1_5 = request.POST.get('value_second_trimester_1_5')
+        value_third_trimester_1_5 = request.POST.get('value_third_trimester_1_5')
+        value_fourth_trimester_1_5 = request.POST.get('value_fourth_trimester_1_5')
+        
+        
+        #TABLE 2
+        form_2 = request.POST.get('form_2')
+        fiscal_year_2 = request.POST.get('fiscal_year_2')
+        company_name_2 = request.POST.get('company_name_2')
+        liaison_officer_2 = request.POST.get('liaison_officer_2')
+        tel_2 = request.POST.get('tel_2')
+        project_2 = request.POST.get('project_2')
+        branches_2 = request.POST.get('branches_2')
+        
+        project_name_2_1 = request.POST.get('project_name_2_1')
+        city_2_1 = request.POST.get('city_2_1')
+        total_number_project_2_1 = request.POST.get('total_number_project_2_1')
+        total_cost_2_1 = request.POST.get('total_cost_2_1')
+        start_date_2_1 = request.POST.get('start_date_2_1')
+        end_date_2_1 = request.POST.get('end_date_2_1')
+        value_first_trimester_2_1 = request.POST.get('value_first_trimester_2_1')
+        value_second_trimester_2_1 = request.POST.get('value_second_trimester_2_1')
+        value_third_trimester_2_1 = request.POST.get('value_third_trimester_2_1')
+        value_fourth_trimester_2_1 = request.POST.get('value_fourth_trimester_2_1')
+        
+        project_name_2_2 = request.POST.get('project_name_2_2')
+        city_2_2 = request.POST.get('city_2_2')
+        total_number_project_2_2 = request.POST.get('total_number_project_2_2')
+        total_cost_2_2 = request.POST.get('total_cost_2_2')
+        start_date_2_2 = request.POST.get('start_date_2_2')
+        end_date_2_2 = request.POST.get('end_date_2_2')
+        value_first_trimester_2_2 = request.POST.get('value_first_trimester_2_2')
+        value_second_trimester_2_2 = request.POST.get('value_second_trimester_2_2')
+        value_third_trimester_2_2 = request.POST.get('value_third_trimester_2_2')
+        value_fourth_trimester_2_2 = request.POST.get('value_fourth_trimester_2_2')
+        
+        project_name_2_3 = request.POST.get('project_name_2_3')
+        city_2_3 = request.POST.get('city_2_3')
+        total_number_project_2_3 = request.POST.get('total_number_project_2_3')
+        total_cost_2_3 = request.POST.get('total_cost_2_3')
+        start_date_2_3 = request.POST.get('start_date_2_3')
+        end_date_2_3 = request.POST.get('end_date_2_3')
+        value_first_trimester_2_3 = request.POST.get('value_first_trimester_2_3')
+        value_second_trimester_2_3 = request.POST.get('value_second_trimester_2_3')
+        value_third_trimester_2_3 = request.POST.get('value_third_trimester_2_3')
+        value_fourth_trimester_2_3 = request.POST.get('value_fourth_trimester_2_3')
+        
+        project_name_2_4 = request.POST.get('project_name_2_4')
+        city_2_4 = request.POST.get('city_2_4')
+        total_number_project_2_4 = request.POST.get('total_number_project_2_4')
+        total_cost_2_4 = request.POST.get('total_cost_2_4')
+        start_date_2_4 = request.POST.get('start_date_2_4')
+        end_date_2_4 = request.POST.get('end_date_2_4')
+        value_first_trimester_2_4 = request.POST.get('value_first_trimester_2_4')
+        value_second_trimester_2_4 = request.POST.get('value_second_trimester_2_4')
+        value_third_trimester_2_4 = request.POST.get('value_third_trimester_2_4')
+        value_fourth_trimester_2_4 = request.POST.get('value_fourth_trimester_2_4')
+        
+        project_name_2_5 = request.POST.get('project_name_2_5')
+        city_2_5 = request.POST.get('city_2_5')
+        total_number_project_2_5 = request.POST.get('total_number_project_2_5')
+        total_cost_2_5 = request.POST.get('total_cost_2_5')
+        start_date_2_5 = request.POST.get('start_date_2_5')
+        end_date_2_5 = request.POST.get('end_date_2_5')
+        value_first_trimester_2_5 = request.POST.get('value_first_trimester_2_5')
+        value_second_trimester_2_5 = request.POST.get('value_second_trimester_2_5')
+        value_third_trimester_2_5 = request.POST.get('value_third_trimester_2_5')
+        value_fourth_trimester_2_5 = request.POST.get('value_fourth_trimester_2_5')
+        
+        
+        #TABLE 3
+        form_3 = request.POST.get('form_3')
+        fiscal_year_3 = request.POST.get('fiscal_year_3')
+        company_name_3 = request.POST.get('company_name_3')
+        liaison_officer_3 = request.POST.get('liaison_officer_3')
+        tel_3 = request.POST.get('tel_3')
+        project_3 = request.POST.get('project_3')
+        branches_3 = request.POST.get('branches_3')
+        
+        project_name_3_1 = request.POST.get('project_name_3_1')
+        city_3_1 = request.POST.get('city_3_1')
+        total_number_project_3_1 = request.POST.get('total_number_project_3_1')
+        total_cost_3_1 = request.POST.get('total_cost_3_1')
+        start_date_3_1 = request.POST.get('start_date_3_1')
+        end_date_3_1 = request.POST.get('end_date_3_1')
+        value_first_trimester_3_1 = request.POST.get('value_first_trimester_3_1')
+        value_second_trimester_3_1 = request.POST.get('value_second_trimester_3_1')
+        value_third_trimester_3_1 = request.POST.get('value_third_trimester_3_1')
+        value_fourth_trimester_3_1 = request.POST.get('value_fourth_trimester_3_1')
+        
+        project_name_3_2 = request.POST.get('project_name_3_2')
+        city_3_2 = request.POST.get('city_3_2')
+        total_number_project_3_2 = request.POST.get('total_number_project_3_2')
+        total_cost_3_2 = request.POST.get('total_cost_3_2')
+        start_date_3_2 = request.POST.get('start_date_3_2')
+        end_date_3_2 = request.POST.get('end_date_3_2')
+        value_first_trimester_3_2 = request.POST.get('value_first_trimester_3_2')
+        value_second_trimester_3_2 = request.POST.get('value_second_trimester_3_2')
+        value_third_trimester_3_2 = request.POST.get('value_third_trimester_3_2')
+        value_fourth_trimester_3_2 = request.POST.get('value_fourth_trimester_3_2')
+        
+        project_name_3_3 = request.POST.get('project_name_3_3')
+        city_3_3 = request.POST.get('city_3_3')
+        total_number_project_3_3 = request.POST.get('total_number_project_3_3')
+        total_cost_3_3 = request.POST.get('total_cost_3_3')
+        start_date_3_3 = request.POST.get('start_date_3_3')
+        end_date_3_3 = request.POST.get('end_date_3_3')
+        value_first_trimester_3_3 = request.POST.get('value_first_trimester_3_3')
+        value_second_trimester_3_3 = request.POST.get('value_second_trimester_3_3')
+        value_third_trimester_3_3 = request.POST.get('value_third_trimester_3_3')
+        value_fourth_trimester_3_3 = request.POST.get('value_fourth_trimester_3_3')
+        
+        project_name_3_4 = request.POST.get('project_name_3_4')
+        city_3_4 = request.POST.get('city_3_4')
+        total_number_project_3_4 = request.POST.get('total_number_project_3_4')
+        total_cost_3_4 = request.POST.get('total_cost_3_4')
+        start_date_3_4 = request.POST.get('start_date_3_4')
+        end_date_3_4 = request.POST.get('end_date_3_4')
+        value_first_trimester_3_4 = request.POST.get('value_first_trimester_3_4')
+        value_second_trimester_3_4 = request.POST.get('value_second_trimester_3_4')
+        value_third_trimester_3_4 = request.POST.get('value_third_trimester_3_4')
+        value_fourth_trimester_3_4 = request.POST.get('value_fourth_trimester_3_4')
+        
+        project_name_3_5 = request.POST.get('project_name_3_5')
+        city_3_5 = request.POST.get('city_3_5')
+        total_number_project_3_5 = request.POST.get('total_number_project_3_5')
+        total_cost_3_5 = request.POST.get('total_cost_3_5')
+        start_date_3_5 = request.POST.get('start_date_3_5')
+        end_date_3_5 = request.POST.get('end_date_3_5')
+        value_first_trimester_3_5 = request.POST.get('value_first_trimester_3_5')
+        value_second_trimester_3_5 = request.POST.get('value_second_trimester_3_5')
+        value_third_trimester_3_5 = request.POST.get('value_third_trimester_3_5')
+        value_fourth_trimester_3_5 = request.POST.get('value_fourth_trimester_3_5')
+        
+        
+        #TABLE 4
+        form_4 = request.POST.get('form_4')
+        fiscal_year_4 = request.POST.get('fiscal_year_4')
+        company_name_4 = request.POST.get('company_name_4')
+        liaison_officer_4 = request.POST.get('liaison_officer_4')
+        tel_4 = request.POST.get('tel_4')
+        project_4 = request.POST.get('project_4')
+        branches_4 = request.POST.get('branches_4')
+        
+        project_name_4_1 = request.POST.get('project_name_4_1')
+        city_4_1 = request.POST.get('city_4_1')
+        total_number_project_4_1 = request.POST.get('total_number_project_4_1')
+        total_cost_4_1 = request.POST.get('total_cost_4_1')
+        start_date_4_1 = request.POST.get('start_date_4_1')
+        end_date_4_1 = request.POST.get('end_date_4_1')
+        value_first_trimester_4_1 = request.POST.get('value_first_trimester_4_1')
+        value_second_trimester_4_1 = request.POST.get('value_second_trimester_4_1')
+        value_third_trimester_4_1 = request.POST.get('value_third_trimester_4_1')
+        value_fourth_trimester_4_1 = request.POST.get('value_fourth_trimester_4_1')
+        
+        project_name_4_2 = request.POST.get('project_name_4_2')
+        city_4_2 = request.POST.get('city_4_2')
+        total_number_project_4_2 = request.POST.get('total_number_project_4_2')
+        total_cost_4_2 = request.POST.get('total_cost_4_2')
+        start_date_4_2 = request.POST.get('start_date_4_2')
+        end_date_4_2 = request.POST.get('end_date_4_2')
+        value_first_trimester_4_2 = request.POST.get('value_first_trimester_4_2')
+        value_second_trimester_4_2 = request.POST.get('value_second_trimester_4_2')
+        value_third_trimester_4_2 = request.POST.get('value_third_trimester_4_2')
+        value_fourth_trimester_4_2 = request.POST.get('value_fourth_trimester_4_2')
+        
+        project_name_4_3 = request.POST.get('project_name_4_3')
+        city_4_3 = request.POST.get('city_4_3')
+        total_number_project_4_3 = request.POST.get('total_number_project_4_3')
+        total_cost_4_3 = request.POST.get('total_cost_4_3')
+        start_date_4_3 = request.POST.get('start_date_4_3')
+        end_date_4_3 = request.POST.get('end_date_4_3')
+        value_first_trimester_4_3 = request.POST.get('value_first_trimester_4_3')
+        value_second_trimester_4_3 = request.POST.get('value_second_trimester_4_3')
+        value_third_trimester_4_3 = request.POST.get('value_third_trimester_4_3')
+        value_fourth_trimester_4_3 = request.POST.get('value_fourth_trimester_4_3')
+        
+        project_name_4_4 = request.POST.get('project_name_4_4')
+        city_4_4 = request.POST.get('city_4_4')
+        total_number_project_4_4 = request.POST.get('total_number_project_4_4')
+        total_cost_4_4 = request.POST.get('total_cost_4_4')
+        start_date_4_4 = request.POST.get('start_date_4_4')
+        end_date_4_4 = request.POST.get('end_date_4_4')
+        value_first_trimester_4_4 = request.POST.get('value_first_trimester_4_4')
+        value_second_trimester_4_4 = request.POST.get('value_second_trimester_4_4')
+        value_third_trimester_4_4 = request.POST.get('value_third_trimester_4_4')
+        value_fourth_trimester_4_4 = request.POST.get('value_fourth_trimester_4_4')
+        
+        project_name_4_5 = request.POST.get('project_name_4_5')
+        city_4_5 = request.POST.get('city_4_5')
+        total_number_project_4_5 = request.POST.get('total_number_project_4_5')
+        total_cost_4_5 = request.POST.get('total_cost_4_5')
+        start_date_4_5 = request.POST.get('start_date_4_5')
+        end_date_4_5 = request.POST.get('end_date_4_5')
+        value_first_trimester_4_5 = request.POST.get('value_first_trimester_4_5')
+        value_second_trimester_4_5 = request.POST.get('value_second_trimester_4_5')
+        value_third_trimester_4_5 = request.POST.get('value_third_trimester_4_5')
+        value_fourth_trimester_4_5 = request.POST.get('value_fourth_trimester_4_5')
+        
+        
+        csv_file_path = 'src/data/construcción/JP-541.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([   
+                                    'form_1', 'fiscal_year_1', 'company_name_1', 'liaison_officer_1', 'tel_1', 'project_1', 'branches_1',
+                                    'project_name_1_1', 'city_1_1', 'total_number_project_1_1', 'total_cost_1_1', 'start_date_1_1', 'end_date_1_1', 'value_first_trimester_1_1', 'value_second_trimester_1_1', 'value_third_trimester_1_1', 'value_fourth_trimester_1_1',
+                                    'project_name_1_2', 'city_1_2', 'total_number_project_1_2', 'total_cost_1_2', 'start_date_1_2', 'end_date_1_2', 'value_first_trimester_1_2', 'value_second_trimester_1_2', 'value_third_trimester_1_2', 'value_fourth_trimester_1_2',
+                                    'project_name_1_3', 'city_1_3', 'total_number_project_1_3', 'total_cost_1_3', 'start_date_1_3', 'end_date_1_3', 'value_first_trimester_1_3', 'value_second_trimester_1_3', 'value_third_trimester_1_3', 'value_fourth_trimester_1_3',
+                                    'project_name_1_4', 'city_1_4', 'total_number_project_1_4', 'total_cost_1_4', 'start_date_1_4', 'end_date_1_4', 'value_first_trimester_1_4', 'value_second_trimester_1_4', 'value_third_trimester_1_4', 'value_fourth_trimester_1_4',
+                                    'project_name_1_5', 'city_1_5', 'total_number_project_1_5', 'total_cost_1_5', 'start_date_1_5', 'end_date_1_5', 'value_first_trimester_1_5', 'value_second_trimester_1_5', 'value_third_trimester_1_5', 'value_fourth_trimester_1_5',
+                                    
+                                    'form_2', 'fiscal_year_2', 'company_name_2', 'liaison_officer_2', 'tel_2', 'project_2', 'branches_2',
+                                    'project_name_2_1', 'city_2_1', 'total_number_project_2_1', 'total_cost_2_1', 'start_date_2_1', 'end_date_2_1', 'value_first_trimester_2_1', 'value_second_trimester_2_1', 'value_third_trimester_2_1', 'value_fourth_trimester_2_1',
+                                    'project_name_2_2', 'city_2_2', 'total_number_project_2_2', 'total_cost_2_2', 'start_date_2_2', 'end_date_2_2', 'value_first_trimester_2_2', 'value_second_trimester_2_2', 'value_third_trimester_2_2', 'value_fourth_trimester_2_2',
+                                    'project_name_2_3', 'city_2_3', 'total_number_project_2_3', 'total_cost_2_3', 'start_date_2_3', 'end_date_2_3', 'value_first_trimester_2_3', 'value_second_trimester_2_3', 'value_third_trimester_2_3', 'value_fourth_trimester_2_3',
+                                    'project_name_2_4', 'city_2_4', 'total_number_project_2_4', 'total_cost_2_4', 'start_date_2_4', 'end_date_2_4', 'value_first_trimester_2_4', 'value_second_trimester_2_4', 'value_third_trimester_2_4', 'value_fourth_trimester_2_4',
+                                    'project_name_2_5', 'city_2_5', 'total_number_project_2_5', 'total_cost_2_5', 'start_date_2_5', 'end_date_2_5', 'value_first_trimester_2_5', 'value_second_trimester_2_5', 'value_third_trimester_2_5', 'value_fourth_trimester_2_5',
+                                    
+                                    'form_3', 'fiscal_year_3', 'company_name_3', 'liaison_officer_3', 'tel_3', 'project_3', 'branches_3',
+                                    'project_name_3_1', 'city_3_1', 'total_number_project_3_1', 'total_cost_3_1', 'start_date_3_1', 'end_date_3_1', 'value_first_trimester_3_1', 'value_second_trimester_3_1', 'value_third_trimester_3_1', 'value_fourth_trimester_3_1',
+                                    'project_name_3_2', 'city_3_2', 'total_number_project_3_2', 'total_cost_3_2', 'start_date_3_2', 'end_date_3_2', 'value_first_trimester_3_2', 'value_second_trimester_3_2', 'value_third_trimester_3_2', 'value_fourth_trimester_3_2',
+                                    'project_name_3_3', 'city_3_3', 'total_number_project_3_3', 'total_cost_3_3', 'start_date_3_3', 'end_date_3_3', 'value_first_trimester_3_3', 'value_second_trimester_3_3', 'value_third_trimester_3_3', 'value_fourth_trimester_3_3',
+                                    'project_name_3_4', 'city_3_4', 'total_number_project_3_4', 'total_cost_3_4', 'start_date_3_4', 'end_date_3_4', 'value_first_trimester_3_4', 'value_second_trimester_3_4', 'value_third_trimester_3_4', 'value_fourth_trimester_3_4',
+                                    'project_name_3_5', 'city_3_5', 'total_number_project_3_5', 'total_cost_3_5', 'start_date_3_5', 'end_date_3_5', 'value_first_trimester_3_5', 'value_second_trimester_3_5', 'value_third_trimester_3_5', 'value_fourth_trimester_3_5',
+                                    
+                                    'form_4', 'fiscal_year_4', 'company_name_4', 'liaison_officer_4', 'tel_4', 'project_4', 'branches_4',
+                                    'project_name_4_1', 'city_4_1', 'total_number_project_4_1', 'total_cost_4_1', 'start_date_4_1', 'end_date_4_1', 'value_first_trimester_4_1', 'value_second_trimester_4_1', 'value_third_trimester_4_1', 'value_fourth_trimester_4_1',
+                                    'project_name_4_2', 'city_4_2', 'total_number_project_4_2', 'total_cost_4_2', 'start_date_4_2', 'end_date_4_2', 'value_first_trimester_4_2', 'value_second_trimester_4_2', 'value_third_trimester_4_2', 'value_fourth_trimester_4_2',
+                                    'project_name_4_3', 'city_4_3', 'total_number_project_4_3', 'total_cost_4_3', 'start_date_4_3', 'end_date_4_3', 'value_first_trimester_4_3', 'value_second_trimester_4_3', 'value_third_trimester_4_3', 'value_fourth_trimester_4_3',
+                                    'project_name_4_4', 'city_4_4', 'total_number_project_4_4', 'total_cost_4_4', 'start_date_4_4', 'end_date_4_4', 'value_first_trimester_4_4', 'value_second_trimester_4_4', 'value_third_trimester_4_4', 'value_fourth_trimester_4_4',
+                                    'project_name_4_5', 'city_4_5', 'total_number_project_4_5', 'total_cost_4_5', 'start_date_4_5', 'end_date_4_5', 'value_first_trimester_4_5', 'value_second_trimester_4_5', 'value_third_trimester_4_5', 'value_fourth_trimester_4_5',
+                                ])
+            
+            writer.writerow([   
+                                form_1, fiscal_year_1, company_name_1, liaison_officer_1, tel_1, project_1, branches_1,
+                                project_name_1_1, city_1_1, total_number_project_1_1, total_cost_1_1, start_date_1_1, end_date_1_1, value_first_trimester_1_1, value_second_trimester_1_1, value_third_trimester_1_1, value_fourth_trimester_1_1,
+                                project_name_1_2, city_1_2, total_number_project_1_2, total_cost_1_2, start_date_1_2, end_date_1_2, value_first_trimester_1_2, value_second_trimester_1_2, value_third_trimester_1_2, value_fourth_trimester_1_2,
+                                project_name_1_3, city_1_3, total_number_project_1_3, total_cost_1_3, start_date_1_3, end_date_1_3, value_first_trimester_1_3, value_second_trimester_1_3, value_third_trimester_1_3, value_fourth_trimester_1_3,
+                                project_name_1_4, city_1_4, total_number_project_1_4, total_cost_1_4, start_date_1_4, end_date_1_4, value_first_trimester_1_4, value_second_trimester_1_4, value_third_trimester_1_4, value_fourth_trimester_1_4,
+                                project_name_1_5, city_1_5, total_number_project_1_5, total_cost_1_5, start_date_1_5, end_date_1_5, value_first_trimester_1_5, value_second_trimester_1_5, value_third_trimester_1_5, value_fourth_trimester_1_5,
+                                
+                                form_2, fiscal_year_2, company_name_2, liaison_officer_2, tel_2, project_2, branches_2,
+                                project_name_2_1, city_2_1, total_number_project_2_1, total_cost_2_1, start_date_2_1, end_date_2_1, value_first_trimester_2_1, value_second_trimester_2_1, value_third_trimester_2_1, value_fourth_trimester_2_1,
+                                project_name_2_2, city_2_2, total_number_project_2_2, total_cost_2_2, start_date_2_2, end_date_2_2, value_first_trimester_2_2, value_second_trimester_2_2, value_third_trimester_2_2, value_fourth_trimester_2_2,
+                                project_name_2_3, city_2_3, total_number_project_2_3, total_cost_2_3, start_date_2_3, end_date_2_3, value_first_trimester_2_3, value_second_trimester_2_3, value_third_trimester_2_3, value_fourth_trimester_2_3,
+                                project_name_2_4, city_2_4, total_number_project_2_4, total_cost_2_4, start_date_2_4, end_date_2_4, value_first_trimester_2_4, value_second_trimester_2_4, value_third_trimester_2_4, value_fourth_trimester_2_4,
+                                project_name_2_5, city_2_5, total_number_project_2_5, total_cost_2_5, start_date_2_5, end_date_2_5, value_first_trimester_2_5, value_second_trimester_2_5, value_third_trimester_2_5, value_fourth_trimester_2_5,
+                                
+                                form_3, fiscal_year_3, company_name_3, liaison_officer_3, tel_3, project_3, branches_3,
+                                project_name_3_1, city_3_1, total_number_project_3_1, total_cost_3_1, start_date_3_1, end_date_3_1, value_first_trimester_3_1, value_second_trimester_3_1, value_third_trimester_3_1, value_fourth_trimester_3_1,
+                                project_name_3_2, city_3_2, total_number_project_3_2, total_cost_3_2, start_date_3_2, end_date_3_2, value_first_trimester_3_2, value_second_trimester_3_2, value_third_trimester_3_2, value_fourth_trimester_3_2,
+                                project_name_3_3, city_3_3, total_number_project_3_3, total_cost_3_3, start_date_3_3, end_date_3_3, value_first_trimester_3_3, value_second_trimester_3_3, value_third_trimester_3_3, value_fourth_trimester_3_3,
+                                project_name_3_4, city_3_4, total_number_project_3_4, total_cost_3_4, start_date_3_4, end_date_3_4, value_first_trimester_3_4, value_second_trimester_3_4, value_third_trimester_3_4, value_fourth_trimester_3_4,
+                                project_name_3_5, city_3_5, total_number_project_3_5, total_cost_3_5, start_date_3_5, end_date_3_5, value_first_trimester_3_5, value_second_trimester_3_5, value_third_trimester_3_5, value_fourth_trimester_3_5,
+                                
+                
+                                form_4, fiscal_year_4, company_name_4, liaison_officer_4, tel_4, project_4, branches_4,
+                                project_name_4_1, city_4_1, total_number_project_4_1, total_cost_4_1, start_date_4_1, end_date_4_1, value_first_trimester_4_1, value_second_trimester_4_1, value_third_trimester_4_1, value_fourth_trimester_4_1,
+                                project_name_4_2, city_4_2, total_number_project_4_2, total_cost_4_2, start_date_4_2, end_date_4_2, value_first_trimester_4_2, value_second_trimester_4_2, value_third_trimester_4_2, value_fourth_trimester_4_2,
+                                project_name_4_3, city_4_3, total_number_project_4_3, total_cost_4_3, start_date_4_3, end_date_4_3, value_first_trimester_4_3, value_second_trimester_4_3, value_third_trimester_4_3, value_fourth_trimester_4_3,
+                                project_name_4_4, city_4_4, total_number_project_4_4, total_cost_4_4, start_date_4_4, end_date_4_4, value_first_trimester_4_4, value_second_trimester_4_4, value_third_trimester_4_4, value_fourth_trimester_4_4,
+                                project_name_4_5, city_4_5, total_number_project_4_5, total_cost_4_5, start_date_4_5, end_date_4_5, value_first_trimester_4_5, value_second_trimester_4_5, value_third_trimester_4_5, value_fourth_trimester_4_5,
+                             ])  
+
+        return render(request, "cuestionarios/succesfull.html")
+    
+    return render(request, "cuestionarios/construcción/JP-541.html")
 
 
 def succesfull_page(request):
