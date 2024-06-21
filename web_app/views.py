@@ -891,7 +891,10 @@ def JP_363(request):
         other5_notes_left = request.POST.get('other5_notes_left')
         other5_notes_right = request.POST.get('other5_notes_right')
         other5_name_service = request.POST.get('other5_name_service')
-        
+        signature = request.POST.get('signature')
+        position = request.POST.get('position')
+        date = request.POST.get('date')
+        phone = request.POST.get('phone')
         
         csv_file_path = 'src/data/balanza_de_pago_data/JP-363.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
@@ -923,7 +926,7 @@ def JP_363(request):
                                 "other_PC_2_bonds_right", "other_PC_2_notes_left", "other_PC_2_notes_right", 
                                 "other_PC_2_name_service", "GNMA_bonds_left", "GN", "GNMA_notes_left", "GNMA_notes_right",
                                 "GNMA_name_service", "other5", "other5_bonds_left", "other5_bonds_right", "other5_notes_left",
-                                "other5_notes_right", "other5_name_service"
+                                "other5_notes_right", "other5_name_service", "signature", "position", "date", "phone"
                                 ])
             
             writer.writerow([
@@ -949,7 +952,8 @@ def JP_363(request):
                             other_PC_2_bonds_right, other_PC_2_notes_left, other_PC_2_notes_right,
                             other_PC_2_name_service, GNMA_bonds_left, GNMA_bonds_right, GNMA_notes_left,
                             GNMA_notes_right, GNMA_name_service, other5, other5_bonds_left, other5_bonds_right,
-                            other5_notes_left, other5_notes_right, other5_name_service
+                            other5_notes_left, other5_notes_right, other5_name_service, signature, position,
+                            date, phone
                             ])  
 
         return render(request, "cuestionarios/succesfull.html")

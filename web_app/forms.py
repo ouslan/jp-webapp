@@ -569,3 +569,9 @@ class JP_363(forms.Form):
     other5_notes_right = forms.CharField(label='Otros', max_length=100)
     other5_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
     
+    signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
+    position = forms.CharField(label='Position', max_length=100)
+    date = forms.CharField(label='Date', max_length=100)
+    phone = forms.CharField(label='Phone Number', max_length=100)
+    
+    
