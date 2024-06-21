@@ -149,6 +149,21 @@ td {
   font-weight: 100;
 }
 
+#year {
+  width: 24%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+#input-box {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
 .left-header {
   text-align: left;
 }
