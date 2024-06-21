@@ -470,46 +470,100 @@ class JP_361(forms.Form):
     position = forms.CharField(label='Position', max_length=100)
     
 class JP_363(forms.Form):
-    bonds_year_left
-    bonds_year_right
-    notes_year_left
-    notes_year_right
+    bonds_year_left = forms.CharField(label='Año', max_length=4)
+    bonds_year_right = forms.CharField(label='Año', max_length=4)
+    notes_year_left = forms.CharField(label='Año', max_length=4)
+    notes_year_right = forms.CharField(label='Año', max_length=4)
 
-    town_bonds_left
-    town_bonds_right
-    town_notes_left
-    town_notes_right
-    town_name_service
+    town_bonds_left = forms.CharField(label='Bonos Municipales', max_length=100)
+    town_bonds_right = forms.CharField(label='Bonos Municipales', max_length=100)
+    town_notes_left = forms.CharField(label='Notas Municipales', max_length=100)
+    town_notes_right = forms.CharField(label='Notas Municipales', max_length=100)
+    town_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
 
-    PC_bonds_left
-    PC_bonds_right
-    PC_notes_left
-    PC_notes_right
-    PC_name_service
+    PC_bonds_left = forms.CharField(label='Bonos Corporativos', max_length=100)
+    PC_bonds_right = forms.CharField(label='Bonos Corporativos', max_length=100)
+    PC_notes_left  = forms.CharField(label='Notas Corporativas', max_length=100)
+    PC_notes_right = forms.CharField(label='Notas Corporativas', max_length=100)
+    PC_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
 
-    EPA_bonds_left
-    EPA_bonds_right
-    EPA_notes_left
-    EPA_notes_right
-    EPA_name_service
+    EPA_bonds_left = forms.CharField(label='Bonos de la EPA', max_length=100)
+    EPA_bonds_right = forms.CharField(label='Bonos de la EPA', max_length=100)
+    EPA_notes_left = forms.CharField(label='Notas de la EPA', max_length=100)
+    EPA_notes_right = forms.CharField(label='Notas de la EPA', max_length=100)
+    EPA_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
 
-    HA_bonds_left
-    HA_bonds_right
-    HA_notes_left
-    HA_notes_right
-    HA_name_service
+    HA_bonds_left = forms.CharField(label='Bonos de la HA', max_length=100)
+    HA_bonds_right = forms.CharField(label='Bonos de la HA', max_length=100)
+    HA_notes_left = forms.CharField(label='Notas de la HA', max_length=100)
+    HA_notes_right = forms.CharField(label='Notas de la HA', max_length=100)
+    HA_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
 
-    ASA_bonds_left
-    ASA_bonds_right
-    ASA_notes_left
-    ASA_notes_right
-    ASA_name_service
+    ASA_bonds_left = forms.CharField(label='Bonos de la ASA', max_length=100)
+    ASA_bonds_right = forms.CharField(label='Bonos de la ASA', max_length=100)
+    ASA_notes_left = forms.CharField(label='Notas de la ASA', max_length=100)
+    ASA_notes_right = forms.CharField(label='Notas de la ASA', max_length=100)
+    ASA_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
 
-    PBA_bonds_left
-    PBA_bonds_right
-    PBA_notes_left
-    PBA_notes_right
-    PBA_name_service
+    PBA_bonds_left = forms.CharField(label='Bonos de la PBA', max_length=100)
+    PBA_bonds_right = forms.CharField(label='Bonos de la PBA', max_length=100)
+    PBA_notes_left = forms.CharField(label='Notas de la PBA', max_length=100)
+    PBA_notes_right = forms.CharField(label='Notas de la PBA', max_length=100)
+    PBA_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
 
-    PA_bonds_left
+    PA_bonds_left = forms.CharField(label='Bonos de la PA', max_length=100)
+    PA_bonds_right = forms.CharField(label='Bonos de la PA', max_length=100)
+    PA_notes_left = forms.CharField(label='Notas de la PA', max_length=100)
+    PA_notes_right = forms.CharField(label='Notas de la PA', max_length=100)
+    PA_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
+
+    IDC_bonds_left = forms.CharField(label='Bonos de la IDC', max_length=100)
+    IDC_bonds_right = forms.CharField(label='Bonos de la IDC', max_length=100)
+    IDC_notes_left = forms.CharField(label='Notas de la IDC', max_length=100)
+    IDC_notes_right = forms.CharField(label='Notas de la IDC', max_length=100)
+    IDC_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
+
+    GDB_bonds_left = forms.CharField(label='Bonos del GDB', max_length=100)
+    GDB_bonds_right = forms.CharField(label='Bonos del GDB', max_length=100)
+    GDB_notes_left = forms.CharField(label='Notas del GDB', max_length=100)
+    GDB_notes_right = forms.CharField(label='Notas del GDB', max_length=100)
+    GDB_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
+
+    HFC_bonds_left = forms.CharField(label='Bonos de la HFC', max_length=100)
+    HFC_bonds_right = forms.CharField(label='Bonos de la HFC', max_length=100)
+    HFC_notes_left = forms.CharField(label='Notas de la HFC', max_length=100)
+    HFC_notes_right = forms.CharField(label='Notas de la HFC', max_length=100)
+    HFC_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
+
+    other_bonds_left = forms.CharField(label='Otros Bonos', max_length=100)
+    other_bonds_right = forms.CharField(label='Otros Bonos', max_length=100)
+    other_notes_left = forms.CharField(label='Otras Notas', max_length=100)
+    other_notes_right = forms.CharField(label='Otras Notas', max_length=100)
+    other_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
+
+    other_PC_1 = forms.CharField(label='Otros Corporativos', max_length=100)
+    other_PC_1_bonds_left = forms.CharField(label='Bonos', max_length=100)
+    other_PC_1_bonds_right = forms.CharField(label='Bonos', max_length=100)
+    other_PC_1_notes_left = forms.CharField(label='Notas', max_length=100)
+    other_PC_1_notes_right = forms.CharField(label='Notas', max_length=100)
+    other_PC_1_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
+
+    other_PC_2 = forms.CharField(label='Otros Corporativos', max_length=100)
+    other_PC_2_bonds_left = forms.CharField(label='Bonos', max_length=100)
+    other_PC_2_bonds_right = forms.CharField(label='Bonos', max_length=100)
+    other_PC_2_notes_left = forms.CharField(label='Notas', max_length=100)
+    other_PC_2_notes_right = forms.CharField(label='Notas', max_length=100)
+    other_PC_2_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
+
+    GNMA_bonds_left = forms.CharField(label='Bonos de la GNMA', max_length=100)
+    GNMA_bonds_right = forms.CharField(label='Bonos de la GNMA', max_length=100)
+    GNMA_notes_left = forms.CharField(label='Notas de la GNMA', max_length=100)
+    GNMA_notes_right = forms.CharField(label='Notas de la GNMA', max_length=100)
+    GNMA_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
+
+    other5_bonds_left = forms.CharField(label='Otros', max_length=100)
+    other5_bonds_right = forms.CharField(label='Otros', max_length=100)
+    other5_notes_left = forms.CharField(label='Otros', max_length=100)
+    other5_notes_right = forms.CharField(label='Otros', max_length=100)
+    other5_name_service = forms.CharField(label='Nombre del Servicio', max_length=100)
     
