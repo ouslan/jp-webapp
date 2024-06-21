@@ -901,9 +901,55 @@ def JP_363(request):
             
             if not file_exists:
                 writer.writerow([
+                                "bonds_year_left", "bonds_year_right", "notes_year_left", "notes_year_right", 
+                                "CG_bonds_left", "CG_bonds_right", "CG_notes_left", "CG_notes_right", "CG_name_service",
+                                "town_bonds_left", "town_bonds_right", "town_notes_left", "town_notes_right", 
+                                "town_name_service", "PC_bonds_left", "PC_bonds_right", "PC_notes_left", 
+                                "PC_notes_right", "PC_name_service", "EPA_bonds_left", "EPA_bonds_right", 
+                                "EPA_notes_left", "EPA_notes_right", "EPA_name_service", "HA_bonds_left", 
+                                "HA_bonds_right", "HA_notes_left", "HA_notes_right", "HA_name_service", 
+                                "ASA_bonds_left", "ASA_bonds_right", "ASA_notes_left", "ASA_notes_right", 
+                                "ASA_name_service", "PBA_bonds_left", "PBA_bonds_right", "PBA_notes_left", 
+                                "PBA_notes_right", "PBA_name_service", "PA_bonds_left", "PA_bonds_right", 
+                                "PA_notes_left", "PA_notes_right", "PA_name_service", "TA_bonds_left", 
+                                "TA_bonds_right", "TA_notes_left", "TA_notes_right", "TA_name_service", 
+                                "IDC_bonds_left", "IDC_bonds_right", "IDC_notes_left", "IDC_notes_right", 
+                                "IDC_name_service", "GDB_bonds_left", "GDB_bonds_right", "GDB_notes_left", 
+                                "GDB_notes_right", "GDB_name_service", "HFC_bonds_left", "HFC_bonds_right", 
+                                "HFC_notes_left", "HFC_notes_right", "HFC_name_service", "other", "other_bonds_left",
+                                "other_bonds_right", "other_notes_left", "other_notes_right", "other_name_service", 
+                                "other_PC_1", "other_PC_1_bonds_left", "other_PC_1_bonds_right", "other_PC_1_notes_left", 
+                                "other_PC_1_notes_right", "other_PC_1_name_service", "other_PC_2", "other_PC_2_bonds_left",
+                                "other_PC_2_bonds_right", "other_PC_2_notes_left", "other_PC_2_notes_right", 
+                                "other_PC_2_name_service", "GNMA_bonds_left", "GN", "GNMA_notes_left", "GNMA_notes_right",
+                                "GNMA_name_service", "other5", "other5_bonds_left", "other5_bonds_right", "other5_notes_left",
+                                "other5_notes_right", "other5_name_service"
                                 ])
             
             writer.writerow([
+                            bonds_year_left, bonds_year_right, notes_year_left, notes_year_right,
+                            CG_bonds_left, CG_bonds_right, CG_notes_left, CG_notes_right, CG_name_service,
+                            town_bonds_left, town_bonds_right, town_notes_left, town_notes_right,
+                            town_name_service, PC_bonds_left, PC_bonds_right, PC_notes_left,
+                            PC_notes_right, PC_name_service, EPA_bonds_left, EPA_bonds_right,
+                            EPA_notes_left, EPA_notes_right, EPA_name_service, HA_bonds_left,
+                            HA_bonds_right, HA_notes_left, HA_notes_right, HA_name_service,
+                            ASA_bonds_left, ASA_bonds_right, ASA_notes_left, ASA_notes_right,
+                            ASA_name_service, PBA_bonds_left, PBA_bonds_right, PBA_notes_left,
+                            PBA_notes_right, PBA_name_service, PA_bonds_left, PA_bonds_right,
+                            PA_notes_left, PA_notes_right, PA_name_service, TA_bonds_left,
+                            TA_bonds_right, TA_notes_left, TA_notes_right, TA_name_service,
+                            IDC_bonds_left, IDC_bonds_right, IDC_notes_left, IDC_notes_right,
+                            IDC_name_service, GDB_bonds_left, GDB_bonds_right, GDB_notes_left,
+                            GDB_notes_right, GDB_name_service, HFC_bonds_left, HFC_bonds_right,
+                            HFC_notes_left, HFC_notes_right, HFC_name_service, other, other_bonds_left,
+                            other_bonds_right, other_notes_left, other_notes_right, other_name_service,
+                            other_PC_1, other_PC_1_bonds_left, other_PC_1_bonds_right, other_PC_1_notes_left,
+                            other_PC_1_notes_right, other_PC_1_name_service, other_PC_2, other_PC_2_bonds_left,
+                            other_PC_2_bonds_right, other_PC_2_notes_left, other_PC_2_notes_right,
+                            other_PC_2_name_service, GNMA_bonds_left, GNMA_bonds_right, GNMA_notes_left,
+                            GNMA_notes_right, GNMA_name_service, other5, other5_bonds_left, other5_bonds_right,
+                            other5_notes_left, other5_notes_right, other5_name_service
                             ])  
 
         return render(request, "cuestionarios/succesfull.html")
