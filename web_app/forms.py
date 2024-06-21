@@ -470,4 +470,46 @@ class JP_361(forms.Form):
     position = forms.CharField(label='Position', max_length=100)
     
 class JP_363(forms.Form):
+    bonds_year_left
+    bonds_year_right
+    notes_year_left
+    notes_year_right
+
+    town_bonds_left
+    town_bonds_right
+    town_notes_left
+    town_notes_right
+    town_name_service
+
+    PC_bonds_left
+    PC_bonds_right
+    PC_notes_left
+    PC_notes_right
+    PC_name_service
+
+    EPA_bonds_left
+    EPA_bonds_right
+    EPA_notes_left
+    EPA_notes_right
+    EPA_name_service
+
+    HA_bonds_left
+    HA_bonds_right
+    HA_notes_left
+    HA_notes_right
+    HA_name_service
+
+    ASA_bonds_left
+    ASA_bonds_right
+    ASA_notes_left
+    ASA_notes_right
+    ASA_name_service
+
+    PBA_bonds_left
+    PBA_bonds_right
+    PBA_notes_left
+    PBA_notes_right
+    PBA_name_service
+
+    PA_bonds_left
     
