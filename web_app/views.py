@@ -800,4 +800,4 @@ def succesfull_page(request):
 
 
 def Forms(request):
-    return render(request, "forms.html")
+    return render(request, "cuestionarios/forms.html")
