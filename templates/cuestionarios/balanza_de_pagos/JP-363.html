@@ -39,7 +39,49 @@
             </tr>
           </table>
         </section>
+
         <main>
+            <section>
+                <div class="big-box-bottom">
+                    <div class="left-signature">
+                        <input type="text" id="signature" name="signature" placeholder="Name" required></input> <!-- Signature Input -->
+                        <hr> <!-- Signature Line -->
+                        <p>
+                            Name of person filling the questionnaire<br>
+                        </p>
+                    </div>
+
+                    <div class="right-signature">
+                        <input type="text" id="signature" name="position" placeholder="Position" required></input> <!-- Signature Input -->
+                        <hr> <!-- Signature Line -->
+                        <p>
+                            Position<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="big-box-bottom" id="signature-bottom">
+                    <div class="left-signature">
+                        <input type="date" id="signature" name="date" placeholder="Date" required></input> <!-- Signature Input -->
+                        <hr> <!-- Signature Line -->
+                        <p>
+                            Date<br>
+                        </p>
+                    </div>
+
+                    <div class="right-signature">
+                        <input type="tel" id="signature" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="phone" placeholder="123-456-7890" required><!-- Signature Input -->
+                        <hr> <!-- Signature Line -->
+                        <p>
+                            Phone Number<br>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class = 'submit-button-container'>
+                <input type="submit" value="SUBMIT" class="submit-button"></input>
+            </section>
         </main>
     </body>
 </html>

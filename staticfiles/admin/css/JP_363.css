@@ -80,3 +80,56 @@ td {
   text-align: center;
   border:none;
 }
+
+#signature {
+  width: 110%;
+  border: none;
+  margin-top: 5px;
+  font-size: 30px; 
+  font-style: italic;
+  font-family: 'Dancing Script', cursive;
+}
+
+#signature-bottom {
+  margin-top: 10px;
+}
+
+.big-box-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.left-signature {
+  width: 290px;
+  padding-top: 1px;
+  line-height: 1.5;
+  margin-right: 500px;
+  margin-bottom: 30px;
+}
+
+.right-signature {
+  width: 290px;
+  padding-top: 1px;
+  line-height: 1.5;
+}
+
+.submit-button-container {
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.submit-button {
+  font-size: 20px;
+  width: 120px;
+  height: 35px;
+  border: 0.5px solid #5a5a5a;
+  border-radius: 30px;
+  background-color: rgb(44, 143, 255);
+}
+
+.submit-button:hover {
+  background-color: rgb(6, 122, 255);
+}
