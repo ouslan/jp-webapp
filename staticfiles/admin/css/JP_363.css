@@ -158,6 +158,8 @@ td {
 
 #input-box {
   width: 100%;
+  height: 100%;
+  padding: 6px 8px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;

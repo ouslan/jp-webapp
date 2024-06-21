@@ -29,6 +29,16 @@ td {
 
 }
 
+input {
+    width: 100%;
+    height: 100%;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+
 .header, main {
     margin-bottom: 30px;
     background: #fff;
@@ -208,6 +218,7 @@ td {
     min-height:120px;
     max-height:120px;
     resize: none;
+    background-color: #f8f8f8;
 }
 #radio-1 {
     margin-left: 50px;
@@ -283,11 +294,13 @@ hr {
 
 #signature {
     width: 110%;
+    height: 45px;
     border: none;
     margin-top: 5px;
     font-size: 30px; 
     font-style: italic;
     font-family: 'Dancing Script', cursive;
+    background-color: white;
 }
 
 
@@ -392,4 +405,8 @@ hr {
 #poster_JP {
     width: 75px;
     height: 75px;
+}
+
+#title-inputs {
+    margin-top: 20px;
 }
