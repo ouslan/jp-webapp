@@ -149,3 +149,11 @@ td {
   font-weight: 100;
 }
 
+.left-header {
+  text-align: left;
+}
+
+.right-header {
+   text-align: right;
+}
+
