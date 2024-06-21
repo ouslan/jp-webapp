@@ -117,7 +117,7 @@ td {
     height: 250px;
     padding: 5px 5px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;

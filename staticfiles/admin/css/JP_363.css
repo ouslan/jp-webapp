@@ -174,3 +174,11 @@ td {
    text-align: right;
 }
 
+#position, #phone, #date {
+  width: 110%;
+  border: none;
+  margin-top: 5px;
+  font-size: 30px; 
+  font-style: italic;
+}
+
