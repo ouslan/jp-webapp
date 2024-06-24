@@ -220,9 +220,11 @@ input {
     resize: none;
     background-color: #f8f8f8;
 }
+
 #radio-1 {
-    margin-left: 50px;
-    margin-top: 18px;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 4%;
 }
 
 #radio-2 {
@@ -237,11 +239,16 @@ input {
     resize: vertical;
 }
 
+#options_container {
+    margin-top: 5px;
+    margin-left: -15px;
+}
+
 .first_div_container {
     margin-left: 16px;
 }
 
-.second_div_container {
+.second_div_container input{
    margin-left: -30px;
 }
 
