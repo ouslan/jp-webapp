@@ -266,8 +266,7 @@ def JP_361(request):
             writer = csv.writer(file)
             
             if not file_exists:
-                writer.writerow([
-                                'income_expenses_year_1', 'income_expenses_year_2',
+                writer.writerow(['income_expenses_year_1', 'income_expenses_year_2',
                                 'income_life_1', 'income_life_2', 'income_disability_1',
                                 'income_disability_2', 'income_auto_1', 'income_auto_2',
                                 'income_other_1', 'income_other_2', 'income_interest_1', 
@@ -903,8 +902,7 @@ def JP_363(request):
             writer = csv.writer(file)
             
             if not file_exists:
-                writer.writerow([
-                                "bonds_year_left", "bonds_year_right", "notes_year_left", "notes_year_right", 
+                writer.writerow(["bonds_year_left", "bonds_year_right", "notes_year_left", "notes_year_right", 
                                 "CG_bonds_left", "CG_bonds_right", "CG_notes_left", "CG_notes_right", "CG_name_service",
                                 "town_bonds_left", "town_bonds_right", "town_notes_left", "town_notes_right", 
                                 "town_name_service", "PC_bonds_left", "PC_bonds_right", "PC_notes_left", 
