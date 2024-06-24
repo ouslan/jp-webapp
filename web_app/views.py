@@ -964,3 +964,6 @@ def succesfull_page(request):
 
 def Forms(request):
     return render(request, "cuestionarios/forms.html")
+
+def JP_560(request):
+    return render(request, "cuestionarios/ingreso_neto/JP-560.html")
