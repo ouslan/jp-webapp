@@ -160,6 +160,7 @@ cython_debug/
 #.idea/
 
 # ignore files in Data folder
+data/*
 
 # ignore mac files
 *.DS_Store
