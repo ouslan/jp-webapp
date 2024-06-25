@@ -532,3 +532,17 @@ form .related-widget-wrapper ul {
 .clearable-file-input input {
     margin-top: 0;
 }
+
+a:hover {
+    color: rgb(255, 0, 221);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.links_container {
+    height: auto;
+}
+
+#center_links {
+    text-align: center;
+}
