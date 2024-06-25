@@ -330,6 +330,8 @@ def JP_362(request):
 def JP_364(request):
     return render(request, "cuestionarios/balanza_de_pagos/JP-364.html")
 
+def JP_375(request):
+    return render(request, "cuestionarios/balanza_de_pagos/JP-375.html")
 
 def IP_110(request):
     if request.method == "POST":
