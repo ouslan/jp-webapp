@@ -1036,3 +1036,7 @@ def JP_560(request):
             
         return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/ingreso_neto/JP-560.html")
+
+
+def JP_560_63111(request):
+    return render(request, "cuestionarios/ingreso_neto/JP-560-63111.html")
