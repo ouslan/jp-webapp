@@ -1036,3 +1036,128 @@ def JP_560(request):
             
         return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/ingreso_neto/JP-560.html")
+
+def IP_210(request):
+    if request.method == "POST":
+        # Retrieve form data
+        company_name = request.POST.get('company_name')
+        address = request.POST.get('address')
+        email = request.POST.get('email')
+        liaison_officer = request.POST.get('liaison_officer')
+        ssn = request.POST.get('ssn')
+        tel = request.POST.get('tel')
+        fax = request.POST.get('fax')
+        legal_form = request.POST.get('legal_form')
+        cfc = request.POST.get('cfc')
+        business_type = request.POST.get('business_type')
+        business_function = request.POST.get('business_function')
+        branches = request.POST.get('branches')
+        closing_date = request.POST.get('closing_date')
+        income_operations_12 = request.POST.get('income_operations_12')
+        income_operations_13 = request.POST.get('income_operations_13')
+        income_interests_12 = request.POST.get('income_interests_12')
+        income_interests_13 = request.POST.get('income_interests_13')
+        incomes_rents_12 = request.POST.get('incomes_rents_12')
+        incomes_rents_13 = request.POST.get('incomes_rents_12')
+        income_rent_land_12 = request.POST.get('income_rent_land_12')
+        income_rent_land_13 = request.POST.get('income_rent_land_13')
+        other_income_12 = request.POST.get('other_income_12')
+        other_income_13 = request.POST.get('other_income_13')
+        total_incomes_12 = request.POST.get('total_incomes_12')
+        total_incomes_13 = request.POST.get('total_incomes_13')
+        total_income_12 = request.POST.get('total_income_12')
+        total_income_13 = request.POST.get('total_income_13')
+        expenses_12 = request.POST.get('expenses_12')
+        expenses_13 = request.POST.get('expenses_13')
+        salaries_2012 = request.POST.get('salaries_2012') 
+        salaries_2013 = request.POST.get('salaries_2013')
+        expenses_interests_12 = request.POST.get('expenses_interests_12')
+        expenses_interests_13 = request.POST.get('expenses_interests_13')
+        depreciation_12 = request.POST.get('depreciation_12')
+        depreciation_13 = request.POST.get('depreciation_13')
+        expenses_rent_12 = request.POST.get('expenses_rent_12')
+        expenses_rent_13 = request.POST.get('expenses_rent_13')
+        bad_debts_12 = request.POST.get('bad_debts_12')
+        bad_debts_13 = request.POST.get('bad_debts_13')
+        donations_12 = request.POST.get('donations_12')
+        donations_13 = request.POST.get('donations_13')
+        sales_tax_12 = request.POST.get('sales_tax_12')
+        sales_tax_13 = request.POST.get('sales_tax_13')
+        machinery_12 = request.POST.get('machinery_12')
+        machinery_13 = request.POST.get('machinery_13')
+        other_purchases_12 = request.POST.get('other_purchases_12')
+        other_purchases_13 = request.POST.get('other_purchases_13')
+        licenses_12 = request.POST.get('licenses_12')
+        licenses_13 = request.POST.get('licenses_13')
+        other_expenses_12 = request.POST.get('other_expenses_12')
+        other_expenses_13 = request.POST.get('other_expenses_13')
+        total_expenses_12 = request.POST.get('total_expenses_12')
+        total_expenses_13 = request.POST.get('total_expenses_13')
+        net_profit_12 = request.POST.get('net_profit_12')
+        net_profit_13 = request.POST.get('net_profit_13')
+        income_tax_12 = request.POST.get('income_tax_12')
+        income_tax_13 = request.POST.get('income_tax_13')
+        profit_after_tax_12 = request.POST.get('profit_after_tax_12')
+        profit_after_tax_13 = request.POST.get('profit_after_tax_13')
+        withheld_tax_12 = request.POST.get('withheld_tax_12')
+        withheld_tax_13 = request.POST.get('withheld_tax_13')
+        signature = request.POST.get('signature')
+        rank = request.POST.get('rank')
+        
+        
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP_210.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow(['company_name','address','email','liaison_officer','ssn','tel','fax',
+                                 'legal_form','cfc','business_type','business_function','branches',
+                                 'closing_date','income_operations_12','income_operations_13',
+                                 'income_interests_12','income_interests_13','incomes_rents_12'
+                                 ,'incomes_rents_13' ,'income_rent_land_12','income_rent_land_13','other_income_12','other_income_13',
+                                 'total_incomes_12','total_incomes_13','total_income_12','total_income_13',
+                                 'expenses_12','expenses_13','salaries_2012','salaries_2013','expenses_interests_12'
+                                 ,'expenses_interests_13','depreciation_12', 'depreciation_13','bad_debts_12','bad_debts_13',
+                                 'expenses_rent_12','expenses_rent_13','donations_12','donations_13','sales_tax_12'
+                                 ,'sales_tax_13','machinery_12','machinery_13','other_purchases_12','other_purchases_13',
+                                 'licenses_12','licenses_13','other_expenses_12','other_expenses_13','total_expenses_12',
+                                 'total_expenses_13','net_profit_12','net_profit_13','income_tax_12','income_tax_13',
+                                 'profit_after_tax_12','profit_after_tax_13','withheld_tax_12','withheld_tax_13',
+                                 'signature','rank'
+                                ])
+            
+            writer.writerow([company_name, address, email, liaison_officer, 
+                             ssn, tel, fax, legal_form, cfc, business_type,
+                             business_function, branches, closing_date,
+                             income_operations_12, income_operations_13,
+                             income_interests_12, income_interests_13,
+                             incomes_rents_12, incomes_rents_13,
+                             income_rent_land_12, income_rent_land_13,
+                             other_income_12, other_income_13,
+                             total_incomes_12, total_incomes_13,
+                             total_income_12, total_income_13,
+                             expenses_12, expenses_13,
+                             salaries_2012, salaries_2013,
+                             expenses_interests_12, expenses_interests_13,
+                             depreciation_12, depreciation_13,
+                             expenses_rent_12, expenses_rent_13,
+                             bad_debts_12, bad_debts_13,
+                             donations_12, donations_13,
+                             sales_tax_12, sales_tax_13,
+                             machinery_12, machinery_13,
+                             other_purchases_12, other_purchases_13,
+                             licenses_12, licenses_13,
+                             other_expenses_12, other_expenses_13,
+                             total_expenses_12, total_expenses_13,
+                             net_profit_12, net_profit_13,
+                             income_tax_12, income_tax_13,
+                             profit_after_tax_12, profit_after_tax_13,
+                             withheld_tax_12, withheld_tax_13,
+                             signature, rank
+                            ])  
+
+        return render(request, "cuestionarios/succesfull.html")
+
+    return render(request, "cuestionarios/ingreso_neto/IP-210.html")
