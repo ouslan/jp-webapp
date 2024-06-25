@@ -417,3 +417,11 @@ hr {
 #title-inputs {
     margin-top: 20px;
 }
+
+#title {
+    margin-left: -1px;
+}
+
+.title-inputs {
+    margin-left: 20px;
+}
