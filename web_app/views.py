@@ -968,7 +968,7 @@ def succesfull_page(request):
 def Forms(request):
     return render(request, "cuestionarios/forms.html")
 
-def JP_560(request):
+def JP_560_63110(request):
     if request.method == "POST":
         # Retrieve form data
         ssn = request.POST.get('ssn')
@@ -1005,7 +1005,7 @@ def JP_560(request):
         signature = request.POST.get('signature')
         rank = request.POST.get('rank')
 
-        csv_file_path = 'data/cuestionarios/ingreso_neto/JP-560.csv'
+        csv_file_path = 'data/cuestionarios/ingreso_neto/JP-560-63110.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -1035,7 +1035,7 @@ def JP_560(request):
                             ])
             
         return render(request, "cuestionarios/succesfull.html")
-    return render(request, "cuestionarios/ingreso_neto/JP-560.html")
+    return render(request, "cuestionarios/ingreso_neto/JP-560-63110.html")
 
 def IP_210(request):
     if request.method == "POST":
