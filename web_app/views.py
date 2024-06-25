@@ -142,7 +142,7 @@ def JP_304(request):
         fecha_gasto_local = request.POST.get('fecha_gasto_local')
         numero_cuenta_local = request.POST.get('numero_cuenta_local')
         
-        csv_file_path = 'src/data/balanza_de_pago_data/JP-304.csv'
+        csv_file_path = 'data/cuestionarios/balanza_de_pago/JP-304.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -259,7 +259,7 @@ def JP_361(request):
         phone = request.POST.get('phone')
         position = request.POST.get('position')
         
-        csv_file_path = 'src/data/balanza_de_pago_data/JP-361.csv'
+        csv_file_path = 'data/cuestionarios/balanza_de_pago/JP-361.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -397,7 +397,7 @@ def IP_110(request):
         rank = request.POST.get('rank')
         
         
-        csv_file_path = 'src/data/ingreso_neto_data/IP_110_data.csv'
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP_110.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -721,7 +721,7 @@ def JP_541(request):
         value_fourth_trimester_4_5 = request.POST.get('value_fourth_trimester_4_5')
         
         
-        csv_file_path = 'src/data/construcción/JP-541.csv'
+        csv_file_path = 'data/cuestionarios/construcción/JP-541.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -895,7 +895,7 @@ def JP_363(request):
         date = request.POST.get('date')
         phone = request.POST.get('phone')
         
-        csv_file_path = 'src/data/balanza_de_pago_data/JP-363.csv'
+        csv_file_path = 'data/cuestionarios/balanza_de_pago/JP-363.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -1002,7 +1002,7 @@ def JP_560(request):
         signature = request.POST.get('signature')
         rank = request.POST.get('rank')
 
-        csv_file_path = 'src/data/ingreso_neto_data/JP-560.csv'
+        csv_file_path = 'data/cuestionarios/ingreso_neto/JP-560.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
