@@ -166,16 +166,6 @@ input {
   margin: 20px 0;
 }
 
-#signature {
-  width: 110%;
-  border: none;
-  margin-top: 5px;
-  font-size: 30px; 
-  font-style: italic;
-  font-family: 'Dancing Script', cursive;
-  background-color: #ffffff;
-}
-
 .big-box-bottom {
   display: flex;
   justify-content: center;
