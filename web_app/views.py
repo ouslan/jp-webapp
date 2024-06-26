@@ -10,7 +10,6 @@ import os
 def home(request):
     return render(request, "home.html")
 
-
 def macro(request):
     x = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
            2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
@@ -34,7 +33,6 @@ def macro(request):
 
 def datos_demograficos(request):
     return render(request, "demograficos.html")
-
 
 def ciclos_economicos(request):
     x = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
@@ -108,7 +106,6 @@ def indicadores(request):
                'indicadores18': indicadores_html18,
                }
     return render(request, "indicadores.html", context)
-
 
 def JP_304(request):
     if request.method == "POST":
@@ -495,9 +492,6 @@ def JP_362(request):
 def JP_364(request):
     return render(request, "cuestionarios/balanza_de_pagos/JP-364.html")
 
-def JP_375(request):
-    return render(request, "cuestionarios/balanza_de_pagos/JP-375.html")
-
 def IP_110(request):
     if request.method == "POST":
         # Retrieve form data
@@ -628,7 +622,6 @@ def IP_110(request):
         return render(request, "cuestionarios/succesfull.html")
 
     return render(request, "cuestionarios/ingreso_neto/IP-110.html")
-
 
 def JP_541(request):
     if request.method == "POST":
@@ -966,7 +959,6 @@ def JP_541(request):
     
     return render(request, "cuestionarios/construcción/JP-541.html")
 
-
 def JP_363(request):    
     if request.method == "POST":
         # Retrieve form data
@@ -1130,10 +1122,8 @@ def JP_363(request):
         return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/balanza_de_pagos/JP-363.html")
 
-
 def succesfull_page(request):
     return render(request, "cuestionarios/succesfull.html")
-
 
 def Forms(request):
     return render(request, "cuestionarios/forms.html")
@@ -1726,7 +1716,6 @@ def JP_560_63210(request):
     return render(request, "cuestionarios/ingreso_neto/JP-560-63210.html")
 
 def JP_560_2(request):
-
     if request.method == "POST":
         # Retrieve form data
         company_name = request.POST.get('company_name')
@@ -1767,8 +1756,7 @@ def JP_560_2(request):
             writer = csv.writer(file)
             
             if not file_exists:
-                writer.writerow([
-                                "company_name", "address", "email", "liaison_officer", 
+                writer.writerow(["company_name", "address", "email", "liaison_officer", 
                                 "ssn", "tel", "fax", "sales_1", "sales_2", "interest_received_1", 
                                 "interest_received_2", "other_income_1", "other_income_2", "total_income_1", 
                                 "total_income_2", "interest_paid_1", "interest_paid_2", "other_expenditures_1_1",
@@ -1777,8 +1765,7 @@ def JP_560_2(request):
                                 "final_inventory_1", "final_inventory_2", "signature", "rank"
                                 ])
                 
-            writer.writerow([
-                            company_name, address, email, liaison_officer, ssn, tel, fax, sales_1, sales_2, interest_received_1,
+            writer.writerow([company_name, address, email, liaison_officer, ssn, tel, fax, sales_1, sales_2, interest_received_1,
                             interest_received_2, other_income_1, other_income_2, total_income_1, total_income_2, interest_paid_1,
                             interest_paid_2, other_expenditures_1_1, other_expenditures_2_1, other_expenditures_1_2,
                             other_expenditures_2_2, net_profit_loss_1, net_profit_loss_2, initial_inventory_1, initial_inventory_2,
@@ -1788,3 +1775,125 @@ def JP_560_2(request):
         return render(request, "cuestionarios/succesfull.html")
 
     return render(request, "cuestionarios/ingreso_neto/JP-560-2.html")
+
+def JP_375(request):
+    if request.method == "POST":
+        # Retrieve form data
+        year_1 = request.POST.get('year_1')
+        year_2 = request.POST.get('year_2')
+        year_3 = request.POST.get('year_3')
+        
+        FHA_1 = request.POST.get('FHA_1')
+        FHA_2 = request.POST.get('FHA_2')
+        FHA_3 = request.POST.get('FHA_3')
+        
+        veteran_1 = request.POST.get('veteran_1')
+        veteran_2 = request.POST.get('veteran_2')
+        veteran_3 = request.POST.get('veteran_3')
+        
+        bank_1 = request.POST.get('bank_1')
+        bank_2 = request.POST.get('bank_2')
+        bank_3 = request.POST.get('bank_3')
+        
+        conventional_1 = request.POST.get('conventional_1')
+        conventional_2 = request.POST.get('conventional_2')
+        conventional_3 = request.POST.get('conventional_3')
+        
+        other_1 = request.POST.get('other_1')
+        other_2 = request.POST.get('other_2')
+        other_3 = request.POST.get('other_3')
+        
+        FHA_2_1  = request.POST.get('FHA_2_1')
+        FHA_2_2  = request.POST.get('FHA_2_2')
+        FHA_2_3  = request.POST.get('FHA_2_3')
+        
+        veteran_2_1 = request.POST.get('veteran_2_1')
+        veteran_2_2 = request.POST.get('veteran_2_2')
+        veteran_2_3 = request.POST.get('veteran_2_3')
+        
+        conventional_2_1 = request.POST.get('conventional_2_1')
+        conventional_2_2 = request.POST.get('conventional_2_2')
+        conventional_2_3 = request.POST.get('conventional_2_3')
+        
+        others_2_1 = request.POST.get('others_2_1')
+        others_2_2 = request.POST.get('others_2_2')
+        others_2_3 = request.POST.get('others_2_3')
+        
+        FHA_3_1 = request.POST.get('FHA_3_1')
+        FHA_3_2 = request.POST.get('FHA_3_2')
+        FHA_3_3 = request.POST.get('FHA_3_3')
+        
+        veteran_3_1 = request.POST.get('veteran_3_1')
+        veteran_3_2 = request.POST.get('veteran_3_2')
+        veteran_3_3 = request.POST.get('veteran_3_3')
+        
+        bank_2_1 = request.POST.get('bank_2_1')
+        bank_2_2 = request.POST.get('bank_2_2')
+        bank_2_3 = request.POST.get('bank_2_3')
+        
+        conventional_3_1 = request.POST.get('conventional_3_1')
+        conventional_3_2 = request.POST.get('conventional_3_2')
+        conventional_3_3 = request.POST.get('conventional_3_3')
+        
+        others_3_1 = request.POST.get('others_3_1')
+        others_3_2 = request.POST.get('others_3_2')
+        others_3_3 = request.POST.get('others_3_3')
+        
+        FHA_4_1 = request.POST.get('FHA_4_1')
+        FHA_4_2 = request.POST.get('FHA_4_2')
+        FHA_4_3 = request.POST.get('FHA_4_3')
+        
+        veteran_4_1 = request.POST.get('veteran_4_1')
+        veteran_4_2 = request.POST.get('veteran_4_2')
+        veteran_4_3 = request.POST.get('veteran_4_3')
+        
+        conventional_4_1 = request.POST.get('conventional_4_1')
+        conventional_4_2 = request.POST.get('conventional_4_2')
+        conventional_4_3 = request.POST.get('conventional_4_3')
+        
+        others_4_1 = request.POST.get('others_4_1')
+        others_4_2 = request.POST.get('others_4_2')
+        others_4_3 = request.POST.get('others_4_3')
+        
+        commissions_1 = request.POST.get('commissions_1')
+        commissions_2 = request.POST.get('commissions_2')
+        commissions_3 = request.POST.get('commissions_3')
+        
+        phone = request.POST.get('phone')
+        signature = request.POST.get('signature')
+        position = request.POST.get('position')
+        
+
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-375.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow(['year_1', 'year_2', 'year_3','FHA_1', 'FHA_2', 'FHA_3', 'veteran_1', 'veteran_2', 'veteran_3', 'bank_1', 'bank_2', 'bank_3',
+                                'conventional_1', 'conventional_2', 'conventional_3', 'other_1', 'other_2', 'other_3',
+                                'FHA_2_1', 'FHA_2_2', 'FHA_2_3', 'veteran_2_1', 'veteran_2_2', 'veteran_2_3', 'conventional_2_1',
+                                'conventional_2_2', 'conventional_2_3', 'others_2_1', 'others_2_2', 'others_2_3', 'FHA_3_1',
+                                'FHA_3_2', 'FHA_3_3', 'veteran_3_1', 'veteran_3_2', 'veteran_3_3', 'bank_2_1', 'bank_2_2',
+                                'bank_2_3', 'conventional_3_1', 'conventional_3_2', 'conventional_3_3', 'others_3_1',
+                                'others_3_2', 'others_3_3', 'FHA_4_1', 'FHA_4_2', 'FHA_4_3', 'veteran_4_1', 'veteran_4_2',
+                                'veteran_4_3', 'conventional_4_1', 'conventional_4_2', 'conventional_4_3', 'others_4_1',
+                                'others_4_2', 'others_4_3', 'commissions_1', 'commissions_2', 'commissions_3',
+                                'phone', 'signature', 'position'
+                                ])
+                
+            writer.writerow([year_1, year_2, year_3, FHA_1, FHA_2, FHA_3, veteran_1, veteran_2, veteran_3, bank_1, bank_2, bank_3,
+                            conventional_1, conventional_2, conventional_3, other_1, other_2, other_3,
+                            FHA_2_1, FHA_2_2, FHA_2_3, veteran_2_1, veteran_2_2, veteran_2_3, conventional_2_1,
+                            conventional_2_2, conventional_2_3, others_2_1, others_2_2, others_2_3, FHA_3_1,
+                            FHA_3_2, FHA_3_3, veteran_3_1, veteran_3_2, veteran_3_3, bank_2_1, bank_2_2,
+                            bank_2_3, conventional_3_1, conventional_3_2, conventional_3_3, others_3_1,
+                            others_3_2, others_3_3, FHA_4_1, FHA_4_2, FHA_4_3, veteran_4_1, veteran_4_2,
+                            veteran_4_3, conventional_4_1, conventional_4_2, conventional_4_3, others_4_1,
+                            others_4_2, others_4_3, commissions_1, commissions_2, commissions_3,
+                            phone, signature, position
+                            ])
+            
+        return render(request, "cuestionarios/succesfull.html")
+    return render(request, "cuestionarios/balanza_de_pagos/JP-375.html")

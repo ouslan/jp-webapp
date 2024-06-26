@@ -1061,3 +1061,89 @@ class JP_560_2(forms.Form):
     final_inventory_2 = forms.CharField(label='Final Inventory', max_length=100)
     signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
     rank = forms.CharField(label='Rank', max_length=100)
+    
+
+class JP_375(forms.Form):
+    year_1 = forms.CharField(label='Año / Year', max_length=100)
+    year_2 = forms.CharField(label='Año / Year', max_length=100)
+    year_3 = forms.CharField(label='Año / Year', max_length=100)
+    
+    FHA_1 = forms.CharField(label='1. F.H.A.', max_length=100)
+    FHA_2 = forms.CharField(label='1. F.H.A.', max_length=100)
+    FHA_3 = forms.CharField(label='1. F.H.A.', max_length=100)
+    
+    veteran_1 = forms.CharField(label='2. Adm. de Veteranos', max_length=100)
+    veteran_2 = forms.CharField(label='2. Adm. de Veteranos', max_length=100)
+    veteran_3 = forms.CharField(label='2. Adm. de Veteranos', max_length=100)
+    
+    bank_1 = forms.CharField(label='3. Banco de la Vivienda', max_length=100)
+    bank_2 = forms.CharField(label='3. Banco de la Vivienda', max_length=100)
+    bank_3 = forms.CharField(label='3. Banco de la Vivienda', max_length=100)
+    
+    conventional_1 = forms.CharField(label='4. Convencionales', max_length=100)
+    conventional_2 = forms.CharField(label='4. Convencionales', max_length=100)
+    conventional_3 = forms.CharField(label='4. Convencionales', max_length=100)
+    
+    other_1 = forms.CharField(label='5. Otras', max_length=100)
+    other_2 = forms.CharField(label='5. Otras', max_length=100)
+    other_3 = forms.CharField(label='5. Otras', max_length=100)
+    
+    FHA_2_1 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_2_2 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_2_3 = forms.CharField(label='1) F.H.A.', max_length=100)
+    
+    veteran_2_1 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_2_2 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_2_3 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    
+    conventional_2_1 = forms.CharField(label='3) Convencionales', max_length=100)
+    conventional_2_2 = forms.CharField(label='3) Convencionales', max_length=100)
+    conventional_2_3 = forms.CharField(label='3) Convencionales', max_length=100)
+    
+    others_2_1 = forms.CharField(label='4) Otras', max_length=100)
+    others_2_2 = forms.CharField(label='4) Otras', max_length=100)
+    others_2_3 = forms.CharField(label='4) Otras', max_length=100)
+    
+    FHA_3_1 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_3_2 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_3_3 = forms.CharField(label='1) F.H.A.', max_length=100)
+    
+    veteran_3_1 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_3_2 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_3_3 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    
+    bank_2_1 = forms.CharField(label='3) Banco de la Vivienda', max_length=100)
+    bank_2_2 = forms.CharField(label='3) Banco de la Vivienda', max_length=100)
+    bank_2_3 = forms.CharField(label='3) Banco de la Vivienda', max_length=100)
+    
+    conventional_3_1 = forms.CharField(label='4) Convencionales', max_length=100)
+    conventional_3_2 = forms.CharField(label='4) Convencionales', max_length=100)
+    conventional_3_3 = forms.CharField(label='4) Convencionales', max_length=100)
+    
+    others_3_1 = forms.CharField(label='5) Otras', max_length=100) 
+    others_3_2 = forms.CharField(label='5) Otras', max_length=100)
+    others_3_3 = forms.CharField(label='5) Otras', max_length=100)
+
+    FHA_4_1 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_4_2 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_4_3 = forms.CharField(label='1) F.H.A.', max_length=100)
+    
+    veteran_4_1 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_4_2 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_4_3 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    
+    conventional_4_1 = forms.CharField(label='3) Convencionales', max_length=100)
+    conventional_4_2 = forms.CharField(label='3) Convencionales', max_length=100)
+    conventional_4_3 = forms.CharField(label='3) Convencionales', max_length=100)
+    
+    others_4_1 = forms.CharField(label='4) Otras', max_length=100)
+    others_4_2 = forms.CharField(label='4) Otras', max_length=100)
+    others_4_3 = forms.CharField(label='4) Otras', max_length=100)
+
+    commissions_1 = forms.CharField(label='b) Comisiones Recibidas de No-Residentes 3/', max_length=100)
+    commissions_2 = forms.CharField(label='b) Comisiones Recibidas de No-Residentes 3/', max_length=100)
+    commissions_3 = forms.CharField(label='b) Comisiones Recibidas de No-Residentes 3/', max_length=100)
+    
+    phone = forms.CharField(label='Phone Number', max_length=100)
+    signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
+    position = forms.CharField(label='Position', max_length=100)
