@@ -39,6 +39,34 @@ main {
   text-align: center;
 }
 
+#header_image {
+  width: 80px;
+  height: 80px;
+}
+
+#header_left {
+  padding-top: 1px;
+  line-height: 1.5;
+  margin-right: 30%;
+  text-align: left;
+  border:none;
+}
+
+#header_center {
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 20px;
+  border:none;
+}
+
+#header_right {
+  padding-top: 1px;
+  line-height: 1.5;
+  margin-left: 30%;
+  text-align: right;
+  border:none;
+}
+
 table {
   table-layout: fixed;
   width: 100%;
