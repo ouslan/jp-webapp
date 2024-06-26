@@ -493,6 +493,25 @@ def JP_362(request):
     return render(request, "cuestionarios/balanza_de_pagos/JP-362.html")
 
 def JP_364(request):
+    if request.method == "POST":
+        # Retrieve form data
+        
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-364.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                
+                                ])
+            
+            writer.writerow([
+
+                            ])  
+
+        return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/balanza_de_pagos/JP-364.html")
 
 def JP_375(request):
