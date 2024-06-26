@@ -226,4 +226,8 @@ input {
     display: flex;
 }
 
+#table_title {
+    text-align: left;
+}
+
 
