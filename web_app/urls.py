@@ -13,6 +13,15 @@ urlpatterns = [
     re_path(r"^IP-110-agricultura/$", views.IP_110, name="IP-110"),
     re_path(r"^JP-541-valor-de-la-inversion-en-obras-de-construccion/$", views.JP_541, name="JP-541"),
     re_path(r"^JP-361-transactions-in-pr-of-external-insurance-companies/$", views.JP_361, name="JP-361"),
+    re_path(r"^JP-362-transacciones-con-el-exterior/$", views.JP_362, name="JP-362"),
+    re_path(r"^JP-363-investment-in-securities-of-the-central-goverment/$", views.JP_363, name="JP-363"),
+    re_path(r"^JP-560-63110-seguros-domesticos-de-vida/$", views.JP_560_63110, name="JP-560-63110"),
+    re_path(r"^IP-210-mineria/$", views.IP_210, name="IP-210"),    
+    re_path(r"^IP-220-utilidades/$", views.IP_220, name="IP-220"),
+    re_path(r"^JP-560-63111/$", views.JP_560_63111, name="JP-560-63111"),
+    re_path(r"^JP-364-informacion-sobre-compañias de seguros/$", views.JP_364, name="JP-364"),
+
     re_path(r"^JP-362-transacciones-con-el-exterior-para-la-balanza/$", views.JP_362, name="JP-362"),
     re_path(r"^Forms/$", views.Forms, name="Forms"),
 ]
+

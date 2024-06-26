@@ -117,7 +117,7 @@ td {
     height: 250px;
     padding: 5px 5px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
@@ -162,7 +162,7 @@ td {
     font-weight: normal;
     background-color: white;
     border: none;
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 #second-table {
@@ -178,4 +178,13 @@ td {
     text-align: right;
     font-size: 18px;
     margin-top: 60px;
+}
+
+.instruction-header {
+    margin-bottom: 50px;
+}
+
+.page1-footer {
+    height: 200px;
+    border: none;
 }

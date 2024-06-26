@@ -26,6 +26,13 @@ body {
     justify-content: center;
 }
 
+input {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
 #center-item {
     text-align: center;
 }
@@ -85,6 +92,14 @@ body {
     font-size: 30px; 
     font-style: italic;
     font-family: 'Dancing Script', cursive;
+}
+
+#position, #phone, #date {
+    width: 110%;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
 }
 
 #signature-bottom {

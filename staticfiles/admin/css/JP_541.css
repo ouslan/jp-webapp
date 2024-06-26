@@ -37,7 +37,9 @@ input {
     padding: 5px;
     display: inline-block;
     box-sizing: border-box;
-    border:0.5px solid #5a5a5a;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
 }
 
 #year {
