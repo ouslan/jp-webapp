@@ -1,4 +1,5 @@
 from django import forms
+from config_ui.settings import TEMPLATES
 
 class IP_110(forms.Form):
     company_name = forms.CharField(label='Nombre compañía / Company Name', max_length=100)
@@ -878,4 +879,49 @@ class IP_230(forms.Form):
     end_year_HD = forms.CharField(label='Año Final', max_length=100)
     signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
     rank = forms.CharField(label='Rank', max_length=100)
+    
+class JP_560_63210(forms.Form):
+    ssn = forms.CharField(label='Social Security Number', max_length=100)
+    tel = forms.CharField(label='Telephone Number', max_length=100)
+    fax = forms.CharField(label='Fax Number', max_length=100)
+    sales_1 = forms.CharField(label='Sales', max_length=100)
+    sales_2 = forms.CharField(label='Sales', max_length=100)
+    premiums_1 = forms.CharField(label='Premiums', max_length=100)
+    premiums_2 = forms.CharField(label='Premiums', max_length=100)
+    disability_A_1 = forms.CharField(label='Disability', max_length=100)
+    disability_A_2 = forms.CharField(label='Disability', max_length=100)
+    cars_A_1 = forms.CharField(label='Cars', max_length=100)
+    cars_A_2 = forms.CharField(label='Cars', max_length=100)
+    other_A_1 = forms.CharField(label='Other', max_length=100)
+    other_A_2 = forms.CharField(label='Other', max_length=100)
+    interest_received_1 = forms.CharField(label='Interest Received', max_length=100)
+    interest_received_2 = forms.CharField(label='Interest Received', max_length=100)
+    other_income_1 = forms.CharField(label='Other Income', max_length=100)
+    other_income_2 = forms.CharField(label='Other Income', max_length=100)
+    total_income_1 = forms.CharField(label='Total Income', max_length=100)
+    total_income_2 = forms.CharField(label='Total Income', max_length=100)
+    interest_paid_1 = forms.CharField(label='Interest Paid', max_length=100)
+    interest_paid_2 = forms.CharField(label='Interest Paid', max_length=100)
+    claims_paid_1 = forms.CharField(label='Claims Paid', max_length=100)
+    claims_paid_2 = forms.CharField(label='Claims Paid', max_length=100)
+    disability_B_1 = forms.CharField(label='Disability', max_length=100)
+    disability_B_2 = forms.CharField(label='Disability', max_length=100)
+    cars_B_1 = forms.CharField(label='Cars', max_length=100)
+    cars_B_2 = forms.CharField(label='Cars', max_length=100)
+    other_B_1 = forms.CharField(label='Other', max_length=100)
+    other_B_2 = forms.CharField(label='Other', max_length=100)
+    other_expenditures_1 = forms.CharField(label='Other Expenditures', max_length=100)
+    other_expenditures_2 = forms.CharField(label='Other Expenditures', max_length=100)
+    total_expenditures_1 = forms.CharField(label='Total Expenditures', max_length=100)
+    total_expenditures_2 = forms.CharField(label='Total Expenditures', max_length=100)
+    net_profit_loss_1 = forms.CharField(label='Net Profit/Loss', max_length=100)
+    net_profit_loss_2 = forms.CharField(label='Net Profit/Loss', max_length=100)
+    initial_inventory_1 = forms.CharField(label='Initial Inventory', max_length=100)
+    initial_inventory_2 = forms.CharField(label='Initial Inventory', max_length=100)
+    final_inventory_1 = forms.CharField(label='Final Inventory', max_length=100)
+    final_inventory_2 = forms.CharField(label='Final Inventory', max_length=100)
+    signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
+    rank = forms.CharField(label='Rank', max_length=100)
+    
+    
     
