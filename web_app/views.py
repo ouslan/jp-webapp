@@ -325,6 +325,171 @@ def JP_361(request):
     return render(request, "cuestionarios/balanza_de_pagos/JP-361.html")
 
 def JP_362(request):
+    if request.method == "POST":
+        # Retrieve form data
+        year_1 = request.POST.get('year_1')
+        year_2 = request.POST.get('year_2')
+        
+        company_name = request.POST.get('company_name')
+        
+        debts_balance = request.POST.get('debts_balance')
+        debts_emision = request.POST.get('debts_emision')
+        debts_amortizacion = request.POST.get('debts_amortizacion')
+        debts_final = request.POST.get('debts_final')
+        debts_interes = request.POST.get('debts_interes')
+        debts_acreedor = request.POST.get('debts_acreedor')
+        
+        debts_bond_balance = request.POST.get('debts_bond_balance')
+        debts_bond_emision = request.POST.get('debts_bond_emision')
+        debts_bond_amortizacion = request.POST.get('debts_bond_amortizacion')
+        debts_bond_final = request.POST.get('debts_bond_final')
+        debts_bond_interes = request.POST.get('debts_bond_interes')
+        debts_bond_acreedor = request.POST.get('debts_bond_acreedor')
+        
+        debts_promossory_notes_balance = request.POST.get('debts_promossory_notes_balance')
+        debts_promossory_notes_emision = request.POST.get('debts_promossory_notes_emision')
+        debts_promossory_notes_amortizacion = request.POST.get('debts_promossory_notes_amortizacion')
+        debts_promossory_notes_final = request.POST.get('debts_promossory_notes_final')
+        debts_promossory_notes_interes = request.POST.get('debts_promossory_notes_interes')
+        debts_promossory_notes_acreedor = request.POST.get('debts_promossory_notes_acreedor')
+        
+        debts_others_balance = request.POST.get('debts_others_balance')
+        debts_others_emision = request.POST.get('debts_others_emision')
+        debts_others_amortizacion = request.POST.get('debts_others_amortizacion')
+        debts_others_final = request.POST.get('debts_others_final')
+        debts_others_interes = request.POST.get('debts_others_interes')
+        debts_others_acreedor = request.POST.get('debts_others_acreedor')
+        
+        short_promossory_balance = request.POST.get('short_promossory_balance')
+        short_promossory_emision = request.POST.get('short_promossory_emision')
+        short_promossory_amortizacion = request.POST.get('short_promossory_amortizacion')
+        short_promossory_final = request.POST.get('short_promossory_final')
+        short_promossory_interes = request.POST.get('short_promossory_interes')
+        short_promossory_acreedor = request.POST.get('short_promossory_acreedor')
+        
+        short_account_balance = request.POST.get('short_account_balance')
+        short_account_emision = request.POST.get('short_account_emision')
+        short_account_amortizacion = request.POST.get('short_account_amortizacion')
+        short_account_final = request.POST.get('short_account_final')
+        short_account_interes = request.POST.get('short_account_interes')
+        short_account_acreedor = request.POST.get('short_account_acreedor')
+        
+        short_others_balance = request.POST.get('short_others_balance')
+        short_others_emision = request.POST.get('short_others_emision')
+        short_others_amortizacion = request.POST.get('short_others_amortizacion')
+        short_others_final = request.POST.get('short_others_final')
+        short_others_interes = request.POST.get('short_others_interes')
+        short_others_acreedor = request.POST.get('short_others_acreedor')
+        
+        short_term_balance = request.POST.get('short_term_balance')
+        short_term_emision = request.POST.get('short_term_emision')
+        short_term_amortizacion = request.POST.get('short_term_amortizacion')
+        short_term_final = request.POST.get('short_term_final')
+        short_term_interes = request.POST.get('short_term_interes')
+        short_term_acreedor = request.POST.get('short_term_acreedor')
+        
+        assets_balance = request.POST.get('assets_balance')
+        assets_emision = request.POST.get('assets_emision')
+        assets_amortizacion = request.POST.get('assets_amortizacion')
+        assets_final = request.POST.get('assets_final')
+        assets_interes = request.POST.get('assets_interes')
+        
+        assets_values_balance = request.POST.get('assets_values_balance')
+        assets_values_emision = request.POST.get('assets_values_emision')
+        assets_values_amortizacion = request.POST.get('assets_values_amortizacion')
+        assets_values_final = request.POST.get('assets_values_final')
+        assets_values_interes = request.POST.get('assets_values_interes')
+        
+        assets_others_balance = request.POST.get('assets_others_balance')
+        assets_others_emision = request.POST.get('assets_others_emision')
+        assets_others_amortizacion = request.POST.get('assets_others_amortizacion')
+        assets_others_final = request.POST.get('assets_others_final')
+        assets_others_interes = request.POST.get('assets_others_interes')
+        
+        short_balance = request.POST.get('short_balance')
+        short_emision = request.POST.get('short_emision')
+        short_amortizacion = request.POST.get('short_amortizacion')
+        short_final = request.POST.get('short_final')
+        short_interes = request.POST.get('short_interes')
+        
+        short_balance_balance = request.POST.get('short_balance_balance')
+        short_balance_emision = request.POST.get('short_balance_emision')
+        short_balance_amortizacion = request.POST.get('short_balance_amortizacion')
+        short_balance_final = request.POST.get('short_balance_final')
+        short_balance_interes = request.POST.get('short_balance_interes')
+        
+        short_accouts_balance = request.POST.get('short_accouts_balance')
+        short_accouts_emision = request.POST.get('short_accouts_emision')
+        short_accouts_amortizacion = request.POST.get('short_accouts_amortizacion')
+        short_accouts_final = request.POST.get('short_accouts_final')
+        short_accouts_interes = request.POST.get('short_accouts_interes')
+        
+        short_others_balance_2 = request.POST.get('short_others_balance_2')
+        short_others_emision_2 = request.POST.get('short_others_emision_2')
+        short_others_amortizacion_2 = request.POST.get('short_others_amortizacion_2')
+        short_others_final_2 = request.POST.get('short_others_final_2')
+        short_others_interes_2 = request.POST.get('short_others_interes_2')
+        
+        name_signature = request.POST.get('name_signature')
+        position_signature = request.POST.get('position_signature')
+        date_signature = request.POST.get('date_signature')
+        phone = request.POST.get('phone')
+        
+        
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-362.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow(['year_1', 'year_2', 'company_name', 'debts_balance', 'debts_emision', 'debts_amortizacion',
+                                'debts_final', 'debts_interes', 'debts_acreedor', 'debts_bond_balance', 'debts_bond_emision',
+                                'debts_bond_amortizacion', 'debts_bond_final', 'debts_bond_interes', 'debts_bond_acreedor',
+                                'debts_promossory_notes_balance', 'debts_promossory_notes_emision', 'debts_promossory_notes_amortizacion',
+                                'debts_promossory_notes_final', 'debts_promossory_notes_interes', 'debts_promossory_notes_acreedor',
+                                'debts_others_balance', 'debts_others_emision', 'debts_others_amortizacion', 'debts_others_final',
+                                'debts_others_interes', 'debts_others_acreedor', 'short_term_balance', 'short_term_emision',
+                                'short_term_amortizacion', 'short_term_final', 'short_term_interes', 'short_term_acreedor',
+                                'short_promossory_balance', 'short_promossory_emision', 'short_promossory_amortizacion', 'short_promossory_final',
+                                'short_promossory_interes', 'short_promossory_acreedor', 'short_account_balance', 'short_account_emision',
+                                'short_account_amortizacion', 'short_account_final', 'short_account_interes', 'short_account_acreedor',
+                                'short_others_balance', 'short_others_emision', 'short_others_amortizacion', 'short_others_final',
+                                'short_others_interes', 'short_others_acreedor', 'assets_balance', 'assets_emision', 'assets_amortizacion',
+                                'assets_final', 'assets_interes', 'assets_values_balance', 'assets_values_emision', 'assets_values_amortizacion',
+                                'assets_values_final', 'assets_values_interes', 'assets_others_balance', 'assets_others_emision',
+                                'assets_others_amortizacion', 'assets_others_final', 'assets_others_interes', 'short_balance',
+                                'short_emision', 'short_amortizacion', 'short_final', 'short_interes',
+                                'short_balance_balance', 'short_balance_emision', 'short_balance_amortizacion', 'short_balance_final', 'short_balance_interes',
+                                'short_accouts_balance', 'short_accouts_emision', 'short_accouts_amortizacion', 'short_accouts_final',
+                                'short_accouts_interes', 'short_others_balance_2', 'short_others_emision_2', 'short_others_amortizacion_2',
+                                'short_others_final_2', 'short_others_interes_2', 'name_signature', 'position_signature', 'date_signature', 'phone'
+                                ])
+            
+            writer.writerow([year_1, year_2, company_name, debts_balance, debts_emision, debts_amortizacion,
+                            debts_final, debts_interes, debts_acreedor, debts_bond_balance, debts_bond_emision,
+                            debts_bond_amortizacion, debts_bond_final, debts_bond_interes, debts_bond_acreedor,
+                            debts_promossory_notes_balance, debts_promossory_notes_emision, debts_promossory_notes_amortizacion,
+                            debts_promossory_notes_final, debts_promossory_notes_interes, debts_promossory_notes_acreedor,
+                            debts_others_balance, debts_others_emision, debts_others_amortizacion, debts_others_final,
+                            debts_others_interes, debts_others_acreedor, short_term_balance, short_term_emision,
+                            short_term_amortizacion, short_term_final, short_term_interes, short_term_acreedor,
+                            short_promossory_balance, short_promossory_emision, short_promossory_amortizacion, short_promossory_final,
+                            short_promossory_interes, short_promossory_acreedor, short_account_balance, short_account_emision,
+                            short_account_amortizacion, short_account_final, short_account_interes, short_account_acreedor,
+                            short_others_balance, short_others_emision, short_others_amortizacion, short_others_final,
+                            short_others_interes, short_others_acreedor, assets_balance, assets_emision, assets_amortizacion,
+                            assets_final, assets_interes, assets_values_balance, assets_values_emision, assets_values_amortizacion,
+                            assets_values_final, assets_values_interes, assets_others_balance, assets_others_emision,
+                            assets_others_amortizacion, assets_others_final, assets_others_interes, short_balance,
+                            short_emision, short_amortizacion, short_final, short_interes,
+                            short_balance_balance, short_balance_emision, short_balance_amortizacion, short_balance_final, short_balance_interes,
+                            short_accouts_balance, short_accouts_emision, short_accouts_amortizacion, short_accouts_final,
+                            short_accouts_interes, short_others_balance_2, short_others_emision_2, short_others_amortizacion_2,
+                            short_others_final_2, short_others_interes_2, name_signature, position_signature, date_signature, phone
+                            ])  
+
+        return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/balanza_de_pagos/JP-362.html")
 
 def JP_364(request):
@@ -1341,3 +1506,285 @@ def JP_560_63111(request):
         return render(request, "cuestionarios/succesfull.html")
 
     return render(request, "cuestionarios/ingreso_neto/JP-560-63111.html")
+
+def IP_230(request):
+    if request.method == "POST":
+        # Retrieve form data
+        company_name = request.POST.get('company_name')
+        address = request.POST.get('address')
+        email = request.POST.get('email')
+        liaison_officer = request.POST.get('liaison_officer')
+        ssn = request.POST.get('ssn')
+        tel = request.POST.get('tel')
+        fax = request.POST.get('fax')
+        legal_form = request.POST.get('legal_form')
+        cfc = request.POST.get('cfc')
+        business_function = request.POST.get('business_function')
+        closing_date = request.POST.get('closing_date')
+        income_project_A_12 = request.POST.get('income_project_A_12')
+        income_project_A_13 = request.POST.get('income_project_A_13')
+        people_A_12 = request.POST.get('people_A_12')
+        people_A_13 = request.POST.get('people_A_13')
+        industries_businesses_A_12 = request.POST.get('industries_businesses_A_12')
+        industries_businesses_A_13 = request.POST.get('industries_businesses_A_13')
+        direct_indirect_B_12 = request.POST.get('direct_indirect_B_12')
+        direct_indirect_B_13 = request.POST.get('direct_indirect_B_13')
+        direct_christmas_vacation_B_12 = request.POST.get('direct_christmas_vacation_B_12')
+        direct_christmas_vacation_B_13 = request.POST.get('direct_christmas_vacation_B_13')
+        rent_land_building_B_12 = request.POST.get('rent_land_building_B_12')
+        rent_land_building_B_13 = request.POST.get('rent_land_building_B_13')
+        rent_equipment_B_12 = request.POST.get('rent_equipment_B_12')
+        rent_equipment_B_13 = request.POST.get('rent_equipment_B_13')
+        depreciation_B_12 = request.POST.get('depreciation_B_12')
+        depreciation_B_13 = request.POST.get('depreciation_B_13')
+        sales_tax_B_12 = request.POST.get('sales_tax_B_12')
+        sales_tax_B_13 = request.POST.get('sales_tax_B_13')
+        purchases_machinery_equipment_B_12 = request.POST.get('purchases_machinery_equipment_B_12')
+        purchases_machinery_equipment_B_13 = request.POST.get('purchases_machinery_equipment_B_13')
+        other_purchases_B_12 = request.POST.get('other_purchases_B_12')
+        other_purchases_B_13 = request.POST.get('other_purchases_B_13')
+        licenses_patent_B_12 = request.POST.get('licenses_patent_B_12')
+        licenses_patent_B_13 = request.POST.get('licenses_patent_B_13')
+        other_costs_direct_indirect_B_12 = request.POST.get('other_costs_direct_indirect_B_12')
+        other_costs_direct_indirect_B_13 = request.POST.get('other_costs_direct_indirect_B_13')
+        gross_profit_C_12 = request.POST.get('gross_profit_C_12')
+        gross_profit_C_13 = request.POST.get('gross_profit_C_13')
+        other_income_D_12 = request.POST.get('other_income_D_12')
+        other_income_D_13 = request.POST.get('other_income_D_13')
+        interest_D_12 = request.POST.get('interest_D_12')
+        interest_D_13 = request.POST.get('interest_D_13')
+        rent_land_building_D_12 = request.POST.get('rent_land_building_D_12')
+        rent_land_building_D_13 = request.POST.get('rent_land_building_D_13')
+        gain_loss_D_12 = request.POST.get('gain_loss_D_12')
+        gain_loss_D_13 = request.POST.get('gain_loss_D_13')
+        other_D_12 = request.POST.get('other_D_12')
+        other_D_13 = request.POST.get('other_D_13')
+        gross_profit_E_12 = request.POST.get('gross_profit_E_12')
+        gross_profit_E_13 = request.POST.get('gross_profit_E_13')
+        administrative_F_12 = request.POST.get('administrative_F_12')
+        administrative_F_13 = request.POST.get('administrative_F_13')
+        salaries_wages_bonus_commissions_F_12 = request.POST.get('salaries_wages_bonus_commissions_F_12')
+        salaries_wages_bonus_commissions_F_13 = request.POST.get('salaries_wages_bonus_commissions_F_13')
+        interest_F_12 = request.POST.get('interest_F_12')
+        interest_F_13 = request.POST.get('interest_F_13')
+        rent_land_building_F_12 = request.POST.get('rent_land_building_F_12')
+        rent_land_building_F_13 = request.POST.get('rent_land_building_F_13')
+        depreciation_F_12 = request.POST.get('depreciation_F_12')
+        depreciation_F_13 = request.POST.get('depreciation_F_13')
+        bad_depts_F_12 = request.POST.get('bad_depts_F_12')
+        bad_depts_F_13 = request.POST.get('bad_depts_F_13')
+        donation_F_12 = request.POST.get('donation_F_12')
+        donation_F_13 = request.POST.get('donation_F_13')
+        other_expenses_F_12 = request.POST.get('other_expenses_F_12')
+        other_expenses_F_13 = request.POST.get('other_expenses_F_13')
+        net_profit_G_12 = request.POST.get('net_profit_G_12')
+        net_profit_G_13 = request.POST.get('net_profit_G_13')
+        income_tax_G_12 = request.POST.get('income_tax_G_12')
+        income_tax_G_13 = request.POST.get('income_tax_G_13')
+        profit_after_tax_G_12 = request.POST.get('profit_after_tax_G_12')
+        profit_after_tax_G_13 = request.POST.get('profit_after_tax_G_13')
+        sales_tax_H_12 = request.POST.get('sales_tax_H_12')
+        sales_tax_H_13 = request.POST.get('sales_tax_H_13')
+        biginning_year_HA = request.POST.get('biginning_year_HA')
+        end_year_HB = request.POST.get('end_year_HB')
+        biginning_year_HC = request.POST.get('biginning_year_HC') 
+        end_year_HD = request.POST.get('end_year_HD') 
+        signature = request.POST.get('signature')
+        rank = request.POST.get('rank')
+
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP-230.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                "company_name","address","email","liaison_officer","ssn","tel","fax","legal_form",
+                                "cfc","business_function","closing_date","income_project_A_12","income_project_A_13",
+                                "people_A_12","people_A_13","industries_businesses_A_12","industries_businesses_A_13",
+                                "direct_indirect_B_12","direct_indirect_B_13","direct_christmas_vacation_B_12",
+                                "direct_christmas_vacation_B_13","rent_land_building_B_12","rent_land_building_B_13",
+                                "rent_equipment_B_12","rent_equipment_B_13","depreciation_B_12","depreciation_B_13",
+                                "sales_tax_B_12","sales_tax_B_13","purchases_machinery_equipment_B_12",
+                                "purchases_machinery_equipment_B_13","other_purchases_B_12","other_purchases_B_13",
+                                "licenses_patent_B_12","licenses_patent_B_13","other_costs_direct_indirect_B_12",
+                                "other_costs_direct_indirect_B_13","gross_profit_C_12","gross_profit_C_13",
+                                "other_income_D_12","other_income_D_13","interest_D_12","interest_D_13",
+                                "rent_land_building_D_12","rent_land_building_D_13","gain_loss_D_12","gain_loss_D_13",
+                                "other_D_12","other_D_13","gross_profit_E_12","gross_profit_E_13","administrative_F_12",
+                                "administrative_F_13","salaries_wages_bonus_commissions_F_12","salaries_wages_bonus_commissions_F_13",
+                                "interest_F_12","interest_F_13","rent_land_building_F_12","rent_land_building_F_13",
+                                "depreciation_F_12","depreciation_F_13","bad_depts_F_12","bad_depts_F_13",
+                                "donation_F_12","donation_F_13","other_expenses_F_12","other_expenses_F_13",
+                                "net_profit_G_12","net_profit_G_13","income_tax_G_12","income_tax_G_13",
+                                "profit_after_tax_G_12","profit_after_tax_G_13","sales_tax_H_12","sales_tax_H_13",
+                                "biginning_year_HA","end_year_HB","biginning_year_HC","end_year_HD","signature","rank"
+                                ])
+                
+            writer.writerow([
+                            company_name, address, email, liaison_officer, ssn, tel, fax, legal_form,
+                            cfc, business_function, closing_date, income_project_A_12, income_project_A_13,
+                            people_A_12, people_A_13, industries_businesses_A_12, industries_businesses_A_13,
+                            direct_indirect_B_12, direct_indirect_B_13, direct_christmas_vacation_B_12,
+                            direct_christmas_vacation_B_13, rent_land_building_B_12, rent_land_building_B_13,
+                            rent_equipment_B_12, rent_equipment_B_13, depreciation_B_12, depreciation_B_13,
+                            sales_tax_B_12, sales_tax_B_13, purchases_machinery_equipment_B_12,
+                            purchases_machinery_equipment_B_13, other_purchases_B_12, other_purchases_B_13,
+                            licenses_patent_B_12, licenses_patent_B_13, other_costs_direct_indirect_B_12,
+                            other_costs_direct_indirect_B_13, gross_profit_C_12, gross_profit_C_13,
+                            other_income_D_12, other_income_D_13, interest_D_12, interest_D_13,
+                            rent_land_building_D_12, rent_land_building_D_13, gain_loss_D_12, gain_loss_D_13,
+                            other_D_12, other_D_13, gross_profit_E_12, gross_profit_E_13, administrative_F_12,
+                            administrative_F_13, salaries_wages_bonus_commissions_F_12, salaries_wages_bonus_commissions_F_13,
+                            interest_F_12, interest_F_13, rent_land_building_F_12, rent_land_building_F_13,
+                            depreciation_F_12, depreciation_F_13, bad_depts_F_12, bad_depts_F_13,
+                            donation_F_12, donation_F_13, other_expenses_F_12, other_expenses_F_13,
+                            net_profit_G_12, net_profit_G_13, income_tax_G_12, income_tax_G_13,
+                            profit_after_tax_G_12, profit_after_tax_G_13, sales_tax_H_12, sales_tax_H_13,
+                            biginning_year_HA, end_year_HB, biginning_year_HC, end_year_HD, signature, rank
+                            ])
+            
+        return render(request, "cuestionarios/succesfull.html")
+    return render(request, "cuestionarios/ingreso_neto/IP-230.html")
+
+def JP_560_63210(request):
+    if request.method == "POST":
+        # Retrieve form data
+        ssn = request.POST.get('ssn')
+        tel = request.POST.get('tel')
+        fax = request.POST.get('fax')
+        sales_1 = request.POST.get('sales_1') 
+        sales_2 = request.POST.get('sales_2')
+        premiums_1 = request.POST.get('premiums_1')
+        premiums_2 = request.POST.get('premiums_2')
+        disability_A_1 = request.POST.get('disability_A_1') 
+        disability_A_2 = request.POST.get('disability_A_2')
+        cars_A_1 = request.POST.get('cars_A_1')
+        cars_A_2 = request.POST.get('cars_A_2')
+        other_A_1 = request.POST.get('other_A_1')
+        other_A_2 = request.POST.get('other_A_2')
+        interest_received_1 = request.POST.get('interest_received_1')
+        interest_received_2 = request.POST.get('interest_received_2')
+        other_income_1 = request.POST.get('other_income_1')
+        other_income_2 = request.POST.get('other_income_2')
+        total_income_1 = request.POST.get('total_income_1')
+        total_income_2 = request.POST.get('total_income_2')
+        interest_paid_1 = request.POST.get('interest_paid_1')
+        interest_paid_2 = request.POST.get('interest_paid_2')
+        claims_paid_1 = request.POST.get('claims_paid_1')
+        claims_paid_2 = request.POST.get('claims_paid_2')
+        disability_B_1 = request.POST.get('disability_B_1')
+        disability_B_2 = request.POST.get('disability_B_2')
+        cars_B_1 = request.POST.get('cars_B_1')
+        cars_B_2 = request.POST.get('cars_B_2')
+        other_B_1 = request.POST.get('other_B_1')
+        other_B_2 = request.POST.get('other_B_2')
+        other_expenditures_1 = request.POST.get('other_expenditures_1')
+        other_expenditures_2 = request.POST.get('other_expenditures_2')
+        total_expenditures_1 = request.POST.get('total_expenditures_1')
+        total_expenditures_2 = request.POST.get('total_expenditures_2')
+        net_profit_loss_1 = request.POST.get('net_profit_loss_1')
+        net_profit_loss_2 = request.POST.get('net_profit_loss_2')
+        initial_inventory_1 = request.POST.get('initial_inventory_1')
+        initial_inventory_2 = request.POST.get('initial_inventory_2')
+        final_inventory_1 = request.POST.get('final_inventory_1')
+        final_inventory_2 = request.POST.get('final_inventory_2')
+        signature = request.POST.get('signature')
+        rank = request.POST.get('rank')
+
+        csv_file_path = 'data/cuestionarios/ingreso_neto/JP-560-63210.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                "ssn","tel","fax","sales_1","sales_2","premiums_1","premiums_2","disability_A_1",
+                                "disability_A_2","cars_A_1","cars_A_2","other_A_1","other_A_2","interest_received_1",
+                                "interest_received_2","other_income_1","other_income_2","total_income_1","total_income_2",
+                                "interest_paid_1","interest_paid_2","claims_paid_1","claims_paid_2","disability_B_1",
+                                "disability_B_2","cars_B_1","cars_B_2","other_B_1","other_B_2","other_expenditures_1",
+                                "other_expenditures_2","total_expenditures_1","total_expenditures_2","net_profit_loss_1",
+                                "net_profit_loss_2","initial_inventory_1","initial_inventory_2","final_inventory_1",
+                                "final_inventory_2","signature","rank"
+                                ])
+                
+            writer.writerow([
+                            ssn, tel, fax, sales_1, sales_2, premiums_1, premiums_2, disability_A_1,
+                            disability_A_2, cars_A_1, cars_A_2, other_A_1, other_A_2, interest_received_1,
+                            interest_received_2, other_income_1, other_income_2, total_income_1, total_income_2,
+                            interest_paid_1, interest_paid_2, claims_paid_1, claims_paid_2, disability_B_1,
+                            disability_B_2, cars_B_1, cars_B_2, other_B_1, other_B_2, other_expenditures_1,
+                            other_expenditures_2, total_expenditures_1, total_expenditures_2, net_profit_loss_1,
+                            net_profit_loss_2, initial_inventory_1, initial_inventory_2, final_inventory_1,
+                            final_inventory_2, signature, rank
+                            ])
+            
+        return render(request, "cuestionarios/succesfull.html")
+    return render(request, "cuestionarios/ingreso_neto/JP-560-63210.html")
+
+def JP_560_2(request):
+
+    if request.method == "POST":
+        # Retrieve form data
+        company_name = request.POST.get('company_name')
+        address = request.POST.get('address')
+        email = request.POST.get('email')
+        liaison_officer = request.POST.get('liaison_officer')
+        ssn = request.POST.get('ssn')
+        tel = request.POST.get('tel')
+        fax = request.POST.get('fax')
+        sales_1 = request.POST.get('sales_1')
+        sales_2 = request.POST.get('sales_2')
+        interest_received_1 = request.POST.get('interest_received_1')
+        interest_received_2 = request.POST.get('interest_received_2')
+        other_income_1 = request.POST.get('other_income_1')
+        other_income_2 = request.POST.get('other_income_2')
+        total_income_1 = request.POST.get('total_income_1')
+        total_income_2 = request.POST.get('total_income_2')
+        interest_paid_1 = request.POST.get('interest_paid_1')
+        interest_paid_2 = request.POST.get('interest_paid_2')
+        other_expenditures_1_1 = request.POST.get('other_expenditures_1_1')
+        other_expenditures_2_1 = request.POST.get('other_expenditures_1_2')
+        other_expenditures_1_2 = request.POST.get('other_expenditures_2_1')
+        other_expenditures_2_2 = request.POST.get('other_expenditures_2_2')
+        net_profit_loss_1 = request.POST.get('net_profit_loss_1')
+        net_profit_loss_2 = request.POST.get('net_profit_loss_2')
+        initial_inventory_1 = request.POST.get('initial_inventory_1')
+        initial_inventory_2 = request.POST.get('initial_inventory_2')
+        final_inventory_1 = request.POST.get('final_inventory_1')
+        final_inventory_2 = request.POST.get('final_inventory_2')
+        signature = request.POST.get('signature')
+        rank = request.POST.get('rank')
+
+
+        csv_file_path = 'data/cuestionarios/ingreso_neto/JP-560-2.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                "company_name", "address", "email", "liaison_officer", 
+                                "ssn", "tel", "fax", "sales_1", "sales_2", "interest_received_1", 
+                                "interest_received_2", "other_income_1", "other_income_2", "total_income_1", 
+                                "total_income_2", "interest_paid_1", "interest_paid_2", "other_expenditures_1_1",
+                                "other_expenditures_2_1", "other_expenditures_1_2", "other_expenditures_2_2",
+                                "net_profit_loss_1", "net_profit_loss_2", "initial_inventory_1", "initial_inventory_2",
+                                "final_inventory_1", "final_inventory_2", "signature", "rank"
+                                ])
+                
+            writer.writerow([
+                            company_name, address, email, liaison_officer, ssn, tel, fax, sales_1, sales_2, interest_received_1,
+                            interest_received_2, other_income_1, other_income_2, total_income_1, total_income_2, interest_paid_1,
+                            interest_paid_2, other_expenditures_1_1, other_expenditures_2_1, other_expenditures_1_2,
+                            other_expenditures_2_2, net_profit_loss_1, net_profit_loss_2, initial_inventory_1, initial_inventory_2,
+                            final_inventory_1, final_inventory_2, signature, rank
+                            ])
+            
+        return render(request, "cuestionarios/succesfull.html")
+
+    return render(request, "cuestionarios/ingreso_neto/JP-560-2.html")
