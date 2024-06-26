@@ -1,5 +1,22 @@
 body {
     overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    width: 90%;
+    margin-left: 2.5%;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+main {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 260px;
+    border-radius: 8px;
 }
 
 #logo_table {
@@ -28,9 +45,13 @@ table {
 }
 
 th, td {
-    border: 1px solid black;
     padding: 5px;
     text-align: left;
+    max-width: 100%;
+    width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
 }
 
 th {
@@ -43,14 +64,6 @@ th {
 
 .header img {
     width: 150px;
-}
-
-
-td, th {
-    max-width: 100%;
-    width: 1500px;
-    margin: 0 auto;
-    text-align: center;
 }
 
 #left {
@@ -109,7 +122,108 @@ td, th {
     background-color: rgb(6, 122, 255);
 }
 
-#posterJp {
-    width: 50px;
-    height: 50px;
+input {
+    width: 100%;
+    padding: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
 }
+
+.header, main {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 26px;
+    border-radius: 8px;
+}
+.header {
+    width: 100%;
+    display: flex;
+}
+
+.header div {
+    flex: 1;
+    text-align: center;
+}
+
+.header div img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.divider-container {
+    margin-top: 30px;
+}
+
+#custom-line {
+    border-top: 2px solid #333;
+    margin: 20px 0;
+}
+
+#signature {
+    width: 110%;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+  }
+
+.big-box-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+  
+.left-signature {
+    width: 290px;
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-right: 500px;
+    margin-bottom: 30px;
+}
+
+.right-signature {
+    width: 290px;
+    padding-top: 1px;
+    line-height: 1.5;
+}
+
+#header_inputs_right {
+    width: 20%;
+    border: 1px solid #ccc;
+}
+
+#header_inputs_left {
+    width: 20%;
+    border: 1px solid #ccc;
+}
+
+#space_between {
+    justify-content: space-around;
+    margin: 8px;
+}
+
+.header * {
+    border: none;
+}
+
+#name {
+    margin-top: 30px;
+}
+
+#name_input {
+    margin-top: 27px;
+    margin-left: 4px;
+    width: 30%;
+}
+
+.body_header {
+    display: flex;
+}
+
+
