@@ -40,23 +40,24 @@ main {
 }
 
 table {
+    table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
-}
-
-th, td {
-    padding: 5px;
-    text-align: left;
-    max-width: 100%;
-    width: 1500px;
-    margin: 0 auto;
+  }
+  
+  th {
+    padding: 10px;
     text-align: center;
+    font-size: 0.9em;
     border: 1px solid black;
-}
-
-th {
-    background-color: #f2f2f2;
-}
+    background-color: #dddddd;
+  }
+  
+  td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+  }
 
 .header, .sub-header {
     text-align: center;
@@ -124,12 +125,13 @@ th {
 
 input {
     width: 100%;
-    padding: 5px;
-    display: inline-block;
+    height: 100%;
+    padding: 6px 8px;
     box-sizing: border-box;
+    padding: 6px 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #ffffff;
+    background-color: #f8f8f8;
 }
 
 .header, main {
@@ -171,6 +173,7 @@ input {
     font-size: 30px; 
     font-style: italic;
     font-family: 'Dancing Script', cursive;
+    background-color: #ffffff;
   }
 
 .big-box-bottom {
