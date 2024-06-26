@@ -578,7 +578,7 @@ class JP_363(forms.Form):
     date = forms.CharField(label='Date', max_length=100)
     phone = forms.CharField(label='Phone Number', max_length=100)
     
-class JP_560(forms.Forms):
+class JP_560_63110(forms.Forms):
     ssn = forms.CharField(label='Social Security Number', max_length=100)
     tel = forms.CharField(label='Telephone Number', max_length=100)
     fax = forms.CharField(label='Fax Number', max_length=100)
