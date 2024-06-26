@@ -24,6 +24,8 @@ urlpatterns = [
     re_path(r"^JP-364-informacion-sobre-compañias de seguros/$", views.JP_364, name="JP-364"),
     re_path(r"^JP-375-encuesta-sobre-valor-pendinente/$", views.JP_375, name="JP-375"),
     re_path(r"^JP-362-transacciones-con-el-exterior-para-la-balanza/$", views.JP_362, name="JP-362"),
+    re_path(r"^JP-560-2-preliminar/$", views.JP_560_2, name="JP-560-2"),
+    re_path(r"^JP-383-pagos-de-asistencia/$", views.JP_383, name="JP-383"),
     re_path(r"^Forms/$", views.Forms, name="Forms"),
 ]
 
