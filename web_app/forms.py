@@ -789,4 +789,93 @@ class JP_560_63111(forms.Form):
     final_inventory_2 = forms.CharField(label='Final Inventory', max_length=100)
     signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
     rank = forms.CharField(label='Rank', max_length=100)
-        
+    
+class IP_230(forms.Form):
+    company_name = forms.CharField(label='Nombre compañía / Company Name', max_length=100)
+    address = forms.CharField(label='Dirección / Address', max_length=200)
+    email = forms.EmailField(label='Correo electrónico / Email') 
+    liaison_officer = forms.CharField(label='Persona contacto / Liaison officer', max_length=100)
+    ssn = forms.CharField(label='Numero de Seguro Social / Social Security Number', max_length=11)
+    tel = forms.CharField(label='Tel', max_length=20)
+    fax = forms.CharField(label='Fax', max_length=20)
+    legal_form = forms.ChoiceField(
+        label='Forma legal de organización / Legal form of organization', 
+        choices=[('Corporación', 'Corporación'), ('Sociedad', 'Sociedad'), ('Cooperativa', 'Cooperativa'), ('Empresa Individual', 'Empresa Individual'), ('Empresa sin fines pecuniarios', 'Empresa sin fines pecuniarios')]
+    )
+    cfc = forms.ChoiceField(label='CEC', choices=[('Si', 'Si'), ('No', 'No')])
+    business_function = forms.CharField(
+        label='Describa brevemente la función principal del negocio / Explain briefly the main function of the business activity', 
+        widget=forms.Textarea
+    )
+    closing_date = forms.DateField(label='Fecha de cierre de sus libros / Your accounting period closing date', widget=forms.SelectDateWidget)
+    income_project_A_12 = forms.CharField(label='1. Ingresos por proyecto - Income from project'),
+    income_project_A_13 = forms.CharField(label='1. Ingresos por proyecto - Income from project'),
+    people_A_12 = forms.CharField(label='2. A personas - To persons'),
+    people_A_13 = forms.CharField(label='2. A personas - To persons'),
+    industries_businesses_A_12 = forms.CharField(label='3. A industrias y negocios - To industries and businesses'),
+    industries_businesses_A_13 = forms.CharField(label='3. A industrias y negocios - To industries and businesses'),
+    direct_indirect_B_12 = forms.CharField(label='4. Costos directos e indirectos - Direct and indirect costs'),
+    direct_indirect_B_13 = forms.CharField(label='4. Costos directos e indirectos - Direct and indirect costs'),
+    direct_christmas_vacation_B_12 = forms.CharField(label='a. Por bono de Navidad y vacaciones - On Christmas bonus and vacation'),
+    direct_christmas_vacation_B_13 = forms.CharField(label='a. Por bono de Navidad y vacaciones - On Christmas bonus and vacation'),
+    rent_land_building_B_12 = forms.CharField(label='b. Por renta de terreno y edificio - On rent of land and building'),
+    rent_land_building_B_13 = forms.CharField(label='b. Por renta de terreno y edificio - On rent of land and building'),
+    rent_equipment_B_12 = forms.CharField(label='c. Por renta de equipo - On rent of equipment'),
+    rent_equipment_B_13 = forms.CharField(label='c. Por renta de equipo - On rent of equipment'),
+    depreciation_B_12 = forms.CharField(label='d. Por depreciación - On depreciation'),
+    depreciation_B_13 = forms.CharField(label='d. Por depreciación - On depreciation'),
+    sales_tax_B_12 = forms.CharField(label='e. Por impuesto sobre la venta y uso - On sales and use tax'),
+    sales_tax_B_13 = forms.CharField(label='e. Por impuesto sobre la venta y uso - On sales and use tax'),
+    purchases_machinery_equipment_B_12 = forms.CharField(label='f. Por compra de maquinaria y equipo - On purchases of machinery and equipment'),
+    purchases_machinery_equipment_B_13 = forms.CharField(label='f. Por compra de maquinaria y equipo - On purchases of machinery and equipment'),
+    other_purchases_B_12 = forms.CharField(label='g. Por otras compras - On other purchases'),
+    other_purchases_B_13 = forms.CharField(label='g. Por otras compras - On other purchases'),
+    licenses_patent_B_12 = forms.CharField(label='h. Por licencias y patentes - On licenses and patents'),
+    licenses_patent_B_13 = forms.CharField(label='h. Por licencias y patentes - On licenses and patents'),
+    other_costs_direct_indirect_B_12 = forms.CharField(label='i. Otros costos directos e indirectos - Other direct and indirect costs'),
+    other_costs_direct_indirect_B_13 = forms.CharField(label='i. Otros costos directos e indirectos - Other direct and indirect costs'),
+    gross_profit_C_12 = forms.CharField(label='5. Utilidad bruta - Gross profit'),
+    gross_profit_C_13 = forms.CharField(label='5. Utilidad bruta - Gross profit'),
+    other_income_D_12 = forms.CharField(label='6. Otros ingresos - Other income'),
+    other_income_D_13 = forms.CharField(label='6. Otros ingresos - Other income'),
+    interest_D_12 = forms.CharField(label='7. Intereses - Interests'),
+    interest_D_13 = forms.CharField(label='7. Intereses - Interests'),
+    rent_land_building_D_12 = forms.CharField(label='8. Renta de terreno y edificio - Rent of land and building'),
+    rent_land_building_D_13 = forms.CharField(label='8. Renta de terreno y edificio - Rent of land and building'),
+    gain_loss_D_12 = forms.CharField(label='9. Ganancia o pérdida de capital - Capital gain or loss'),
+    gain_loss_D_13 = forms.CharField(label='9. Ganancia o pérdida de capital - Capital gain or loss'),
+    other_D_12 = forms.CharField(label='10. Otros - Other'),
+    other_D_13 = forms.CharField(label='10. Otros - Other'),
+    gross_profit_E_12 = forms.CharField(label='11. Utilidad bruta - Gross profit'),
+    gross_profit_E_13 = forms.CharField(label='11. Utilidad bruta - Gross profit'),
+    administrative_F_12 = forms.CharField(label='1. Gastos administrativos - Administrative expenses'),
+    administrative_F_13 = forms.CharField(label='1. Gastos administrativos - Administrative expenses'),
+    salaries_wages_bonus_commissions_F_12 = forms.CharField(label='2. Salarios, jornales, bono de Navidad y comisiones - Salaries, wages, Christmas bonus, and commissions'),
+    salaries_wages_bonus_commissions_F_13 = forms.CharField(label='2. Salarios, jornales, bono de Navidad y comisiones - Salaries, wages, Christmas bonus, and commissions'),
+    interest_F_12 = forms.CharField(label='3. Intereses - Interests'),
+    interest_F_13 = forms.CharField(label='3. Intereses - Interests'),
+    rent_land_building_F_12 = forms.CharField(label='4. Renta de terreno y edificio - Rent of land and building'),
+    rent_land_building_F_13 = forms.CharField(label='4. Renta de terreno y edificio - Rent of land and building'),
+    depreciation_F_12 = forms.CharField(label='5. Depreciación - Depreciation'),
+    depreciation_F_13 = forms.CharField(label='5. Depreciación - Depreciation'),
+    bad_depts_F_12 = forms.CharField(label='6. Cuentas incobrables - Bad debts'),
+    bad_depts_F_13 = forms.CharField(label='6. Cuentas incobrables - Bad debts'),
+    donation_F_12 = forms.CharField(label='7. Donativos - Donations'),
+    donation_F_13 = forms.CharField(label='7. Donativos - Donations'),
+    other_expenses_F_12 = forms.CharField(label='8. Otros gastos - Other expenses'),
+    other_expenses_F_13 = forms.CharField(label='8. Otros gastos - Other expenses'),
+    net_profit_G_12 = forms.CharField(label='9. Ganancia o pérdida neta ( + ó - ) - Net profit or loss ( + or - )'),
+    net_profit_G_13 = forms.CharField(label='9. Ganancia o pérdida neta ( + ó - ) - Net profit or loss ( + or - )'),
+    income_tax_G_12 = forms.CharField(label='1. Contribución sobre ingresos - Income tax'),
+    income_tax_G_13 = forms.CharField(label='1. Contribución sobre ingresos - Income tax'),
+    profit_after_tax_G_12 = forms.CharField(label='2. Ganancia después de contribución sobre ingresos - Profit after income tax'),
+    profit_after_tax_G_13 = forms.CharField(label='2. Ganancia después de contribución sobre ingresos - Profit after income tax'),
+    sales_tax_H_12 = forms.CharField(label='3. Impuesto sobre la venta y uso - sales and use tax'),
+    sales_tax_H_13 = forms.CharField(label='3. Impuesto sobre la venta y uso - sales and use tax'),
+    biginning_year_HA = forms.CharField(label='Año Inicial', max_length=100)
+    end_year_HB = forms.CharField(label='Año Final', max_length=100)
+    biginning_year_HC = forms.CharField(label='Año Inicial', max_length=100)
+    end_year_HD = forms.CharField(label='Año Final', max_length=100)
+    signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
+    rank = forms.CharField(label='Rank', max_length=100)
+    
