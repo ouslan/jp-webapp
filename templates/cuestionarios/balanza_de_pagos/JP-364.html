@@ -346,34 +346,33 @@
         <div class="custom-line"></div>
         <div id="text_button"></div>
 
-            <section>
-                <div class="big-box-bottom">
-                  <div class="left-signature">
-                    <input type="text" id="signature" name="signature" placeholder="Firma" required></input> <!-- Signature Input -->
-                    <hr> <!-- Signature Line -->
-                    <p>
-                      Nombre de la firma:<br>
-                    </p>
-                  </div>
-      
-                  <div class="right-signature">
-                    <input type="text" id="position" name="position" placeholder="Persona Autorizada" required></input> <!-- Signature Input -->
-                    <hr> <!-- Signature Line -->
-                    <p>
-                      Nombre de la persona autorizada:<br>
-                    </p>
-                  </div>
-                </div>
-      
-                  <div class="right-signature">
-                    <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="phone" placeholder="123-456-7890" required><!-- Signature Input -->
-                    <hr> <!-- Signature Line -->
-                    <p>
-                      teléfono:<br>
-                    </p>
-                  </div>
-                </div>
-              </section>
+        <section>
+            <div class="big-box-bottom">
+              <div class="left-signature">
+                <input id="signature" name="signature" placeholder="Firma" required></input> <!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                  Nombre de la firma:
+                </p>
+              </div>
+
+              <div class="center-signature">
+                <input id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="phone" placeholder="123-456-7890" required></input> <!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                  Número de Teléfono:
+                </p>
+              </div>
+  
+              <div class="right-signature">
+                <input id="position" name="position" placeholder="Persona Autorizada" required></input> <!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                  Nombre de la persona autorizada:
+                </p>
+              </div>
+            </div>
+          </section>
 
         <section class = 'submit-button-container'>
           <input type="submit" value="SUBMIT" class="submit-button"></input>
