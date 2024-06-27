@@ -52,7 +52,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'IP-230' %}">
+      <form method="POST" action="{% url 'IP-420' %}">
         {% csrf_token %}
         <section>
           <div class="body_header">
@@ -121,13 +121,13 @@
             <strong>5. Clase de negocio / Type of business:</strong>
             <br>
             <div id="options_container" class="second_div_container">
-              <input type="radio" id="radio-1" name="business_type" value="Corporación/Corporation" required>Distribuidor / Distributor
+              <input type="radio" id="radio-1" name="business_type" value="Corporación/Corporation" required>Distribuidor / Distribuidor
               <input type="radio" id="radio-1" name="business_type" value="Sociedad/Partnership" required>Representante / Representative
               <input type="radio" id="radio-1" name="business_type" value="Cooperativa/Cooperativa" required>Mayorista / Wholesaler
               <br>
               <input type="radio" id="radio-1" name="business_type" value="Empresa Individual/Individual enterprise" required>Supermercado / Supermarket
-              <input type="radio" id="radio-1" name="business_type" value="Empresa sin fines pecuniarios/Nonprofit organization">Otra clase de detallista / Other type of retailer (specify)
-              <input type="text" class="text-box space-between" id="text-box-5" name="other_retailer" placeholder="Enter your text here..." required></input>
+              <input type="radio" id="radio-1" value="Empresa sin fines pecuniarios/Nonprofit organization">Otra clase de detallista / Other type of retailer (specify)
+              <input type="text" class="text-box space-between" id="text-box-5" name="business_type" placeholder="Enter your text here..."></input>
             </div>
           </div>
 
@@ -213,11 +213,11 @@
             <div class="item">
               <label>&emsp;&emsp;&emsp;c. Inventario a fin de año / Inventory at he end of the year</label>
               <input type="number" name="inventory_end_1" placeholder="$" required>
-              <input type="number" name="inventory_end_1" placeholder="$" required>
+              <input type="number" name="inventory_end_2" placeholder="$" required>
             </div>
 
             <div class="item">
-              <label>&emsp;3.Beneficio bruto (1 - 2) / Gross profit (1 -2)</label>
+              <label>&emsp;3.Beneficio bruto (1 - 2) / Gross profit (1 - 2)</label>
               <input type="number" name="gross_profit_A_1" placeholder="$" required>
               <input type="number" name="gross_profit_A_2" placeholder="$" required>
             </div>
@@ -262,8 +262,8 @@
             <div id="title" class="item">
               <label><h2>B. total costos directos e indirectos - Direct and <br>
                 &emsp;indirect costs</h2></label>
-              <input class="title-inputs" id="title-inputs" type="number" name="direct_indirect_B_12" placeholder="$" required>
-              <input id="title-inputs" type="number" name="cost_B" placeholder="$" required>
+              <input class="title-inputs" id="title-inputs" type="number" name="cost_B_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="cost_B_2" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -340,8 +340,8 @@
           <div class="section">
             <div id="title" class="item">
               <label><h2>C. Beneficio bruto (A-B) - Gross profit (A-B)</h2></label>
-              <input class="title-inputs" id="title-inputs" type="number" name="gross_profit_C_12" placeholder="$" required>
-              <input id="title-inputs" type="number" name="gross_profit_C" placeholder="$" required>
+              <input class="title-inputs" id="title-inputs" type="number" name="gross_profit_C_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="gross_profit_C_2" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -361,8 +361,8 @@
           <div class="section">
             <div id="title" class="item">
               <label><h2>D. Impuesto sobre ventas y uso retenido / Sales and use tax &emsp; Withheld</h2></label>
-              <input class="title-inputs" id="title-inputs" type="number" name="other_income_D_12" placeholder="$" required>
-              <input id="title-inputs" type="number" name="sales_D" placeholder="$" required>
+              <input class="title-inputs" id="title-inputs" type="number" name="sales_D_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="sales_D_2" placeholder="$" required>
             </div>
           </div>
 
