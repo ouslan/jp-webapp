@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
-    <link rel="stylesheet" href="{% static 'JP_362.css' %}" />
+    <link rel="stylesheet" href="{% static 'JP_383.css' %}" />
     <link rel="stylesheet" href="{% static 'website.css' %}" />
   </head>
 
@@ -23,15 +23,15 @@
       <table>
         <tr>
           <td id="header_left">
-            J.P. -383<br>
+            JP-383<br>
             Rev. Jul-17<br>
           </td>
           <td id="header_center">
             <img src="{% static 'JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
-            <h3>Informe mensual de los pagos de asistencia y reducción de intereses 
+            <p>Informe mensual de los pagos de asistencia y reducción de intereses 
                 en hipotecas sobre hogares bajo diferentes programas 
                 de la Federal Housing Administration 
-                </h3><br>
+                </p><br>
           </td>
           <td id="header_right">
             Junta de Planificación de Puerto Rico<br>
@@ -50,24 +50,19 @@
             <table>
                 <tr>
                     <th rowspan="2"><h3>Año y mes</h3></th>
-                    <th rowspan="2"><h3>Sección 235</h3></th>
-                    <th rowspan="2"><h3>Sección 255</h3></th>
-                    <th rowspan="2"><h3>Sección 256</h3></th>
-                    <th rowspan="2"><h3>Sección 265</h3></th>
-                    <th rowspan="2"><h3>Sección 266</h3></th>
-                    <th rowspan="2"><h3>Otra Especifíque</h3></th>
+                    <th rowspan="3"><h3>Sección 235</h3></th>
+                    <th rowspan="3"><h3>Sección 255</h3></th>
+                    <th rowspan="3"><h3>Sección 256</h3></th>
+                    <th rowspan="3"><h3>Sección 265</h3></th>
+                    <th rowspan="3"><h3>Sección 266</h3></th>
+                    <th rowspan="3"><h3>Otra Especifíque:<input id="header_other_input" type="text" placeholder="Sección"></h3></th>
                 </tr>
                 
                 <!-- Line 1 -->
                 <tr>
                     <tr>
-                    <td>Año:<input id="year" type="text" name="form_1" required minlength="4" maxlength="4" size="10" placeholder="Año / Year"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>Año:<input id="year" type="text" name="form_1" required minlength="4" maxlength="4" size="10" placeholder="Año"></td>
+
                 </tr></tr>
 
                 <!-- Line 2 -->
@@ -160,18 +155,12 @@
 
                 <!-- Line 10 -->
                 <tr>
-                    <td><br></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td id="table_space" colspan="7"><br></td>
                 </tr>
 
                 <!-- Line 11 -->
                 <tr>
-                    <td>Año:<input id="year" type="text" name="form_1" required minlength="4" maxlength="4" size="10" placeholder="Año / Year"></td>
+                    <td>Año:<input id="year" type="text" name="form_1" required minlength="4" maxlength="4" size="10" placeholder="Año"></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -270,13 +259,7 @@
 
                 <!-- Line 20 -->
                 <tr>
-                    <td><br></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td id="table_space" colspan="7"><br></td>
                 </tr>
 
                 <!-- Line 21 -->
@@ -296,42 +279,42 @@
         <div id="text_button"></div>
 
         <section>
-                <div class="big-box-bottom">
-                    <div class="left-signature">
-                        <input type="text" id="signature" name="name" placeholder="Nombre" required></input> <!-- Signature Input -->
-                        <hr> <!-- Signature Line -->
-                        <p>
-                            Nombre de la Institución:<br>
-                        </p>
-                    </div>
-
-                    <div class="right-signature">
-                        <input type="text" id="signature" name="signature" placeholder="Firma" required></input> <!-- Signature Input -->
-                        <hr> <!-- Signature Line -->
-                        <p>
-                            Firma de la persona autorizada:<br>
-                        </p>
-                    </div>
+            <div class="big-box-bottom">
+                <div class="left-signature">
+                    <input type="text" id="signature" name="signature" placeholder="Firma" required></input> <!-- Signature Input -->
+                    <hr> <!-- Signature Line -->
+                    <p>
+                        Firma de la persona autorizada<br>
+                    </p>
                 </div>
 
-                <div class="big-box-bottom">
-                    <div class="left-signature">
-                        <input type="text" id="signature" name="title" placeholder="Título" required><!-- Signature Input -->
-                        <hr> <!-- Signature Line -->
-                        <p>
-                            Título o puesto:<br>
-                        </p>
-                    </div>
-
-                    <div class="right-signature">
-                        <input type="tel" id="signature" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="phone" placeholder="123-456-7890" required><!-- Signature Input -->
-                        <hr> <!-- Signature Line -->
-                        <p>
-                            Teléfono:<br>
-                        </p>
-                    </div>
+                <div class="right-signature">
+                    <input type="text" id="name" name="position" placeholder="Nombre" required></input> <!-- Signature Input -->
+                    <hr> <!-- Signature Line -->
+                    <p>
+                        Nombre de la institución<br>
+                    </p>
                 </div>
-            </section>
+            </div>
+
+            <div class="big-box-bottom" id="signature-bottom">
+                <div class="left-signature">
+                    <input type="text" id="title" name="date" placeholder="Titulo" required></input> <!-- Signature Input -->
+                    <hr> <!-- Signature Line -->
+                    <p>
+                        Titulo o puesto<br>
+                    </p>
+                </div>
+
+                <div class="right-signature">
+                    <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="phone" placeholder="123-456-7890" required><!-- Signature Input -->
+                    <hr> <!-- Signature Line -->
+                    <p>
+                        Número de teléfono<br>
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <section class = 'submit-button-container'>
           <input type="submit" value="SUBMIT" class="submit-button"></input>
