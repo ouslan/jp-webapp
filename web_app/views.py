@@ -1791,3 +1791,6 @@ def JP_560_2(request):
         return render(request, "cuestionarios/succesfull.html")
 
     return render(request, "cuestionarios/ingreso_neto/JP-560-2.html")
+
+def IP_310(request):
+    return render(request, "cuestionarios/ingreso_neto/IP-310.html")
