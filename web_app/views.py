@@ -1241,7 +1241,7 @@ def JP_363(request):
         date = request.POST.get('date')
         phone = request.POST.get('phone')
         
-        csv_file_path = 'data/cuestionarios/balanza_de_pago/JP-363.csv'
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-363.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
