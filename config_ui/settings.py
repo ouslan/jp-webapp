@@ -129,6 +129,7 @@ STATICFILES_DIRS = [BASE_DIR / 'staticfiles/admin/css',
                     BASE_DIR / 'staticfiles/admin/img', 
                     BASE_DIR / 'staticfiles/admin/favicon_io',
                     BASE_DIR / 'staticfiles/admin/scripts',
+                    BASE_DIR / 'staticfiles/admin/js',
                     ]
 
 # Default primary key field type

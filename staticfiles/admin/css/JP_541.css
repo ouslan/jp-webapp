@@ -1,0 +1,95 @@
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    width: 90%;
+    margin-left: 2.5%;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+main {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 260px;
+    border-radius: 8px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid rgb(9, 8, 8);
+    padding: 5px;
+    text-align: left;
+    max-width: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+#year {
+    width: 80px;
+}
+
+#choice {
+    justify-content: center;
+    text-align: center;
+}
+
+#radio-3 {
+    border: 1px solid #ccc;
+    resize: vertical;
+    width: 5%;
+}
+
+#sheet {
+    font-size: 22px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.header, .sub-header {
+    text-align: center;
+}
+
+.header img {
+    width: 150px;
+}
+
+.submit-button-container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.submit-button {
+    font-size: 20px;
+    width: 120px;
+    height: 35px;
+    border: 0.5px solid #5a5a5a;
+    border-radius: 30px;
+    background-color: rgb(44, 143, 255);
+}
+
+.submit-button:hover {
+    background-color: rgb(6, 122, 255);
+}

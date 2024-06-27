@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Form Completed</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
+
+    <link rel="stylesheet" href="{% static 'succesfull_page.css' %}" />
+    <link rel="stylesheet" href="{% static 'website.css' %}" />
+
+  </head>
+
+  <body>
+    <main>
+        <section>
+            <div class="text">
+                <h1>¡Tu cuestionario ha sido enviado con éxito!</h1>
+                <p>¡Gracias por tu tiempo y tu colaboración!</p>
+            </div>
+            
+            <div class="button-container">
+                <div class="button">
+                    <a href="{% url 'home' %}">Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+  </body>
