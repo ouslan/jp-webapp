@@ -2078,3 +2078,7 @@ def JP_375(request):
             
         return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/balanza_de_pagos/JP-375.html")
+
+
+def IP_420(request):
+    return render(request, "cuestionarios/ingreso_neto/IP-420.html")
