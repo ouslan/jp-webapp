@@ -2079,6 +2079,111 @@ def JP_375(request):
         return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/balanza_de_pagos/JP-375.html")
 
+def IP_480(request):
+    if request.method == "POST":
+        # Retrieve form data
+        company_name = request.POST.get('company_name')
+        address = request.POST.get('address')
+        email = request.POST.get('email')
+        liaison_officer = request.POST.get('liaison_officer')
+        ssn = request.POST.get('ssn')
+        tel = request.POST.get('tel')
+        fax = request.POST.get('fax')
+        legal_form = request.POST.get('legal_form')
+        cfc = request.POST.get('cfc')
+        business_function = request.POST.get('business_function')
+        closing_date = request.POST.get('closing_date')
+        operation_incomes_1 = request.POST.get('operation_incomes_1')
+        operation_incomes_2 = request.POST.get('operation_incomes_2')
+        people_A_1 = request.POST.get('people_A_1')
+        people_A_2 = request.POST.get('people_A_2')
+        industries_businesses_A_1 = request.POST.get('industries_businesses_A_1')
+        industries_businesses_A_2 = request.POST.get('industries_businesses_A_2')
+        incomes_interests_1 = request.POST.get('incomes_interests_1')
+        incomes_interests_2 = request.POST.get('incomes_interests_2')
+        incomes_rents_1 = request.POST.get('incomes_rents_1')
+        incomes_rents_2 = request.POST.get('incomes_rents_2')
+        dividends_1 = request.POST.get('dividends_1')
+        dividends_2 = request.POST.get('dividends_2')
+        others_incomes_1 = request.POST.get('others_incomes_1')
+        others_incomes_2 = request.POST.get('others_incomes_2')
+        total_incomes_1 = request.POST.get('total_incomes_1')
+        total_incomes_2 = request.POST.get('total_incomes_2')
+        expenses_1 = request.POST.get('expenses_1')
+        expenses_2 = request.POST.get('expenses_2')
+        salaries_1 = request.POST.get('salaries_1')
+        salaries_2 = request.POST.get('salaries_2')
+        expenses_interests_1 = request.POST.get('expenses_interests_1')
+        expenses_interests_2 = request.POST.get('expenses_interests_2')
+        expenses_rents_1 = request.POST.get('expenses_rents_1')
+        expenses_rents_2 = request.POST.get('expenses_rents_2')
+        depreciation_1 = request.POST.get('depreciation_1')
+        depreciation_2 = request.POST.get('depreciation_2')
+        donations_1 = request.POST.get('donations_1')
+        donations_2 = request.POST.get('donations_2')
+        sales_tax_1 = request.POST.get('sales_tax_1')
+        sales_tax_2 = request.POST.get('sales_tax_2')
+        machinery_1 = request.POST.get('machinery_1')
+        machinery_2 = request.POST.get('machinery_2')
+        other_purchases_1 = request.POST.get('other_purchases_1')
+        other_purchases_2 = request.POST.get('other_purchases_2')
+        licenses_1 = request.POST.get('licenses_1')
+        licenses_2 = request.POST.get('licenses_2')
+        other_expenses_1 = request.POST.get('other_expenses_1')
+        other_expenses_2 = request.POST.get('other_expenses_2')
+        total_expenses_1 = request.POST.get('total_expenses_1')
+        total_expenses_2 = request.POST.get('total_expenses_2')
+        net_profit_1 = request.POST.get('net_profit_1')
+        net_profit_2 = request.POST.get('net_profit_2')
+        income_tax_1 = request.POST.get('income_tax_1')
+        income_tax_2 = request.POST.get('income_tax_2')
+        profit_after_tax_1 = request.POST.get('profit_after_tax_1')
+        profit_after_tax_2 = request.POST.get('profit_after_tax_2')
+        withheld_tax_1 = request.POST.get('withheld_tax_1')
+        withheld_tax_2 = request.POST.get('withheld_tax_2')
+        signature = request.POST.get('signature')
+        rank = request.POST.get('rank')
+
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP-480.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                "company_name","address","email","liaison_officer","ssn","tel","fax","legal_form",
+                                "cfc","business_function","closing_date","operation_incomes_1","operation_incomes_2",
+                                "people_A_1","people_A_2","industries_businesses_A_1","industries_businesses_A_2",
+                                "incomes_interests_1","incomes_interests_2","incomes_rents_1","incomes_rents_2",
+                                "dividends_1","dividends_2","others_incomes_1","others_incomes_2","total_incomes_1",
+                                "total_incomes_2","expenses_1","expenses_2","salaries_1","salaries_2",
+                                "expenses_interests_1","expenses_interests_2","expenses_rents_1","expenses_rents_2",
+                                "depreciation_1","depreciation_2","donations_1","donations_2","sales_tax_1",
+                                "sales_tax_2","machinery_1","machinery_2","other_purchases_1","other_purchases_2",
+                                "licenses_1","licenses_2","other_expenses_1","other_expenses_2","total_expenses_1",
+                                "total_expenses_2","net_profit_1","net_profit_2","income_tax_1","income_tax_2",
+                                "profit_after_tax_1","profit_after_tax_2","withheld_tax_1","withheld_tax_2","signature","rank"
+                                ])
+                
+            writer.writerow([
+                            company_name, address, email, liaison_officer, ssn, tel, fax, legal_form,
+                            cfc, business_function, closing_date, operation_incomes_1, operation_incomes_2,
+                            people_A_1, people_A_2, industries_businesses_A_1, industries_businesses_A_2,
+                            incomes_interests_1, incomes_interests_2, incomes_rents_1, incomes_rents_2,
+                            dividends_1, dividends_2, others_incomes_1, others_incomes_2, total_incomes_1,
+                            total_incomes_2, expenses_1, expenses_2, salaries_1, salaries_2,
+                            expenses_interests_1, expenses_interests_2, expenses_rents_1, expenses_rents_2,
+                            depreciation_1, depreciation_2, donations_1, donations_2, sales_tax_1,
+                            sales_tax_2, machinery_1, machinery_2, other_purchases_1, other_purchases_2,
+                            licenses_1, licenses_2, other_expenses_1, other_expenses_2, total_expenses_1,
+                            total_expenses_2, net_profit_1, net_profit_2, income_tax_1, income_tax_2,
+                            profit_after_tax_1, profit_after_tax_2, withheld_tax_1, withheld_tax_2, signature, rank
+                            ])
+            
+        return render(request, "cuestionarios/succesfull.html")
+    return render(request, "cuestionarios/ingreso_neto/IP-480.html")
+
 
 def IP_420(request):
     return render(request, "cuestionarios/ingreso_neto/IP-420.html")
