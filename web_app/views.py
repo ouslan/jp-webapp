@@ -501,6 +501,9 @@ def JP_375(request):
 def JP_383(request):
     return render(request, "cuestionarios/balanza_de_pagos/JP-383.html")
 
+def JP_529(request):
+    return render(request, "cuestionarios/balanza_de_pagos/JP-529.html")
+
 def IP_110(request):
     if request.method == "POST":
         # Retrieve form data
