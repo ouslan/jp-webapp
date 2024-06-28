@@ -168,7 +168,7 @@ def JP_304(request):
 
         return render(request, "forms/succesfull.html")
     
-    return render(request, "forms/balanza_de_pagos/JP-304.html")
+    return render(request, "forms/quaterly/balanza_de_pagos/JP-304.html")
 
 def JP_361(request):
     if request.method == "POST":
@@ -1138,7 +1138,7 @@ def JP_541(request):
 
         return render(request, "forms/succesfull.html")
     
-    return render(request, "forms/construcción/JP-541.html")
+    return render(request, "forms/quaterly/construcción/JP-541.html")
 
 def JP_363(request):    
     if request.method == "POST":
