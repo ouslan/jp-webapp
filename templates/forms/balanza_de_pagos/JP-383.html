@@ -43,7 +43,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'JP-375' %}">
+      <form method="POST" action="{% url 'JP-383' %}">
         {% csrf_token %}
 
         <section class="divider-container">
@@ -55,102 +55,102 @@
                     <th rowspan="2"><h3>Sección 256</h3></th>
                     <th rowspan="2"><h3>Sección 265</h3></th>
                     <th rowspan="2"><h3>Sección 266</h3></th>
-                    <th rowspan="2"><h3>Otra Especifíque:<input id="header_other_input" type="text" placeholder="Sección"></h3></th>
+                    <th rowspan="2"><h3>Otra Especifíque:<input id="header_other_input" type="text" name="other_section" placeholder="Sección"></h3></th>
                 </tr>
                 
                 <!-- Line 1 -->
                 <tr>
                     <tr>
-                    <th colspan="7">Año:<input id="year" type="text" name="form_1" required minlength="4" maxlength="4" size="10" placeholder="Año"></th>
+                    <th colspan="7">Año:<input id="year" type="text" name="año" required minlength="4" maxlength="4" size="10" placeholder="Año"></th>
 
                 </tr></tr>
 
                 <!-- Line 2 -->
                 <tr>
                     <td>Julio</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="julio_1" placeholder="$" required></td>
+                    <td><input type="number" name="julio_2" placeholder="$" required></td>
+                    <td><input type="number" name="julio_3" placeholder="$" required></td>
+                    <td><input type="number" name="julio_4" placeholder="$" required></td>
+                    <td><input type="number" name="julio_5" placeholder="$" required></td>
+                    <td><input type="number" name="julio_6" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 3 -->
                 <tr>
                     <td>Agosto</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="agosto_1" placeholder="$" required></td>
+                    <td><input type="number" name="agosto_2" placeholder="$" required></td>
+                    <td><input type="number" name="agosto_3" placeholder="$" required></td>
+                    <td><input type="number" name="agosto_4" placeholder="$" required></td>
+                    <td><input type="number" name="agosto_5" placeholder="$" required></td>
+                    <td><input type="number" name="agosto_6" placeholder="$" required></td>
                 </tr>
                 
                 <!-- Line 4 -->
                 <tr>
                     <td>Septiembre</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="septiembre_1" placeholder="$" required></td>
+                    <td><input type="number" name="septiembre_2" placeholder="$" required></td>
+                    <td><input type="number" name="septiembre_3" placeholder="$" required></td>
+                    <td><input type="number" name="septiembre_4" placeholder="$" required></td>
+                    <td><input type="number" name="septiembre_5" placeholder="$" required></td>
+                    <td><input type="number" name="septiembre_6" placeholder="$" required></td>
                 </tr>
                 
                 <!-- Line 5 -->
                 <tr>
                     <td><b>Sub-Total</b></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_1" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_2" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_3" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_4" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_5" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_6" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 6 -->
                 <tr>
                     <td>Octubre</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="octubre_1" placeholder="$" required></td>
+                    <td><input type="number" name="octubre_2" placeholder="$" required></td>
+                    <td><input type="number" name="octubre_3" placeholder="$" required></td>
+                    <td><input type="number" name="octubre_4" placeholder="$" required></td>
+                    <td><input type="number" name="octubre_5" placeholder="$" required></td>
+                    <td><input type="number" name="octubre_6" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 7 -->
                 <tr>
                     <td>Noviembre</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="noviembre_1" placeholder="$" required></td>
+                    <td><input type="number" name="noviembre_2" placeholder="$" required></td>
+                    <td><input type="number" name="noviembre_3" placeholder="$" required></td>
+                    <td><input type="number" name="noviembre_4" placeholder="$" required></td>
+                    <td><input type="number" name="noviembre_5" placeholder="$" required></td>
+                    <td><input type="number" name="noviembre_6" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 8 -->
                 <tr>
                     <td>Diciembre</td>
-                    <td><input type="number" name="" placeholder="$"required></td>
-                    <td><input type="number" name="" placeholder="$"required></td>
-                    <td><input type="number" name="" placeholder="$"required></td>
-                    <td><input type="number" name="" placeholder="$"required></td>
-                    <td><input type="number" name="" placeholder="$"required></td>
-                    <td><input type="number" name="" placeholder="$"required></td>
+                    <td><input type="number" name="diciembre_1" placeholder="$"required></td>
+                    <td><input type="number" name="diciembre_2" placeholder="$"required></td>
+                    <td><input type="number" name="diciembre_3" placeholder="$"required></td>
+                    <td><input type="number" name="diciembre_4" placeholder="$"required></td>
+                    <td><input type="number" name="diciembre_5" placeholder="$"required></td>
+                    <td><input type="number" name="diciembre_6" placeholder="$"required></td>
                 </tr>
 
                 <!-- Line 9 -->
                 <tr>
                     <td><b>Sub-Total</b></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_11" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_12" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_13" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_14" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_15" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_16" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 10 -->
@@ -160,95 +160,95 @@
 
                 <!-- Line 11 -->
                 <tr>
-                    <th colspan= "7">Año:<input id="year" type="text" name="form_1" required minlength="4" maxlength="4" size="10" placeholder="Año"></th>
+                    <th colspan= "7">Año:<input id="year" type="text" name="año_1" required minlength="4" maxlength="4" size="10" placeholder="Año"></th>
                 </tr>
 
                 <!-- Line 12 -->
                 <tr>
                     <td>Enero</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="enero_1" placeholder="$" required></td>
+                    <td><input type="number" name="enero_2" placeholder="$" required></td>
+                    <td><input type="number" name="enero_3" placeholder="$" required></td>
+                    <td><input type="number" name="enero_4" placeholder="$" required></td>
+                    <td><input type="number" name="enero_5" placeholder="$" required></td>
+                    <td><input type="number" name="enero_6" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 13 -->
                 <tr>
                     <td>Febrero</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="febrero_1" placeholder="$" required></td>
+                    <td><input type="number" name="febrero_2" placeholder="$" required></td>
+                    <td><input type="number" name="febrero_3" placeholder="$" required></td>
+                    <td><input type="number" name="febrero_4" placeholder="$" required></td>
+                    <td><input type="number" name="febrero_5" placeholder="$" required></td>
+                    <td><input type="number" name="febrero_6" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 14 -->
                 <tr>
                     <td>Marzo</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="marzo_1" placeholder="$" required></td>
+                    <td><input type="number" name="marzo_2" placeholder="$" required></td>
+                    <td><input type="number" name="marzo_3" placeholder="$" required></td>
+                    <td><input type="number" name="marzo_4" placeholder="$" required></td>
+                    <td><input type="number" name="marzo_5" placeholder="$" required></td>
+                    <td><input type="number" name="marzo_6" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 15 -->
                 <tr>
                     <td><b>Sub-Total</b></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_21" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_22" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_23" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_24" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_25" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_26" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 16 -->
                 <tr>
                     <td>Abril</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="abril_1" placeholder="$" required></td>
+                    <td><input type="number" name="abril_2" placeholder="$" required></td>
+                    <td><input type="number" name="abril_3" placeholder="$" required></td>
+                    <td><input type="number" name="abril_4" placeholder="$" required></td>
+                    <td><input type="number" name="abril_5" placeholder="$" required></td>
+                    <td><input type="number" name="abril_6" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 17 -->
                 <tr>
                     <td>Mayo</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="mayo_1" placeholder="$" required></td>
+                    <td><input type="number" name="mayo_2" placeholder="$" required></td>
+                    <td><input type="number" name="mayo_3" placeholder="$" required></td>
+                    <td><input type="number" name="mayo_4" placeholder="$" required></td>
+                    <td><input type="number" name="mayo_5" placeholder="$" required></td>
+                    <td><input type="number" name="mayo_6" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 18 -->
                 <tr>
                     <td>Junio</td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="junio_1" placeholder="$" required></td>
+                    <td><input type="number" name="junio_2" placeholder="$" required></td>
+                    <td><input type="number" name="junio_3" placeholder="$" required></td>
+                    <td><input type="number" name="junio_4" placeholder="$" required></td>
+                    <td><input type="number" name="junio_5" placeholder="$" required></td>
+                    <td><input type="number" name="junio_6" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 19 -->
                 <tr>
                     <td><b>Sub-Total</b></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_31" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_32" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_33" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_34" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_35" placeholder="$" required></td>
+                    <td><input type="number" name="subtotal_36" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 20 -->
@@ -259,12 +259,12 @@
                 <!-- Line 21 -->
                 <tr>
                     <td><b>Total</b></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
-                    <td><input type="number" name="" placeholder="$" required></td>
+                    <td><input type="number" name="total_1"1 placeholder="$" required></td>
+                    <td><input type="number" name="total_2" placeholder="$" required></td>
+                    <td><input type="number" name="total_3" placeholder="$" required></td>
+                    <td><input type="number" name="total_4" placeholder="$" required></td>
+                    <td><input type="number" name="total_5" placeholder="$" required></td>
+                    <td><input type="number" name="total_6" placeholder="$" required></td>
                 </tr>
             </table>
         </section>
@@ -283,7 +283,7 @@
                 </div>
 
                 <div class="right-signature">
-                    <input type="text" id="name" name="position" placeholder="Nombre" required></input> <!-- Signature Input -->
+                    <input type="text" id="name" name="name" placeholder="Nombre" required></input> <!-- Signature Input -->
                     <hr> <!-- Signature Line -->
                     <p>
                         Nombre de la institución<br>
@@ -293,7 +293,7 @@
 
             <div class="big-box-bottom" id="signature-bottom">
                 <div class="left-signature">
-                    <input type="text" id="title" name="date" placeholder="Titulo" required></input> <!-- Signature Input -->
+                    <input type="text" id="title" name="title" placeholder="Titulo" required></input> <!-- Signature Input -->
                     <hr> <!-- Signature Line -->
                     <p>
                         Titulo o puesto<br>
