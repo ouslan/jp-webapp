@@ -51,7 +51,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'IP-110' %}">
+      <form method="POST" action="{% url 'IP-310' %}">
         {% csrf_token %}
         <section>
           <div class="body_header">
@@ -135,7 +135,7 @@
             &emsp;&emsp;a. Producto Principal - Main Product:
             <input class="text-box space-between" id="text-box-4" name="main_product_1" placeholder="Enter your text here..." required>
             &emsp;&emsp;b. Otros Productos - Other Products:
-            <input class="text-box space-between" id="text-box-4" name="main_product_2" placeholder="Enter your text here..." required>
+            <input class="text-box space-between" id="text-box-4" name="other_product_1" placeholder="Enter your text here..." required>
           </div>
 
           <!-- DIV 6 -->
@@ -358,8 +358,8 @@
 
             <div class="item">
                 <label>2. Intereses - Interests</label>
-                <input type="number" name="interests_1" placeholder="$" required>
-                <input type="number" name="interests_2" placeholder="$" required>
+                <input type="number" name="interest_3" placeholder="$" required>
+                <input type="number" name="interest_4" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -448,17 +448,17 @@
         <!-- WIP -->
         <div class="second_div">
           <strong>Nota: ¿Opera sucursales esta firma? - Do you have any branch operations? </strong>
-          <input type="radio" id="radio-2" name="cfc" value="Si">Si
-          <input type="radio" id="radio-2" name="cfc" value="No">No
+          <input type="radio" id="radio-2" name="cfc_1" value="Si">Si
+          <input type="radio" id="radio-2" name="cfc_1" value="No">No
         </div>
 
         <div class="second_div">
           <strong>En caso afirmativo indique si: </strong>
           <br>
           <div id="options_container" class="second_div_container">
-            <input type="radio" id="radio-1" name="legal_form" value="La información suministrada cubre todas las sucursales./The information provided includes all branches.">La información suministrada cubre todas las sucursales. / The information provided includes all.
+            <input type="radio" id="radio-1" name="legal_form_1" value="La información suministrada cubre todas las sucursales./The information provided includes all branches.">La información suministrada cubre todas las sucursales. / The information provided includes all.
             <br>
-            <input type="radio" id="radio-1" name="legal_form" value="La información suministrada cubre este establecimiento solamente./The information provided covers only the firm responding to this questionnaire.">La información suministrada cubre este establecimiento solamente. / The information provided covers <br> &emsp; &emsp; &emsp;only the firm responding to this questionnaire.<br><br>
+            <input type="radio" id="radio-1" name="legal_form_1" value="La información suministrada cubre este establecimiento solamente./The information provided covers only the firm responding to this questionnaire.">La información suministrada cubre este establecimiento solamente. / The information provided covers <br> &emsp; &emsp; &emsp;only the firm responding to this questionnaire.<br><br>
           </div>
         </div>
 
