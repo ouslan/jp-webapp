@@ -1060,7 +1060,398 @@ class JP_560_2(forms.Form):
     final_inventory_1 = forms.CharField(label='Final Inventory', max_length=100)
     final_inventory_2 = forms.CharField(label='Final Inventory', max_length=100)
     signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
+    rank = forms.CharField(label='Rank', max_length=100)    
+class JP_364(forms.Form):
+    year_bono1 = forms.CharField(label='Año / Year', max_length=100)
+    year_bono2 = forms.CharField(label='Año / Year', max_length=100)
+    year_paga1 = forms.CharField(label='Año / Year', max_length=100)
+    year_paga2 = forms.CharField(label='Año / Year', max_length=100)
+    ELA_bono1 = forms.CharField(label='ELA', max_length=100)
+    ELA_bono2 = forms.CharField(label='ELA', max_length=100)
+    ELA_paga1 = forms.CharField(label='ELA', max_length=100)
+    ELA_paga2 = forms.CharField(label='ELA', max_length=100)
+    ELA_agente = forms.CharField(label='ELA', max_length=100)
+    municipio_bono1 = forms.CharField(label='Municipio', max_length=100)
+    municipio_bono2 = forms.CharField(label='Municipio', max_length=100)
+    municipio_paga1 = forms.CharField(label='Municipio', max_length=100)
+    municipio_paga2 = forms.CharField(label='Municipio', max_length=100)
+    municipio_agente = forms.CharField(label='Municipio', max_length=100)
+    corp_publicas_bono1 = forms.CharField(label='Corporaciones Públicas', max_length=100)
+    corp_publicas_bono2 = forms.CharField(label='Corporaciones Públicas', max_length=100)
+    corp_publicas_paga1 = forms.CharField(label='Corporaciones Públicas', max_length=100)
+    corp_publicas_paga2 = forms.CharField(label='Corporaciones Públicas', max_length=100)
+    corp_publicas_agente = forms.CharField(label='Corporaciones Públicas', max_length=100)
+    AEE_bono1 = forms.CharField(label='AEE', max_length=100)
+    AEE_bono2 = forms.CharField(label='AEE', max_length=100)
+    AEE_paga1 = forms.CharField(label='AEE', max_length=100)
+    AEE_paga2 = forms.CharField(label='AEE', max_length=100)
+    AEE_agente = forms.CharField(label='AEE', max_length=100)
+    Acarreteras_bono1 = forms.CharField(label='Acarreteras', max_length=100)
+    Acarreteras_bono2 = forms.CharField(label='Acarreteras', max_length=100)
+    Acarreteras_paga1 = forms.CharField(label='Acarreteras', max_length=100)
+    Acarreteras_paga2 = forms.CharField(label='Acarreteras', max_length=100)
+    Acarreteras_agente = forms.CharField(label='Acarreteras', max_length=100)
+    AAA_bono1 = forms.CharField(label='AAA', max_length=100)
+    AAA_bono2 = forms.CharField(label='AAA', max_length=100)
+    AAA_paga1 = forms.CharField(label='AAA', max_length=100)
+    AAA_paga2 = forms.CharField(label='AAA', max_length=100)
+    AAA_agente = forms.CharField(label='AAA', max_length=100)
+    AEP_bono1 = forms.CharField(label='AFA', max_length=100)
+    AEP_bono2 = forms.CharField(label='AFA', max_length=100)
+    AEP_paga1 = forms.CharField(label='AFA', max_length=100)
+    AEP_paga2 = forms.CharField(label='AFA', max_length=100)
+    AEP_agente = forms.CharField(label='AFA', max_length=100)
+    AP_bono1 = forms.CharField(label='AP', max_length=100)
+    AP_bono2 = forms.CharField(label='AP', max_length=100)
+    AP_paga1 = forms.CharField(label='AP', max_length=100)
+    AP_paga2 = forms.CharField(label='AP', max_length=100)
+    AP_agente = forms.CharField(label='AP', max_length=100)
+    AT_bono1 = forms.CharField(label='AT', max_length=100)
+    AT_bono2 = forms.CharField(label='AT', max_length=100)
+    AT_paga1 = forms.CharField(label='AT', max_length=100)
+    AT_paga2 = forms.CharField(label='AT', max_length=100)
+    AT_agente = forms.CharField(label='AT', max_length=100)
+    CFI_bono1 = forms.CharField(label='CFI', max_length=100)
+    CFI_bono2 = forms.CharField(label='CFI', max_length=100)
+    CFI_paga1 = forms.CharField(label='CFI', max_length=100)
+    CFI_paga2 = forms.CharField(label='CFI', max_length=100)
+    CFI_agente = forms.CharField(label='CFI', max_length=100)
+    BGF_bono1 = forms.CharField(label='BGF', max_length=100)
+    BGF_bono2 = forms.CharField(label='BGF', max_length=100)
+    BGF_paga1 = forms.CharField(label='BGF', max_length=100)
+    BGF_paga2 = forms.CharField(label='BGF', max_length=100)
+    BGF_agente = forms.CharField(label='BGF', max_length=100)
+    CFV_bono1 = forms.CharField(label='CFV', max_length=100)
+    CFV_bono2 = forms.CharField(label='CFV', max_length=100)
+    CFV_paga1 = forms.CharField(label='CFV', max_length=100)
+    CFV_paga2 = forms.CharField(label='CFV', max_length=100)
+    CFV_agente = forms.CharField(label='CFV', max_length=100)
+    otherk_title = forms.CharField(label='Otros', max_length=100)
+    otherk_bono1 = forms.CharField(label='Otros', max_length=100)
+    otherk_bono2 = forms.CharField(label='Otros', max_length=100)
+    otherk_paga1 = forms.CharField(label='Otros', max_length=100)
+    otherk_paga2 = forms.CharField(label='Otros', max_length=100)
+    otherk_agente = forms.CharField(label='Otros', max_length=100)
+    otherl_title = forms.CharField(label='Otros', max_length=100)
+    otherl_bono1 = forms.CharField(label='Otros', max_length=100)
+    otherl_bono2 = forms.CharField(label='Otros', max_length=100)
+    otherl_paga1 = forms.CharField(label='Otros', max_length=100)
+    otherl_paga2 = forms.CharField(label='Otros', max_length=100)
+    otherl_agente = forms.CharField(label='Otros', max_length=100)
+    otherm_title = forms.CharField(label='Otros', max_length=100)
+    otherm_bono1 = forms.CharField(label='Otros', max_length=100)
+    otherm_bono2 = forms.CharField(label='Otros', max_length=100)
+    otherm_paga1 = forms.CharField(label='Otros', max_length=100)
+    otherm_paga2 = forms.CharField(label='Otros', max_length=100)
+    otherm_agente = forms.CharField(label='Otros', max_length=100)
+    
+    year_balance1 = forms.CharField(label='Año / Year', max_length=100)
+    year_balance2 = forms.CharField(label='Año / Year', max_length=100)
+    FHA_balance1 = forms.CharField(label='FHA', max_length=100)
+    FHA_balance2 = forms.CharField(label='FHA', max_length=100)
+    FHA_agente = forms.CharField(label='FHA', max_length=100)
+    GAV_balance1 = forms.CharField(label='GAV', max_length=100)
+    GAV_balance2 = forms.CharField(label='GAV', max_length=100)
+    GAV_agente = forms.CharField(label='GAV', max_length=100)
+    convencionales_balance1 = forms.CharField(label='Convencionales', max_length=100)
+    convencionales_balance2 = forms.CharField(label='Convencionales', max_length=100)
+    convencionales_agente = forms.CharField(label='Convencionales', max_length=100)
+    otras_instituciones_balance1 = forms.CharField(label='Otras Instituciones', max_length=100)
+    otras_instituciones_balance2 = forms.CharField(label='Otras Instituciones', max_length=100)
+    otras_instituciones_agente = forms.CharField(label='Otras Instituciones', max_length=100)
+    prestamos_hipo_balance1 = forms.CharField(label='Préstamos Hipotecarios', max_length=100)
+    prestamos_hipo_balance2 = forms.CharField(label='Préstamos Hipotecarios', max_length=100)
+    prestamos_hipo_agente = forms.CharField(label='Préstamos Hipotecarios', max_length=100)
+    prestamos_comerciales_industriales_balance1 = forms.CharField(label='Préstamos Comerciales e Industriales', max_length=100)
+    prestamos_comerciales_industriales_balance2 = forms.CharField(label='Préstamos Comerciales e Industriales', max_length=100)
+    prestamos_comerciales_industriales_agente = forms.CharField(label='Préstamos Comerciales e Industriales', max_length=100)
+    prestamos_poliza_balance1 = forms.CharField(label='Préstamos con Póliza', max_length=100)
+    prestamos_poliza_balance2 = forms.CharField(label='Préstamos con Póliza', max_length=100)
+    prestamos_poliza_agente = forms.CharField(label='Préstamos con Póliza', max_length=100)
+    reservas_poliza_balance1 = forms.CharField(label='Reservas con Póliza', max_length=100)
+    reservas_poliza_balance2 = forms.CharField(label='Reservas con Póliza', max_length=100)
+    reservas_poliza_agente = forms.CharField(label='Reservas con Póliza', max_length=100)
+    dividendos_poliza_balance1 = forms.CharField(label='Dividendos con Póliza', max_length=100)
+    dividendos_poliza_balance2 = forms.CharField(label='Dividendos con Póliza', max_length=100)
+    dividendos_poliza_agente = forms.CharField(label='Dividendos con Póliza', max_length=100)
+    nombre_firma = forms.CharField(label='Nombre', max_length=100)
+    phone = forms.CharField(label='Teléfono', max_length=100)
+    nombre_persona = forms.CharField(label='Nombre de la persona que llena el cuestionario', max_length=100)
+    
+
+
+class JP_375(forms.Form):
+    year_1 = forms.CharField(label='Año / Year', max_length=100)
+    year_2 = forms.CharField(label='Año / Year', max_length=100)
+    year_3 = forms.CharField(label='Año / Year', max_length=100)
+    
+    FHA_1 = forms.CharField(label='1. F.H.A.', max_length=100)
+    FHA_2 = forms.CharField(label='1. F.H.A.', max_length=100)
+    FHA_3 = forms.CharField(label='1. F.H.A.', max_length=100)
+    
+    veteran_1 = forms.CharField(label='2. Adm. de Veteranos', max_length=100)
+    veteran_2 = forms.CharField(label='2. Adm. de Veteranos', max_length=100)
+    veteran_3 = forms.CharField(label='2. Adm. de Veteranos', max_length=100)
+    
+    bank_1 = forms.CharField(label='3. Banco de la Vivienda', max_length=100)
+    bank_2 = forms.CharField(label='3. Banco de la Vivienda', max_length=100)
+    bank_3 = forms.CharField(label='3. Banco de la Vivienda', max_length=100)
+    
+    conventional_1 = forms.CharField(label='4. Convencionales', max_length=100)
+    conventional_2 = forms.CharField(label='4. Convencionales', max_length=100)
+    conventional_3 = forms.CharField(label='4. Convencionales', max_length=100)
+    
+    other_1 = forms.CharField(label='5. Otras', max_length=100)
+    other_2 = forms.CharField(label='5. Otras', max_length=100)
+    other_3 = forms.CharField(label='5. Otras', max_length=100)
+    
+    FHA_2_1 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_2_2 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_2_3 = forms.CharField(label='1) F.H.A.', max_length=100)
+    
+    veteran_2_1 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_2_2 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_2_3 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    
+    conventional_2_1 = forms.CharField(label='3) Convencionales', max_length=100)
+    conventional_2_2 = forms.CharField(label='3) Convencionales', max_length=100)
+    conventional_2_3 = forms.CharField(label='3) Convencionales', max_length=100)
+    
+    others_2_1 = forms.CharField(label='4) Otras', max_length=100)
+    others_2_2 = forms.CharField(label='4) Otras', max_length=100)
+    others_2_3 = forms.CharField(label='4) Otras', max_length=100)
+    
+    FHA_3_1 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_3_2 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_3_3 = forms.CharField(label='1) F.H.A.', max_length=100)
+    
+    veteran_3_1 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_3_2 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_3_3 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    
+    bank_2_1 = forms.CharField(label='3) Banco de la Vivienda', max_length=100)
+    bank_2_2 = forms.CharField(label='3) Banco de la Vivienda', max_length=100)
+    bank_2_3 = forms.CharField(label='3) Banco de la Vivienda', max_length=100)
+    
+    conventional_3_1 = forms.CharField(label='4) Convencionales', max_length=100)
+    conventional_3_2 = forms.CharField(label='4) Convencionales', max_length=100)
+    conventional_3_3 = forms.CharField(label='4) Convencionales', max_length=100)
+    
+    others_3_1 = forms.CharField(label='5) Otras', max_length=100) 
+    others_3_2 = forms.CharField(label='5) Otras', max_length=100)
+    others_3_3 = forms.CharField(label='5) Otras', max_length=100)
+
+    FHA_4_1 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_4_2 = forms.CharField(label='1) F.H.A.', max_length=100)
+    FHA_4_3 = forms.CharField(label='1) F.H.A.', max_length=100)
+    
+    veteran_4_1 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_4_2 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    veteran_4_3 = forms.CharField(label='2) Adm. de Veteranos', max_length=100)
+    
+    conventional_4_1 = forms.CharField(label='3) Convencionales', max_length=100)
+    conventional_4_2 = forms.CharField(label='3) Convencionales', max_length=100)
+    conventional_4_3 = forms.CharField(label='3) Convencionales', max_length=100)
+    
+    others_4_1 = forms.CharField(label='4) Otras', max_length=100)
+    others_4_2 = forms.CharField(label='4) Otras', max_length=100)
+    others_4_3 = forms.CharField(label='4) Otras', max_length=100)
+
+    commissions_1 = forms.CharField(label='b) Comisiones Recibidas de No-Residentes 3/', max_length=100)
+    commissions_2 = forms.CharField(label='b) Comisiones Recibidas de No-Residentes 3/', max_length=100)
+    commissions_3 = forms.CharField(label='b) Comisiones Recibidas de No-Residentes 3/', max_length=100)
+    
+    phone = forms.CharField(label='Phone Number', max_length=100)
+    signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
+    position = forms.CharField(label='Position', max_length=100)
+    
+class IP_480(forms.Form):
+    company_name = forms.CharField(label='Nombre compañía / Company Name', max_length=100)
+    address = forms.CharField(label='Dirección / Address', max_length=200)
+    email = forms.EmailField(label='Correo electrónico / Email') 
+    liaison_officer = forms.CharField(label='Persona contacto / Liaison officer', max_length=100)
+    ssn = forms.CharField(label='Numero de Seguro Social / Social Security Number', max_length=11)
+    tel = forms.CharField(label='Tel', max_length=20)
+    fax = forms.CharField(label='Fax', max_length=20)
+    legal_form = forms.ChoiceField(
+        label='Forma legal de organización / Legal form of organization', 
+        choices=[('Corporación', 'Corporación'), ('Sociedad', 'Sociedad'), ('Cooperativa', 'Cooperativa'), ('Empresa Individual', 'Empresa Individual'), ('Empresa sin fines pecuniarios', 'Empresa sin fines pecuniarios')]
+    )
+    cfc = forms.ChoiceField(label='CEC', choices=[('Si', 'Si'), ('No', 'No')])
+    business_function = forms.CharField(
+        label='Describa brevemente la función principal del negocio / Explain briefly the main function of the business activity', 
+        widget=forms.Textarea
+    )
+    closing_date = forms.DateField(label='Fecha de cierre de sus libros / Your accounting period closing date', widget=forms.SelectDateWidget)
+    operation_incomes_1 = forms.CharField(label='1. Ingresos por proyecto - Income from project'),
+    operation_incomes_2 = forms.CharField(label='1. Ingresos por proyecto - Income from project'),
+    people_A_1 = forms.CharField(label='2. A personas - To persons'),
+    people_A_2 = forms.CharField(label='2. A personas - To persons'),
+    industries_businesses_A_1 = forms.CharField(label='3. A industrias y negocios - To industries and businesses'),
+    industries_businesses_A_2 = forms.CharField(label='3. A industrias y negocios - To industries and businesses'),
+    incomes_interests_1 = forms.CharField(label='4. Ingresos por intereses - Income from interests'),
+    incomes_interests_2 = forms.CharField(label='4. Ingresos por intereses - Income from interests'),
+    incomes_rents_1 = forms.CharField(label='5. Ingresos por alquileres - Income from rents'),
+    incomes_rents_2 = forms.CharField(label='5. Ingresos por alquileres - Income from rents'),
+    dividends_1 = forms.CharField(label='6. Dividendos - Dividends'),
+    dividends_2 = forms.CharField(label='6. Dividendos - Dividends'),
+    others_incomes_1 = forms.CharField(label='7. Otros ingresos - Other incomes'),
+    others_incomes_2 = forms.CharField(label='7. Otros ingresos - Other incomes'),
+    total_incomes_1 = forms.CharField(label='Total de ingresos - Total incomes'),
+    total_incomes_2 = forms.CharField(label='Total de ingresos - Total incomes'),
+    expenses_1 = forms.CharField(label='1. Gastos - Expenses'),
+    expenses_2 = forms.CharField(label='1. Gastos - Expenses'),
+    salaries_1 = forms.CharField(label='2. Salarios - Salaries'),
+    salaries_2 = forms.CharField(label='2. Salarios - Salaries'),
+    expenses_interests_1 = forms.CharField(label='3. Gastos por intereses - Expenses from interests'),
+    expenses_interests_2 = forms.CharField(label='3. Gastos por intereses - Expenses from interests'),
+    expenses_rents_1 = forms.CharField(label='4. Gastos por alquileres - Expenses from rents'),
+    expenses_rents_2 = forms.CharField(label='4. Gastos por alquileres - Expenses from rents'),
+    depreciation_1 = forms.CharField(label='5. Depreciación - Depreciation'),
+    depreciation_2 = forms.CharField(label='5. Depreciación - Depreciation'),
+    donations_1 = forms.CharField(label='6. Donaciones - Donations'),
+    donations_2 = forms.CharField(label='6. Donaciones - Donations'),
+    sales_tax_1 = forms.CharField(label='7. Impuesto sobre ventas - Sales tax'),
+    sales_tax_2 = forms.CharField(label='7. Impuesto sobre ventas - Sales tax'),
+    machinery_1 = forms.CharField(label='8. Maquinaria - Machinery'),
+    machinery_2 = forms.CharField(label='8. Maquinaria - Machinery'),
+    other_purchases_1 = forms.CharField(label='9. Otras compras - Other purchases'),
+    other_purchases_2 = forms.CharField(label='9. Otras compras - Other purchases'),
+    licenses_1 = forms.CharField(label='10. Licencias - Licenses'),
+    licenses_2 = forms.CharField(label='10. Licencias - Licenses'),
+    other_expenses_1 = forms.CharField(label='11. Otros gastos - Other expenses'),
+    other_expenses_2 = forms.CharField(label='11. Otros gastos - Other expenses'),
+    total_expenses_1 = forms.CharField(label='Total de gastos - Total expenses'),
+    total_expenses_2 = forms.CharField(label='Total de gastos - Total expenses'),
+    net_profit_1 = forms.CharField(label='Utilidad neta - Net profit'),
+    net_profit_2 = forms.CharField(label='Utilidad neta - Net profit'),
+    income_tax_1 = forms.CharField(label='Impuesto sobre la renta - Income tax'),
+    income_tax_2 = forms.CharField(label='Impuesto sobre la renta - Income tax'),
+    profit_after_tax_1 = forms.CharField(label='Utilidad después de impuestos - Profit after tax'),
+    profit_after_tax_2 = forms.CharField(label='Utilidad después de impuestos - Profit after tax'),
+    withheld_tax_1 = forms.CharField(label='Impuesto retenido - Withheld tax'),
+    withheld_tax_2 = forms.CharField(label='Impuesto retenido - Withheld tax'),
+    signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
     rank = forms.CharField(label='Rank', max_length=100)
+    
+    
+class IP_420(forms.Form):
+    company_name = forms.CharField(label='Nombre compañía / Company Name', max_length=100)
+    address = forms.CharField(label='Dirección / Address', max_length=200)
+    email = forms.EmailField(label='Correo electrónico / Email')
+    liaison_officer = forms.CharField(label='Persona contacto / Liaison officer', max_length=100)
+    ssn = forms.CharField(label='Numero de Seguro Social / Social Security Number', max_length=11)
+    tel = forms.CharField(label='Tel', max_length=20)
+    fax = forms.CharField(label='Fax', max_length=20)
+    legal_form = forms.ChoiceField(
+        label='Forma legal de organización / Legal form of organization', 
+        choices=[('Corporación', 'Corporación'), ('Sociedad', 'Sociedad'), 
+                 ('Cooperativa', 'Cooperativa'), ('Empresa Individual', 
+                'Empresa Individual'), ('Empresa sin fines pecuniarios', 
+                'Empresa sin fines pecuniarios')]
+    )
+    cfc = forms.ChoiceField(label='CEC', choices=[('Si', 'Si'), ('No', 'No')])
+    main_line = forms.CharField(label='4. Línea principal de mercancía vendida por esta firma / Main line of merchandise sold by the firm:', max_length=200)
+    business_type = forms.ChoiceField(
+        label = "5. Clase de negocio / Type of business:",
+        choices = [('Distribuidor', 'Distribuidor'), ('Representante', 
+                'Representative'), ('Mayorista', 'Wholesaler'), 
+                   ('Supermercado', 'Supermarket')]
+    )
+    accounting_period = forms.CharField(label='6. Fecha de detallar la siguiente informacion / Your accounting period closing date:', max_length=100)
+    
+    sales_A_1 = forms.CharField(label='1. Ventas - Sales', max_length=100)
+    sales_A_2 = forms.CharField(label='1. Ventas - Sales', max_length=100)
+    
+    people_A_1 = forms.CharField(label='a. De personas - To persons', max_length=100)
+    people_A_2 = forms.CharField(label='a. De personas - To persons', max_length=100)
+    
+    industries_businesses_A_1 = forms.CharField(label='b. De industrias y negocios - To industries and businesses', max_length=100)
+    industries_businesses_A_2 = forms.CharField(label='b. De industrias y negocios - To industries and businesses', max_length=100)
+    
+    less_cost_A_1 = forms.CharField(label='2. Menos costo de ventas - Less cost of sales', max_length=100)
+    less_cost_A_2 = forms.CharField(label='2. Menos costo de ventas - Less cost of sales', max_length=100)
+    
+    inventory_beginning_1 = forms.CharField(label='a. Inventario al principio de año- Inventory at beginning of the year', max_length=100)
+    inventory_beginning_2 = forms.CharField(label='a. Inventario al principio de año- Inventory at beginning of the year', max_length=100)
+    
+    purchases_A_1 = forms.CharField(label='b. Compras - Purchases', max_length=100)
+    purchases_A_2 = forms.CharField(label='b. Compras - Purchases', max_length=100)
+    
+    inventory_end_1 = forms.CharField(label='c. Inventario al final año- Inventory at end of the year', max_length=100)
+    inventory_end_2 = forms.CharField(label='c. Inventario al final año- Inventory at end of the year', max_length=100)
+    
+    gross_profit_A_1 = forms.CharField(label='3.Beneficio bruto (1 - 2) / Gross profit (1 - 2)', max_length=100)
+    gross_profit_A_2 = forms.CharField(label='3.Beneficio bruto (1 - 2) / Gross profit (1 - 2)', max_length=100)
+    
+    other_income_A_1 = forms.CharField(label='4. Otros ingresos de operación / Other operationg income', max_length=100)
+    other_income_A_2 = forms.CharField(label='4. Otros ingresos de operación / Other operationg income', max_length=100)
+    
+    interests_A_1 = forms.CharField(label='a. Intereses - Interests', max_length=100)
+    interests_A_2 = forms.CharField(label='a. Intereses - Interests', max_length=100)
+    
+    rent_A_1 = forms.CharField(label='b. Renta de terreno y edificio / Rent of land and building', max_length=100)
+    rent_A_2 = forms.CharField(label='b. Renta de terreno y edificio / Rent of land and building', max_length=100)
+    
+    capital_gain_A_1 = forms.CharField(label='c. Ganancia o pérdida de capital / Capital gain or loss', max_length=100)
+    capital_gain_A_2 = forms.CharField(label='c. Ganancia o pérdida de capital / Capital gain or loss', max_length=100)
+    
+    dividends_A_1 = forms.CharField(label='d. Dividendos - Dividends', max_length=100)
+    dividends_A_2 = forms.CharField(label='d. Dividendos - Dividends', max_length=100)
+    
+    total_gross_A_1 = forms.CharField(label='5. Total de ingresos brutos (3 + 4) / Total gross income (3 + 4)', max_length=100)
+    total_gross_A_2 = forms.CharField(label='5. Total de ingresos brutos (3 + 4) / Total gross income (3 + 4)', max_length=100)
+    
+    cost_B_1 = forms.CharField(label='B. total costos directos e indirectos - Direct and indirect costs', max_length=100)
+    cost_B_2 = forms.CharField(label='B. total costos directos e indirectos - Direct and indirect costs', max_length=100)
+    
+    salaries_B_1 = forms.CharField(label='1. Salario, jornales, bono de Navidad y comiciones / Salaries, wages, Christmas bonus and comissions', max_length=100)
+    salaries_B_2 = forms.CharField(label='1. Salario, jornales, bono de Navidad y comiciones / Salaries, wages, Christmas bonus and comissions', max_length=100)
+    
+    interests_B_1 = forms.CharField(label='2. Intereses - Interests', max_length=100)
+    interests_B_2 = forms.CharField(label='2. Intereses - Interests', max_length=100)
+    
+    depreciation_B_1 = forms.CharField(label='3. Depreciación - Depreciation', max_length=100)
+    depreciation_B_2 = forms.CharField(label='3. Depreciación - Depreciation', max_length=100)
+    
+    rent_B_1 = forms.CharField(label='4. Renta de terreno y edificio - Rent of land and building', max_length=100)
+    rent_B_2 = forms.CharField(label='4. Renta de terreno y edificio - Rent of land and building', max_length=100)
+    
+    bad_debts_B_1 = forms.CharField(label='5. Cuenta incobrables / bad debts', max_length=100)
+    bad_debts_B_2 = forms.CharField(label='5. Cuenta incobrables / bad debts', max_length=100)
+    
+    donations_B_1 = forms.CharField(label='6. Donaciones - Donations', max_length=100)
+    donations_B_2 = forms.CharField(label='6. Donaciones - Donations', max_length=100)
+    
+    sales_B_1 = forms.CharField(label='7. Impuesto sobre la venta y uso / Sales and use tax', max_length=100)
+    sales_B_2 = forms.CharField(label='7. Impuesto sobre la venta y uso / Sales and use tax', max_length=100)
+    
+    purchases_B_1 = forms.CharField(label='a. Por Compra de maquinaria y equipo / On purchases of machinery and equipment', max_length=100)
+    purchases_B_2 = forms.CharField(label='a. Por Compra de maquinaria y equipo / On purchases of machinery and equipment', max_length=100)
+    
+    other_purchases_B_1 = forms.CharField(label='b. Por otras compras / On other purchases', max_length=100)
+    other_purchases_B_2 = forms.CharField(label='b. Por otras compras / On other purchases', max_length=100)
+    
+    licenses_B_1 = forms.CharField(label='8. Licencias y patentes - Licenses and patents', max_length=100)
+    licenses_B_2 = forms.CharField(label='8. Licencias y patentes - Licenses and patents', max_length=100)
+    
+    other_operations_B_1 = forms.CharField(label='9. Otras operaciones - Other operations', max_length=100)
+    other_operations_B_2 = forms.CharField(label='9. Otras operaciones - Other operations', max_length=100)
+    
+    gross_profit_C_1 = forms.CharField(label='C. Beneficio bruto (A-B) - Gross profit (A-B', max_length=100)
+    gross_profit_C_2 = forms.CharField(label='C. Beneficio bruto (A-B) - Gross profit (A-B', max_length=100)
+    
+    income_C_1 = forms.CharField(label='1. Contribución sobre ingresos / Income tax', max_length=100)
+    income_C_2 = forms.CharField(label='1. Contribución sobre ingresos / Income tax', max_length=100)
+    
+    profit_C_after_1 = forms.CharField(label='2. Ganacia después de contribución sobre ingresos / Profit after income tax', max_length=100)
+    profit_C_after_2 = forms.CharField(label='2. Ganacia después de contribución sobre ingresos / Profit after income tax', max_length=100)
+    
+    sales_D_1 = forms.CharField(label='D. Impuesto sobre ventas y uso retenido / Sales and use tax Withheld', max_length=100)
+    sales_D_2 = forms.CharField(label='D. Impuesto sobre ventas y uso retenido / Sales and use tax Withheld', max_length=100)
+    
+    name = forms.CharField(label='Nombre de persona que suministra la información Name of person furnishing information', max_length=100)
+    rank = forms.CharField(label='Rango o posición que ocupa en la empresa Rank or position', max_length=100)
 
 class JP_310(forms.Form):
     company_name = forms.CharField(label='Nombre compañía / Company Name', max_length=100)
@@ -1168,5 +1559,3 @@ class JP_310(forms.Form):
                                                    "La información suministrada cubre este establecimiento solamente./The information provided covers only the firm responding to this questionnaire.")])
     signature = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
     rank = forms.CharField(label='Rank', max_length=100)
-
-

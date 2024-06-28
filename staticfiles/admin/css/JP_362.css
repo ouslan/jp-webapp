@@ -166,6 +166,7 @@ input {
     margin: 20px 0;
 }
 
+
 #signature {
     width: 110%;
     border: none;
@@ -173,15 +174,30 @@ input {
     font-size: 30px; 
     font-style: italic;
     font-family: 'Dancing Script', cursive;
-    background-color: #ffffff;
-  }
+}
+
+#position, #phone, #date {
+    width: 110%;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
+}
+
+#position, #phone {
+    height: 80%;
+}
+
+#position, #phone, #date, #signature {
+background-color: white;
+}
 
 .big-box-bottom {
     display: flex;
     justify-content: center;
     margin-top: 80px;
 }
-  
+
 .left-signature {
     width: 290px;
     padding-top: 1px;
