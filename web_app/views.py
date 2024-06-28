@@ -319,7 +319,7 @@ def JP_361(request):
                             ])  
 
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/balanza_de_pagos/JP-361.html")
+    return render(request, "forms/yearly/balanza_de_pagos/JP-361.html")
 
 def JP_362(request):
     if request.method == "POST":
@@ -487,7 +487,7 @@ def JP_362(request):
                             ])  
 
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/balanza_de_pagos/JP-362.html")
+    return render(request, "forms/yearly/balanza_de_pagos/JP-362.html")
 
 def JP_364(request):
     if request.method == "POST":
@@ -668,10 +668,10 @@ def JP_364(request):
                             ])  
 
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/balanza_de_pagos/JP-364.html")
+    return render(request, "forms/yearly/balanza_de_pagos/JP-364.html")
 
 def JP_383(request):
-    return render(request, "forms/balanza_de_pagos/JP-383.html")
+    return render(request, "forms/yearly/balanza_de_pagos/JP-383.html")
 
 def IP_110(request):
     if request.method == "POST":
@@ -802,7 +802,7 @@ def IP_110(request):
 
         return render(request, "forms/succesfull.html")
 
-    return render(request, "forms/ingreso_neto/IP-110.html")
+    return render(request, "forms/yearly/ingreso_neto/IP-110.html")
 
 def JP_541(request):
     if request.method == "POST":
@@ -1301,7 +1301,7 @@ def JP_363(request):
                             ])  
 
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/balanza_de_pagos/JP-363.html")
+    return render(request, "forms/yearly/balanza_de_pagos/JP-363.html")
 
 def succesfull_page(request):
     return render(request, "forms/succesfull.html")
@@ -1376,7 +1376,7 @@ def JP_560_63110(request):
                             ])
             
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/ingreso_neto/JP-560-63110.html")
+    return render(request, "forms/yearly/ingreso_neto/JP-560-63110.html")
 
 def IP_210(request):
     if request.method == "POST":
@@ -1501,7 +1501,7 @@ def IP_210(request):
 
         return render(request, "forms/succesfull.html")
 
-    return render(request, "forms/ingreso_neto/IP-210.html")
+    return render(request, "forms/yearly/ingreso_neto/IP-210.html")
 
 def IP_220(request):
     if request.method == "POST":
@@ -1615,7 +1615,7 @@ def IP_220(request):
                             ])  
 
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/ingreso_neto/IP-220.html")
+    return render(request, "forms/yearly/ingreso_neto/IP-220.html")
 
 def JP_560_63111(request):
 
@@ -1676,7 +1676,7 @@ def JP_560_63111(request):
             
         return render(request, "forms/succesfull.html")
 
-    return render(request, "forms/ingreso_neto/JP-560-63111.html")
+    return render(request, "forms/yearly/ingreso_neto/JP-560-63111.html")
 
 def IP_230(request):
     if request.method == "POST":
@@ -1817,7 +1817,7 @@ def IP_230(request):
                             ])
             
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/ingreso_neto/IP-230.html")
+    return render(request, "forms/yearly/ingreso_neto/IP-230.html")
 
 def JP_560_63210(request):
     if request.method == "POST":
@@ -1894,7 +1894,7 @@ def JP_560_63210(request):
                             ])
             
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/ingreso_neto/JP-560-63210.html")
+    return render(request, "forms/yearly/ingreso_neto/JP-560-63210.html")
 
 def JP_560_2(request):
     if request.method == "POST":
@@ -1955,7 +1955,7 @@ def JP_560_2(request):
             
         return render(request, "forms/succesfull.html")
 
-    return render(request, "forms/ingreso_neto/JP-560-2.html")
+    return render(request, "forms/yearly/ingreso_neto/JP-560-2.html")
 
 def JP_375(request):
     if request.method == "POST":
@@ -2077,7 +2077,7 @@ def JP_375(request):
                             ])
             
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/balanza_de_pagos/JP-375.html")
+    return render(request, "forms/yearly/balanza_de_pagos/JP-375.html")
 
 def IP_480(request):
     if request.method == "POST":
@@ -2182,7 +2182,7 @@ def IP_480(request):
                             ])
             
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/ingreso_neto/IP-480.html")
+    return render(request, "forms/yearly/ingreso_neto/IP-480.html")
 
 
 def IP_420(request):
@@ -2337,7 +2337,7 @@ def IP_420(request):
                             ])  
 
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/ingreso_neto/IP-420.html")
+    return render(request, "forms/yearly/ingreso_neto/IP-420.html")
 
 def IP_310(request):
     if request.method == "POST":
@@ -2491,4 +2491,4 @@ def IP_310(request):
                             ])
             
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/ingreso_neto/IP-310.html")
+    return render(request, "forms/yearly/ingreso_neto/IP-310.html")
