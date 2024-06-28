@@ -19,6 +19,7 @@ urlpatterns = [
     re_path(r"^IP-210-mineria/$", views.IP_210, name="IP-210"),    
     re_path(r"^IP-220-utilidades/$", views.IP_220, name="IP-220"),
     re_path(r"^IP-230-construccion/$", views.IP_230, name="IP-230"),
+    re_path(r"^IP-310-manufactura/$", views.IP_310, name="IP-310"),
     re_path(r"^JP-560-63111-organizaciones-de-servicio-de-salud/$", views.JP_560_63111, name="JP-560-63111"),
     re_path(r"^JP-560-63210-seguros-domesticos-propiedad-contingencia/$", views.JP_560_63210, name="JP-560-63210"),
     re_path(r"^JP-364-informacion-sobre-compañias de seguros/$", views.JP_364, name="JP-364"),

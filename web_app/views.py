@@ -2338,3 +2338,157 @@ def IP_420(request):
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/ingreso_neto/IP-420.html")
+
+def IP_310(request):
+    if request.method == "POST":
+        # Retrieve form data
+        company_name = request.POST.get('company_name')
+        address = request.POST.get('address')
+        email = request.POST.get('email')
+        liaison_officer = request.POST.get('liaison_officer')
+        ssn = request.POST.get('ssn')
+        tel = request.POST.get('tel')
+        fax = request.POST.get('fax')
+        legal_form = request.POST.get('legal_form')
+        cfc = request.POST.get('cfc')
+        end_month = request.POST.get('end_month')
+        main_product_1 = request.POST.get('main_product_1')
+        other_product_1 = request.POST.get('other_product_1')
+        raw_material_used = request.POST.get('raw_material_used')
+        closing_date = request.POST.get('closing_date')
+        from_persons_1 = request.POST.get('from_persons_1')
+        from_persons_2 = request.POST.get('from_persons_2')
+        industries_businesses_1 = request.POST.get('industries_businesses_1')
+        industries_businesses_2 = request.POST.get('industries_businesses_2')
+        goods_manufactured_1 = request.POST.get('goods_manufactured_1')
+        goods_manufactured_2 = request.POST.get('goods_manufactured_2')
+        exports_val_1 = request.POST.get('exports_val_1')
+        exports_val_2 = request.POST.get('exports_val_2')
+        manufacturing_cost_1 = request.POST.get('manufacturing_cost_1')
+        manufacturing_cost_2 = request.POST.get('manufacturing_cost_2')
+        inventories_begginning_1 = request.POST.get('inventories_begginning_1')
+        inventories_begginning_2 = request.POST.get('inventories_begginning_2')
+        purchases_1 = request.POST.get('purchases_1')
+        purchases_2 = request.POST.get('purchases_2')
+        total_raw_1 = request.POST.get('total_raw_1')
+        total_raw_2 = request.POST.get('total_raw_2')
+        imported_1 = request.POST.get('imported_1')
+        imported_2 = request.POST.get('imported_2')
+        others_1 = request.POST.get('others_1')
+        others_2 = request.POST.get('others_2')
+        direct_wages_1 = request.POST.get('direct_wages_1')
+        direct_wages_2 = request.POST.get('direct_wages_2')
+        depreciation_1 = request.POST.get('depreciation_1')
+        depreciation_2 = request.POST.get('depreciation_2')
+        rent_land_1 = request.POST.get('rent_land_1')
+        rent_land_2 = request.POST.get('rent_land_2')
+        other_direct_1 = request.POST.get('other_direct_1')
+        other_direct_2 = request.POST.get('other_direct_2')
+        indirect_cost_1 = request.POST.get('indirect_cost_1')
+        indirect_cost_2 = request.POST.get('indirect_cost_2')
+        inventories_end_1 = request.POST.get('inventories_end_1')
+        inventories_end_2 = request.POST.get('inventories_end_2')
+        gross_profit_1 = request.POST.get('gross_profit_1')
+        gross_profit_2 = request.POST.get('gross_profit_2')
+        other_operating_1 = request.POST.get('other_operating_1')
+        other_operating_2 = request.POST.get('other_operating_2')
+        interest_1 = request.POST.get('interest_1')
+        interest_2 = request.POST.get('interest_2')
+        rent_land_3 = request.POST.get('rent_land_3')
+        rent_land_4 = request.POST.get('rent_land_4')
+        capital_gain_1 = request.POST.get('capital_gain_1')
+        capital_gain_2 = request.POST.get('capital_gain_2')
+        other_1 = request.POST.get('other_1')
+        other_2 = request.POST.get('other_2')
+        total_gross_1 = request.POST.get('total_gross_1')
+        total_gross_2 = request.POST.get('total_gross_2')
+        expenses_not_1 = request.POST.get('expenses_not_1')
+        expenses_not_2 = request.POST.get('expenses_not_2')
+        salaries_1 = request.POST.get('salaries_1')
+        salaries_2 = request.POST.get('salaries_2')
+        interest_3 = request.POST.get('interest_3')
+        interest_4 = request.POST.get('interest_4')
+        depreciation_3 = request.POST.get('depreciation_3')
+        depreciation_4 = request.POST.get('depreciation_4')
+        donations_1 = request.POST.get('donations_1')
+        donations_2 = request.POST.get('donations_2')
+        rent_land_5 = request.POST.get('rent_land_5')
+        rent_land_6 = request.POST.get('rent_land_6')
+        other_operating_3 = request.POST.get('other_operating_3')
+        other_operating_4 = request.POST.get('other_operating_4')
+        sales_tax_1 = request.POST.get('sales_tax_1')
+        sales_tax_2 = request.POST.get('sales_tax_2')
+        machinery_1 = request.POST.get('machinery_1')
+        machinery_2 = request.POST.get('machinery_2')
+        on_other_1 = request.POST.get('on_other_1')
+        on_other_2 = request.POST.get('on_other_2')
+        licenses_1 = request.POST.get('licenses_1')
+        licenses_2 = request.POST.get('licenses_2')
+        net_loss_1 = request.POST.get('net_loss_1')
+        net_loss_2 = request.POST.get('net_loss_2')
+        income_tax_1 = request.POST.get('income_tax_1')
+        income_tax_2 = request.POST.get('income_tax_2')
+        profit_after_tax_1 = request.POST.get('profit_after_tax_1')
+        profit_after_tax_2 = request.POST.get('profit_after_tax_2')
+        sales_and_use_withheld_1 = request.POST.get('sales_and_use_withheld_1')
+        sales_and_use_withheld_2 = request.POST.get('sales_and_use_withheld_2')
+        cfc_1 = request.POST.get('cfc_1')
+        legal_form_1 = request.POST.get('legal_form_1')
+        signature = request.POST.get('signature')
+        rank = request.POST.get('rank')
+
+
+
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP_310.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                "company_name", "address", "email", "liaison_officer",
+                                "ssn", "tel", "fax", "legal_form", "cfc", "end_month",
+                                "main_product_1", "other_product_1", "raw_material_used", "closing_date",
+                                "from_persons_1", "from_persons_2", "industries_businesses_1", "industries_businesses_2",
+                                "goods_manufactured_1", "goods_manufactured_2", "exports_val_1", "exports_val_2",
+                                "manufacturing_cost_1", "manufacturing_cost_2", "inventories_begginning_1", "inventories_begginning_2",
+                                "purchases_1", "purchases_2",
+                                "total_raw_1", "total_raw_2", "imported_1", "imported_2",
+                                "others_1", "others_2", "direct_wages_1", "direct_wages_2",
+                                "depreciation_1", "depreciation_2", "rent_land_1", "rent_land_2",
+                                "other_direct_1", "other_direct_2", "indirect_cost_1", "indirect_cost_2",
+                                "inventories_end_1", "inventories_end_2", "gross_profit_1", "gross_profit_2",
+                                "other_operating_1", "other_operating_2", "interest_1", "interest_2",
+                                "rent_land_3", "rent_land_4", "capital_gain_1", "capital_gain_2",
+                                "other_1", "other_2", "total_gross_1", "total_gross_2",
+                                "expenses_not_1", "expenses_not_2", "salaries_1", "salaries_2",
+                                "interest_3", "interest_4", "depreciation_3", "depreciation_4",
+                                "donations_1", "donations_2", "rent_land_5", "rent_land_6",
+                                "other_operating_3", "other_operating_4", "sales_tax_1", "sales_tax_2",
+                                "machinery_1", "machinery_2", "on_other_1", "on_other_2",
+                                "licenses_1", "licenses_2", "net_loss_1", "net_loss_2",
+                                "income_tax_1", "income_tax_2", "profit_after_tax_1", "profit_after_tax_2",
+                                "sales_and_use_withheld_1", "sales_and_use_withheld_2", "cfc_1", "legal_form_1",
+                                "signature", "rank"
+                                ])
+                
+            writer.writerow([
+                            company_name , address , email , liaison_officer , ssn , tel , fax , legal_form , cfc , end_month ,
+                            main_product_1 , other_product_1 , raw_material_used , closing_date , from_persons_1 , from_persons_2 ,
+                            industries_businesses_1 , industries_businesses_2 , goods_manufactured_1 , goods_manufactured_2 , exports_val_1 ,
+                            exports_val_2 , manufacturing_cost_1 , manufacturing_cost_2 , inventories_begginning_1 , inventories_begginning_2 ,
+                            purchases_1 , purchases_2 ,
+                            total_raw_1 , total_raw_2 , imported_1 , imported_2 , others_1 , others_2 , direct_wages_1 , direct_wages_2 ,
+                            depreciation_1 , depreciation_2 , rent_land_1 , rent_land_2 , other_direct_1 , other_direct_2 , indirect_cost_1 ,
+                            indirect_cost_2 , inventories_end_1 , inventories_end_2 , gross_profit_1 , gross_profit_2 , other_operating_1 ,
+                            other_operating_2 , interest_1 , interest_2 , rent_land_3 , rent_land_4 , capital_gain_1 , capital_gain_2 ,
+                            other_1 , other_2 , total_gross_1 , total_gross_2 , expenses_not_1 , expenses_not_2 , salaries_1 , salaries_2 ,
+                            interest_3 , interest_4 , depreciation_3 , depreciation_4 , donations_1 , donations_2 , rent_land_5 , rent_land_6 ,
+                            other_operating_3 , other_operating_4 , sales_tax_1 , sales_tax_2 , machinery_1 , machinery_2 , on_other_1 ,
+                            on_other_2 , licenses_1 , licenses_2 , net_loss_1 , net_loss_2 , income_tax_1 , income_tax_2 , profit_after_tax_1 ,
+                            profit_after_tax_2 , sales_and_use_withheld_1 , sales_and_use_withheld_2 , cfc_1 , legal_form_1 , signature , rank
+                            ])
+            
+        return render(request, "forms/succesfull.html")
+    return render(request, "forms/ingreso_neto/IP-310.html")
