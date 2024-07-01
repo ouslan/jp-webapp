@@ -2657,3 +2657,7 @@ def JP_383(request):
             
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-383.html")
+
+
+def IP_440g(request):
+    return render(request, "forms/yearly/ingreso_neto/IP-440g.html")
