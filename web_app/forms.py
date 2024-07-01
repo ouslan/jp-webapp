@@ -20,7 +20,9 @@ class IP_110(forms.Form):
         widget=forms.Textarea
     )
     branches = forms.ChoiceField(label='¿Opera sucursuales esta firma? / Do you have branch operations?', choices=[('Si', 'Si'), ('No', 'No')])
-    closing_date = forms.DateField(label='Fecha de cierre de sus libros / Your accounting period closing date', widget=forms.SelectDateWidget)
+    closing_date = forms.DateField(label='Fecha de cierre de sus libros / Your accounting period closing date', widget=forms.SelectDateWidget),
+    start_year = forms.CharField(label='Año de inicio de operaciones / Year of start of operations', max_length=100)
+    end_year = forms.CharField(label='Año de cierre de operaciones / Year of end of operations', max_length=100)
     services_revenues_12 = forms.CharField(label='Ingresos por servicios - Services rendered'),
     services_revenues_13 = forms.CharField(label='Ingresos por servicios - Services rendered'),
     industries_businesses_12 = forms.CharField(label='Ingresos por industrias y negocios - From industries and businesses'),
@@ -634,6 +636,8 @@ class IP_210(forms.Form):
     )
     branches = forms.ChoiceField(label='¿Opera sucursuales esta firma? / Do you have branch operations?', choices=[('Si', 'Si'), ('No', 'No')])
     closing_date = forms.DateField(label='Fecha de cierre de sus libros / Your accounting period closing date', widget=forms.SelectDateWidget)
+    start_year = forms.CharField(label='Año de inicio de operaciones / Year of start of operations', max_length=100)
+    end_year = forms.CharField(label='Año de cierre de operaciones / Year of end of operations', max_length=100)
     income_operations_12 = forms.CharField(label='1. Ingresos por operaciones - Income from operations'),
     income_operations_13 = forms.CharField(label='1. Ingresos por operaciones - Income from operations'),
     income_interests_12 = forms.CharField(label='2. Interese - Interests'),
@@ -706,6 +710,8 @@ class IP_220(forms.Form):
     branches = forms.ChoiceField(label='¿Opera sucursuales esta firma? / Do you have branch operations?', choices=[('Si', 'Si'), ('No', 'No')])
     branches_yes = forms.ChoiceField(label='afirmativo a branches', choices=[('todas las sucursales', 'todas las sucursales'), ('este establecimiento', 'este establecimiento')])
     closing_date = forms.DateField(label='Fecha de cierre de sus libros / Your accounting period closing date', widget=forms.SelectDateWidget)
+    start_year = forms.CharField(label='Año de inicio de operaciones / Year of start of operations', max_length=100)
+    end_year = forms.CharField(label='Año de cierre de operaciones / Year of end of operations', max_length=100)
     services_revenues_12 = forms.CharField(label='Ingresos por servicios - Services rendered'),
     services_revenues_13 = forms.CharField(label='Ingresos por servicios - Services rendered'),
     residential_consumers_12 = forms.CharField(label='a. Abonados residenciales - Residential consumers'),
@@ -808,6 +814,8 @@ class IP_230(forms.Form):
         widget=forms.Textarea
     )
     closing_date = forms.DateField(label='Fecha de cierre de sus libros / Your accounting period closing date', widget=forms.SelectDateWidget)
+    start_year = forms.CharField(label='Año de inicio de operaciones / Year of start of operations', max_length=100)
+    end_year = forms.CharField(label='Año de cierre de operaciones / Year of end of operations', max_length=100)
     income_project_A_12 = forms.CharField(label='1. Ingresos por proyecto - Income from project'),
     income_project_A_13 = forms.CharField(label='1. Ingresos por proyecto - Income from project'),
     people_A_12 = forms.CharField(label='2. A personas - To persons'),
@@ -1283,6 +1291,8 @@ class IP_480(forms.Form):
         widget=forms.Textarea
     )
     closing_date = forms.DateField(label='Fecha de cierre de sus libros / Your accounting period closing date', widget=forms.SelectDateWidget)
+    start_year = forms.CharField(label='Año de inicio de operaciones / Year of start of operations', max_length=100)
+    end_year = forms.CharField(label='Año de cierre de operaciones / Year of end of operations', max_length=100)
     operation_incomes_1 = forms.CharField(label='1. Ingresos por proyecto - Income from project'),
     operation_incomes_2 = forms.CharField(label='1. Ingresos por proyecto - Income from project'),
     people_A_1 = forms.CharField(label='2. A personas - To persons'),
@@ -1359,6 +1369,8 @@ class IP_420(forms.Form):
                    ('Supermercado', 'Supermarket')]
     )
     accounting_period = forms.CharField(label='6. Fecha de detallar la siguiente informacion / Your accounting period closing date:', max_length=100)
+    start_year = forms.CharField(label='Año de inicio de operaciones / Year of start of operations', max_length=100)
+    end_year = forms.CharField(label='Año de cierre de operaciones / Year of end of operations', max_length=100)
     
     sales_A_1 = forms.CharField(label='1. Ventas - Sales', max_length=100)
     sales_A_2 = forms.CharField(label='1. Ventas - Sales', max_length=100)
@@ -1453,7 +1465,7 @@ class IP_420(forms.Form):
     name = forms.CharField(label='Nombre de persona que suministra la información Name of person furnishing information', max_length=100)
     rank = forms.CharField(label='Rango o posición que ocupa en la empresa Rank or position', max_length=100)
 
-class JP_310(forms.Form):
+class IP_310(forms.Form):
     company_name = forms.CharField(label='Nombre compañía / Company Name', max_length=100)
     address = forms.CharField(label='Dirección / Address', max_length=200)
     email = forms.EmailField(label='Correo electrónico / Email')
@@ -1475,6 +1487,8 @@ class JP_310(forms.Form):
     other_product_1 = forms.CharField(label='2. Otros productos - Other products', max_length=100)
     raw_material_used = forms.CharField(label='3. Materia prima utilizada - Raw material used', max_length=100)
     closing_date = forms.DateField(label='Fecha de cierre de sus libros / Your accounting period closing date', widget=forms.SelectDateWidget)
+    start_year = forms.CharField(label='Año de inicio de operaciones / Year of start of operations', max_length=100)
+    end_year = forms.CharField(label='Año de cierre de operaciones / Year of end of operations', max_length=100)
     from_persons_1 = forms.CharField(label='a. A personas - To persons', max_length=100)
     from_persons_2 = forms.CharField(label='a. A personas - To persons', max_length=100)
     industries_businesses_1 = forms.CharField(label='b. A industrias y negocios - To industries and businesses', max_length=100)

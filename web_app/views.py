@@ -686,6 +686,8 @@ def IP_110(request):
         business_function = request.POST.get('business_function')
         branches = request.POST.get('branches')
         closing_date = request.POST.get('closing_date')
+        start_year = request.POST.get('start_year')
+        end_year = request.POST.get('end_year')
         services_revenues_12 = request.POST.get('services_revenues_12')
         services_revenues_13 = request.POST.get('services_revenues_13')
         industries_businesses_12 = request.POST.get('industries_businesses_12')
@@ -742,7 +744,7 @@ def IP_110(request):
         rank = request.POST.get('rank')
         
         
-        csv_file_path = 'data/cuestionarios/ingreso_neto/IP_110.csv'
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP-110.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -751,7 +753,7 @@ def IP_110(request):
             if not file_exists:
                 writer.writerow(['company_name','address','email','liaison_officer','ssn','tel','fax',
                                  'legal_form','cfc','business_type','business_function','branches',
-                                 'closing_date','services_revenues_12','services_revenues_13',
+                                 'closing_date','start_year','end_year','services_revenues_12','services_revenues_13',
                                  'industries_businesses_12','industries_businesses_13','people_12',
                                  'people_13','sales_12','sales_13','incomes_rents_12','incomes_rents_13'
                                  ,'incomes_interests_12','incomes_interests_13','dividends_12','dividends_13',
@@ -769,7 +771,7 @@ def IP_110(request):
             writer.writerow([company_name, address, email, liaison_officer, 
                              ssn, tel, fax, legal_form, cfc, business_type,
                              business_function, branches, closing_date,
-                             services_revenues_12, services_revenues_13,
+                             start_year,end_year,services_revenues_12, services_revenues_13,
                              industries_businesses_12, industries_businesses_13,
                              people_12, people_13, sales_12, sales_13,
                              incomes_rents_12, incomes_rents_13,
@@ -1391,6 +1393,8 @@ def IP_210(request):
         business_function = request.POST.get('business_function')
         branches = request.POST.get('branches')
         closing_date = request.POST.get('closing_date')
+        start_year = request.POST.get('start_year')
+        end_year = request.POST.get('end_year')
         income_operations_12 = request.POST.get('income_operations_12')
         income_operations_13 = request.POST.get('income_operations_13')
         income_interests_12 = request.POST.get('income_interests_12')
@@ -1443,7 +1447,7 @@ def IP_210(request):
         rank = request.POST.get('rank')
         
         
-        csv_file_path = 'data/cuestionarios/ingreso_neto/IP_210.csv'
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP-210.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -1452,7 +1456,7 @@ def IP_210(request):
             if not file_exists:
                 writer.writerow(['company_name','address','email','liaison_officer','ssn','tel','fax',
                                  'legal_form','cfc','business_type','business_function','branches',
-                                 'closing_date','income_operations_12','income_operations_13',
+                                 'closing_date','start_year','end_year','income_operations_12','income_operations_13',
                                  'income_interests_12','income_interests_13','incomes_rents_12'
                                  ,'incomes_rents_13' ,'income_rent_land_12','income_rent_land_13','other_income_12','other_income_13',
                                  'total_incomes_12','total_incomes_13','total_income_12','total_income_13',
@@ -1469,7 +1473,7 @@ def IP_210(request):
             writer.writerow([company_name, address, email, liaison_officer, 
                              ssn, tel, fax, legal_form, cfc, business_type,
                              business_function, branches, closing_date,
-                             income_operations_12, income_operations_13,
+                             start_year,end_year,income_operations_12, income_operations_13,
                              income_interests_12, income_interests_13,
                              incomes_rents_12, incomes_rents_13,
                              income_rent_land_12, income_rent_land_13,
@@ -1517,6 +1521,8 @@ def IP_220(request):
         branches = request.POST.get('branches')
         branches_yes = request.POST.get('branches_yes')
         closing_date = request.POST.get('closing_date')
+        start_year = request.POST.get('start_year')
+        end_year = request.POST.get('end_year')
         services_revenues_12 = request.POST.get('services_revenues_12')
         services_revenues_13 = request.POST.get('services_revenues_13')
         residential_consumers_12 = request.POST.get('residential_consumers_12')
@@ -1568,7 +1574,7 @@ def IP_220(request):
         signature = request.POST.get('signature')
         rank = request.POST.get('rank')
 
-        csv_file_path = 'data/cuestionarios/ingreso_neto/IP_220.csv'
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP-220.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -1577,7 +1583,7 @@ def IP_220(request):
             if not file_exists:
                 writer.writerow(['company_name','address','email','liaison_officer','ssn','tel','fax',
                                  'legal_form','cfc','business_type','business_function','branches','branches_yes',
-                                 'closing_date','services_revenues_12','services_revenues_13',
+                                 'closing_date','start_year','end_year','services_revenues_12','services_revenues_13',
                                  'residential_consumers_12','residential_consumers_13','other_consumers_12',
                                  'other_consumers_13','incomes_rents_12','incomes_rents_13','incomes_interests_12',
                                  'incomes_interests_13','dividends_12','dividends_13','others_incomes_12',
@@ -1594,7 +1600,7 @@ def IP_220(request):
             writer.writerow([company_name, address, email, liaison_officer, 
                              ssn, tel, fax, legal_form, cfc, business_type,
                              business_function, branches, branches_yes, closing_date,
-                             services_revenues_12, services_revenues_13,
+                             start_year,end_year,services_revenues_12, services_revenues_13,
                              residential_consumers_12, residential_consumers_13,
                              other_consumers_12, other_consumers_13, incomes_rents_12,
                              incomes_rents_13, incomes_interests_12, incomes_interests_13,
@@ -1689,6 +1695,8 @@ def IP_230(request):
         cfc = request.POST.get('cfc')
         business_function = request.POST.get('business_function')
         closing_date = request.POST.get('closing_date')
+        start_year = request.POST.get('start_year')
+        end_year = request.POST.get('end_year')
         income_project_A_12 = request.POST.get('income_project_A_12')
         income_project_A_13 = request.POST.get('income_project_A_13')
         people_A_12 = request.POST.get('people_A_12')
@@ -1769,7 +1777,7 @@ def IP_230(request):
             if not file_exists:
                 writer.writerow([
                                 "company_name","address","email","liaison_officer","ssn","tel","fax","legal_form",
-                                "cfc","business_function","closing_date","income_project_A_12","income_project_A_13",
+                                "cfc","business_function","closing_date","start_year","end_year","income_project_A_12","income_project_A_13",
                                 "people_A_12","people_A_13","industries_businesses_A_12","industries_businesses_A_13",
                                 "direct_indirect_B_12","direct_indirect_B_13","direct_christmas_vacation_B_12",
                                 "direct_christmas_vacation_B_13","rent_land_building_B_12","rent_land_building_B_13",
@@ -1792,7 +1800,7 @@ def IP_230(request):
                 
             writer.writerow([
                             company_name, address, email, liaison_officer, ssn, tel, fax, legal_form,
-                            cfc, business_function, closing_date, income_project_A_12, income_project_A_13,
+                            cfc, business_function, closing_date, start_year, end_year, income_project_A_12, income_project_A_13,
                             people_A_12, people_A_13, industries_businesses_A_12, industries_businesses_A_13,
                             direct_indirect_B_12, direct_indirect_B_13, direct_christmas_vacation_B_12,
                             direct_christmas_vacation_B_13, rent_land_building_B_12, rent_land_building_B_13,
@@ -2090,6 +2098,8 @@ def IP_480(request):
         cfc = request.POST.get('cfc')
         business_function = request.POST.get('business_function')
         closing_date = request.POST.get('closing_date')
+        start_year = request.POST.get('start_year')
+        end_year = request.POST.get('end_year')
         operation_incomes_1 = request.POST.get('operation_incomes_1')
         operation_incomes_2 = request.POST.get('operation_incomes_2')
         people_A_1 = request.POST.get('people_A_1')
@@ -2150,7 +2160,7 @@ def IP_480(request):
             if not file_exists:
                 writer.writerow([
                                 "company_name","address","email","liaison_officer","ssn","tel","fax","legal_form",
-                                "cfc","business_function","closing_date","operation_incomes_1","operation_incomes_2",
+                                "cfc","business_function","closing_date","start_year","end_year","operation_incomes_1","operation_incomes_2",
                                 "people_A_1","people_A_2","industries_businesses_A_1","industries_businesses_A_2",
                                 "incomes_interests_1","incomes_interests_2","incomes_rents_1","incomes_rents_2",
                                 "dividends_1","dividends_2","others_incomes_1","others_incomes_2","total_incomes_1",
@@ -2165,7 +2175,7 @@ def IP_480(request):
                 
             writer.writerow([
                             company_name, address, email, liaison_officer, ssn, tel, fax, legal_form,
-                            cfc, business_function, closing_date, operation_incomes_1, operation_incomes_2,
+                            cfc, business_function, closing_date, start_year, end_year, operation_incomes_1, operation_incomes_2,
                             people_A_1, people_A_2, industries_businesses_A_1, industries_businesses_A_2,
                             incomes_interests_1, incomes_interests_2, incomes_rents_1, incomes_rents_2,
                             dividends_1, dividends_2, others_incomes_1, others_incomes_2, total_incomes_1,
@@ -2197,6 +2207,8 @@ def IP_420(request):
         main_line = request.POST.get('main_line')
         business_type = request.POST.get('business_type')
         accounting_period = request.POST.get('accounting_period')
+        start_year = request.POST.get('start_year')
+        end_year = request.POST.get('end_year')
         
         sales_A_1 = request.POST.get('sales_A_1')
         sales_A_2 = request.POST.get('sales_A_2')
@@ -2292,7 +2304,7 @@ def IP_420(request):
         rank = request.POST.get('rank')
         
         
-        csv_file_path = 'data/cuestionarios/ingreso_neto/IP_420.csv'
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP-420.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -2301,7 +2313,7 @@ def IP_420(request):
             if not file_exists:
                 writer.writerow(['company_name','address','email','liaison_officer','ssn','tel','fax',
                                 'legal_form','cfc', 'main_line','business_type','accounting_period',
-                                'sales_A_1','sales_A_2','people_A_1','people_A_2','industries_businesses_A_1',
+                                'start_year','end_year','sales_A_1','sales_A_2','people_A_1','people_A_2','industries_businesses_A_1',
                                 'industries_businesses_A_2','less_cost_A_1','less_cost_A_2','inventory_beginning_1',
                                 'inventory_beginning_2','purchases_A_1','purchases_A_2','inventory_end_1',
                                 'inventory_end_2','gross_profit_A_1','gross_profit_A_2','other_income_A_1',
@@ -2318,7 +2330,7 @@ def IP_420(request):
             
             writer.writerow([company_name, address, email, liaison_officer, 
                             ssn, tel, fax, legal_form, cfc, main_line, business_type,
-                            accounting_period, sales_A_1, sales_A_2, people_A_1,
+                            accounting_period, start_year, end_year, sales_A_1, sales_A_2, people_A_1,
                             people_A_2, industries_businesses_A_1, industries_businesses_A_2, less_cost_A_1,
                             less_cost_A_2, inventory_beginning_1, inventory_beginning_2, purchases_A_1,
                             purchases_A_2, inventory_end_1, inventory_end_2, gross_profit_A_1, gross_profit_A_2,
@@ -2353,6 +2365,8 @@ def IP_310(request):
         other_product_1 = request.POST.get('other_product_1')
         raw_material_used = request.POST.get('raw_material_used')
         closing_date = request.POST.get('closing_date')
+        start_year = request.POST.get('start_year')
+        end_year = request.POST.get('end_year')
         from_persons_1 = request.POST.get('from_persons_1')
         from_persons_2 = request.POST.get('from_persons_2')
         industries_businesses_1 = request.POST.get('industries_businesses_1')
@@ -2436,7 +2450,7 @@ def IP_310(request):
 
 
 
-        csv_file_path = 'data/cuestionarios/ingreso_neto/IP_310.csv'
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP-310.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -2446,7 +2460,7 @@ def IP_310(request):
                 writer.writerow([
                                 "company_name", "address", "email", "liaison_officer",
                                 "ssn", "tel", "fax", "legal_form", "cfc", "end_month",
-                                "main_product_1", "other_product_1", "raw_material_used", "closing_date",
+                                "main_product_1", "other_product_1", "raw_material_used", "closing_date", "start_year", "end_year",
                                 "from_persons_1", "from_persons_2", "industries_businesses_1", "industries_businesses_2",
                                 "goods_manufactured_1", "goods_manufactured_2", "exports_val_1", "exports_val_2",
                                 "manufacturing_cost_1", "manufacturing_cost_2", "inventories_begginning_1", "inventories_begginning_2",
@@ -2472,7 +2486,8 @@ def IP_310(request):
                 
             writer.writerow([
                             company_name , address , email , liaison_officer , ssn , tel , fax , legal_form , cfc , end_month ,
-                            main_product_1 , other_product_1 , raw_material_used , closing_date , from_persons_1 , from_persons_2 ,
+                            main_product_1 , other_product_1 , raw_material_used , closing_date , 
+                            start_year , end_year , from_persons_1 , from_persons_2 ,
                             industries_businesses_1 , industries_businesses_2 , goods_manufactured_1 , goods_manufactured_2 , exports_val_1 ,
                             exports_val_2 , manufacturing_cost_1 , manufacturing_cost_2 , inventories_begginning_1 , inventories_begginning_2 ,
                             purchases_1 , purchases_2 ,
