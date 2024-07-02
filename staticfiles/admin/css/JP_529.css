@@ -215,13 +215,13 @@ table {
     border-collapse: collapse;
   }
   
-  th {
+  /* th {
     padding: 10px;
     text-align: center;
     font-size: 0.9em;
     border: 1px solid black;
     background-color: #dddddd;
-  }
+  } */
   
   td {
     border: 1px solid black;
