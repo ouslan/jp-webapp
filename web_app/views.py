@@ -766,7 +766,7 @@ def JP_529(request):
             writer.writerow([year1, year2, company, address, email, liaison_officer, tel, choice, agencia, programa_federal, cantidad_recibida, fecha, agencia2, programa_federal2, cantidad_recibida2, fecha2, instuition1, money1, date1, instuition2, money2, date2, instuition3, money3, date3, instuition4, money4, date4, instuition5, money5, date5, instuition6, money6, date6, instuition7, money7, date7, instuition8, money8, date8, instuition9, money9, date9, instuition10, money10, date10, name, signature, puesto, phone])
         
         return render(request, "cuestionarios/succesfull.html")
-    return render(request, "cuestionarios/balanza_de_pagos/JP-529.html")
+    return render(request, "forms/yearly/balanza_de_pagos/JP-529.html")
 
 def IP_110(request):
     if request.method == "POST":
