@@ -1034,9 +1034,9 @@ class JP_362(forms.Form):
     short_others_final_2 = forms.CharField(label='Otros (especifique)', max_length=100)
     short_others_interes_2 = forms.CharField(label='Otros (especifique)', max_length=100)
 
-    name_signature = forms.CharField(label='Name', max_length=100)
-    position_signature = forms.CharField(label='Position', max_length=100)
-    date_signature = forms.CharField(label='Date', max_length=100)
+    signature = forms.CharField(label='Name', max_length=100)
+    position = forms.CharField(label='Position', max_length=100)
+    date = forms.CharField(label='Date', max_length=100)
     phone = forms.CharField(label='Phone Number', max_length=100)
     
 class JP_560_2(forms.Form):

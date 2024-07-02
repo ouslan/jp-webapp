@@ -427,9 +427,9 @@ def JP_362(request):
         short_others_final_2 = request.POST.get('short_others_final_2')
         short_others_interes_2 = request.POST.get('short_others_interes_2')
         
-        name_signature = request.POST.get('name_signature')
-        position_signature = request.POST.get('position_signature')
-        date_signature = request.POST.get('date_signature')
+        signature = request.POST.get('signature')
+        position = request.POST.get('position')
+        date = request.POST.get('date')
         phone = request.POST.get('phone')
         
         
@@ -460,7 +460,7 @@ def JP_362(request):
                                 'short_balance_balance', 'short_balance_emision', 'short_balance_amortizacion', 'short_balance_final', 'short_balance_interes',
                                 'short_accouts_balance', 'short_accouts_emision', 'short_accouts_amortizacion', 'short_accouts_final',
                                 'short_accouts_interes', 'short_others_balance_2', 'short_others_emision_2', 'short_others_amortizacion_2',
-                                'short_others_final_2', 'short_others_interes_2', 'name_signature', 'position_signature', 'date_signature', 'phone'
+                                'short_others_final_2', 'short_others_interes_2', 'signature', 'position', 'date', 'phone'
                                 ])
             
             writer.writerow([year_1, year_2, company_name, debts_balance, debts_emision, debts_amortizacion,
@@ -483,7 +483,7 @@ def JP_362(request):
                             short_balance_balance, short_balance_emision, short_balance_amortizacion, short_balance_final, short_balance_interes,
                             short_accouts_balance, short_accouts_emision, short_accouts_amortizacion, short_accouts_final,
                             short_accouts_interes, short_others_balance_2, short_others_emision_2, short_others_amortizacion_2,
-                            short_others_final_2, short_others_interes_2, name_signature, position_signature, date_signature, phone
+                            short_others_final_2, short_others_interes_2, signature, position, date, phone
                             ])  
 
         return render(request, "forms/succesfull.html")
@@ -604,7 +604,8 @@ def JP_364(request):
         dividendos_poliza_balance1 = request.POST.get('dividendos_poliza_balance1')
         dividendos_poliza_balance2 = request.POST.get('dividendos_poliza_balance2')
         dividendos_poliza_agente = request.POST.get('dividendos_poliza_agente')
-        nombre_firma = request.POST.get('nombre_firma')
+        signature = request.POST.get('nombre_firma')
+        position = request.POST.get('position')
         phone = request.POST.get('phone')
         nombre_persona = request.POST.get('nombre_persona')
         
@@ -637,7 +638,7 @@ def JP_364(request):
                                 'prestamos_comerciales_industriales_balance1', 'prestamos_comerciales_industriales_balance2',
                                 'prestamos_comerciales_industriales_agente', 'prestamos_poliza_balance1', 'prestamos_poliza_balance2',
                                 'prestamos_poliza_agente', 'reservas_poliza_balance1', 'reservas_poliza_balance2', 'reservas_poliza_agente',
-                                'dividendos_poliza_balance1', 'dividendos_poliza_balance2', 'dividendos_poliza_agente', 'nombre_firma',
+                                'dividendos_poliza_balance1', 'dividendos_poliza_balance2', 'dividendos_poliza_agente', 'signature', "position"
                                 'phone', 'nombre_persona'
                                 ])
             
@@ -663,7 +664,7 @@ def JP_364(request):
                             prestamos_comerciales_industriales_balance1, prestamos_comerciales_industriales_balance2,
                             prestamos_comerciales_industriales_agente, prestamos_poliza_balance1, prestamos_poliza_balance2,
                             prestamos_poliza_agente, reservas_poliza_balance1, reservas_poliza_balance2, reservas_poliza_agente,
-                            dividendos_poliza_balance1, dividendos_poliza_balance2, dividendos_poliza_agente, nombre_firma,
+                            dividendos_poliza_balance1, dividendos_poliza_balance2, dividendos_poliza_agente, signature, position,
                             phone, nombre_persona
                             ])  
 
