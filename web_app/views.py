@@ -139,7 +139,7 @@ def JP_304(request):
         fecha_gasto_local = request.POST.get('fecha_gasto_local')
         numero_cuenta_local = request.POST.get('numero_cuenta_local')
         
-        csv_file_path = 'data/cuestionarios/balanza_de_pago/JP-304.csv'
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-304.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
@@ -256,7 +256,7 @@ def JP_361(request):
         phone = request.POST.get('phone')
         position = request.POST.get('position')
         
-        csv_file_path = 'data/cuestionarios/balanza_de_pago/JP-361.csv'
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-361.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
         with open(csv_file_path, mode='a', newline='') as file:
