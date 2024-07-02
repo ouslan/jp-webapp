@@ -62,10 +62,10 @@
 
                 <!-- Line 2 -->
                 <tr>
-                    <th>A: 6/30/<input id="year" type="text" name="year_bono1" required minlength="4" maxlength="4" size="10" placeholder="Year" required></th>
-                    <th>A: 6/30/<input id="year" type="text" name="year_bono2" required minlength="4" maxlength="4" size="10" placeholder="Year" required></th>
-                    <th>A: 6/30/<input id="year" type="text" name="year_paga1" required minlength="4" maxlength="4" size="10" placeholder="Year" required></th>
-                    <th>A: 6/30/<input id="year" type="text" name="year_paga2" required minlength="4" maxlength="4" size="10" placeholder="Year" required></th>
+                    <th>A: 6/30/<input id="year" type="number" name="year_bono1" required minlength="4" maxlength="4" size="10" placeholder="Year" required></th>
+                    <th>A: 6/30/<input id="year" type="number" name="year_bono2" required minlength="4" maxlength="4" size="10" placeholder="Year" required></th>
+                    <th>A: 6/30/<input id="year" type="number" name="year_paga1" required minlength="4" maxlength="4" size="10" placeholder="Year" required></th>
+                    <th>A: 6/30/<input id="year" type="number" name="year_paga2" required minlength="4" maxlength="4" size="10" placeholder="Year" required></th>
                 </tr>
 
                 <!-- Line 3 -->
@@ -253,8 +253,8 @@
                 <!-- Line 1 -->
                 <tr>
                     <th rowspan="2">Partida</th>
-                    <th rowspan="2">Balance a: 6/30/<input id="year" type="text" name="year_balance1" required minlength="4" maxlength="4" size="10" placeholder="Year"></th>
-                    <th rowspan="2">Balance a: 6/30/<input id="year" type="text" name="year_balance2" required minlength="4" maxlength="4" size="10" placeholder="Year"></th>
+                    <th rowspan="2">Balance a: 6/30/<input id="year" type="number" name="year_balance1" required minlength="4" maxlength="4" size="10" placeholder="Year"></th>
+                    <th rowspan="2">Balance a: 6/30/<input id="year" type="number" name="year_balance2" required minlength="4" maxlength="4" size="10" placeholder="Year"></th>
                     <th rowspan="2">Nombre del Agente que le da Servicios</th>
                 </tr>
 
@@ -282,7 +282,7 @@
                         &emsp;&emsp;de Veteranos</td>
                     <td><input type="number" name="GAV_balance1" placeholder="$"></td>
                     <td><input type="number" name="GAV_balance2" placeholder="$"></td>
-                    <td><input type="number" name="GAV_agente" placeholder="Nombre del Agente"></td>
+                    <td><input type="text" name="GAV_agente" placeholder="Nombre del Agente"></td>
                 </tr>
 
                 <!-- Line 5 -->
@@ -290,7 +290,7 @@
                     <td>&emsp;c. Convencionales</td>
                     <td><input type="number" name="convencionales_balance1" placeholder="$"></td>
                     <td><input type="number" name="convencionales_balance2" placeholder="$"></td>
-                    <td><input type="number" name="convencionales_agente" placeholder="Nombre del Agente"></td>
+                    <td><input type="text" name="convencionales_agente" placeholder="Nombre del Agente"></td>
                 </tr>
 
                 <!-- Line 6 -->
@@ -299,7 +299,7 @@
                         &emsp;&emsp;Instituciones</td>
                     <td><input type="number" name="otras_instituciones_balance1" placeholder="$"></td>
                     <td><input type="number" name="otras_instituciones_balance2" placeholder="$"></td>
-                    <td><input type="number" name="otras_instituciones_agente" placeholder="Nombre del Agente"></td>
+                    <td><input type="text" name="otras_instituciones_agente" placeholder="Nombre del Agente"></td>
                 </tr>
 
                 <!-- Line 7 -->
@@ -307,7 +307,7 @@
                     <td>5. Otros préstamos hipotecarios</td>
                     <td><input type="number" name="prestamos_hipo_balance1" placeholder="$"></td>
                     <td><input type="number" name="prestamos_hipo_balance2" placeholder="$"></td>
-                    <td><input type="number" name="prestamos_hipo_agente" placeholder="Nombre del Agente"></td>
+                    <td><input type="text" name="prestamos_hipo_agente" placeholder="Nombre del Agente"></td>
                 </tr>
 
                 <!-- Line 8 -->
@@ -315,7 +315,7 @@
                     <td>6. Préstamos comerciales e industriales</td>
                     <td><input type="number" name="prestamos_comerciales_industriales_balance1" placeholder="$"></td>
                     <td><input type="number" name="prestamos_comerciales_industriales_balance2" placeholder="$"></td>
-                    <td><input type="number" name="prestamos_comerciales_industriales_agente" placeholder="Nombre del Agente"></td>
+                    <td><input type="text" name="prestamos_comerciales_industriales_agente" placeholder="Nombre del Agente"></td>
                 </tr>
 
                 <!-- Line 9 -->
@@ -323,7 +323,7 @@
                     <td>7. Préstamos sobre pólizas</td>
                     <td><input type="number" name="prestamos_poliza_balance1" placeholder="$"></td>
                     <td><input type="number" name="prestamos_poliza_balance2" placeholder="$"></td>
-                    <td><input type="number" name="prestamos_poliza_agente" placeholder="Nombre del Agente"></td>
+                    <td><input type="text" name="prestamos_poliza_agente" placeholder="Nombre del Agente"></td>
                 </tr>
                 
                 <!-- Line 10 -->
@@ -332,7 +332,7 @@
                         &emsp;seguros</td>
                     <td><input type="number" name="reservas_poliza_balance1" placeholder="$"></td>
                     <td><input type="number" name="reservas_poliza_balance2" placeholder="$"></td>
-                    <td><input type="number" name="reservas_poliza_agente" placeholder="Nombre del Agente"></td>
+                    <td><input type="text" name="reservas_poliza_agente" placeholder="Nombre del Agente"></td>
                 </tr>
 
                 <!-- Line 11 -->
@@ -341,7 +341,7 @@
                         &emsp;seguros</td>
                     <td><input type="number" name="dividendos_poliza_balance1" placeholder="$"></td>
                     <td><input type="number" name="dividendos_poliza_balance2" placeholder="$"></td>
-                    <td><input type="number" name="dividendos_poliza_agente" placeholder="Nombre del Agente"></td>
+                    <td><input type="text" name="dividendos_poliza_agente" placeholder="Nombre del Agente"></td>
                 </tr>
             </table>
         </section>

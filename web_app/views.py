@@ -605,7 +605,6 @@ def JP_364(request):
         dividendos_poliza_balance2 = request.POST.get('dividendos_poliza_balance2')
         dividendos_poliza_agente = request.POST.get('dividendos_poliza_agente')
         signature = request.POST.get('nombre_firma')
-        position = request.POST.get('position')
         phone = request.POST.get('phone')
         nombre_persona = request.POST.get('nombre_persona')
         
@@ -638,7 +637,7 @@ def JP_364(request):
                                 'prestamos_comerciales_industriales_balance1', 'prestamos_comerciales_industriales_balance2',
                                 'prestamos_comerciales_industriales_agente', 'prestamos_poliza_balance1', 'prestamos_poliza_balance2',
                                 'prestamos_poliza_agente', 'reservas_poliza_balance1', 'reservas_poliza_balance2', 'reservas_poliza_agente',
-                                'dividendos_poliza_balance1', 'dividendos_poliza_balance2', 'dividendos_poliza_agente', 'signature', "position"
+                                'dividendos_poliza_balance1', 'dividendos_poliza_balance2', 'dividendos_poliza_agente', 'signature', 
                                 'phone', 'nombre_persona'
                                 ])
             
@@ -664,7 +663,7 @@ def JP_364(request):
                             prestamos_comerciales_industriales_balance1, prestamos_comerciales_industriales_balance2,
                             prestamos_comerciales_industriales_agente, prestamos_poliza_balance1, prestamos_poliza_balance2,
                             prestamos_poliza_agente, reservas_poliza_balance1, reservas_poliza_balance2, reservas_poliza_agente,
-                            dividendos_poliza_balance1, dividendos_poliza_balance2, dividendos_poliza_agente, signature, position,
+                            dividendos_poliza_balance1, dividendos_poliza_balance2, dividendos_poliza_agente, signature, 
                             phone, nombre_persona
                             ])  
 
