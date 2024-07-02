@@ -502,6 +502,101 @@ def JP_383(request):
     return render(request, "cuestionarios/balanza_de_pagos/JP-383.html")
 
 def JP_529(request):
+    if request.method == "POST":
+        # Retrieve form data
+        #header
+        year1 = request.POST.get('year1')
+        year2 = request.POST.get('year2')
+        company = request.POST.get('company')
+        address = request.POST.get('Address')
+        email = request.POST.get('email')
+        liaison_officer = request.POST.get('liaison_officer')
+        tel = request.POST.get('tel')
+
+        choice = request.POST.get('choice')
+
+        #body
+        #tabla 1
+        agencia = request.POST.get('agencia')
+        programa_federal = request.POST.get('programa_federal')
+        cantidad_recibida = request.POST.get('cantidad_recibida')
+        fecha = request.POST.get('fecha')
+
+        #tabla 2
+        agencia2 = request.POST.get('agencia2')
+        programa_federal2 = request.POST.get('programa_federal2')
+        cantidad_recibida2 = request.POST.get('cantidad_recibida2')
+        fecha2 = request.POST.get('fecha2')
+
+        #section2
+        #tabla 1
+        instuition1 = request.POST.get('instuition1')
+        money1 = request.POST.get('money1')
+        date1 = request.POST.get('date1')
+
+        #tabla 2
+        instuition2 = request.POST.get('instuition2')
+        money2 = request.POST.get('money2')
+        date2 = request.POST.get('date2')
+
+        #tabla 3
+        instuition3 = request.POST.get('instuition3')
+        money3 = request.POST.get('money3')
+        date3 = request.POST.get('date3')
+
+        #tabla 4
+        instuition4 = request.POST.get('instuition4')
+        money4 = request.POST.get('money4')
+        date4 = request.POST.get('date4')
+
+        #tabla 5
+        instuition5 = request.POST.get('instuition5')
+        money5 = request.POST.get('money5')
+        date5 = request.POST.get('date5')
+
+        #tabla 6
+        instuition6 = request.POST.get('instuition6')
+        money6 = request.POST.get('money6')
+        date6 = request.POST.get('date6')
+
+        #tabla 7
+        instuition7 = request.POST.get('instuition7')
+        money7 = request.POST.get('money7')
+        date7 = request.POST.get('date7')
+
+        #tabla 8
+        instuition8 = request.POST.get('instuition8')
+        money8 = request.POST.get('money8')
+        date8 = request.POST.get('date8')
+
+        #tabla 9
+        instuition9 = request.POST.get('instuition9')
+        money9 = request.POST.get('money9')
+        date9 = request.POST.get('date9')
+
+        #tabla 10
+        instuition10 = request.POST.get('instuition10')
+        money10 = request.POST.get('money10')
+        date10 = request.POST.get('date10')
+
+        #footer
+        name = request.POST.get('name')
+        signature = request.POST.get('signature')
+        puesto = request.POST.get('puesto')
+        phone = request.POST.get('phone')
+
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-529.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+
+            if not file_exists:
+                writer.writerow(['year1', 'year2', 'company', 'address', 'email', 'liaison_officer', 'tel', 'choice','agencia', 'programa_federal', 'cantidad_recibida', 'fecha', 'agencia2', 'programa_federal2', 'cantidad_recibida2', 'fecha2', 'instuition1', 'money1', 'date1', 'instuition2', 'money2', 'date2', 'instuition3', 'money3', 'date3', 'instuition4', 'money4', 'date4', 'instuition5', 'money5', 'date5', 'instuition6', 'money6', 'date6', 'instuition7', 'money7', 'date7', 'instuition8', 'money8', 'date8', 'instuition9', 'money9', 'date9', 'instuition10', 'money10', 'date10', 'name', 'signature', 'puesto', 'phone'])
+
+            writer.writerow([year1, year2, company, address, email, liaison_officer, tel, choice, agencia, programa_federal, cantidad_recibida, fecha, agencia2, programa_federal2, cantidad_recibida2, fecha2, instuition1, money1, date1, instuition2, money2, date2, instuition3, money3, date3, instuition4, money4, date4, instuition5, money5, date5, instuition6, money6, date6, instuition7, money7, date7, instuition8, money8, date8, instuition9, money9, date9, instuition10, money10, date10, name, signature, puesto, phone])
+        
+        return render(request, "cuestionarios/succesfull.html")
     return render(request, "cuestionarios/balanza_de_pagos/JP-529.html")
 
 def IP_110(request):
