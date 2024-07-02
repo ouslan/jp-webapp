@@ -358,16 +358,18 @@ input {
     margin-top: 80px;
 }
   
+.center-signature {
+    margin-top: 1px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  
 .left-signature {
-    width: 290px;
     padding-top: 1px;
     line-height: 1.5;
-    margin-right: 500px;
-    margin-bottom: 30px;
 }
 
 .right-signature {
-    width: 290px;
     padding-top: 1px;
     line-height: 1.5;
 }
@@ -409,4 +411,23 @@ input {
     text-align: left;
 }
 
+#name {
+    width: 110%;
+    height: 45px;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
+    background-color: white;
+  }
+  
+  #date, #position {
+    width: 110%;
+    height: 45px;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
+    background-color: white;
+  }
 

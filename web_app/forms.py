@@ -2163,6 +2163,5 @@ class JP_529(forms.Form):
     date9 = forms.CharField(label='Date9', max_length=100)
     date10 = forms.CharField(label='Date10', max_length=100)
     name = forms.CharField(label='Nombre', max_length=100)
-    signature = forms.CharField(label='Firma', max_length=100)
     puesto = forms.CharField(label='Puesto', max_length=100)
-    phone = forms.CharField(label='Teléfono', max_length=100)
+    date = forms.CharField(label='Date', max_length=100)

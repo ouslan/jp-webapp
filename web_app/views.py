@@ -677,7 +677,7 @@ def JP_529(request):
         year1 = request.POST.get('year1')
         year2 = request.POST.get('year2')
         company = request.POST.get('company')
-        address = request.POST.get('Address')
+        address = request.POST.get('address')
         email = request.POST.get('email')
         liaison_officer = request.POST.get('liaison_officer')
         tel = request.POST.get('tel')
@@ -750,9 +750,8 @@ def JP_529(request):
 
         #footer
         name = request.POST.get('name')
-        signature = request.POST.get('signature')
         puesto = request.POST.get('puesto')
-        phone = request.POST.get('phone')
+        date = request.POST.get('date')
 
         csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-529.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
@@ -761,11 +760,11 @@ def JP_529(request):
             writer = csv.writer(file)
 
             if not file_exists:
-                writer.writerow(['year1', 'year2', 'company', 'address', 'email', 'liaison_officer', 'tel', 'choice','agencia', 'programa_federal', 'cantidad_recibida', 'fecha', 'agencia2', 'programa_federal2', 'cantidad_recibida2', 'fecha2', 'instuition1', 'money1', 'date1', 'instuition2', 'money2', 'date2', 'instuition3', 'money3', 'date3', 'instuition4', 'money4', 'date4', 'instuition5', 'money5', 'date5', 'instuition6', 'money6', 'date6', 'instuition7', 'money7', 'date7', 'instuition8', 'money8', 'date8', 'instuition9', 'money9', 'date9', 'instuition10', 'money10', 'date10', 'name', 'signature', 'puesto', 'phone'])
+                writer.writerow(['year1', 'year2', 'company', 'address', 'email', 'liaison_officer', 'tel', 'choice','agencia', 'programa_federal', 'cantidad_recibida', 'fecha', 'agencia2', 'programa_federal2', 'cantidad_recibida2', 'fecha2', 'instuition1', 'money1', 'date1', 'instuition2', 'money2', 'date2', 'instuition3', 'money3', 'date3', 'instuition4', 'money4', 'date4', 'instuition5', 'money5', 'date5', 'instuition6', 'money6', 'date6', 'instuition7', 'money7', 'date7', 'instuition8', 'money8', 'date8', 'instuition9', 'money9', 'date9', 'instuition10', 'money10', 'date10', 'name', 'puesto', 'date'])
 
-            writer.writerow([year1, year2, company, address, email, liaison_officer, tel, choice, agencia, programa_federal, cantidad_recibida, fecha, agencia2, programa_federal2, cantidad_recibida2, fecha2, instuition1, money1, date1, instuition2, money2, date2, instuition3, money3, date3, instuition4, money4, date4, instuition5, money5, date5, instuition6, money6, date6, instuition7, money7, date7, instuition8, money8, date8, instuition9, money9, date9, instuition10, money10, date10, name, signature, puesto, phone])
+            writer.writerow([year1, year2, company, address, email, liaison_officer, tel, choice, agencia, programa_federal, cantidad_recibida, fecha, agencia2, programa_federal2, cantidad_recibida2, fecha2, instuition1, money1, date1, instuition2, money2, date2, instuition3, money3, date3, instuition4, money4, date4, instuition5, money5, date5, instuition6, money6, date6, instuition7, money7, date7, instuition8, money8, date8, instuition9, money9, date9, instuition10, money10, date10, name, puesto, date])
         
-        return render(request, "cuestionarios/succesfull.html")
+        return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-529.html")
 
 def IP_110(request):
