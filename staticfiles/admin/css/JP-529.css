@@ -91,7 +91,7 @@ td {
 }
 
 #year {
-    width: 60px;
+    width: 5%;
 }
 
 #left_box {
@@ -110,6 +110,12 @@ td {
 #table_header {
     background-color: #f2f2f2;
     text-align: center;
+}
+
+#radio-3 {
+    width: 3%;
+    border: 1px solid #ccc;
+    resize: vertical;
 }
 
 #input_box {

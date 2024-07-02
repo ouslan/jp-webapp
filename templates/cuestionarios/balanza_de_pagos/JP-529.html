@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
   
-    <link rel="stylesheet" href="{% static 'JP_529.css' %}" />
+    <link rel="stylesheet" href="{% static 'JP-529.css' %}" />
     <link rel="stylesheet" href="{% static 'website.css' %}" />
   </head>
 
@@ -57,7 +57,7 @@
         </tr>
         <tr>
           <th id="left_box">Persona de Contacto: <input type="text" id="contacto" name="liaison_officer" placeholder="Liaison Officer" required></th>
-          <th id="no_border">Correo Electrónico: <input type="text" id="title" name="email" placeholder="email" required></th>
+          <th id="no_border">Correo Electrónico: <input type="text" id="title" name="email" placeholder="sophie@email.com" required></th>
           <th id="right_box">Teléfono: <input type="tel" id="telefono" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="tel" placeholder="123-456-7890" required></th>
           </tr>
         </table>
@@ -102,7 +102,7 @@
           <tr>
             <td> <textarea type="text" id="input_box" name="agencia" placeholder="Federal Company Name" required></textarea></td>
             <td> <textarea type="text" id="input_box" name="programa_federal" placeholder="Federal Program" required></textarea></td>
-            <td> <textarea type="text" id="input_box" name="cantidad_recibida" placeholder="Recived Money" required></textarea></td>
+            <td> <textarea type="number" id="input_box" name="cantidad_recibida" placeholder="Recived Money" required></textarea></td>
             <td> <textarea type="text" id="input_box" name="fecha" placeholder="MM/DD/YYYY" required></textarea></td>
           </tr>
         </table>
@@ -139,7 +139,7 @@
           <tr>
             <td> <textarea type="text" id="input_box" name="agencia2" placeholder="Federal Company Name" required></textarea></td>
             <td> <textarea type="text" id="input_box" name="programa_federal2" placeholder="Federal Program" required></textarea></td>
-            <td> <textarea type="text" id="input_box" name="cantidad_recibida2" placeholder="Recived Money" required></textarea></td>
+            <td> <textarea type="number" id="input_box" name="cantidad_recibida2" placeholder="Recived Money" required></textarea></td>
             <td> <textarea type="text" id="input_box" name="fecha2" placeholder="MM/DD/YYYY" required></textarea></td>
           </tr>
         </table>
