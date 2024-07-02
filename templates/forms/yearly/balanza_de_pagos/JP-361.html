@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
-    <link rel="stylesheet" href="{% static 'JP_361.css' %}" />
+    <link rel="stylesheet" href="{% static 'forms/balanza_de_pagos/JP-361.css' %}" />
     <link rel="stylesheet" href="{% static 'website.css' %}" />
 
 </head>
@@ -37,8 +37,6 @@
         <form method="POST" action="{% url 'JP-361' %}">
             {% csrf_token %}
             <h2 class="header-bottom">TRANSACTIONS IN PUERTO RICO OF EXTERNAL INSURANCE COMPANIES<br>From July 1st thru June 30</h2>
-            <p class="header-bottom">Please, see reverse side of this questionnaire.</p>
-
             <div>
                 <table>
                     <tr>
@@ -75,7 +73,7 @@
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;c) Auto</td>
                         <td><input type="number" name="income_auto_1" placeholder="$" required></td>
-                        <td><input type="tenumberxt" name="income_auto_2" placeholder="$" required></td>
+                        <td><input type="number" name="income_auto_2" placeholder="$" required></td>
                     </tr>
 
                     <tr>
@@ -86,8 +84,8 @@
                     
                     <tr>
                         <td colspan="2">&emsp;2. Interest</td>
-                        <td><input type="text" name="income_interest_1" placeholder="$" required></td>
-                        <td><input type="text" name="income_interest_2" placeholder="$" required></td>
+                        <td><input type="number" name="income_interest_1" placeholder="$" required></td>
+                        <td><input type="number" name="income_interest_2" placeholder="$" required></td>
                     </tr>
 
                     <tr>
@@ -207,8 +205,8 @@
                     </tr>
                     <tr>
                         <th colspan="4" id="center-item">OTHER ITEMS</th>
-                        <th id="center-item">As of 6/30/<input type="text" id="center-item-1" name="balance_year_1" placeholder="Year" required></th>
-                        <th id="center-item">Estimated as of 6/30/<input type="text" name="balance_year_2" placeholder="Year" required></th>
+                        <th id="center-item">As of 6/30/<input type="number" id="center-item-1" name="balance_year_1" placeholder="Year" required></th>
+                        <th id="center-item">Estimated as of 6/30/<input type="number" name="balance_year_2" placeholder="Year" required></th>
                         <th></th>
                         <th id="center-item">Estimated</th>
                     </tr>
