@@ -51,7 +51,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'IP-420' %}">
+      <form method="POST" action="{% url 'IP-490' %}">
         {% csrf_token %}
         <section>
           <div class="body_header">
@@ -110,26 +110,25 @@
 
           <!-- DIV 4 -->
           <div class="fourth_div">
-            <strong>4. Clase de negocio - Type of business:</strong>
-            <br>
-            <div id="options_container" class="second_div_container">
-              <input type="text" class="text-box space-between" id="text-box-5" name="business_type" placeholder="Enter your text here..."></input>
-            </div>
+            <strong>4. Clase de negocio / Type of business:</strong>
+            <input class="text-box space-between" id="text-box-4" name="business_type" placeholder="Enter your text here..." required>
           </div>
 
           <!-- DIV 5 -->
           <div class="fifth_div">
-            <strong>5. Describa brevemente la función principal del negocio: - Explain briefly the main business activity:</strong>
+            <strong>5. Describa brevemente la función principal del negocio/Explain briefly the main function of the business activity:</strong>
             <br>
-            <div id="options_container" class="second_div_container">
-              <input type="text" class="text-box space-between" id="text-box-5" name="business_type" placeholder="Enter your text here..."></input>
-            </div>
+            <textarea class="text-box space-between" id="text-box-5" name="business_function" placeholder="Enter your text here..." required></textarea>
           </div>
 
           <!-- DIV 6 -->
-          <div class="eight_div">
+          <div class="seven_div">
             <strong>6. Fecha de cierre de sus libros - Your accounting period closing date:</strong>
-            <input type="date" id="text-box-6" name="accounting_period" required></input>
+            <input type="month" id="date" name="closing_date" required/>
+            <br>
+            <br>
+            &emsp;Nota: La información solicitada se refiere a las operaciones en Puerto Rico solamente - 
+            The information requested refers to operations in Puerto Rico only
           </div>
 
           <!-- DIV 7 -->
@@ -153,13 +152,13 @@
           <div class="section_divider_2" id="label">
             Año - Year
             <br>
-            <div id="year">2012</div>
+            <input type="number" id="year" name="start_year" minlength="4" maxlength="4" placeholder="year" required></input>
           </div>
 
           <div class="section_divider_3" id="label">
             Año - Year
             <br>
-            <div id="year">2013</div>
+            <input type="number" id="year" name="end_year" minlength="4" maxlength="4" placeholder="year" required></input>
         </section>
 
         <section class="second_section">
@@ -219,15 +218,14 @@
 
             <!-- SECTION B -->
             <div id="title" class="item">
-              <label><h2>B. total costos directos e indirectos - Direct and <br>
-                &emsp;indirect costs</h2></label>
+              <label><h2>B. Gastos - Expenses</h2></label>
             </div>
 
             <div class="item">
                 <label>1. Salario, jornales, bono de Navidad y comiciones a empleados 1/ - Salaries, wages,<br>
                   &emsp;Christmas bonus and comissions to employees 1</label>
-                <input type="number" name="salaries_B_1" placeholder="$" required>
-                <input type="number" name="salaries_B_2" placeholder="$" required>
+                <input type="number" name="salaries_wages_bonus_B_1" placeholder="$" required>
+                <input type="number" name="salaries_wages_bonus_B_2" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -238,26 +236,26 @@
 
             <div class="item">
                 <label>3. Renta de terreno y edificio - Rent of land and building</label>
-                <input type="number" name="depreciation_B_1" placeholder="$" required>
-                <input type="number" name="depreciation_B_2" placeholder="$" required>
+                <input type="number" name="rent_B_1" placeholder="$" required>
+                <input type="number" name="rent_B_2" placeholder="$" required>
             </div>
 
             <div class="item">
               <label>4. Depreciación - Depreciation</label>
-              <input type="number" name="rent_B_1" placeholder="$" required>
-              <input type="number" name="rent_B_2" placeholder="$" required>
+              <input type="number" name="depreciation_B_1" placeholder="$" required>
+              <input type="number" name="depreciation_B_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>5. Donativos - Donations</label>
-                <input type="number" name="bad_debts_B_1" placeholder="$" required>
-                <input type="number" name="bad_debts_B_2" placeholder="$" required>
+                <input type="number" name="donation_B_1" placeholder="$" required>
+                <input type="number" name="donation_B_2" placeholder="$" required>
             </div>
 
             <div class="item">
               <label>6. Impuesto sobre la venta y uso - Sales and use tax</label>
-              <input type="number" name="sales_B_1" placeholder="$" required>
-              <input type="number" name="sales_B_2" placeholder="$" required>
+              <input type="number" name="sales_taxes_B_1" placeholder="$" required>
+              <input type="number" name="sales_taxes_B_2" placeholder="$" required>
             </div>
 
             
@@ -276,14 +274,14 @@
 
             <div class="item">
               <label>8. Otros gastos de operación - Other operationg expenses</label>
-              <input type="number" name="licenses_B_1" placeholder="$" required>
-              <input type="number" name="licenses_B_2" placeholder="$" required>
+              <input type="number" name="other_operations_B_1" placeholder="$" required>
+              <input type="number" name="other_operations_B_1" placeholder="$" required>
             </div>
 
             <div class="item">
-              <label>9. Total de gastos - Other operationg expenses</label>
-              <input type="number" name="other_operations_B_1" placeholder="$" required>
-              <input type="number" name="other_operations_B_2" placeholder="$" required>
+              <label>9. Total de gastos - Total expenses</label>
+              <input type="number" name="total_expenses_B_1" placeholder="$" required>
+              <input type="number" name="total_expenses_B_2" placeholder="$" required>
             </div>
           </div>
 
@@ -311,7 +309,7 @@
           <!-- SECTION D -->
           <div class="section">
             <div id="title" class="item">
-              <label><h2>D. Impuesto sobre ventas y uso retenido / Sales and use tax &emsp; &emsp; Withheld</h2></label>
+              <label><h2>D. Impuesto sobre ventas y uso retenido / Sales and use tax &emsp;Withheld</h2></label>
               <input class="title-inputs" id="title-inputs" type="number" name="sales_D_1" placeholder="$" required>
               <input id="title-inputs" type="number" name="sales_D_2" placeholder="$" required>
             </div>
@@ -321,6 +319,8 @@
         <div class="custom-line"></div>
         <div id="text_button">
         * Incluya Intereses Tributables y no tributables - Include taxable and non-taxable interests
+        <br>
+        Favor incluir salarios y cualquier otro pago que se haga a los conductores - Please include salaries and any other payments to drivers.
         </div>
         <section>
           <div class="big-box-bottom">
