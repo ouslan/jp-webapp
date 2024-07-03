@@ -3382,3 +3382,25 @@ def IP_480a(request):
             
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-480a.html")
+
+
+
+
+def JP_536_2(request):
+    if request.method == "POST":
+        # Retrieve form data
+        #header
+        
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-536-2.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+
+            if not file_exists:
+                writer.writerow(['year1', 'year2', 'company', 'address', 'email', 'liaison_officer', 'tel', 'choice','agencia', 'programa_federal', 'cantidad_recibida', 'fecha', 'agencia2', 'programa_federal2', 'cantidad_recibida2', 'fecha2', 'instuition1', 'money1', 'date1', 'instuition2', 'money2', 'date2', 'instuition3', 'money3', 'date3', 'instuition4', 'money4', 'date4', 'instuition5', 'money5', 'date5', 'instuition6', 'money6', 'date6', 'instuition7', 'money7', 'date7', 'instuition8', 'money8', 'date8', 'instuition9', 'money9', 'date9', 'instuition10', 'money10', 'date10', 'name', 'signature', 'puesto', 'phone'])
+
+            writer.writerow([year1, year2, company, address, email, liaison_officer, tel, choice, agencia, programa_federal, cantidad_recibida, fecha, agencia2, programa_federal2, cantidad_recibida2, fecha2, instuition1, money1, date1, instuition2, money2, date2, instuition3, money3, date3, instuition4, money4, date4, instuition5, money5, date5, instuition6, money6, date6, instuition7, money7, date7, instuition8, money8, date8, instuition9, money9, date9, instuition10, money10, date10, name, signature, puesto, phone])
+        
+        return render(request, "cuestionarios/succesfull.html")
+    return render(request, "forms/yearly/balanza_de_pagos/JP-536-2.html")
