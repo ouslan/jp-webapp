@@ -3423,5 +3423,5 @@ def JP_536_2(request):
 
             writer.writerow([year_1, year_2, inventario1, inventario2, compras1, compras2, depre1, depre2, maquinaria1, maquinaria2, equipo1, equipo2, computadora1, computadora2, alquiler1, alquiler2, licencia1, licencia2, name, phone, title, date])
         
-        return render(request, "cuestionarios/succesfull.html")
+        return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-536-2.html")
