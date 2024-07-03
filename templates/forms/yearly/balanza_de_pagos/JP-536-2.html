@@ -44,7 +44,8 @@
 
     <!-- Main -->
     <main>
-  
+        <form method="POST" action="{% url 'JP-536-2' %}">
+            {% csrf_token %}
           <section class="divider-container">
               <table>
                   <tr>
@@ -62,57 +63,57 @@
                   <!-- Line 2 -->
                   <tr>
                       <td>1. Inventario final al cierre del año fiscal 1\</td>
-                      <td><input type="number" name="FHA_1" placeholder="$" required></td>
-                      <td><input type="number" name="FHA_2" placeholder="$" required></td>
+                      <td><input type="number" name="inventario1" placeholder="$" required></td>
+                      <td><input type="number" name="inventario2" placeholder="$" required></td>
                   </tr>
   
                   <!-- Line 3 -->
                   <tr>
                       <td>2. Compras de maquinarias y equipo 2\</td>
-                      <td><input type="number" name="veteran_1" placeholder="$" required></td>
-                      <td><input type="number" name="veteran_2" placeholder="$" required></td>
+                      <td><input type="number" name="compras1" placeholder="$" required></td>
+                      <td><input type="number" name="compras2" placeholder="$" required></td>
                   </tr>
                   
                   <!-- Line 4 -->
                   <tr>
                       <td>3. Depreciación 3\</td>
-                      <td><input type="number" name="bank_1" placeholder="$" required></td>
-                      <td><input type="number" name="bank_2" placeholder="$" required></td>
+                      <td><input type="number" name="depre1" placeholder="$" required></td>
+                      <td><input type="number" name="depre2" placeholder="$" required></td>
                   </tr>
                   
                   <!-- Line 5 -->
                   <tr>
                       <td>&emsp;a. Maquinaria y equipo</td>
-                      <td><input type="number" name="conventional_1" placeholder="$" required></td>
-                      <td><input type="number" name="conventional_2" placeholder="$" required></td>
+                      <td><input type="number" name="maquinaria1" placeholder="$" required></td>
+                      <td><input type="number" name="maquinaria2" placeholder="$" required></td>
                   </tr>
   
                   <!-- Line 6 -->
                   <tr>
                       <td>b. Equipo</td>
-                      <td><input type="number" name="other_1" placeholder="$"></td>
-                      <td><input type="number" name="other_2" placeholder="$"></td>
+                      <td><input type="number" name="equipo1" placeholder="$"></td>
+                      <td><input type="number" name="equipo2" placeholder="$"></td>
                   </tr>
   
                     <!-- Line 7 -->
                   <tr>
                     <td>4. Equipo de Computadoras hard-software</td>
-                    <td><input type="number" name="conventional_1" placeholder="$" required></td>
-                    <td><input type="number" name="conventional_2" placeholder="$" required></td>
+                    <td><input type="number" name="computadora1" placeholder="$" required></td>
+                    <td><input type="number" name="computadora2" placeholder="$" required></td>
                   </tr>
 
                     <!-- Line 8 -->
                 <tr>
                     <td>5. Alquiler de Equipo de Computadora hard-software</td>
-                    <td><input type="number" name="conventional_1" placeholder="$" required></td>
-                    <td><input type="number" name="conventional_2" placeholder="$" required></td>
+                    <td><input type="number" name="alquiler1" placeholder="$" required></td>
+                    <td><input type="number" name="alquiler2" placeholder="$" required></td>
                 </tr>
 
                     <!-- Line 9 -->
                 <tr>
                     <td>6. Pago de licencia programa de computadora</td>
-                    <td><input type="number" name="conventional_1" placeholder="$" required></td>
-                    <td><input type="number" name="conventional_2" placeholder="$" required></td>
+                    <td><input type="number" name="licencia1" placeholder="$" required></td>
+                    <td><input type="number" name="licencia2" placeholder="$" required></td>
                 </tr>
               </table>
           </section>
@@ -130,7 +131,7 @@
             <section>
                 <div class="big-box-bottom">
                     <div class="left-signature">
-                        <input type="text" id="signature" name="name" placeholder="Nombre" required></input> <!-- Signature Input -->
+                        <input type="text" id="signature" name="name" placeholder="Name" required></input> <!-- Signature Input -->
                         <hr> <!-- Signature Line -->
                         <p>
                             Nombre de la empresa pública<br>
@@ -148,7 +149,7 @@
     
                 <div class="big-box-bottom">
                     <div class="left-signature">
-                        <input type="text" id="signature" name="puesto" placeholder="Título" required><!-- Signature Input -->
+                        <input type="text" id="signature" name="title" placeholder="Título" required><!-- Signature Input -->
                         <hr> <!-- Signature Line -->
                         <p>
                             Nombre y título de la persona que suministra la información<br>
@@ -165,9 +166,9 @@
                 </div>
             </section>
   
-          <section class = 'submit-button-container'>
-            <input type="submit" value="SUBMIT" class="submit-button"></input>
-          </section>
+            <section class = 'submit-button-container'>
+                <input type="submit" value="SUBMIT" class="submit-button"></input>
+              </section>
         <form>
       </main>
     </body>

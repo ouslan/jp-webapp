@@ -3389,7 +3389,28 @@ def IP_480a(request):
 def JP_536_2(request):
     if request.method == "POST":
         # Retrieve form data
-        #header
+        year_1 = request.POST.get('year_1')
+        year_2 = request.POST.get('year_2')
+        inventario1 = request.POST.get('inventario1')
+        inventario2 = request.POST.get('inventario2')
+        compras1 = request.POST.get('compras1')
+        compras2 = request.POST.get('compras2')
+        depre1 = request.POST.get('depre1')
+        depre2 = request.POST.get('depre2')
+        maquinaria1 = request.POST.get('maquinaria1')
+        maquinaria2 = request.POST.get('maquinaria2')
+        equipo1 = request.POST.get('equipo1')
+        equipo2 = request.POST.get('equipo2')
+        computadora1 = request.POST.get('computadora1')
+        computadora2 = request.POST.get('computadora2')
+        alquiler1 = request.POST.get('alquiler1')
+        alquiler2 = request.POST.get('alquiler2')
+        licencia1 = request.POST.get('licencia1')
+        licencia2 = request.POST.get('licencia2')
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        title = request.POST.get('title')
+        date = request.POST.get('date')
         
         csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-536-2.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
@@ -3398,9 +3419,9 @@ def JP_536_2(request):
             writer = csv.writer(file)
 
             if not file_exists:
-                writer.writerow(['year1', 'year2', 'company', 'address', 'email', 'liaison_officer', 'tel', 'choice','agencia', 'programa_federal', 'cantidad_recibida', 'fecha', 'agencia2', 'programa_federal2', 'cantidad_recibida2', 'fecha2', 'instuition1', 'money1', 'date1', 'instuition2', 'money2', 'date2', 'instuition3', 'money3', 'date3', 'instuition4', 'money4', 'date4', 'instuition5', 'money5', 'date5', 'instuition6', 'money6', 'date6', 'instuition7', 'money7', 'date7', 'instuition8', 'money8', 'date8', 'instuition9', 'money9', 'date9', 'instuition10', 'money10', 'date10', 'name', 'signature', 'puesto', 'phone'])
+                writer.writerow(['year_1', 'year_2', 'inventario1', 'inventario2', 'compras1', 'compras2', 'depre1', 'depre2', 'maquinaria1', 'maquinaria2', 'equipo1', 'equipo2', 'computadora1', 'computadora2', 'alquiler1', 'alquiler2', 'licencia1', 'licencia2', 'name', 'phone', 'title', 'date'])
 
-            writer.writerow([year1, year2, company, address, email, liaison_officer, tel, choice, agencia, programa_federal, cantidad_recibida, fecha, agencia2, programa_federal2, cantidad_recibida2, fecha2, instuition1, money1, date1, instuition2, money2, date2, instuition3, money3, date3, instuition4, money4, date4, instuition5, money5, date5, instuition6, money6, date6, instuition7, money7, date7, instuition8, money8, date8, instuition9, money9, date9, instuition10, money10, date10, name, signature, puesto, phone])
+            writer.writerow([year_1, year_2, inventario1, inventario2, compras1, compras2, depre1, depre2, maquinaria1, maquinaria2, equipo1, equipo2, computadora1, computadora2, alquiler1, alquiler2, licencia1, licencia2, name, phone, title, date])
         
         return render(request, "cuestionarios/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-536-2.html")
