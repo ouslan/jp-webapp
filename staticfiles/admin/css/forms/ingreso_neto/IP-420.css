@@ -214,8 +214,11 @@ margin-left: 60px;
 }
 
 #text-box-5 {
-  margin-left: 5px;
-  margin-top: 5px;
+  margin-left: 19px;
+  min-height:120px;
+  max-height:120px;
+  resize: none;
+  background-color: #f8f8f8;
 }
 
 #text-box-6 {
