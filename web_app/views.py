@@ -794,7 +794,7 @@ def IP_110(request):
         sales_12 = request.POST.get('sales_12')
         sales_13 = request.POST.get('sales_13')
         incomes_rents_12 = request.POST.get('incomes_rents_12')
-        incomes_rents_13 = request.POST.get('incomes_rents_12')
+        incomes_rents_13 = request.POST.get('incomes_rents_13')
         incomes_interests_12 = request.POST.get('incomes_interests_12')
         incomes_interests_13 = request.POST.get('incomes_interests_13')
         dividends_12 = request.POST.get('dividends_12')
@@ -1497,7 +1497,7 @@ def IP_210(request):
         income_interests_12 = request.POST.get('income_interests_12')
         income_interests_13 = request.POST.get('income_interests_13')
         incomes_rents_12 = request.POST.get('incomes_rents_12')
-        incomes_rents_13 = request.POST.get('incomes_rents_12')
+        incomes_rents_13 = request.POST.get('incomes_rents_13')
         income_rent_land_12 = request.POST.get('income_rent_land_12')
         income_rent_land_13 = request.POST.get('income_rent_land_13')
         other_income_12 = request.POST.get('other_income_12')
@@ -1506,8 +1506,7 @@ def IP_210(request):
         total_incomes_13 = request.POST.get('total_incomes_13')
         total_income_12 = request.POST.get('total_income_12')
         total_income_13 = request.POST.get('total_income_13')
-        expenses_12 = request.POST.get('expenses_12')
-        expenses_13 = request.POST.get('expenses_13')
+
         salaries_2012 = request.POST.get('salaries_2012') 
         salaries_2013 = request.POST.get('salaries_2013')
         expenses_interests_12 = request.POST.get('expenses_interests_12')
@@ -1557,7 +1556,7 @@ def IP_210(request):
                                  'income_interests_12','income_interests_13','incomes_rents_12'
                                  ,'incomes_rents_13' ,'income_rent_land_12','income_rent_land_13','other_income_12','other_income_13',
                                  'total_incomes_12','total_incomes_13','total_income_12','total_income_13',
-                                 'expenses_12','expenses_13','salaries_2012','salaries_2013','expenses_interests_12'
+                                 'salaries_2012','salaries_2013','expenses_interests_12'
                                  ,'expenses_interests_13','depreciation_12', 'depreciation_13','bad_debts_12','bad_debts_13',
                                  'expenses_rent_12','expenses_rent_13','donations_12','donations_13','sales_tax_12'
                                  ,'sales_tax_13','machinery_12','machinery_13','other_purchases_12','other_purchases_13',
@@ -1577,7 +1576,6 @@ def IP_210(request):
                              other_income_12, other_income_13,
                              total_incomes_12, total_incomes_13,
                              total_income_12, total_income_13,
-                             expenses_12, expenses_13,
                              salaries_2012, salaries_2013,
                              expenses_interests_12, expenses_interests_13,
                              depreciation_12, depreciation_13,
