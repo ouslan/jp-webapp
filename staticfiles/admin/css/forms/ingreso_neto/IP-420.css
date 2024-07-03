@@ -357,7 +357,7 @@ hr {
 }
 
 #year {
-  width: 40%;
+  width: 85%;
   height: fit-content;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -377,14 +377,14 @@ hr {
 }
 
 .section_divider_2 {
-  margin-left: 200px;
+  margin-left: 150px;
   margin-right: -100px;
   justify-content: space-around;
   text-align: center;
 }
 
 .section_divider_3 {
-  margin-right: 90px;
+  margin-right: 120px;
   justify-content: space-around;
   text-align: center;
 }

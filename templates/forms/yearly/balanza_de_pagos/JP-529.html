@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
   
-    <link rel="stylesheet" href="{% static 'JP-529.css' %}" />
+    <link rel="stylesheet" href="{% static 'forms/balanza_de_pagos/JP-529.css' %}" />
     <link rel="stylesheet" href="{% static 'website.css' %}" />
   </head>
 
@@ -46,8 +46,8 @@
       <form method="POST" action="{% url 'JP-529' %}">
         {% csrf_token %}
         <section class="trimester">
-            1 de julio <input type="number" id="year" name="year1" maxlength="4" placeholder="Año" required>
-            al 30 de junio <input type="number" id="year" name="year2" maxlength="4" placeholder="Año" required>
+            1 de julio <input type="number" id="year" name="year1" min="1000" max="9999" placeholder="Año" required>
+            al 30 de junio <input type="number" id="year" name="year2" min="1000" max="9999" placeholder="Año" required>
         </section>
 
         <table>
@@ -253,38 +253,28 @@
         <section>
             <div class="big-box-bottom">
                 <div class="left-signature">
-                    <input type="text" id="signature" name="name" placeholder="Nombre" required></input> <!-- Signature Input -->
+                    <input type="text" id="name" name="name" placeholder="Nombre" required></input> <!-- Signature Input -->
                     <hr> <!-- Signature Line -->
                     <p>
                         Nombre de la persona que suple la información:<br>
                     </p>
                 </div>
 
-                <div class="right-signature">
-                    <input type="text" id="signature" name="signature" placeholder="Title" required></input> <!-- Signature Input -->
-                    <hr> <!-- Signature Line -->
-                    <p>
-                        Puesto que ocupa:<br>
-                    </p>
-                </div>
+                <div class="center-signature">
+                  <input type="text" id="position" name="puesto" placeholder="Título" required><!-- Signature Input -->
+                  <hr> <!-- Signature Line -->
+                  <p>
+                      Título o puesto:<br>
+                  </p>
+              </div>
+
+              <div class="right-signature">
+                <input type="date" id="date" name="date" placeholder="Date" required></input> <!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                    Date<br>
+                </p>
             </div>
-
-            <div class="big-box-bottom">
-                <div class="left-signature">
-                    <input type="text" id="signature" name="puesto" placeholder="Título" required><!-- Signature Input -->
-                    <hr> <!-- Signature Line -->
-                    <p>
-                        Título o puesto:<br>
-                    </p>
-                </div>
-
-                <div class="right-signature">
-                    <input type="tel" id="signature" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="phone" placeholder="123-456-7890" required><!-- Signature Input -->
-                    <hr> <!-- Signature Line -->
-                    <p>
-                        Teléfono:<br>
-                    </p>
-                </div>
             </div>
         </section>
         <section class = 'submit-button-container'>
