@@ -2521,8 +2521,8 @@ def IP_310(request):
         profit_after_tax_2 = request.POST.get('profit_after_tax_2')
         sales_and_use_withheld_1 = request.POST.get('sales_and_use_withheld_1')
         sales_and_use_withheld_2 = request.POST.get('sales_and_use_withheld_2')
-        cfc_1 = request.POST.get('cfc_1')
-        legal_form_1 = request.POST.get('legal_form_1')
+        branches = request.POST.get('branches')
+        branches_if_yes = request.POST.get('branches_if_yes')
         signature = request.POST.get('signature')
         rank = request.POST.get('rank')
 
@@ -2558,7 +2558,7 @@ def IP_310(request):
                                 "machinery_1", "machinery_2", "on_other_1", "on_other_2",
                                 "licenses_1", "licenses_2", "net_loss_1", "net_loss_2",
                                 "income_tax_1", "income_tax_2", "profit_after_tax_1", "profit_after_tax_2",
-                                "sales_and_use_withheld_1", "sales_and_use_withheld_2", "cfc_1", "legal_form_1",
+                                "sales_and_use_withheld_1", "sales_and_use_withheld_2", "branches", "branches_if_yes",
                                 "signature", "rank"
                                 ])
                 
@@ -2577,7 +2577,7 @@ def IP_310(request):
                             interest_3 , interest_4 , depreciation_3 , depreciation_4 , donations_1 , donations_2 , rent_land_5 , rent_land_6 ,
                             other_operating_3 , other_operating_4 , sales_tax_1 , sales_tax_2 , machinery_1 , machinery_2 , on_other_1 ,
                             on_other_2 , licenses_1 , licenses_2 , net_loss_1 , net_loss_2 , income_tax_1 , income_tax_2 , profit_after_tax_1 ,
-                            profit_after_tax_2 , sales_and_use_withheld_1 , sales_and_use_withheld_2 , cfc_1 , legal_form_1 , signature , rank
+                            profit_after_tax_2 , sales_and_use_withheld_1 , sales_and_use_withheld_2 , branches , branches_if_yes , signature , rank
                             ])
             
         return render(request, "forms/succesfull.html")
@@ -3158,8 +3158,8 @@ def IP_310b(request):
         profit_after_tax_2 = request.POST.get('profit_after_tax_2')
         sales_and_use_withheld_1 = request.POST.get('sales_and_use_withheld_1')
         sales_and_use_withheld_2 = request.POST.get('sales_and_use_withheld_2')
-        cfc_1 = request.POST.get('cfc_1')
-        legal_form_1 = request.POST.get('legal_form_1')
+        branches = request.POST.get('branches')
+        branches_if_yes = request.POST.get('branches_if_yes')
         signature = request.POST.get('signature')
         rank = request.POST.get('rank')
 
@@ -3199,7 +3199,7 @@ def IP_310b(request):
                                 "on_other_1", "on_other_2", "licenses_1", "licenses_2",
                                 "net_loss_1", "net_loss_2", "income_tax_1", "income_tax_2",
                                 "profit_after_tax_1", "profit_after_tax_2", "sales_and_use_withheld_1", "sales_and_use_withheld_2",
-                                "cfc_1", "legal_form_1", "signature", "rank"
+                                "branches", "branches_if_yes", "signature", "rank"
                                 ])
                 
             writer.writerow([
@@ -3219,7 +3219,7 @@ def IP_310b(request):
                             other_operating_4 , sales_tax_1 , sales_tax_2 , machinery_1 , machinery_2 , on_other_1 , on_other_2 ,
                             licenses_1 , licenses_2 , net_loss_1 , net_loss_2 , income_tax_1 , income_tax_2 , profit_after_tax_1 ,
                             profit_after_tax_2 , sales_and_use_withheld_1 , sales_and_use_withheld_2 , 
-                            cfc_1 , legal_form_1 , signature , rank
+                            branches , branches_if_yes , signature , rank
                             ])
             
         return render(request, "forms/succesfull.html")

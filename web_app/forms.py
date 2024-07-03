@@ -1539,8 +1539,8 @@ class IP_310(forms.Form):
     profit_after_tax_2 = forms.CharField(label='36. Ganancia después de contribución sobre ingresos - Profit after income tax', max_length=100)
     sales_and_use_withheld_1 = forms.CharField(label='37. Impuesto sobre la venta y uso retenido - Sales and use tax withheld', max_length=100)
     sales_and_use_withheld_2 = forms.CharField(label='37. Impuesto sobre la venta y uso retenido - Sales and use tax withheld', max_length=100)
-    cfc_1 = forms.ChoiceField(label='CEC', choices=[('Si', 'Si'), ('No', 'No')])
-    legal_form_1 = forms.ChoiceField(label='En caso afirmativo indique si:', 
+    branches = forms.ChoiceField(label='CEC', choices=[('Si', 'Si'), ('No', 'No')])
+    branches_if_yes = forms.ChoiceField(label='En caso afirmativo indique si:', 
                                         choices=[('La información suministrada cubre todas las sucursales./The information provided includes all branches.', 
                                                   'La información suministrada cubre todas las sucursales./The information provided includes all branches.'), 
                                                   ("La información suministrada cubre este establecimiento solamente./The information provided covers only the firm responding to this questionnaire.", 
@@ -1999,8 +1999,8 @@ class IP_310b(forms.Form):
     profit_after_tax_2 = forms.CharField(label='46. Ganancia después de contribución sobre ingresos - Profit after income tax', max_length=100)
     sales_and_use_withheld_1 = forms.CharField(label='47. Impuesto sobre la venta y uso retenido - Sales and use tax withheld', max_length=100)
     sales_and_use_withheld_2 = forms.CharField(label='47. Impuesto sobre la venta y uso retenido - Sales and use tax withheld', max_length=100)
-    cfc_1 = forms.ChoiceField(label='CEC', choices=[('Si', 'Si'), ('No', 'No')])
-    legal_form_1 = forms.ChoiceField(label='En caso afirmativo indique si:', 
+    branches = forms.ChoiceField(label='CEC', choices=[('Si', 'Si'), ('No', 'No')])
+    branches_if_yes = forms.ChoiceField(label='En caso afirmativo indique si:', 
                                         choices=[('La información suministrada cubre todas las sucursales./The information provided includes all branches.', 
                                                   'La información suministrada cubre todas las sucursales./The information provided includes all branches.'), 
                                                   ("La información suministrada cubre este establecimiento solamente./The information provided covers only the firm responding to this questionnaire.", 
