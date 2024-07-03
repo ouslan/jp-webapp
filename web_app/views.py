@@ -2296,110 +2296,85 @@ def IP_420(request):
         address = request.POST.get('address')
         email = request.POST.get('email')
         liaison_officer = request.POST.get('liaison_officer')
+        
         ssn = request.POST.get('ssn')
         tel = request.POST.get('tel')
         fax = request.POST.get('fax')
+        
         legal_form = request.POST.get('legal_form')
         cfc = request.POST.get('cfc')
         main_line = request.POST.get('main_line')
         business_type = request.POST.get('business_type')
+        other_business_type = request.POST.get('other_business_type')
         accounting_period = request.POST.get('accounting_period')
         start_year = request.POST.get('start_year')
         end_year = request.POST.get('end_year')
-        
-        sales_A_1 = request.POST.get('sales_A_1')
-        sales_A_2 = request.POST.get('sales_A_2')
-        
-        people_A_1 = request.POST.get('people_A_1')
-        people_A_2 = request.POST.get('people_A_2')
-        
-        industries_businesses_A_1 = request.POST.get('industries_businesses_A_1')
-        industries_businesses_A_2 = request.POST.get('industries_businesses_A_2')
-        
-        less_cost_A_1 = request.POST.get('less_cost_A_1')
-        less_cost_A_2 = request.POST.get('less_cost_A_2')
-        
-        inventory_beginning_1 = request.POST.get('inventory_beginning_1')
-        inventory_beginning_2 = request.POST.get('inventory_beginning_2')
-        
-        purchases_A_1 = request.POST.get('purchases_A_1')
-        purchases_A_2 = request.POST.get('purchases_A_2')
-        
-        inventory_end_1 = request.POST.get('inventory_end_1')
-        inventory_end_2 = request.POST.get('inventory_end_2')
-        
-        gross_profit_A_1 = request.POST.get('gross_profit_A_1')
-        gross_profit_A_2 = request.POST.get('gross_profit_A_2')
-        
-        other_income_A_1 = request.POST.get('other_income_A_1')
-        other_income_A_2 = request.POST.get('other_income_A_2')
-        
-        interests_A_1 = request.POST.get('interests_A_1')
-        interests_A_2 = request.POST.get('interests_A_2')
-        
-        rent_A_1 = request.POST.get('rent_A_1')
-        rent_A_2 = request.POST.get('rent_A_2')
-        
-        capital_gain_A_1 = request.POST.get('capital_gain_A_1')
-        capital_gain_A_2 = request.POST.get('capital_gain_A_2')
-        
-        dividends_A_1 = request.POST.get('dividends_A_1')
-        dividends_A_2 = request.POST.get('dividends_A_2')
-        
-        total_gross_A_1 = request.POST.get('total_gross_A_1')
-        total_gross_A_2 = request.POST.get('total_gross_A_2')
-        
-        cost_B_1 = request.POST.get('cost_B_1')
-        cost_B_2 = request.POST.get('cost_B_2')
-        
-        salaries_B_1 = request.POST.get('salaries_B_1')
-        salaries_B_2 = request.POST.get('salaries_B_2')
-        
-        interests_B_1 = request.POST.get('interests_B_1')
-        interests_B_2 = request.POST.get('interests_B_2')
-        
-        depreciation_B_1 = request.POST.get('depreciation_B_1')
-        depreciation_B_2 = request.POST.get('depreciation_B_2')
-        
-        rent_B_1 = request.POST.get('rent_B_1')
-        rent_B_2 = request.POST.get('rent_B_2')
-        
-        bad_debts_B_1 = request.POST.get('bad_debts_B_1')
-        bad_debts_B_2 = request.POST.get('bad_debts_B_2')
-        
-        donations_B_1 = request.POST.get('donations_B_1')
-        donations_B_2 = request.POST.get('donations_B_2')
-        
-        sales_B_1 = request.POST.get('sales_B_1')
-        sales_B_2 = request.POST.get('sales_B_2')
-        
-        purchases_B_1 = request.POST.get('purchases_B_1')
-        purchases_B_2 = request.POST.get('purchases_B_2')
-        
-        other_purchases_B_1 = request.POST.get('other_purchases_B_1')
-        other_purchases_B_2 = request.POST.get('other_purchases_B_2')
-        
-        licenses_B_1 = request.POST.get('licenses_B_1')
-        licenses_B_2 = request.POST.get('licenses_B_2')
-        
-        other_operations_B_1 = request.POST.get('other_operations_B_1')
-        other_operations_B_2 = request.POST.get('other_operations_B_2')
-        
-        gross_profit_C_1 = request.POST.get('gross_profit_C_1')
-        gross_profit_C_2 = request.POST.get('gross_profit_C_2')
-        
-        income_C_1 = request.POST.get('income_C_1')
-        income_C_2 = request.POST.get('income_C_2')
-        
-        profit_C_after_1 = request.POST.get('profit_C_after_1')
-        profit_C_after_2 = request.POST.get('profit_C_after_2')
-        
-        sales_D_1 = request.POST.get('sales_D_1')
-        sales_D_2 = request.POST.get('sales_D_2')
-        
+        incomes_sales_1 = request.POST.get('incomes_sales_1')
+        incomes_sales_2 = request.POST.get('incomes_sales_2')
+        incomes_from_people_1 = request.POST.get('incomes_from_people_1')
+        incomes_from_people_2 = request.POST.get('incomes_from_people_2')
+        incomes_industries_businesses_1 = request.POST.get('incomes_industries_businesses_1')
+        incomes_industries_businesses_2 = request.POST.get('incomes_industries_businesses_2')
+        incomes_less_cost_1 = request.POST.get('incomes_less_cost_1')
+        incomes_less_cost_2 = request.POST.get('incomes_less_cost_2')
+        incomes_inventory_beginning_1 = request.POST.get('incomes_inventory_beginning_1')
+        incomes_inventory_beginning_2 = request.POST.get('incomes_inventory_beginning_2')
+        incomes_purchases_1 = request.POST.get('incomes_purchases_1')
+        incomes_purchases_2 = request.POST.get('incomes_purchases_2')
+        incomes_inventory_end_1 = request.POST.get('incomes_inventory_end_1')
+        incomes_inventory_end_2 = request.POST.get('incomes_inventory_end_2')
+        incomes_gross_profit_1 = request.POST.get('incomes_gross_profit_1')
+        incomes_gross_profit_2 = request.POST.get('incomes_gross_profit_2')
+        other_operation_incomes_1 = request.POST.get('other_operation_incomes_1')
+        other_operation_incomes_2 = request.POST.get('other_operation_incomes_2')
+        incomes_interests_1 = request.POST.get('incomes_interests_1')
+        incomes_interests_2 = request.POST.get('incomes_interests_2')
+        incomes_rent_1 = request.POST.get('incomes_rent_1')
+        incomes_rent_2 = request.POST.get('incomes_rent_2')
+        incomes_gain_loss_1 = request.POST.get('incomes_gain_loss_1')
+        incomes_gain_loss_2 = request.POST.get('incomes_gain_loss_2')
+        incomes_dividends_1 = request.POST.get('incomes_dividends_1')
+        incomes_dividends_2 = request.POST.get('incomes_dividends_2')
+        other_incomes_1 = request.POST.get('other_incomes_1')
+        other_incomes_2 = request.POST.get('other_incomes_2')
+        incomes_total_gross_1 = request.POST.get('incomes_total_gross_1')
+        incomes_total_gross_2 = request.POST.get('incomes_total_gross_2')
+        expenses_1 = request.POST.get('expenses_1')
+        expenses_2 = request.POST.get('expenses_2')
+        expenses_salaries_wages_bonus_1 = request.POST.get('expenses_salaries_wages_bonus_1')
+        expenses_salaries_wages_bonus_2 = request.POST.get('expenses_salaries_wages_bonus_2')
+        expenses_interests_1 = request.POST.get('expenses_interests_1')
+        expenses_interests_2 = request.POST.get('expenses_interests_2')
+        expenses_depreciation_1 = request.POST.get('expenses_depreciation_1')
+        expenses_depreciation_2 = request.POST.get('expenses_depreciation_2')
+        expenses_rent_1 = request.POST.get('expenses_rent_1')
+        expenses_rent_2 = request.POST.get('expenses_rent_2')
+        expenses_bad_debts_1 = request.POST.get('expenses_bad_debts_1')
+        expenses_bad_debts_2 = request.POST.get('expenses_bad_debts_2')
+        expenses_donations_1 = request.POST.get('expenses_donations_1')
+        expenses_donations_2 = request.POST.get('expenses_donations_2')
+        expenses_sales_taxes_1 = request.POST.get('expenses_sales_taxes_1')
+        expenses_sales_taxes_2 = request.POST.get('expenses_sales_taxes_2')
+        expenses_machinary_1 = request.POST.get('expenses_machinary_1')
+        expenses_machinary_2 = request.POST.get('expenses_machinary_2')
+        expenses_other_purchases_1 = request.POST.get('expenses_other_purchases_1')
+        expenses_other_purchases_2 = request.POST.get('expenses_other_purchases_2')
+        expenses_licenses_1 = request.POST.get('expenses_licenses_1')
+        expenses_licenses_2 = request.POST.get('expenses_licenses_2')
+        expenses_other_operations_1 = request.POST.get('expenses_other_operations_1')
+        expenses_other_operations_2 = request.POST.get('expenses_other_operations_2')
+        expenses_total_operations_1 = request.POST.get('expenses_total_operations_1')
+        expenses_total_operations_2 = request.POST.get('expenses_total_operations_2')
+        gross_profit_1 = request.POST.get('gross_profit_1')
+        gross_profit_2 = request.POST.get('gross_profit_2')
+        profit_income_tax_1 = request.POST.get('profit_income_tax_1')
+        profit_income_tax_2 = request.POST.get('profit_income_tax_2')
+        profit_after_income_tax_1 = request.POST.get('profit_after_income_tax_1')
+        profit_after_income_tax_2 = request.POST.get('profit_after_income_tax_2')
+        sales_tax_1 = request.POST.get('sales_tax_1')
+        sales_tax_2 = request.POST.get('sales_tax_2')
         name = request.POST.get('name')
         rank = request.POST.get('rank')
-        
         
         csv_file_path = 'data/cuestionarios/ingreso_neto/IP-420.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
@@ -2409,37 +2384,43 @@ def IP_420(request):
             
             if not file_exists:
                 writer.writerow(['company_name','address','email','liaison_officer','ssn','tel','fax',
-                                'legal_form','cfc', 'main_line','business_type','accounting_period',
-                                'start_year','end_year','sales_A_1','sales_A_2','people_A_1','people_A_2','industries_businesses_A_1',
-                                'industries_businesses_A_2','less_cost_A_1','less_cost_A_2','inventory_beginning_1',
-                                'inventory_beginning_2','purchases_A_1','purchases_A_2','inventory_end_1',
-                                'inventory_end_2','gross_profit_A_1','gross_profit_A_2','other_income_A_1',
-                                'other_income_A_2','interests_A_1','interests_A_2','rent_A_1','rent_A_2',
-                                'capital_gain_A_1','capital_gain_A_2','dividends_A_1','dividends_A_2',
-                                'total_gross_A_1','total_gross_A_2','cost_B_1', 'cost_B_1','salaries_B_1','salaries_B_2',
-                                'interests_B_1','interests_B_2','depreciation_B_1','depreciation_B_2',
-                                'rent_B_1','rent_B_2','bad_debts_B_1','bad_debts_B_2','donations_B_1',
-                                'donations_B_2','sales_B_1','sales_B_2','purchases_B_1','purchases_B_2',
-                                'other_purchases_B_1','other_purchases_B_2','licenses_B_1','licenses_B_2',
-                                'other_operations_B_1','other_operations_B_2','gross_profit_C_1','gross_profit_C_1','income_C_1',
-                                'income_C_2','profit_C_after_1','profit_C_after_2','sales_D_1', 'sales_D_1', 'name','rank'
+                                'legal_form','cfc', 'main_line','business_type','other_business_type','accounting_period',
+                                'start_year','end_year','incomes_sales_1','incomes_sales_2','incomes_from_people_1',
+                                'incomes_from_people_2','incomes_industries_businesses_1','incomes_industries_businesses_2',
+                                'incomes_less_cost_1','incomes_less_cost_2','incomes_inventory_beginning_1','incomes_inventory_beginning_2',
+                                'incomes_purchases_1','incomes_purchases_2','incomes_inventory_end_1','incomes_inventory_end_2',
+                                'incomes_gross_profit_1','incomes_gross_profit_2','other_operation_incomes_1','other_operation_incomes_2',
+                                'incomes_interests_1','incomes_interests_2','incomes_rent_1','incomes_rent_2','incomes_gain_loss_1',
+                                'incomes_gain_loss_2','incomes_dividends_1','incomes_dividends_2','other_incomes_1','other_incomes_2',
+                                'incomes_total_gross_1','incomes_total_gross_2','expenses_1','expenses_2','expenses_salaries_wages_bonus_1',
+                                'expenses_salaries_wages_bonus_2','expenses_interests_1','expenses_interests_2','expenses_depreciation_1',
+                                'expenses_depreciation_2','expenses_rent_1','expenses_rent_2','expenses_bad_debts_1','expenses_bad_debts_2',
+                                'expenses_donations_1','expenses_donations_2','expenses_sales_taxes_1','expenses_sales_taxes_2',
+                                'expenses_machinary_1','expenses_machinary_2','expenses_other_purchases_1','expenses_other_purchases_2',
+                                'expenses_licenses_1','expenses_licenses_2','expenses_other_operations_1','expenses_other_operations_2',
+                                'expenses_total_operations_1','expenses_total_operations_2','gross_profit_1','gross_profit_2',
+                                'profit_income_tax_1','profit_income_tax_2','profit_after_income_tax_1','profit_after_income_tax_2',
+                                'sales_tax_1','sales_tax_2','name','rank'
                                 ])
             
             writer.writerow([company_name, address, email, liaison_officer, 
-                            ssn, tel, fax, legal_form, cfc, main_line, business_type,
-                            accounting_period, start_year, end_year, sales_A_1, sales_A_2, people_A_1,
-                            people_A_2, industries_businesses_A_1, industries_businesses_A_2, less_cost_A_1,
-                            less_cost_A_2, inventory_beginning_1, inventory_beginning_2, purchases_A_1,
-                            purchases_A_2, inventory_end_1, inventory_end_2, gross_profit_A_1, gross_profit_A_2,
-                            other_income_A_1, other_income_A_2, interests_A_1, interests_A_2, rent_A_1,
-                            rent_A_2, capital_gain_A_1, capital_gain_A_2, dividends_A_1, dividends_A_2,
-                            total_gross_A_1, total_gross_A_2, cost_B_1, cost_B_2, salaries_B_1, salaries_B_2,
-                            interests_B_1, interests_B_2, depreciation_B_1, depreciation_B_2, rent_B_1,
-                            rent_B_2, bad_debts_B_1, bad_debts_B_2, donations_B_1, donations_B_2,
-                            sales_B_1, sales_B_2, purchases_B_1, purchases_B_2, other_purchases_B_1,
-                            other_purchases_B_2, licenses_B_1, licenses_B_2, other_operations_B_1,
-                            other_operations_B_2, gross_profit_C_1, gross_profit_C_2, income_C_1, income_C_2, profit_C_after_1,
-                            profit_C_after_2, sales_D_1, sales_D_2, name, rank
+                            ssn, tel, fax, legal_form, cfc, main_line, business_type, other_business_type,
+                            accounting_period, start_year, end_year, incomes_sales_1, incomes_sales_2,
+                            incomes_from_people_1, incomes_from_people_2, incomes_industries_businesses_1, incomes_industries_businesses_2,
+                            incomes_less_cost_1, incomes_less_cost_2, incomes_inventory_beginning_1, incomes_inventory_beginning_2,
+                            incomes_purchases_1, incomes_purchases_2, incomes_inventory_end_1, incomes_inventory_end_2,
+                            incomes_gross_profit_1, incomes_gross_profit_2, other_operation_incomes_1, other_operation_incomes_2,
+                            incomes_interests_1, incomes_interests_2, incomes_rent_1, incomes_rent_2, incomes_gain_loss_1,
+                            incomes_gain_loss_2, incomes_dividends_1, incomes_dividends_2, other_incomes_1, other_incomes_2,
+                            incomes_total_gross_1, incomes_total_gross_2, expenses_1, expenses_2, expenses_salaries_wages_bonus_1,
+                            expenses_salaries_wages_bonus_2, expenses_interests_1, expenses_interests_2, expenses_depreciation_1,
+                            expenses_depreciation_2, expenses_rent_1, expenses_rent_2, expenses_bad_debts_1, expenses_bad_debts_2,
+                            expenses_donations_1, expenses_donations_2, expenses_sales_taxes_1, expenses_sales_taxes_2,
+                            expenses_machinary_1, expenses_machinary_2, expenses_other_purchases_1, expenses_other_purchases_2,
+                            expenses_licenses_1, expenses_licenses_2, expenses_other_operations_1, expenses_other_operations_2,
+                            expenses_total_operations_1, expenses_total_operations_2, gross_profit_1, gross_profit_2,
+                            profit_income_tax_1, profit_income_tax_2, profit_after_income_tax_1, profit_after_income_tax_2,
+                            sales_tax_1, sales_tax_2, name, rank
                             ])  
 
         return render(request, "forms/succesfull.html")
