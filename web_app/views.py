@@ -3362,3 +3362,6 @@ def IP_480a(request):
             
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-480a.html")
+
+def IP_510(request):
+    return render(request, "forms/yearly/ingreso_neto/IP-510.html")
