@@ -3609,3 +3609,46 @@ def IP_520(request):
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-520.html")
+
+
+
+
+def JP_536_2(request):
+    if request.method == "POST":
+        # Retrieve form data
+        year_1 = request.POST.get('year_1')
+        year_2 = request.POST.get('year_2')
+        inventario1 = request.POST.get('inventario1')
+        inventario2 = request.POST.get('inventario2')
+        compras1 = request.POST.get('compras1')
+        compras2 = request.POST.get('compras2')
+        depre1 = request.POST.get('depre1')
+        depre2 = request.POST.get('depre2')
+        maquinaria1 = request.POST.get('maquinaria1')
+        maquinaria2 = request.POST.get('maquinaria2')
+        equipo1 = request.POST.get('equipo1')
+        equipo2 = request.POST.get('equipo2')
+        computadora1 = request.POST.get('computadora1')
+        computadora2 = request.POST.get('computadora2')
+        alquiler1 = request.POST.get('alquiler1')
+        alquiler2 = request.POST.get('alquiler2')
+        licencia1 = request.POST.get('licencia1')
+        licencia2 = request.POST.get('licencia2')
+        name = request.POST.get('name')
+        phone = request.POST.get('phone')
+        title = request.POST.get('title')
+        date = request.POST.get('date')
+        
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-536-2.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+
+            if not file_exists:
+                writer.writerow(['year_1', 'year_2', 'inventario1', 'inventario2', 'compras1', 'compras2', 'depre1', 'depre2', 'maquinaria1', 'maquinaria2', 'equipo1', 'equipo2', 'computadora1', 'computadora2', 'alquiler1', 'alquiler2', 'licencia1', 'licencia2', 'name', 'phone', 'title', 'date'])
+
+            writer.writerow([year_1, year_2, inventario1, inventario2, compras1, compras2, depre1, depre2, maquinaria1, maquinaria2, equipo1, equipo2, computadora1, computadora2, alquiler1, alquiler2, licencia1, licencia2, name, phone, title, date])
+        
+        return render(request, "forms/succesfull.html")
+    return render(request, "forms/yearly/balanza_de_pagos/JP-536-2.html")
