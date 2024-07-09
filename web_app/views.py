@@ -3868,27 +3868,23 @@ def JP_544(request):
         proposito14 = request.POST.get('proposito14')
         dolares14 = request.POST.get('dolares14')
 
-        money1 = request.POST.get('money1')
-        money2 = request.POST.get('money2')
-        money3 = request.POST.get('money3')
-        money4 = request.POST.get('money4')
-        money5 = request.POST.get('money5')
-        money6 = request.POST.get('money6')
-        money7 = request.POST.get('money7')
-        money8 = request.POST.get('money8')
-        money9 = request.POST.get('money9')
-        money10 = request.POST.get('money10')
-        money11 = request.POST.get('money11')
-        money12 = request.POST.get('money12')
-        money13 = request.POST.get('money13')
-        money14 = request.POST.get('money14')
-        money15 = request.POST.get('money15')
-
-        otros1 = request.POST.get('otros1')
-        otros2 = request.POST.get('otros2')
-        otros3 = request.POST.get('otros3')
-        otros4 = request.POST.get('otros4')
-
+        operation_expenses = request.POST.get('operation_expenses')
+        salary = request.POST.get('salary')
+        SS_SD_SR_beneficios_marginales = request.POST.get('SS_SD_SR_beneficios_marginales')
+        servicios_profecionales_c = request.POST.get('servicios_profecionales_c')
+        intereses = request.POST.get('intereses')
+        other_gastos = request.POST.get('other_gastos')
+        to_people = request.POST.get('to_people')
+        servicios_profecionales_a = request.POST.get('servicios_profecionales_a')
+        pension = request.POST.get('pension')
+        name_other_1 = request.POST.get('name_other_1')
+        quantity_other_1 = request.POST.get('quantity_other_1')
+        name_other_2 = request.POST.get('name_other_2')
+        quantity_other_2 = request.POST.get('quantity_other_2')
+        name_other_3 = request.POST.get('name_other_3')
+        quantity_other_3 = request.POST.get('quantity_other_3')
+        name_other_4 = request.POST.get('name_other_4')
+        quantity_other_4 = request.POST.get('quantity_other_4')
         agencia = request.POST.get('agencia')
         prep = request.POST.get('prep')
         titulo = request.POST.get('titulo')
@@ -3902,9 +3898,49 @@ def JP_544(request):
             writer = csv.writer(file)
 
             if not file_exists:
-                writer.writerow(['institucion1', 'proposito1', 'dolares1', 'institucion2', 'proposito2', 'dolares2', 'institucion3', 'proposito3', 'dolares3', 'institucion4', 'proposito4', 'dolares4', 'institucion5', 'proposito5', 'dolares5', 'institucion6', 'proposito6', 'dolares6', 'institucion7', 'proposito7', 'dolares7', 'institucion8', 'proposito8', 'dolares8', 'institucion9', 'proposito9', 'dolares9', 'institucion10', 'proposito10', 'dolares10', 'institucion11', 'proposito11', 'dolares11', 'institucion12', 'proposito12', 'dolares12', 'institucion13', 'proposito13', 'dolares13', 'institucion14', 'proposito14', 'dolares14', 'money1', 'money2', 'money3', 'money4', 'money5', 'money6', 'money7', 'money8', 'money9', 'money10', 'money11', 'money12', 'money13', 'money14', 'money15', 'otros1', 'otros2', 'otros3', 'otros4', 'agencia', 'prep', 'titulo', 'telefono', 'fecha'])
+                writer.writerow([
+                                'institucion1', 'proposito1', 'dolares1',
+                                'institucion2', 'proposito2', 'dolares2',
+                                'institucion3', 'proposito3', 'dolares3',
+                                'institucion4', 'proposito4', 'dolares4',
+                                'institucion5', 'proposito5', 'dolares5',
+                                'institucion6', 'proposito6', 'dolares6',
+                                'institucion7', 'proposito7', 'dolares7',
+                                'institucion8', 'proposito8', 'dolares8',
+                                'institucion9', 'proposito9', 'dolares9',
+                                'institucion10', 'proposito10', 'dolares10',
+                                'institucion11', 'proposito11', 'dolares11',
+                                'institucion12', 'proposito12', 'dolares12',
+                                'institucion13', 'proposito13', 'dolares13',
+                                'institucion14', 'proposito14', 'dolares14',
+                                'operation_expenses', 'salary', 'SS_SD_SR_beneficios_marginales', 'servicios_profecionales_c',
+                                'intereses', 'other_gastos', 'to_people', 'servicios_profecionales_a',
+                                'pension', 'name_other_1', 'quantity_other_1', 'name_other_2', 'quantity_other_2',
+                                'name_other_3', 'quantity_other_3', 'name_other_4', 'quantity_other_4', 'agencia',
+                                'prep', 'titulo', 'telefono', 'fecha'
+                                ])  
 
-            writer.writerow([institucion1, proposito1, dolares1, institucion2, proposito2, dolares2, institucion3, proposito3, dolares3, institucion4, proposito4, dolares4, institucion5, proposito5, dolares5, institucion6, proposito6, dolares6, institucion7, proposito7, dolares7, institucion8, proposito8, dolares8, institucion9, proposito9, dolares9, institucion10, proposito10, dolares10, institucion11, proposito11, dolares11, institucion12, proposito12, dolares12, institucion13, proposito13, dolares13, institucion14, proposito14, dolares14, money1, money2, money3, money4, money5, money6, money7, money8, money9, money10, money11, money12, money13, money14, money15, otros1, otros2, otros3, otros4, agencia, prep, titulo, telefono, fecha])
+            writer.writerow([
+                            institucion1, proposito1, dolares1,
+                            institucion2, proposito2, dolares2,
+                            institucion3, proposito3, dolares3,
+                            institucion4, proposito4, dolares4,
+                            institucion5, proposito5, dolares5,
+                            institucion6, proposito6, dolares6,
+                            institucion7, proposito7, dolares7,
+                            institucion8, proposito8, dolares8,
+                            institucion9, proposito9, dolares9,
+                            institucion10, proposito10, dolares10,
+                            institucion11, proposito11, dolares11,
+                            institucion12, proposito12, dolares12,
+                            institucion13, proposito13, dolares13,
+                            institucion14, proposito14, dolares14,
+                            operation_expenses, salary, SS_SD_SR_beneficios_marginales, servicios_profecionales_c,
+                            intereses, other_gastos, to_people, servicios_profecionales_a,
+                            pension, name_other_1, quantity_other_1, name_other_2, quantity_other_2,
+                            name_other_3, quantity_other_3, name_other_4, quantity_other_4, agencia,
+                            prep, titulo, telefono, fecha
+                            ])
         
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-544.html")

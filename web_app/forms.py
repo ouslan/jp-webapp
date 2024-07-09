@@ -1,5 +1,6 @@
 from django import forms
 from config_ui.settings import TEMPLATES
+from web_app.views import JP_544
 
 class IP_110(forms.Form):
     company_name = forms.CharField(label='Nombre compañía / Company Name', max_length=100)
@@ -2491,3 +2492,83 @@ class IP_520a(forms.Form):
     percent_foreign_enterprises = forms.CharField(label='17. Porciento de empresas extranjeras - Percent of foreign enterprises', max_length=100)
     name = forms.CharField(label='Name of person filling the questionnaire', max_length=100)
     rank = forms.CharField(label='Rank', max_length=100)
+    
+class JP_544(forms.Form):
+    institucion1 = forms.CharField(label='Institución 1', max_length=100)
+    proposito1 = forms.CharField(label='Propósito 1', max_length=100)
+    dolares1 = forms.CharField(label='Dólares 1', max_length=100)
+
+    institucion2 = forms.CharField(label='Institución 2', max_length=100)
+    proposito2 = forms.CharField(label='Propósito 2', max_length=100)
+    dolares2 = forms.CharField(label='Dólares 2', max_length=100)
+
+    institucion3 = forms.CharField(label='Institución 3', max_length=100)
+    proposito3 = forms.CharField(label='Propósito 3', max_length=100)
+    dolares3 = forms.CharField(label='Dólares 3', max_length=100)
+
+    institucion4 = forms.CharField(label='Institución 4', max_length=100)
+    proposito4 = forms.CharField(label='Propósito 4', max_length=100)
+    dolares4 = forms.CharField(label='Dólares 4', max_length=100)
+
+    institucion5 = forms.CharField(label='Institución 5', max_length=100)
+    proposito5 = forms.CharField(label='Propósito 5', max_length=100)
+    dolares5 = forms.CharField(label='Dólares 5', max_length=100)
+    
+    institucion6 = forms.CharField(label='Institución 6', max_length=100)
+    proposito6 = forms.CharField(label='Propósito 6', max_length=100)
+    dolares6 = forms.CharField(label='Dólares 6', max_length=100)
+
+    institucion7 = forms.CharField(label='Institución 7', max_length=100)
+    proposito7 = forms.CharField(label='Propósito 7', max_length=100)
+    dolares7 = forms.CharField(label='Dólares 7', max_length=100)
+
+    institucion8 = forms.CharField(label='Institución 8', max_length=100)
+    proposito8 = forms.CharField(label='Propósito 8', max_length=100)
+    dolares8 = forms.CharField(label='Dólares 8', max_length=100)
+
+    institucion9 = forms.CharField(label='Institución 9', max_length=100)
+    proposito9 = forms.CharField(label='Propósito 9', max_length=100)
+    dolares9 = forms.CharField(label='Dólares 9', max_length=100)
+
+    institucion10 = forms.CharField(label='Institución 10', max_length=100)
+    proposito10 = forms.CharField(label='Propósito 10', max_length=100)
+    dolares10 = forms.CharField(label='Dólares 10', max_length=100)
+
+    institucion11 = forms.CharField(label='Institución 11', max_length=100)
+    proposito11 = forms.CharField(label='Propósito 11', max_length=100)
+    dolares11 = forms.CharField(label='Dólares 11', max_length=100)
+
+    institucion12 = forms.CharField(label='Institución 12', max_length=100)
+    proposito12 = forms.CharField(label='Propósito 12', max_length=100)
+    dolares12 = forms.CharField(label='Dólares 12', max_length=100)
+
+    institucion13 = forms.CharField(label='Institución 13', max_length=100)
+    proposito13 = forms.CharField(label='Propósito 13', max_length=100)
+    dolares13 = forms.CharField(label='Dólares 13', max_length=100)
+
+    institucion14 = forms.CharField(label='Institución 14', max_length=100)
+    proposito14 = forms.CharField(label='Propósito 14', max_length=100)
+    dolares14 = forms.CharField(label='Dólares 14', max_length=100)
+
+    operation_expenses = forms.CharField(label='Gastos de operación - Operation expenses', max_length=100)
+    salary = forms.CharField(label='Salario - Salary', max_length=100)
+    SS_SD_SR_beneficios_marginales = forms.CharField(label='Beneficios marginales de SS, SD, SR - Marginal benefits of SS, SD, SR', max_length=100)
+    servicios_profecionales_c = forms.CharField(label='Servicios profesionales - Professional services', max_length=100)
+    intereses = forms.CharField(label='Intereses - Interests', max_length=100)
+    other_gastos = forms.CharField(label='Otros gastos - Other expenses', max_length=100)
+    to_people = forms.CharField(label='A personas - To people', max_length=100)
+    servicios_profecionales_a = forms.CharField(label='Servicios profesionales - Professional services', max_length=100)
+    pensiones = forms.CharField(label='Pensiones - Pensions', max_length=100)
+    name_other_1 = forms.CharField(label='Nombre - Name', max_length=100)
+    quantity_other_1 = forms.CharField(label='Cantidad - Quantity', max_length=100)
+    name_other_2 = forms.CharField(label='Nombre - Name', max_length=100)
+    quantity_other_2 = forms.CharField(label='Cantidad - Quantity', max_length=100)
+    name_other_3 = forms.CharField(label='Nombre - Name', max_length=100)
+    quantity_other_3 = forms.CharField(label='Cantidad - Quantity', max_length=100)
+    name_other_4 = forms.CharField(label='Nombre - Name', max_length=100)
+    quantity_other_4 = forms.CharField(label='Cantidad - Quantity', max_length=100)
+    agencia = forms.CharField(label='Agencia - Agency', max_length=100)
+    prep = forms.CharField(label='Preparado por - Prepared by', max_length=100)
+    titulo = forms.CharField(label='Título - Title', max_length=100)
+    telefono = forms.CharField(label='Teléfono - Phone', max_length=100)
+    fecha = forms.CharField(label='Fecha - Date', max_length=100)
