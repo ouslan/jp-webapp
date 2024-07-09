@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
   
-    <link rel="stylesheet" href="{% static 'JP-529.css' %}" />
+    <link rel="stylesheet" href="{% static 'forms/balanza_de_pagos/JP-536-2.css' %}" />
     <link rel="stylesheet" href="{% static 'website.css' %}" />
   </head>
 
@@ -56,8 +56,8 @@
                   <!-- Line 1 -->
                   <tr>
                       <tr>
-                      <td>Año: <input id="year" type="text" name="year_1" required minlength="4" maxlength="4" size="10" placeholder="Año" required></td>
-                      <td>Año: <input id="year" type="text" name="year_2" required minlength="4" maxlength="4" size="10" placeholder="Año" required></td>
+                      <td>Año: <input type="number" id="year" name="start_year" min="1000" max="9999" placeholder="year" required></input></td>
+                      <td>Año: <input type="number" id="year" name="end_year" min="1000" max="9999" placeholder="year" required></input></td>
                   </tr></tr>
   
                   <!-- Line 2 -->
@@ -128,47 +128,47 @@
               3/ Inclúyase como parte de ésta, la maquinaria y equipo que no es parte de la inversión en construcción y que está sujeta a un ajuste por depreciación, como por ejemplo: vehículo de motor, equipo pesado, equipo de oficina, etcétera.<br>
           <div>
 
-            <section>
-                <div class="big-box-bottom">
-                    <div class="left-signature">
-                        <input type="text" id="signature" name="name" placeholder="Name" required></input> <!-- Signature Input -->
-                        <hr> <!-- Signature Line -->
-                        <p>
-                            Nombre de la empresa pública<br>
-                        </p>
-                    </div>
-    
-                    <div class="right-signature">
-                        <input type="tel" id="signature" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="phone" placeholder="123-456-7890" required><!-- Signature Input -->
-                        <hr> <!-- Signature Line -->
-                        <p>
-                            Teléfono<br>
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="big-box-bottom">
-                    <div class="left-signature">
-                        <input type="text" id="signature" name="title" placeholder="Título" required><!-- Signature Input -->
-                        <hr> <!-- Signature Line -->
-                        <p>
-                            Nombre y título de la persona que suministra la información<br>
-                        </p>
-                    </div>
-    
-                    <div class="right-signature">
-                        <input type="text" id="signature" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" minlength="8" maxlength="8" name="date" placeholder="MM/DD/YYYY" required><!-- Signature Input -->
-                        <hr> <!-- Signature Line -->
-                        <p>
-                            Fecha<br>
-                        </p>
-                    </div>
-                </div>
-            </section>
+          <section>
+            <div class="big-box-bottom">
+              <div class="left-signature">
+                <input type="text" id="signature" name="company_name" placeholder="Company name" required></input> <!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                    Nombre de la empresa pública<br>
+                </p>
+              </div>
   
-            <section class = 'submit-button-container'>
-                <input type="submit" value="SUBMIT" class="submit-button"></input>
-              </section>
+              <div class="right-signature">
+                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="phone" placeholder="123-456-7890" required><!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                    Número de teléfono<br>
+                </p>
+              </div>
+            </div>
+  
+            <div class="big-box-bottom" id="signature-bottom">
+              <div class="left-signature">
+                <input type="text" id="title" name="name_title" placeholder="Name-Position" required></input> <!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                    Nombre y título de la persona que suministra la información<br>
+                </p>
+              </div>
+
+              <div class="right-signature">
+                <input type="date" id="date" name="date" placeholder="Date" required></input> <!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                    Date<br>
+                </p>
+              </div>
+            </div>
+          </section>
+  
+          <section class = 'submit-button-container'>
+            <input type="submit" value="SUBMIT" class="submit-button"></input>
+          </section>
         <form>
       </main>
     </body>

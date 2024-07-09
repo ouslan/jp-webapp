@@ -3616,8 +3616,8 @@ def IP_520(request):
 def JP_536_2(request):
     if request.method == "POST":
         # Retrieve form data
-        year_1 = request.POST.get('year_1')
-        year_2 = request.POST.get('year_2')
+        start_year = request.POST.get('start_year')
+        end_year = request.POST.get('end_year')
         inventario1 = request.POST.get('inventario1')
         inventario2 = request.POST.get('inventario2')
         compras1 = request.POST.get('compras1')
@@ -3634,9 +3634,9 @@ def JP_536_2(request):
         alquiler2 = request.POST.get('alquiler2')
         licencia1 = request.POST.get('licencia1')
         licencia2 = request.POST.get('licencia2')
-        name = request.POST.get('name')
+        company_name = request.POST.get('company_name')
         phone = request.POST.get('phone')
-        title = request.POST.get('title')
+        name_title = request.POST.get('name_title')
         date = request.POST.get('date')
         
         csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-536-2.csv'
@@ -3646,9 +3646,9 @@ def JP_536_2(request):
             writer = csv.writer(file)
 
             if not file_exists:
-                writer.writerow(['year_1', 'year_2', 'inventario1', 'inventario2', 'compras1', 'compras2', 'depre1', 'depre2', 'maquinaria1', 'maquinaria2', 'equipo1', 'equipo2', 'computadora1', 'computadora2', 'alquiler1', 'alquiler2', 'licencia1', 'licencia2', 'name', 'phone', 'title', 'date'])
+                writer.writerow(['start_year', 'end_year', 'inventario1', 'inventario2', 'compras1', 'compras2', 'depre1', 'depre2', 'maquinaria1', 'maquinaria2', 'equipo1', 'equipo2', 'computadora1', 'computadora2', 'alquiler1', 'alquiler2', 'licencia1', 'licencia2', 'company_name', 'phone', 'name_title', 'date'])
 
-            writer.writerow([year_1, year_2, inventario1, inventario2, compras1, compras2, depre1, depre2, maquinaria1, maquinaria2, equipo1, equipo2, computadora1, computadora2, alquiler1, alquiler2, licencia1, licencia2, name, phone, title, date])
+            writer.writerow([start_year, end_year, inventario1, inventario2, compras1, compras2, depre1, depre2, maquinaria1, maquinaria2, equipo1, equipo2, computadora1, computadora2, alquiler1, alquiler2, licencia1, licencia2, company_name, phone, name_title, date])
         
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-536-2.html")

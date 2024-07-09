@@ -2298,9 +2298,9 @@ class IP_520(forms.Form):
     rank = forms.CharField(label='Rank', max_length=100)
     
 
-class JP_536_2(forms,Form):
-    year_1 = forms.CharField(label='Año / Year', max_length=100)
-    year_2 = forms.CharField(label='Año / Year', max_length=100)
+class JP_536_2(forms.Form):
+    start_year = forms.CharField(label='Año / Year', max_length=100)
+    end_year = forms.CharField(label='Año / Year', max_length=100)
     inventario1 = forms.CharField(label='Inventario1', max_length=100)
     inventario2 = forms.CharField(label='Inventario2', max_length=100)
     compras1 = forms.CharField(label='Compras1', max_length=100)
@@ -2317,7 +2317,7 @@ class JP_536_2(forms,Form):
     alquiler2 = forms.CharField(label='Alquiler2', max_length=100)
     licencia1 = forms.CharField(label='Licencia1', max_length=100)
     licencia2 = forms.CharField(label='Licencia2', max_length=100)
-    name = forms.CharField(label='Nombre', max_length=100)
+    company_name = forms.CharField(label='Nombre', max_length=100)
     phone = forms.CharField(label='Teléfono', max_length=100)
-    title = forms.CharField(label='Título', max_length=100)
+    name_title = forms.CharField(label='Título', max_length=100)
     date = forms.CharField(label='Fecha', max_length=100)
