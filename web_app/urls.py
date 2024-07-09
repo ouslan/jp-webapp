@@ -37,6 +37,8 @@ urlpatterns = [
     re_path(r"^IP-490-correos-y-mensajeros/$", views.IP_490, name="IP-490"),
     re_path(r"^IP-520-finanzas-y-seguros/$", views.IP_520, name="IP-520"),
     re_path(r"^JP-536-2-producto-bruto/$", views.JP_536_2, name="JP-536-2"),
+    re_path(r"^JP-544-info-para-balanza/$", views.JP_544, name="JP-544"),
+
     re_path(r"^Forms/$", views.Forms, name="Forms"),
 ]
 
