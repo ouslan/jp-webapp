@@ -1,0 +1,189 @@
+body {
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f9f9f9;
+    max-width: 1500px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header, main {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 26px;
+    border-radius: 8px;
+}
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header div {
+    flex: 1;
+    text-align: center;
+}
+
+.header div img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+
+}
+
+
+/* HEADER */
+#header_image {
+    width: 50px;
+    height: 50px;
+}
+
+#header_left {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-right: 30%;
+    text-align: left;
+    border:none;
+}
+
+#header_center {
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+    border:none;
+}
+
+#header_right {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-left: 30%;
+    text-align: right;
+    border:none;
+}
+
+/* BODY */
+
+#left_box {
+    text-align: left;
+    border:none;
+}
+
+#right_box {
+    text-align: right;
+    border:none;
+}
+
+#no_border {
+    border:none;
+}
+
+#table_header {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+
+#center_text {
+    text-align: center;
+    font-weight: normal;
+    background-color: white;
+    border: none;
+}
+
+#left_text {
+    text-align: left;
+    font-weight: normal;
+    background-color: white;
+    border: none;
+}
+
+#left_text_title {
+    text-align: left;
+    font-weight: normal;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+}
+
+#instruction-page {
+    margin-top: 26px;
+    margin-bottom: 30px;
+}
+
+#page-number {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 60px;
+}
+
+.instruction-header {
+    margin-bottom: 50px;
+}
+
+#logo_table {
+    width: 30px;
+    height: auto;
+}
+
+.big-box {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 10px 10px -10px rgba(131, 131, 131, 0.5);
+}
+
+#letter-header {
+    font-size: 1.5em;
+}
+
+#middle-header {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.header, .sub-header {
+    text-align: center;
+}
+
+.header img {
+    width: 150px;
+}
+
+#left {
+    text-align: left;
+    border: none;
+    background-color: white;
+}
+
+#no-background {
+    background-color: white;
+    border: none;
+}
+
+#right {
+    text-align: right;
+    border: none;
+    background-color: white;
+}
+
