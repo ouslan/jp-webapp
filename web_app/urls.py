@@ -34,6 +34,9 @@ urlpatterns = [
     re_path(r"^IP-310b-manufacturas-de-bebidas/$", views.IP_310b, name="IP-310b"),
     re_path(r"^IP-480a-transportacion-aerea/$", views.IP_480a, name="IP-480a"),
     re_path(r"^JP-529-relacion-de-aportaciones/$", views.JP_529, name="JP-529"),
+    re_path(r"^IP-490-correos-y-mensajeros/$", views.IP_490, name="IP-490"),
+    re_path(r"^IP-520-finanzas-y-seguros/$", views.IP_520, name="IP-520"),
+    re_path(r"^JP-536-2-producto-bruto/$", views.JP_536_2, name="JP-536-2"),
     re_path(r"^IP-510-informatica/$", views.IP_510, name="IP-510"),
     re_path(r"^Forms/$", views.Forms, name="Forms"),
 ]
