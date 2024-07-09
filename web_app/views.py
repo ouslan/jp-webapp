@@ -3909,3 +3909,6 @@ def JP_544(request):
         
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-544.html")
+
+def JP_544_1(request):
+    return render(request, "forms/yearly/balanza_de_pagos/JP-544-1.html")
