@@ -4087,6 +4087,8 @@ def IP_520s(request):
         incomes_life_2 = request.POST.get('incomes_life_2')
         incomes_auto_1 = request.POST.get('incomes_auto_1')
         incomes_auto_2 = request.POST.get('incomes_auto_2')
+        incomes_other_1 = request.POST.get('incomes_other_1')
+        incomes_other_2 = request.POST.get('incomes_other_2')
         incomes_dividend_1 = request.POST.get('incomes_dividend_1')
         incomes_dividend_2 = request.POST.get('incomes_dividend_2')
         incomes_rent_1 = request.POST.get('incomes_rent_1')
@@ -4166,7 +4168,7 @@ def IP_520s(request):
                                 "branches_if_yes", "closing_date", "start_year", "end_year",
                                 "incomes_premium_earned_1", "incomes_premium_earned_2", "incomes_disability_1", "incomes_disability_2",
                                 "incomes_life_1", "incomes_life_2", "incomes_auto_1", "incomes_auto_2",
-                                "incomes_dividend_1", "incomes_dividend_2", "incomes_rent_1", "incomes_rent_2",
+                                "incomes_other_1", "incomes_other_2","incomes_dividend_1", "incomes_dividend_2", "incomes_rent_1", "incomes_rent_2",
                                 "incomes_commissions_1", "incomes_commissions_2", "incomes_interest_1", "incomes_interest_2",
                                 "incomes_capital_gain_loss_1", "incomes_capital_gain_loss_2", "incomes_other_operation_1", "incomes_other_operation_2",
                                 "incomes_total_1", "incomes_total_2", "expenses_1", "expenses_2",
@@ -4190,13 +4192,13 @@ def IP_520s(request):
                             business_type, other_business_type, risk_type, branches,
                             branches_if_yes, closing_date, start_year, end_year,
                             incomes_premium_earned_1, incomes_premium_earned_2, incomes_disability_1, incomes_disability_2,
-                            incomes_life_1, incomes_life_2, incomes_auto_1, incomes_auto_2,
+                            incomes_life_1, incomes_life_2, incomes_auto_1, incomes_auto_2, incomes_other_1, incomes_other_2,
                             incomes_dividend_1, incomes_dividend_2, incomes_rent_1, incomes_rent_2,
                             incomes_commissions_1, incomes_commissions_2, incomes_interests_1, incomes_interests_2,
                             incomes_capital_gain_loss_1, incomes_capital_gain_loss_2, incomes_other_operation_1, incomes_other_operation_2,
                             incomes_total_1, incomes_total_2, expenses_1, expenses_2,
                             expenses_premium_earned_1, expenses_premium_earned_2, expenses_disability_1, expenses_disability_2,
-                            expenses_life_1, expenses_life_2, expenses_auto_1, expenses_auto_2,
+                            expenses_life_1, expenses_life_2, expenses_auto_1, expenses_auto_2, 
                             expenses_other_1, expenses_other_2, expenses_increase_reserves_1, expenses_increase_reserves_2,
                             expenses_salaries_wages_bonus_1, expenses_salaries_wages_bonus_2, expenses_commissions_1, expenses_commissions_2,
                             expenses_to_employees_1, expenses_to_employees_2, expenses_independent_agents_1, expenses_independent_agents_2,

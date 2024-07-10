@@ -2606,6 +2606,8 @@ class IP_520s(forms.Form):
     incomes_life_2 = forms.CharField(label='incomes life 2', max_length=100)
     incomes_auto_1 = forms.CharField(label='incomes auto 1', max_length=100)
     incomes_auto_2 = forms.CharField(label='incomes auto 2', max_length=100)
+    incomes_other_1 = forms.CharField(label='incomes other 1', max_length=100)
+    incomes_other_2 = forms.CharField(label='incomes other 2', max_length=100)
     incomes_dividend_1 = forms.CharField(label='incomes dividend 1', max_length=100)
     incomes_dividend_2 = forms.CharField(label='incomes dividend 2', max_length=100)
     incomes_rent_1 = forms.CharField(label='incomes rent 1', max_length=100)
