@@ -4058,3 +4058,6 @@ def IP_520a(request):
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-520a.html")
+
+def IP_540(request):
+    return render(request, "forms/yearly/ingreso_neto/IP-540.html")
