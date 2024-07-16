@@ -4213,3 +4213,6 @@ def IP_520s(request):
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-520s.html")
+
+def IP_540J(request):
+    return render(request, "forms/yearly/ingreso_neto/IP-540J.html")
