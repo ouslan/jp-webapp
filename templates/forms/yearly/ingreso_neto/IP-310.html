@@ -55,7 +55,7 @@
         {% csrf_token %}
         <section>
           <div class="body_header">
-            <strong>Nombre compañía / Company Name:</strong>
+            <strong>Nombre compañía / Company name:</strong>
             <input class="text-box space-between" name="company_name" placeholder="Company Name" required>
             <br>
             <strong>Dirección / Address:</strong>
@@ -103,14 +103,14 @@
 
           <!-- DIV 3 -->
           <div class="third_div">
-              <strong>3. Corporaciones Extranjeras Controladas (CEC)/Controlled Foreign Corporations:</strong>
+              <strong>3. Corporaciones extranjeras controladas (CEC)/Controlled foreign corporations:</strong>
               <input type="radio" id="radio-2" name="cfc" value="Si">Si
               <input type="radio" id="radio-2" name="cfc" value="No">No
           </div>
 
           <!-- DIV 4 -->
           <div class="fourth_div">
-            <strong>4. Fecha Comienzo de Operaciones - Date Operations started:</strong>
+            <strong>4. Fecha comienzo de operaciones - Date operations started:</strong>
             <select id="meses" name="end_month" placeholder="month" required>
                 <option value="enero">enero</option>
                 <option value="febrero">febrero</option>
@@ -130,9 +130,9 @@
 
           <!-- DIV 5 -->
           <div class="fifth_div">
-            <strong>5. Productos Manufacturados - Manufactured Products</strong>
+            <strong>5. Productos manufacturados - Manufactured products</strong>
             <br>
-            &emsp;&emsp;a. Producto Principal - Main Product:
+            &emsp;&emsp;a. Producto principal - Main product:
             <input class="text-box space-between" id="text-box-4" name="main_product_1" placeholder="Enter your text here..." required>
             &emsp;&emsp;b. Otros Productos - Other Products:
             <input class="text-box space-between" id="text-box-4" name="other_product_1" placeholder="Enter your text here..." required>
@@ -140,7 +140,7 @@
 
           <!-- DIV 6 -->
           <div class="six_div">
-            <strong>6. Materia Prima Principal Usada en la Elaboración del Product - Main Raw Material Used:</strong>
+            <strong>6. Materia prima principal usada en la elaboración del producto - Main raw material used:</strong>
             <input class="text-box space-between" id="text-box-4a" name="raw_material_used" placeholder="Enter your text here..." required>
           </div>
           
@@ -190,25 +190,25 @@
             <h2>A. Ventas totales - Total sales</h2></label>
 
             <div class="item">
-                <label>&emsp;a. De Personas - From Persons</label>
+                <label>&emsp;a. De personas - From persons</label>
                 <input type="number" name="from_persons_1" placeholder="$" required>
                 <input type="number" name="from_persons_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>&emsp;b. De Industrias y Negocios - From Industries and Businesses</label>
+                <label>&emsp;b. De industrias y negocios - From industries and businesses</label>
                 <input type="number" name="industries_businesses_1" placeholder="$" required>
                 <input type="number" name="industries_businesses_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>1. Productos Manufacturados por la Fábrica - Goods Manufactured by the Firm Total</label>
+                <label>1. Productos manufacturados por la fábrica - Goods manufactured by the firm total</label>
                 <input type="number" name="goods_manufactured_1" placeholder="$" required>
                 <input type="number" name="goods_manufactured_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>&emsp;Ventas al Exterior (Valor) - Exports (Value)</label>
+                <label>&emsp;Ventas al exterior (Valor) - Exports (Value)</label>
                 <input type="number" name="exports_val_1" placeholder="$" required>
                 <input type="number" name="exports_val_2" placeholder="$" required>
             </div>
@@ -216,14 +216,14 @@
           <!-- SECTION B -->
           <div class="section">
             <div id="title" class="item">
-              <label><h2>B. Total Costo Manufactura y Ventas - Total 
-                <br>&emsp;Manufacturing Cost and Sales (1+2+3+4+5+6+7-8)</h2></label>
+              <label><h2>B. Total costo manufactura y ventas - Total 
+                <br>&emsp;Manufacturing cost and sales (1+2+3+4+5+6+7-8)</h2></label>
               <input class="title-inputs" id="title-inputs" type="number" name="manufacturing_cost_1" placeholder="$" required>
               <input id="title-inputs" type="number" name="manufacturing_cost_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>1. Inventarios a Principio de Año - Inventories at the Beginning of the Year<br>&emsp;and commissions</label>
+                <label>1. Inventarios a principio de año - Inventories at the beginning of the year<br>&emsp;and commissions</label>
                 <input type="number" name="inventories_begginning_1" placeholder="$" required>
                 <input type="number" name="inventories_begginning_2" placeholder="$" required>
             </div>
@@ -235,7 +235,7 @@
             </div>
 
             <div class="item">
-                <label>&emsp;a. Materia Prima Total - Total Raw Materials</label>
+                <label>&emsp;a. Materia prima total - Total raw materials</label>
                 <input type="number" name="total_raw_1" placeholder="$" required>
                 <input type="number" name="total_raw_2" placeholder="$" required>
             </div>
@@ -253,7 +253,7 @@
             </div>
 
             <div class="item">
-                <label>3. Jornales Directos - Direct Wages</label>
+                <label>3. Jornales directos - Direct wages</label>
                 <input type="number" name="direct_wages_1" placeholder="$" required>
                 <input type="number" name="direct_wages_2" placeholder="$" required>
             </div>
@@ -265,25 +265,25 @@
             </div>
 
             <div class="item">
-                <label>5. Renta de Terreno y Edificio - Rent of Land and Building</label>
+                <label>5. Renta de terreno y edificio - Rent of land and building</label>
                 <input type="number" name="rent_land_1" placeholder="$" required>
                 <input type="number" name="rent_land_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>6. Otros Costos Directos - Other Direct Costs</label>
+                <label>6. Otros costos directos - Other direct costs</label>
                 <input type="number" name="other_direct_1" placeholder="$" required>
                 <input type="number" name="other_direct_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>7. Costos Indirectos - Indirect Costs</label>
+                <label>7. Costos indirectos - Indirect costs</label>
                 <input type="number" name="indirect_cost_1" placeholder="$" required>
                 <input type="number" name="indirect_cost_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>8. Inventarios a Fin de Año - Inventories at the End of the Year</label>
+                <label>8. Inventarios a fin de año - Inventories at the end of the year</label>
                 <input type="number" name="inventories_end_1" placeholder="$" required>
                 <input type="number" name="inventories_end_2" placeholder="$" required>
             </div>
@@ -291,7 +291,7 @@
           <!-- SECTION C -->
           <div class="section">
             <div id="title" class="item">
-              <label><h2>C. Beneficio Bruto (A-B) - Gross Profit (A-B)</h2></label>
+              <label><h2>C. Beneficio bruto (A-B) - Gross profit (A-B)</h2></label>
               <input class="title-inputs" id="title-inputs" type="number" name="gross_profit_1" placeholder="$" required>
               <input id="title-inputs" type="number" name="gross_profit_2" placeholder="$" required>
             </div>
@@ -299,7 +299,7 @@
           <!-- SECTION D -->
           <div class="section">
             <div id="title" class="item">
-                <label><h2>D. Otros Ingresos de Operación - Other Operating Income</h2></label>
+                <label><h2>D. Otros ingresos de operación - Other operating income</h2></label>
                 <input class="title-inputs" id="title-inputs" type="number" name="other_operating_1" placeholder="$" required>
                 <input id="title-inputs" type="number" name="other_operating_2" placeholder="$" required>
             </div>
@@ -311,13 +311,13 @@
             </div>
 
             <div class="item">
-              <label>2. Renta de Terreno y Edificio - Rent of Land and Building</label>
+              <label>2. Renta de terreno y edificio - Rent of land and building</label>
               <input type="number" name="rent_land_3" placeholder="$" required>
               <input type="number" name="rent_land_4" placeholder="$" required>
             </div>
 
             <div class="item">
-              <label>3. Ganancia o Pérdida de Capital - Capital Gain or Loss</label>
+              <label>3. Ganancia o pérdida de capital - Capital gain or loss</label>
               <input type="number" name="capital_gain_1" placeholder="$" required>
               <input type="number" name="capital_gain_2" placeholder="$" required>
             </div>
@@ -332,7 +332,7 @@
         <!-- Section E -->
         <div class="section">
             <div id="title" class="item">
-                <label><h2>E. Total Ingreso Bruto (C+D) - Total Gross Profit (C+D)</h2></label>
+                <label><h2>E. Total ingreso bruto (C+D) - Total gross profit (C+D)</h2></label>
                 <input class="title-inputs" id="title-inputs" type="number" name="total_gross_1" placeholder="$" required>
                 <input id="title-inputs" type="number" name="total_gross_2" placeholder="$" required>
             </div>
@@ -341,16 +341,16 @@
         <!-- Section F -->
         <div class="section">
             <div id="title" class="item">
-              <label><h2>F. Total Gastos no Incluidos en las Partidas del Costo de<br>
-                &emsp;Manufactura y Ventas - Expenses not Included in <br>
-                &emsp;Manufaturing Cost and Sales</h2></label>
+              <label><h2>F. Total gastos no incluidos en las partidas del costo de<br>
+                &emsp;manufactura y ventas - Expenses not included in <br>
+                &emsp;manufaturing cost and sales</h2></label>
               <input class="title-inputs" id="title-inputs" type="number" name="expenses_not_1" placeholder="$" required>
               <input id="title-inputs" type="number" name="expenses_not_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>1. Salarios, Jornales, Bono de Navidad y Comisiones - Salaries, Wages, Christmas 
-                    <br>&emsp;Bonus and Commissions</label>
+                <label>1. Salarios, jornales, bono de navidad y comisiones - Salaries, wages, christmas 
+                    <br>&emsp;bonus and commissions</label>
                 <input type="number" name="salaries_1" placeholder="$" required>
                 <input type="number" name="salaries_2" placeholder="$" required>
             </div>
@@ -374,37 +374,37 @@
             </div>
 
             <div class="item">
-                <label>5. Renta de Terreno y Edificio - Rent of Land and Building</label>
+                <label>5. Renta de terreno y edificio - Rent of land and building</label>
                 <input type="number" name="rent_land_5" placeholder="$" required>
                 <input type="number" name="rent_land_6" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>6. Otros Gastos de Operación - Other Operating Expenses</label>
+                <label>6. Otros gastos de operación - Other operating expenses</label>
                 <input type="number" name="other_operating_3" placeholder="$" required>
                 <input type="number" name="other_operating_4" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>7. Impuesto sobre la Venta y Uso - Sales and Use Tax</label>
+                <label>7. Impuesto sobre la venta y uso - Sales and use tax</label>
                 <input type="number" name="sales_tax_1" placeholder="$" required>
                 <input type="number" name="sales_tax_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>&emsp;a. Por Compra de Maquinaria y Equipo - On Purchases of Machinery and Equipment</label>
+                <label>&emsp;a. Por compra de maquinaria y equipo - On purchases of machinery and equipment</label>
                 <input type="number" name="machinery_1" placeholder="$" required>
                 <input type="number" name="machinery_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>&emsp;b. Por Otras Compras - On Other Purchases</label>
+                <label>&emsp;b. Por otras compras - On other purchases</label>
                 <input type="number" name="on_other_1" placeholder="$" required>
                 <input type="number" name="on_other_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>8. Licencias y Patentes - Licenses and Patents</label>
+                <label>8. Licencias y patentes - Licenses and patents</label>
                 <input type="number" name="licenses_1" placeholder="$" required>
                 <input type="number" name="licenses_2" placeholder="$" required>
             </div>
@@ -412,20 +412,20 @@
         <!-- Section G -->
         <div class="section">
             <div id="title" class="item">
-                <label><h2>G. Ganancia o Pérdida Neta (+ ó -) (E-F)<br>
+                <label><h2>G. Ganancia o pérdida neta (+ ó -) (E-F)<br>
                 &emsp;Net Profit or Loss  (+ ó -) (E-F)</h2></label>
                 <input class="title-inputs" id="title-inputs" type="number" name="net_loss_1" placeholder="$" required>
                 <input id="title-inputs" type="number" name="net_loss_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>&emsp;1. Contribución sobre Ingresos - Income Tax</label>
+                <label>&emsp;1. Contribución sobre ingresos - Income tax</label>
                 <input type="number" name="income_tax_1" placeholder="$" required>
                 <input type="number" name="income_tax_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>&emsp;2. Ganancia después de Contribución sobre Ingreso - Profit after Income Tax</label>
+                <label>&emsp;2. Ganancia después de contribución sobre ingreso - Profit after income tax</label>
                 <input type="number" name="profit_after_tax_1" placeholder="$" required>
                 <input type="number" name="profit_after_tax_2" placeholder="$" required>
             </div>
@@ -433,8 +433,8 @@
         <!-- Section H -->
         <div class="section">
             <div id="title" class="item">
-                <label><h2>H. Impuesto sobre Ventas y Uso Retenido<br>
-                &emsp;Sales and Use Tax Withheld</h2></label>
+                <label><h2>H. Impuesto sobre ventas y uso retenido<br>
+                &emsp;Sales and use tax withheld</h2></label>
                 <input class="title-inputs" id="title-inputs" type="number" name="sales_and_use_withheld_1" placeholder="$" required>
                 <input id="title-inputs" type="number" name="sales_and_use_withheld_2" placeholder="$" required>
             </div>
@@ -444,7 +444,7 @@
 
         <div class="custom-line"></div>
         <div id="text_button">
-        * Incluya Intereses Tributables y no tributables - Include taxable and non-taxable interests
+        * Incluya intereses tributables y no tributables - Include taxable and non-taxable interests
         </div>
         
 
