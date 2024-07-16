@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>JP-544.1</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
+
+    <link rel="stylesheet" href="{% static 'forms/balanza_de_pagos/JP-544.css' %}" />
+    <link rel="stylesheet" href="{% static 'website.css' %}" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <section class="header">
+      <table>
+        <tr>
+          <td id="header_left">
+            J.P. -544.1<br>
+            Rev. Jul. 17<br>
+          </td>
+          <td id="header_center">
+            <img src="{% static 'JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
+            <h3>Relació de Aportaciones Federales Recibidas</h3>
+            <h3>(UNIVERSIDADES Y COLEGIOS)</h3><br>
+          </td>
+          <td id="header_right">
+            Junta de Planificación de Puerto Rico<br>
+            Subprograma de Análisis Económico<br>
+          </td>
+        </tr>
+      </table>
+    </section>
+    
+    <main>
+      <form method="POST" action="{% url 'JP-544' %}">
+        {% csrf_token %}
+        <div class="big-box-bottom-left">
+          <ul><strong>&emsp;Nombre de la Agencia :</strong>
+          <input class="text-box space-between" name="agencia" placeholder="Agencia" required><br>
+          
+          <strong>&emsp;Preparado por :</strong>
+          <input class="text-box space-between" name="prep" placeholder="Nombre" required><br>
+      
+          <strong>&emsp;Título o puesto :</strong>
+          <input class="text-box space-between" name="titulo" placeholder="Título" required><br>
+      
+          <strong>&emsp;Teléfono :</strong><br>
+          <input class="text-box space-between" name="telefono" placeholder="123-456-7890" required><br>
+      
+          <strong>&emsp;Fecha :</strong>
+          <input class="text-box space-between" name="fecha" placeholder="MM/DD/YYYY" required><br></ul>
+      </div>
+
+        <section class="divider-container">
+            <ul><h3>APORTACIONES (DONATIVOS) FEDERALES RECIBIDOS:</h3>
+            <strong>&emsp;A. APORTACIONES FEDERALES DIRECTAS</strong></ul>
+            <table>
+                <tr>
+                    <th colspan="1">Nombre de la agencia federal</th>
+                    <th colspan="1">Programa Federal</th>
+                    <th colspan="1">Cantidad Recibida</th>
+                    <th colspan="1">Fecha de Recibo</th>
+                </tr>
+                
+                <!-- Line 1 -->
+                <tr>
+                    <tr>
+                      <td><input type="text" name="agencia1" placeholder="Agencia" required></td>
+                      <td><input type="text" name="programa1" placeholder="Programa" required></td>
+                      <td><input type="number" name="dolares1" placeholder="Cantidad" required></td>
+                      <td><input type="text" name="fecha1" placeholder="MM/DD/YYYY" required></td>
+                    </tr></tr>
+
+                <!-- Line 2 -->
+                <tr>
+                  <td><input type="text" name="agencia2" placeholder="Agencia" ></td>
+                  <td><input type="text" name="programa2" placeholder="Programa" ></td>
+                  <td><input type="number" name="dolares2" placeholder="Cantidad" ></td>
+                  <td><input type="text" name="fecha2" placeholder="MM/DD/YYYY" ></td>
+                </tr>
+
+                <!-- Line 3 -->
+                <tr>
+                  <td><input type="text" name="agencia3" placeholder="Agencia" ></td>
+                  <td><input type="text" name="programa3" placeholder="Programa" ></td>
+                  <td><input type="number" name="dolares3" placeholder="Cantidad" ></td>
+                  <td><input type="text" name="fecha3" placeholder="MM/DD/YYYY" ></td>
+                </tr>
+                
+                <!-- Line 4 -->
+                <tr>
+                  <td><input type="text" name="agencia4" placeholder="Agencia" ></td>
+                  <td><input type="text" name="programa4" placeholder="Programa" ></td>
+                  <td><input type="number" name="dolares4" placeholder="Cantidad" ></td>
+                  <td><input type="text" name="fecha4" placeholder="MM/DD/YYYY" ></td>
+                </tr>
+                
+                <!-- Line 5 -->
+                <tr>
+                  <td><input type="text" name="agencia5" placeholder="Agencia" ></td>
+                  <td><input type="text" name="programa5" placeholder="Programa" ></td>
+                  <td><input type="number" name="dolares5" placeholder="Cantidad" ></td>
+                  <td><input type="text" name="fecha5" placeholder="MM/DD/YYYY" ></td>
+                </tr>
+
+                <!-- Line 6 -->
+                <tr>
+                  <td><input type="text" name="agencia6" placeholder="Agencia" ></td>
+                  <td><input type="text" name="programa6" placeholder="Programa" ></td>
+                  <td><input type="number" name="dolares6" placeholder="Cantidad" ></td>
+                  <td><input type="text" name="fecha6" placeholder="MM/DD/YYYY" ></td>
+                </tr>
+
+                <!-- Line 7 -->
+                <tr>
+                  <td><input type="text" name="agencia7" placeholder="Agencia" ></td>
+                  <td><input type="text" name="programa7" placeholder="Programa" ></td>
+                  <td><input type="number" name="dolares7" placeholder="Cantidad" ></td>
+                  <td><input type="text" name="fecha7" placeholder="MM/DD/YYYY" ></td>
+                </tr>
+
+                <!-- Line 8 -->
+                <tr>
+                  <td><input type="text" name="agencia8" placeholder="Agencia" ></td>
+                  <td><input type="text" name="programa8" placeholder="Programa" ></td>
+                  <td><input type="number" name="dolares8" placeholder="Cantidad" ></td>
+                  <td><input type="text" name="fecha8" placeholder="MM/DD/YYYY" ></td>
+                </tr>
+
+            </table>
+            <br>
+            <br>
+            
+            
+            
+            <!-- Segunda Tabla -->
+          <ul><strong>&emsp;B. APORTACIONES A TRAVÉS DE AGENCIAS LOCALES </strong></ul>
+          <table>
+              <tr>
+                  <th colspan="1">Nombre de la agencia local</th>
+                  <th colspan="1">Programa local</th>
+                  <th colspan="1">Cantidad Recibida</th>
+                  <th colspan="1">Fecha de Recibo</th>
+              </tr>
+              
+              <!-- Line 1 -->
+              <tr>
+                  <tr>
+                    <td><input type="text" name="agencia9" placeholder="Agencia" required></td>
+                    <td><input type="text" name="programa9" placeholder="Programa" required></td>
+                    <td><input type="number" name="dolares9" placeholder="Cantidad" required></td>
+                    <td><input type="text" name="fecha9" placeholder="MM/DD/YYYY" required></td>
+                  </tr></tr>
+
+              <!-- Line 2 -->
+              <tr>
+                <td><input type="text" name="agencia10" placeholder="Agencia" ></td>
+                <td><input type="text" name="programa10" placeholder="Programa" ></td>
+                <td><input type="number" name="dolares10" placeholder="Cantidad" ></td>
+                <td><input type="text" name="fecha10" placeholder="MM/DD/YYYY" ></td>
+              </tr>
+
+              <!-- Line 3 -->
+              <tr>
+                <td><input type="text" name="agencia11" placeholder="Agencia" ></td>
+                <td><input type="text" name="programa11" placeholder="Programa" ></td>
+                <td><input type="number" name="dolares11" placeholder="Cantidad" ></td>
+                <td><input type="text" name="fecha11" placeholder="MM/DD/YYYY" ></td>
+              </tr>
+              
+              <!-- Line 4 -->
+              <tr>
+                <td><input type="text" name="agencia12" placeholder="Agencia" ></td>
+                <td><input type="text" name="programa12" placeholder="Programa" ></td>
+                <td><input type="number" name="dolares12" placeholder="Cantidad" ></td>
+                <td><input type="text" name="fecha12" placeholder="MM/DD/YYYY" ></td>
+              </tr>
+              
+              <!-- Line 5 -->
+              <tr>
+                <td><input type="text" name="agencia13" placeholder="Agencia" ></td>
+                <td><input type="text" name="programa13" placeholder="Programa" ></td>
+                <td><input type="number" name="dolares13" placeholder="Cantidad" ></td>
+                <td><input type="text" name="fecha13" placeholder="MM/DD/YYYY" ></td>
+              </tr>
+
+              <!-- Line 6 -->
+              <tr>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+                <td><br></td>
+              </tr>
+
+              <!-- Line 7 -->
+              <tr>
+                <td colspan="2"></td>
+                <th>Total</th>
+                <th>Cantidad Recibida</th>
+              </tr>
+
+              <!-- Line 8 -->
+              <tr>
+                <th colspan="2">C. NUMERO TOTAL DE ESTUDIANTES MATRICULADOS</th>
+                <td><input type="number" name="total1" placeholder="$" ></td>
+                <td><input type="number" name="cant1" placeholder="Cantidad" ></td>
+              </tr>
+
+              <!-- Line 9 -->
+              <tr>
+                <td colspan="2">1. Número de estudiantes con Pell Grant</td>
+                <td><input type="number" name="total2" placeholder="$" ></td>
+                <td><input type="number" name="cant2" placeholder="Cantidad" ></td>
+              </tr>
+
+              <!-- Line 10 -->
+              <tr>
+                <td colspan="2">2. Número de estudiantes no residentes</td>
+                <td><input type="number" name="total3" placeholder="$" ></td>
+                <td><input type="number" name="cant3" placeholder="Cantidad" ></td>
+              </tr>
+
+              <!-- Line 11 -->
+              <tr>
+                <td colspan="2">3. Gastos estimados por estudiantes no residentes</td>
+                <th></th>
+                <td><input type="number" name="cant4" placeholder="Cantidad" ></td>
+              </tr>
+
+          </table>
+          <br>
+          <br>
+
+
+
+          <ul><strong>&emsp;D. PRESTAMOS FEDERALES A ESTUDIANTES</strong></ul>
+          <table>
+              <tr>
+                  <th colspan="2">"GUARANTEED STUDENT LOAN" (GSL) Y OTROS EFECTUADOS FUERA DE PUERTO RICO</th>
+                  <th colspan="1">Total de Prestamos</th>
+                  <th colspan="1">Cantidad Recibida</th>
+              </tr>
+
+              <!-- Line 1 -->
+              <tr>
+                <td colspan="2">&emsp;1. Préstamos ortogados durante el año</td>
+                <td><input type="number" name="prestamos" placeholder="$" ></td>
+                <td><input type="number" name="cantidad" placeholder="$" ></td>
+              </tr>
+          </table>
+          <br>
+          <br>
+
+
+
+          <ul><strong>&emsp;E. DONATIVOS RECIBIDOS DE ESTADOS UNIDOS Y PAÍSES EXTRANJEROS</strong></ul>
+          <table>
+              <tr>
+                  <th colspan="2">Nombre de la Institución o Empresa Privada</th>
+                  <th colspan="1">Cantidad Recibida</th>
+                  <th colspan="1">Fecha de Recibo</th>
+              </tr>
+
+              <!-- Line 1 -->
+              <tr>
+                <td colspan="2"><input type="text" name="inst1" placeholder="Institución" ></td>
+                <td><input type="number" name="recibido1" placeholder="$" ></td>
+                <td><input type="text" name="date1" placeholder="MM/DD/YYYY" ></td>
+              </tr>
+
+              <!-- Line 2 -->
+              <tr>
+                <td colspan="2"><input type="text" name="ints2" placeholder="Institución" ></td>
+                <td><input type="number" name="recibido2" placeholder="$" ></td>
+                <td><input type="text" name="date2" placeholder="MM/DD/YYYY" ></td>
+              </tr>
+
+              <!-- Line 3 -->
+              <tr>
+                <td colspan="2"><input type="text" name="inst3" placeholder="Institución" ></td>
+                <td><input type="number" name="recibido3" placeholder="$" ></td>
+                <td><input type="text" name="date3" placeholder="MM/DD/YYYY" ></td>
+              </tr>
+
+              <!-- Line 4 -->
+              <tr>
+                <td colspan="2"><input type="text" name="inst4" placeholder="Institución" ></td>
+                <td><input type="number" name="recibido4" placeholder="$" ></td>
+                <td><input type="text" name="date4" placeholder="MM/DD/YYYY" ></td>
+            </tr>
+
+              <!-- Line 5 -->
+              <tr>
+                <td colspan="2"><input type="text" name="inst5" placeholder="Institución" ></td>
+                <td><input type="number" name="recibido5" placeholder="$" ></td>
+                <td><input type="text" name="date5" placeholder="MM/DD/YYYY" ></td>
+            </tr>
+          </table>
+          <br>
+          <br>
+
+
+
+          <ul><strong>&emsp;F.	PAGOS HECHOS A PERSONAS O FIRMAS EN EL EXTERIOR (No incluye aquellos pagos por los cuales rindió planillas de 
+            retención en el origen). 
+            </strong></ul>
+          <table>
+              <tr>
+                  <th colspan="2">Relación de Pagos</th>
+                  <th colspan="1">Cantidad</th>
+                  <th colspan="1">Pago</th>
+              </tr>
+
+              <!-- Line 1 -->
+              <tr>
+                <td colspan="2">&emsp;1. Servicios profesionales, consultivos y honorarios</td>
+                <td><input type="number" name="cantidad1" placeholder="$" ></td>
+                <td><input type="number" name="pago1" placeholder="$" ></td>
+              </tr>
+
+              <!-- Line 2 -->
+              <tr>
+                <td colspan="2">&emsp;2. Otros (favor de especificar)</td>
+                <td><input type="number" name="cantidad2" placeholder="$" ></td>
+                <td><input type="number" name="pago2" placeholder="$" ></td>
+              </tr>
+
+              <!-- Line 3 -->
+              <tr>
+                <td colspan="2">&emsp;<input type="text" name="other1" placeholder="Other" ></td>
+                <td><input type="number" name="cantidad3" placeholder="$" ></td>
+                <td><input type="number" name="pago3" placeholder="$" ></td>
+              </tr>
+
+              <!-- Line 4 -->
+              <tr>
+                <td colspan="2">&emsp;<input type="text" name="other2" placeholder="Other" ></td>
+                <td><input type="number" name="cantidad4" placeholder="$" ></td>
+                <td><input type="number" name="pago4" placeholder="$" ></td>
+              </tr>
+
+              <!-- Line 5 -->
+              <tr>
+                <td colspan="2">&emsp;<input type="text" name="other3" placeholder="Other" ></td>
+                <td><input type="number" name="cantidad5" placeholder="$" ></td>
+                <td><input type="number" name="pago5" placeholder="$" ></td>
+              </tr>
+
+              <!-- Line 6 -->
+              <tr>
+                <td colspan="2">&emsp;<input type="text" name="other4" placeholder="Other" ></td>
+                <td><input type="number" name="cantidad6" placeholder="$" ></td>
+                <td><input type="number" name="pago6" placeholder="$" ></td>
+              </tr>
+          </table>
+          <br>
+          <br>
+
+
+
+          <ul><strong>&emsp;G.	INVERSIONES EN VALORES DEL GOBIERNO FEDERAL </strong></ul>
+          <table>
+              <tr>
+                  <th colspan="2"></th>
+                  <th colspan="1">Valor</th>
+              </tr>
+
+              <!-- Line 1 -->
+              <tr>
+                <td colspan="2">&emsp;1. Valores adquiridos en el año</td>
+                <td><input type="number" name="valor1" placeholder="$" ></td>
+              </tr>
+
+              <!-- Line 2 -->
+              <tr>
+                <td colspan="2">&emsp;2. Montante de la Inversión al finalizar el año</td>
+                <td><input type="number" name="valor2" placeholder="$" ></td>
+              </tr>
+
+              <!-- Line 3 -->
+              <tr>
+                <td colspan="2">&emsp;3. Intereses Recibidos</td>
+                <td><input type="number" name="valor3" placeholder="$" ></td>
+              </tr>
+          </table>
+          <br>
+          <br>
+
+        </section>
+        <br>
+    </main>
+    <br>
+    
+    <section class = 'submit-button-container'>
+      <input type="submit" value="SUBMIT" class="submit-button"></input>
+    </section>
+
+  </body>
+</html>
+      
