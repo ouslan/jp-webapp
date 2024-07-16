@@ -3903,9 +3903,22 @@ def JP_544(request):
             writer = csv.writer(file)
 
             if not file_exists:
-                writer.writerow(['institucion1', 'proposito1', 'dolares1', 'institucion2', 'proposito2', 'dolares2', 'institucion3', 'proposito3', 'dolares3', 'institucion4', 'proposito4', 'dolares4', 'institucion5', 'proposito5', 'dolares5', 'institucion6', 'proposito6', 'dolares6', 'institucion7', 'proposito7', 'dolares7', 'institucion8', 'proposito8', 'dolares8', 'institucion9', 'proposito9', 'dolares9', 'institucion10', 'proposito10', 'dolares10', 'institucion11', 'proposito11', 'dolares11', 'institucion12', 'proposito12', 'dolares12', 'institucion13', 'proposito13', 'dolares13', 'institucion14', 'proposito14', 'dolares14', 'money1', 'money2', 'money3', 'money4', 'money5', 'money6', 'money7', 'money8', 'money9', 'money10', 'money11', 'money12', 'money13', 'money14', 'money15', 'otros1', 'otros2', 'otros3', 'otros4', 'agencia', 'prep', 'titulo', 'telefono', 'fecha'])
+                writer.writerow(['institucion1', 'proposito1', 'dolares1', 'institucion2', 'proposito2', 'dolares2', 'institucion3', 'proposito3', 'dolares3', 
+                                 'institucion4', 'proposito4', 'dolares4', 'institucion5', 'proposito5', 'dolares5', 'institucion6', 'proposito6', 'dolares6', 
+                                 'institucion7', 'proposito7', 'dolares7', 'institucion8', 'proposito8', 'dolares8', 'institucion9', 'proposito9', 'dolares9', 
+                                 'institucion10', 'proposito10', 'dolares10', 'institucion11', 'proposito11', 'dolares11', 'institucion12', 'proposito12', 'dolares12', 
+                                 'institucion13', 'proposito13', 'dolares13', 'institucion14', 'proposito14', 'dolares14', 
+                                 'money1', 'money2', 'money3', 'money4', 'money5', 'money6', 'money7', 'money8', 'money9', 'money10', 'money11', 'money12', 'money13', 'money14', 'money15', 
+                                 'otros1', 'otros2', 'otros3', 'otros4', 
+                                 'agencia', 'prep', 'titulo', 'telefono', 'fecha'])
 
-            writer.writerow([institucion1, proposito1, dolares1, institucion2, proposito2, dolares2, institucion3, proposito3, dolares3, institucion4, proposito4, dolares4, institucion5, proposito5, dolares5, institucion6, proposito6, dolares6, institucion7, proposito7, dolares7, institucion8, proposito8, dolares8, institucion9, proposito9, dolares9, institucion10, proposito10, dolares10, institucion11, proposito11, dolares11, institucion12, proposito12, dolares12, institucion13, proposito13, dolares13, institucion14, proposito14, dolares14, money1, money2, money3, money4, money5, money6, money7, money8, money9, money10, money11, money12, money13, money14, money15, otros1, otros2, otros3, otros4, agencia, prep, titulo, telefono, fecha])
+            writer.writerow([institucion1, proposito1, dolares1, institucion2, proposito2, dolares2, institucion3, proposito3, dolares3, 
+                             institucion4, proposito4, dolares4, institucion5, proposito5, dolares5, institucion6, proposito6, dolares6, 
+                             institucion7, proposito7, dolares7, institucion8, proposito8, dolares8, institucion9, proposito9, dolares9, 
+                             institucion10, proposito10, dolares10, institucion11, proposito11, dolares11, institucion12, proposito12, dolares12, 
+                             institucion13, proposito13, dolares13, institucion14, proposito14, dolares14, 
+                             money1, money2, money3, money4, money5, money6, money7, money8, money9, money10, money11, money12, money13, money14, money15, 
+                             otros1, otros2, otros3, otros4, agencia, prep, titulo, telefono, fecha])
         
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-544.html")
@@ -3914,4 +3927,160 @@ def JP_544_1(request):
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-1.html")
 
 def JP_544_2(request):
+    if request.method == "POST":
+        # Retrieve form data
+        agencia = request.POST.get('agencia')
+        prep = request.POST.get('prep')
+        titulo = request.POST.get('titulo')
+        telefono = request.POST.get('telefono')
+        fecha = request.POST.get('fecha')
+
+        agencia1 = request.POST.get('agencia1')
+        programa1 = request.POST.get('programa1')
+        dolares1 = request.POST.get('dolares1')
+        fecha1 = request.POST.get('fecha1')
+
+        agencia2 = request.POST.get('agencia2')
+        programa2 = request.POST.get('programa2')
+        dolares2 = request.POST.get('dolares2')
+        fecha2 = request.POST.get('fecha2')
+
+        agencia3 = request.POST.get('agencia3')
+        programa3 = request.POST.get('programa3')
+        dolares3 = request.POST.get('dolares3')
+        fecha3 = request.POST.get('fecha3')
+
+        agencia4 = request.POST.get('agencia4')
+        programa4 = request.POST.get('programa4')
+        dolares4 = request.POST.get('dolares4')
+        fecha4 = request.POST.get('fecha4')
+
+        agencia5 = request.POST.get('agencia5')
+        programa5 = request.POST.get('programa5')
+        dolares5 = request.POST.get('dolares5')
+        fecha5 = request.POST.get('fecha5')
+
+        agencia6 = request.POST.get('agencia6')
+        programa6 = request.POST.get('programa6')
+        dolares6 = request.POST.get('dolares6')
+        fecha6 = request.POST.get('fecha6')
+
+        agencia7 = request.POST.get('agencia7')
+        programa7 = request.POST.get('programa7')
+        dolares7 = request.POST.get('dolares7')
+        fecha7 = request.POST.get('fecha7')
+
+        agencia8 = request.POST.get('agencia8')
+        programa8 = request.POST.get('programa8')
+        dolares8 = request.POST.get('dolares8')
+        fecha8 = request.POST.get('fecha8')
+
+        agencia9 = request.POST.get('agencia9')
+        programa9 = request.POST.get('programa9')
+        dolares9 = request.POST.get('dolares9')
+        fecha9 = request.POST.get('fecha9')
+
+        agencia10 = request.POST.get('agencia10')
+        programa10 = request.POST.get('programa10')
+        dolares10 = request.POST.get('dolares10')
+        fecha10 = request.POST.get('fecha10')
+
+        agencia11 = request.POST.get('agencia11')
+        programa11 = request.POST.get('programa11')
+        dolares11 = request.POST.get('dolares11')
+        fecha11 = request.POST.get('fecha11')
+
+        agencia12 = request.POST.get('agencia12')
+        programa12 = request.POST.get('programa12')
+        dolares12 = request.POST.get('dolares12')
+        fecha12 = request.POST.get('fecha12')
+
+        agencia13 = request.POST.get('agencia13')
+        programa13 = request.POST.get('programa13')
+        dolares13 = request.POST.get('dolares13')
+        fecha13 = request.POST.get('fecha13')
+
+        total1 = request.POST.get('total1')
+        cant1 = request.POST.get('cant1')
+        total2 = request.POST.get('total2')
+        cant2 = request.POST.get('cant2')
+        total3 = request.POST.get('total3')
+        cant3 = request.POST.get('cant3')
+        cant4 = request.POST.get('cant4')
+
+        prestamos = request.POST.get('prestamos')
+        cantidad = request.POST.get('cantidad')
+
+        inst1 = request.POST.get('inst1')
+        recibido1 = request.POST.get('recibido1')
+        date1 = request.POST.get('date1')
+
+        inst2 = request.POST.get('inst2')
+        recibido2 = request.POST.get('recibido2')
+        date2 = request.POST.get('date2')
+
+        inst3 = request.POST.get('inst3')
+        recibido3 = request.POST.get('recibido3')
+        date3 = request.POST.get('date3')
+
+        inst4 = request.POST.get('inst4')
+        recibido4 = request.POST.get('recibido4')
+        date4 = request.POST.get('date4')
+
+        inst5 = request.POST.get('inst5')
+        recibido5 = request.POST.get('recibido5')
+        date5 = request.POST.get('date5')
+
+        cantidad1 = request.POST.get('cantidad1')
+        pago1 = request.POST.get('pago1')
+
+        cantidad2 = request.POST.get('cantidad2')
+        pago2 = request.POST.get('pago2')
+
+        cantidad3 = request.POST.get('cantidad3')
+        pago3 = request.POST.get('pago3')
+
+        cantidad4 = request.POST.get('cantidad4')
+        pago4 = request.POST.get('pago4')
+
+        cantidad5 = request.POST.get('cantidad5')
+        pago5 = request.POST.get('pago5')
+
+        cantidad6 = request.POST.get('cantidad6')
+        pago6 = request.POST.get('pago6')
+
+        valor1 = request.POST.get('valor1')
+        valor2 = request.POST.get('valor2')
+        valor3 = request.POST.get('valor3')
+
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-544-2.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+
+            if not file_exists:
+                writer.writerow(['agencia', 'prep','titulo','telefono','fecha','agencia1','programa1','dolares1','fecha1','agencia2','programa2','dolares2','fecha2',
+                                 'agencia3','programa3','dolares3','fecha3','agencia4','programa4','dolares4','fecha4','agencia5','programa5','dolares5','fecha5',
+                                 'agencia6','programa6','dolares6','fecha6','agencia7','programa7','dolares7','fecha7','agencia8','programa8','dolares8','fecha8',
+                                 'agencia9','programa9','dolares9','fecha9','agencia10','programa10','dolares10','fecha10','agencia11','programa11','dolares11','fecha11',
+                                 'agencia12','programa12','dolares12','fecha12','agencia13','programa13','dolares13','fecha13',
+                                 'total1','cant1','total2','cant2','total3','cant3','cant4',
+                                 'prestamos','cantidad',
+                                 'inst1','recibido1','date1','inst2','recibido2','date2','inst3','recibido3','date3','inst4','recibido4','date4','inst5','recibido5','date5',
+                                 'cantidad1','pago1','cantidad2','pago2','cantidad3','pago3','cantidad4','pago4','cantidad5','pago5','cantidad6','pago6',
+                                 'valor1','valor2','valor3'])
+
+            writer.writerow([agencia, prep, titulo, telefono, fecha, agencia1, programa1, dolares1, fecha1, agencia2, programa2, dolares2, fecha2, 
+                             agencia3, programa3, dolares3, fecha3, agencia4, programa4, dolares4, fecha4, agencia5, programa5, dolares5, fecha5, 
+                             agencia6, programa6, dolares6, fecha6, agencia7, programa7, dolares7, fecha7, agencia8, programa8, dolares8, fecha8, 
+                             agencia9, programa9, dolares9, fecha9, agencia10, programa10, dolares10, fecha10, agencia11, programa11, dolares11, fecha11, 
+                             agencia12, programa12, dolares12, fecha12, agencia13, programa13, dolares13, fecha13, 
+                             total1, cant1, total2, cant2, total3, cant3, cant4, 
+                             prestamos, cantidad, 
+                             inst1, recibido1, date1, inst2, recibido2, date2, inst3, recibido3, date3, inst4, recibido4, date4, inst5, recibido5, date5, 
+                             cantidad1, pago1, cantidad2, pago2, cantidad3, pago3, cantidad4, pago4, cantidad5, pago5, cantidad6, pago6, 
+                             valor1, valor2, valor3])
+        
+        return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-2.html")
