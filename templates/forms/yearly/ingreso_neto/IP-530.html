@@ -52,7 +52,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'IP-520' %}">
+      <form method="POST" action="{% url 'IP-530' %}">
         {% csrf_token %}
         <section>
           <div class="body_header">
@@ -170,14 +170,14 @@
 
             <div class="item">
                 <label>&emsp;&emsp;&emsp;a. De personas - from persons </label>
-                <input type="number" name="incomes_personal_loans_1" placeholder="$" required>
-                <input type="number" name="incomes_personal_loans_2" placeholder="$" required>
+                <input type="number" name="incomes_from_persons_1" placeholder="$" required>
+                <input type="number" name="incomes_from_persons_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>&emsp;&emsp;&emsp;b. De industrias y negocios - from industries and businesses</label>
-                <input type="number" name="incomes_mortage_loans_1" placeholder="$" required>
-                <input type="number" name="incomes_mortage_loans_2" placeholder="$" required>
+                <input type="number" name="incomes_industries_businesses_1" placeholder="$" required>
+                <input type="number" name="incomes_industries_businesses_2" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -194,20 +194,20 @@
 
             <div class="item">
               <label>&emsp;3. Comisiones - Comissions</label>
-              <input type="number" name="incomes_dividends_1" placeholder="$" required>
-              <input type="number" name="incomes_dividends_2" placeholder="$" required>
+              <input type="number" name="incomes_comissions_1" placeholder="$" required>
+              <input type="number" name="incomes_comissions_2" placeholder="$" required>
             </div>
 
             <div class="item">
               <label>&emsp;4. Ganancia o pérdida de capital - Capital gain or loss</label>
-              <input type="number" name="incomes_financing_charges_1" placeholder="$" required>
-              <input type="number" name="incomes_financing_charges_2" placeholder="$" required>
+              <input type="number" name="incomes_gain_loss_1" placeholder="$" required>
+              <input type="number" name="incomes_gain_loss_2" placeholder="$" required>
             </div>
 
             <div class="item">
               <label>&emsp;5. Otros ingresos de operación - Other operating income</label>
-              <input type="number" name="incomes_service_charges_1" placeholder="$" required>
-              <input type="number" name="incomes_service_charges_2" placeholder="$" required>
+              <input type="number" name="incomes_operating_1" placeholder="$" required>
+              <input type="number" name="incomes_operating_2" placeholder="$" required>
             </div>
 
             <!-- SECTION B -->
@@ -242,26 +242,26 @@
 
             <div class="item">
                 <label>5. Donativos - Donations</label>
-                <input type="number" name="expenses_bad_debts_1" placeholder="$" required>
-                <input type="number" name="expenses_bad_debts_2" placeholder="$" required>
+                <input type="number" name="expenses_donations_1" placeholder="$" required>
+                <input type="number" name="expenses_donations_2" placeholder="$" required>
             </div>
 
             <div class="item">
               <label>6. Impuesto sobre la venta y uso - Sales and use tax</label>
-              <input type="number" name="expenses_donations_1" placeholder="$" required>
-              <input type="number" name="expenses_donations_2" placeholder="$" required>
+              <input type="number" name="expenses_sales_tax_1" placeholder="$" required>
+              <input type="number" name="expenses_sales_tax_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>&emsp;&emsp;&emsp;a. Por Compra de maquinaria y equipo - On purchases of machinery and equipment</label>
-                <input type="number" name="interests_to_individuals_1" placeholder="$" required>
-                <input type="number" name="interests_to_individuals_2" placeholder="$" required>
+                <input type="number" name="expenses_machinary_equipment_1" placeholder="$" required>
+                <input type="number" name="expenses_machinary_equipment_2" placeholder="$" required>
               </div>
   
               <div class="item">
                 <label>&emsp;&emsp;&emsp;b. Por otras compras - On other purchases</label>
-                <input type="number" name="interests_to_corporations_1" placeholder="$" required>
-                <input type="number" name="interests_to_corporations_2" placeholder="$" required>
+                <input type="number" name="expenses_other_purchases_1" placeholder="$" required>
+                <input type="number" name="expenses_other_purchases_2" placeholder="$" required>
               </div>
 
             <div class="item">
@@ -308,8 +308,8 @@
           <div class="section">
             <div id="title" class="item">
               <label><h2>D. Impuesto Sobre ventas y uso retenido - Sales and use tax withheld</h2></label>
-              <input class="title-inputs" id="title-inputs" type="number" name="dividends_paid_1" placeholder="$" required>
-              <input id="title-inputs" type="number" name="dividends_paid_2" placeholder="$" required>
+              <input class="title-inputs" id="title-inputs" type="number" name="sales_tax_withheld_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="sales_tax_withheld_2" placeholder="$" required>
             </div>
     
         <div class="custom-line"></div>
