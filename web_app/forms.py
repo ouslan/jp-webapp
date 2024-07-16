@@ -2742,7 +2742,7 @@ class IP_530(forms.Form):
     rank = forms.CharField(label='Rank', max_length=100)
 
 
-    class JP_536_2(forms.Form):
+    class IP_540(forms.Form):
         company_name = forms.CharField(label='Nombre compañía / Company Name', max_length=100)
         address = forms.CharField(label='Dirección / Address', max_length=200)
         email = forms.EmailField(label='Correo electrónico / Email')
