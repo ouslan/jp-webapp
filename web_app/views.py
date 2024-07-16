@@ -4445,6 +4445,3 @@ def IP_540(request):
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-540.html")
-
-def IP_540P(request):
-    return render(request, "forms/yearly/ingreso_neto/IP-540P.html")
