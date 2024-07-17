@@ -52,7 +52,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'IP-540' %}">
+      <form method="POST" action="{% url 'IP-540P' %}">
         {% csrf_token %}
         <section>
           <div class="body_header">
@@ -197,50 +197,50 @@
 
             <div class="item">
               <label>&emsp;1. Comisiones recibidas - Commissions received</label>
-              <input type="number" name="incomes_services_rendered_1" placeholder="$" required>
-              <input type="number" name="incomes_services_rendered_2" placeholder="$" required>
+              <input type="number" name="incomes_commissions_received_1" placeholder="$" required>
+              <input type="number" name="incomes_commissions_received_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>&emsp;&emsp;&emsp;a. Por pasajes aéreos - From air fare</label>
-                <input type="number" name="incomes_from_persons_1" placeholder="$" required>
-                <input type="number" name="incomes_from_persons_2" placeholder="$" required>
+                <input type="number" name="incomes_from_air_fare_1" placeholder="$" required>
+                <input type="number" name="incomes_from_air_fare_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>&emsp;&emsp;&emsp;b. Por pasajes marítimos - From maritime</label>
-                <input type="number" name="incomes_from_industries_and_businesses_1" placeholder="$" required>
-                <input type="number" name="incomes_from_industries_and_businesses_2" placeholder="$" required>
+                <input type="number" name="incomes_from_maritime_1" placeholder="$" required>
+                <input type="number" name="incomes_from_maritime_2" placeholder="$" required>
             </div>
 
             <div class="item">
               <label>&emsp;2. Renta de terreno y edificio - Rent of land and building</label>
-              <input type="number" name="incomes_sale_merchandise_1" placeholder="$" required>
-              <input type="number" name="incomes_sale_merchandise_2" placeholder="$" required>
+              <input type="number" name="incomes_rent_1" placeholder="$" required>
+              <input type="number" name="incomes_rent_2" placeholder="$" required>
             </div>
 
             <div class="item">
               <label>&emsp;3. Intereses* - Interests*</label>
-              <input type="number" name="incomes_rent_machinery_and_equipment_1" placeholder="$" required>
-              <input type="number" name="incomes_rent_machinery_and_equipment_2" placeholder="$" required>
-            </div>
-
-            <div class="item">
-              <label>&emsp;4. Ganancia o pérdida de capital - Capital gain or loss</label>
-              <input type="number" name="incomes_rent_land_and_building_1" placeholder="$" required>
-              <input type="number" name="incomes_rent_land_and_building_2" placeholder="$" required>
-            </div>
-
-            <div class="item">
-              <label>&emsp;5. Otros ingresos de operación - Other operating income</label>
               <input type="number" name="incomes_interests_1" placeholder="$" required>
               <input type="number" name="incomes_interests_2" placeholder="$" required>
             </div>
 
             <div class="item">
+              <label>&emsp;4. Ganancia o pérdida de capital - Capital gain or loss</label>
+              <input type="number" name="incomes_capital_gain_loss_1" placeholder="$" required>
+              <input type="number" name="incomes_capital_gain_loss_2" placeholder="$" required>
+            </div>
+
+            <div class="item">
+              <label>&emsp;5. Otros ingresos de operación - Other operating income</label>
+              <input type="number" name="incomes_other_operating_1" placeholder="$" required>
+              <input type="number" name="incomes_other_operating_2" placeholder="$" required>
+            </div>
+
+            <div class="item">
               <label>&emsp;6. Total de ingresos - Total income</label>
-              <input type="number" name="incomes_capital_gain_or_loss_1" placeholder="$" required>
-              <input type="number" name="incomes_capital_gain_or_loss_2" placeholder="$" required>
+              <input type="number" name="total_incomes_1" placeholder="$" required>
+              <input type="number" name="total_incomes_2" placeholder="$" required>
             </div>
 
             <!-- SECTION B -->
@@ -276,8 +276,8 @@
 
             <div class="item">
                 <label>5. Donativos - Donations</label>
-                <input type="number" name="expenses_bad_debts_1" placeholder="$" required>
-                <input type="number" name="expenses_bad_debts_2" placeholder="$" required>
+                <input type="number" name="expenses_donations_1" placeholder="$" required>
+                <input type="number" name="expenses_donations_2" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -307,14 +307,14 @@
 
             <div class="item">
                 <label>8. Otros gastos de operación - Other operating expenses</label>
-                <input type="number" name="expenses_other_donations_1" placeholder="$" required>
-                <input type="number" name="expenses_other_donations_2" placeholder="$" required>
+                <input type="number" name="expenses_other_operating_1" placeholder="$" required>
+                <input type="number" name="expenses_other_operating_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>9. Total de gastos - Total expenses</label>
-                <input type="number" name="expenses_other_donations_1" placeholder="$" required>
-                <input type="number" name="expenses_other_donations_2" placeholder="$" required>
+                <input type="number" name="total_expenses_1" placeholder="$" required>
+                <input type="number" name="total_expenses_2" placeholder="$" required>
             </div>
 
           <!-- SECTION C -->
