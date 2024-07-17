@@ -52,7 +52,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'IP-210' %}">
+      <form method="POST" action="{% url 'IP-610' %}">
         {% csrf_token %}
         <section>
           <div class="body_header">
@@ -201,8 +201,8 @@
 
             <div class="item">
               <label>2. Ventas - Sales</label>
-              <input type="number" name="incomes_interests_1" placeholder="$" required>
-              <input type="number" name="incomes_interests_2" placeholder="$" required>
+              <input type="number" name="incomes_sales_1" placeholder="$" required>
+              <input type="number" name="incomes_sales_2" placeholder="$" required>
           </div>
 
             <div class="item">
@@ -213,8 +213,8 @@
 
             <div class="item">
                 <label>4. Intereses* - Interest*</label>
-                <input type="number" name="incomes_interest_1" placeholder="$" required>
-                <input type="number" name="incomes_interest_2" placeholder="$" required>
+                <input type="number" name="incomes_interests_1" placeholder="$" required>
+                <input type="number" name="incomes_interests_2" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -258,8 +258,8 @@
 
             <div class="item">
                 <label>4. Depreciación - Depreciation </label>
-                <input type="number" name="depreciation_1" placeholder="$" required>
-                <input type="number" name="depreciation_2" placeholder="$" required>
+                <input type="number" name="expenses_depreciation_1" placeholder="$" required>
+                <input type="number" name="expenses_depreciation_2" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -282,8 +282,8 @@
 
             <div class="item">
               <label>&emsp;a. Por Compra de maquinaria y equipo - On purchases of machinery and equipment</label>
-              <input type="number" name="machinery_1" placeholder="$" required>
-              <input type="number" name="machinery_2" placeholder="$" required>
+              <input type="number" name="expenses_machinery_1" placeholder="$" required>
+              <input type="number" name="expenses_machinery_2" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -300,8 +300,8 @@
 
             <div class="item">
                 <label>9. Otros gastos de operación - Other operating expenses</label>
-                <input type="number" name="expenses_other_expenses_1" placeholder="$" required>
-                <input type="number" name="expenses_other_expenses_2" placeholder="$" required>
+                <input type="number" name="expenses_other_1" placeholder="$" required>
+                <input type="number" name="expenses_other_2" placeholder="$" required>
             </div>
           </div>
 
