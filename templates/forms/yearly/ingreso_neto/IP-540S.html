@@ -52,7 +52,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'IP-540' %}">
+      <form method="POST" action="{% url 'IP-540S' %}">
         {% csrf_token %}
         <section>
           <div class="body_header">
@@ -188,28 +188,28 @@
 
             <div class="item">
                 <label>1. Periódicos - Newspapers</label>
-                <input type="number" name="expenses_interests_1" placeholder="$" required>
-                <input type="number" name="expenses_interests_2" placeholder="$" required>
+                <input type="number" name="expenses_newspapers_1" placeholder="$" required>
+                <input type="number" name="expenses_newspapers_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>2. Radio y televisión - Radio and television</label>
-                <input type="number" name="expenses_interests_1" placeholder="$" required>
-                <input type="number" name="expenses_interests_2" placeholder="$" required>
+                <input type="number" name="expenses_radio_1" placeholder="$" required>
+                <input type="number" name="expenses_radio_2" placeholder="$" required>
             </div>
 
             <div class="item">
               <label>3. Otros - Other</label>
-              <input type="number" name="expenses_rent_1" placeholder="$" required>
-              <input type="number" name="expenses_rent_2" placeholder="$" required>
+              <input type="number" name="expenses_other_1" placeholder="$" required>
+              <input type="number" name="expenses_other_2" placeholder="$" required>
             </div>
 
           <!-- SECTION C -->
           <div class="section">
             <div id="title" class="item">
               <label><h2>C. Beneficio bruto o comisión (A - B) - Gross profit or comission (A - B)</h2></label>
-              <input class="title-inputs" id="title-inputs" type="number" name="net_profit_1" placeholder="$" required>
-              <input id="title-inputs" type="number" name="net_profit_2" placeholder="$" required>
+              <input class="title-inputs" id="title-inputs" type="number" name="gross_profit_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="gross_profit_2" placeholder="$" required>
             </div>
           <div>
 
@@ -217,32 +217,32 @@
           <div class="section">
             <div id="title" class="item">
               <label><h2>D. Otros ingresos - Other income</h2></label>
-              <input class="title-inputs" id="title-inputs" type="number" name="sales_tax_withheld_1" placeholder="$" required>
-              <input id="title-inputs" type="number" name="sales_tax_withheld_2" placeholder="$" required>
+              <input class="title-inputs" id="title-inputs" type="number" name="gross_other_income_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="gross_other_income_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>1. Intereses* - Interests*</label>
-                <input type="number" name="expenses_salaries_wages_bonus_1" placeholder="$" required>
-                <input type="number" name="expenses_salaries_wages_bonus_2" placeholder="$" required>
+                <input type="number" name="gross_interests_1" placeholder="$" required>
+                <input type="number" name="gross_interests_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>2. Renta de terreno y edificio - Rent of land and building</label>
-                <input type="number" name="expenses_interests_1" placeholder="$" required>
-                <input type="number" name="expenses_interests_2" placeholder="$" required>
+                <input type="number" name="gross_rent_land_1" placeholder="$" required>
+                <input type="number" name="gross_rent_land_2" placeholder="$" required>
             </div>
 
             <div class="item">
               <label>3. Ganancia o pérdida de capital - Capital gain or loss</label>
-              <input type="number" name="expenses_rent_1" placeholder="$" required>
-              <input type="number" name="expenses_rent_2" placeholder="$" required>
+              <input type="number" name="gross_capital_gain_1" placeholder="$" required>
+              <input type="number" name="gross_capital_gain_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>4. Otros - Other</label>
-                <input type="number" name="expenses_depreciation_1" placeholder="$" required>
-                <input type="number" name="expenses_depreciation_2" placeholder="$" required>
+                <input type="number" name="gross_other_1" placeholder="$" required>
+                <input type="number" name="gross_other_2" placeholder="$" required>
             </div>
           </div>
 
@@ -250,8 +250,8 @@
           <div class="section">
             <div id="title" class="item">
               <label><h2>E. Total de ingresos (C + D) - Total income (C + D)</h2></label>
-              <input class="title-inputs" id="title-inputs" type="number" name="sales_tax_withheld_1" placeholder="$" required>
-              <input id="title-inputs" type="number" name="sales_tax_withheld_2" placeholder="$" required>
+              <input class="title-inputs" id="title-inputs" type="number" name="income_total_income_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="income_total_income_2" placeholder="$" required>
             </div>
           </div>
 
@@ -259,8 +259,8 @@
           <div class="section">
             <div id="title" class="item">
               <label><h2>F. Total de gastos - Total expenses</h2></label>
-              <input class="title-inputs" id="title-inputs" type="number" name="sales_tax_withheld_1" placeholder="$" required>
-              <input id="title-inputs" type="number" name="sales_tax_withheld_2" placeholder="$" required>
+              <input class="title-inputs" id="title-inputs" type="number" name="income_total_expenses_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="income_total_expenses_2" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -291,14 +291,14 @@
 
             <div class="item">
                 <label>5. Otras contribuciones - Other taxes</label>
-                <input type="number" name="expenses_other_donations_1" placeholder="$" required>
-                <input type="number" name="expenses_other_donations_2" placeholder="$" required>
+                <input type="number" name="expenses_other_taxes_1" placeholder="$" required>
+                <input type="number" name="expenses_other_taxes_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>6. Donativos - Donations</label>
-                <input type="number" name="expenses_bad_debts_1" placeholder="$" required>
-                <input type="number" name="expenses_bad_debts_2" placeholder="$" required>
+                <input type="number" name="expenses_donations_1" placeholder="$" required>
+                <input type="number" name="expenses_donations_2" placeholder="$" required>
             </div>
 
             <div class="item">
@@ -328,8 +328,8 @@
 
             <div class="item">
                 <label>9. Otros gastos de operación - Other operating expenses</label>
-                <input type="number" name="expenses_other_donations_1" placeholder="$" required>
-                <input type="number" name="expenses_other_donations_2" placeholder="$" required>
+                <input type="number" name="expenses_other_operation_1" placeholder="$" required>
+                <input type="number" name="expenses_other_operation_2" placeholder="$" required>
             </div>
           </div>
 
@@ -337,8 +337,8 @@
           <div class="section">
             <div id="title" class="item">
               <label><h2>G. Ganancia o pérdida neta (+ ó -) - Net profit or loss (+ or -)</h2></label>
-              <input class="title-inputs" id="title-inputs" type="number" name="sales_tax_withheld_1" placeholder="$" required>
-              <input id="title-inputs" type="number" name="sales_tax_withheld_2" placeholder="$" required>
+              <input class="title-inputs" id="title-inputs" type="number" name="net_profit_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="net_profit_2" placeholder="$" required>
             </div>
 
             <div class="item">
