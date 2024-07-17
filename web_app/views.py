@@ -4684,9 +4684,6 @@ def JP_544_2(request):
         cantidad1 = request.POST.get('cantidad1')
         pago1 = request.POST.get('pago1')
 
-        cantidad2 = request.POST.get('cantidad2')
-        pago2 = request.POST.get('pago2')
-
         cantidad3 = request.POST.get('cantidad3')
         pago3 = request.POST.get('pago3')
 
@@ -4718,7 +4715,7 @@ def JP_544_2(request):
                                  'total1','cant1','total2','cant2','total3','cant3','cant4',
                                  'prestamos','cantidad',
                                  'inst1','recibido1','date1','inst2','recibido2','date2','inst3','recibido3','date3','inst4','recibido4','date4','inst5','recibido5','date5',
-                                 'cantidad1','pago1','cantidad2','pago2','cantidad3','pago3','cantidad4','pago4','cantidad5','pago5','cantidad6','pago6',
+                                 'cantidad1','pago1','cantidad3','pago3','cantidad4','pago4','cantidad5','pago5','cantidad6','pago6',
                                  'valor1','valor2','valor3'])
 
             writer.writerow([agencia, prep, titulo, telefono, fecha, agencia1, programa1, dolares1, fecha1, agencia2, programa2, dolares2, fecha2, 
@@ -4729,7 +4726,7 @@ def JP_544_2(request):
                              total1, cant1, total2, cant2, total3, cant3, cant4, 
                              prestamos, cantidad, 
                              inst1, recibido1, date1, inst2, recibido2, date2, inst3, recibido3, date3, inst4, recibido4, date4, inst5, recibido5, date5, 
-                             cantidad1, pago1, cantidad2, pago2, cantidad3, pago3, cantidad4, pago4, cantidad5, pago5, cantidad6, pago6, 
+                             cantidad1, pago1, cantidad3, pago3, cantidad4, pago4, cantidad5, pago5, cantidad6, pago6, 
                              valor1, valor2, valor3])
         
         return render(request, "forms/succesfull.html")
