@@ -4448,3 +4448,37 @@ def IP_540(request):
 
 def IP_540P(request):
     return render(request, "forms/yearly/ingreso_neto/IP-540P.html")
+
+def IP_620(request):
+    if request.method == "POST":
+        # Retrieve form data
+        company_name = request.POST.get('company_name')
+        address = request.POST.get('address')
+        email = request.POST.get('email')
+        liaison_officer = request.POST.get('liaison_officer')
+        ssn = request.POST.get('ssn')
+        tel = request.POST.get('tel')
+        fax = request.POST.get('fax')
+        
+        
+        
+        name = request.POST.get('name')
+        rank = request.POST.get('rank')
+        
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP-620.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+
+                                ])
+            
+            writer.writerow([
+
+                            ])  
+
+        return render(request, "forms/succesfull.html")
+    return render(request, "forms/yearly/ingreso_neto/IP-620.html")
