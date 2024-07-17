@@ -4575,3 +4575,28 @@ def IP_540J(request):
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-540J.html")
+
+
+
+
+def IP_710(request):
+    if request.method == "POST":
+        # Retrieve form data
+        
+        csv_file_path = 'data/cuestionarios/ingreso_neto/IP-710.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                
+                                ])
+            
+            writer.writerow([
+                            
+                            ])  
+
+        return render(request, "forms/succesfull.html")
+    return render(request, "forms/yearly/ingreso_neto/IP-710.html")
