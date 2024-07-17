@@ -5357,3 +5357,6 @@ def IP_540S(request):
         return render(request, "forms/succesfull.html")
 
     return render(request, "forms/yearly/ingreso_neto/IP-540S.html")
+
+def IP_540v(request):
+    return render(request, "forms/yearly/ingreso_neto/IP-540v.html")
