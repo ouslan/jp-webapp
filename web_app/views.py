@@ -4448,3 +4448,7 @@ def IP_540(request):
 
 def IP_540P(request):
     return render(request, "forms/yearly/ingreso_neto/IP-540P.html")
+
+
+def IP_610(request):
+    return render(request, "forms/yearly/ingreso_neto/IP-610.html")
