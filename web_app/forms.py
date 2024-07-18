@@ -6253,6 +6253,12 @@ class IP_710(forms.Form):
     end_year = forms.CharField(
         label="Año de cierre de operaciones / Year of end of operations", max_length=100
     )
+    total_income_1 = forms.CharField(
+        label="A. Ingresos totales - Total income", max_length=100
+    )
+    total_income_2 = forms.CharField(
+        label="A. Ingresos totales - Total income", max_length=100
+    )
     incomes_service_1 = forms.CharField(
         label="1. Ingresos por servicios - Incomes from services", max_length=100
     )
@@ -6310,6 +6316,12 @@ class IP_710(forms.Form):
     )
     income_other_operating_2 = forms.CharField(
         label="9. Otros ingresos operacionales - Other operating income", max_length=100
+    )
+    total_expenses_1 = forms.CharField(
+        label="B. Total de gastos - Total expenses", max_length=100
+    )
+    total_expenses_2 = forms.CharField(
+        label="B. Total de gastos - Total expenses", max_length=100
     )
     expenses_salaries_1 = forms.CharField(
         label="1. Salarios - Salaries", max_length=100
