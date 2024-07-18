@@ -4830,6 +4830,10 @@ def IP_310(request):
         goods_manufactured_2 = request.POST.get("goods_manufactured_2")
         exports_val_1 = request.POST.get("exports_val_1")
         exports_val_2 = request.POST.get("exports_val_2")
+        goods_manufactured_1_1 = request.POST.get("goods_manufactured_1_1")
+        goods_manufactured_2_2 = request.POST.get("goods_manufactured_2_2")
+        exports_val_1_1 = request.POST.get("exports_val_1_1")
+        exports_val_2_2 = request.POST.get("exports_val_2_2")
         manufacturing_cost_1 = request.POST.get("manufacturing_cost_1")
         manufacturing_cost_2 = request.POST.get("manufacturing_cost_2")
         inventories_begginning_1 = request.POST.get("inventories_begginning_1")
@@ -4938,6 +4942,10 @@ def IP_310(request):
                         "goods_manufactured_2",
                         "exports_val_1",
                         "exports_val_2",
+                        "goods_manufactured_1_1",
+                        "goods_manufactured_2_2",
+                        "exports_val_1_1",
+                        "exports_val_2_2",
                         "manufacturing_cost_1",
                         "manufacturing_cost_2",
                         "inventories_begginning_1",
@@ -5039,6 +5047,10 @@ def IP_310(request):
                     goods_manufactured_2,
                     exports_val_1,
                     exports_val_2,
+                    goods_manufactured_1_1,
+                    goods_manufactured_2_2,
+                    exports_val_1_1,
+                    exports_val_2_2,
                     manufacturing_cost_1,
                     manufacturing_cost_2,
                     inventories_begginning_1,
