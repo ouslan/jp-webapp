@@ -52,7 +52,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'IP-540' %}">
+      <form method="POST" action="{% url 'IP-540v' %}">
         {% csrf_token %}
         <section>
           <div class="body_header">
@@ -191,14 +191,14 @@
   
               <div class="item">
                   <label>&emsp;&emsp;&emsp;a. A negocios y otros - To business and other</label>
-                  <input type="number" name="incomes_from_persons_1" placeholder="$" required>
-                  <input type="number" name="incomes_from_persons_2" placeholder="$" required>
+                  <input type="number" name="incomes_to_business_1" placeholder="$" required>
+                  <input type="number" name="incomes_to_business_2" placeholder="$" required>
               </div>
   
               <div class="item">
                   <label>&emsp;&emsp;&emsp;b. Amascotas de personas - To personal pets</label>
-                  <input type="number" name="incomes_from_industries_and_businesses_1" placeholder="$" required>
-                  <input type="number" name="incomes_from_industries_and_businesses_2" placeholder="$" required>
+                  <input type="number" name="incomes_to_personal_pets_1" placeholder="$" required>
+                  <input type="number" name="incomes_to_personal_pets_2" placeholder="$" required>
               </div>
   
               <div class="item">
@@ -209,8 +209,8 @@
   
               <div class="item">
                 <label>&emsp;3. Renta de terreno y edificio - Rent of land and building</label>
-                <input type="number" name="incomes_rent_machinery_and_equipment_1" placeholder="$" required>
-                <input type="number" name="incomes_rent_machinery_and_equipment_2" placeholder="$" required>
+                <input type="number" name="incomes_rent_of_land_and_building_1" placeholder="$" required>
+                <input type="number" name="incomes_rent_of_land_and_building_2" placeholder="$" required>
               </div>
   
               <div class="item">
@@ -233,13 +233,15 @@
 
               <div class="item">
                 <label>&emsp;7. Total de ingresos - Total income </label>
-                <input type="number" name="incomes_rent_land_and_building_1" placeholder="$" required>
-                <input type="number" name="incomes_rent_land_and_building_2" placeholder="$" required>
+                <input type="number" name="incomes_total_1" placeholder="$" required>
+                <input type="number" name="incomes_total_2" placeholder="$" required>
               </div>
   
               <!-- SECTION B -->
               <div id="title" class="item">
                 <label><h2>B. Total de gastos - Total expenses</h2></label>
+                <input id="title_input" type="number" name="total_expenses_1" placeholder="$" required>
+                <input id="title_input_2"type="number" name="total_expenses_2" placeholder="$" required>
               </div>
   
               <div class="item">
@@ -307,14 +309,14 @@
 
               <div class="item">
                   <label>9. Otros gastos de operación - Other operating expenses</label>
-                  <input type="number" name="expenses_other_donations_1" placeholder="$" required>
-                  <input type="number" name="expenses_other_donations_2" placeholder="$" required>
+                  <input type="number" name="expenses_other_operating_1" placeholder="$" required>
+                  <input type="number" name="expenses_other_operating_2" placeholder="$" required>
               </div>
   
               <div class="item">
                 <label>10. Total de gastos - Total expenses</label>
-                <input type="number" name="expenses_licenses_1" placeholder="$" required>
-                <input type="number" name="expenses_licenses_2" placeholder="$" required>
+                <input type="number" name="expenses_total_expenses_1" placeholder="$" required>
+                <input type="number" name="expenses_total_expenses_2" placeholder="$" required>
               </div>
   
             <!-- SECTION C -->
