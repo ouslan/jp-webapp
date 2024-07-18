@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
 
-    <title>IP-540P Organización de viajes y de servicios de reservación</title>
+    <title>IP-540a Publicidad y servicios relacionados</title>
 
     <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
@@ -23,7 +23,7 @@
       <table>
         <tr>
           <td id="header_left">
-            IP-540P<br>
+            IP-540a<br>
             Gobierno de Puerto Rico<br>
             OFICINA DEL GOBERNADOR<br>
             Junta de Planificación<br>
@@ -33,8 +33,8 @@
           </td>
           <td id="header_center">
             <img src="{% static 'JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
-            ORGANIZACIÓN DE VIAJES Y LOS SERVICIOS DE RESERVA<br>
-            TRAVEL, ARRANGEMENT AND RESERVATION SERVICES<br>
+            PUBLICIDAD Y SERVICIOS RELACIONADOS<br>
+            ADVERTISING AND RELATED SERVICESs<br>
           </td>
           <td id="header_right">
             Goverment of Puerto Rico<br>
@@ -52,7 +52,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'IP-540P' %}">
+      <form method="POST" action="{% url 'IP-540a' %}">
         {% csrf_token %}
         <section>
           <div class="body_header">
@@ -124,31 +124,13 @@
 
           <!-- DIV 6 -->
           <div class="six_div">
-            <strong>6. ¿Opera sucursuales esta firma? - Do you have branch operations?</strong>
-            <input type="radio" id="radio-3" name="branches" value="Si">Si
-            <input type="radio" id="radio-3" name="branches" value="No">No
-            <br>
-            <br>
-            &emsp;En caso afirmativo indique si:
-            <br>
-            <input type="radio" id="radio-1" name="branches_yes" value="todas las sucursales/all branches">La información suminstrada cubre todas las sucursales / The information provided includes all branches
-            <br>
-            <input type="radio" id="radio-1" name="branches_yes" value="este establecimiento/this branch only">La información suministrada cubre este establecimiento / The information provided includes this branch only
+            <strong>6. Fecha de cierre de sus libros - Your accounting period closing date:</strong>
+            <input type="month" id="date" name="closing_date" required/>
           </div>
 
           <!-- DIV 7 -->
           <div class="seven_div">
-            <strong>7. Fecha de cierre de sus libros - Your accounting period closing date:</strong>
-            <input type="month" id="date" name="closing_date" required/>
-            <br>
-            <br>
-            &emsp;NOTA: La información solicitada se refiere a las operaciones en Puerto Rico solamente y preferiblemente un estado consolidado de todas las sucursales. - 
-            <br> &emsp;&emsp;&emsp;&emsp;The information requested refers to the Puerto Rico operations only and preferably a consolidated statement of all branches.  
-          </div>
-
-          <!-- DIV 7 -->
-          <div class="nine_div">
-            <strong>8. Favor de detallar la siguiente información / Please detail the following information:</strong>
+            <strong>7. Favor de detallar la siguiente información / Please detail the following information:</strong>
           </div>
         </section>
 
@@ -176,83 +158,116 @@
             <input type="number" id="year" name="end_year" min="1000" max="9999" placeholder="year" required></input>
         </section>
 
-        <section class="second_section">
+        <section id="header_title" class="second_section">
           <!-- SECTION A -->
           <div class="section">
             <div id="title" class="item">
-              <label><h2>A. Ingresos - Income</h2></label>
+              <label><h2>A. Facturación o ventas  - Billing or sales</h2></label>
+              <input id="title_input" type="number" name="billing_1" placeholder="$" required>
+              <input id="title_input_2" type="number" name="billing_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>&emsp;&emsp;&emsp;1. De personas - From persons</label>
+                <label>1. De personas - From persons</label>
                 <input type="number" name="incomes_from_persons_1" placeholder="$" required>
                 <input type="number" name="incomes_from_persons_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>&emsp;&emsp;&emsp;2. De industrias y negocios - From industries and businesses</label>
+                <label>2. De industrias y negocios - From industries and businesses</label>
                 <input type="number" name="incomes_from_industries_and_businesses_1" placeholder="$" required>
                 <input type="number" name="incomes_from_industries_and_businesses_2" placeholder="$" required>
             </div>
 
-            <div class="item">
-              <label>&emsp;1. Comisiones recibidas - Commissions received</label>
-              <input type="number" name="incomes_commissions_received_1" placeholder="$" required>
-              <input type="number" name="incomes_commissions_received_2" placeholder="$" required>
-            </div>
-
-            <div class="item">
-                <label>&emsp;&emsp;&emsp;a. Por pasajes aéreos - From air fare</label>
-                <input type="number" name="incomes_from_air_fare_1" placeholder="$" required>
-                <input type="number" name="incomes_from_air_fare_2" placeholder="$" required>
-            </div>
-
-            <div class="item">
-                <label>&emsp;&emsp;&emsp;b. Por pasajes marítimos - From maritime</label>
-                <input type="number" name="incomes_from_maritime_1" placeholder="$" required>
-                <input type="number" name="incomes_from_maritime_2" placeholder="$" required>
-            </div>
-
-            <div class="item">
-              <label>&emsp;2. Renta de terreno y edificio - Rent of land and building</label>
-              <input type="number" name="incomes_rent_1" placeholder="$" required>
-              <input type="number" name="incomes_rent_2" placeholder="$" required>
-            </div>
-
-            <div class="item">
-              <label>&emsp;3. Intereses* - Interests*</label>
-              <input type="number" name="incomes_interests_1" placeholder="$" required>
-              <input type="number" name="incomes_interests_2" placeholder="$" required>
-            </div>
-
-            <div class="item">
-              <label>&emsp;4. Ganancia o pérdida de capital - Capital gain or loss</label>
-              <input type="number" name="incomes_capital_gain_loss_1" placeholder="$" required>
-              <input type="number" name="incomes_capital_gain_loss_2" placeholder="$" required>
-            </div>
-
-            <div class="item">
-              <label>&emsp;5. Otros ingresos de operación - Other operating income</label>
-              <input type="number" name="incomes_other_operating_1" placeholder="$" required>
-              <input type="number" name="incomes_other_operating_2" placeholder="$" required>
-            </div>
-
-            <div class="item">
-              <label>&emsp;6. Total de ingresos - Total income</label>
-              <input type="number" name="total_incomes_1" placeholder="$" required>
-              <input type="number" name="total_incomes_2" placeholder="$" required>
-            </div>
-
             <!-- SECTION B -->
             <div id="title" class="item">
-              <label><h2>B. Gastos - Expenses</h2></label>
+              <label><h2>B. Gastos de facturación - Billing expenses</h2></label>
+              <input id="title_input" type="number" name="billing_expenses_1" placeholder="$" required>
+              <input id="title_input_2" type="number" name="billing_expenses_2" placeholder="$" required>
+            </div>
+
+            <div class="item">
+                <label>1. Periódicos - Newspapers</label>
+                <input type="number" name="expenses_newspapers_1" placeholder="$" required>
+                <input type="number" name="expenses_newspapers_2" placeholder="$" required>
+            </div>
+
+            <div class="item">
+                <label>2. Radio y televisión - Radio and television</label>
+                <input type="number" name="expenses_radio_television_1" placeholder="$" required>
+                <input type="number" name="expenses_radio_television_2" placeholder="$" required>
+            </div>
+
+            <div class="item">
+              <label>3. Otros - Other</label>
+              <input type="number" name="expenses_others_1" placeholder="$" required>
+              <input type="number" name="expenses_others_2" placeholder="$" required>
+            </div>
+
+          <!-- SECTION C -->
+          <div class="section">
+            <div id="title" class="item">
+              <label><h2>C. Beneficio bruto o comisión (A - B) - Gross profit or comission (A - B)</h2></label>
+              <input class="title-inputs" id="title-inputs" type="number" name="gross_profit_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="gross_profit_2" placeholder="$" required>
+            </div>
+          <div>
+
+          <!-- SECTION D -->
+          <div class="section">
+            <div id="title" class="item">
+              <label><h2>D. Otros ingresos - Other income</h2></label>
+              <input class="title-inputs" id="title-inputs" type="number" name="other_incomes_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="other_incomes_2" placeholder="$" required>
+            </div>
+
+            <div class="item">
+                <label>1. Intereses* - Interests*</label>
+                <input type="number" name="other_interests_1" placeholder="$" required>
+                <input type="number" name="other_interests_2" placeholder="$" required>
+            </div>
+
+            <div class="item">
+                <label>2. Renta de terreno y edificio - Rent of land and building</label>
+                <input type="number" name="rent_of_land_1" placeholder="$" required>
+                <input type="number" name="rent_of_land_2" placeholder="$" required>
+            </div>
+
+            <div class="item">
+              <label>3. Ganancia o pérdida de capital - Capital gain or loss</label>
+              <input type="number" name="capital_1" placeholder="$" required>
+              <input type="number" name="capital_2" placeholder="$" required>
+            </div>
+
+            <div class="item">
+                <label>4. Otros - Other</label>
+                <input type="number" name="others_1" placeholder="$" required>
+                <input type="number" name="others_2" placeholder="$" required>
+            </div>
+          </div>
+
+          <!-- SECTION E -->
+          <div class="section">
+            <div id="title" class="item">
+              <label><h2>E. Total de ingresos (C + D) - Total income (C + D)</h2></label>
+              <input class="title-inputs" id="title-inputs" type="number" name="total_incomes_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="total_incomes_2" placeholder="$" required>
+            </div>
+          </div>
+
+          <!-- SECTION F -->
+          <div class="section">
+            <div id="title" class="item">
+              <label><h2>F. Total de gastos - Total expenses</h2></label>
+              <input class="title-inputs" id="title-inputs" type="number" name="total_expenses_1" placeholder="$" required>
+              <input id="title-inputs" type="number" name="total_expenses_2" placeholder="$" required>
             </div>
 
             <div class="item">
                 <label>1. Salario, jornales, bono de Navidad y comisiones - Salaries, wages,<br>
                   &emsp;Christmas bonus and comissions</label>
-                <input type="number" name="expenses_salaries_wages_bonus_1" placeholder="$" required>
-                <input type="number" name="expenses_salaries_wages_bonus_2" placeholder="$" required>
+                <input type="number" name="expenses_salaries_bonus_1" placeholder="$" required>
+                <input type="number" name="expenses_salaries_bonus_2" placeholder="$" required>
             </div>
             <br>
 
@@ -275,13 +290,19 @@
             </div>
 
             <div class="item">
-                <label>5. Donativos - Donations</label>
+                <label>5. Otras contribuciones - Other taxes</label>
+                <input type="number" name="expenses_other_donations_1" placeholder="$" required>
+                <input type="number" name="expenses_other_donations_2" placeholder="$" required>
+            </div>
+
+            <div class="item">
+                <label>6. Donativos - Donations</label>
                 <input type="number" name="expenses_donations_1" placeholder="$" required>
                 <input type="number" name="expenses_donations_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>6. Impuesto sobre la venta y uso - Sales and use tax</label>
+                <label>7. Impuesto sobre la venta y uso - Sales and use tax</label>
                 <input type="number" name="expenses_sales_taxes_1" placeholder="$" required>
                 <input type="number" name="expenses_sales_taxes_2" placeholder="$" required>
               </div>
@@ -300,51 +321,48 @@
               </div>
 
             <div class="item">
-                <label>7. Licencias y patentes - Licenses and patents</label>
+                <label>8. Licencias y patentes - Licenses and patents</label>
                 <input type="number" name="expenses_licenses_1" placeholder="$" required>
                 <input type="number" name="expenses_licenses_2" placeholder="$" required>
             </div>
 
             <div class="item">
-                <label>8. Otros gastos de operación - Other operating expenses</label>
-                <input type="number" name="expenses_other_operating_1" placeholder="$" required>
-                <input type="number" name="expenses_other_operating_2" placeholder="$" required>
+                <label>9. Otros gastos de operación - Other operating expenses</label>
+                <input type="number" name="expenses_other_operationg_1" placeholder="$" required>
+                <input type="number" name="expenses_other_operationg_2" placeholder="$" required>
             </div>
+          </div>
 
-            <div class="item">
-                <label>9. Total de gastos - Total expenses</label>
-                <input type="number" name="total_expenses_1" placeholder="$" required>
-                <input type="number" name="total_expenses_2" placeholder="$" required>
-            </div>
-
-          <!-- SECTION C -->
+          <!-- SECTION G -->
           <div class="section">
             <div id="title" class="item">
-              <label><h2>C. Ganancia o pérdida neta (+ ó -) - Net profit or loss (+ or -)</h2></label>
+              <label><h2>G. Ganancia o pérdida neta (+ ó -) - Net profit or loss (+ or -)</h2></label>
               <input class="title-inputs" id="title-inputs" type="number" name="net_profit_1" placeholder="$" required>
               <input id="title-inputs" type="number" name="net_profit_2" placeholder="$" required>
             </div>
 
             <div class="item">
-              <label>1. Contribución sobre ingresos - Income tax</label>
-              <input type="number" name="profit_income_tax_1" placeholder="$" required>
-              <input type="number" name="profit_income_tax_2" placeholder="$" required>
-            </div>
+                <label>1. Contribución sobre ingresos - Income tax</label>
+                <input type="number" name="profit_income_tax_1" placeholder="$" required>
+                <input type="number" name="profit_income_tax_2" placeholder="$" required>
+              </div>
+  
+              <div class="item">
+                <label>2. Ganacia después de contribución sobre ingresos - Profit after income tax</label>
+                <input type="number" name="profit_after_income_tax_1" placeholder="$" required>
+                <input type="number" name="profit_after_income_tax_2" placeholder="$" required>
+              </div>
+          </div>
 
-            <div class="item">
-              <label>2. Ganacia después de contribución sobre ingresos - Profit after income tax</label>
-              <input type="number" name="profit_after_income_tax_1" placeholder="$" required>
-              <input type="number" name="profit_after_income_tax_2" placeholder="$" required>
-            </div>
-          <div>
-
-          <!-- SECTION D -->
+          <!-- SECTION H -->
           <div class="section">
             <div id="title" class="item">
-              <label><h2>D. Impuesto sobre ventas y uso retenido - Sales and use tax withheld</h2></label>
+              <label><h2>H. Impuesto sobre ventas y uso retenido - Sales and use tax withheld</h2></label>
               <input class="title-inputs" id="title-inputs" type="number" name="sales_tax_withheld_1" placeholder="$" required>
               <input id="title-inputs" type="number" name="sales_tax_withheld_2" placeholder="$" required>
             </div>
+          </div>
+
     
         <div class="custom-line"></div>
         <div id="text_button">
