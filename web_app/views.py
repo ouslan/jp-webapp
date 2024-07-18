@@ -5108,62 +5108,62 @@ def IP_620(request):
 def JP_547(request):
     if request.method == "POST":
         # Retrieve form data
-        agency1 = request.POST.get('agency1')
-        agency2 = request.POST.get('agency2')
-        agency3 = request.POST.get('agency3')
+        agency_form = request.POST.get('agency_form')
+        agency_to = request.POST.get('agency_to')
+        
 
-        dollars1 = request.POST.get('dollars1')
-        dollars2 = request.POST.get('dollars2')
-        dollars3 = request.POST.get('dollars3')
-        dollars4 = request.POST.get('dollars4') 
-        dollars5 = request.POST.get('dollars5')
-        dollars6 = request.POST.get('dollars6')
-        dollars7 = request.POST.get('dollars7')
-        dollars8 = request.POST.get('dollars8')
-        dollars9 = request.POST.get('dollars9')
-        dollars10 = request.POST.get('dollars10')
-        dollars11 = request.POST.get('dollars11')
-        dollars12 = request.POST.get('dollars12')
-        dollars13 = request.POST.get('dollars13')
-        dollars14 = request.POST.get('dollars14')
-        dollars15 = request.POST.get('dollars15')
-        dollars16 = request.POST.get('dollars16')
-        dollars17 = request.POST.get('dollars17')
-        dollars18 = request.POST.get('dollars18')
-        dollars19 = request.POST.get('dollars19')
-        dollars20 = request.POST.get('dollars20')
-        dollars21 = request.POST.get('dollars21')
-        dollars22 = request.POST.get('dollars22')
-        dollars23 = request.POST.get('dollars23')
-        dollars24 = request.POST.get('dollars24')
-        dollars25 = request.POST.get('dollars25')
-        dollars26 = request.POST.get('dollars26')
-        dollars27 = request.POST.get('dollars27')
-        dollars28 = request.POST.get('dollars28')
-        dollars29 = request.POST.get('dollars29')
-        dollars30 = request.POST.get('dollars30')
-        dollars31 = request.POST.get('dollars31')
-        dollars32 = request.POST.get('dollars32')
-        dollars33 = request.POST.get('dollars33')
-        dollars34 = request.POST.get('dollars34')
-        dollars35 = request.POST.get('dollars35')
-        dollars36 = request.POST.get('dollars36')
-        dollars37 = request.POST.get('dollars37')
-        dollars38 = request.POST.get('dollars38')
-        dollars39 = request.POST.get('dollars39')
-        dollars40 = request.POST.get('dollars40')
-        dollars41 = request.POST.get('dollars41')
-        dollars42 = request.POST.get('dollars42')
-
-        other1 = request.POST.get('other1')
-        other2 = request.POST.get('other2')
-        other3 = request.POST.get('other3')
-        other4 = request.POST.get('other4')
-        other5 = request.POST.get('other5')
-        other6 = request.POST.get('other6')
-
-        blank = request.POST.get('blank')
-
+        salaries_wages = request.POST.get('salaries_wages')
+        civil_service = request.POST.get('civil_service')
+        federal_employee_retirement = request.POST.get('federal_employee_retirement')
+        thrift_savings_disbursements = request.POST.get('thrift_savings_disbursements') 
+        socal_security = request.POST.get('socal_security')
+        life_insurance_health_disbursements = request.POST.get('life_insurance_health_disbursements')
+        other_disbursements = request.POST.get('other_disbursements')
+        construction_contracts = request.POST.get('construction_contracts')
+        rent_disbursements = request.POST.get('rent_disbursements')
+        other_purchases = request.POST.get('other_purchases')
+        equipment_supplies = request.POST.get('equipment_supplies')
+        rent_sales = request.POST.get('rent_sales')
+        other_sales = request.POST.get('other_sales')
+        income_tax = request.POST.get('income_tax')
+        other_taxes_licenses = request.POST.get('other_taxes_licenses')
+        fines_penalties = request.POST.get('fines_penalties')
+        interest = request.POST.get('interest')
+        other_collections_1 = request.POST.get('other_collections_1')
+        other_collections_amount_1 = request.POST.get('other_collections_amount_1')
+        other_collections_2 = request.POST.get('other_collections_2')
+        other_collections_amount_2 = request.POST.get('other_collections_amount_2')
+        other_collections_3 = request.POST.get('other_collections_3')
+        other_collections_amount_3 = request.POST.get('other_collections_amount_3')
+        civil_service_2 = request.POST.get('civil_service_2')
+        federal_employee = request.POST.get('federal_employee')
+        thrift_saving_deductions = request.POST.get('thrift_saving_deductions')
+        social_security = request.POST.get('social_security')
+        life_insurance_health_deductions = request.POST.get('life_insurance_health_deductions')
+        income_tax_deductions = request.POST.get('income_tax_deductions')
+        saving_bonds = request.POST.get('saving_bonds')
+        other_deductions = request.POST.get('other_deductions')
+        other_deductions_amount = request.POST.get('other_deductions_amount')
+        commonwealth = request.POST.get('commonwealth')
+        municipal = request.POST.get('municipal')
+        individuals_private_institutions = request.POST.get('individuals_private_institutions')
+        death_disability = request.POST.get('death_disability')
+        other_payments_1 = request.POST.get('other_payments_1')
+        other_payments_amount_1 = request.POST.get('other_payments_amount_1')
+        other_payments_2 = request.POST.get('other_payments_2')
+        other_payments_amount_2 = request.POST.get('other_payments_amount_2')
+        loans_advances = request.POST.get('loans_advances')
+        repayments_loans = request.POST.get('repayments_loans')
+        total_loans_amount = request.POST.get('total_loans_amount')
+        loans_cancelled = request.POST.get('loans_cancelled')
+        other_credits = request.POST.get('other_credits')
+        loans_and_advances = request.POST.get('loans_and_advances')
+        loans_and_advances_amount = request.POST.get('loans_and_advances_amount')
+        interest_collected = request.POST.get('interest_collected')
+        forgiveness_credit = request.POST.get('forgiveness_credit')
+        
+        reporting_agency = request.POST.get('reporting_agency')
+        
         csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-547.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
@@ -5172,26 +5172,31 @@ def JP_547(request):
             
             if not file_exists:
                 writer.writerow([
-                                "agency1", "agency2", 
-                                "dollars1", "dollars2", "dollars3", "dollars4", "dollars5", "dollars6", "dollars7", "dollars8",
-                                "dollars9", "dollars10", "dollars11", "dollars12", "dollars13", "dollars14", 
-                                "dollars15", "dollars16", "dollars17", "other1", "dollars18", "other2", "dollars19",
-                                "other3", "dollars20", "dollars21", "dollars22", "dollars23", "dollars24", 
-                                "dollars25", "dollars26", "dollars27","other4", "dollars28", "dollars29", "dollars30", 
-                                "dollars31", "dollars32", "other5", "dollars33", "other6", "dollars34", "dollars35", 
-                                "dollars36", "dollars37", "dollars38", "dollars39", "blank", "dollars40", "dollars41",
-                                  "dollars42", "agency3"
+                                'agency_form','agency_to','salaries_wages','civil_service','federal_employee_retirement',
+                                'thrift_savings_disbursements','socal_security','life_insurance_health_disbursements','other_disbursements',
+                                'construction_contracts','rent_disbursements','other_purchases','equipment_supplies','rent_sales',
+                                'other_sales','income_tax','other_taxes_licenses','fines_penalties','interest','other_collections_1',
+                                'other_collections_amount_1','other_collections_2','other_collections_amount_2','other_collections_3',
+                                'other_collections_amount_3','civil_service_2','federal_employee','thrift_saving_deductions','social_security',
+                                'life_insurance_health_deductions','income_tax_deductions','saving_bonds','other_deductions', 'other_deductions_amount','commonwealth',
+                                'municipal','individuals_private_institutions','death_disability','other_payments_1','other_payments_amount_1',
+                                'other_payments_2','other_payments_amount_2','loans_advances','repayments_loans','total_loans_amount',
+                                'loans_cancelled','other_credits','loans_and_advances','loans_and_advances_amount','interest_collected',
+                                'forgiveness_credit','reporting_agency'
                                 ])
             
             writer.writerow([
-                            agency1, agency2,
-                            dollars1, dollars2, dollars3, dollars4, dollars5, dollars6, dollars7, dollars8,
-                            dollars9, dollars10, dollars11, dollars12, dollars13, dollars14, dollars15, 
-                            dollars16, dollars17, other1, dollars18, other2, dollars19, other3, dollars20, dollars21, dollars22,
-                            dollars23, dollars24, dollars25, dollars26, dollars27, other4, dollars28, dollars29, dollars30,
-                            dollars31, dollars32, other5, dollars33, other6, dollars34, dollars35, dollars36, dollars37, dollars38,
-                            dollars39, blank, dollars40, dollars41, dollars42,
-                            agency3
+                            agency_form, agency_to, salaries_wages, civil_service, federal_employee_retirement,
+                            thrift_savings_disbursements, socal_security, life_insurance_health_disbursements, other_disbursements,
+                            construction_contracts, rent_disbursements, other_purchases, equipment_supplies, rent_sales,
+                            other_sales, income_tax, other_taxes_licenses, fines_penalties, interest, other_collections_1,
+                            other_collections_amount_1, other_collections_2, other_collections_amount_2, other_collections_3,
+                            other_collections_amount_3, civil_service_2, federal_employee, thrift_saving_deductions, social_security,
+                            life_insurance_health_deductions, income_tax_deductions, saving_bonds, other_deductions, other_deductions_amount, commonwealth,
+                            municipal, individuals_private_institutions, death_disability, other_payments_1, other_payments_amount_1,
+                            other_payments_2, other_payments_amount_2, loans_advances, repayments_loans, total_loans_amount,
+                            loans_cancelled, other_credits, loans_and_advances, loans_and_advances_amount, interest_collected,
+                            forgiveness_credit, reporting_agency
                             ])  
 
         return render(request, "forms/succesfull.html")

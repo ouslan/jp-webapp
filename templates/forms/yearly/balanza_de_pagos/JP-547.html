@@ -46,10 +46,10 @@
       <form method="POST" action="{% url 'JP-547' %}">
         {% csrf_token %}
         <div id="input" class="big-box-bottom-left">
-            From:&emsp;<input id="flex_inputs" class="text-box space-between" name="agency1" placeholder="Agency" required>
+            From:&emsp;<input id="flex_inputs" class="text-box space-between" name="agency_form" placeholder="Agency" required>
         </div>
         <div id="input" class="big-box-bottom-left">
-            To:&emsp;<input id="flex_inputs" class="text-box space-between" name="agency2" placeholder="Agency" required><br>
+            To:&emsp;<input id="flex_inputs" class="text-box space-between" name="agency_to" placeholder="Agency" required><br>
         </div>
 
         <section class="divider-container">
@@ -69,7 +69,7 @@
                 <!-- Line 2 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;1. Salaries and wages (gross of destructions, including COLA)</th>
-                    <td><input type="number" name="dollars1" placeholder="$" required></td>
+                    <td><input type="number" name="salaries_wages" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 3 -->
@@ -81,61 +81,61 @@
                 <!-- Line 4 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;&emsp;&emsp;a. Civil service retirement</th>
-                    <td><input type="number" name="dollars2" placeholder="$" required></td>
+                    <td><input type="number" name="civil_service" placeholder="$" required></td>
                 </tr>
                 
                 <!-- Line 5 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;&emsp;&emsp;b. Federal employee retirement system (FERS)</th>
-                    <td><input type="number" name="dollars3" placeholder="$" required></td>
+                    <td><input type="number" name="federal_employee_retirement" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 6 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;&emsp;&emsp;c. Thrift savings plan (TSP)</th>
-                    <td><input type="number" name="dollars4" placeholder="$" required></td>
+                    <td><input type="number" name="thrift_savings_disbursements" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 7 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;&emsp;&emsp;d. Social Security</th>
-                    <td><input type="number" name="dollars5" placeholder="$" required></td>
+                    <td><input type="number" name="socal_security" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 8 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;&emsp;&emsp;e. Life Insurance and health benefits</th>
-                    <td><input type="number" name="dollars6" placeholder="$" required></td>
+                    <td><input type="number" name="life_insurance_health_disbursements" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 9 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;&emsp;&emsp;f. Other (specify)</th>
-                    <td><input type="number" name="dollars7" placeholder="$" ></td>
+                    <td><input type="number" name="other_disbursements" placeholder="$" ></td>
                 </tr>
 
                 <!-- Line 10 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;3. Construction contracts</th>
-                    <td><input type="number" name="dollars8" placeholder="$" required></td>
+                    <td><input type="number" name="construction_contracts" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 11 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;4. Rent</th>
-                    <td><input type="number" name="dollars9" placeholder="$" required></td>
+                    <td><input type="number" name="rent_disbursements" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 12 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;5. Other purchases in Puerto Rico</th>
-                    <td><input type="number" name="dollars10" placeholder="$" required></td>
+                    <td><input type="number" name="other_purchases" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 13 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;6. Equipment, materials, and supplies received from other mainland Federal Government agencies</th>
-                    <td><input type="number" name="dollars11" placeholder="$" required></td>
+                    <td><input type="number" name="equipment_supplies" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 14 -->
@@ -153,13 +153,13 @@
                 <!-- Line 16 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;1. Rent</th>
-                    <td><input type="number" name="dollars12" placeholder="$" required></td>
+                    <td><input type="number" name="rent_sales" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 17 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;2. Other sales of goods and services</th>
-                    <td><input type="number" name="dollars13" placeholder="$" required></td>
+                    <td><input type="number" name="other_sales" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 18 -->
@@ -177,25 +177,25 @@
                 <!-- Line 20 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;1. Income Tax</th>
-                    <td><input type="number" name="dollars14" placeholder="$" required></td>
+                    <td><input type="number" name="income_tax" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 21 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;2. Other taxes and licenses</th>
-                    <td><input type="number" name="dollars15" placeholder="$" required></td>
+                    <td><input type="number" name="other_taxes_licenses" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 22 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;3. Fines and penalties</th>
-                    <td><input type="number" name="dollars16" placeholder="$" required></td>
+                    <td><input type="number" name="fines_penalties" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 23 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;4. Interest (do not include interest on loans) </th>
-                    <td><input type="number" name="dollars17" placeholder="$" required></td>
+                    <td><input type="number" name="interest" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 24 -->
@@ -206,20 +206,20 @@
 
                 <!-- Line 25 -->
                 <tr>
-                    <td colspan="3"><input id="other_inputs_1" type="text" name="other1" placeholder="Other"></td>
-                    <td><input type="number" name="dollars18" placeholder="$"></td>
+                    <td colspan="3"><input id="other_inputs_1" type="text" name="other_collections_1" placeholder="Other"></td>
+                    <td><input type="number" name="other_collections_amount_1" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 26 -->
                 <tr>
-                    <td colspan="3"><input id="other_inputs_1" type="text" name="other2" placeholder="Other"></td>
-                    <td><input type="number" name="dollars19" placeholder="$"></td>
+                    <td colspan="3"><input id="other_inputs_1" type="text" name="other_collections_2" placeholder="Other"></td>
+                    <td><input type="number" name="other_collections_amount_2" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 27 -->
                 <tr>
-                    <td colspan="3"><input id="other_inputs_1" type="text" name="other3" placeholder="Other"></td>
-                    <td><input type="number" name="dollars20" placeholder="$"></td>
+                    <td colspan="3"><input id="other_inputs_1" type="text" name="other_collections_3" placeholder="Other"></td>
+                    <td><input type="number" name="other_collections_amount_3" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 28 -->
@@ -237,49 +237,49 @@
                 <!-- Line 30 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;1. Civil service retirement</td>
-                    <td><input type="number" name="dollars21" placeholder="$" required></td>
+                    <td><input type="number" name="civil_service_2" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 31 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;2. Fedral employee</td>
-                    <td><input type="number" name="dollars22" placeholder="$" required></td>
+                    <td><input type="number" name="federal_employee" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 32 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;3. Thrift savings plan (TSP)</td>
-                    <td><input type="number" name="dollars23" placeholder="$" required></td>
+                    <td><input type="number" name="thrift_saving_deductions" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 33 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;4. Social Security</td>
-                    <td><input type="number" name="dollars24" placeholder="$" required></td>
+                    <td><input type="number" name="social_security" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 34 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;5. Life insurance and health benefits</td>
-                    <td><input type="number" name="dollars25" placeholder="$" required></td>
+                    <td><input type="number" name="life_insurance_health_deductions" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 35 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;6. Income Tax</td>
-                    <td><input type="number" name="dollars26" placeholder="$"></td>
+                    <td><input type="number" name="income_tax_deductions" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 36 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;7. U.S. Government saving bonds</td>
-                    <td><input type="number" name="dollars27" placeholder="$"></td>
+                    <td><input type="number" name="saving_bonds" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 37 -->
                 <tr>
-                    <td colspan="3">&emsp;&emsp;8. Other (specify): <input id="other_inputs" type="text" name="other4" placeholder="Other"></td>
-                    <td><input type="number" name="dollars28" placeholder="$"></td>
+                    <td colspan="3">&emsp;&emsp;8. Other (specify): <input id="other_inputs" type="text" name="other_deductions" placeholder="Other"></td>
+                    <td><input type="number" name="other_deductions_amount" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 38 -->
@@ -303,19 +303,19 @@
                 <!-- Line 41 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;&emsp;&emsp;a. Commonwealth Government</td>
-                    <td><input type="number" name="dollars29" placeholder="$" required></td>
+                    <td><input type="number" name="commonwealth" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 42 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;&emsp;&emsp;b. Municipal Governments</td>
-                    <td><input type="number" name="dollars30" placeholder="$" required></td>
+                    <td><input type="number" name="municipal" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 43 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;&emsp;&emsp;c. Individuals and private institutions</td>
-                    <td><input type="number" name="dollars31" placeholder="$"></td>
+                    <td><input type="number" name="individuals_private_institutions" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 44 -->
@@ -327,7 +327,7 @@
                 <!-- Line 45 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;&emsp;&emsp;a. Death and disability</td>
-                    <td><input type="number" name="dollars32" placeholder="$" required></td>
+                    <td><input type="number" name="death_disability" placeholder="$" required></td>
                 </tr>
 
                 <!-- Line 46 -->
@@ -338,14 +338,14 @@
 
                 <!-- Line 47 -->
                 <tr>
-                    <td colspan="3"><input id="other_inputs_2" type="text" name="other5" placeholder="Other"></td>
-                    <td><input type="number" name="dollars33" placeholder="$"></td>
+                    <td colspan="3"><input id="other_inputs_2" type="text" name="other_payments_1" placeholder="Other"></td>
+                    <td><input type="number" name="other_payments_amount_1" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 48 -->
                 <tr>
-                    <td colspan="3"><input id="other_inputs_2" type="text" name="other6" placeholder="Other"></td>
-                    <td><input type="number" name="dollars34" placeholder="$"></td>
+                    <td colspan="3"><input id="other_inputs_2" type="text" name="other_payments_2" placeholder="Other"></td>
+                    <td><input type="number" name="other_payments_amount_2" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 49 -->
@@ -357,50 +357,50 @@
                 <!-- Line 50 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;1. Loans and advances</td>
-                    <td><input type="number" name="dollars35" placeholder="$"></td>
+                    <td><input type="number" name="loans_advances" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 51 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;2. Repayments of loans and advances</td>
-                    <td><input type="number" name="dollars36" placeholder="$"></td>
+                    <td><input type="number" name="repayments_loans" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 52 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;3. Total amount of loans made in Puerto Rico and sold to individuals and /or financial institutions in Puerto Rico</td>
-                    <td><input type="number" name="dollars37" placeholder="$"></td>
+                    <td><input type="number" name="total_loans_amount" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 53 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;4. Loans cancelled by acquisition of collateral</td>
-                    <td><input type="number" name="dollars38" placeholder="$"></td>
+                    <td><input type="number" name="loans_cancelled" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 54 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;5. Other credits to principal of loans and advances</td>
-                    <td><input type="number" name="dollars39" placeholder="$"></td>
+                    <td><input type="number" name="other_credits" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 55 -->
                 <tr>
-                    <td colspan="3">&emsp;&emsp;6.  Amount of principal of loans and advances outstanding as of 
-                        <input id="amount_input" type="text" name="blank" placeholder="Enter your text here..."></td>
-                    <td><input type="number" name="dollars40" placeholder="$"></td>
+                    <td colspan="3">&emsp;&emsp;6. Amount of principal of loans and advances outstanding as of 
+                        <input id="amount_input" type="text" name="loans_and_advances" placeholder="Enter your text here..."></td>
+                    <td><input type="number" name="loans_and_advances_amount" placeholder="$"></td>
                 </tr>    
 
                 <!-- Line 56 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;7. Interest collected on loans and advances</td>
-                    <td><input type="number" name="dollars41" placeholder="$"></td>
+                    <td><input type="number" name="interest_collected" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 57 -->
                 <tr>
                     <td colspan="3">&emsp;&emsp;8.  Forgiveness credit to Puerto Rican residents</td>
-                    <td><input type="number" name="dollars42" placeholder="$"></td>
+                    <td><input type="number" name="forgiveness_credit" placeholder="$"></td>
                 </tr>
 
             </table>
@@ -410,7 +410,7 @@
         </section>
         <br>
         <div id="input">
-            Reporting Agency: &emsp;<input id="flex_inputs" class="text-box space-between" name="agency3" placeholder="Agency" required><br>
+            Reporting Agency: &emsp;<input id="flex_inputs" class="text-box space-between" name="reporting_agency" placeholder="Agency" required><br>
         </div>
         <br>
         Puerto Rico Planning Board<br>
