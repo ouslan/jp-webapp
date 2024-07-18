@@ -52,6 +52,8 @@ urlpatterns = [
     re_path(r"^IP-620-servicios-de-salud/$", views.IP_620, name="IP-620"),
     re_path(r"^IP-540S-servicios-administrativos-y-de-apoyo/$", views.IP_540S, name="IP-540S"),
     re_path(r"^IP-540a-publicidad-y-servicios-relacionados/$", views.IP_540a, name="IP-540a"),
+    re_path(r"^IP-540v-veterinarios-y-otros-servicios-de-animales/$", views.IP_540v, name="IP-540v"),
+    re_path(r"^IP-720-alojamiento-y-servicio-de-comida/$", views.IP_720, name="IP-720"),
     re_path(r"^IP-810-otros-servicios/$", views.IP_810, name="IP-810"),
     re_path(r"^Forms/$", views.Forms, name="Forms"),
 ]
