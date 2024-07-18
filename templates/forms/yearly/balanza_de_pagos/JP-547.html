@@ -23,9 +23,8 @@
       <table>
         <tr>
           <td id="header_left">
-            J.P. -547<br>
+            JP-547<br>
             Rev. Jul. 17<br>
-            <br>
             P.O. Box 41119<br>
             San Juan, Puerto Rico 00940<br>
           </td>
@@ -46,9 +45,11 @@
     <main>
       <form method="POST" action="{% url 'JP-547' %}">
         {% csrf_token %}
-        <div class="big-box-bottom-left">
-            From:<input class="text-box space-between" name="agency1" placeholder="Agency" required>
-            To:<input class="text-box space-between" name="agency2" placeholder="Agency" required><br>
+        <div id="input" class="big-box-bottom-left">
+            From:&emsp;<input id="flex_inputs" class="text-box space-between" name="agency1" placeholder="Agency" required>
+        </div>
+        <div id="input" class="big-box-bottom-left">
+            To:&emsp;<input id="flex_inputs" class="text-box space-between" name="agency2" placeholder="Agency" required><br>
         </div>
 
         <section class="divider-container">
@@ -207,19 +208,19 @@
 
                 <!-- Line 25 -->
                 <tr>
-                    <td colspan="3"><input type="text" name="other1" placeholder="Other"></td>
+                    <td colspan="3"><input id="other_inputs_1" type="text" name="other1" placeholder="Other"></td>
                     <td><input type="number" name="dollars18" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 26 -->
                 <tr>
-                    <td colspan="3"><input type="text" name="other2" placeholder="Other"></td>
+                    <td colspan="3"><input id="other_inputs_1" type="text" name="other2" placeholder="Other"></td>
                     <td><input type="number" name="dollars19" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 27 -->
                 <tr>
-                    <td colspan="3"><input type="text" name="other3" placeholder="Other"></td>
+                    <td colspan="3"><input id="other_inputs_1" type="text" name="other3" placeholder="Other"></td>
                     <td><input type="number" name="dollars20" placeholder="$"></td>
                 </tr>
 
@@ -279,7 +280,7 @@
 
                 <!-- Line 37 -->
                 <tr>
-                    <td colspan="3">&emsp;&emsp;8. Other (specify): <input type="text" name="other4" placeholder="Other"></td>
+                    <td colspan="3">&emsp;&emsp;8. Other (specify): <input id="other_inputs" type="text" name="other4" placeholder="Other"></td>
                     <td><input type="number" name="dollars28" placeholder="$"></td>
                 </tr>
 
@@ -339,13 +340,13 @@
 
                 <!-- Line 47 -->
                 <tr>
-                    <td colspan="3"><input type="text" name="other5" placeholder="Other"></td>
+                    <td colspan="3"><input id="other_inputs_2" type="text" name="other5" placeholder="Other"></td>
                     <td><input type="number" name="dollars33" placeholder="$"></td>
                 </tr>
 
                 <!-- Line 48 -->
                 <tr>
-                    <td colspan="3"><input type="text" name="other6" placeholder="Other"></td>
+                    <td colspan="3"><input id="other_inputs_2" type="text" name="other6" placeholder="Other"></td>
                     <td><input type="number" name="dollars34" placeholder="$"></td>
                 </tr>
 
@@ -387,7 +388,8 @@
 
                 <!-- Line 55 -->
                 <tr>
-                    <td colspan="3">&emsp;&emsp;6.  Amount of principal of loans and advances outstanding as of <input type="text" name="blank" placeholder="..."></td>
+                    <td colspan="3">&emsp;&emsp;6.  Amount of principal of loans and advances outstanding as of 
+                        <input id="amount_input" type="text" name="blank" placeholder="Enter your text here..."></td>
                     <td><input type="number" name="dollars40" placeholder="$"></td>
                 </tr>    
 
@@ -409,7 +411,10 @@
 
         </section>
         <br>
-        Reporting Agency: <input class="text-box space-between" name="agency3" placeholder="Agency" required><br>
+        <div id="input">
+            Reporting Agency: &emsp;<input id="flex_inputs" class="text-box space-between" name="agency3" placeholder="Agency" required><br>
+        </div>
+        <br>
         Puerto Rico Planning Board<br>
         <br>
             
