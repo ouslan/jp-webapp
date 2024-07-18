@@ -9734,6 +9734,8 @@ def IP_710(request):
         closing_date = request.POST.get("closing_date")
         start_year = request.POST.get("start_year")
         end_year = request.POST.get("end_year")
+        total_income_1 = request.POST.get("total_income_1")
+        total_income_2 = request.POST.get("total_income_2")
         incomes_service_1 = request.POST.get("incomes_service_1")
         incomes_service_2 = request.POST.get("incomes_service_2")
         incomes_from_persons_1 = request.POST.get("incomes_from_persons_1")
@@ -9756,6 +9758,8 @@ def IP_710(request):
         )
         income_other_operating_1 = request.POST.get("income_other_operating_1")
         income_other_operating_2 = request.POST.get("income_other_operating_2")
+        total_expenses_1 = request.POST.get("total_expenses_1")
+        total_expenses_2 = request.POST.get("total_expenses_2")
         expenses_salaries_1 = request.POST.get("expenses_salaries_1")
         expenses_salaries_2 = request.POST.get("expenses_salaries_2")
         expenses_interests_1 = request.POST.get("expenses_interests_1")
@@ -9818,6 +9822,8 @@ def IP_710(request):
                         "closing_date",
                         "start_year",
                         "end_year",
+                        "total_income_1",
+                        "total_income_2",
                         "incomes_service_1",
                         "incomes_service_2",
                         "incomes_from_persons_1",
@@ -9836,6 +9842,8 @@ def IP_710(request):
                         "income_capital_gain_or_loss_2",
                         "income_other_operating_1",
                         "income_other_operating_2",
+                        "total_expenses_1",
+                        "total_expenses_2",
                         "expenses_salaries_1",
                         "expenses_salaries_2",
                         "expenses_interests_1",
@@ -9887,6 +9895,8 @@ def IP_710(request):
                     closing_date,
                     start_year,
                     end_year,
+                    total_income_1,
+                    total_income_2,
                     incomes_service_1,
                     incomes_service_2,
                     incomes_from_persons_1,
@@ -9905,6 +9915,8 @@ def IP_710(request):
                     income_capital_gain_or_loss_2,
                     income_other_operating_1,
                     income_other_operating_2,
+                    total_expenses_1,
+                    total_expenses_2,
                     expenses_salaries_1,
                     expenses_salaries_2,
                     expenses_interests_1,
