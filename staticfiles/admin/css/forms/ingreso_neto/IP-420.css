@@ -445,6 +445,10 @@ hr {
   margin-left: 20px;
 }
 
+#title_input_2,  #title_input{
+  margin-top: 20px;
+}
+
 #header_title {
   margin-top: 30px;
 }
