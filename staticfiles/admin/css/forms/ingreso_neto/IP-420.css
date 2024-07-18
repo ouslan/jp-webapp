@@ -445,6 +445,18 @@ hr {
   margin-left: 20px;
 }
 
+#title_input, #title_input_2 {
+  margin-top: 20px;
+}
+
+#title-inputs_1 {
+  margin-left: 20px;
+}
+
+#title-inputs_1, #title-inputs_2 {
+  margin-top: 20px;
+}
+
 #header_title {
   margin-top: 30px;
 }
