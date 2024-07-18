@@ -5104,3 +5104,95 @@ def IP_620(request):
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-620.html")
+
+def JP_547(request):
+    if request.method == "POST":
+        # Retrieve form data
+        agency1 = request.POST.get('agency1')
+        agency2 = request.POST.get('agency2')
+        agency3 = request.POST.get('agency3')
+
+        dollars1 = request.POST.get('dollars1')
+        dollars2 = request.POST.get('dollars2')
+        dollars3 = request.POST.get('dollars3')
+        dollars4 = request.POST.get('dollars4') 
+        dollars5 = request.POST.get('dollars5')
+        dollars6 = request.POST.get('dollars6')
+        dollars7 = request.POST.get('dollars7')
+        dollars8 = request.POST.get('dollars8')
+        dollars9 = request.POST.get('dollars9')
+        dollars10 = request.POST.get('dollars10')
+        dollars11 = request.POST.get('dollars11')
+        dollars12 = request.POST.get('dollars12')
+        dollars13 = request.POST.get('dollars13')
+        dollars14 = request.POST.get('dollars14')
+        dollars15 = request.POST.get('dollars15')
+        dollars16 = request.POST.get('dollars16')
+        dollars17 = request.POST.get('dollars17')
+        dollars18 = request.POST.get('dollars18')
+        dollars19 = request.POST.get('dollars19')
+        dollars20 = request.POST.get('dollars20')
+        dollars21 = request.POST.get('dollars21')
+        dollars22 = request.POST.get('dollars22')
+        dollars23 = request.POST.get('dollars23')
+        dollars24 = request.POST.get('dollars24')
+        dollars25 = request.POST.get('dollars25')
+        dollars26 = request.POST.get('dollars26')
+        dollars27 = request.POST.get('dollars27')
+        dollars28 = request.POST.get('dollars28')
+        dollars29 = request.POST.get('dollars29')
+        dollars30 = request.POST.get('dollars30')
+        dollars31 = request.POST.get('dollars31')
+        dollars32 = request.POST.get('dollars32')
+        dollars33 = request.POST.get('dollars33')
+        dollars34 = request.POST.get('dollars34')
+        dollars35 = request.POST.get('dollars35')
+        dollars36 = request.POST.get('dollars36')
+        dollars37 = request.POST.get('dollars37')
+        dollars38 = request.POST.get('dollars38')
+        dollars39 = request.POST.get('dollars39')
+        dollars40 = request.POST.get('dollars40')
+        dollars41 = request.POST.get('dollars41')
+        dollars42 = request.POST.get('dollars42')
+
+        other1 = request.POST.get('other1')
+        other2 = request.POST.get('other2')
+        other3 = request.POST.get('other3')
+        other4 = request.POST.get('other4')
+        other5 = request.POST.get('other5')
+        other6 = request.POST.get('other6')
+
+        blank = request.POST.get('blank')
+
+        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-547.csv'
+        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            
+            if not file_exists:
+                writer.writerow([
+                                "agency1", "agency2", 
+                                "dollars1", "dollars2", "dollars3", "dollars4", "dollars5", "dollars6", "dollars7", "dollars8",
+                                "dollars9", "dollars10", "dollars11", "dollars12", "dollars13", "dollars14", 
+                                "dollars15", "dollars16", "dollars17", "other1", "dollars18", "other2", "dollars19",
+                                "other3", "dollars20", "dollars21", "dollars22", "dollars23", "dollars24", 
+                                "dollars25", "dollars26", "dollars27","other4", "dollars28", "dollars29", "dollars30", 
+                                "dollars31", "dollars32", "other5", "dollars33", "other6", "dollars34", "dollars35", 
+                                "dollars36", "dollars37", "dollars38", "dollars39", "blank", "dollars40", "dollars41",
+                                  "dollars42", "agency3"
+                                ])
+            
+            writer.writerow([
+                            agency1, agency2,
+                            dollars1, dollars2, dollars3, dollars4, dollars5, dollars6, dollars7, dollars8,
+                            dollars9, dollars10, dollars11, dollars12, dollars13, dollars14, dollars15, 
+                            dollars16, dollars17, other1, dollars18, other2, dollars19, other3, dollars20, dollars21, dollars22,
+                            dollars23, dollars24, dollars25, dollars26, dollars27, other4, dollars28, dollars29, dollars30,
+                            dollars31, dollars32, other5, dollars33, other6, dollars34, dollars35, dollars36, dollars37, dollars38,
+                            dollars39, blank, dollars40, dollars41, dollars42,
+                            agency3
+                            ])  
+
+        return render(request, "forms/succesfull.html")
+    return render(request, "forms/yearly/balanza_de_pagos/JP-547.html")
