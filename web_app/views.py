@@ -5809,6 +5809,9 @@ def IP_440g(request):
 
         dividends_A_1 = request.POST.get("dividends_A_1")
         dividends_A_2 = request.POST.get("dividends_A_2")
+        
+        others_A_1 = request.POST.get("others_A_1")
+        others_A_2 = request.POST.get("others_A_2")
 
         total_gross_A_1 = request.POST.get("total_gross_A_1")
         total_gross_A_2 = request.POST.get("total_gross_A_2")
@@ -5916,6 +5919,8 @@ def IP_440g(request):
                         "capital_gain_A_2",
                         "dividends_A_1",
                         "dividends_A_2",
+                        "others_A_1",
+                        "others_A_2",
                         "total_gross_A_1",
                         "total_gross_A_2",
                         "cost_B_1",
@@ -5997,6 +6002,8 @@ def IP_440g(request):
                     capital_gain_A_2,
                     dividends_A_1,
                     dividends_A_2,
+                    others_A_1,
+                    others_A_2,
                     total_gross_A_1,
                     total_gross_A_2,
                     cost_B_1,

@@ -2500,6 +2500,12 @@ class IP_310(forms.Form):
     )
     exports_val_1 = forms.CharField(label="5. Exportaciones - Exports", max_length=100)
     exports_val_2 = forms.CharField(label="5. Exportaciones - Exports", max_length=100)
+    gross_profit_1_1 = forms.CharField(
+        label="16. Utilidad bruta - Gross profit", max_length=100
+    )
+    gross_profit_2_2 = forms.CharField(label="16. Utilidad bruta - Gross profit", max_length=100)
+    exports_val_1_1 = forms.CharField(label="5. Exportaciones - Exports", max_length=100)
+    exports_val_2_2 = forms.CharField(label="5. Exportaciones - Exports", max_length=100)
     manufacturing_cost_1 = forms.CharField(
         label="6. Costo de manufactura - Manufacturing cost", max_length=100
     )
@@ -3166,6 +3172,9 @@ class IP_440g(forms.Form):
 
     dividends_A_1 = forms.CharField(label="d. Dividendos - Dividends", max_length=100)
     dividends_A_2 = forms.CharField(label="d. Dividendos - Dividends", max_length=100)
+    
+    others_A_1 = forms.CharField(label="e. Otros - Other", max_length=100)
+    others_A_2 = forms.CharField(label="e. Otros - Other", max_length=100)
 
     total_gross_A_1 = forms.CharField(
         label="5. Total de ingresos brutos (3 + 4) / Total gross income (3 + 4)",
