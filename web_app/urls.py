@@ -55,6 +55,7 @@ urlpatterns = [
     re_path(r"^IP-540v-veterinarios-y-otros-servicios-de-animales/$", views.IP_540v, name="IP-540v"),
     re_path(r"^IP-720-alojamiento-y-servicio-de-comida/$", views.IP_720, name="IP-720"),
     re_path(r"^IP-810-otros-servicios/$", views.IP_810, name="IP-810"),
+    re_path(r"^JP-547-agencies-transactions/$", views.JP_547, name="JP-547"),
     re_path(r"^Forms/$", views.Forms, name="Forms"),
 ]
 
