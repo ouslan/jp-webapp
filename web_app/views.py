@@ -4822,6 +4822,8 @@ def IP_310(request):
         closing_date = request.POST.get("closing_date")
         start_year = request.POST.get("start_year")
         end_year = request.POST.get("end_year")
+        total_sales_1 = request.POST.get("total_sales_1")
+        total_sales_2 = request.POST.get("total_sales_2")
         from_persons_1 = request.POST.get("from_persons_1")
         from_persons_2 = request.POST.get("from_persons_2")
         industries_businesses_1 = request.POST.get("industries_businesses_1")
@@ -4934,6 +4936,8 @@ def IP_310(request):
                         "closing_date",
                         "start_year",
                         "end_year",
+                        "total_sales_1",
+                        "total_sales_2",
                         "from_persons_1",
                         "from_persons_2",
                         "industries_businesses_1",
@@ -5039,6 +5043,8 @@ def IP_310(request):
                     closing_date,
                     start_year,
                     end_year,
+                    total_sales_1,
+                    total_sales_2,
                     from_persons_1,
                     from_persons_2,
                     industries_businesses_1,
