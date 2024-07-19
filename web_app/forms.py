@@ -6419,127 +6419,134 @@ class IP_710(forms.Form):
     rank = forms.CharField(label="Rank", max_length=100)
 
 
-class JP_544_1(forms.Form):
-    agencia = forms.CharField(label="Agencia / Agency", max_length=100)
-    prep = forms.CharField(label="Preparado por / Prepared by", max_length=100)
-    titulo = forms.CharField(label="Título / Title", max_length=100)
-    telefono = forms.CharField(label="Teléfono / Telephone", max_length=100)
-    fecha = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
+class JP_544_2(forms.Form):
+        agency_name = forms.CharField(label="Nombre de la agencia / Agency name", max_length=100)
+        prepared = forms.CharField(label="Preparado por / Prepared by", max_length=100)
+        title_position = forms.CharField(label="Título / Cargo", max_length=100)
+        phone = forms.CharField(label="Teléfono / Phone", max_length=100)
+        date = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
 
-    agencia1 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa1 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares1 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha1 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
+        federal_agency_name_1 = forms.CharField(label="Nombre de la agencia federal / Federal agency name", max_length=100)
+        federal_program_1 = forms.CharField(label="Programa federal / Federal program", max_length=100)
+        federal_recieived_amount_1 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        federal_date_receipt_1 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        federal_agency_name_2 = forms.CharField(label="Nombre de la agencia federal / Federal agency name", max_length=100)
+        federal_program_2 = forms.CharField(label="Programa federal / Federal program", max_length=100)
+        federal_recieived_amount_2 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        federal_date_receipt_2 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        federal_agency_name_3 = forms.CharField(label="Nombre de la agencia federal / Federal agency name", max_length=100)
+        federal_program_3 = forms.CharField(label="Programa federal / Federal program", max_length=100)
+        federal_recieived_amount_3 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        federal_date_receipt_3 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        federal_agency_name_4 = forms.CharField(label="Nombre de la agencia federal / Federal agency name", max_length=100)
+        federal_program_4 = forms.CharField(label="Programa federal / Federal program", max_length=100)
+        federal_recieived_amount_4 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        federal_date_receipt_4 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        federal_agency_name_5 = forms.CharField(label="Nombre de la agencia federal / Federal agency name", max_length=100)
+        federal_program_5 = forms.CharField(label="Programa federal / Federal program", max_length=100)
+        federal_recieived_amount_5 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        federal_date_receipt_5 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        federal_agency_name_6 = forms.CharField(label="Nombre de la agencia federal / Federal agency name", max_length=100)
+        federal_program_6 = forms.CharField(label="Programa federal / Federal program", max_length=100)
+        federal_recieived_amount_6 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        federal_date_receipt_6 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        federal_agency_name_7 = forms.CharField(label="Nombre de la agencia federal / Federal agency name", max_length=100)
+        federal_program_7 = forms.CharField(label="Programa federal / Federal program", max_length=100)
+        federal_recieived_amount_7 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        federal_date_receipt_7 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        federal_agency_name_8 = forms.CharField(label="Nombre de la agencia federal / Federal agency name", max_length=100)
+        federal_program_8 = forms.CharField(label="Programa federal / Federal program", max_length=100)
+        federal_recieived_amount_8 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        federal_date_receipt_8 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
 
-    agencia2 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa2 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares2 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha2 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
+        local_agency_name_1 = forms.CharField(label="Nombre de la agencia local / Local agency name", max_length=100)
+        agency_program_1 = forms.CharField(label="Programa de la agencia / Agency program", max_length=100)
+        agency_recieived_amount_1 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        agency_date_receipt_1 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        local_agency_name_2 = forms.CharField(label="Nombre de la agencia local / Local agency name", max_length=100)
+        agency_program_2 = forms.CharField(label="Programa de la agencia / Agency program", max_length=100)
+        agency_recieived_amount_2 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        agency_date_receipt_2 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        local_agency_name_3 = forms.CharField(label="Nombre de la agencia local / Local agency name", max_length=100)
+        agency_program_3 = forms.CharField(label="Programa de la agencia / Agency program", max_length=100)
+        agency_recieived_amount_3 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        agency_date_receipt_3 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        local_agency_name_4 = forms.CharField(label="Nombre de la agencia local / Local agency name", max_length=100)
+        agency_program_4 = forms.CharField(label="Programa de la agencia / Agency program", max_length=100)
+        agency_recieived_amount_4 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        agency_date_receipt_4 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        local_agency_name_5 = forms.CharField(label="Nombre de la agencia local / Local agency name", max_length=100)
+        agency_program_5 = forms.CharField(label="Programa de la agencia / Agency program", max_length=100)
+        agency_recieived_amount_5 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        agency_date_receipt_5 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        total_students_enrolled = forms.CharField(label="Total de estudiantes matriculados / Total students enrolled", max_length=100)
+        students_recived_amount = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        
+        total_pell_grant_students = forms.CharField(label="Total de estudiantes con beca Pell / Total Pell grant students", max_length=100)
+        pell_grant_students_amount = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
 
-    agencia3 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa3 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares3 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha3 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
+        total_no_resident_student = forms.CharField(label="Total de estudiantes no residentes / Total non-resident students", max_length=100)
+        no_resident_student_amount = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        
+        no_resident_students_bills = forms.CharField(label="Facturas de estudiantes no residentes / Non-resident students bills", max_length=100)
 
-    agencia4 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa4 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares4 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha4 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
+        loans_granted = forms.CharField(label="Préstamos otorgados / Loans granted", max_length=100)
+        loans_granted_amount = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
 
-    agencia5 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa5 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares5 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha5 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    agencia6 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa6 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares6 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha6 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    agencia7 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa7 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares7 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha7 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    agencia8 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa8 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares8 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha8 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    agencia9 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa9 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares9 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha9 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    agencia10 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa10 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares10 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha10 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    agencia11 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa11 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares11 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha11 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    agencia12 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa12 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares12 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha12 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    agencia13 = forms.CharField(label="Agencia / Agency", max_length=100)
-    programa13 = forms.CharField(label="Programa / Program", max_length=100)
-    dolares13 = forms.CharField(label="Dólares / Dollars", max_length=100)
-    fecha13 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    total1 = forms.CharField(label="Total", max_length=100)
-    cant1 = forms.CharField(label="Cantidad", max_length=100)
-    total2 = forms.CharField(label="Total", max_length=100)
-    cant2 = forms.CharField(label="Cantidad", max_length=100)
-    total3 = forms.CharField(label="Total", max_length=100)
-    cant3 = forms.CharField(label="Cantidad", max_length=100)
-    cant4 = forms.CharField(label="Cantidad", max_length=100)
-
-    prestamos = forms.CharField(label="Préstamos / Loans", max_length=100)
-    cantidad = forms.CharField(label="Cantidad / Amount", max_length=100)
-
-    inst1 = forms.CharField(label="Institución / Institution", max_length=100)
-    recibido1 = forms.CharField(label="Recibido / Received", max_length=100)
-    date1 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    inst2 = forms.CharField(label="Institución / Institution", max_length=100)
-    recibido2 = forms.CharField(label="Recibido / Received", max_length=100)
-    date2 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    inst3 = forms.CharField(label="Institución / Institution", max_length=100)
-    recibido3 = forms.CharField(label="Recibido / Received", max_length=100)
-    date3 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    inst4 = forms.CharField(label="Institución / Institution", max_length=100)
-    recibido4 = forms.CharField(label="Recibido / Received", max_length=100)
-    date4 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    inst5 = forms.CharField(label="Institución / Institution", max_length=100)
-    recibido5 = forms.CharField(label="Recibido / Received", max_length=100)
-    date5 = forms.DateField(label="Fecha / Date", widget=forms.SelectDateWidget)
-
-    cantidad1 = forms.CharField(label="Cantidad / Amount", max_length=100)
-    pago1 = forms.CharField(label="Pago / Payment", max_length=100)
-
-    cantidad3 = forms.CharField(label="Cantidad / Amount", max_length=100)
-    pago3 = forms.CharField(label="Pago / Payment", max_length=100)
-
-    cantidad4 = forms.CharField(label="Cantidad / Amount", max_length=100)
-    pago4 = forms.CharField(label="Pago / Payment", max_length=100)
-
-    cantidad5 = forms.CharField(label="Cantidad / Amount", max_length=100)
-    pago5 = forms.CharField(label="Pago / Payment", max_length=100)
-
-    cantidad6 = forms.CharField(label="Cantidad / Amount", max_length=100)
-    pago6 = forms.CharField(label="Pago / Payment", max_length=100)
-
-    valor1 = forms.CharField(label="Valor / Value", max_length=100)
-    valor2 = forms.CharField(label="Valor / Value", max_length=100)
-    valor3 = forms.CharField(label="Valor / Value", max_length=100)
+        donations_institution_name_1 = forms.CharField(label="Nombre de la institución donante / Donations institution name", max_length=100)
+        donations_amount_1 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        donations_date_1 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        donations_institution_name_2 = forms.CharField(label="Nombre de la institución donante / Donations institution name", max_length=100)
+        donations_amount_2 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        donations_date_2 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        donations_institution_name_3 = forms.CharField(label="Nombre de la institución donante / Donations institution name", max_length=100)
+        donations_amount_3 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        donations_date_3 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        donations_institution_name_4 = forms.CharField(label="Nombre de la institución donante / Donations institution name", max_length=100)
+        donations_amount_4 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        donations_date_4 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        donations_institution_name_5 = forms.CharField(label="Nombre de la institución donante / Donations institution name", max_length=100)
+        donations_amount_5 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        donations_date_5 = forms.DateField(label="Fecha de recibo / Date of receipt", widget=forms.SelectDateWidget)
+        
+        profesional_services_amount = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        profesional_services_payment = forms.CharField(label="Pago / Payment", max_length=100)
+        
+        other_payment_relations_1 = forms.CharField(label="Otras relaciones de pago / Other payment relations", max_length=100)
+        other_payment_relations_amount_1 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        other_payment_relations_payment_1 = forms.CharField(label="Pago / Payment", max_length=100)
+        
+        other_payment_relations_2 = forms.CharField(label="Otras relaciones de pago / Other payment relations", max_length=100)
+        other_payment_relations_amount_2 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        other_payment_relations_payment_2 = forms.CharField(label="Pago / Payment", max_length=100)
+        
+        other_payment_relations_3 = forms.CharField(label="Otras relaciones de pago / Other payment relations", max_length=100)
+        other_payment_relations_amount_3 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        other_payment_relations_payment_3 = forms.CharField(label="Pago / Payment", max_length=100)
+        
+        other_payment_relations_4 = forms.CharField(label="Otras relaciones de pago / Other payment relations", max_length=100)
+        other_payment_relations_amount_4 = forms.CharField(label="Cantidad recibida / Amount received", max_length=100)
+        other_payment_relations_payment_4 = forms.CharField(label="Pago / Payment", max_length=100)
+        
+        acquired_value = forms.CharField(label="Valor adquirido / Acquired value", max_length=100)
+        investment_amount = forms.CharField(label="Cantidad invertida / Amount invested", max_length=100)
+        recived_interest = forms.CharField(label="Intereses recibidos / Interest received", max_length=100)
 
 
 class IP_540P(forms.Form):

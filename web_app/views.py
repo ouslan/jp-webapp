@@ -9154,126 +9154,134 @@ def IP_540J(request):
 def JP_544_2(request):
     if request.method == "POST":
         # Retrieve form data
-        agencia = request.POST.get("agencia")
-        prep = request.POST.get("prep")
-        titulo = request.POST.get("titulo")
-        telefono = request.POST.get("telefono")
-        fecha = request.POST.get("fecha")
+        agency_name = request.POST.get("agency_name")
+        prepared = request.POST.get("prepared")
+        title_position = request.POST.get("title_position")
+        phone = request.POST.get("phone")
+        date = request.POST.get("date")
 
-        agencia1 = request.POST.get("agencia1")
-        programa1 = request.POST.get("programa1")
-        dolares1 = request.POST.get("dolares1")
-        fecha1 = request.POST.get("fecha1")
+        federal_agency_name_1 = request.POST.get("federal_agency_name_1")
+        federal_program_1 = request.POST.get("federal_program_1")
+        federal_recieived_amount_1 = request.POST.get("federal_recieived_amount_1")
+        federal_date_receipt_1 = request.POST.get("federal_date_receipt_1")
+        
+        federal_agency_name_2 = request.POST.get("federal_agency_name_2")
+        federal_program_2 = request.POST.get("federal_program_2")
+        federal_recieived_amount_2 = request.POST.get("federal_recieived_amount_2")
+        federal_date_receipt_2 = request.POST.get("federal_date_receipt_2")
+        
+        federal_agency_name_3 = request.POST.get("federal_agency_name_3")
+        federal_program_3 = request.POST.get("federal_program_3")
+        federal_recieived_amount_3 = request.POST.get("federal_recieived_amount_3")
+        federal_date_receipt_3 = request.POST.get("federal_date_receipt_3")
+        
+        federal_agency_name_4 = request.POST.get("federal_agency_name_4")
+        federal_program_4 = request.POST.get("federal_program_4")
+        federal_recieived_amount_4 = request.POST.get("federal_recieived_amount_4")
+        federal_date_receipt_4 = request.POST.get("federal_date_receipt_4")
+        
+        federal_agency_name_5 = request.POST.get("federal_agency_name_5")
+        federal_program_5 = request.POST.get("federal_program_5")
+        federal_recieived_amount_5 = request.POST.get("federal_recieived_amount_5")
+        federal_date_receipt_5 = request.POST.get("federal_date_receipt_5")
+        
+        federal_agency_name_6 = request.POST.get("federal_agency_name_6")
+        federal_program_6 = request.POST.get("federal_program_6")
+        federal_recieived_amount_6 = request.POST.get("federal_recieived_amount_6")
+        federal_date_receipt_6 = request.POST.get("federal_date_receipt_6")
+        
+        federal_agency_name_7 = request.POST.get("federal_agency_name_7")
+        federal_program_7 = request.POST.get("federal_program_7")
+        federal_recieived_amount_7 = request.POST.get("federal_recieived_amount_7")
+        federal_date_receipt_7 = request.POST.get("federal_date_receipt_7")
+        
+        federal_agency_name_8 = request.POST.get("federal_agency_name_8")
+        federal_program_8 = request.POST.get("federal_program_8")
+        federal_recieived_amount_8 = request.POST.get("federal_recieived_amount_8")
+        federal_date_receipt_8 = request.POST.get("federal_date_receipt_8")
 
-        agencia2 = request.POST.get("agencia2")
-        programa2 = request.POST.get("programa2")
-        dolares2 = request.POST.get("dolares2")
-        fecha2 = request.POST.get("fecha2")
+        local_agency_name_1 = request.POST.get("local_agency_name_1")
+        agency_program_1 = request.POST.get("agency_program_1")
+        agency_recieived_amount_1 = request.POST.get("agency_recieived_amount_1")
+        agency_date_receipt_1 = request.POST.get("agency_date_receipt_1")
+        
+        local_agency_name_2 = request.POST.get("local_agency_name_2")
+        agency_program_2 = request.POST.get("agency_program_2")
+        agency_recieived_amount_2 = request.POST.get("agency_recieived_amount_2")
+        agency_date_receipt_2 = request.POST.get("agency_date_receipt_2")
+        
+        local_agency_name_3 = request.POST.get("local_agency_name_3")
+        agency_program_3 = request.POST.get("agency_program_3")
+        agency_recieived_amount_3 = request.POST.get("agency_recieived_amount_3")
+        agency_date_receipt_3 = request.POST.get("agency_date_receipt_3")
+        
+        local_agency_name_4 = request.POST.get("local_agency_name_4")
+        agency_program_4 = request.POST.get("agency_program_4")
+        agency_recieived_amount_4 = request.POST.get("agency_recieived_amount_4")
+        agency_date_receipt_4 = request.POST.get("agency_date_receipt_4")
+        
+        local_agency_name_5 = request.POST.get("local_agency_name_5")
+        agency_program_5 = request.POST.get("agency_program_5")
+        agency_recieived_amount_5 = request.POST.get("agency_recieived_amount_5")
+        agency_date_receipt_5 = request.POST.get("agency_date_receipt_5")
+        
+        total_students_enrolled = request.POST.get("total_students_enrolled")
+        students_recived_amount = request.POST.get("students_recived_amount")
+        
+        total_pell_grant_students = request.POST.get("total_pell_grant_students")
+        pell_grant_students_amount = request.POST.get("pell_grant_students_amount")
 
-        agencia3 = request.POST.get("agencia3")
-        programa3 = request.POST.get("programa3")
-        dolares3 = request.POST.get("dolares3")
-        fecha3 = request.POST.get("fecha3")
+        total_no_resident_student = request.POST.get("total_no_resident_student")
+        no_resident_student_amount = request.POST.get("no_resident_student_amount")
+        
+        no_resident_students_bills = request.POST.get("no_resident_students_bills")
 
-        agencia4 = request.POST.get("agencia4")
-        programa4 = request.POST.get("programa4")
-        dolares4 = request.POST.get("dolares4")
-        fecha4 = request.POST.get("fecha4")
+        loans_granted = request.POST.get("loans_granted")
+        loans_granted_amount = request.POST.get("loans_granted_amount")
 
-        agencia5 = request.POST.get("agencia5")
-        programa5 = request.POST.get("programa5")
-        dolares5 = request.POST.get("dolares5")
-        fecha5 = request.POST.get("fecha5")
-
-        agencia6 = request.POST.get("agencia6")
-        programa6 = request.POST.get("programa6")
-        dolares6 = request.POST.get("dolares6")
-        fecha6 = request.POST.get("fecha6")
-
-        agencia7 = request.POST.get("agencia7")
-        programa7 = request.POST.get("programa7")
-        dolares7 = request.POST.get("dolares7")
-        fecha7 = request.POST.get("fecha7")
-
-        agencia8 = request.POST.get("agencia8")
-        programa8 = request.POST.get("programa8")
-        dolares8 = request.POST.get("dolares8")
-        fecha8 = request.POST.get("fecha8")
-
-        agencia9 = request.POST.get("agencia9")
-        programa9 = request.POST.get("programa9")
-        dolares9 = request.POST.get("dolares9")
-        fecha9 = request.POST.get("fecha9")
-
-        agencia10 = request.POST.get("agencia10")
-        programa10 = request.POST.get("programa10")
-        dolares10 = request.POST.get("dolares10")
-        fecha10 = request.POST.get("fecha10")
-
-        agencia11 = request.POST.get("agencia11")
-        programa11 = request.POST.get("programa11")
-        dolares11 = request.POST.get("dolares11")
-        fecha11 = request.POST.get("fecha11")
-
-        agencia12 = request.POST.get("agencia12")
-        programa12 = request.POST.get("programa12")
-        dolares12 = request.POST.get("dolares12")
-        fecha12 = request.POST.get("fecha12")
-
-        agencia13 = request.POST.get("agencia13")
-        programa13 = request.POST.get("programa13")
-        dolares13 = request.POST.get("dolares13")
-        fecha13 = request.POST.get("fecha13")
-
-        total1 = request.POST.get("total1")
-        cant1 = request.POST.get("cant1")
-        total2 = request.POST.get("total2")
-        cant2 = request.POST.get("cant2")
-        total3 = request.POST.get("total3")
-        cant3 = request.POST.get("cant3")
-        cant4 = request.POST.get("cant4")
-
-        prestamos = request.POST.get("prestamos")
-        cantidad = request.POST.get("cantidad")
-
-        inst1 = request.POST.get("inst1")
-        recibido1 = request.POST.get("recibido1")
-        date1 = request.POST.get("date1")
-
-        inst2 = request.POST.get("inst2")
-        recibido2 = request.POST.get("recibido2")
-        date2 = request.POST.get("date2")
-
-        inst3 = request.POST.get("inst3")
-        recibido3 = request.POST.get("recibido3")
-        date3 = request.POST.get("date3")
-
-        inst4 = request.POST.get("inst4")
-        recibido4 = request.POST.get("recibido4")
-        date4 = request.POST.get("date4")
-
-        inst5 = request.POST.get("inst5")
-        recibido5 = request.POST.get("recibido5")
-        date5 = request.POST.get("date5")
-
-        cantidad1 = request.POST.get("cantidad1")
-        pago1 = request.POST.get("pago1")
-
-        cantidad3 = request.POST.get("cantidad3")
-        pago3 = request.POST.get("pago3")
-
-        cantidad4 = request.POST.get("cantidad4")
-        pago4 = request.POST.get("pago4")
-
-        cantidad5 = request.POST.get("cantidad5")
-        pago5 = request.POST.get("pago5")
-
-        cantidad6 = request.POST.get("cantidad6")
-        pago6 = request.POST.get("pago6")
-
-        valor1 = request.POST.get("valor1")
-        valor2 = request.POST.get("valor2")
-        valor3 = request.POST.get("valor3")
+        donations_institution_name_1 = request.POST.get("donations_institution_name_1")
+        donations_amount_1 = request.POST.get("donations_amount_1")
+        donations_date_1 = request.POST.get("donations_date_1")
+        
+        donations_institution_name_2 = request.POST.get("donations_institution_name_2")
+        donations_amount_2 = request.POST.get("donations_amount_2")
+        donations_date_2 = request.POST.get("donations_date_2")
+        
+        donations_institution_name_3 = request.POST.get("donations_institution_name_3")
+        donations_amount_3 = request.POST.get("donations_amount_3")
+        donations_date_3 = request.POST.get("donations_date_3")
+        
+        donations_institution_name_4 = request.POST.get("donations_institution_name_4")
+        donations_amount_4 = request.POST.get("donations_amount_4")
+        donations_date_4 = request.POST.get("donations_date_4")
+        
+        donations_institution_name_5 = request.POST.get("donations_institution_name_5")
+        donations_amount_5 = request.POST.get("donations_amount_5")
+        donations_date_5 = request.POST.get("donations_date_5")
+        
+        profesional_services_amount = request.POST.get("profesional_services_amount")
+        profesional_services_payment = request.POST.get("profesional_services_payment")
+        
+        other_payment_relations_1 = request.POST.get("other_payment_relations_1")
+        other_payment_relations_amount_1 = request.POST.get("other_payment_relations_amount_1")
+        other_payment_relations_payment_1 = request.POST.get("other_payment_relations_payment_1")
+        
+        other_payment_relations_2 = request.POST.get("other_payment_relations_2")
+        other_payment_relations_amount_2 = request.POST.get("other_payment_relations_amount_2")
+        other_payment_relations_payment_2 = request.POST.get("other_payment_relations_payment_2")
+        
+        other_payment_relations_3 = request.POST.get("other_payment_relations_3")
+        other_payment_relations_amount_3 = request.POST.get("other_payment_relations_amount_3")
+        other_payment_relations_payment_3 = request.POST.get("other_payment_relations_payment_3")
+        
+        other_payment_relations_4 = request.POST.get("other_payment_relations_4")
+        other_payment_relations_amount_4 = request.POST.get("other_payment_relations_amount_4")
+        other_payment_relations_payment_4 = request.POST.get("other_payment_relations_payment_4")
+        
+        acquired_value = request.POST.get("acquired_value")
+        investment_amount = request.POST.get("investment_amount")
+        recived_interest = request.POST.get("recived_interest")
+        
 
         csv_file_path = "data/cuestionarios/balanza_de_pagos/JP-544-2.csv"
         file_exists = (
@@ -9284,203 +9292,71 @@ def JP_544_2(request):
             writer = csv.writer(file)
 
             if not file_exists:
-                writer.writerow(
-                    [
-                        "agencia",
-                        "prep",
-                        "titulo",
-                        "telefono",
-                        "fecha",
-                        "agencia1",
-                        "programa1",
-                        "dolares1",
-                        "fecha1",
-                        "agencia2",
-                        "programa2",
-                        "dolares2",
-                        "fecha2",
-                        "agencia3",
-                        "programa3",
-                        "dolares3",
-                        "fecha3",
-                        "agencia4",
-                        "programa4",
-                        "dolares4",
-                        "fecha4",
-                        "agencia5",
-                        "programa5",
-                        "dolares5",
-                        "fecha5",
-                        "agencia6",
-                        "programa6",
-                        "dolares6",
-                        "fecha6",
-                        "agencia7",
-                        "programa7",
-                        "dolares7",
-                        "fecha7",
-                        "agencia8",
-                        "programa8",
-                        "dolares8",
-                        "fecha8",
-                        "agencia9",
-                        "programa9",
-                        "dolares9",
-                        "fecha9",
-                        "agencia10",
-                        "programa10",
-                        "dolares10",
-                        "fecha10",
-                        "agencia11",
-                        "programa11",
-                        "dolares11",
-                        "fecha11",
-                        "agencia12",
-                        "programa12",
-                        "dolares12",
-                        "fecha12",
-                        "agencia13",
-                        "programa13",
-                        "dolares13",
-                        "fecha13",
-                        "total1",
-                        "cant1",
-                        "total2",
-                        "cant2",
-                        "total3",
-                        "cant3",
-                        "cant4",
-                        "prestamos",
-                        "cantidad",
-                        "inst1",
-                        "recibido1",
-                        "date1",
-                        "inst2",
-                        "recibido2",
-                        "date2",
-                        "inst3",
-                        "recibido3",
-                        "date3",
-                        "inst4",
-                        "recibido4",
-                        "date4",
-                        "inst5",
-                        "recibido5",
-                        "date5",
-                        "cantidad1",
-                        "pago1",
-                        "cantidad3",
-                        "pago3",
-                        "cantidad4",
-                        "pago4",
-                        "cantidad5",
-                        "pago5",
-                        "cantidad6",
-                        "pago6",
-                        "valor1",
-                        "valor2",
-                        "valor3",
-                    ]
-                )
+                writer.writerow([
+                    "agency_name", "prepared", "title_position", "phone", "date",
+                    "federal_agency_name_1", "federal_program_1", "federal_recieived_amount_1", "federal_date_receipt_1",
+                    "federal_agency_name_2", "federal_program_2", "federal_recieived_amount_2", "federal_date_receipt_2",
+                    "federal_agency_name_3", "federal_program_3", "federal_recieived_amount_3", "federal_date_receipt_3",
+                    "federal_agency_name_4", "federal_program_4", "federal_recieived_amount_4", "federal_date_receipt_4",
+                    "federal_agency_name_5", "federal_program_5", "federal_recieived_amount_5", "federal_date_receipt_5",
+                    "federal_agency_name_6", "federal_program_6", "federal_recieived_amount_6", "federal_date_receipt_6",
+                    "federal_agency_name_7", "federal_program_7", "federal_recieived_amount_7", "federal_date_receipt_7",
+                    "federal_agency_name_8", "federal_program_8", "federal_recieived_amount_8", "federal_date_receipt_8",
+                    "local_agency_name_1", "agency_program_1", "agency_recieived_amount_1", "agency_date_receipt_1",
+                    "local_agency_name_2", "agency_program_2", "agency_recieived_amount_2", "agency_date_receipt_2",
+                    "local_agency_name_3", "agency_program_3", "agency_recieived_amount_3", "agency_date_receipt_3",
+                    "local_agency_name_4", "agency_program_4", "agency_recieived_amount_4", "agency_date_receipt_4",
+                    "local_agency_name_5", "agency_program_5", "agency_recieived_amount_5", "agency_date_receipt_5",
+                    "total_students_enrolled", "students_recived_amount",
+                    "total_pell_grant_students", "pell_grant_students_amount",
+                    "total_no_resident_student", "no_resident_student_amount",
+                    "no_resident_students_bills",
+                    "loans_granted", "loans_granted_amount",
+                    "donations_institution_name_1", "donations_amount_1", "donations_date_1",
+                    "donations_institution_name_2", "donations_amount_2", "donations_date_2",
+                    "donations_institution_name_3", "donations_amount_3", "donations_date_3",
+                    "donations_institution_name_4", "donations_amount_4", "donations_date_4",
+                    "donations_institution_name_5", "donations_amount_5", "donations_date_5",
+                    "profesional_services_amount", "profesional_services_payment",
+                    "other_payment_relations_1", "other_payment_relations_amount_1", "other_payment_relations_payment_1",
+                    "other_payment_relations_2", "other_payment_relations_amount_2", "other_payment_relations_payment_2",
+                    "other_payment_relations_3", "other_payment_relations_amount_3", "other_payment_relations_payment_3",
+                    "other_payment_relations_4", "other_payment_relations_amount_4", "other_payment_relations_payment_4",
+                    "acquired_value", "investment_amount", "recived_interest"
+                    ])
 
-            writer.writerow(
-                [
-                    agencia,
-                    prep,
-                    titulo,
-                    telefono,
-                    fecha,
-                    agencia1,
-                    programa1,
-                    dolares1,
-                    fecha1,
-                    agencia2,
-                    programa2,
-                    dolares2,
-                    fecha2,
-                    agencia3,
-                    programa3,
-                    dolares3,
-                    fecha3,
-                    agencia4,
-                    programa4,
-                    dolares4,
-                    fecha4,
-                    agencia5,
-                    programa5,
-                    dolares5,
-                    fecha5,
-                    agencia6,
-                    programa6,
-                    dolares6,
-                    fecha6,
-                    agencia7,
-                    programa7,
-                    dolares7,
-                    fecha7,
-                    agencia8,
-                    programa8,
-                    dolares8,
-                    fecha8,
-                    agencia9,
-                    programa9,
-                    dolares9,
-                    fecha9,
-                    agencia10,
-                    programa10,
-                    dolares10,
-                    fecha10,
-                    agencia11,
-                    programa11,
-                    dolares11,
-                    fecha11,
-                    agencia12,
-                    programa12,
-                    dolares12,
-                    fecha12,
-                    agencia13,
-                    programa13,
-                    dolares13,
-                    fecha13,
-                    total1,
-                    cant1,
-                    total2,
-                    cant2,
-                    total3,
-                    cant3,
-                    cant4,
-                    prestamos,
-                    cantidad,
-                    inst1,
-                    recibido1,
-                    date1,
-                    inst2,
-                    recibido2,
-                    date2,
-                    inst3,
-                    recibido3,
-                    date3,
-                    inst4,
-                    recibido4,
-                    date4,
-                    inst5,
-                    recibido5,
-                    date5,
-                    cantidad1,
-                    pago1,
-                    cantidad3,
-                    pago3,
-                    cantidad4,
-                    pago4,
-                    cantidad5,
-                    pago5,
-                    cantidad6,
-                    pago6,
-                    valor1,
-                    valor2,
-                    valor3,
-                ]
-            )
+            writer.writerow([
+                agency_name, prepared, title_position, phone, date,
+                federal_agency_name_1, federal_program_1, federal_recieived_amount_1, federal_date_receipt_1,
+                federal_agency_name_2, federal_program_2, federal_recieived_amount_2, federal_date_receipt_2,
+                federal_agency_name_3, federal_program_3, federal_recieived_amount_3, federal_date_receipt_3,
+                federal_agency_name_4, federal_program_4, federal_recieived_amount_4, federal_date_receipt_4,
+                federal_agency_name_5, federal_program_5, federal_recieived_amount_5, federal_date_receipt_5,
+                federal_agency_name_6, federal_program_6, federal_recieived_amount_6, federal_date_receipt_6,
+                federal_agency_name_7, federal_program_7, federal_recieived_amount_7, federal_date_receipt_7,
+                federal_agency_name_8, federal_program_8, federal_recieived_amount_8, federal_date_receipt_8,
+                local_agency_name_1, agency_program_1, agency_recieived_amount_1, agency_date_receipt_1,
+                local_agency_name_2, agency_program_2, agency_recieived_amount_2, agency_date_receipt_2,
+                local_agency_name_3, agency_program_3, agency_recieived_amount_3, agency_date_receipt_3,
+                local_agency_name_4, agency_program_4, agency_recieived_amount_4, agency_date_receipt_4,
+                local_agency_name_5, agency_program_5, agency_recieived_amount_5, agency_date_receipt_5,
+                total_students_enrolled, students_recived_amount,
+                total_pell_grant_students, pell_grant_students_amount,
+                total_no_resident_student, no_resident_student_amount,
+                no_resident_students_bills,
+                loans_granted, loans_granted_amount,
+                donations_institution_name_1, donations_amount_1, donations_date_1,
+                donations_institution_name_2, donations_amount_2, donations_date_2,
+                donations_institution_name_3, donations_amount_3, donations_date_3,
+                donations_institution_name_4, donations_amount_4, donations_date_4,
+                donations_institution_name_5, donations_amount_5, donations_date_5,
+                profesional_services_amount, profesional_services_payment,
+                other_payment_relations_1, other_payment_relations_amount_1, other_payment_relations_payment_1,
+                other_payment_relations_2, other_payment_relations_amount_2, other_payment_relations_payment_2,
+                other_payment_relations_3, other_payment_relations_amount_3, other_payment_relations_payment_3,
+                other_payment_relations_4, other_payment_relations_amount_4, other_payment_relations_payment_4,
+                acquired_value, investment_amount, recived_interest
+                ])
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-2.html")
