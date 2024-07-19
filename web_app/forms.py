@@ -2482,6 +2482,8 @@ class IP_310(forms.Form):
     end_year = forms.CharField(
         label="Año de cierre de operaciones / Year of end of operations", max_length=100
     )
+    total_sales_1 = forms.CharField(label="1. Ventas totales - Total sales", max_length=100)
+    total_sales_2 = forms.CharField(label="1. Ventas totales - Total sales", max_length=100)
     from_persons_1 = forms.CharField(label="a. A personas - To persons", max_length=100)
     from_persons_2 = forms.CharField(label="a. A personas - To persons", max_length=100)
     industries_businesses_1 = forms.CharField(
