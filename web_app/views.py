@@ -9154,11 +9154,11 @@ def IP_540J(request):
 def JP_544_2(request):
     if request.method == "POST":
         # Retrieve form data
-        agency_name = request.POST.get("agency_name")
-        prepared = request.POST.get("prepared")
-        title_position = request.POST.get("title_position")
+        university_name = request.POST.get("university_name")
         phone = request.POST.get("phone")
-        date = request.POST.get("date")
+        contact_person = request.POST.get("contact_person")
+        direction = request.POST.get("direction")
+        email = request.POST.get("email")
 
         federal_agency_name_1 = request.POST.get("federal_agency_name_1")
         federal_program_1 = request.POST.get("federal_program_1")
@@ -9293,7 +9293,7 @@ def JP_544_2(request):
 
             if not file_exists:
                 writer.writerow([
-                    "agency_name", "prepared", "title_position", "phone", "date",
+                    "university_name", "phone", "contact_person", "direction", "email",
                     "federal_agency_name_1", "federal_program_1", "federal_recieived_amount_1", "federal_date_receipt_1",
                     "federal_agency_name_2", "federal_program_2", "federal_recieived_amount_2", "federal_date_receipt_2",
                     "federal_agency_name_3", "federal_program_3", "federal_recieived_amount_3", "federal_date_receipt_3",
@@ -9326,7 +9326,7 @@ def JP_544_2(request):
                     ])
 
             writer.writerow([
-                agency_name, prepared, title_position, phone, date,
+                university_name, phone, contact_person, direction, email,
                 federal_agency_name_1, federal_program_1, federal_recieived_amount_1, federal_date_receipt_1,
                 federal_agency_name_2, federal_program_2, federal_recieived_amount_2, federal_date_receipt_2,
                 federal_agency_name_3, federal_program_3, federal_recieived_amount_3, federal_date_receipt_3,

@@ -252,3 +252,20 @@ body {
     display: block;
     margin-bottom: 10px;
 }
+
+#header_title {
+  margin-left: -14px;
+}
+
+#header_container {
+  margin-left: -40px;
+}
+
+#title {
+  margin-left: -55px;
+}
+
+#header_image {
+  width: 90px;
+  height: 90px;
+}
