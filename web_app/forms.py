@@ -3713,8 +3713,6 @@ class IP_480a(forms.Form):
     total_incomes_2 = forms.CharField(
         label="13. Total de ingresos (1-12) - Total incomes (1-12)", max_length=100
     )
-    expenses_1 = forms.CharField(label="14. Gastos - Expenses", max_length=100)
-    expenses_2 = forms.CharField(label="14. Gastos - Expenses", max_length=100)
     salaries_1 = forms.CharField(label="1. Salarios - Salaries", max_length=100)
     salaries_2 = forms.CharField(label="1. Salarios - Salaries", max_length=100)
     commissions_employees_1 = forms.CharField(

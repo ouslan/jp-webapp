@@ -6466,8 +6466,6 @@ def IP_480a(request):
         other_incomes_2 = request.POST.get("other_incomes_2")
         total_incomes_1 = request.POST.get("total_incomes_1")
         total_incomes_2 = request.POST.get("total_incomes_2")
-        expenses_1 = request.POST.get("expenses_1")
-        expenses_2 = request.POST.get("expenses_2")
         salaries_1 = request.POST.get("salaries_1")
         salaries_2 = request.POST.get("salaries_2")
         commissions_employees_1 = request.POST.get("commissions_employees_1")
@@ -6557,8 +6555,6 @@ def IP_480a(request):
                         "other_incomes_2",
                         "total_incomes_1",
                         "total_incomes_2",
-                        "expenses_1",
-                        "expenses_2",
                         "salaries_1",
                         "salaries_2",
                         "commissions_employees_1",
@@ -6641,8 +6637,6 @@ def IP_480a(request):
                     other_incomes_2,
                     total_incomes_1,
                     total_incomes_2,
-                    expenses_1,
-                    expenses_2,
                     salaries_1,
                     salaries_2,
                     commissions_employees_1,
