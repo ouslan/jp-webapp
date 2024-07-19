@@ -311,7 +311,22 @@ class JP_304(forms.Form):
 
 
 class JP_541(forms.Form):
-    COMPANT_TYPE_CHOICES = [
+    COMPANY_TYPE_CHOICES = [
+        ("Corporación", "Corporación"),
+        ("Administración", "Administración"),
+    ]
+    
+    COMPANY_TYPE_CHOICES_2 = [
+        ("Corporación", "Corporación"),
+        ("Administración", "Administración"),
+    ]
+    
+    COMPANY_TYPE_CHOICES_3 = [
+        ("Corporación", "Corporación"),
+        ("Administración", "Administración"),
+    ]
+        
+    COMPANY_TYPE_CHOICES_4 = [
         ("Corporación", "Corporación"),
         ("Administración", "Administración"),
     ]
@@ -323,7 +338,7 @@ class JP_541(forms.Form):
     liaison_officer_1 = forms.CharField(label="Persona de Contacto:", max_length=100)
     tel_1 = forms.CharField(label="Teléfono::", max_length=100)
     project_1 = forms.CharField(label="Proyecto por::", max_length=100)
-    branches_1 = forms.CharField(choice=COMPANT_TYPE_CHOICES, max_length=100)
+    branches_1 = forms.ChoiceField(choices=COMPANY_TYPE_CHOICES, required=True)
 
     project_name_1_1 = forms.CharField(label="", max_length=100)
     city_1_1 = forms.CharField(label="", max_length=100)
@@ -387,7 +402,7 @@ class JP_541(forms.Form):
     liaison_officer_2 = forms.CharField(label="Persona de Contacto:", max_length=100)
     tel_2 = forms.CharField(label="Teléfono::", max_length=100)
     project_2 = forms.CharField(label="Proyecto por::", max_length=100)
-    branches_2 = forms.CharField(choice=COMPANT_TYPE_CHOICES, max_length=100)
+    branches_2 = forms.ChoiceField(choices=COMPANY_TYPE_CHOICES_2, required=True)
 
     project_name_2_1 = forms.CharField(label="", max_length=100)
     city_2_1 = forms.CharField(label="", max_length=100)
@@ -451,7 +466,7 @@ class JP_541(forms.Form):
     liaison_officer_3 = forms.CharField(label="Persona de Contacto:", max_length=100)
     tel_3 = forms.CharField(label="Teléfono::", max_length=100)
     project_3 = forms.CharField(label="Proyecto por::", max_length=100)
-    branches_3 = forms.CharField(choice=COMPANT_TYPE_CHOICES, max_length=100)
+    branches_3 = forms.ChoiceField(choices=COMPANY_TYPE_CHOICES_3, required=True)
 
     project_name_3_1 = forms.CharField(label="", max_length=100)
     city_3_1 = forms.CharField(label="", max_length=100)
@@ -515,7 +530,7 @@ class JP_541(forms.Form):
     liaison_officer_4 = forms.CharField(label="Persona de Contacto:", max_length=100)
     tel_4 = forms.CharField(label="Teléfono::", max_length=100)
     project_4 = forms.CharField(label="Proyecto por::", max_length=100)
-    branches_4 = forms.CharField(choice=COMPANT_TYPE_CHOICES, max_length=100)
+    branches_4 = forms.ChoiceField(choices=COMPANY_TYPE_CHOICES_4, required=True)
 
     project_name_4_1 = forms.CharField(label="", max_length=100)
     city_4_1 = forms.CharField(label="", max_length=100)
@@ -794,7 +809,7 @@ class JP_363(forms.Form):
     phone = forms.CharField(label="Phone Number", max_length=100)
 
 
-class JP_560_63110(forms.Forms):
+class JP_560_63110(forms.Form):
     ssn = forms.CharField(label="Social Security Number", max_length=100)
     tel = forms.CharField(label="Telephone Number", max_length=100)
     fax = forms.CharField(label="Fax Number", max_length=100)
