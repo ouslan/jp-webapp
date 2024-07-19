@@ -3384,6 +3384,8 @@ class IP_310b(forms.Form):
     end_year = forms.CharField(
         label="Año de cierre de operaciones / Year of end of operations", max_length=100
     )
+    total_sales_1 = forms.CharField(label="A. Ventas - Sales", max_length=100)
+    total_sales_2 = forms.CharField(label="A. Ventas - Sales", max_length=100)
     products_manufactured_1 = forms.CharField(
         label="3. Productos manufacturados - Manufactured products", max_length=100
     )

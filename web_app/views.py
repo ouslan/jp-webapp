@@ -6074,6 +6074,8 @@ def IP_310b(request):
         closing_date = request.POST.get("closing_date")
         start_year = request.POST.get("start_year")
         end_year = request.POST.get("end_year")
+        total_sales_1 = request.POST.get("total_sales_1")
+        total_sales_2 = request.POST.get("total_sales_2")
         products_manufactured_1 = request.POST.get("products_manufactured_1")
         products_manufactured_2 = request.POST.get("products_manufactured_2")
         rum_1 = request.POST.get("rum_1")
@@ -6173,7 +6175,7 @@ def IP_310b(request):
         signature = request.POST.get("signature")
         rank = request.POST.get("rank")
 
-        csv_file_path = "data/cuestionarios/balanza_de_pagos/JP-310b.csv"
+        csv_file_path = "data/cuestionarios/ingreso_neto/IP-310b.csv"
         file_exists = (
             os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
         )
@@ -6200,6 +6202,8 @@ def IP_310b(request):
                         "closing_date",
                         "start_year",
                         "end_year",
+                        "total_sales_1",
+                        "total_sales_2",
                         "products_manufactured_1",
                         "products_manufactured_2",
                         "rum_1",
@@ -6319,6 +6323,8 @@ def IP_310b(request):
                     closing_date,
                     start_year,
                     end_year,
+                    total_sales_1,
+                    total_sales_2,
                     products_manufactured_1,
                     products_manufactured_2,
                     rum_1,
