@@ -2126,8 +2126,6 @@ class IP_480(forms.Form):
     others_incomes_2 = (forms.CharField(label="7. Otros ingresos - Other incomes"),)
     total_incomes_1 = (forms.CharField(label="Total de ingresos - Total incomes"),)
     total_incomes_2 = (forms.CharField(label="Total de ingresos - Total incomes"),)
-    expenses_1 = (forms.CharField(label="1. Gastos - Expenses"),)
-    expenses_2 = (forms.CharField(label="1. Gastos - Expenses"),)
     salaries_1 = (forms.CharField(label="2. Salarios - Salaries"),)
     salaries_2 = (forms.CharField(label="2. Salarios - Salaries"),)
     expenses_interests_1 = (
