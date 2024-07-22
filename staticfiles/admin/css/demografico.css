@@ -111,39 +111,44 @@ select:focus {
     display: block;
 }
 
+/* GRAPH */
 #variableY {
-    left: 8%;
+    left: 5%;
     transform: rotate(270deg);
-}
-
-#variableX {
+    align-items: center;
+    justify-items: center;
+  }
+  
+  #variableX {
     top: 8%;
-}
-
-#timeRange {
+  }
+  
+  #timeRange {
     top: 0;
     right: 0;
-}
+  }
   
-.container-X {
+  .container-X {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
     position: relative;
     padding-bottom: 6rem;
-}
-
-.container-time {
+  }
+  
+  .container-time {
     display: flex;
     align-items: center;
+    justify-items: center;
     flex-direction: column;
     width: 100%;
     position: relative;
-}
-
-.graph-container {
+  }
+  
+  .graph-container {
     display: flex;
     align-items: center;
-    margin-left: 8vw;
-}
+    justify-items: center;
+    margin-left: 90px;
+  }
