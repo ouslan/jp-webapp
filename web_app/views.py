@@ -1542,58 +1542,62 @@ def IP_110(request):
         closing_date = request.POST.get("closing_date")
         start_year = request.POST.get("start_year")
         end_year = request.POST.get("end_year")
-        services_revenues_12 = request.POST.get("services_revenues_12")
-        services_revenues_13 = request.POST.get("services_revenues_13")
-        industries_businesses_12 = request.POST.get("industries_businesses_12")
-        industries_businesses_13 = request.POST.get("industries_businesses_13")
-        people_12 = request.POST.get("people_12")
-        people_13 = request.POST.get("people_13")
-        sales_12 = request.POST.get("sales_12")
-        sales_13 = request.POST.get("sales_13")
-        incomes_rents_12 = request.POST.get("incomes_rents_12")
-        incomes_rents_13 = request.POST.get("incomes_rents_13")
-        incomes_interests_12 = request.POST.get("incomes_interests_12")
-        incomes_interests_13 = request.POST.get("incomes_interests_13")
-        dividends_12 = request.POST.get("dividends_12")
-        dividends_13 = request.POST.get("dividends_13")
-        others_incomes_12 = request.POST.get("others_incomes_12")
-        others_incomes_13 = request.POST.get("others_incomes_13")
-        total_income_12 = request.POST.get("total_income_12")
-        total_income_13 = request.POST.get("total_income_13")
-        expenses_12 = request.POST.get("expenses_12")
-        expenses_13 = request.POST.get("expenses_13")
-        salaries_2012 = request.POST.get("salaries_2012")
-        salaries_2013 = request.POST.get("salaries_2013")
-        expenses_interests_12 = request.POST.get("expenses_interests_12")
-        expenses_interests_13 = request.POST.get("expenses_interests_13")
-        expenses_rents_12 = request.POST.get("expenses_rents_12")
-        expenses_rents_13 = request.POST.get("expenses_rents_13")
-        depreciation_12 = request.POST.get("depreciation_12")
-        depreciation_13 = request.POST.get("depreciation_13")
-        bad_debts_12 = request.POST.get("bad_debts_12")
-        bad_debts_13 = request.POST.get("bad_debts_13")
-        donations_12 = request.POST.get("donations_12")
-        donations_13 = request.POST.get("donations_13")
-        sales_tax_12 = request.POST.get("sales_tax_12")
-        sales_tax_13 = request.POST.get("sales_tax_13")
-        machinery_12 = request.POST.get("machinery_12")
-        machinery_13 = request.POST.get("machinery_13")
-        other_purchases_12 = request.POST.get("other_purchases_12")
-        other_purchases_13 = request.POST.get("other_purchases_13")
-        licenses_12 = request.POST.get("licenses_12")
-        licenses_13 = request.POST.get("licenses_13")
-        other_expenses_12 = request.POST.get("other_expenses_12")
-        other_expenses_13 = request.POST.get("other_expenses_13")
-        total_expenses_12 = request.POST.get("total_expenses_12")
-        total_expenses_13 = request.POST.get("total_expenses_13")
-        net_profit_12 = request.POST.get("net_profit_12")
-        net_profit_13 = request.POST.get("net_profit_13")
-        income_tax_12 = request.POST.get("income_tax_12")
-        income_tax_13 = request.POST.get("income_tax_13")
-        profit_after_tax_12 = request.POST.get("profit_after_tax_12")
-        profit_after_tax_13 = request.POST.get("profit_after_tax_13")
-        withheld_tax_12 = request.POST.get("withheld_tax_12")
-        withheld_tax_13 = request.POST.get("withheld_tax_13")
+        incomes_services_revenues_1 = request.POST.get("incomes_services_revenues_1")
+        incomes_services_revenues_2 = request.POST.get("incomes_services_revenues_2")
+        incomes_industries_1 = request.POST.get("incomes_industries_1")
+        incomes_industries_2 = request.POST.get("incomes_industries_2")
+        incomes_persons_1 = request.POST.get("incomes_persons_1")
+        incomes_persons_2 = request.POST.get("incomes_persons_2")
+        incomes_sale_merchandise_1 = request.POST.get("incomes_sale_merchandise_1")
+        incomes_sale_merchandise_2 = request.POST.get("incomes_sale_merchandise_2")
+        incomes_rents_1 = request.POST.get("incomes_rents_1")
+        incomes_rents_2 = request.POST.get("incomes_rents_2")
+        incomes_interests_1 = request.POST.get("incomes_interests_1")
+        incomes_interests_2 = request.POST.get("incomes_interests_2")
+        incomes_capital_gain_loss_1 = request.POST.get("incomes_capital_gain_loss_1")
+        incomes_capital_gain_loss_2 = request.POST.get("incomes_capital_gain_loss_2")
+        others_incomes_1 = request.POST.get("others_incomes_1")
+        others_incomes_2 = request.POST.get("others_incomes_2")
+        total_income_1 = request.POST.get("total_income_1")
+        total_income_2 = request.POST.get("total_income_2")
+        expenses_1 = request.POST.get("expenses_1")
+        expenses_2 = request.POST.get("expenses_2")
+        expenses_salaries_wages_bonus_1 = request.POST.get(
+            "expenses_salaries_wages_bonus_1"
+        )
+        expenses_salaries_wages_bonus_2 = request.POST.get(
+            "expenses_salaries_wages_bonus_2"
+        )
+        expenses_interests_1 = request.POST.get("expenses_interests_1")
+        expenses_interests_2 = request.POST.get("expenses_interests_2")
+        expenses_rents_1 = request.POST.get("expenses_rents_1")
+        expenses_rents_2 = request.POST.get("expenses_rents_2")
+        expenses_depreciation_1 = request.POST.get("expenses_depreciation_1")
+        expenses_depreciation_2 = request.POST.get("expenses_depreciation_2")
+        expenses_bad_debts_1 = request.POST.get("expenses_bad_debts_1")
+        expenses_bad_debts_2 = request.POST.get("expenses_bad_debts_2")
+        expenses_donation_1 = request.POST.get("expenses_donation_1")
+        expenses_donation_2 = request.POST.get("expenses_donation_2")
+        expenses_sales_tax_1 = request.POST.get("expenses_sales_tax_1")
+        expenses_sales_tax_2 = request.POST.get("expenses_sales_tax_2")
+        expenses_machinery_1 = request.POST.get("expenses_machinery_1")
+        expenses_machinery_2 = request.POST.get("expenses_machinery_2")
+        other_purchases_1 = request.POST.get("other_purchases_1")
+        other_purchases_2 = request.POST.get("other_purchases_2")
+        licenses_1 = request.POST.get("licenses_1")
+        licenses_2 = request.POST.get("licenses_2")
+        other_expenses_1 = request.POST.get("other_expenses_1")
+        other_expenses_2 = request.POST.get("other_expenses_2")
+        total_expenses_1 = request.POST.get("total_expenses_1")
+        total_expenses_2 = request.POST.get("total_expenses_2")
+        net_profit_1 = request.POST.get("net_profit_1")
+        net_profit_2 = request.POST.get("net_profit_2")
+        net_profit_income_tax_1 = request.POST.get("net_profit_income_tax_1")
+        net_profit_income_tax_2 = request.POST.get("net_profit_income_tax_2")
+        profit_after_tax_1 = request.POST.get("profit_after_tax_1")
+        profit_after_tax_2 = request.POST.get("profit_after_tax_2")
+        withheld_tax_1 = request.POST.get("withheld_tax_1")
+        withheld_tax_2 = request.POST.get("withheld_tax_2")
         signature = request.POST.get("signature")
         rank = request.POST.get("rank")
 
@@ -1623,58 +1627,58 @@ def IP_110(request):
                         "closing_date",
                         "start_year",
                         "end_year",
-                        "services_revenues_12",
-                        "services_revenues_13",
-                        "industries_businesses_12",
-                        "industries_businesses_13",
-                        "people_12",
-                        "people_13",
-                        "sales_12",
-                        "sales_13",
-                        "incomes_rents_12",
-                        "incomes_rents_13",
-                        "incomes_interests_12",
-                        "incomes_interests_13",
-                        "dividends_12",
-                        "dividends_13",
-                        "others_incomes_12",
-                        "others_incomes_13",
-                        "total_income_12",
-                        "total_income_13",
-                        "expenses_12",
-                        "expenses_13",
-                        "salaries_2012",
-                        "salaries_2013",
-                        "expenses_interests_12",
-                        "expenses_interests_13",
-                        "expenses_rents_12",
-                        "expenses_rents_13",
-                        "depreciation_12",
-                        "depreciation_13",
-                        "bad_debts_12",
-                        "bad_debts_13",
-                        "donations_12",
-                        "donations_13",
-                        "sales_tax_12",
-                        "sales_tax_13",
-                        "machinery_12",
-                        "machinery_13",
-                        "other_purchases_12",
-                        "other_purchases_13",
-                        "licenses_12",
-                        "licenses_13",
-                        "other_expenses_12",
-                        "other_expenses_13",
-                        "total_expenses_12",
-                        "total_expenses_13",
-                        "net_profit_12",
-                        "net_profit_13",
-                        "income_tax_12",
-                        "income_tax_13",
-                        "profit_after_tax_12",
-                        "profit_after_tax_13",
-                        "withheld_tax_12",
-                        "withheld_tax_13",
+                        "incomes_services_revenues_1",
+                        "incomes_services_revenues_2",
+                        "incomes_industries_1",
+                        "incomes_industries_2",
+                        "incomes_persons_1",
+                        "incomes_persons_2",
+                        "incomes_sale_merchandise_1",
+                        "incomes_sale_merchandise_2",
+                        "incomes_rents_1",
+                        "incomes_rents_2",
+                        "incomes_interests_1",
+                        "incomes_interests_2",
+                        "incomes_capital_gain_loss_1",
+                        "incomes_capital_gain_loss_2",
+                        "others_incomes_1",
+                        "others_incomes_2",
+                        "total_income_1",
+                        "total_income_2",
+                        "expenses_1",
+                        "expenses_2",
+                        "expenses_salaries_wages_bonus_1",
+                        "expenses_salaries_wages_bonus_2",
+                        "expenses_interests_1",
+                        "expenses_interests_2",
+                        "expenses_rents_1",
+                        "expenses_rents_2",
+                        "expenses_depreciation_1",
+                        "expenses_depreciation_2",
+                        "expenses_bad_debts_1",
+                        "expenses_bad_debts_2",
+                        "expenses_donation_1",
+                        "expenses_donation_2",
+                        "expenses_sales_tax_1",
+                        "expenses_sales_tax_2",
+                        "expenses_machinery_1",
+                        "expenses_machinery_2",
+                        "other_purchases_1",
+                        "other_purchases_2",
+                        "licenses_1",
+                        "licenses_2",
+                        "other_expenses_1",
+                        "other_expenses_2",
+                        "total_expenses_1",
+                        "total_expenses_2",
+                        "net_profit_1",
+                        "net_profit_2",
+                        "net_profit_income_tax_1",
+                        "net_profit_income_tax_2",
+                        "profit_after_tax_1",
+                        "profit_after_tax_2",
+                        "withheld_tax_1",
+                        "withheld_tax_2",
                         "signature",
                         "rank",
                     ]
@@ -1697,58 +1701,58 @@ def IP_110(request):
                     closing_date,
                     start_year,
                     end_year,
-                    services_revenues_12,
-                    services_revenues_13,
-                    industries_businesses_12,
-                    industries_businesses_13,
-                    people_12,
-                    people_13,
-                    sales_12,
-                    sales_13,
-                    incomes_rents_12,
-                    incomes_rents_13,
-                    incomes_interests_12,
-                    incomes_interests_13,
-                    dividends_12,
-                    dividends_13,
-                    others_incomes_12,
-                    others_incomes_13,
-                    total_income_12,
-                    total_income_13,
-                    expenses_12,
-                    expenses_13,
-                    salaries_2012,
-                    salaries_2013,
-                    expenses_interests_12,
-                    expenses_interests_13,
-                    expenses_rents_12,
-                    expenses_rents_13,
-                    depreciation_12,
-                    depreciation_13,
-                    bad_debts_12,
-                    bad_debts_13,
-                    donations_12,
-                    donations_13,
-                    sales_tax_12,
-                    sales_tax_13,
-                    machinery_12,
-                    machinery_13,
-                    other_purchases_12,
-                    other_purchases_13,
-                    licenses_12,
-                    licenses_13,
-                    other_expenses_12,
-                    other_expenses_13,
-                    total_expenses_12,
-                    total_expenses_13,
-                    net_profit_12,
-                    net_profit_13,
-                    income_tax_12,
-                    income_tax_13,
-                    profit_after_tax_12,
-                    profit_after_tax_13,
-                    withheld_tax_12,
-                    withheld_tax_13,
+                    incomes_services_revenues_1,
+                    incomes_services_revenues_2,
+                    incomes_industries_1,
+                    incomes_industries_2,
+                    incomes_persons_1,
+                    incomes_persons_2,
+                    incomes_sale_merchandise_1,
+                    incomes_sale_merchandise_2,
+                    incomes_rents_1,
+                    incomes_rents_2,
+                    incomes_interests_1,
+                    incomes_interests_2,
+                    incomes_capital_gain_loss_1,
+                    incomes_capital_gain_loss_2,
+                    others_incomes_1,
+                    others_incomes_2,
+                    total_income_1,
+                    total_income_2,
+                    expenses_1,
+                    expenses_2,
+                    expenses_salaries_wages_bonus_1,
+                    expenses_salaries_wages_bonus_2,
+                    expenses_interests_1,
+                    expenses_interests_2,
+                    expenses_rents_1,
+                    expenses_rents_2,
+                    expenses_depreciation_1,
+                    expenses_depreciation_2,
+                    expenses_bad_debts_1,
+                    expenses_bad_debts_2,
+                    expenses_donation_1,
+                    expenses_donation_2,
+                    expenses_sales_tax_1,
+                    expenses_sales_tax_2,
+                    expenses_machinery_1,
+                    expenses_machinery_2,
+                    other_purchases_1,
+                    other_purchases_2,
+                    licenses_1,
+                    licenses_2,
+                    other_expenses_1,
+                    other_expenses_2,
+                    total_expenses_1,
+                    total_expenses_2,
+                    net_profit_1,
+                    net_profit_2,
+                    net_profit_income_tax_1,
+                    net_profit_income_tax_2,
+                    profit_after_tax_1,
+                    profit_after_tax_2,
+                    withheld_tax_1,
+                    withheld_tax_2,
                     signature,
                     rank,
                 ]
@@ -5809,7 +5813,7 @@ def IP_440g(request):
 
         dividends_A_1 = request.POST.get("dividends_A_1")
         dividends_A_2 = request.POST.get("dividends_A_2")
-        
+
         others_A_1 = request.POST.get("others_A_1")
         others_A_2 = request.POST.get("others_A_2")
 
@@ -9164,37 +9168,37 @@ def JP_544_2(request):
         federal_program_1 = request.POST.get("federal_program_1")
         federal_recieived_amount_1 = request.POST.get("federal_recieived_amount_1")
         federal_date_receipt_1 = request.POST.get("federal_date_receipt_1")
-        
+
         federal_agency_name_2 = request.POST.get("federal_agency_name_2")
         federal_program_2 = request.POST.get("federal_program_2")
         federal_recieived_amount_2 = request.POST.get("federal_recieived_amount_2")
         federal_date_receipt_2 = request.POST.get("federal_date_receipt_2")
-        
+
         federal_agency_name_3 = request.POST.get("federal_agency_name_3")
         federal_program_3 = request.POST.get("federal_program_3")
         federal_recieived_amount_3 = request.POST.get("federal_recieived_amount_3")
         federal_date_receipt_3 = request.POST.get("federal_date_receipt_3")
-        
+
         federal_agency_name_4 = request.POST.get("federal_agency_name_4")
         federal_program_4 = request.POST.get("federal_program_4")
         federal_recieived_amount_4 = request.POST.get("federal_recieived_amount_4")
         federal_date_receipt_4 = request.POST.get("federal_date_receipt_4")
-        
+
         federal_agency_name_5 = request.POST.get("federal_agency_name_5")
         federal_program_5 = request.POST.get("federal_program_5")
         federal_recieived_amount_5 = request.POST.get("federal_recieived_amount_5")
         federal_date_receipt_5 = request.POST.get("federal_date_receipt_5")
-        
+
         federal_agency_name_6 = request.POST.get("federal_agency_name_6")
         federal_program_6 = request.POST.get("federal_program_6")
         federal_recieived_amount_6 = request.POST.get("federal_recieived_amount_6")
         federal_date_receipt_6 = request.POST.get("federal_date_receipt_6")
-        
+
         federal_agency_name_7 = request.POST.get("federal_agency_name_7")
         federal_program_7 = request.POST.get("federal_program_7")
         federal_recieived_amount_7 = request.POST.get("federal_recieived_amount_7")
         federal_date_receipt_7 = request.POST.get("federal_date_receipt_7")
-        
+
         federal_agency_name_8 = request.POST.get("federal_agency_name_8")
         federal_program_8 = request.POST.get("federal_program_8")
         federal_recieived_amount_8 = request.POST.get("federal_recieived_amount_8")
@@ -9204,36 +9208,36 @@ def JP_544_2(request):
         agency_program_1 = request.POST.get("agency_program_1")
         agency_recieived_amount_1 = request.POST.get("agency_recieived_amount_1")
         agency_date_receipt_1 = request.POST.get("agency_date_receipt_1")
-        
+
         local_agency_name_2 = request.POST.get("local_agency_name_2")
         agency_program_2 = request.POST.get("agency_program_2")
         agency_recieived_amount_2 = request.POST.get("agency_recieived_amount_2")
         agency_date_receipt_2 = request.POST.get("agency_date_receipt_2")
-        
+
         local_agency_name_3 = request.POST.get("local_agency_name_3")
         agency_program_3 = request.POST.get("agency_program_3")
         agency_recieived_amount_3 = request.POST.get("agency_recieived_amount_3")
         agency_date_receipt_3 = request.POST.get("agency_date_receipt_3")
-        
+
         local_agency_name_4 = request.POST.get("local_agency_name_4")
         agency_program_4 = request.POST.get("agency_program_4")
         agency_recieived_amount_4 = request.POST.get("agency_recieived_amount_4")
         agency_date_receipt_4 = request.POST.get("agency_date_receipt_4")
-        
+
         local_agency_name_5 = request.POST.get("local_agency_name_5")
         agency_program_5 = request.POST.get("agency_program_5")
         agency_recieived_amount_5 = request.POST.get("agency_recieived_amount_5")
         agency_date_receipt_5 = request.POST.get("agency_date_receipt_5")
-        
+
         total_students_enrolled = request.POST.get("total_students_enrolled")
         students_recived_amount = request.POST.get("students_recived_amount")
-        
+
         total_pell_grant_students = request.POST.get("total_pell_grant_students")
         pell_grant_students_amount = request.POST.get("pell_grant_students_amount")
 
         total_no_resident_student = request.POST.get("total_no_resident_student")
         no_resident_student_amount = request.POST.get("no_resident_student_amount")
-        
+
         no_resident_students_bills = request.POST.get("no_resident_students_bills")
 
         loans_granted = request.POST.get("loans_granted")
@@ -9242,46 +9246,61 @@ def JP_544_2(request):
         donations_institution_name_1 = request.POST.get("donations_institution_name_1")
         donations_amount_1 = request.POST.get("donations_amount_1")
         donations_date_1 = request.POST.get("donations_date_1")
-        
+
         donations_institution_name_2 = request.POST.get("donations_institution_name_2")
         donations_amount_2 = request.POST.get("donations_amount_2")
         donations_date_2 = request.POST.get("donations_date_2")
-        
+
         donations_institution_name_3 = request.POST.get("donations_institution_name_3")
         donations_amount_3 = request.POST.get("donations_amount_3")
         donations_date_3 = request.POST.get("donations_date_3")
-        
+
         donations_institution_name_4 = request.POST.get("donations_institution_name_4")
         donations_amount_4 = request.POST.get("donations_amount_4")
         donations_date_4 = request.POST.get("donations_date_4")
-        
+
         donations_institution_name_5 = request.POST.get("donations_institution_name_5")
         donations_amount_5 = request.POST.get("donations_amount_5")
         donations_date_5 = request.POST.get("donations_date_5")
-        
+
         profesional_services_amount = request.POST.get("profesional_services_amount")
         profesional_services_payment = request.POST.get("profesional_services_payment")
-        
+
         other_payment_relations_1 = request.POST.get("other_payment_relations_1")
-        other_payment_relations_amount_1 = request.POST.get("other_payment_relations_amount_1")
-        other_payment_relations_payment_1 = request.POST.get("other_payment_relations_payment_1")
-        
+        other_payment_relations_amount_1 = request.POST.get(
+            "other_payment_relations_amount_1"
+        )
+        other_payment_relations_payment_1 = request.POST.get(
+            "other_payment_relations_payment_1"
+        )
+
         other_payment_relations_2 = request.POST.get("other_payment_relations_2")
-        other_payment_relations_amount_2 = request.POST.get("other_payment_relations_amount_2")
-        other_payment_relations_payment_2 = request.POST.get("other_payment_relations_payment_2")
-        
+        other_payment_relations_amount_2 = request.POST.get(
+            "other_payment_relations_amount_2"
+        )
+        other_payment_relations_payment_2 = request.POST.get(
+            "other_payment_relations_payment_2"
+        )
+
         other_payment_relations_3 = request.POST.get("other_payment_relations_3")
-        other_payment_relations_amount_3 = request.POST.get("other_payment_relations_amount_3")
-        other_payment_relations_payment_3 = request.POST.get("other_payment_relations_payment_3")
-        
+        other_payment_relations_amount_3 = request.POST.get(
+            "other_payment_relations_amount_3"
+        )
+        other_payment_relations_payment_3 = request.POST.get(
+            "other_payment_relations_payment_3"
+        )
+
         other_payment_relations_4 = request.POST.get("other_payment_relations_4")
-        other_payment_relations_amount_4 = request.POST.get("other_payment_relations_amount_4")
-        other_payment_relations_payment_4 = request.POST.get("other_payment_relations_payment_4")
-        
+        other_payment_relations_amount_4 = request.POST.get(
+            "other_payment_relations_amount_4"
+        )
+        other_payment_relations_payment_4 = request.POST.get(
+            "other_payment_relations_payment_4"
+        )
+
         acquired_value = request.POST.get("acquired_value")
         investment_amount = request.POST.get("investment_amount")
         recived_interest = request.POST.get("recived_interest")
-        
 
         csv_file_path = "data/cuestionarios/balanza_de_pagos/JP-544-2.csv"
         file_exists = (
@@ -9292,71 +9311,211 @@ def JP_544_2(request):
             writer = csv.writer(file)
 
             if not file_exists:
-                writer.writerow([
-                    "university_name", "phone", "contact_person", "direction", "email",
-                    "federal_agency_name_1", "federal_program_1", "federal_recieived_amount_1", "federal_date_receipt_1",
-                    "federal_agency_name_2", "federal_program_2", "federal_recieived_amount_2", "federal_date_receipt_2",
-                    "federal_agency_name_3", "federal_program_3", "federal_recieived_amount_3", "federal_date_receipt_3",
-                    "federal_agency_name_4", "federal_program_4", "federal_recieived_amount_4", "federal_date_receipt_4",
-                    "federal_agency_name_5", "federal_program_5", "federal_recieived_amount_5", "federal_date_receipt_5",
-                    "federal_agency_name_6", "federal_program_6", "federal_recieived_amount_6", "federal_date_receipt_6",
-                    "federal_agency_name_7", "federal_program_7", "federal_recieived_amount_7", "federal_date_receipt_7",
-                    "federal_agency_name_8", "federal_program_8", "federal_recieived_amount_8", "federal_date_receipt_8",
-                    "local_agency_name_1", "agency_program_1", "agency_recieived_amount_1", "agency_date_receipt_1",
-                    "local_agency_name_2", "agency_program_2", "agency_recieived_amount_2", "agency_date_receipt_2",
-                    "local_agency_name_3", "agency_program_3", "agency_recieived_amount_3", "agency_date_receipt_3",
-                    "local_agency_name_4", "agency_program_4", "agency_recieived_amount_4", "agency_date_receipt_4",
-                    "local_agency_name_5", "agency_program_5", "agency_recieived_amount_5", "agency_date_receipt_5",
-                    "total_students_enrolled", "students_recived_amount",
-                    "total_pell_grant_students", "pell_grant_students_amount",
-                    "total_no_resident_student", "no_resident_student_amount",
-                    "no_resident_students_bills",
-                    "loans_granted", "loans_granted_amount",
-                    "donations_institution_name_1", "donations_amount_1", "donations_date_1",
-                    "donations_institution_name_2", "donations_amount_2", "donations_date_2",
-                    "donations_institution_name_3", "donations_amount_3", "donations_date_3",
-                    "donations_institution_name_4", "donations_amount_4", "donations_date_4",
-                    "donations_institution_name_5", "donations_amount_5", "donations_date_5",
-                    "profesional_services_amount", "profesional_services_payment",
-                    "other_payment_relations_1", "other_payment_relations_amount_1", "other_payment_relations_payment_1",
-                    "other_payment_relations_2", "other_payment_relations_amount_2", "other_payment_relations_payment_2",
-                    "other_payment_relations_3", "other_payment_relations_amount_3", "other_payment_relations_payment_3",
-                    "other_payment_relations_4", "other_payment_relations_amount_4", "other_payment_relations_payment_4",
-                    "acquired_value", "investment_amount", "recived_interest"
-                    ])
+                writer.writerow(
+                    [
+                        "university_name",
+                        "phone",
+                        "contact_person",
+                        "direction",
+                        "email",
+                        "federal_agency_name_1",
+                        "federal_program_1",
+                        "federal_recieived_amount_1",
+                        "federal_date_receipt_1",
+                        "federal_agency_name_2",
+                        "federal_program_2",
+                        "federal_recieived_amount_2",
+                        "federal_date_receipt_2",
+                        "federal_agency_name_3",
+                        "federal_program_3",
+                        "federal_recieived_amount_3",
+                        "federal_date_receipt_3",
+                        "federal_agency_name_4",
+                        "federal_program_4",
+                        "federal_recieived_amount_4",
+                        "federal_date_receipt_4",
+                        "federal_agency_name_5",
+                        "federal_program_5",
+                        "federal_recieived_amount_5",
+                        "federal_date_receipt_5",
+                        "federal_agency_name_6",
+                        "federal_program_6",
+                        "federal_recieived_amount_6",
+                        "federal_date_receipt_6",
+                        "federal_agency_name_7",
+                        "federal_program_7",
+                        "federal_recieived_amount_7",
+                        "federal_date_receipt_7",
+                        "federal_agency_name_8",
+                        "federal_program_8",
+                        "federal_recieived_amount_8",
+                        "federal_date_receipt_8",
+                        "local_agency_name_1",
+                        "agency_program_1",
+                        "agency_recieived_amount_1",
+                        "agency_date_receipt_1",
+                        "local_agency_name_2",
+                        "agency_program_2",
+                        "agency_recieived_amount_2",
+                        "agency_date_receipt_2",
+                        "local_agency_name_3",
+                        "agency_program_3",
+                        "agency_recieived_amount_3",
+                        "agency_date_receipt_3",
+                        "local_agency_name_4",
+                        "agency_program_4",
+                        "agency_recieived_amount_4",
+                        "agency_date_receipt_4",
+                        "local_agency_name_5",
+                        "agency_program_5",
+                        "agency_recieived_amount_5",
+                        "agency_date_receipt_5",
+                        "total_students_enrolled",
+                        "students_recived_amount",
+                        "total_pell_grant_students",
+                        "pell_grant_students_amount",
+                        "total_no_resident_student",
+                        "no_resident_student_amount",
+                        "no_resident_students_bills",
+                        "loans_granted",
+                        "loans_granted_amount",
+                        "donations_institution_name_1",
+                        "donations_amount_1",
+                        "donations_date_1",
+                        "donations_institution_name_2",
+                        "donations_amount_2",
+                        "donations_date_2",
+                        "donations_institution_name_3",
+                        "donations_amount_3",
+                        "donations_date_3",
+                        "donations_institution_name_4",
+                        "donations_amount_4",
+                        "donations_date_4",
+                        "donations_institution_name_5",
+                        "donations_amount_5",
+                        "donations_date_5",
+                        "profesional_services_amount",
+                        "profesional_services_payment",
+                        "other_payment_relations_1",
+                        "other_payment_relations_amount_1",
+                        "other_payment_relations_payment_1",
+                        "other_payment_relations_2",
+                        "other_payment_relations_amount_2",
+                        "other_payment_relations_payment_2",
+                        "other_payment_relations_3",
+                        "other_payment_relations_amount_3",
+                        "other_payment_relations_payment_3",
+                        "other_payment_relations_4",
+                        "other_payment_relations_amount_4",
+                        "other_payment_relations_payment_4",
+                        "acquired_value",
+                        "investment_amount",
+                        "recived_interest",
+                    ]
+                )
 
-            writer.writerow([
-                university_name, phone, contact_person, direction, email,
-                federal_agency_name_1, federal_program_1, federal_recieived_amount_1, federal_date_receipt_1,
-                federal_agency_name_2, federal_program_2, federal_recieived_amount_2, federal_date_receipt_2,
-                federal_agency_name_3, federal_program_3, federal_recieived_amount_3, federal_date_receipt_3,
-                federal_agency_name_4, federal_program_4, federal_recieived_amount_4, federal_date_receipt_4,
-                federal_agency_name_5, federal_program_5, federal_recieived_amount_5, federal_date_receipt_5,
-                federal_agency_name_6, federal_program_6, federal_recieived_amount_6, federal_date_receipt_6,
-                federal_agency_name_7, federal_program_7, federal_recieived_amount_7, federal_date_receipt_7,
-                federal_agency_name_8, federal_program_8, federal_recieived_amount_8, federal_date_receipt_8,
-                local_agency_name_1, agency_program_1, agency_recieived_amount_1, agency_date_receipt_1,
-                local_agency_name_2, agency_program_2, agency_recieived_amount_2, agency_date_receipt_2,
-                local_agency_name_3, agency_program_3, agency_recieived_amount_3, agency_date_receipt_3,
-                local_agency_name_4, agency_program_4, agency_recieived_amount_4, agency_date_receipt_4,
-                local_agency_name_5, agency_program_5, agency_recieived_amount_5, agency_date_receipt_5,
-                total_students_enrolled, students_recived_amount,
-                total_pell_grant_students, pell_grant_students_amount,
-                total_no_resident_student, no_resident_student_amount,
-                no_resident_students_bills,
-                loans_granted, loans_granted_amount,
-                donations_institution_name_1, donations_amount_1, donations_date_1,
-                donations_institution_name_2, donations_amount_2, donations_date_2,
-                donations_institution_name_3, donations_amount_3, donations_date_3,
-                donations_institution_name_4, donations_amount_4, donations_date_4,
-                donations_institution_name_5, donations_amount_5, donations_date_5,
-                profesional_services_amount, profesional_services_payment,
-                other_payment_relations_1, other_payment_relations_amount_1, other_payment_relations_payment_1,
-                other_payment_relations_2, other_payment_relations_amount_2, other_payment_relations_payment_2,
-                other_payment_relations_3, other_payment_relations_amount_3, other_payment_relations_payment_3,
-                other_payment_relations_4, other_payment_relations_amount_4, other_payment_relations_payment_4,
-                acquired_value, investment_amount, recived_interest
-                ])
+            writer.writerow(
+                [
+                    university_name,
+                    phone,
+                    contact_person,
+                    direction,
+                    email,
+                    federal_agency_name_1,
+                    federal_program_1,
+                    federal_recieived_amount_1,
+                    federal_date_receipt_1,
+                    federal_agency_name_2,
+                    federal_program_2,
+                    federal_recieived_amount_2,
+                    federal_date_receipt_2,
+                    federal_agency_name_3,
+                    federal_program_3,
+                    federal_recieived_amount_3,
+                    federal_date_receipt_3,
+                    federal_agency_name_4,
+                    federal_program_4,
+                    federal_recieived_amount_4,
+                    federal_date_receipt_4,
+                    federal_agency_name_5,
+                    federal_program_5,
+                    federal_recieived_amount_5,
+                    federal_date_receipt_5,
+                    federal_agency_name_6,
+                    federal_program_6,
+                    federal_recieived_amount_6,
+                    federal_date_receipt_6,
+                    federal_agency_name_7,
+                    federal_program_7,
+                    federal_recieived_amount_7,
+                    federal_date_receipt_7,
+                    federal_agency_name_8,
+                    federal_program_8,
+                    federal_recieived_amount_8,
+                    federal_date_receipt_8,
+                    local_agency_name_1,
+                    agency_program_1,
+                    agency_recieived_amount_1,
+                    agency_date_receipt_1,
+                    local_agency_name_2,
+                    agency_program_2,
+                    agency_recieived_amount_2,
+                    agency_date_receipt_2,
+                    local_agency_name_3,
+                    agency_program_3,
+                    agency_recieived_amount_3,
+                    agency_date_receipt_3,
+                    local_agency_name_4,
+                    agency_program_4,
+                    agency_recieived_amount_4,
+                    agency_date_receipt_4,
+                    local_agency_name_5,
+                    agency_program_5,
+                    agency_recieived_amount_5,
+                    agency_date_receipt_5,
+                    total_students_enrolled,
+                    students_recived_amount,
+                    total_pell_grant_students,
+                    pell_grant_students_amount,
+                    total_no_resident_student,
+                    no_resident_student_amount,
+                    no_resident_students_bills,
+                    loans_granted,
+                    loans_granted_amount,
+                    donations_institution_name_1,
+                    donations_amount_1,
+                    donations_date_1,
+                    donations_institution_name_2,
+                    donations_amount_2,
+                    donations_date_2,
+                    donations_institution_name_3,
+                    donations_amount_3,
+                    donations_date_3,
+                    donations_institution_name_4,
+                    donations_amount_4,
+                    donations_date_4,
+                    donations_institution_name_5,
+                    donations_amount_5,
+                    donations_date_5,
+                    profesional_services_amount,
+                    profesional_services_payment,
+                    other_payment_relations_1,
+                    other_payment_relations_amount_1,
+                    other_payment_relations_payment_1,
+                    other_payment_relations_2,
+                    other_payment_relations_amount_2,
+                    other_payment_relations_payment_2,
+                    other_payment_relations_3,
+                    other_payment_relations_amount_3,
+                    other_payment_relations_payment_3,
+                    other_payment_relations_4,
+                    other_payment_relations_amount_4,
+                    other_payment_relations_payment_4,
+                    acquired_value,
+                    investment_amount,
+                    recived_interest,
+                ]
+            )
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-2.html")
@@ -11435,222 +11594,430 @@ def IP_720(request):
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-720.html")
 
+
 def IP_810(request):
     if request.method == "POST":
-          # Retrieve form data
-        company_name = request.POST.get('company_name')
-        address = request.POST.get('address')
-        email = request.POST.get('email')
-        liaison_officer = request.POST.get('liaison_officer')
-        ssn = request.POST.get('ssn')
-        tel = request.POST.get('tel')
-        fax = request.POST.get('fax')
-        legal_form = request.POST.get('legal_form')
-        cfc = request.POST.get('cfc')
-        business_type = request.POST.get('business_type')
-        business_function = request.POST.get('business_function')
-        branches = request.POST.get('branches')
-        branches_yes = request.POST.get('branches_yes')
-        closing_date = request.POST.get('closing_date')
-        
-        start_year = request.POST.get('start_year')
-        end_year = request.POST.get('end_year')
-        
-        total_income_1 = request.POST.get('total_income_1')
-        total_income_2 = request.POST.get('total_income_2')
-        services_rendered_1 = request.POST.get('services_rendered_1')
-        services_rendered_2 = request.POST.get('services_rendered_2')
-        from_persons_1 = request.POST.get('from_persons_1')
-        from_persons_2 = request.POST.get('from_persons_2')
-        industries_businesses_1 = request.POST.get('industries_businesses_1')
-        industries_businesses_2 = request.POST.get('industries_businesses_2')
-        sales_1 = request.POST.get('sales_1')
-        sales_2 = request.POST.get('sales_2')
-        rent_machinery_1 = request.POST.get('rent_machinery_1')
-        rent_machinery_2 = request.POST.get('rent_machinery_2')
-        rent_land_1 = request.POST.get('rent_land_1')
-        rent_land_2 = request.POST.get('rent_land_2')
-        interest_1 = request.POST.get('interest_1')
-        interest_2 = request.POST.get('interest_2')
-        capitan_gain_loss_1 = request.POST.get('capitan_gain_loss_1')
-        capitan_gain_loss_2 = request.POST.get('capitan_gain_loss_2')
-        
-        total_expenses_1 = request.POST.get('total_expenses_1')
-        total_expenses_2 = request.POST.get('total_expenses_2')
-        salaries_1 = request.POST.get('salaries_1')
-        salaries_2 = request.POST.get('salaries_2')
-        expenses_interests_1 = request.POST.get('expenses_interests_1')
-        expenses_interests_2 = request.POST.get('expenses_interests_2')
-        expenses_rents_1 = request.POST.get('expenses_rents_1')
-        expenses_rents_2 = request.POST.get('expenses_rents_2')
-        depreciation_1 = request.POST.get('depreciation_1')
-        depreciation_2 = request.POST.get('depreciation_2')
-        bad_debts_1 = request.POST.get('bad_debts_1')
-        bad_debts_2 = request.POST.get('bad_debts_2')
-        donations_1 = request.POST.get('donations_1')
-        donations_2 = request.POST.get('donations_2')
-        other_operating_expenses_1 = request.POST.get('other_operating_expenses_1')
-        other_operating_expenses_2 = request.POST.get('other_operating_expenses_2')
-        sales_tax_1 = request.POST.get('sales_tax_1')
-        sales_tax_2 = request.POST.get('sales_tax_2')
-        purchases_1 = request.POST.get('purchases_1')
-        purchases_2 = request.POST.get('purchases_2')
-        other_purchases_1 = request.POST.get('other_purchases_1')
-        other_purchases_2 = request.POST.get('other_purchases_2')
-        licenses_patents_1 = request.POST.get('licenses_patents_1')
-        licenses_patents_2 = request.POST.get('licenses_patents_2')
-        
-        net_profit_loss_1 = request.POST.get('net_profit_loss_1')
-        net_profit_loss_2 = request.POST.get('net_profit_loss_2')
-        income_tax_1 = request.POST.get('income_tax_1')
-        income_tax_2 = request.POST.get('income_tax_2')
-        profit_after_tax_1 = request.POST.get('profit_after_tax_1')
-        profit_after_tax_2 = request.POST.get('profit_after_tax_2')
-        
-        withheld_tax_1 = request.POST.get('withheld_tax_1')
-        withheld_tax_2 = request.POST.get('withheld_tax_2')
-        
-        name = request.POST.get('name')
-        rank = request.POST.get('rank')
-        
-        csv_file_path = 'data/cuestionarios/ingreso_neto/IP-810.csv'
-        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+        # Retrieve form data
+        company_name = request.POST.get("company_name")
+        address = request.POST.get("address")
+        email = request.POST.get("email")
+        liaison_officer = request.POST.get("liaison_officer")
+        ssn = request.POST.get("ssn")
+        tel = request.POST.get("tel")
+        fax = request.POST.get("fax")
+        legal_form = request.POST.get("legal_form")
+        cfc = request.POST.get("cfc")
+        business_type = request.POST.get("business_type")
+        business_function = request.POST.get("business_function")
+        branches = request.POST.get("branches")
+        branches_yes = request.POST.get("branches_yes")
+        closing_date = request.POST.get("closing_date")
 
-        with open(csv_file_path, mode='a', newline='') as file:
+        start_year = request.POST.get("start_year")
+        end_year = request.POST.get("end_year")
+
+        total_income_1 = request.POST.get("total_income_1")
+        total_income_2 = request.POST.get("total_income_2")
+        services_rendered_1 = request.POST.get("services_rendered_1")
+        services_rendered_2 = request.POST.get("services_rendered_2")
+        from_persons_1 = request.POST.get("from_persons_1")
+        from_persons_2 = request.POST.get("from_persons_2")
+        industries_businesses_1 = request.POST.get("industries_businesses_1")
+        industries_businesses_2 = request.POST.get("industries_businesses_2")
+        sales_1 = request.POST.get("sales_1")
+        sales_2 = request.POST.get("sales_2")
+        rent_machinery_1 = request.POST.get("rent_machinery_1")
+        rent_machinery_2 = request.POST.get("rent_machinery_2")
+        rent_land_1 = request.POST.get("rent_land_1")
+        rent_land_2 = request.POST.get("rent_land_2")
+        interest_1 = request.POST.get("interest_1")
+        interest_2 = request.POST.get("interest_2")
+        capitan_gain_loss_1 = request.POST.get("capitan_gain_loss_1")
+        capitan_gain_loss_2 = request.POST.get("capitan_gain_loss_2")
+
+        total_expenses_1 = request.POST.get("total_expenses_1")
+        total_expenses_2 = request.POST.get("total_expenses_2")
+        salaries_1 = request.POST.get("salaries_1")
+        salaries_2 = request.POST.get("salaries_2")
+        expenses_interests_1 = request.POST.get("expenses_interests_1")
+        expenses_interests_2 = request.POST.get("expenses_interests_2")
+        expenses_rents_1 = request.POST.get("expenses_rents_1")
+        expenses_rents_2 = request.POST.get("expenses_rents_2")
+        depreciation_1 = request.POST.get("depreciation_1")
+        depreciation_2 = request.POST.get("depreciation_2")
+        bad_debts_1 = request.POST.get("bad_debts_1")
+        bad_debts_2 = request.POST.get("bad_debts_2")
+        donations_1 = request.POST.get("donations_1")
+        donations_2 = request.POST.get("donations_2")
+        other_operating_expenses_1 = request.POST.get("other_operating_expenses_1")
+        other_operating_expenses_2 = request.POST.get("other_operating_expenses_2")
+        sales_tax_1 = request.POST.get("sales_tax_1")
+        sales_tax_2 = request.POST.get("sales_tax_2")
+        purchases_1 = request.POST.get("purchases_1")
+        purchases_2 = request.POST.get("purchases_2")
+        other_purchases_1 = request.POST.get("other_purchases_1")
+        other_purchases_2 = request.POST.get("other_purchases_2")
+        licenses_patents_1 = request.POST.get("licenses_patents_1")
+        licenses_patents_2 = request.POST.get("licenses_patents_2")
+
+        net_profit_loss_1 = request.POST.get("net_profit_loss_1")
+        net_profit_loss_2 = request.POST.get("net_profit_loss_2")
+        income_tax_1 = request.POST.get("income_tax_1")
+        income_tax_2 = request.POST.get("income_tax_2")
+        profit_after_tax_1 = request.POST.get("profit_after_tax_1")
+        profit_after_tax_2 = request.POST.get("profit_after_tax_2")
+
+        withheld_tax_1 = request.POST.get("withheld_tax_1")
+        withheld_tax_2 = request.POST.get("withheld_tax_2")
+
+        name = request.POST.get("name")
+        rank = request.POST.get("rank")
+
+        csv_file_path = "data/cuestionarios/ingreso_neto/IP-810.csv"
+        file_exists = (
+            os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+        )
+
+        with open(csv_file_path, mode="a", newline="") as file:
             writer = csv.writer(file)
-            
+
             if not file_exists:
-                writer.writerow([
-                                "company_name", "address", "email", "liaison_officer",
-                                "ssn", "tel", "fax", "legal_form", "cfc", "business_type",
-                                "business_function", "branches", "branches_yes", "closing_date", "start_year", "end_year",
-                                "total_income_1", "total_income_2", "services_rendered_1", "services_rendered_2",
-                                "from_persons_1", "from_persons_2", "industries_businesses_1", "industries_businesses_2",
-                                "sales_1", "sales_2", "rent_machinery_1", "rent_machinery_2",
-                                "rent_land_1", "rent_land_2", "interest_1", "interest_2",
-                                "capitan_gain_loss_1", "capitan_gain_loss_2", "total_expenses_1", "total_expenses_2",
-                                "salaries_1", "salaries_2", "expenses_interests_1", "expenses_interests_2",
-                                "expenses_rents_1", "expenses_rents_2", "depreciation_1", "depreciation_2",
-                                "bad_debts_1", "bad_debts_2", "donations_1", "donations_2",
-                                "other_operating_expenses_1", "other_operating_expenses_2", "sales_tax_1", "sales_tax_2",
-                                "purchases_1", "purchases_2", "other_purchases_1", "other_purchases_2",
-                                "licenses_patents_1", "licenses_patents_2", "net_profit_loss_1", "net_profit_loss_2",
-                                "income_tax_1", "income_tax_2", "profit_after_tax_1", "profit_after_tax_2",
-                                "withheld_tax_1", "withheld_tax_2", "name", "rank"
-                                ])
-            
-            writer.writerow([
-                            company_name, address, email, liaison_officer,
-                            ssn, tel, fax, legal_form, cfc, business_type, business_function, branches, branches_yes,
-                            closing_date, start_year, end_year, total_income_1, total_income_2, services_rendered_1,
-                            services_rendered_2, from_persons_1, from_persons_2, industries_businesses_1, industries_businesses_2,
-                            sales_1, sales_2, rent_machinery_1, rent_machinery_2, rent_land_1,
-                            rent_land_2, interest_1, interest_2, capitan_gain_loss_1, capitan_gain_loss_2,
-                            total_expenses_1, total_expenses_2, salaries_1, salaries_2, expenses_interests_1,
-                            expenses_interests_2, expenses_rents_1, expenses_rents_2, depreciation_1, depreciation_2,
-                            bad_debts_1, bad_debts_2, donations_1, donations_2, other_operating_expenses_1,
-                            other_operating_expenses_2, sales_tax_1, sales_tax_2, purchases_1, purchases_2,
-                            other_purchases_1, other_purchases_2, licenses_patents_1, licenses_patents_2, net_profit_loss_1,
-                            net_profit_loss_2, income_tax_1, income_tax_2, profit_after_tax_1, profit_after_tax_2,
-                            withheld_tax_1, withheld_tax_2, name, rank
-                            ])  
+                writer.writerow(
+                    [
+                        "company_name",
+                        "address",
+                        "email",
+                        "liaison_officer",
+                        "ssn",
+                        "tel",
+                        "fax",
+                        "legal_form",
+                        "cfc",
+                        "business_type",
+                        "business_function",
+                        "branches",
+                        "branches_yes",
+                        "closing_date",
+                        "start_year",
+                        "end_year",
+                        "total_income_1",
+                        "total_income_2",
+                        "services_rendered_1",
+                        "services_rendered_2",
+                        "from_persons_1",
+                        "from_persons_2",
+                        "industries_businesses_1",
+                        "industries_businesses_2",
+                        "sales_1",
+                        "sales_2",
+                        "rent_machinery_1",
+                        "rent_machinery_2",
+                        "rent_land_1",
+                        "rent_land_2",
+                        "interest_1",
+                        "interest_2",
+                        "capitan_gain_loss_1",
+                        "capitan_gain_loss_2",
+                        "total_expenses_1",
+                        "total_expenses_2",
+                        "salaries_1",
+                        "salaries_2",
+                        "expenses_interests_1",
+                        "expenses_interests_2",
+                        "expenses_rents_1",
+                        "expenses_rents_2",
+                        "depreciation_1",
+                        "depreciation_2",
+                        "bad_debts_1",
+                        "bad_debts_2",
+                        "donations_1",
+                        "donations_2",
+                        "other_operating_expenses_1",
+                        "other_operating_expenses_2",
+                        "sales_tax_1",
+                        "sales_tax_2",
+                        "purchases_1",
+                        "purchases_2",
+                        "other_purchases_1",
+                        "other_purchases_2",
+                        "licenses_patents_1",
+                        "licenses_patents_2",
+                        "net_profit_loss_1",
+                        "net_profit_loss_2",
+                        "income_tax_1",
+                        "income_tax_2",
+                        "profit_after_tax_1",
+                        "profit_after_tax_2",
+                        "withheld_tax_1",
+                        "withheld_tax_2",
+                        "name",
+                        "rank",
+                    ]
+                )
+
+            writer.writerow(
+                [
+                    company_name,
+                    address,
+                    email,
+                    liaison_officer,
+                    ssn,
+                    tel,
+                    fax,
+                    legal_form,
+                    cfc,
+                    business_type,
+                    business_function,
+                    branches,
+                    branches_yes,
+                    closing_date,
+                    start_year,
+                    end_year,
+                    total_income_1,
+                    total_income_2,
+                    services_rendered_1,
+                    services_rendered_2,
+                    from_persons_1,
+                    from_persons_2,
+                    industries_businesses_1,
+                    industries_businesses_2,
+                    sales_1,
+                    sales_2,
+                    rent_machinery_1,
+                    rent_machinery_2,
+                    rent_land_1,
+                    rent_land_2,
+                    interest_1,
+                    interest_2,
+                    capitan_gain_loss_1,
+                    capitan_gain_loss_2,
+                    total_expenses_1,
+                    total_expenses_2,
+                    salaries_1,
+                    salaries_2,
+                    expenses_interests_1,
+                    expenses_interests_2,
+                    expenses_rents_1,
+                    expenses_rents_2,
+                    depreciation_1,
+                    depreciation_2,
+                    bad_debts_1,
+                    bad_debts_2,
+                    donations_1,
+                    donations_2,
+                    other_operating_expenses_1,
+                    other_operating_expenses_2,
+                    sales_tax_1,
+                    sales_tax_2,
+                    purchases_1,
+                    purchases_2,
+                    other_purchases_1,
+                    other_purchases_2,
+                    licenses_patents_1,
+                    licenses_patents_2,
+                    net_profit_loss_1,
+                    net_profit_loss_2,
+                    income_tax_1,
+                    income_tax_2,
+                    profit_after_tax_1,
+                    profit_after_tax_2,
+                    withheld_tax_1,
+                    withheld_tax_2,
+                    name,
+                    rank,
+                ]
+            )
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-810.html")
 
+
 def JP_547(request):
     if request.method == "POST":
         # Retrieve form data
-        agency_form = request.POST.get('agency_form')
-        agency_to = request.POST.get('agency_to')
-        
+        agency_form = request.POST.get("agency_form")
+        agency_to = request.POST.get("agency_to")
 
-        salaries_wages = request.POST.get('salaries_wages')
-        civil_service = request.POST.get('civil_service')
-        federal_employee_retirement = request.POST.get('federal_employee_retirement')
-        thrift_savings_disbursements = request.POST.get('thrift_savings_disbursements') 
-        socal_security = request.POST.get('socal_security')
-        life_insurance_health_disbursements = request.POST.get('life_insurance_health_disbursements')
-        other_disbursements = request.POST.get('other_disbursements')
-        construction_contracts = request.POST.get('construction_contracts')
-        rent_disbursements = request.POST.get('rent_disbursements')
-        other_purchases = request.POST.get('other_purchases')
-        equipment_supplies = request.POST.get('equipment_supplies')
-        rent_sales = request.POST.get('rent_sales')
-        other_sales = request.POST.get('other_sales')
-        income_tax = request.POST.get('income_tax')
-        other_taxes_licenses = request.POST.get('other_taxes_licenses')
-        fines_penalties = request.POST.get('fines_penalties')
-        interest = request.POST.get('interest')
-        other_collections_1 = request.POST.get('other_collections_1')
-        other_collections_amount_1 = request.POST.get('other_collections_amount_1')
-        other_collections_2 = request.POST.get('other_collections_2')
-        other_collections_amount_2 = request.POST.get('other_collections_amount_2')
-        other_collections_3 = request.POST.get('other_collections_3')
-        other_collections_amount_3 = request.POST.get('other_collections_amount_3')
-        civil_service_2 = request.POST.get('civil_service_2')
-        federal_employee = request.POST.get('federal_employee')
-        thrift_saving_deductions = request.POST.get('thrift_saving_deductions')
-        social_security = request.POST.get('social_security')
-        life_insurance_health_deductions = request.POST.get('life_insurance_health_deductions')
-        income_tax_deductions = request.POST.get('income_tax_deductions')
-        saving_bonds = request.POST.get('saving_bonds')
-        other_deductions = request.POST.get('other_deductions')
-        other_deductions_amount = request.POST.get('other_deductions_amount')
-        commonwealth = request.POST.get('commonwealth')
-        municipal = request.POST.get('municipal')
-        individuals_private_institutions = request.POST.get('individuals_private_institutions')
-        death_disability = request.POST.get('death_disability')
-        other_payments_1 = request.POST.get('other_payments_1')
-        other_payments_amount_1 = request.POST.get('other_payments_amount_1')
-        other_payments_2 = request.POST.get('other_payments_2')
-        other_payments_amount_2 = request.POST.get('other_payments_amount_2')
-        loans_advances = request.POST.get('loans_advances')
-        repayments_loans = request.POST.get('repayments_loans')
-        total_loans_amount = request.POST.get('total_loans_amount')
-        loans_cancelled = request.POST.get('loans_cancelled')
-        other_credits = request.POST.get('other_credits')
-        loans_and_advances = request.POST.get('loans_and_advances')
-        loans_and_advances_amount = request.POST.get('loans_and_advances_amount')
-        interest_collected = request.POST.get('interest_collected')
-        forgiveness_credit = request.POST.get('forgiveness_credit')
-        
-        reporting_agency = request.POST.get('reporting_agency')
-        
-        csv_file_path = 'data/cuestionarios/balanza_de_pagos/JP-547.csv'
-        file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+        salaries_wages = request.POST.get("salaries_wages")
+        civil_service = request.POST.get("civil_service")
+        federal_employee_retirement = request.POST.get("federal_employee_retirement")
+        thrift_savings_disbursements = request.POST.get("thrift_savings_disbursements")
+        socal_security = request.POST.get("socal_security")
+        life_insurance_health_disbursements = request.POST.get(
+            "life_insurance_health_disbursements"
+        )
+        other_disbursements = request.POST.get("other_disbursements")
+        construction_contracts = request.POST.get("construction_contracts")
+        rent_disbursements = request.POST.get("rent_disbursements")
+        other_purchases = request.POST.get("other_purchases")
+        equipment_supplies = request.POST.get("equipment_supplies")
+        rent_sales = request.POST.get("rent_sales")
+        other_sales = request.POST.get("other_sales")
+        income_tax = request.POST.get("income_tax")
+        other_taxes_licenses = request.POST.get("other_taxes_licenses")
+        fines_penalties = request.POST.get("fines_penalties")
+        interest = request.POST.get("interest")
+        other_collections_1 = request.POST.get("other_collections_1")
+        other_collections_amount_1 = request.POST.get("other_collections_amount_1")
+        other_collections_2 = request.POST.get("other_collections_2")
+        other_collections_amount_2 = request.POST.get("other_collections_amount_2")
+        other_collections_3 = request.POST.get("other_collections_3")
+        other_collections_amount_3 = request.POST.get("other_collections_amount_3")
+        civil_service_2 = request.POST.get("civil_service_2")
+        federal_employee = request.POST.get("federal_employee")
+        thrift_saving_deductions = request.POST.get("thrift_saving_deductions")
+        social_security = request.POST.get("social_security")
+        life_insurance_health_deductions = request.POST.get(
+            "life_insurance_health_deductions"
+        )
+        income_tax_deductions = request.POST.get("income_tax_deductions")
+        saving_bonds = request.POST.get("saving_bonds")
+        other_deductions = request.POST.get("other_deductions")
+        other_deductions_amount = request.POST.get("other_deductions_amount")
+        commonwealth = request.POST.get("commonwealth")
+        municipal = request.POST.get("municipal")
+        individuals_private_institutions = request.POST.get(
+            "individuals_private_institutions"
+        )
+        death_disability = request.POST.get("death_disability")
+        other_payments_1 = request.POST.get("other_payments_1")
+        other_payments_amount_1 = request.POST.get("other_payments_amount_1")
+        other_payments_2 = request.POST.get("other_payments_2")
+        other_payments_amount_2 = request.POST.get("other_payments_amount_2")
+        loans_advances = request.POST.get("loans_advances")
+        repayments_loans = request.POST.get("repayments_loans")
+        total_loans_amount = request.POST.get("total_loans_amount")
+        loans_cancelled = request.POST.get("loans_cancelled")
+        other_credits = request.POST.get("other_credits")
+        loans_and_advances = request.POST.get("loans_and_advances")
+        loans_and_advances_amount = request.POST.get("loans_and_advances_amount")
+        interest_collected = request.POST.get("interest_collected")
+        forgiveness_credit = request.POST.get("forgiveness_credit")
 
-        with open(csv_file_path, mode='a', newline='') as file:
+        reporting_agency = request.POST.get("reporting_agency")
+
+        csv_file_path = "data/cuestionarios/balanza_de_pagos/JP-547.csv"
+        file_exists = (
+            os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
+        )
+
+        with open(csv_file_path, mode="a", newline="") as file:
             writer = csv.writer(file)
-            
+
             if not file_exists:
-                writer.writerow([
-                                'agency_form','agency_to','salaries_wages','civil_service','federal_employee_retirement',
-                                'thrift_savings_disbursements','socal_security','life_insurance_health_disbursements','other_disbursements',
-                                'construction_contracts','rent_disbursements','other_purchases','equipment_supplies','rent_sales',
-                                'other_sales','income_tax','other_taxes_licenses','fines_penalties','interest','other_collections_1',
-                                'other_collections_amount_1','other_collections_2','other_collections_amount_2','other_collections_3',
-                                'other_collections_amount_3','civil_service_2','federal_employee','thrift_saving_deductions','social_security',
-                                'life_insurance_health_deductions','income_tax_deductions','saving_bonds','other_deductions', 'other_deductions_amount','commonwealth',
-                                'municipal','individuals_private_institutions','death_disability','other_payments_1','other_payments_amount_1',
-                                'other_payments_2','other_payments_amount_2','loans_advances','repayments_loans','total_loans_amount',
-                                'loans_cancelled','other_credits','loans_and_advances','loans_and_advances_amount','interest_collected',
-                                'forgiveness_credit','reporting_agency'
-                                ])
-            
-            writer.writerow([
-                            agency_form, agency_to, salaries_wages, civil_service, federal_employee_retirement,
-                            thrift_savings_disbursements, socal_security, life_insurance_health_disbursements, other_disbursements,
-                            construction_contracts, rent_disbursements, other_purchases, equipment_supplies, rent_sales,
-                            other_sales, income_tax, other_taxes_licenses, fines_penalties, interest, other_collections_1,
-                            other_collections_amount_1, other_collections_2, other_collections_amount_2, other_collections_3,
-                            other_collections_amount_3, civil_service_2, federal_employee, thrift_saving_deductions, social_security,
-                            life_insurance_health_deductions, income_tax_deductions, saving_bonds, other_deductions, other_deductions_amount, commonwealth,
-                            municipal, individuals_private_institutions, death_disability, other_payments_1, other_payments_amount_1,
-                            other_payments_2, other_payments_amount_2, loans_advances, repayments_loans, total_loans_amount,
-                            loans_cancelled, other_credits, loans_and_advances, loans_and_advances_amount, interest_collected,
-                            forgiveness_credit, reporting_agency
-                            ])  
+                writer.writerow(
+                    [
+                        "agency_form",
+                        "agency_to",
+                        "salaries_wages",
+                        "civil_service",
+                        "federal_employee_retirement",
+                        "thrift_savings_disbursements",
+                        "socal_security",
+                        "life_insurance_health_disbursements",
+                        "other_disbursements",
+                        "construction_contracts",
+                        "rent_disbursements",
+                        "other_purchases",
+                        "equipment_supplies",
+                        "rent_sales",
+                        "other_sales",
+                        "income_tax",
+                        "other_taxes_licenses",
+                        "fines_penalties",
+                        "interest",
+                        "other_collections_1",
+                        "other_collections_amount_1",
+                        "other_collections_2",
+                        "other_collections_amount_2",
+                        "other_collections_3",
+                        "other_collections_amount_3",
+                        "civil_service_2",
+                        "federal_employee",
+                        "thrift_saving_deductions",
+                        "social_security",
+                        "life_insurance_health_deductions",
+                        "income_tax_deductions",
+                        "saving_bonds",
+                        "other_deductions",
+                        "other_deductions_amount",
+                        "commonwealth",
+                        "municipal",
+                        "individuals_private_institutions",
+                        "death_disability",
+                        "other_payments_1",
+                        "other_payments_amount_1",
+                        "other_payments_2",
+                        "other_payments_amount_2",
+                        "loans_advances",
+                        "repayments_loans",
+                        "total_loans_amount",
+                        "loans_cancelled",
+                        "other_credits",
+                        "loans_and_advances",
+                        "loans_and_advances_amount",
+                        "interest_collected",
+                        "forgiveness_credit",
+                        "reporting_agency",
+                    ]
+                )
+
+            writer.writerow(
+                [
+                    agency_form,
+                    agency_to,
+                    salaries_wages,
+                    civil_service,
+                    federal_employee_retirement,
+                    thrift_savings_disbursements,
+                    socal_security,
+                    life_insurance_health_disbursements,
+                    other_disbursements,
+                    construction_contracts,
+                    rent_disbursements,
+                    other_purchases,
+                    equipment_supplies,
+                    rent_sales,
+                    other_sales,
+                    income_tax,
+                    other_taxes_licenses,
+                    fines_penalties,
+                    interest,
+                    other_collections_1,
+                    other_collections_amount_1,
+                    other_collections_2,
+                    other_collections_amount_2,
+                    other_collections_3,
+                    other_collections_amount_3,
+                    civil_service_2,
+                    federal_employee,
+                    thrift_saving_deductions,
+                    social_security,
+                    life_insurance_health_deductions,
+                    income_tax_deductions,
+                    saving_bonds,
+                    other_deductions,
+                    other_deductions_amount,
+                    commonwealth,
+                    municipal,
+                    individuals_private_institutions,
+                    death_disability,
+                    other_payments_1,
+                    other_payments_amount_1,
+                    other_payments_2,
+                    other_payments_amount_2,
+                    loans_advances,
+                    repayments_loans,
+                    total_loans_amount,
+                    loans_cancelled,
+                    other_credits,
+                    loans_and_advances,
+                    loans_and_advances_amount,
+                    interest_collected,
+                    forgiveness_credit,
+                    reporting_agency,
+                ]
+            )
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-547.html")
