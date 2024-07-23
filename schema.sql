@@ -348,6 +348,146 @@ CREATE TABLE JP_364 {
   id INTEGER,
   form_id INTEGER,
 
+  year_bono1 INTEGER NOT NULL,
+  year_bono2 INTEGER NOT NULL,
+  year_paga1 INTEGER NOT NULL,
+  year_paga2 INTEGER NOT NULL,
+
+  ELA_bono1 NUMERIC NOT NULL,
+  ELA_bono2 NUMERIC NOT NULL,
+  ELA_paga1 NUMERIC NOT NULL,
+  ELA_paga2 NUMERIC NOT NULL,
+  ELA_agente TEXT NOT NULL,
+  
+  municipio_bono1 NUMERIC NOT NULL,
+  municipio_bono2 NUMERIC NOT NULL,
+  municipio_paga1 NUMERIC NOT NULL,
+  municipio_paga2 NUMERIC NOT NULL,
+  municipio_agente TEXT NOT NULL,
+  
+  corp_publicas_bono1 NUMERIC NOT NULL,
+  corp_publicas_bono2 NUMERIC NOT NULL,
+  corp_publicas_paga1 NUMERIC NOT NULL,
+  corp_publicas_paga2 NUMERIC NOT NULL,
+  corp_publicas_agente TEXT NOT NULL,
+  
+  AEE_bono1 NUMERIC NOT NULL,
+  AEE_bono2 NUMERIC NOT NULL,
+  AEE_paga1 NUMERIC NOT NULL,
+  AEE_paga2 NUMERIC NOT NULL,
+  AEE_agente TEXT NOT NULL,
+  
+  Acarreteras_bono1 NUMERIC NOT NULL,
+  Acarreteras_bono2 NUMERIC NOT NULL,
+  Acarreteras_paga1 NUMERIC NOT NULL,
+  Acarreteras_paga2 NUMERIC NOT NULL,
+  Acarreteras_agente TEXT NOT NULL,
+  
+  AAA_bono1 NUMERIC NOT NULL,
+  AAA_bono2 NUMERIC NOT NULL,
+  AAA_paga1 NUMERIC NOT NULL,
+  AAA_paga2 NUMERIC NOT NULL,
+  AAA_agente TEXT NOT NULL,
+  
+  AEP_bono1 NUMERIC NOT NULL,
+  AEP_bono2 NUMERIC NOT NULL,
+  AEP_paga1 NUMERIC NOT NULL,
+  AEP_paga2 NUMERIC NOT NULL,
+  AEP_agente TEXT NOT NULL,
+  
+  AP_bono1 NUMERIC NOT NULL,
+  AP_bono2 NUMERIC NOT NULL,
+  AP_paga1 NUMERIC NOT NULL,
+  AP_paga2 NUMERIC NOT NULL,
+  AP_agente TEXT NOT NULL,
+  
+  AT_bono1 NUMERIC NOT NULL,
+  AT_bono2 NUMERIC NOT NULL,
+  AT_paga1 NUMERIC NOT NULL,
+  AT_paga2 NUMERIC NOT NULL,
+  AT_agente TEXT NOT NULL,
+  
+  CFI_bono1 NUMERIC NOT NULL,
+  CFI_bono2 NUMERIC NOT NULL,
+  CFI_paga1 NUMERIC NOT NULL,
+  CFI_paga2 NUMERIC NOT NULL,
+  CFI_agente TEXT NOT NULL,
+  
+  BGF_bono1 NUMERIC NOT NULL,
+  BGF_bono2 NUMERIC NOT NULL,
+  BGF_paga1 NUMERIC NOT NULL,
+  BGF_paga2 NUMERIC NOT NULL,
+  BGF_agente TEXT NOT NULL,
+  
+  CFV_bono1 NUMERIC NOT NULL,
+  CFV_bono2 NUMERIC NOT NULL,
+  CFV_paga1 NUMERIC NOT NULL,
+  CFV_paga2 NUMERIC NOT NULL,
+  CFV_agente TEXT NOT NULL,
+  
+  otherk_title TEXT NOT NULL,
+  otherk_bono1 NUMERIC NOT NULL,
+  otherk_bono2 NUMERIC NOT NULL,
+  otherk_paga1 NUMERIC NOT NULL,
+  otherk_paga2 NUMERIC NOT NULL,
+  otherk_agente TEXT NOT NULL,
+  
+  otherl_title TEXT NOT NULL,
+  otherl_bono1 NUMERIC NOT NULL,
+  otherl_bono2 NUMERIC NOT NULL,
+  otherl_paga1 NUMERIC NOT NULL,
+  otherl_paga2 NUMERIC NOT NULL,
+  otherl_agente TEXT NOT NULL,
+  
+  otherm_title TEXT NOT NULL,
+  otherm_bono1 NUMERIC NOT NULL,
+  otherm_bono2 NUMERIC NOT NULL,
+  otherm_paga1 NUMERIC NOT NULL,
+  otherm_paga2 NUMERIC NOT NULL,
+  otherm_agente TEXT NOT NULL,
+  
+  year_balance1 NUMERIC NOT NULL,
+  year_balance2 NUMERIC NOT NULL,
+  
+  FHA_balance1 NUMERIC NOT NULL,
+  FHA_balance2 NUMERIC NOT NULL,
+  FHA_agente TEXT NOT NULL,
+  
+  GAV_balance1 NUMERIC NOT NULL,
+  GAV_balance2 NUMERIC NOT NULL,
+  GAV_agente TEXT NOT NULL,
+  
+  convencionales_balance1 NUMERIC NOT NULL,
+  convencionales_balance2 NUMERIC NOT NULL,
+  convencionales_agente TEXT NOT NULL,
+  
+  otras_instituciones_balance1 NUMERIC NOT NULL,
+  otras_instituciones_balance2 NUMERIC NOT NULL,
+  otras_instituciones_agente TEXT NOT NULL,
+  
+  prestamos_hipo_balance1 NUMERIC NOT NULL,
+  prestamos_hipo_balance2 NUMERIC NOT NULL,
+  prestamos_hipo_agente TEXT NOT NULL,
+  
+  prestamos_comerciales_industriales_balance1 NUMERIC NOT NULL,
+  prestamos_comerciales_industriales_balance2 NUMERIC NOT NULL,
+  prestamos_comerciales_industriales_agente TEXT NOT NULL,
+  
+  prestamos_poliza_balance1 NUMERIC NOT NULL,
+  prestamos_poliza_balance2 NUMERIC NOT NULL,
+  prestamos_poliza_agente TEXT NOT NULL,
+  
+  reservas_poliza_balance1 NUMERIC NOT NULL,
+  reservas_poliza_balance2 NUMERIC NOT NULL,
+  reservas_poliza_agente TEXT NOT NULL,
+  
+  dividendos_poliza_balance1 NUMERIC NOT NULL,
+  dividendos_poliza_balance2 NUMERIC NOT NULL,
+  dividendos_poliza_agente TEXT NOT NULL,
+
+  signature TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  nombre_persona TEXT NOT NULL,
 
   PRIMARY KEY (id),
   FOREIGN KEY (form_id) REFERENCES Forms(id),
