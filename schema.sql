@@ -446,8 +446,8 @@ CREATE TABLE JP_364 {
   otherm_paga2 NUMERIC NOT NULL,
   otherm_agente TEXT NOT NULL,
   
-  year_balance1 NUMERIC NOT NULL,
-  year_balance2 NUMERIC NOT NULL,
+  year_balance1 INTEGER NOT NULL,
+  year_balance2 INTEGER NOT NULL,
   
   FHA_balance1 NUMERIC NOT NULL,
   FHA_balance2 NUMERIC NOT NULL,
