@@ -160,11 +160,15 @@ input {
 }
 
 .left-signature {
+  width: 290px;
   padding-top: 1px;
   line-height: 1.5;
+  margin-right: 500px;
+  margin-bottom: 30px;
 }
 
 .right-signature {
+  width: 290px;
   padding-top: 1px;
   line-height: 1.5;
 }
@@ -207,7 +211,7 @@ input {
 }
 
 #year {
-  width: 24%;
+  width: 15%;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
@@ -251,4 +255,25 @@ input {
 .text-box {
   display: block;
   margin-bottom: 10px;
+}
+
+#signature {
+  width: 110%;
+  border: none;
+  margin-top: 5px;
+  font-size: 30px; 
+  font-style: italic;
+}
+
+#position, #phone, #date {
+  width: 110%;
+  border: none;
+  margin-top: 5px;
+  font-size: 30px; 
+  font-style: italic;
+}
+
+#position, #phone, #date, #signature {
+  background-color: white;
+  height: 30%;
 }
