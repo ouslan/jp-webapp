@@ -11,6 +11,9 @@ import os
 def home(request):
     return render(request, "home.html")
 
+def proyecciones(request):
+    return render(request, "proyecciones.html")
+
 
 def macro(request):
     x = [

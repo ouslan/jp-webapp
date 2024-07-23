@@ -20,7 +20,7 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{% static 'home.css' %}" />
-        <link rel="stylesheet" href="{% static 'demografico.css' %}" />
+        <link rel="stylesheet" href="{% static 'proyecciones.css' %}" />
 		<link rel="stylesheet" href="{% static 'jquery-ui_1.10.2.css' %}" />
 
     <style type="text/css">
@@ -120,7 +120,7 @@
                             <a href="/indicadores-mensuales/" class="nav-link w-nav-link">INDICADORES ECONOMICOS</a>
                             <a href="/centro-de-datos-macroeconomicos/" class="nav-link w-nav-link">DATOS MACROECONOMICOS</a>
                             <a href="/datos-demograficos/" class="nav-link w-nav-link">DATOS DEMOGRAFICOS</a>
-                            <a href="/proyecciones/" class="nav-link w-nav-link">PROYECCIONES POBLACIONALES</a>
+                            <a href="/gobierno-2/directorio-municipios" class="nav-link w-nav-link">PROYECCIONES POBLACIONALES</a>
                         </nav>
                     </div>
                 </nav>
@@ -132,31 +132,22 @@
 
     <!-- MAIN CONTENT -->
     <main>
-
+        
         <!-- TITLE -->
         <section>
-            <h1>Datos Demográficos</h1>
+            <h1>Proyecciones Poblacionales</h1>
         </section>
 
         <!-- INTRODUCTION -->
         <section>
             <p>
-                Se proporcionan datos consolidados geográficamente que abarcan todo Puerto Rico, clasificados por regiones, 
-                áreas de salud, municipios de residencia y municipios de ocurrencia. En los documentos de 'Informe Anual Estadísticas Vitales' contienen variables socio-demográficas 
-                como edad, sexo, educación, estado jurídico, ocupación y estado civil anterior. También se incluyen datos médicos, 
-                clínicos y procesales específicos para cada evento. Los datos se presentan en números absolutos, porcentajes y tasas. 
-                El informe consta de 89 tablas, 20 gráficas y 5 mapas, organizados en secciones que incluyen narrativa, resumen y estadísticas 
-                demográficas, datos poblacionales, nacimientos vivos, mortalidad general, mortalidad por causas externas, mortalidad infantil, 
-                mortalidad fetal, mortalidad materna, matrimonios, divorcios y expectativa de vida al nacer. Al final del informe se adjuntan 
-                copias de cada certificado para ilustrar la información recopilada.
-
-                Todos estos datos fueron utilizados para la creación de las gráficas presentadas en esta página.
+                INFO
             </p>
         </section>
 
         <!-- SUBBODY 1 -->
         <section>
-            <h2> Documentos</h2>
+            <h2> Documentos (editar)</h2>
 
             <p>
                 <a href="https://estadisticas.pr/en/inventario-de-estadisticas/estadisticas-vitales" class="custom-link" role="link">Estadísticas Vitales</a>
@@ -173,7 +164,7 @@
 
             <!-- SUBBODY 2 -->
             <section>
-                <h2>Instrucciones</h2>
+                <h2>Instrucciones (editar)</h2>
                 <p>1. Para seleccionar la variable que interesa representar gráficamente debe pasar encima del nombre de la variable continua al eje vertical (horizontal).</p>
                 <p>2. Si desea comparar el dato de la variable presentada con el dato de las otras variables disponibles debe pasar encima del par ordenado (el punto en la gráfica).</p>
                 <p>3. También, puede elegir el mes para el cual usted interesa la representación gráfica seleccionando el botón “Todos los meses”, ubicado debajo del eje horizontal.<strong> Nota:</strong> La serie que aparece en la gráfica no es la variable original, es una serie calculada. Esta serie es la diferencia entre la variable original y la tendencia. Por lo que si la serie original asume valores menores que la tendencia entonces la serie calculada (lo que aparece en la gráfica) tiene que asumir valores negativos.</p>
@@ -183,6 +174,7 @@
 
             <!-- GRAPH -->
 			<section>
+                <h2>EDITAR LOS EJES Y FILES</h2>
 				<div class="container-time">
 					<select id="timeRange">
 						<option value="anual" class="active">Anual</option>
