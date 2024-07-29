@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 load_dotenv()
 
 
-class DAO:
+class DAO():
     def __init__(self):
         db_user = os.environ.get("POSTGRES_USER")
         db_password = os.environ.get("POSTGRES_PASSWORD")
@@ -27,6 +27,7 @@ class DAO:
             sql_query = file.read()
         cursor = self.conn.cursor()
         cursor.execute(sql_query)
+        self.conn.commit()
 
     def insert_forms(self):
         pass

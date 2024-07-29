@@ -1,6 +1,6 @@
 services:
   database:
-    image: timescale/timescaledb:latest-pg13
+    image: timescale/timescaledb-ha:pg16
     container_name: timescaledb
     restart: always
     ports:
