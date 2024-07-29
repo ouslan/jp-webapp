@@ -1,7 +1,7 @@
 -- MASTER TABLE --
 CREATE TABLE IF NOT EXISTS "Forms" (
   "id" SERIAL,
-  "name" TEXT NOT NULL,
+  "form_id" INTEGER NOT NULL,
 
   PRIMARY KEY ("id")
 );

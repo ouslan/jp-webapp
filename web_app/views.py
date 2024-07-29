@@ -8105,6 +8105,7 @@ def JP_536_2(request):
                 "date": str,
             },
             table_name="JP_536_2",
+            table_id=1,
             debug=False,
         )
 

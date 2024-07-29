@@ -20,4 +20,5 @@ notebooks/
 
 # Ignore environment file
 .yaml
+*.qmd
 

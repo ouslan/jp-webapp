@@ -41,8 +41,9 @@ class DAO:
             chunksize=5000,
             index=False,
         )
-        df_id = pd.read_sql(f'SELECT MAX(id), form_id FROM {table_name} GROUP BY form_id', self.conn2)
-        df_id.df.to_sql(
+        df_id = pd.read_sql(f'SELECT MAX(id) AS id FROM "{table_name}"', self.conn2)
+        df_id["form_id"] = table_id
+        df_id.to_sql(
             name="Forms",
             con=self.conn2,
             if_exists="append",
