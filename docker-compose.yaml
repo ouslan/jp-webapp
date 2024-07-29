@@ -46,10 +46,11 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     command: >
-      sh -c "python manage.py migrate &&
+      sh -c "python manage.py migrate &
              python manage.py shell -c 'from django.contrib.auth.models import User; User.objects.filter(username=\"${DJANGO_SUPERUSER_USERNAME}\").exists() or User.objects.create_superuser(\"${DJANGO_SUPERUSER_USERNAME}\", \"${DJANGO_SUPERUSER_EMAIL}\", \"${DJANGO_SUPERUSER_PASSWORD}\")' &&
              python manage.py makemigrations &&
              python manage.py migrate &&
+             python main.py &&
              python manage.py runserver 0.0.0.0:8000"
     ports: 
       - 8000:8000
