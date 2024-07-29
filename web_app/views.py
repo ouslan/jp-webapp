@@ -1334,18 +1334,87 @@ def JP_529(request):
 
         choice = request.POST.get("choice")
 
-        # body
         # tabla 1
-        agencia = request.POST.get("agencia")
-        programa_federal = request.POST.get("programa_federal")
-        cantidad_recibida = request.POST.get("cantidad_recibida")
-        fecha = request.POST.get("fecha")
-
+        agencia_a1 = request.POST.get("agencia_a1")
+        federal_program_a1 = request.POST.get("federal_program_a1")
+        quantity_a1 = request.POST.get("quantity_a1")
+        date_a1 = request.POST.get("date_a1")
+        
+        agencia_a2 = request.POST.get("agencia_a2")
+        federal_program_a2 = request.POST.get("federal_program_a2")
+        quantity_a2 = request.POST.get("quantity_a2")
+        date_a2 = request.POST.get("date_a2")
+        
+        agencia_a3 = request.POST.get("agencia_a3")
+        federal_program_a3 = request.POST.get("federal_program_a3")
+        quantity_a3 = request.POST.get("quantity_a3")
+        date_a3 = request.POST.get("date_a3")
+        
+        agencia_a4 = request.POST.get("agencia_a4")
+        federal_program_a4 = request.POST.get("federal_program_a4")
+        quantity_a4 = request.POST.get("quantity_a4")
+        date_a4 = request.POST.get("date_a4")
+        
+        agencia_a5 = request.POST.get("agencia_a5")
+        federal_program_a5 = request.POST.get("federal_program_a5")
+        quantity_a5 = request.POST.get("quantity_a5")
+        date_a5 = request.POST.get("date_a5")
+        
+        agencia_a6 = request.POST.get("agencia_a6")
+        federal_program_a6 = request.POST.get("federal_program_a6")
+        quantity_a6 = request.POST.get("quantity_a6")
+        date_a6 = request.POST.get("date_a6")
+        
+        agencia_a7 = request.POST.get("agencia_a7")
+        federal_program_a7 = request.POST.get("federal_program_a7")
+        quantity_a7 = request.POST.get("quantity_a7")
+        date_a7 = request.POST.get("date_a7")
+        
+        agencia_a8 = request.POST.get("agencia_a8")
+        federal_program_a8 = request.POST.get("federal_program_a8")
+        quantity_a8 = request.POST.get("quantity_a8")
+        date_a8 = request.POST.get("date_a8")
+        
         # tabla 2
-        agencia2 = request.POST.get("agencia2")
-        programa_federal2 = request.POST.get("programa_federal2")
-        cantidad_recibida2 = request.POST.get("cantidad_recibida2")
-        fecha2 = request.POST.get("fecha2")
+        agencia_b1 = request.POST.get("agencia_b1")
+        federal_program_b1 = request.POST.get("federal_program_b1")
+        quantity_b1 = request.POST.get("quantity_b1")
+        date_b1 = request.POST.get("date_b1")
+        
+        agencia_b2 = request.POST.get("agencia_b2")
+        federal_program_b2 = request.POST.get("federal_program_b2")
+        quantity_b2 = request.POST.get("quantity_b2")
+        date_b2 = request.POST.get("date_b2")
+        
+        agencia_b3 = request.POST.get("agencia_b3")
+        federal_program_b3 = request.POST.get("federal_program_b3")
+        quantity_b3 = request.POST.get("quantity_b3")
+        date_b3 = request.POST.get("date_b3")
+        
+        agencia_b4 = request.POST.get("agencia_b4")
+        federal_program_b4 = request.POST.get("federal_program_b4")
+        quantity_b4 = request.POST.get("quantity_b4")
+        date_b4 = request.POST.get("date_b4")
+        
+        agencia_b5 = request.POST.get("agencia_b5")
+        federal_program_b5 = request.POST.get("federal_program_b5")
+        quantity_b5 = request.POST.get("quantity_b5")
+        date_b5 = request.POST.get("date_b5")
+        
+        agencia_b6 = request.POST.get("agencia_b6")
+        federal_program_b6 = request.POST.get("federal_program_b6")
+        quantity_b6 = request.POST.get("quantity_b6")
+        date_b6 = request.POST.get("date_b6")
+        
+        agencia_b7 = request.POST.get("agencia_b7")
+        federal_program_b7 = request.POST.get("federal_program_b7")
+        quantity_b7 = request.POST.get("quantity_b7")
+        date_b7 = request.POST.get("date_b7")
+        
+        agencia_b8 = request.POST.get("agencia_b8")
+        federal_program_b8 = request.POST.get("federal_program_b8")
+        quantity_b8 = request.POST.get("quantity_b8")
+        date_b8 = request.POST.get("date_b8")
 
         # section2
         # tabla 1
@@ -1422,14 +1491,70 @@ def JP_529(request):
                         "liaison_officer",
                         "tel",
                         "choice",
-                        "agencia",
-                        "programa_federal",
-                        "cantidad_recibida",
-                        "fecha",
-                        "agencia2",
-                        "programa_federal2",
-                        "cantidad_recibida2",
-                        "fecha2",
+                        "agencia_a1",
+                        "federal_program_a1",
+                        "quantity_a1",
+                        "date_a1",
+                        "agencia_a2",
+                        "federal_program_a2",
+                        "quantity_a2",
+                        "date_a2",
+                        "agencia_a3",
+                        "federal_program_a3",
+                        "quantity_a3",
+                        "date_a3",
+                        "agencia_a4",
+                        "federal_program_a4",
+                        "quantity_a4",
+                        "date_a4",
+                        "agencia_a5",
+                        "federal_program_a5",
+                        "quantity_a5",
+                        "date_a5",
+                        "agencia_a6",
+                        "federal_program_a6",
+                        "quantity_a6",
+                        "date_a6",
+                        "agencia_a7",
+                        "federal_program_a7",
+                        "quantity_a7",
+                        "date_a7",
+                        "agencia_a8",
+                        "federal_program_a8",
+                        "quantity_a8",
+                        "date_a8",
+                        "agencia_b1",
+                        "federal_program_b1",
+                        "quantity_b1",
+                        "date_b1",
+                        "agencia_b2",
+                        "federal_program_b2",
+                        "quantity_b2",
+                        "date_b2",
+                        "agencia_b3",
+                        "federal_program_b3",
+                        "quantity_b3",
+                        "date_b3",
+                        "agencia_b4",
+                        "federal_program_b4",
+                        "quantity_b4",
+                        "date_b4",
+                        "agencia_b5",
+                        "federal_program_b5",
+                        "quantity_b5",
+                        "date_b5",
+                        "agencia_b6",
+                        "federal_program_b6",
+                        "quantity_b6",
+                        "date_b6",
+                        "agencia_b7",
+                        "federal_program_b7",
+                        "quantity_b7",
+                        "date_b7",
+                        "agencia_b8",
+                        "federal_program_b8",
+                        "quantity_b8",
+                        "date_b8",
                         "instuition1",
                         "money1",
                         "date1",
@@ -1476,14 +1601,70 @@ def JP_529(request):
                     liaison_officer,
                     tel,
                     choice,
-                    agencia,
-                    programa_federal,
-                    cantidad_recibida,
-                    fecha,
-                    agencia2,
-                    programa_federal2,
-                    cantidad_recibida2,
-                    fecha2,
+                    agencia_a1,
+                    federal_program_a1,
+                    quantity_a1,
+                    date_a1,
+                    agencia_a2,
+                    federal_program_a2,
+                    quantity_a2,
+                    date_a2,
+                    agencia_a3,
+                    federal_program_a3,
+                    quantity_a3,
+                    date_a3,
+                    agencia_a4,
+                    federal_program_a4,
+                    quantity_a4,
+                    date_a4,
+                    agencia_a5,
+                    federal_program_a5,
+                    quantity_a5,
+                    date_a5,
+                    agencia_a6,
+                    federal_program_a6,
+                    quantity_a6,
+                    date_a6,
+                    agencia_a7,
+                    federal_program_a7,
+                    quantity_a7,
+                    date_a7,
+                    agencia_a8,
+                    federal_program_a8,
+                    quantity_a8,
+                    date_a8,
+                    agencia_b1,
+                    federal_program_b1,
+                    quantity_b1,
+                    date_b1,
+                    agencia_b2,
+                    federal_program_b2,
+                    quantity_b2,
+                    date_b2,
+                    agencia_b3,
+                    federal_program_b3,
+                    quantity_b3,
+                    date_b3,
+                    agencia_b4,
+                    federal_program_b4,
+                    quantity_b4,
+                    date_b4,
+                    agencia_b5,
+                    federal_program_b5,
+                    quantity_b5,
+                    date_b5,
+                    agencia_b6,
+                    federal_program_b6,
+                    quantity_b6,
+                    date_b6,
+                    agencia_b7,
+                    federal_program_b7,
+                    quantity_b7,
+                    date_b7,
+                    agencia_b8,
+                    federal_program_b8,
+                    quantity_b8,
+                    date_b8,
                     instuition1,
                     money1,
                     date1,
