@@ -1,13 +1,13 @@
+from sqlalchemy import create_engine
 from dotenv import load_dotenv
 import pandas as pd
-import os
 import psycopg2
-from sqlalchemy import create_engine
+import os
 
 load_dotenv()
 
 
-class DAO():
+class DAO:
     def __init__(self):
         db_user = os.environ.get("POSTGRES_USER")
         db_password = os.environ.get("POSTGRES_PASSWORD")
@@ -30,15 +30,28 @@ class DAO():
         cursor.execute(sql_query)
         self.conn.commit()
 
-    def insert_forms(self, data_path:str, dtypes:dict, table_name:str, debug:bool=False):
+    def insert_forms(self, data_path: str, dtypes: dict, table_name: str, table_id: int, debug: bool = False):
         df = pd.read_csv(data_path)
+        df["form_id"] = table_id
         df = df.astype(dtypes)
         df.to_sql(
-                  name=table_name,
-                  con=self.conn2,
-                  if_exists="append",
-                  chunksize=5000
-                )
+            name=table_name,
+            con=self.conn2,
+            if_exists="append",
+            chunksize=5000,
+            index=False,
+        )
+        df_id = pd.read_sql(f'SELECT MAX(id) AS id FROM "{table_name}"', self.conn2)
+        df_id["form_id"] = table_id
+        df_id.to_sql(
+            name="Forms",
+            con=self.conn2,
+            if_exists="append",
+            chunksize=5000,
+            index=False,
+        )
         os.remove(data_path)
         if debug:
-            print("\033[0;36mPROCESS: \033[0m" + f"Data inserted into {table_name} table")
+            print(
+                "\033[0;36mPROCESS: \033[0m" + f"Data inserted into {table_name} table"
+            )

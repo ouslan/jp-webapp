@@ -1,7 +1,7 @@
 -- MASTER TABLE --
 CREATE TABLE IF NOT EXISTS "Forms" (
   "id" SERIAL,
-  "name" TEXT NOT NULL,
+  "form_id" INTEGER NOT NULL,
 
   PRIMARY KEY ("id")
 );
@@ -1374,8 +1374,7 @@ CREATE TABLE IF NOT EXISTS "JP_536_2" (
   "name_title" TEXT NOT NULL,
   "date" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
