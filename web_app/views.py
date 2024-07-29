@@ -239,117 +239,166 @@ def JP_304(request):
         liaison_officer = request.POST.get("liaison_officer")
         title = request.POST.get("title")
         tel = request.POST.get("tel")
-        
+
         nombre_agencia_federal_1 = request.POST.get("nombre_agencia_federal_1")
         catalogo_federal_1 = request.POST.get("catalogo_federal_1")
         sai_federal_1 = request.POST.get("sai_federal_1")
         titulo_federal_1 = request.POST.get("titulo_federal_1")
-        aportacion_aprobada_federal_1 = request.POST.get("aportacion_aprobada_federal_1")
+        aportacion_aprobada_federal_1 = request.POST.get(
+            "aportacion_aprobada_federal_1"
+        )
         fecha_aprobacion_federal_1 = request.POST.get("fecha_aprobacion_federal_1")
-        aportacion_recibida_federal_1 = request.POST.get("aportacion_recibida_federal_1")
+        aportacion_recibida_federal_1 = request.POST.get(
+            "aportacion_recibida_federal_1"
+        )
         fecha_recibo_federal_1 = request.POST.get("fecha_recibo_federal_1")
         aportacion_gastada_federal_1 = request.POST.get("aportacion_gastada_federal_1")
         fecha_gasto_federal_1 = request.POST.get("fecha_gasto_federal_1")
-        
+
         nombre_agencia_federal_2 = request.POST.get("nombre_agencia_federal_2")
         catalogo_federal_2 = request.POST.get("catalogo_federal_2")
         sai_federal_2 = request.POST.get("sai_federal_2")
         titulo_federal_2 = request.POST.get("titulo_federal_2")
-        aportacion_aprobada_federal_2 = request.POST.get("aportacion_aprobada_federal_2")
+        aportacion_aprobada_federal_2 = request.POST.get(
+            "aportacion_aprobada_federal_2"
+        )
         fecha_aprobacion_federal_2 = request.POST.get("fecha_aprobacion_federal_2")
-        aportacion_recibida_federal_2 = request.POST.get("aportacion_recibida_federal_2")
+        aportacion_recibida_federal_2 = request.POST.get(
+            "aportacion_recibida_federal_2"
+        )
         fecha_recibo_federal_2 = request.POST.get("fecha_recibo_federal_2")
         aportacion_gastada_federal_2 = request.POST.get("aportacion_gastada_federal_2")
         fecha_gasto_federal_2 = request.POST.get("fecha_gasto_federal_2")
-        
+
         nombre_agencia_federal_3 = request.POST.get("nombre_agencia_federal_3")
         catalogo_federal_3 = request.POST.get("catalogo_federal_3")
         sai_federal_3 = request.POST.get("sai_federal_3")
         titulo_federal_3 = request.POST.get("titulo_federal_3")
-        aportacion_aprobada_federal_3 = request.POST.get("aportacion_aprobada_federal_3")
+        aportacion_aprobada_federal_3 = request.POST.get(
+            "aportacion_aprobada_federal_3"
+        )
         fecha_aprobacion_federal_3 = request.POST.get("fecha_aprobacion_federal_3")
-        aportacion_recibida_federal_3 = request.POST.get("aportacion_recibida_federal_3")
+        aportacion_recibida_federal_3 = request.POST.get(
+            "aportacion_recibida_federal_3"
+        )
         fecha_recibo_federal_3 = request.POST.get("fecha_recibo_federal_3")
         aportacion_gastada_federal_3 = request.POST.get("aportacion_gastada_federal_3")
         fecha_gasto_federal_3 = request.POST.get("fecha_gasto_federal_3")
-        
+
         nombre_agencia_federal_4 = request.POST.get("nombre_agencia_federal_4")
         catalogo_federal_4 = request.POST.get("catalogo_federal_4")
         sai_federal_4 = request.POST.get("sai_federal_4")
         titulo_federal_4 = request.POST.get("titulo_federal_4")
-        aportacion_aprobada_federal_4 = request.POST.get("aportacion_aprobada_federal_4")
+        aportacion_aprobada_federal_4 = request.POST.get(
+            "aportacion_aprobada_federal_4"
+        )
         fecha_aprobacion_federal_4 = request.POST.get("fecha_aprobacion_federal_4")
-        aportacion_recibida_federal_4 = request.POST.get("aportacion_recibida_federal_4")
+        aportacion_recibida_federal_4 = request.POST.get(
+            "aportacion_recibida_federal_4"
+        )
         fecha_recibo_federal_4 = request.POST.get("fecha_recibo_federal_4")
         aportacion_gastada_federal_4 = request.POST.get("aportacion_gastada_federal_4")
         fecha_gasto_federal_4 = request.POST.get("fecha_gasto_federal_4")
-        
+
         nombre_agencia_federal_5 = request.POST.get("nombre_agencia_federal_5")
         catalogo_federal_5 = request.POST.get("catalogo_federal_5")
         sai_federal_5 = request.POST.get("sai_federal_5")
         titulo_federal_5 = request.POST.get("titulo_federal_5")
-        aportacion_aprobada_federal_5 = request.POST.get("aportacion_aprobada_federal_5")
+        aportacion_aprobada_federal_5 = request.POST.get(
+            "aportacion_aprobada_federal_5"
+        )
         fecha_aprobacion_federal_5 = request.POST.get("fecha_aprobacion_federal_5")
-        aportacion_recibida_federal_5 = request.POST.get("aportacion_recibida_federal_5")
+        aportacion_recibida_federal_5 = request.POST.get(
+            "aportacion_recibida_federal_5"
+        )
         fecha_recibo_federal_5 = request.POST.get("fecha_recibo_federal_5")
         aportacion_gastada_federal_5 = request.POST.get("aportacion_gastada_federal_5")
         fecha_gasto_federal_5 = request.POST.get("fecha_gasto_federal_5")
-        
+
         agencia_local_table_box_1 = request.POST.get("agencia_local_table_box_1")
         catalogo_local_1 = request.POST.get("catalogo_local_1")
         programa_local_1 = request.POST.get("programa_local_1")
-        aportacion_federal_aprobada_local_1 = request.POST.get("aportacion_federal_aprobada_local_1")
+        aportacion_federal_aprobada_local_1 = request.POST.get(
+            "aportacion_federal_aprobada_local_1"
+        )
         fecha_aprobacion_local_1 = request.POST.get("fecha_aprobacion_local_1")
-        aportacion_federal_recibida_local_1 = request.POST.get("aportacion_federal_recibida_local_1")
+        aportacion_federal_recibida_local_1 = request.POST.get(
+            "aportacion_federal_recibida_local_1"
+        )
         fecha_recibo_local_1 = request.POST.get("fecha_recibo_local_1")
-        aportacion_federal_gastada_local_1 = request.POST.get("aportacion_federal_gastada_local_1")
+        aportacion_federal_gastada_local_1 = request.POST.get(
+            "aportacion_federal_gastada_local_1"
+        )
         fecha_gasto_local_1 = request.POST.get("fecha_gasto_local_1")
         numero_cuenta_local_1 = request.POST.get("numero_cuenta_local_1")
-        
+
         agencia_local_table_box_2 = request.POST.get("agencia_local_table_box_2")
         catalogo_local_2 = request.POST.get("catalogo_local_2")
         programa_local_2 = request.POST.get("programa_local_2")
-        aportacion_federal_aprobada_local_2 = request.POST.get("aportacion_federal_aprobada_local_2")
+        aportacion_federal_aprobada_local_2 = request.POST.get(
+            "aportacion_federal_aprobada_local_2"
+        )
         fecha_aprobacion_local_2 = request.POST.get("fecha_aprobacion_local_2")
-        aportacion_federal_recibida_local_2 = request.POST.get("aportacion_federal_recibida_local_2")
+        aportacion_federal_recibida_local_2 = request.POST.get(
+            "aportacion_federal_recibida_local_2"
+        )
         fecha_recibo_local_2 = request.POST.get("fecha_recibo_local_2")
-        aportacion_federal_gastada_local_2 = request.POST.get("aportacion_federal_gastada_local_2")
+        aportacion_federal_gastada_local_2 = request.POST.get(
+            "aportacion_federal_gastada_local_2"
+        )
         fecha_gasto_local_2 = request.POST.get("fecha_gasto_local_2")
         numero_cuenta_local_2 = request.POST.get("numero_cuenta_local_2")
-        
+
         agencia_local_table_box_3 = request.POST.get("agencia_local_table_box_3")
         catalogo_local_3 = request.POST.get("catalogo_local_3")
         programa_local_3 = request.POST.get("programa_local_3")
-        aportacion_federal_aprobada_local_3 = request.POST.get("aportacion_federal_aprobada_local_3")
+        aportacion_federal_aprobada_local_3 = request.POST.get(
+            "aportacion_federal_aprobada_local_3"
+        )
         fecha_aprobacion_local_3 = request.POST.get("fecha_aprobacion_local_3")
-        aportacion_federal_recibida_local_3 = request.POST.get("aportacion_federal_recibida_local_3")
+        aportacion_federal_recibida_local_3 = request.POST.get(
+            "aportacion_federal_recibida_local_3"
+        )
         fecha_recibo_local_3 = request.POST.get("fecha_recibo_local_3")
-        aportacion_federal_gastada_local_3 = request.POST.get("aportacion_federal_gastada_local_3")
+        aportacion_federal_gastada_local_3 = request.POST.get(
+            "aportacion_federal_gastada_local_3"
+        )
         fecha_gasto_local_3 = request.POST.get("fecha_gasto_local_3")
         numero_cuenta_local_3 = request.POST.get("numero_cuenta_local_3")
-        
+
         agencia_local_table_box_4 = request.POST.get("agencia_local_table_box_4")
         catalogo_local_4 = request.POST.get("catalogo_local_4")
         programa_local_4 = request.POST.get("programa_local_4")
-        aportacion_federal_aprobada_local_4 = request.POST.get("aportacion_federal_aprobada_local_4")
+        aportacion_federal_aprobada_local_4 = request.POST.get(
+            "aportacion_federal_aprobada_local_4"
+        )
         fecha_aprobacion_local_4 = request.POST.get("fecha_aprobacion_local_4")
-        aportacion_federal_recibida_local_4 = request.POST.get("aportacion_federal_recibida_local_4")
+        aportacion_federal_recibida_local_4 = request.POST.get(
+            "aportacion_federal_recibida_local_4"
+        )
         fecha_recibo_local_4 = request.POST.get("fecha_recibo_local_4")
-        aportacion_federal_gastada_local_4 = request.POST.get("aportacion_federal_gastada_local_4")
+        aportacion_federal_gastada_local_4 = request.POST.get(
+            "aportacion_federal_gastada_local_4"
+        )
         fecha_gasto_local_4 = request.POST.get("fecha_gasto_local_4")
         numero_cuenta_local_4 = request.POST.get("numero_cuenta_local_4")
-        
+
         agencia_local_table_box_5 = request.POST.get("agencia_local_table_box_5")
         catalogo_local_5 = request.POST.get("catalogo_local_5")
         programa_local_5 = request.POST.get("programa_local_5")
-        aportacion_federal_aprobada_local_5 = request.POST.get("aportacion_federal_aprobada_local_5")
+        aportacion_federal_aprobada_local_5 = request.POST.get(
+            "aportacion_federal_aprobada_local_5"
+        )
         fecha_aprobacion_local_5 = request.POST.get("fecha_aprobacion_local_5")
-        aportacion_federal_recibida_local_5 = request.POST.get("aportacion_federal_recibida_local_5")
+        aportacion_federal_recibida_local_5 = request.POST.get(
+            "aportacion_federal_recibida_local_5"
+        )
         fecha_recibo_local_5 = request.POST.get("fecha_recibo_local_5")
-        aportacion_federal_gastada_local_5 = request.POST.get("aportacion_federal_gastada_local_5")
+        aportacion_federal_gastada_local_5 = request.POST.get(
+            "aportacion_federal_gastada_local_5"
+        )
         fecha_gasto_local_5 = request.POST.get("fecha_gasto_local_5")
         numero_cuenta_local_5 = request.POST.get("numero_cuenta_local_5")
-        
 
         csv_file_path = "data/cuestionarios/balanza_de_pagos/JP-304.csv"
         file_exists = (
@@ -370,7 +419,7 @@ def JP_304(request):
                         "liaison_officer",
                         "title",
                         "tel",
-                        "nombre_agencia_federal_1", 
+                        "nombre_agencia_federal_1",
                         "catalogo_federal_1",
                         "sai_federal_1",
                         "titulo_federal_1",
@@ -905,7 +954,7 @@ def JP_361(request):
                 "expenses_employees_2": float,
                 "expenses_brokers_1": float,
                 "expenses_brokers_2": float,
-                "expenses_other_operational_1": float, 
+                "expenses_other_operational_1": float,
                 "expenses_other_operational_2": float,
                 "total_expenses_1": float,
                 "total_expenses_2": float,
@@ -1278,7 +1327,7 @@ def JP_362(request):
             )
 
         DAO().insert_forms(
-            data_path="data/cuestionarios/balanza_de_pagos/JP-361.csv",
+            data_path="data/cuestionarios/balanza_de_pagos/JP-362.csv",
             dtypes={
                 "year_1": int,
                 "year_2": int,
@@ -1322,7 +1371,7 @@ def JP_362(request):
                 "short_account_balance": float,
                 "short_account_emision": float,
                 "short_account_amortizacion": float,
-                "short_account_final"   
+                "short_account_final": float,
                 "short_account_interes": float,
                 "short_account_acreedor": str,
                 "short_others_balance": float,
@@ -1755,120 +1804,120 @@ def JP_364(request):
         DAO().insert_forms(
             data_path="data/cuestionarios/balanza_de_pagos/JP-364.csv",
             dtypes={
-                    "year_bono1": int,
-                    "year_bono2": int,
-                    "year_paga1": int,
-                    "year_paga2": int,
-                    "ELA_bono1": float,
-                    "ELA_bono2": float,
-                    "ELA_paga1": float,
-                    "ELA_paga2": float,
-                    "ELA_agente": str,
-                    "municipio_bono1": float,
-                    "municipio_bono2": float,
-                    "municipio_paga1": float,
-                    "municipio_paga2": float,
-                    "municipio_agente": str,
-                    "corp_publicas_bono1": float,
-                    "corp_publicas_bono2": float,
-                    "corp_publicas_paga1": float,
-                    "corp_publicas_paga2": float,
-                    "corp_publicas_agente": str,
-                    "AEE_bono1": float,
-                    "AEE_bono2" : float,
-                    "AEE_paga1": float,
-                    "AEE_paga2": float,
-                    "AEE_agente": str,
-                    "Acarreteras_bono1": float,
-                    "Acarreteras_bono2": float,
-                    "Acarreteras_paga1": float,
-                    "Acarreteras_paga2": float,
-                    "Acarreteras_agente": str,
-                    "AAA_bono1": float,
-                    "AAA_bono2": float,
-                    "AAA_paga1": float,
-                    "AAA_paga2": float,
-                    "AAA_agente": str,
-                    "AEP_bono1": float,
-                    "AEP_bono2": float,
-                    "AEP_paga1": float,
-                    "AEP_paga2": float,
-                    "AEP_agente": str,
-                    "AP_bono1": float,
-                    "AP_bono2": float,
-                    "AP_paga1": float,
-                    "AP_paga2": float,
-                    "AP_agente": str,
-                    "AT_bono1": float,
-                    "AT_bono2": float,
-                    "AT_paga1": float,
-                    "AT_paga2": float,
-                    "AT_agente": str,
-                    "CFI_bono1": float,
-                    "CFI_bono2": float,
-                    "CFI_paga1": float,
-                    "CFI_paga2": float,
-                    "CFI_agente": str,
-                    "BGF_bono1": float,
-                    "BGF_bono2": float,
-                    "BGF_paga1": float,
-                    "BGF_paga2": float,
-                    "BGF_agente": str,
-                    "CFV_bono1": float,
-                    "CFV_bono2": float,
-                    "CFV_paga1": float,
-                    "CFV_paga2": float,
-                    "CFV_agente": str,
-                    "otherk_title": str,
-                    "otherk_bono1": float,
-                    "otherk_bono2": float,
-                    "otherk_paga1": float,
-                    "otherk_paga2": float,
-                    "otherk_agente": str,
-                    "otherl_title": str,
-                    "otherl_bono1": float,
-                    "otherl_bono2": float,
-                    "otherl_paga1": float,
-                    "otherl_paga2": float,
-                    "otherl_agente": str,
-                    "otherm_title": str,
-                    "otherm_bono1": float,
-                    "otherm_bono2": float,
-                    "otherm_paga1": float,
-                    "otherm_paga2": float,
-                    "otherm_agente": str,
-                    "year_balance1": int,
-                    "year_balance2": int,
-                    "FHA_balance1": float,
-                    "FHA_balance2": float,
-                    "FHA_agente": str,
-                    "GAV_balance1": float,
-                    "GAV_balance2": float,
-                    "GAV_agente": str,
-                    "convencionales_balance1": float,
-                    "convencionales_balance2": float,
-                    "convencionales_agente": str,
-                    "otras_instituciones_balance1": float,
-                    "otras_instituciones_balance2": float,
-                    "otras_instituciones_agente": str,
-                    "prestamos_hipo_balance1": float,
-                    "prestamos_hipo_balance2": float,
-                    "prestamos_hipo_agente": str,
-                    "prestamos_comerciales_industriales_balance1": float,
-                    "prestamos_comerciales_industriales_balance2": float,
-                    "prestamos_comerciales_industriales_agente": str,
-                    "prestamos_poliza_balance1": float,
-                    "prestamos_poliza_balance2": float,
-                    "prestamos_poliza_agente": str,
-                    "reservas_poliza_balance1": float,
-                    "reservas_poliza_balance2": float,
-                    "reservas_poliza_agente": str,
-                    "dividendos_poliza_balance1": float,
-                    "dividendos_poliza_balance2": float,
-                    "dividendos_poliza_agente": str,
-                    "signature": str,
-                    "phone": str,
-                    "nombre_persona": str,
+                "year_bono1": int,
+                "year_bono2": int,
+                "year_paga1": int,
+                "year_paga2": int,
+                "ELA_bono1": float,
+                "ELA_bono2": float,
+                "ELA_paga1": float,
+                "ELA_paga2": float,
+                "ELA_agente": str,
+                "municipio_bono1": float,
+                "municipio_bono2": float,
+                "municipio_paga1": float,
+                "municipio_paga2": float,
+                "municipio_agente": str,
+                "corp_publicas_bono1": float,
+                "corp_publicas_bono2": float,
+                "corp_publicas_paga1": float,
+                "corp_publicas_paga2": float,
+                "corp_publicas_agente": str,
+                "AEE_bono1": float,
+                "AEE_bono2": float,
+                "AEE_paga1": float,
+                "AEE_paga2": float,
+                "AEE_agente": str,
+                "Acarreteras_bono1": float,
+                "Acarreteras_bono2": float,
+                "Acarreteras_paga1": float,
+                "Acarreteras_paga2": float,
+                "Acarreteras_agente": str,
+                "AAA_bono1": float,
+                "AAA_bono2": float,
+                "AAA_paga1": float,
+                "AAA_paga2": float,
+                "AAA_agente": str,
+                "AEP_bono1": float,
+                "AEP_bono2": float,
+                "AEP_paga1": float,
+                "AEP_paga2": float,
+                "AEP_agente": str,
+                "AP_bono1": float,
+                "AP_bono2": float,
+                "AP_paga1": float,
+                "AP_paga2": float,
+                "AP_agente": str,
+                "AT_bono1": float,
+                "AT_bono2": float,
+                "AT_paga1": float,
+                "AT_paga2": float,
+                "AT_agente": str,
+                "CFI_bono1": float,
+                "CFI_bono2": float,
+                "CFI_paga1": float,
+                "CFI_paga2": float,
+                "CFI_agente": str,
+                "BGF_bono1": float,
+                "BGF_bono2": float,
+                "BGF_paga1": float,
+                "BGF_paga2": float,
+                "BGF_agente": str,
+                "CFV_bono1": float,
+                "CFV_bono2": float,
+                "CFV_paga1": float,
+                "CFV_paga2": float,
+                "CFV_agente": str,
+                "otherk_title": str,
+                "otherk_bono1": float,
+                "otherk_bono2": float,
+                "otherk_paga1": float,
+                "otherk_paga2": float,
+                "otherk_agente": str,
+                "otherl_title": str,
+                "otherl_bono1": float,
+                "otherl_bono2": float,
+                "otherl_paga1": float,
+                "otherl_paga2": float,
+                "otherl_agente": str,
+                "otherm_title": str,
+                "otherm_bono1": float,
+                "otherm_bono2": float,
+                "otherm_paga1": float,
+                "otherm_paga2": float,
+                "otherm_agente": str,
+                "year_balance1": int,
+                "year_balance2": int,
+                "FHA_balance1": float,
+                "FHA_balance2": float,
+                "FHA_agente": str,
+                "GAV_balance1": float,
+                "GAV_balance2": float,
+                "GAV_agente": str,
+                "convencionales_balance1": float,
+                "convencionales_balance2": float,
+                "convencionales_agente": str,
+                "otras_instituciones_balance1": float,
+                "otras_instituciones_balance2": float,
+                "otras_instituciones_agente": str,
+                "prestamos_hipo_balance1": float,
+                "prestamos_hipo_balance2": float,
+                "prestamos_hipo_agente": str,
+                "prestamos_comerciales_industriales_balance1": float,
+                "prestamos_comerciales_industriales_balance2": float,
+                "prestamos_comerciales_industriales_agente": str,
+                "prestamos_poliza_balance1": float,
+                "prestamos_poliza_balance2": float,
+                "prestamos_poliza_agente": str,
+                "reservas_poliza_balance1": float,
+                "reservas_poliza_balance2": float,
+                "reservas_poliza_agente": str,
+                "dividendos_poliza_balance1": float,
+                "dividendos_poliza_balance2": float,
+                "dividendos_poliza_agente": str,
+                "signature": str,
+                "phone": str,
+                "nombre_persona": str,
             },
             table_name="JP_364",
             table_id="4",
@@ -2263,111 +2312,111 @@ def JP_529(request):
         DAO().insert_forms(
             data_path="data/cuestionarios/balanza_de_pagos/JP-529.csv",
             dtypes={
-                    "year1": int,
-                    "year2": int,
-                    "company": str,
-                    "address": str,
-                    "email": str,
-                    "liaison_officer": str,
-                    "tel": str,
-                    "choice": str,
-                    "agencia_a1": str,
-                    "federal_program_a1": str,
-                    "quantity_a1": float,
-                    "date_a1": str,
-                    "agencia_a2": str,
-                    "federal_program_a2": str,
-                    "quantity_a2": float,
-                    "date_a2": str,
-                    "agencia_a3": str,
-                    "federal_program_a3" : str, 
-                    "quantity_a3": float,
-                    "date_a3": str,
-                    "agencia_a4": str,
-                    "federal_program_a4": str,
-                    "quantity_a4": float,
-                    "date_a4": str,
-                    "agencia_a5": str,
-                    "federal_program_a5": str,
-                    "quantity_a5": float,
-                    "date_a5": str,
-                    "agencia_a6": str,
-                    "federal_program_a6": str,
-                    "quantity_a6": float,
-                    "date_a6": str,
-                    "agencia_a7": str,
-                    "federal_program_a7": str,
-                    "quantity_a7": float,
-                    "date_a7": str,
-                    "agencia_a8": str,
-                    "federal_program_a8": str,
-                    "quantity_a8": float,
-                    "date_a8": str,
-                    "agencia_b1": str,
-                    "federal_program_b1": str,
-                    "quantity_b1": float,
-                    "date_b1": str,
-                    "agencia_b2": str,
-                    "federal_program_b2": str,
-                    "quantity_b2": float,
-                    "date_b2": str,
-                    "agencia_b3": str,
-                    "federal_program_b3": str,
-                    "quantity_b3": float,
-                    "date_b3": str,
-                    "agencia_b4": str,
-                    "federal_program_b4": str,
-                    "quantity_b4": float,
-                    "date_b4": str,
-                    "agencia_b5": str,
-                    "federal_program_b5": str,
-                    "quantity_b5": float,
-                    "date_b5": str,
-                    "agencia_b6": str,
-                    "federal_program_b6": str,
-                    "quantity_b6": float,
-                    "date_b6": str,
-                    "agencia_b7": str,
-                    "federal_program_b7": str,
-                    "quantity_b7": float,
-                    "date_b7": str,
-                    "agencia_b8": str,
-                    "federal_program_b8": str,
-                    "quantity_b8": float,
-                    "date_b8": str,
-                    "instuition1": str,
-                    "money1": float,
-                    "date1": str,
-                    "instuition2": str,
-                    "money2": float,
-                    "date2": str,
-                    "instuition3": str,
-                    "money3": float,
-                    "date3": str,
-                    "instuition4": str,
-                    "money4": float,
-                    "date4": str,
-                    "instuition5": str,
-                    "money5": float,
-                    "date5": str,
-                    "instuition6": str,
-                    "money6": float,
-                    "date6": str,
-                    "instuition7": str,
-                    "money7": float,
-                    "date7": str,
-                    "instuition8": str,
-                    "money8": float,
-                    "date8": str,
-                    "instuition9": str,
-                    "money9": float,
-                    "date9": str,
-                    "instuition10": str,
-                    "money10": float,
-                    "date10": str,
-                    "name": str,
-                    "puesto": str,
-                    "date": str,
+                "year1": int,
+                "year2": int,
+                "company": str,
+                "address": str,
+                "email": str,
+                "liaison_officer": str,
+                "tel": str,
+                "choice": str,
+                "agencia_a1": str,
+                "federal_program_a1": str,
+                "quantity_a1": float,
+                "date_a1": str,
+                "agencia_a2": str,
+                "federal_program_a2": str,
+                "quantity_a2": float,
+                "date_a2": str,
+                "agencia_a3": str,
+                "federal_program_a3": str,
+                "quantity_a3": float,
+                "date_a3": str,
+                "agencia_a4": str,
+                "federal_program_a4": str,
+                "quantity_a4": float,
+                "date_a4": str,
+                "agencia_a5": str,
+                "federal_program_a5": str,
+                "quantity_a5": float,
+                "date_a5": str,
+                "agencia_a6": str,
+                "federal_program_a6": str,
+                "quantity_a6": float,
+                "date_a6": str,
+                "agencia_a7": str,
+                "federal_program_a7": str,
+                "quantity_a7": float,
+                "date_a7": str,
+                "agencia_a8": str,
+                "federal_program_a8": str,
+                "quantity_a8": float,
+                "date_a8": str,
+                "agencia_b1": str,
+                "federal_program_b1": str,
+                "quantity_b1": float,
+                "date_b1": str,
+                "agencia_b2": str,
+                "federal_program_b2": str,
+                "quantity_b2": float,
+                "date_b2": str,
+                "agencia_b3": str,
+                "federal_program_b3": str,
+                "quantity_b3": float,
+                "date_b3": str,
+                "agencia_b4": str,
+                "federal_program_b4": str,
+                "quantity_b4": float,
+                "date_b4": str,
+                "agencia_b5": str,
+                "federal_program_b5": str,
+                "quantity_b5": float,
+                "date_b5": str,
+                "agencia_b6": str,
+                "federal_program_b6": str,
+                "quantity_b6": float,
+                "date_b6": str,
+                "agencia_b7": str,
+                "federal_program_b7": str,
+                "quantity_b7": float,
+                "date_b7": str,
+                "agencia_b8": str,
+                "federal_program_b8": str,
+                "quantity_b8": float,
+                "date_b8": str,
+                "instuition1": str,
+                "money1": float,
+                "date1": str,
+                "instuition2": str,
+                "money2": float,
+                "date2": str,
+                "instuition3": str,
+                "money3": float,
+                "date3": str,
+                "instuition4": str,
+                "money4": float,
+                "date4": str,
+                "instuition5": str,
+                "money5": float,
+                "date5": str,
+                "instuition6": str,
+                "money6": float,
+                "date6": str,
+                "instuition7": str,
+                "money7": float,
+                "date7": str,
+                "instuition8": str,
+                "money8": float,
+                "date8": str,
+                "instuition9": str,
+                "money9": float,
+                "date9": str,
+                "instuition10": str,
+                "money10": float,
+                "date10": str,
+                "name": str,
+                "puesto": str,
+                "date": str,
             },
             table_name="JP_529",
             table_id="5",
@@ -2613,79 +2662,79 @@ def IP_110(request):
             )
 
         DAO().insert_forms(
-            data_path="data/cuestionarios/balanza_de_pagos/JP-529.csv",
+            data_path="data/cuestionarios/ingreso_neto/IP-110.csv",
             dtypes={
-                    "company_name": str,
-                    "address": str,
-                    "email": str,
-                    "liaison_officer": str,
-                    "ssn": str,
-                    "tel": str,
-                    "fax": str,
-                    "legal_form": str,
-                    "cfc": str,
-                    "business_type": str,
-                    "business_function": str,
-                    "branches": str,
-                    "closing_date": str,
-                    "start_year": str,
-                    "end_year": str,
-                    "incomes_services_revenues_1": float,
-                    "incomes_services_revenues_2": float,
-                    "incomes_industries_1": float,
-                    "incomes_industries_2": float,
-                    "incomes_persons_1": float,
-                    "incomes_persons_2": float,
-                    "incomes_sale_merchandise_1": float,
-                    "incomes_sale_merchandise_2": float,
-                    "incomes_rents_1": float,
-                    "incomes_rents_2": float,
-                    "incomes_interests_1": float,
-                    "incomes_interests_2": float,
-                    "incomes_capital_gain_loss_1": float,
-                    "incomes_capital_gain_loss_2": float,
-                    "others_incomes_1": float,
-                    "others_incomes_2": float,
-                    "total_income_1": float,
-                    "total_income_2": float,
-                    "expenses_1": float,
-                    "expenses_2": float,
-                    "expenses_salaries_wages_bonus_1": float,
-                    "expenses_salaries_wages_bonus_2": float,
-                    "expenses_interests_1": float,
-                    "expenses_interests_2": float,
-                    "expenses_rents_1": float,
-                    "expenses_rents_2": float,
-                    "expenses_depreciation_1": float,
-                    "expenses_depreciation_2": float,
-                    "expenses_bad_debts_1": float,
-                    "expenses_bad_debts_2": float,
-                    "expenses_donation_1": float,
-                    "expenses_donation_2": float,
-                    "expenses_sales_tax_1": float,
-                    "expenses_sales_tax_2": float,
-                    "expenses_machinery_1": float,
-                    "expenses_machinery_2": float,
-                    "other_purchases_1": float,
-                    "other_purchases_2": float,
-                    "licenses_1": float,
-                    "licenses_2": float,
-                    "other_expenses_1": float,
-                    "other_expenses_2": float,
-                    "total_expenses_1": float,
-                    "total_expenses_2": float,
-                    "net_profit_1": float,
-                    "net_profit_2": float,
-                    "net_profit_income_tax_1": float,
-                    "net_profit_income_tax_2": float,
-                    "profit_after_tax_1": float,
-                    "profit_after_tax_2": float,
-                    "withheld_tax_1": float,
-                    "withheld_tax_2": float,
-                    "signature": str,
-                    "rank": str,
+                "company_name": str,
+                "address": str,
+                "email": str,
+                "liaison_officer": str,
+                "ssn": str,
+                "tel": str,
+                "fax": str,
+                "legal_form": str,
+                "cfc": str,
+                "business_type": str,
+                "business_function": str,
+                "branches": str,
+                "closing_date": str,
+                "start_year": str,
+                "end_year": str,
+                "incomes_services_revenues_1": float,
+                "incomes_services_revenues_2": float,
+                "incomes_industries_1": float,
+                "incomes_industries_2": float,
+                "incomes_persons_1": float,
+                "incomes_persons_2": float,
+                "incomes_sale_merchandise_1": float,
+                "incomes_sale_merchandise_2": float,
+                "incomes_rents_1": float,
+                "incomes_rents_2": float,
+                "incomes_interests_1": float,
+                "incomes_interests_2": float,
+                "incomes_capital_gain_loss_1": float,
+                "incomes_capital_gain_loss_2": float,
+                "others_incomes_1": float,
+                "others_incomes_2": float,
+                "total_income_1": float,
+                "total_income_2": float,
+                "expenses_1": float,
+                "expenses_2": float,
+                "expenses_salaries_wages_bonus_1": float,
+                "expenses_salaries_wages_bonus_2": float,
+                "expenses_interests_1": float,
+                "expenses_interests_2": float,
+                "expenses_rents_1": float,
+                "expenses_rents_2": float,
+                "expenses_depreciation_1": float,
+                "expenses_depreciation_2": float,
+                "expenses_bad_debts_1": float,
+                "expenses_bad_debts_2": float,
+                "expenses_donation_1": float,
+                "expenses_donation_2": float,
+                "expenses_sales_tax_1": float,
+                "expenses_sales_tax_2": float,
+                "expenses_machinery_1": float,
+                "expenses_machinery_2": float,
+                "other_purchases_1": float,
+                "other_purchases_2": float,
+                "licenses_1": float,
+                "licenses_2": float,
+                "other_expenses_1": float,
+                "other_expenses_2": float,
+                "total_expenses_1": float,
+                "total_expenses_2": float,
+                "net_profit_1": float,
+                "net_profit_2": float,
+                "net_profit_income_tax_1": float,
+                "net_profit_income_tax_2": float,
+                "profit_after_tax_1": float,
+                "profit_after_tax_2": float,
+                "withheld_tax_1": float,
+                "withheld_tax_2": float,
+                "signature": str,
+                "rank": str,
             },
-            table_name="JP_529",
+            table_name="IP_110",
             table_id="5",
             debug=False,
         )
@@ -13423,7 +13472,7 @@ def JP_547(request):
         civil_service = request.POST.get("civil_service")
         federal_employee_retirement = request.POST.get("federal_employee_retirement")
         thrift_savings_disbursements = request.POST.get("thrift_savings_disbursements")
-        socal_security = request.POST.get("socal_security")
+        social_security = request.POST.get("social_security")
         life_insurance_health_disbursements = request.POST.get(
             "life_insurance_health_disbursements"
         )
@@ -13447,7 +13496,7 @@ def JP_547(request):
         civil_service_2 = request.POST.get("civil_service_2")
         federal_employee = request.POST.get("federal_employee")
         thrift_saving_deductions = request.POST.get("thrift_saving_deductions")
-        social_security = request.POST.get("social_security")
+        social_security_deductions = request.POST.get("social_security_deductions")
         life_insurance_health_deductions = request.POST.get(
             "life_insurance_health_deductions"
         )
@@ -13494,7 +13543,7 @@ def JP_547(request):
                         "civil_service",
                         "federal_employee_retirement",
                         "thrift_savings_disbursements",
-                        "socal_security",
+                        "social_security",
                         "life_insurance_health_disbursements",
                         "other_disbursements",
                         "construction_contracts",
@@ -13516,7 +13565,7 @@ def JP_547(request):
                         "civil_service_2",
                         "federal_employee",
                         "thrift_saving_deductions",
-                        "social_security",
+                        "social_security_deductions",
                         "life_insurance_health_deductions",
                         "income_tax_deductions",
                         "saving_bonds",
@@ -13551,7 +13600,7 @@ def JP_547(request):
                     civil_service,
                     federal_employee_retirement,
                     thrift_savings_disbursements,
-                    socal_security,
+                    social_security,
                     life_insurance_health_disbursements,
                     other_disbursements,
                     construction_contracts,
@@ -13573,7 +13622,7 @@ def JP_547(request):
                     civil_service_2,
                     federal_employee,
                     thrift_saving_deductions,
-                    social_security,
+                    social_security_deductions,
                     life_insurance_health_deductions,
                     income_tax_deductions,
                     saving_bonds,
@@ -13609,7 +13658,7 @@ def JP_547(request):
                 "civil_service": float,
                 "federal_employee_retirement": float,
                 "thrift_savings_disbursements": float,
-                "socal_security": float,
+                "social_security": float,
                 "life_insurance_health_disbursements": float,
                 "other_disbursements": float,
                 "construction_contracts": float,
@@ -13631,7 +13680,7 @@ def JP_547(request):
                 "civil_service_2": float,
                 "federal_employee": float,
                 "thrift_saving_deductions": float,
-                "social_security": float,
+                "social_security_deductions": float,
                 "life_insurance_health_deductions": float,
                 "income_tax_deductions": float,
                 "saving_bonds": float,

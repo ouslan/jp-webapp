@@ -30,9 +30,18 @@ class DAO:
         cursor.execute(sql_query)
         self.conn.commit()
 
-    def insert_forms(self, data_path: str, dtypes: dict, table_name: str, table_id: int, debug: bool = False):
+    def insert_forms(
+        self,
+        data_path: str,
+        dtypes: dict,
+        table_name: str,
+        table_id: int,
+        debug: bool = False,
+    ):
         df = pd.read_csv(data_path)
+        df.columns = df.columns.str.lower().str.strip()
         df["form_id"] = table_id
+        # print(df.columns)
         df = df.astype(dtypes)
         df.to_sql(
             name=table_name,

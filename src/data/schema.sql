@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS "Forms" (
   "id" SERIAL,
   "form_id" INTEGER NOT NULL,
 
-  PRIMARY KEY ("id")
+  PRIMARY KEY ("id", "form_id")
 );
 
 -- CONSTRUCTION --
@@ -1597,7 +1597,7 @@ CREATE TABLE IF NOT EXISTS "JP_547" (
   "loans_and_advances_amount" NUMERIC NOT NULL,
   "interest_collected" NUMERIC NOT NULL,
   "forgiveness_credit" NUMERIC NOT NULL,
-  "reporting_agency" NUMERIC NOT NULL,
+  "reporting_agency" TEXT NOT NULL,
 
   PRIMARY KEY ("id")
 );
@@ -1635,7 +1635,9 @@ CREATE TABLE IF NOT EXISTS "IP_110" (
   "incomes_interests_1" NUMERIC NOT NULL,
   "incomes_interests_2" NUMERIC NOT NULL,
   "incomes_capital_gain_loss_1" NUMERIC NOT NULL,
+  "incomes_capital_gain_loss_2" NUMERIC NOT NULL,
   "others_incomes_1" NUMERIC NOT NULL,
+  "others_incomes_2" NUMERIC NOT NULL,
   "total_income_1" NUMERIC NOT NULL,
   "total_income_2" NUMERIC NOT NULL,
   "expenses_1" NUMERIC NOT NULL,
@@ -1667,6 +1669,7 @@ CREATE TABLE IF NOT EXISTS "IP_110" (
   "net_profit_1" NUMERIC NOT NULL,
   "net_profit_2" NUMERIC NOT NULL,
   "net_profit_income_tax_1" NUMERIC NOT NULL,
+  "net_profit_income_tax_2" NUMERIC NOT NULL,
   "profit_after_tax_1" NUMERIC NOT NULL,
   "profit_after_tax_2" NUMERIC NOT NULL,
   "withheld_tax_1" NUMERIC NOT NULL,

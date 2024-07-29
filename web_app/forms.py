@@ -8234,7 +8234,7 @@ class JP_547(forms.Form):
     thrift_savings_disbursements = forms.CharField(
         label="c. Thrift savings plan (TSP)", max_length=100
     )
-    socal_security = forms.CharField(label="d. Social security", max_length=100)
+    social_security = forms.CharField(label="d. Social security", max_length=100)
     life_insurance_health_disbursements = forms.CharField(
         label="e. Life insurance and health benefits", max_length=100
     )
@@ -8273,7 +8273,9 @@ class JP_547(forms.Form):
     thrift_saving_deductions = forms.CharField(
         label="3. Thrift savings plan (TSP)", max_length=100
     )
-    social_security = forms.CharField(label="4. Social security", max_length=100)
+    social_security_deductions = forms.CharField(
+        label="4. Social security", max_length=100
+    )
     life_insurance_health_deductions = forms.CharField(
         label="5. Life insurance and health benefits", max_length=100
     )
