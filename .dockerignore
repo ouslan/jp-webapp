@@ -20,4 +20,4 @@ notebooks/
 
 # Ignore environment file
 .yaml
-.env
+
