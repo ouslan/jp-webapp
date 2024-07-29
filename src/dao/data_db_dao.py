@@ -5,7 +5,8 @@ from sqlalchemy import create_engine
 
 load_dotenv()
 
-class DAO():
+
+class DAO:
     def __init__(self):
         super().__init__()
         db_user = os.environ.get("POSTGRES_USER")
