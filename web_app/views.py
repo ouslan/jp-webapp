@@ -238,32 +238,117 @@ def JP_304(request):
         liaison_officer = request.POST.get("liaison_officer")
         title = request.POST.get("title")
         tel = request.POST.get("tel")
-        nombre_agencia_federal = request.POST.get("nombre_agencia_federal")
-        catalogo_federal = request.POST.get("catalogo_federal")
-        sai_federal = request.POST.get("sai_federal")
-        titulo_federal = request.POST.get("titulo_federal")
-        aportacion_aprobada_federal = request.POST.get("aportacion_aprobada_federal")
-        fecha_aprobacion_federal = request.POST.get("fecha_aprobacion_federal")
-        aportacion_recibida_federal = request.POST.get("aportacion_recibida_federal")
-        fecha_recibo_federal = request.POST.get("fecha_recibo_federal")
-        aportacion_gastada_federal = request.POST.get("aportacion_gastada_federal")
-        fecha_gasto_federal = request.POST.get("fecha_gasto_federal")
-        agencia_local_table_box = request.POST.get("agencia_local_table_box")
-        catalogo_local = request.POST.get("catalogo_local")
-        programa_local = request.POST.get("programa_local")
-        aportacion_federal_aprobada_local = request.POST.get(
-            "aportacion_federal_aprobada_local"
-        )
-        fecha_aprobacion_local = request.POST.get("fecha_aprobacion_local")
-        aportacion_federal_recibida_local = request.POST.get(
-            "aportacion_federal_recibida_local"
-        )
-        fecha_recibo_local = request.POST.get("fecha_recibo_local")
-        aportacion_federal_gastada_local = request.POST.get(
-            "aportacion_federal_gastada_local"
-        )
-        fecha_gasto_local = request.POST.get("fecha_gasto_local")
-        numero_cuenta_local = request.POST.get("numero_cuenta_local")
+        
+        nombre_agencia_federal_1 = request.POST.get("nombre_agencia_federal_1")
+        catalogo_federal_1 = request.POST.get("catalogo_federal_1")
+        sai_federal_1 = request.POST.get("sai_federal_1")
+        titulo_federal_1 = request.POST.get("titulo_federal_1")
+        aportacion_aprobada_federal_1 = request.POST.get("aportacion_aprobada_federal_1")
+        fecha_aprobacion_federal_1 = request.POST.get("fecha_aprobacion_federal_1")
+        aportacion_recibida_federal_1 = request.POST.get("aportacion_recibida_federal_1")
+        fecha_recibo_federal_1 = request.POST.get("fecha_recibo_federal_1")
+        aportacion_gastada_federal_1 = request.POST.get("aportacion_gastada_federal_1")
+        fecha_gasto_federal_1 = request.POST.get("fecha_gasto_federal_1")
+        
+        nombre_agencia_federal_2 = request.POST.get("nombre_agencia_federal_2")
+        catalogo_federal_2 = request.POST.get("catalogo_federal_2")
+        sai_federal_2 = request.POST.get("sai_federal_2")
+        titulo_federal_2 = request.POST.get("titulo_federal_2")
+        aportacion_aprobada_federal_2 = request.POST.get("aportacion_aprobada_federal_2")
+        fecha_aprobacion_federal_2 = request.POST.get("fecha_aprobacion_federal_2")
+        aportacion_recibida_federal_2 = request.POST.get("aportacion_recibida_federal_2")
+        fecha_recibo_federal_2 = request.POST.get("fecha_recibo_federal_2")
+        aportacion_gastada_federal_2 = request.POST.get("aportacion_gastada_federal_2")
+        fecha_gasto_federal_2 = request.POST.get("fecha_gasto_federal_2")
+        
+        nombre_agencia_federal_3 = request.POST.get("nombre_agencia_federal_3")
+        catalogo_federal_3 = request.POST.get("catalogo_federal_3")
+        sai_federal_3 = request.POST.get("sai_federal_3")
+        titulo_federal_3 = request.POST.get("titulo_federal_3")
+        aportacion_aprobada_federal_3 = request.POST.get("aportacion_aprobada_federal_3")
+        fecha_aprobacion_federal_3 = request.POST.get("fecha_aprobacion_federal_3")
+        aportacion_recibida_federal_3 = request.POST.get("aportacion_recibida_federal_3")
+        fecha_recibo_federal_3 = request.POST.get("fecha_recibo_federal_3")
+        aportacion_gastada_federal_3 = request.POST.get("aportacion_gastada_federal_3")
+        fecha_gasto_federal_3 = request.POST.get("fecha_gasto_federal_3")
+        
+        nombre_agencia_federal_4 = request.POST.get("nombre_agencia_federal_4")
+        catalogo_federal_4 = request.POST.get("catalogo_federal_4")
+        sai_federal_4 = request.POST.get("sai_federal_4")
+        titulo_federal_4 = request.POST.get("titulo_federal_4")
+        aportacion_aprobada_federal_4 = request.POST.get("aportacion_aprobada_federal_4")
+        fecha_aprobacion_federal_4 = request.POST.get("fecha_aprobacion_federal_4")
+        aportacion_recibida_federal_4 = request.POST.get("aportacion_recibida_federal_4")
+        fecha_recibo_federal_4 = request.POST.get("fecha_recibo_federal_4")
+        aportacion_gastada_federal_4 = request.POST.get("aportacion_gastada_federal_4")
+        fecha_gasto_federal_4 = request.POST.get("fecha_gasto_federal_4")
+        
+        nombre_agencia_federal_5 = request.POST.get("nombre_agencia_federal_5")
+        catalogo_federal_5 = request.POST.get("catalogo_federal_5")
+        sai_federal_5 = request.POST.get("sai_federal_5")
+        titulo_federal_5 = request.POST.get("titulo_federal_5")
+        aportacion_aprobada_federal_5 = request.POST.get("aportacion_aprobada_federal_5")
+        fecha_aprobacion_federal_5 = request.POST.get("fecha_aprobacion_federal_5")
+        aportacion_recibida_federal_5 = request.POST.get("aportacion_recibida_federal_5")
+        fecha_recibo_federal_5 = request.POST.get("fecha_recibo_federal_5")
+        aportacion_gastada_federal_5 = request.POST.get("aportacion_gastada_federal_5")
+        fecha_gasto_federal_5 = request.POST.get("fecha_gasto_federal_5")
+        
+        agencia_local_table_box_1 = request.POST.get("agencia_local_table_box_1")
+        catalogo_local_1 = request.POST.get("catalogo_local_1")
+        programa_local_1 = request.POST.get("programa_local_1")
+        aportacion_federal_aprobada_local_1 = request.POST.get("aportacion_federal_aprobada_local_1")
+        fecha_aprobacion_local_1 = request.POST.get("fecha_aprobacion_local_1")
+        aportacion_federal_recibida_local_1 = request.POST.get("aportacion_federal_recibida_local_1")
+        fecha_recibo_local_1 = request.POST.get("fecha_recibo_local_1")
+        aportacion_federal_gastada_local_1 = request.POST.get("aportacion_federal_gastada_local_1")
+        fecha_gasto_local_1 = request.POST.get("fecha_gasto_local_1")
+        numero_cuenta_local_1 = request.POST.get("numero_cuenta_local_1")
+        
+        agencia_local_table_box_2 = request.POST.get("agencia_local_table_box_2")
+        catalogo_local_2 = request.POST.get("catalogo_local_2")
+        programa_local_2 = request.POST.get("programa_local_2")
+        aportacion_federal_aprobada_local_2 = request.POST.get("aportacion_federal_aprobada_local_2")
+        fecha_aprobacion_local_2 = request.POST.get("fecha_aprobacion_local_2")
+        aportacion_federal_recibida_local_2 = request.POST.get("aportacion_federal_recibida_local_2")
+        fecha_recibo_local_2 = request.POST.get("fecha_recibo_local_2")
+        aportacion_federal_gastada_local_2 = request.POST.get("aportacion_federal_gastada_local_2")
+        fecha_gasto_local_2 = request.POST.get("fecha_gasto_local_2")
+        numero_cuenta_local_2 = request.POST.get("numero_cuenta_local_2")
+        
+        agencia_local_table_box_3 = request.POST.get("agencia_local_table_box_3")
+        catalogo_local_3 = request.POST.get("catalogo_local_3")
+        programa_local_3 = request.POST.get("programa_local_3")
+        aportacion_federal_aprobada_local_3 = request.POST.get("aportacion_federal_aprobada_local_3")
+        fecha_aprobacion_local_3 = request.POST.get("fecha_aprobacion_local_3")
+        aportacion_federal_recibida_local_3 = request.POST.get("aportacion_federal_recibida_local_3")
+        fecha_recibo_local_3 = request.POST.get("fecha_recibo_local_3")
+        aportacion_federal_gastada_local_3 = request.POST.get("aportacion_federal_gastada_local_3")
+        fecha_gasto_local_3 = request.POST.get("fecha_gasto_local_3")
+        numero_cuenta_local_3 = request.POST.get("numero_cuenta_local_3")
+        
+        agencia_local_table_box_4 = request.POST.get("agencia_local_table_box_4")
+        catalogo_local_4 = request.POST.get("catalogo_local_4")
+        programa_local_4 = request.POST.get("programa_local_4")
+        aportacion_federal_aprobada_local_4 = request.POST.get("aportacion_federal_aprobada_local_4")
+        fecha_aprobacion_local_4 = request.POST.get("fecha_aprobacion_local_4")
+        aportacion_federal_recibida_local_4 = request.POST.get("aportacion_federal_recibida_local_4")
+        fecha_recibo_local_4 = request.POST.get("fecha_recibo_local_4")
+        aportacion_federal_gastada_local_4 = request.POST.get("aportacion_federal_gastada_local_4")
+        fecha_gasto_local_4 = request.POST.get("fecha_gasto_local_4")
+        numero_cuenta_local_4 = request.POST.get("numero_cuenta_local_4")
+        
+        agencia_local_table_box_5 = request.POST.get("agencia_local_table_box_5")
+        catalogo_local_5 = request.POST.get("catalogo_local_5")
+        programa_local_5 = request.POST.get("programa_local_5")
+        aportacion_federal_aprobada_local_5 = request.POST.get("aportacion_federal_aprobada_local_5")
+        fecha_aprobacion_local_5 = request.POST.get("fecha_aprobacion_local_5")
+        aportacion_federal_recibida_local_5 = request.POST.get("aportacion_federal_recibida_local_5")
+        fecha_recibo_local_5 = request.POST.get("fecha_recibo_local_5")
+        aportacion_federal_gastada_local_5 = request.POST.get("aportacion_federal_gastada_local_5")
+        fecha_gasto_local_5 = request.POST.get("fecha_gasto_local_5")
+        numero_cuenta_local_5 = request.POST.get("numero_cuenta_local_5")
+        
 
         csv_file_path = "data/cuestionarios/balanza_de_pagos/JP-304.csv"
         file_exists = (
@@ -284,26 +369,106 @@ def JP_304(request):
                         "liaison_officer",
                         "title",
                         "tel",
-                        "nombre_agencia_federal",
-                        "catalogo_federal",
-                        "sai_federal",
-                        "titulo_federal",
-                        "aportacion_aprobada_federal",
-                        "fecha_aprobacion_federal",
-                        "aportacion_recibida_federal",
-                        "fecha_recibo_federal",
-                        "aportacion_gastada_federal",
-                        "fecha_gasto_federal",
-                        "agencia_local_table_box",
-                        "catalogo_local",
-                        "programa_local",
-                        "aportacion_federal_aprobada_local",
-                        "fecha_aprobacion_local",
-                        "aportacion_federal_recibida_local",
-                        "fecha_recibo_local",
-                        "aportacion_federal_gastada_local",
-                        "fecha_gasto_local",
-                        "numero_cuenta_local",
+                        "nombre_agencia_federal_1", 
+                        "catalogo_federal_1",
+                        "sai_federal_1",
+                        "titulo_federal_1",
+                        "aportacion_aprobada_federal_1",
+                        "fecha_aprobacion_federal_1",
+                        "aportacion_recibida_federal_1",
+                        "fecha_recibo_federal_1",
+                        "aportacion_gastada_federal_1",
+                        "fecha_gasto_federal_1",
+                        "nombre_agencia_federal_2",
+                        "catalogo_federal_2",
+                        "sai_federal_2",
+                        "titulo_federal_2",
+                        "aportacion_aprobada_federal_2",
+                        "fecha_aprobacion_federal_2",
+                        "aportacion_recibida_federal_2",
+                        "fecha_recibo_federal_2",
+                        "aportacion_gastada_federal_2",
+                        "fecha_gasto_federal_2",
+                        "nombre_agencia_federal_3",
+                        "catalogo_federal_3",
+                        "sai_federal_3",
+                        "titulo_federal_3",
+                        "aportacion_aprobada_federal_3",
+                        "fecha_aprobacion_federal_3",
+                        "aportacion_recibida_federal_3",
+                        "fecha_recibo_federal_3",
+                        "aportacion_gastada_federal_3",
+                        "fecha_gasto_federal_3",
+                        "nombre_agencia_federal_4",
+                        "catalogo_federal_4",
+                        "sai_federal_4",
+                        "titulo_federal_4",
+                        "aportacion_aprobada_federal_4",
+                        "fecha_aprobacion_federal_4",
+                        "aportacion_recibida_federal_4",
+                        "fecha_recibo_federal_4",
+                        "aportacion_gastada_federal_4",
+                        "fecha_gasto_federal_4",
+                        "nombre_agencia_federal_5",
+                        "catalogo_federal_5",
+                        "sai_federal_5",
+                        "titulo_federal_5",
+                        "aportacion_aprobada_federal_5",
+                        "fecha_aprobacion_federal_5",
+                        "aportacion_recibida_federal_5",
+                        "fecha_recibo_federal_5",
+                        "aportacion_gastada_federal_5",
+                        "fecha_gasto_federal_5",
+                        "agencia_local_table_box_1",
+                        "catalogo_local_1",
+                        "programa_local_1",
+                        "aportacion_federal_aprobada_local_1",
+                        "fecha_aprobacion_local_1",
+                        "aportacion_federal_recibida_local_1",
+                        "fecha_recibo_local_1",
+                        "aportacion_federal_gastada_local_1",
+                        "fecha_gasto_local_1",
+                        "numero_cuenta_local_1",
+                        "agencia_local_table_box_2",
+                        "catalogo_local_2",
+                        "programa_local_2",
+                        "aportacion_federal_aprobada_local_2",
+                        "fecha_aprobacion_local_2",
+                        "aportacion_federal_recibida_local_2",
+                        "fecha_recibo_local_2",
+                        "aportacion_federal_gastada_local_2",
+                        "fecha_gasto_local_2",
+                        "numero_cuenta_local_2",
+                        "agencia_local_table_box_3",
+                        "catalogo_local_3",
+                        "programa_local_3",
+                        "aportacion_federal_aprobada_local_3",
+                        "fecha_aprobacion_local_3",
+                        "aportacion_federal_recibida_local_3",
+                        "fecha_recibo_local_3",
+                        "aportacion_federal_gastada_local_3",
+                        "fecha_gasto_local_3",
+                        "numero_cuenta_local_3",
+                        "agencia_local_table_box_4",
+                        "catalogo_local_4",
+                        "programa_local_4",
+                        "aportacion_federal_aprobada_local_4",
+                        "fecha_aprobacion_local_4",
+                        "aportacion_federal_recibida_local_4",
+                        "fecha_recibo_local_4",
+                        "aportacion_federal_gastada_local_4",
+                        "fecha_gasto_local_4",
+                        "numero_cuenta_local_4",
+                        "agencia_local_table_box_5",
+                        "catalogo_local_5",
+                        "programa_local_5",
+                        "aportacion_federal_aprobada_local_5",
+                        "fecha_aprobacion_local_5",
+                        "aportacion_federal_recibida_local_5",
+                        "fecha_recibo_local_5",
+                        "aportacion_federal_gastada_local_5",
+                        "fecha_gasto_local_5",
+                        "numero_cuenta_local_5",
                     ]
                 )
 
@@ -317,26 +482,106 @@ def JP_304(request):
                     liaison_officer,
                     title,
                     tel,
-                    nombre_agencia_federal,
-                    catalogo_federal,
-                    sai_federal,
-                    titulo_federal,
-                    aportacion_aprobada_federal,
-                    fecha_aprobacion_federal,
-                    aportacion_recibida_federal,
-                    fecha_recibo_federal,
-                    aportacion_gastada_federal,
-                    fecha_gasto_federal,
-                    agencia_local_table_box,
-                    catalogo_local,
-                    programa_local,
-                    aportacion_federal_aprobada_local,
-                    fecha_aprobacion_local,
-                    aportacion_federal_recibida_local,
-                    fecha_recibo_local,
-                    aportacion_federal_gastada_local,
-                    fecha_gasto_local,
-                    numero_cuenta_local,
+                    nombre_agencia_federal_1,
+                    catalogo_federal_1,
+                    sai_federal_1,
+                    titulo_federal_1,
+                    aportacion_aprobada_federal_1,
+                    fecha_aprobacion_federal_1,
+                    aportacion_recibida_federal_1,
+                    fecha_recibo_federal_1,
+                    aportacion_gastada_federal_1,
+                    fecha_gasto_federal_1,
+                    nombre_agencia_federal_2,
+                    catalogo_federal_2,
+                    sai_federal_2,
+                    titulo_federal_2,
+                    aportacion_aprobada_federal_2,
+                    fecha_aprobacion_federal_2,
+                    aportacion_recibida_federal_2,
+                    fecha_recibo_federal_2,
+                    aportacion_gastada_federal_2,
+                    fecha_gasto_federal_2,
+                    nombre_agencia_federal_3,
+                    catalogo_federal_3,
+                    sai_federal_3,
+                    titulo_federal_3,
+                    aportacion_aprobada_federal_3,
+                    fecha_aprobacion_federal_3,
+                    aportacion_recibida_federal_3,
+                    fecha_recibo_federal_3,
+                    aportacion_gastada_federal_3,
+                    fecha_gasto_federal_3,
+                    nombre_agencia_federal_4,
+                    catalogo_federal_4,
+                    sai_federal_4,
+                    titulo_federal_4,
+                    aportacion_aprobada_federal_4,
+                    fecha_aprobacion_federal_4,
+                    aportacion_recibida_federal_4,
+                    fecha_recibo_federal_4,
+                    aportacion_gastada_federal_4,
+                    fecha_gasto_federal_4,
+                    nombre_agencia_federal_5,
+                    catalogo_federal_5,
+                    sai_federal_5,
+                    titulo_federal_5,
+                    aportacion_aprobada_federal_5,
+                    fecha_aprobacion_federal_5,
+                    aportacion_recibida_federal_5,
+                    fecha_recibo_federal_5,
+                    aportacion_gastada_federal_5,
+                    fecha_gasto_federal_5,
+                    agencia_local_table_box_1,
+                    catalogo_local_1,
+                    programa_local_1,
+                    aportacion_federal_aprobada_local_1,
+                    fecha_aprobacion_local_1,
+                    aportacion_federal_recibida_local_1,
+                    fecha_recibo_local_1,
+                    aportacion_federal_gastada_local_1,
+                    fecha_gasto_local_1,
+                    numero_cuenta_local_1,
+                    agencia_local_table_box_2,
+                    catalogo_local_2,
+                    programa_local_2,
+                    aportacion_federal_aprobada_local_2,
+                    fecha_aprobacion_local_2,
+                    aportacion_federal_recibida_local_2,
+                    fecha_recibo_local_2,
+                    aportacion_federal_gastada_local_2,
+                    fecha_gasto_local_2,
+                    numero_cuenta_local_2,
+                    agencia_local_table_box_3,
+                    catalogo_local_3,
+                    programa_local_3,
+                    aportacion_federal_aprobada_local_3,
+                    fecha_aprobacion_local_3,
+                    aportacion_federal_recibida_local_3,
+                    fecha_recibo_local_3,
+                    aportacion_federal_gastada_local_3,
+                    fecha_gasto_local_3,
+                    numero_cuenta_local_3,
+                    agencia_local_table_box_4,
+                    catalogo_local_4,
+                    programa_local_4,
+                    aportacion_federal_aprobada_local_4,
+                    fecha_aprobacion_local_4,
+                    aportacion_federal_recibida_local_4,
+                    fecha_recibo_local_4,
+                    aportacion_federal_gastada_local_4,
+                    fecha_gasto_local_4,
+                    numero_cuenta_local_4,
+                    agencia_local_table_box_5,
+                    catalogo_local_5,
+                    programa_local_5,
+                    aportacion_federal_aprobada_local_5,
+                    fecha_aprobacion_local_5,
+                    aportacion_federal_recibida_local_5,
+                    fecha_recibo_local_5,
+                    aportacion_federal_gastada_local_5,
+                    fecha_gasto_local_5,
+                    numero_cuenta_local_5,
                 ]
             )
 
