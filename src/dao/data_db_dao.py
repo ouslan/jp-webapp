@@ -31,11 +31,29 @@ class DAO:
         self.conn.commit()
 
     def insert_forms(
-        self, data_path: str, dtypes: dict, table_name: str, debug: bool = False
+        self,
+        data_path: str,
+        dtypes: dict,
+        table_name: str,
+        table_id: int,
+        debug: bool = False,
     ):
         df = pd.read_csv(data_path)
-        df["form_id"] = df.index.values + 1
+        df["form_id"] = table_id
         df = df.astype(dtypes)
+        df_id = df[
+            [
+                "id",
+                "form_id",
+            ]
+        ]
+        df_id.df.to_sql(
+            name="Forms",
+            con=self.conn2,
+            if_exists="append",
+            chunksize=5000,
+            index=False,
+        )
         df.to_sql(
             name=table_name,
             con=self.conn2,
