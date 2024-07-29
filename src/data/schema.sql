@@ -6,7 +6,6 @@ CREATE TABLE IF NOT EXISTS "Forms" (
   PRIMARY KEY ("id")
 );
 
-
 -- CONSTRUCTION --
 CREATE TABLE IF NOT EXISTS "JP_541" (
   "id" SERIAL,
@@ -443,11 +442,8 @@ CREATE TABLE IF NOT EXISTS "JP_541" (
   "value_third_trimester_4_10" NUMERIC NOT NULL,
   "value_fourth_trimester_4_10" NUMERIC NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
-
-
 
 --BALANZA DE PAGOS --
 CREATE TABLE IF NOT EXISTS "JP_304" (
@@ -562,8 +558,7 @@ CREATE TABLE IF NOT EXISTS "JP_304" (
   "fecha_gasto_local_5" TEXT NOT NULL,
   "numero_cuenta_local_5" TEXT NOT NULL,
   
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 CREATE TABLE IF NOT EXISTS "JP_361" (
@@ -652,8 +647,7 @@ CREATE TABLE IF NOT EXISTS "JP_361" (
   "phone" TEXT NOT NULL,
   "position" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -768,8 +762,7 @@ CREATE TABLE IF NOT EXISTS "JP_362" (
   "date" TEXT NOT NULL,
   "phone" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -881,8 +874,7 @@ CREATE TABLE IF NOT EXISTS "JP_363" (
   "date" TEXT NOT NULL,
   "phone" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -1031,8 +1023,7 @@ CREATE TABLE IF NOT EXISTS "JP_364" (
   "phone" TEXT NOT NULL,
   "nombre_persona" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -1110,8 +1101,7 @@ CREATE TABLE IF NOT EXISTS "JP_375" (
   "signature" TEXT NOT NULL,
   "position" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 CREATE TABLE IF NOT EXISTS "JP_383" (
@@ -1228,8 +1218,7 @@ CREATE TABLE IF NOT EXISTS "JP_383" (
   "title" TEXT NOT NULL,
   "phone" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -1343,8 +1332,7 @@ CREATE TABLE IF NOT EXISTS "JP_529" (
   "puesto" TEXT NOT NULL,
   "date" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -1446,8 +1434,7 @@ CREATE TABLE IF NOT EXISTS "JP_544" (
   "telefono" TEXT NOT NULL,
   "fecha" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -1553,8 +1540,7 @@ CREATE TABLE IF NOT EXISTS "JP_544_1" (
   "investment_amount" NUMERIC NOT NULL,
   "recived_interest" NUMERIC NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 CREATE TABLE IF NOT EXISTS "JP_547" (
@@ -1613,8 +1599,7 @@ CREATE TABLE IF NOT EXISTS "JP_547" (
   "forgiveness_credit" NUMERIC NOT NULL,
   "reporting_agency" NUMERIC NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -1689,12 +1674,11 @@ CREATE TABLE IF NOT EXISTS "IP_110" (
   "signature" TEXT NOT NULL,
   "rank" TEXT,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 CREATE TABLE IF NOT EXISTS "IP_210" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -1760,12 +1744,12 @@ CREATE TABLE IF NOT EXISTS "IP_210" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_220" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -1834,12 +1818,12 @@ CREATE TABLE IF NOT EXISTS "IP_220" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_230" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -1925,12 +1909,12 @@ CREATE TABLE IF NOT EXISTS "IP_230" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_310" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -2035,7 +2019,7 @@ CREATE TABLE IF NOT EXISTS "IP_310" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
@@ -2159,8 +2143,7 @@ CREATE TABLE IF NOT EXISTS "IP_310b" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 CREATE TABLE IF NOT EXISTS "IP_420" (
@@ -2248,8 +2231,7 @@ CREATE TABLE IF NOT EXISTS "IP_420" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -2338,8 +2320,7 @@ CREATE TABLE IF NOT EXISTS "IP_440" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -2425,8 +2406,7 @@ CREATE TABLE IF NOT EXISTS "IP_440g" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -2495,8 +2475,7 @@ CREATE TABLE IF NOT EXISTS "IP_480" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -2581,8 +2560,7 @@ CREATE TABLE IF NOT EXISTS "IP_480a" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -2650,8 +2628,7 @@ CREATE TABLE IF NOT EXISTS "IP_490" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 CREATE TABLE IF NOT EXISTS "IP_510" (
@@ -2758,8 +2735,7 @@ CREATE TABLE IF NOT EXISTS "IP_510" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -2853,8 +2829,7 @@ CREATE TABLE IF NOT EXISTS "IP_520" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -2922,8 +2897,7 @@ CREATE TABLE IF NOT EXISTS "IP_520a" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -3022,8 +2996,7 @@ CREATE TABLE IF NOT EXISTS "IP_520s" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -3091,8 +3064,7 @@ CREATE TABLE IF NOT EXISTS "IP_530" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
@@ -3166,13 +3138,12 @@ CREATE TABLE IF NOT EXISTS "IP_540" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_540J" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -3245,12 +3216,12 @@ CREATE TABLE IF NOT EXISTS "IP_540J" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_540P" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -3321,12 +3292,12 @@ CREATE TABLE IF NOT EXISTS "IP_540P" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_540S" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -3401,12 +3372,12 @@ CREATE TABLE IF NOT EXISTS "IP_540S" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_540a" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -3485,12 +3456,12 @@ CREATE TABLE IF NOT EXISTS "IP_540a" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_540v" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -3563,12 +3534,12 @@ CREATE TABLE IF NOT EXISTS "IP_540v" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_610" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -3637,12 +3608,12 @@ CREATE TABLE IF NOT EXISTS "IP_610" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_620" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -3721,12 +3692,12 @@ CREATE TABLE IF NOT EXISTS "IP_620" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_710" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -3797,12 +3768,12 @@ CREATE TABLE IF NOT EXISTS "IP_710" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_720" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -3885,12 +3856,12 @@ CREATE TABLE IF NOT EXISTS "IP_720" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "IP_810" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -3961,12 +3932,12 @@ CREATE TABLE IF NOT EXISTS "IP_810" (
   "name" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "JP_560_63110" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "ssn" TEXT NOT NULL,
   "tel" TEXT NOT NULL,
@@ -4002,12 +3973,12 @@ CREATE TABLE IF NOT EXISTS "JP_560_63110" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "JP_560_63111" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "ssn" TEXT NOT NULL,
   "tel" TEXT NOT NULL,
@@ -4039,12 +4010,12 @@ CREATE TABLE IF NOT EXISTS "JP_560_63111" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 
 CREATE TABLE IF NOT EXISTS "JP_560_63210" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "ssn" TEXT NOT NULL,
   "tel" TEXT NOT NULL,
@@ -4088,11 +4059,11 @@ CREATE TABLE IF NOT EXISTS "JP_560_63210" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
 
 CREATE TABLE IF NOT EXISTS "JP_560_2" (
-  "id" SERIAL PRIMARY KEY,
+  "id" SERIAL,
   "form_id" INTEGER NOT NULL,
   "company_name" TEXT NOT NULL,
   "address" TEXT NOT NULL,
@@ -4124,5 +4095,5 @@ CREATE TABLE IF NOT EXISTS "JP_560_2" (
   "signature" TEXT NOT NULL,
   "rank" TEXT NOT NULL,
 
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY("id")
 );
