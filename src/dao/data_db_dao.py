@@ -8,7 +8,6 @@ load_dotenv()
 
 class DAO:
     def __init__(self):
-        super().__init__()
         db_user = os.environ.get("POSTGRES_USER")
         db_password = os.environ.get("POSTGRES_PASSWORD")
         db_name = os.environ.get("POSTGRES_DB")
