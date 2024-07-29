@@ -1266,8 +1266,7 @@ CREATE TABLE IF NOT EXISTS "JP_536_2" (
   "name_title" TEXT NOT NULL,
   "date" TEXT NOT NULL,
 
-  PRIMARY KEY ("id"),
-  FOREIGN KEY ("form_id") REFERENCES "Forms"("id")
+  PRIMARY KEY ("id")
 );
 
 
