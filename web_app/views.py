@@ -2247,7 +2247,6 @@ def JP_541(request):
         value_third_trimester_4_10 = request.POST.get('value_third_trimester_4_10')
         value_fourth_trimester_4_10 = request.POST.get('value_fourth_trimester_4_10')
         
-        
         csv_file_path = 'data/cuestionarios/construcción/JP-541.csv'
         file_exists = os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
 
