@@ -1769,7 +1769,7 @@ def JP_541(request):
         
         #TABLE 1
         encuesta_1 = request.POST.get('encuesta_1')
-        trimestre_1 = request.POST.get('trimestre_1')
+        fiscal_year_1 = request.POST.get('fiscal_year_1')
         company_name_1 = request.POST.get('company_name_1')
         liaison_officer_1 = request.POST.get('liaison_officer_1')
         tel_1 = request.POST.get('tel_1')
@@ -1890,7 +1890,7 @@ def JP_541(request):
         
         #TABLE 2
         encuesta_2 = request.POST.get('encuesta_2')
-        trimestre_2 = request.POST.get('trimestre_2')
+        fiscal_year_2 = request.POST.get('fiscal_year_2')
         company_name_2 = request.POST.get('company_name_2')
         liaison_officer_2 = request.POST.get('liaison_officer_2')
         tel_2 = request.POST.get('tel_2')
@@ -2010,7 +2010,7 @@ def JP_541(request):
         
         #TABLE 3
         encuesta_3 = request.POST.get('encuesta_3')
-        trimestre_3 = request.POST.get('trimestre_3')
+        fiscal_year_3 = request.POST.get('fiscal_year_3')
         company_name_3 = request.POST.get('company_name_3')
         liaison_officer_3 = request.POST.get('liaison_officer_3')
         tel_3 = request.POST.get('tel_3')
@@ -2130,7 +2130,7 @@ def JP_541(request):
         
         #TABLE 4
         encuesta_4 = request.POST.get('encuesta_4')
-        trimestre_4 = request.POST.get('trimestre_4')
+        fiscal_year_4 = request.POST.get('fiscal_year_4')
         company_name_4 = request.POST.get('company_name_4')
         liaison_officer_4 = request.POST.get('liaison_officer_4')
         tel_4 = request.POST.get('tel_4')
@@ -2256,7 +2256,7 @@ def JP_541(request):
             
             if not file_exists:
                 writer.writerow([   
-                                'encuesta_1', 'trimestre_1', 'company_name_1', 'liaison_officer_1', 'tel_1', 'project_1', 'branches_1',
+                                'encuesta_1', 'fiscal_year_1', 'company_name_1', 'liaison_officer_1', 'tel_1', 'project_1', 'branches_1',
                                 'project_name_1_1', 'city_1_1', 'total_number_project_1_1', 'total_cost_1_1', 'start_date_1_1', 'end_date_1_1', 'value_first_trimester_1_1', 'value_second_trimester_1_1', 'value_third_trimester_1_1', 'value_fourth_trimester_1_1',
                                 'project_name_1_2', 'city_1_2', 'total_number_project_1_2', 'total_cost_1_2', 'start_date_1_2', 'end_date_1_2', 'value_first_trimester_1_2', 'value_second_trimester_1_2', 'value_third_trimester_1_2', 'value_fourth_trimester_1_2',
                                 'project_name_1_3', 'city_1_3', 'total_number_project_1_3', 'total_cost_1_3', 'start_date_1_3', 'end_date_1_3', 'value_first_trimester_1_3', 'value_second_trimester_1_3', 'value_third_trimester_1_3', 'value_fourth_trimester_1_3',
@@ -2268,7 +2268,7 @@ def JP_541(request):
                                 'project_name_1_9', 'city_1_9', 'total_number_project_1_9', 'total_cost_1_9', 'start_date_1_9', 'end_date_1_9', 'value_first_trimester_1_9', 'value_second_trimester_1_9', 'value_third_trimester_1_9', 'value_fourth_trimester_1_9',
                                 'project_name_1_10', 'city_1_10', 'total_number_project_1_10', 'total_cost_1_10', 'start_date_1_10', 'end_date_1_10', 'value_first_trimester_1_10', 'value_second_trimester_1_10', 'value_third_trimester_1_10', 'value_fourth_trimester_1_10',
                                 
-                                'encuesta_2', 'trimestre_2', 'company_name_2', 'liaison_officer_2', 'tel_2', 'project_2', 'branches_2',
+                                'encuesta_2', 'fiscal_year_2', 'company_name_2', 'liaison_officer_2', 'tel_2', 'project_2', 'branches_2',
                                 'project_name_2_1', 'city_2_1', 'total_number_project_2_1', 'total_cost_2_1', 'start_date_2_1', 'end_date_2_1', 'value_first_trimester_2_1', 'value_second_trimester_2_1', 'value_third_trimester_2_1', 'value_fourth_trimester_2_1',
                                 'project_name_2_2', 'city_2_2', 'total_number_project_2_2', 'total_cost_2_2', 'start_date_2_2', 'end_date_2_2', 'value_first_trimester_2_2', 'value_second_trimester_2_2', 'value_third_trimester_2_2', 'value_fourth_trimester_2_2',
                                 'project_name_2_3', 'city_2_3', 'total_number_project_2_3', 'total_cost_2_3', 'start_date_2_3', 'end_date_2_3', 'value_first_trimester_2_3', 'value_second_trimester_2_3', 'value_third_trimester_2_3', 'value_fourth_trimester_2_3',
@@ -2280,7 +2280,7 @@ def JP_541(request):
                                 'project_name_2_9', 'city_2_9', 'total_number_project_2_9', 'total_cost_2_9', 'start_date_2_9', 'end_date_2_9', 'value_first_trimester_2_9', 'value_second_trimester_2_9', 'value_third_trimester_2_9', 'value_fourth_trimester_2_9',
                                 'project_name_2_10', 'city_2_10', 'total_number_project_2_10', 'total_cost_2_10', 'start_date_2_10', 'end_date_2_10', 'value_first_trimester_2_10', 'value_second_trimester_2_10', 'value_third_trimester_2_10', 'value_fourth_trimester_2_10',
                                 
-                                'encuesta_3', 'trimestre_3', 'company_name_3', 'liaison_officer_3', 'tel_3', 'project_3', 'branches_3',
+                                'encuesta_3', 'fiscal_year_3', 'company_name_3', 'liaison_officer_3', 'tel_3', 'project_3', 'branches_3',
                                 'project_name_3_1', 'city_3_1', 'total_number_project_3_1', 'total_cost_3_1', 'start_date_3_1', 'end_date_3_1', 'value_first_trimester_3_1', 'value_second_trimester_3_1', 'value_third_trimester_3_1', 'value_fourth_trimester_3_1',
                                 'project_name_3_2', 'city_3_2', 'total_number_project_3_2', 'total_cost_3_2', 'start_date_3_2', 'end_date_3_2', 'value_first_trimester_3_2', 'value_second_trimester_3_2', 'value_third_trimester_3_2', 'value_fourth_trimester_3_2',
                                 'project_name_3_3', 'city_3_3', 'total_number_project_3_3', 'total_cost_3_3', 'start_date_3_3', 'end_date_3_3', 'value_first_trimester_3_3', 'value_second_trimester_3_3', 'value_third_trimester_3_3', 'value_fourth_trimester_3_3',
@@ -2306,7 +2306,7 @@ def JP_541(request):
                                 ])
             
             writer.writerow([   
-                            encuesta_1, trimestre_1, company_name_1, liaison_officer_1, tel_1, project_1, branches_1,
+                            encuesta_1, fiscal_year_1, company_name_1, liaison_officer_1, tel_1, project_1, branches_1,
                             project_name_1_1, city_1_1, total_number_project_1_1, total_cost_1_1, start_date_1_1, end_date_1_1, value_first_trimester_1_1, value_second_trimester_1_1, value_third_trimester_1_1, value_fourth_trimester_1_1,
                             project_name_1_2, city_1_2, total_number_project_1_2, total_cost_1_2, start_date_1_2, end_date_1_2, value_first_trimester_1_2, value_second_trimester_1_2, value_third_trimester_1_2, value_fourth_trimester_1_2,
                             project_name_1_3, city_1_3, total_number_project_1_3, total_cost_1_3, start_date_1_3, end_date_1_3, value_first_trimester_1_3, value_second_trimester_1_3, value_third_trimester_1_3, value_fourth_trimester_1_3,
@@ -2318,7 +2318,7 @@ def JP_541(request):
                             project_name_1_9, city_1_9, total_number_project_1_9, total_cost_1_9, start_date_1_9, end_date_1_9, value_first_trimester_1_9, value_second_trimester_1_9, value_third_trimester_1_9, value_fourth_trimester_1_9,
                             project_name_1_10, city_1_10, total_number_project_1_10, total_cost_1_10, start_date_1_10, end_date_1_10, value_first_trimester_1_10, value_second_trimester_1_10, value_third_trimester_1_10, value_fourth_trimester_1_10,
                             
-                            encuesta_2, trimestre_2, company_name_2, liaison_officer_2, tel_2, project_2, branches_2,
+                            encuesta_2, fiscal_year_2, company_name_2, liaison_officer_2, tel_2, project_2, branches_2,
                             project_name_2_1, city_2_1, total_number_project_2_1, total_cost_2_1, start_date_2_1, end_date_2_1, value_first_trimester_2_1, value_second_trimester_2_1, value_third_trimester_2_1, value_fourth_trimester_2_1,
                             project_name_2_2, city_2_2, total_number_project_2_2, total_cost_2_2, start_date_2_2, end_date_2_2, value_first_trimester_2_2, value_second_trimester_2_2, value_third_trimester_2_2, value_fourth_trimester_2_2,
                             project_name_2_3, city_2_3, total_number_project_2_3, total_cost_2_3, start_date_2_3, end_date_2_3, value_first_trimester_2_3, value_second_trimester_2_3, value_third_trimester_2_3, value_fourth_trimester_2_3,
@@ -2330,7 +2330,7 @@ def JP_541(request):
                             project_name_2_9, city_2_9, total_number_project_2_9, total_cost_2_9, start_date_2_9, end_date_2_9, value_first_trimester_2_9, value_second_trimester_2_9, value_third_trimester_2_9, value_fourth_trimester_2_9,
                             project_name_2_10, city_2_10, total_number_project_2_10, total_cost_2_10, start_date_2_10, end_date_2_10, value_first_trimester_2_10, value_second_trimester_2_10, value_third_trimester_2_10, value_fourth_trimester_2_10,
                             
-                            encuesta_3, trimestre_3, company_name_3, liaison_officer_3, tel_3, project_3, branches_3,
+                            encuesta_3, fiscal_year_3, company_name_3, liaison_officer_3, tel_3, project_3, branches_3,
                             project_name_3_1, city_3_1, total_number_project_3_1, total_cost_3_1, start_date_3_1, end_date_3_1, value_first_trimester_3_1, value_second_trimester_3_1, value_third_trimester_3_1, value_fourth_trimester_3_1,
                             project_name_3_2, city_3_2, total_number_project_3_2, total_cost_3_2, start_date_3_2, end_date_3_2, value_first_trimester_3_2, value_second_trimester_3_2, value_third_trimester_3_2, value_fourth_trimester_3_2,
                             project_name_3_3, city_3_3, total_number_project_3_3, total_cost_3_3, start_date_3_3, end_date_3_3, value_first_trimester_3_3, value_second_trimester_3_3, value_third_trimester_3_3, value_fourth_trimester_3_3,
@@ -2343,7 +2343,7 @@ def JP_541(request):
                             project_name_3_10, city_3_10, total_number_project_3_10, total_cost_3_10, start_date_3_10, end_date_3_10, value_first_trimester_3_10, value_second_trimester_3_10, value_third_trimester_3_10, value_fourth_trimester_3_10,
                             
             
-                            encuesta_4, trimestre_4, company_name_4, liaison_officer_4, tel_4, project_4, branches_4,
+                            encuesta_4, fiscal_year_4, company_name_4, liaison_officer_4, tel_4, project_4, branches_4,
                             project_name_4_1, city_4_1, total_number_project_4_1, total_cost_4_1, start_date_4_1, end_date_4_1, value_first_trimester_4_1, value_second_trimester_4_1, value_third_trimester_4_1, value_fourth_trimester_4_1,
                             project_name_4_2, city_4_2, total_number_project_4_2, total_cost_4_2, start_date_4_2, end_date_4_2, value_first_trimester_4_2, value_second_trimester_4_2, value_third_trimester_4_2, value_fourth_trimester_4_2,
                             project_name_4_3, city_4_3, total_number_project_4_3, total_cost_4_3, start_date_4_3, end_date_4_3, value_first_trimester_4_3, value_second_trimester_4_3, value_third_trimester_4_3, value_fourth_trimester_4_3,
