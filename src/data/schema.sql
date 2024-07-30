@@ -775,6 +775,12 @@ CREATE TABLE IF NOT EXISTS "JP_363" (
   "notes_year_left" INTEGER NOT NULL,
   "notes_year_right" INTEGER NOT NULL,
 
+  "CG_bonds_left" NUMERIC NOT NULL,
+  "CG_bonds_right" NUMERIC NOT NULL,
+  "CG_notes_left" NUMERIC NOT NULL,
+  "CG_notes_right" NUMERIC NOT NULL,
+  "CG_name_service" TEXT NOT NULL,
+
   "town_bonds_left" NUMERIC NOT NULL,
   "town_bonds_right" NUMERIC NOT NULL,
   "town_notes_left" NUMERIC NOT NULL,
@@ -816,6 +822,12 @@ CREATE TABLE IF NOT EXISTS "JP_363" (
   "PA_notes_left" NUMERIC NOT NULL,
   "PA_notes_right" NUMERIC NOT NULL,
   "PA_name_service" TEXT NOT NULL,
+
+  "TA_bonds_left" NUMERIC NOT NULL,
+  "TA_bonds_right" NUMERIC NOT NULL,
+  "TA_notes_left" NUMERIC NOT NULL,
+  "TA_notes_right" NUMERIC NOT NULL,
+  "TA_name_service" TEXT NOT NULL,
 
   "IDC_bonds_left" NUMERIC NOT NULL,
   "IDC_bonds_right" NUMERIC NOT NULL,
