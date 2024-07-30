@@ -39,9 +39,9 @@ class DAO:
         debug: bool = False,
     ):
         df = pd.read_csv(data_path)
-        df.columns = df.columns.str.lower().str.strip()
+        df.columns = df.columns.str.strip()
         df["form_id"] = table_id
-        # print(df.columns)
+        print(df.columns)
         df = df.astype(dtypes)
         df.to_sql(
             name=table_name,
