@@ -6578,6 +6578,44 @@ def JP_560_2(request):
                 ]
             )
 
+        DAO().insert_forms(
+            data_path="data/cuestionarios/ingreso_neto/JP-560-2.csv",
+            dtypes={
+                "company_name": str,
+                "address": str,
+                "email": str,
+                "liaison_officer": str,
+                "ssn": str,
+                "tel": str,
+                "fax": str,
+                "sales_1": float,
+                "sales_2": float,
+                "interest_received_1": float,
+                "interest_received_2": float,
+                "other_income_1": float,
+                "other_income_2": float,
+                "total_income_1": float,
+                "total_income_2": float,
+                "interest_paid_1": float,
+                "interest_paid_2": float,
+                "other_expenditures_1_1": float,
+                "other_expenditures_2_1": float,
+                "other_expenditures_1_2": float,
+                "other_expenditures_2_2": float,
+                "net_profit_loss_1": float,
+                "net_profit_loss_2": float,
+                "initial_inventory_1": float,
+                "initial_inventory_2": float,
+                "final_inventory_1": float,
+                "final_inventory_2": float,
+                "signature": str,
+                "rank": str,
+            },
+            table_name="JP_560_2",
+            table_id="43",
+            debug=False,
+        )
+
         return render(request, "forms/succesfull.html")
 
     return render(request, "forms/yearly/ingreso_neto/JP-560-2.html")
