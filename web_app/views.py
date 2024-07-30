@@ -5722,7 +5722,7 @@ def IP_220(request):
                     "rank": str,
             },
             table_name="IP_220",
-            table_id="15",
+            table_id="17",
             debug=False,
         )
 
@@ -5840,6 +5840,44 @@ def JP_560_63111(request):
                     rank,
                 ]
             )
+
+            DAO().insert_forms(
+            data_path="data/cuestionarios/ingreso_neto/JP-560-63111.csv",
+            dtypes={
+                    "ssn": str,
+                    "tel": str,
+                    "fax": str,
+                    "sales_1": str,
+                    "sales_2": str,
+                    "premiums_1": str,
+                    "premiums_2": str,
+                    "interest_received_1": str,
+                    "interest_received_2": str,
+                    "other_income_1": str,
+                    "other_income_2": str,
+                    "total_income_1": str,
+                    "total_income_2": str,
+                    "interest_paid_1": str,
+                    "interest_paid_2": str,
+                    "claims_paid_1": str,
+                    "claims_paid_2": str,
+                    "other_expenditures_1": str,
+                    "other_expenditures_2": str,
+                    "total_expenditures_1": str,
+                    "total_expenditures_2": str,
+                    "net_profit_loss_1": str,
+                    "net_profit_loss_2": str,
+                    "initial_inventory_1": str,
+                    "initial_inventory_2": str,
+                    "final_inventory_1": str,
+                    "final_inventory_2": str,
+                    "signature": str,
+                    "rank": str,
+            },
+            table_name="JP_560_63111",
+            table_id="19",
+            debug=False,
+        )
 
         return render(request, "forms/succesfull.html")
 
