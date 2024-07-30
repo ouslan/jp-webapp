@@ -5094,7 +5094,7 @@ def JP_560_63110(request):
                 ]
             )
 
-            DAO().insert_forms(
+        DAO().insert_forms(
             data_path="data/cuestionarios/ingreso_neto/JP-560-63110.csv",
             dtypes={
                     "ssn": str,
