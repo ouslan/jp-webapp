@@ -4735,7 +4735,7 @@ def JP_363(request):
                         "other_PC_2_notes_right",
                         "other_PC_2_name_service",
                         "GNMA_bonds_left",
-                        "GN",
+                        "GNMA_bonds_right",
                         "GNMA_notes_left",
                         "GNMA_notes_right",
                         "GNMA_name_service",
@@ -4940,7 +4940,7 @@ def JP_363(request):
                 "other_PC_2_notes_right": float,
                 "other_PC_2_name_service": str,
                 "GNMA_bonds_left": float,
-                "GN": str,
+                "GNMA_bonds_right": float,
                 "GNMA_notes_left": float,
                 "GNMA_notes_right": float,
                 "GNMA_name_service": str,
@@ -12291,7 +12291,7 @@ def JP_544_2(request):
                     recived_interest,
                 ]
             )
-        
+
         DAO().insert_forms(
             data_path="data/cuestionarios/balanza_de_pagos/JP-544-2.csv",
             dtypes={
@@ -12326,31 +12326,31 @@ def JP_544_2(request):
                 "federal_date_receipt_6": str,
                 "federal_agency_name_7": str,
                 "federal_program_7": str,
-                "federal_recieved_amount_7":  int,
+                "federal_recieved_amount_7": int,
                 "federal_date_receipt_7": str,
                 "federal_agency_name_8": str,
                 "federal_program_8": str,
-                "federal_recieved_amount_8":  int,
+                "federal_recieved_amount_8": int,
                 "federal_date_receipt_8": str,
                 "local_agency_name_1": str,
                 "agency_program_1": str,
-                "agency_recieved_amount_1":  int,
+                "agency_recieved_amount_1": int,
                 "agency_date_receipt_1": str,
                 "local_agency_name_2": str,
                 "agency_program_2": str,
-                "agency_recieved_amount_2":  int,
+                "agency_recieved_amount_2": int,
                 "agency_date_receipt_2": str,
                 "local_agency_name_3": str,
                 "agency_program_3": str,
-                "agency_recieved_amount_3":  int,
+                "agency_recieved_amount_3": int,
                 "agency_date_receipt_3": str,
                 "local_agency_name_4": str,
                 "agency_program_4": str,
-                "agency_recieved_amount_4":  int,
+                "agency_recieved_amount_4": int,
                 "agency_date_receipt_4": str,
                 "local_agency_name_5": str,
                 "agency_program_5": str,
-                "agency_recieved_amount_5":  int,
+                "agency_recieved_amount_5": int,
                 "agency_date_receipt_5": str,
                 "total_students_enrolled": int,
                 "students_recived_amount": float,
@@ -12398,7 +12398,6 @@ def JP_544_2(request):
             table_id=28,
             debug=False,
         )
-
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-2.html")
@@ -12628,7 +12627,7 @@ def IP_610(request):
                     rank,
                 ]
             )
-        
+
         DAO().insert_forms(
             data_path="data/cuestionarios/ingreso_neto/IP-610.csv",
             dtypes={
@@ -12942,7 +12941,7 @@ def IP_710(request):
                     rank,
                 ]
             )
-        
+
         DAO().insert_forms(
             data_path="data/cuestionarios/ingreso_neto/IP-710.csv",
             dtypes={
