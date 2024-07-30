@@ -12,7 +12,70 @@ def home(request):
     return render(request, "home.html")
 
 def proyecciones(request):
-    return render(request, "proyecciones.html")
+    x = [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+    ]
+    y = [
+        14,
+        55,
+        44,
+        13,
+        29,
+        20,
+        45,
+        39,
+        29,
+        10,
+        50,
+        60,
+        39,
+        36,
+        49,
+        18,
+        49,
+        50,
+        69,
+        18,
+        13,
+        11,
+        4,
+        2,
+        1,
+    ]
+
+    x_title = ""
+    y_title = ""
+
+    fig = gf.graph(x, y, x_title, y_title)
+
+    proyecciones = fig.to_html()
+
+    context = {"proyecciones": proyecciones}
+    render(request, "proyecciones.html", context)
 
 
 def macro(request):
