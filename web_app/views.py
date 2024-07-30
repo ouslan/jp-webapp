@@ -11851,67 +11851,67 @@ def JP_544_2(request):
 
         federal_agency_name_1 = request.POST.get("federal_agency_name_1")
         federal_program_1 = request.POST.get("federal_program_1")
-        federal_recieived_amount_1 = request.POST.get("federal_recieived_amount_1")
+        federal_recieved_amount_1 = request.POST.get("federal_recieved_amount_1")
         federal_date_receipt_1 = request.POST.get("federal_date_receipt_1")
 
         federal_agency_name_2 = request.POST.get("federal_agency_name_2")
         federal_program_2 = request.POST.get("federal_program_2")
-        federal_recieived_amount_2 = request.POST.get("federal_recieived_amount_2")
+        federal_recieved_amount_2 = request.POST.get("federal_recieved_amount_2")
         federal_date_receipt_2 = request.POST.get("federal_date_receipt_2")
 
         federal_agency_name_3 = request.POST.get("federal_agency_name_3")
         federal_program_3 = request.POST.get("federal_program_3")
-        federal_recieived_amount_3 = request.POST.get("federal_recieived_amount_3")
+        federal_recieved_amount_3 = request.POST.get("federal_recieved_amount_3")
         federal_date_receipt_3 = request.POST.get("federal_date_receipt_3")
 
         federal_agency_name_4 = request.POST.get("federal_agency_name_4")
         federal_program_4 = request.POST.get("federal_program_4")
-        federal_recieived_amount_4 = request.POST.get("federal_recieived_amount_4")
+        federal_recieved_amount_4 = request.POST.get("federal_recieved_amount_4")
         federal_date_receipt_4 = request.POST.get("federal_date_receipt_4")
 
         federal_agency_name_5 = request.POST.get("federal_agency_name_5")
         federal_program_5 = request.POST.get("federal_program_5")
-        federal_recieived_amount_5 = request.POST.get("federal_recieived_amount_5")
+        federal_recieved_amount_5 = request.POST.get("federal_recieved_amount_5")
         federal_date_receipt_5 = request.POST.get("federal_date_receipt_5")
 
         federal_agency_name_6 = request.POST.get("federal_agency_name_6")
         federal_program_6 = request.POST.get("federal_program_6")
-        federal_recieived_amount_6 = request.POST.get("federal_recieived_amount_6")
+        federal_recieved_amount_6 = request.POST.get("federal_recieved_amount_6")
         federal_date_receipt_6 = request.POST.get("federal_date_receipt_6")
 
         federal_agency_name_7 = request.POST.get("federal_agency_name_7")
         federal_program_7 = request.POST.get("federal_program_7")
-        federal_recieived_amount_7 = request.POST.get("federal_recieived_amount_7")
+        federal_recieved_amount_7 = request.POST.get("federal_recieved_amount_7")
         federal_date_receipt_7 = request.POST.get("federal_date_receipt_7")
 
         federal_agency_name_8 = request.POST.get("federal_agency_name_8")
         federal_program_8 = request.POST.get("federal_program_8")
-        federal_recieived_amount_8 = request.POST.get("federal_recieived_amount_8")
+        federal_recieved_amount_8 = request.POST.get("federal_recieved_amount_8")
         federal_date_receipt_8 = request.POST.get("federal_date_receipt_8")
 
         local_agency_name_1 = request.POST.get("local_agency_name_1")
         agency_program_1 = request.POST.get("agency_program_1")
-        agency_recieived_amount_1 = request.POST.get("agency_recieived_amount_1")
+        agency_recieved_amount_1 = request.POST.get("agency_recieved_amount_1")
         agency_date_receipt_1 = request.POST.get("agency_date_receipt_1")
 
         local_agency_name_2 = request.POST.get("local_agency_name_2")
         agency_program_2 = request.POST.get("agency_program_2")
-        agency_recieived_amount_2 = request.POST.get("agency_recieived_amount_2")
+        agency_recieved_amount_2 = request.POST.get("agency_recieved_amount_2")
         agency_date_receipt_2 = request.POST.get("agency_date_receipt_2")
 
         local_agency_name_3 = request.POST.get("local_agency_name_3")
         agency_program_3 = request.POST.get("agency_program_3")
-        agency_recieived_amount_3 = request.POST.get("agency_recieived_amount_3")
+        agency_recieved_amount_3 = request.POST.get("agency_recieved_amount_3")
         agency_date_receipt_3 = request.POST.get("agency_date_receipt_3")
 
         local_agency_name_4 = request.POST.get("local_agency_name_4")
         agency_program_4 = request.POST.get("agency_program_4")
-        agency_recieived_amount_4 = request.POST.get("agency_recieived_amount_4")
+        agency_recieved_amount_4 = request.POST.get("agency_recieved_amount_4")
         agency_date_receipt_4 = request.POST.get("agency_date_receipt_4")
 
         local_agency_name_5 = request.POST.get("local_agency_name_5")
         agency_program_5 = request.POST.get("agency_program_5")
-        agency_recieived_amount_5 = request.POST.get("agency_recieived_amount_5")
+        agency_recieved_amount_5 = request.POST.get("agency_recieved_amount_5")
         agency_date_receipt_5 = request.POST.get("agency_date_receipt_5")
 
         total_students_enrolled = request.POST.get("total_students_enrolled")
@@ -12005,55 +12005,55 @@ def JP_544_2(request):
                         "email",
                         "federal_agency_name_1",
                         "federal_program_1",
-                        "federal_recieived_amount_1",
+                        "federal_recieved_amount_1",
                         "federal_date_receipt_1",
                         "federal_agency_name_2",
                         "federal_program_2",
-                        "federal_recieived_amount_2",
+                        "federal_recieved_amount_2",
                         "federal_date_receipt_2",
                         "federal_agency_name_3",
                         "federal_program_3",
-                        "federal_recieived_amount_3",
+                        "federal_recieved_amount_3",
                         "federal_date_receipt_3",
                         "federal_agency_name_4",
                         "federal_program_4",
-                        "federal_recieived_amount_4",
+                        "federal_recieved_amount_4",
                         "federal_date_receipt_4",
                         "federal_agency_name_5",
                         "federal_program_5",
-                        "federal_recieived_amount_5",
+                        "federal_recieved_amount_5",
                         "federal_date_receipt_5",
                         "federal_agency_name_6",
                         "federal_program_6",
-                        "federal_recieived_amount_6",
+                        "federal_recieved_amount_6",
                         "federal_date_receipt_6",
                         "federal_agency_name_7",
                         "federal_program_7",
-                        "federal_recieived_amount_7",
+                        "federal_recieved_amount_7",
                         "federal_date_receipt_7",
                         "federal_agency_name_8",
                         "federal_program_8",
-                        "federal_recieived_amount_8",
+                        "federal_recieved_amount_8",
                         "federal_date_receipt_8",
                         "local_agency_name_1",
                         "agency_program_1",
-                        "agency_recieived_amount_1",
+                        "agency_recieved_amount_1",
                         "agency_date_receipt_1",
                         "local_agency_name_2",
                         "agency_program_2",
-                        "agency_recieived_amount_2",
+                        "agency_recieved_amount_2",
                         "agency_date_receipt_2",
                         "local_agency_name_3",
                         "agency_program_3",
-                        "agency_recieived_amount_3",
+                        "agency_recieved_amount_3",
                         "agency_date_receipt_3",
                         "local_agency_name_4",
                         "agency_program_4",
-                        "agency_recieived_amount_4",
+                        "agency_recieved_amount_4",
                         "agency_date_receipt_4",
                         "local_agency_name_5",
                         "agency_program_5",
-                        "agency_recieived_amount_5",
+                        "agency_recieved_amount_5",
                         "agency_date_receipt_5",
                         "total_students_enrolled",
                         "students_recived_amount",
@@ -12108,55 +12108,55 @@ def JP_544_2(request):
                     email,
                     federal_agency_name_1,
                     federal_program_1,
-                    federal_recieived_amount_1,
+                    federal_recieved_amount_1,
                     federal_date_receipt_1,
                     federal_agency_name_2,
                     federal_program_2,
-                    federal_recieived_amount_2,
+                    federal_recieved_amount_2,
                     federal_date_receipt_2,
                     federal_agency_name_3,
                     federal_program_3,
-                    federal_recieived_amount_3,
+                    federal_recieved_amount_3,
                     federal_date_receipt_3,
                     federal_agency_name_4,
                     federal_program_4,
-                    federal_recieived_amount_4,
+                    federal_recieved_amount_4,
                     federal_date_receipt_4,
                     federal_agency_name_5,
                     federal_program_5,
-                    federal_recieived_amount_5,
+                    federal_recieved_amount_5,
                     federal_date_receipt_5,
                     federal_agency_name_6,
                     federal_program_6,
-                    federal_recieived_amount_6,
+                    federal_recieved_amount_6,
                     federal_date_receipt_6,
                     federal_agency_name_7,
                     federal_program_7,
-                    federal_recieived_amount_7,
+                    federal_recieved_amount_7,
                     federal_date_receipt_7,
                     federal_agency_name_8,
                     federal_program_8,
-                    federal_recieived_amount_8,
+                    federal_recieved_amount_8,
                     federal_date_receipt_8,
                     local_agency_name_1,
                     agency_program_1,
-                    agency_recieived_amount_1,
+                    agency_recieved_amount_1,
                     agency_date_receipt_1,
                     local_agency_name_2,
                     agency_program_2,
-                    agency_recieived_amount_2,
+                    agency_recieved_amount_2,
                     agency_date_receipt_2,
                     local_agency_name_3,
                     agency_program_3,
-                    agency_recieived_amount_3,
+                    agency_recieved_amount_3,
                     agency_date_receipt_3,
                     local_agency_name_4,
                     agency_program_4,
-                    agency_recieived_amount_4,
+                    agency_recieved_amount_4,
                     agency_date_receipt_4,
                     local_agency_name_5,
                     agency_program_5,
-                    agency_recieived_amount_5,
+                    agency_recieved_amount_5,
                     agency_date_receipt_5,
                     total_students_enrolled,
                     students_recived_amount,
@@ -12201,6 +12201,114 @@ def JP_544_2(request):
                     recived_interest,
                 ]
             )
+        
+        DAO().insert_forms(
+            data_path="data/cuestionarios/balanza_de_pagos/JP-544-2.csv",
+            dtypes={
+                "university_name": str,
+                "phone": str,
+                "contact_person": str,
+                "direction": str,
+                "email": str,
+                "federal_agency_name_1": str,
+                "federal_program_1": str,
+                "federal_recieved_amount_1": int,
+                "federal_date_receipt_1": str,
+                "federal_agency_name_2": str,
+                "federal_program_2": str,
+                "federal_recieved_amount_2": int,
+                "federal_date_receipt_2": str,
+                "federal_agency_name_3": str,
+                "federal_program_3": str,
+                "federal_recieved_amount_3": int,
+                "federal_date_receipt_3": str,
+                "federal_agency_name_4": str,
+                "federal_program_4": str,
+                "federal_recieved_amount_4": int,
+                "federal_date_receipt_4": str,
+                "federal_agency_name_5": str,
+                "federal_program_5": str,
+                "federal_recieved_amount_5": int,
+                "federal_date_receipt_5": str,
+                "federal_agency_name_6": str,
+                "federal_program_6": str,
+                "federal_recieved_amount_6": int,
+                "federal_date_receipt_6": str,
+                "federal_agency_name_7": str,
+                "federal_program_7": str,
+                "federal_recieved_amount_7":  int,
+                "federal_date_receipt_7": str,
+                "federal_agency_name_8": str,
+                "federal_program_8": str,
+                "federal_recieved_amount_8":  int,
+                "federal_date_receipt_8": str,
+                "local_agency_name_1": str,
+                "agency_program_1": str,
+                "agency_recieved_amount_1":  int,
+                "agency_date_receipt_1": str,
+                "local_agency_name_2": str,
+                "agency_program_2": str,
+                "agency_recieved_amount_2":  int,
+                "agency_date_receipt_2": str,
+                "local_agency_name_3": str,
+                "agency_program_3": str,
+                "agency_recieved_amount_3":  int,
+                "agency_date_receipt_3": str,
+                "local_agency_name_4": str,
+                "agency_program_4": str,
+                "agency_recieved_amount_4":  int,
+                "agency_date_receipt_4": str,
+                "local_agency_name_5": str,
+                "agency_program_5": str,
+                "agency_recieved_amount_5":  int,
+                "agency_date_receipt_5": str,
+                "total_students_enrolled": int,
+                "students_recived_amount": float,
+                "total_pell_grant_students": int,
+                "pell_grant_students_amount": float,
+                "total_no_resident_student": int,
+                "no_resident_student_amount": float,
+                "no_resident_students_bills": float,
+                "loans_granted": int,
+                "loans_granted_amount": float,
+                "donations_institution_name_1": str,
+                "donations_amount_1": float,
+                "donations_date_1": str,
+                "donations_institution_name_2": str,
+                "donations_amount_2": float,
+                "donations_date_2": str,
+                "donations_institution_name_3": str,
+                "donations_amount_3": float,
+                "donations_date_3": str,
+                "donations_institution_name_4": str,
+                "donations_amount_4": float,
+                "donations_date_4": str,
+                "donations_institution_name_5": str,
+                "donations_amount_5": float,
+                "donations_date_5": str,
+                "profesional_services_amount": int,
+                "profesional_services_payment": float,
+                "other_payment_relations_1": str,
+                "other_payment_relations_amount_1": int,
+                "other_payment_relations_payment_1": float,
+                "other_payment_relations_2": str,
+                "other_payment_relations_amount_2": int,
+                "other_payment_relations_payment_2": float,
+                "other_payment_relations_3": str,
+                "other_payment_relations_amount_3": int,
+                "other_payment_relations_payment_3": float,
+                "other_payment_relations_4": str,
+                "other_payment_relations_amount_4": int,
+                "other_payment_relations_payment_4": float,
+                "acquired_value": float,
+                "investment_amount": float,
+                "recived_interest": float,
+            },
+            table_name="JP_544_1",
+            table_id=28,
+            debug=False,
+        )
+
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-2.html")
@@ -12430,6 +12538,81 @@ def IP_610(request):
                     rank,
                 ]
             )
+        
+        DAO().insert_forms(
+            data_path="data/cuestionarios/ingreso_neto/IP-610.csv",
+            dtypes={
+                "company_name": str,
+                "address": str,
+                "email": str,
+                "liaison_officer": str,
+                "ssn": str,
+                "tel": str,
+                "fax": str,
+                "legal_form": str,
+                "cfc": str,
+                "business_type": str,
+                "business_function": str,
+                "branches": str,
+                "branches_yes": str,
+                "closing_date": str,
+                "start_year": int,
+                "end_year": int,
+                "incomes_services_rendered_1": float,
+                "incomes_services_rendered_2": float,
+                "incomes_unrestricted_A_1": float,
+                "incomes_unrestricted_A_2": float,
+                "incomes_restricted_A_1": float,
+                "incomes_restricted_A_2": float,
+                "incomes_sales_1": float,
+                "incomes_sales_2": float,
+                "incomes_rents_1": float,
+                "incomes_rents_2": float,
+                "incomes_interests_1": float,
+                "incomes_interests_2": float,
+                "incomes_capital_1": float,
+                "incomes_capital_2": float,
+                "incomes_total_1": float,
+                "incomes_total_2": float,
+                "expenses_1": float,
+                "expenses_2": float,
+                "expenses_salaries_1": float,
+                "expenses_salaries_2": float,
+                "expenses_interests_1": float,
+                "expenses_interests_2": float,
+                "expenses_rents_1": float,
+                "expenses_rents_2": float,
+                "expenses_depreciation_1": float,
+                "expenses_depreciation_2": float,
+                "expenses_debts_1": float,
+                "expenses_debts_2": float,
+                "expenses_donations_1": float,
+                "expenses_donations_2": float,
+                "expenses_tax_1": float,
+                "expenses_tax_2": float,
+                "expenses_machinery_1": float,
+                "expenses_machinery_2": float,
+                "other_purchases_1": float,
+                "other_purchases_2": float,
+                "expenses_licenses_1": float,
+                "expenses_licenses_2": float,
+                "expenses_other_1": float,
+                "expenses_other_2": float,
+                "net_profit_1": float,
+                "net_profit_2": float,
+                "income_tax_1": float,
+                "income_tax_2": float,
+                "profit_after_tax_1": float,
+                "profit_after_tax_2": float,
+                "withheld_tax_1": float,
+                "withheld_tax_2": float,
+                "signature": str,
+                "rank": str,
+            },
+            table_name="IP_610",
+            table_id=26,
+            debug=False,
+        )
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-610.html")
@@ -12669,6 +12852,83 @@ def IP_710(request):
                     rank,
                 ]
             )
+        
+        DAO().insert_forms(
+            data_path="data/cuestionarios/ingreso_neto/IP-710.csv",
+            dtypes={
+                "company_name": str,
+                "address": str,
+                "email": str,
+                "liaison_officer": str,
+                "ssn": str,
+                "tel": str,
+                "fax": str,
+                "legal_form": str,
+                "cfc": str,
+                "business_type": str,
+                "business_function": str,
+                "branches": str,
+                "branches_yes": str,
+                "closing_date": str,
+                "start_year": int,
+                "end_year": int,
+                "total_income_1": float,
+                "total_income_2": float,
+                "incomes_service_1": float,
+                "incomes_service_2": float,
+                "incomes_from_persons_1": float,
+                "incomes_from_persons_2": float,
+                "incomes_from_industries_1": float,
+                "incomes_from_industries_2": float,
+                "incomes_from_sales_1": float,
+                "incomes_from_sales_2": float,
+                "income_rent_machinery_1": float,
+                "income_rent_machinery_2": float,
+                "income_rent_land_1": float,
+                "income_rent_land_2": float,
+                "income_interests_1": float,
+                "income_interests_2": float,
+                "income_capital_gain_or_loss_1": float,
+                "income_capital_gain_or_loss_2": float,
+                "income_other_operating_1": float,
+                "income_other_operating_2": float,
+                "total_expenses_1": float,
+                "total_expenses_2": float,
+                "expenses_salaries_1": float,
+                "expenses_salaries_2": float,
+                "expenses_interests_1": float,
+                "expenses_interests_2": float,
+                "expenses_rent_land_1": float,
+                "expenses_rent_land_2": float,
+                "expenses_depreciation_1": float,
+                "expenses_depreciation_2": float,
+                "expenses_bad_debts_1": float,
+                "expenses_bad_debts_2": float,
+                "expenses_donations_1": float,
+                "expenses_donations_2": float,
+                "expenses_other_operating_1": float,
+                "expenses_other_operating_2": float,
+                "expenses_sales_and_use_1": float,
+                "expenses_sales_and_use_2": float,
+                "expenses_purchases_machinery_1": float,
+                "expenses_purchases_machinery_2": float,
+                "expenses_other_purchases_1": float,
+                "expenses_other_purchases_2": float,
+                "expenses_licenses_1": float,
+                "expenses_licenses_2": float,
+                "profit_incomes_tax_1": float,
+                "profit_incomes_tax_2": float,
+                "profit_after_income_tax_1": float,
+                "profit_after_income_tax_2": float,
+                "sales_tax_withheld_1": float,
+                "sales_tax_withheld_2": float,
+                "name": str,
+                "rank": str,
+            },
+            table_name="IP_710",
+            table_id=24,
+            debug=False,
+        )
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/ingreso_neto/IP-710.html")
