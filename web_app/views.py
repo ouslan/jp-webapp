@@ -155,39 +155,18 @@ def ciclos_economicos(request):
 
 
 def indicadores(request):
-    df = pd.read_csv("src/data/indicadores.csv")
-    df_x = df.melt(var_name="Year")
-    df_y = df.melt(value_name="Value")
+    df = pd.read_csv("data/external/indicadores_economicos.csv")
 
-    x = df_x["Year"]
-    y = df_y["Value"]
-
-    x_1 = [
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-    ]
-    y_1 = [14, 55, 44, 13, 29, 20, 45, 39, 29, 10, 50, 60, 39, 12]
+    x = df["year_month"]
+    y = df["Movimiento de pasajeros en el aeropuerto José Aponte de la Torre (NRR)"]
 
     x_title = "Años"
     y_title = "Indices"
 
     fig = gf.graph(x, y, x_title, y_title)
-    fig_1 = gf.graph(x_1, y_1, x_title, y_title)
 
     indicadores_html = fig.to_html()
-    indicadores_html2 = fig_1.to_html()
+    indicadores_html2 = fig.to_html()
     indicadores_html3 = fig.to_html()
     indicadores_html4 = fig.to_html()
     indicadores_html5 = fig.to_html()
@@ -751,7 +730,7 @@ def JP_304(request):
             table_id=44,
             debug=False,
         )
-        
+
         return render(request, "forms/succesfull.html")
     return render(request, "forms/quaterly/balanza_de_pagos/JP-304.html")
 
@@ -9727,7 +9706,7 @@ def IP_310b(request):
                     rank,
                 ]
             )
-        
+
         DAO().insert_forms(
             data_path="data/cuestionarios/ingreso_neto/IP-310b.csv",
             dtypes={
@@ -10110,7 +10089,7 @@ def IP_480a(request):
                     rank,
                 ]
             )
-        
+
         DAO().insert_forms(
             data_path="data/cuestionarios/ingreso_neto/JP-480a.csv",
             dtypes={
@@ -11372,7 +11351,7 @@ def IP_510(request):
                     rank,
                 ]
             )
-        
+
         DAO().insert_forms(
             data_path="data/cuestionarios/ingreso_neto/IP-510.csv",
             dtypes={
@@ -12004,7 +11983,7 @@ def IP_520a(request):
                     rank,
                 ]
             )
-            
+
         DAO().insert_forms(
             data_path="data/cuestionarios/ingreso_neto/IP-520a.csv",
             dtypes={
@@ -12708,7 +12687,7 @@ def IP_530(request):
                     rank,
                 ]
             )
-        
+
         DAO().insert_forms(
             data_path="data/cuestionarios/ingreso_neto/IP-530.csv",
             dtypes={
@@ -13031,7 +13010,7 @@ def IP_540(request):
                     rank,
                 ]
             )
-        
+
         DAO().insert_forms(
             data_path="data/cuestionarios/ingreso_neto/IP-540.csv",
             dtypes={
@@ -13354,7 +13333,7 @@ def IP_540J(request):
                     rank,
                 ]
             )
-        
+
         DAO().insert_forms(
             data_path="data/cuestionarios/ingreso_neto/IP-540J.csv",
             dtypes={
