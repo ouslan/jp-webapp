@@ -30,20 +30,23 @@ def process_file(file_path: str):
     else:
         # If no dataframes were added, return an empty DataFrame with the desired columns
         clean_df = pd.DataFrame(columns=['year', 'Meses', file_path.split("/")[-1][:-4]])
-    
+        
     return clean_df
   
-df = process_file("data/external/INDICADORES ECÓNOMICOS/ENCUESTA DE ESTABLECIMIENTO/Actividades Financieras.csv")
+# df = process_file("data/external/INDICADORES ECÓNOMICOS/ENCUESTA DE ESTABLECIMIENTO/Actividades Financieras.csv")
 
 
 for dirt in os.listdir("data/external/INDICADORES ECÓNOMICOS/"):
     for file in os.listdir(f"data/external/INDICADORES ECÓNOMICOS/{dirt}"):
         if file.endswith(".csv"):
-            print(f"Processing {file}")
+            # print(f"Processing {file}")
             df = process_file(f"data/external/INDICADORES ECÓNOMICOS/{dirt}/{file}")
         try:
             master_df = master_df.merge(df, how="outer", on=["year", "Meses"])
         except NameError:
             master_df = df
-            
+ 
+master_df.columns = master_df.columns.str.strip().str.replace(",", "")
+master_df.replace(" ","", regex=True, inplace=True)
+                 
 master_df.to_csv("data/external/indicadores_economicos.csv", index=False)
