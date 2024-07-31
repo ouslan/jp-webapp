@@ -45,3 +45,5 @@ for dirt in os.listdir("data/external/INDICADORES ECÓNOMICOS/"):
             master_df = master_df.merge(df, how="outer", on=["year", "Meses"])
         except NameError:
             master_df = df
+            
+master_df.to_csv("data/external/indicadores_economicos.csv", index=False)
