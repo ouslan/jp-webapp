@@ -21,13 +21,57 @@ load_dotenv()
 ```
 
 ```{python}
-db_user = os.environ.get("POSTGRES_USER")
-db_password = os.environ.get("POSTGRES_PASSWORD")
-db_name = os.environ.get("POSTGRES_DB")
-db_host = os.environ.get("POSTGRES_HOST")
-db_port = os.environ.get("POSTGRES_PORT")
-conn2 = create_engine(
-            f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
-        )
-pd.read_sql('SELECT Max FROM "JP_536_2"', conn2)
+df = process_file("data/external/INDICADORES ECÓNOMICOS/ENCUESTA DE ESTABLECIMIENTO/Actividades Financieras.csv")
+df
 ```
+
+```{python}
+import pandas as pd
+
+def process_file(file_path: str):
+    df = pd.read_csv(file_path)
+    
+    # Initialize a list to store DataFrames
+    dataframes = []
+    
+    for column in df.columns:
+        if column == "Meses":
+            continue
+        
+        # Create a temporary DataFrame
+        tmp = df[["Meses", column]].copy()
+        tmp = tmp.rename(columns={column: file_path.split("/")[-1][:-4]})
+        tmp["year"] = column
+        tmp = tmp[["year", "Meses", file_path.split("/")[-1][:-4]]]
+        
+        # Append the temporary DataFrame to the list
+        dataframes.append(tmp)
+    
+    # Concatenate all DataFrames in the list
+    if dataframes:
+        clean_df = pd.concat(dataframes, axis=0)
+    else:
+        # If no dataframes were added, return an empty DataFrame with the desired columns
+        clean_df = pd.DataFrame(columns=['year', 'Meses', file_path.split("/")[-1][:-4]])
+    
+    return clean_df
+
+```
+
+
+```{python}
+for dirt in os.listdir("data/external/INDICADORES ECÓNOMICOS/"):
+    for file in os.listdir(f"data/external/INDICADORES ECÓNOMICOS/{dirt}"):
+        if file.endswith(".csv"):
+            print(f"Processing {file}")
+            df = process_file(f"data/external/INDICADORES ECÓNOMICOS/{dirt}/{file}")
+        try:
+            master_df = master_df.merge(df, how="outer", on=["year", "Meses"])
+        except NameError:
+            master_df = df
+
+master_df
+```
+```{python}
+temp = master_df[["year", "Meses", "Ventas al Detalle en Tiendas por Departamento - Miles de Dólares"]].copy()
+temp[temp["year"] == "2010"]
