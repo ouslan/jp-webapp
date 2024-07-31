@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>JP-364 Transacciones con el exterior para la balanza de pagos de Puerto Rico</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
+
+    <link rel="stylesheet" href="{% static 'forms/balanza_de_pagos/JP-364.css' %}" />
+    <link rel="stylesheet" href="{% static 'website.css' %}" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <section class="header">
+      <table>
+        <tr>
+          <td id="header_left">
+            J.P. -364<br>
+            Rev. 7/17<br>
+            Centro Gubernamental Roberto Sánchez Vilella<br>
+            Apartado 41119, San Juan, Puerto Rico 00940<br>
+          </td>
+          <td id="header_center">
+            <img src="{% static 'JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
+            <h3>TRANSACCIONES CON EL EXTERIOR PARA LA BALANZA DE PAGOS DE PUERTO RICO</h3><br>
+          </td>
+          <td id="header_right">
+            Junta de Planificación de Puerto Rico<br>
+            Programa de Planificación Económica y Social<br>
+            Subprograma de Análisis Económico<br>
+          </td>
+        </tr>
+      </table>
+    </section>
+    
+    <main>
+      <form method="POST" action="{% url 'JP-364' %}">
+        {% csrf_token %}
+
+        <section class="divider-container">
+            <table>
+                <tr>
+                    <th rowspan="4"><h3>AGENCIA</h3></th>
+                    <th colspan="4">BALANCE PENDIENTE(VALOR PAR)</th>
+                    <th rowspan="4">NOMBRE DEL AGENTE CORREDOR** QUE LE DA SERVICIOS EN P.R.</th>
+                </tr>
+                
+                <!-- Line 1 -->
+                <tr>
+                    <tr>
+                    <th colspan="2">Bonos*</th>
+                    <th colspan="2">Pagarés</th>
+                </tr></tr>
+
+                <!-- Line 2 -->
+                <tr>
+                    <th>A: 6/30/<input id="year" type="number" name="year_bono1" required min="1000" max="9999" placeholder="Year" required></th>
+                    <th>A: 6/30/<input id="year" type="number" name="year_bono2" required min="1000" max="9999" placeholder="Year" required></th>
+                    <th>A: 6/30/<input id="year" type="number" name="year_paga1" required min="1000" max="9999" placeholder="Year" required></th>
+                    <th>A: 6/30/<input id="year" type="number" name="year_paga2" required min="1000" max="9999" placeholder="Year" required></th>
+                </tr>
+
+                <!-- Line 3 -->
+                <tr>
+                    <td>1. Gobierno del E.L.A.</td>
+                    <td><input type="number" name="ELA_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="ELA_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="ELA_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="ELA_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="ELA_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+                
+                <!-- Line 4 -->
+                <tr>
+                    <td>2. Gobierno Municipales</td>
+                    <td><input type="number" name="municipio_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="municipio_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="municipio_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="municipio_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="municipio_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+                
+                <!-- Line 5 -->
+                <tr>
+                    <td>3. Corporaciones Públicas</td>
+                    <td><input type="number" name="corp_publicas_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="corp_publicas_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="corp_publicas_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="corp_publicas_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="corp_publicas_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+
+                <!-- Line 6 -->
+                <tr>
+                    <td>&emsp;a. Autoridad de Energía <br>
+                        &emsp;&emsp;Eléctrica</td>
+                    <td><input type="number" name="AEE_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="AEE_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="AEE_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="AEE_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="AEE_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+
+                <!-- Line 7 -->
+                <tr>
+                    <td>&emsp;b. Autoridad de <br>
+                        &emsp;&emsp;Carreteras</td>
+                    <td><input type="number" name="Acarreteras_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="Acarreteras_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="Acarreteras_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="Acarreteras_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="Acarreteras_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+
+                <!-- Line 8 -->
+                <tr>
+                    <td>&emsp;c. Autoridad de <br>
+                        &emsp;&emsp;Acueductos y <br>
+                        &emsp;&emsp;Alcantarillados</td>
+                    <td><input type="number" name="AAA_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="AAA_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="AAA_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="AAA_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="AAA_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+
+                <!-- Line 9 -->
+                <tr>
+                    <td>&emsp;d. Autoridad de Edificios <br>
+                        &emsp;&emsp;Públicos</td>
+                    <td><input type="number" name="AEP_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="AEP_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="AEP_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="AEP_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="AEP_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+
+                <!-- Line 10 -->
+                <tr>
+                    <td>&emsp;e. Autoridad de los <br>
+                        &emsp;&emsp;Puertos</td>
+                    <td><input type="number" name="AP_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="AP_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="AP_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="AP_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="AP_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+
+                <!-- Line 11 -->
+                <tr>
+                    <td>&emsp;f.Autoridad de Teléfonos</td>
+                    <td><input type="number" name="AT_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="AT_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="AT_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="AT_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="AT_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+
+                <!-- Line 12 -->
+                <tr>
+                    <td>&emsp;g. Compañía de Fomento <br>
+                        &emsp;&emsp;Industrial</td>
+                    <td><input type="number" name="CFI_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="CFI_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="CFI_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="CFI_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="CFI_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+
+                <!-- Line 13 -->
+                <tr>
+                    <td>&emsp;h. Banco Gubernamental <br>
+                        &emsp;&emsp;de Fomento</td>
+                    <td><input type="number" name="BGF_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="BGF_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="BGF_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="BGF_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="BGF_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+
+                <!-- Line 14 -->
+                <tr>
+                    <td>&emsp;i. Corp. para el <br>
+                        &emsp;&emsp;Financiamineto de <br>
+                        &emsp;&emsp;la Vivienda</td>
+                    <td><input type="number" name="CFV_bono1" placeholder="$" required></td>
+                    <td><input type="number" name="CFV_bono2" placeholder="$" required></td>
+                    <td><input type="number" name="CFV_paga1" placeholder="$" required></td>
+                    <td><input type="number" name="CFV_paga2" placeholder="$" required></td>
+                    <td><input type="text" name="CFV_agente" placeholder="Nombre del Agente" required></td>
+                </tr>
+
+                <!-- Line 15 -->
+                <tr>
+                    <td>&emsp;j. Otros (especifíque)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <!-- Line 16 -->
+                <tr>
+                    <td><input type="text" name="otherk_title" placeholder="k. Otro"></td>
+                    <td><input type="number" name="otherk_bono1" placeholder="$"></td>
+                    <td><input type="number" name="otherk_bono2" placeholder="$"></td>
+                    <td><input type="number" name="otherk_paga1" placeholder="$"></td>
+                    <td><input type="number" name="otherk_paga2" placeholder="$"></td>
+                    <td><input type="text" name="otherk_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+
+                <!-- Line 17 -->
+                <tr>
+                    <td><input type="text" name="otherl_title" placeholder="l. Otro"></td>
+                    <td><input type="number" name="otherl_bono1" placeholder="$"></td>
+                    <td><input type="number" name="otherl_bono2" placeholder="$"></td>
+                    <td><input type="number" name="otherl_paga1" placeholder="$"></td>
+                    <td><input type="number" name="otherl_paga2" placeholder="$"></td>
+                    <td><input type="text" name="otherl_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+
+                <!-- Line 18 -->
+                <tr>
+                    <td><input type="text" name="otherm_title" placeholder="m. Otro"></td>
+                    <td><input type="number" name="otherm_bono1" placeholder="$"></td>
+                    <td><input type="number" name="otherm_bono2" placeholder="$"></td>
+                    <td><input type="number" name="otherm_paga1" placeholder="$"></td>
+                    <td><input type="number" name="otherm_paga2" placeholder="$"></td>
+                    <td><input type="text" name="otherm_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+            </table>
+        </section>
+        <br>
+        * Favor de informar el valor nominal de aquellos bonos que no sean Bonos de Ahorro. <br>
+        ** El nombre del agente o corredor,  se necesita para evitar duplicidad, ya que se obtiene información de diferentes fuentes.<br>
+    </main>
+        <br>
+        <br>
+    <main>
+        <!-- Segunda Tabla -->
+        <section class="divider-container">
+            <table>
+
+                <!-- Line 1 -->
+                <tr>
+                    <th rowspan="2">Partida</th>
+                    <th rowspan="2">Balance a: 6/30/<input id="year" type="number" name="year_balance1" required min="1000" max="9999" placeholder="Year"></th>
+                    <th rowspan="2">Balance a: 6/30/<input id="year" type="number" name="year_balance2" required min="1000" max="9999" placeholder="Year"></th>
+                    <th rowspan="2">Nombre del Agente que le da Servicios</th>
+                </tr>
+
+                <!-- Line 2 -->
+                <tr>
+                    <tr>
+                        <td>4.Hipotecas sobre hogares:</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tr>
+
+                <!-- Line 3 -->
+                <tr>
+                    <td>&emsp;a. Garantizadas por la F.H.A.</td>
+                    <td><input type="number" name="FHA_balance1" placeholder="$"></td>
+                    <td><input type="number" name="FHA_balance2" placeholder="$"></td>
+                    <td><input type="text" name="FHA_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+
+                <!-- Line 4 -->
+                <tr>
+                    <td>&emsp;b. Garantizadas por Administración <br>
+                        &emsp;&emsp;de Veteranos</td>
+                    <td><input type="number" name="GAV_balance1" placeholder="$"></td>
+                    <td><input type="number" name="GAV_balance2" placeholder="$"></td>
+                    <td><input type="text" name="GAV_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+
+                <!-- Line 5 -->
+                <tr>
+                    <td>&emsp;c. Convencionales</td>
+                    <td><input type="number" name="convencionales_balance1" placeholder="$"></td>
+                    <td><input type="number" name="convencionales_balance2" placeholder="$"></td>
+                    <td><input type="text" name="convencionales_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+
+                <!-- Line 6 -->
+                <tr>
+                    <td>&emsp;d. En participación con otras <br>
+                        &emsp;&emsp;Instituciones</td>
+                    <td><input type="number" name="otras_instituciones_balance1" placeholder="$"></td>
+                    <td><input type="number" name="otras_instituciones_balance2" placeholder="$"></td>
+                    <td><input type="text" name="otras_instituciones_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+
+                <!-- Line 7 -->
+                <tr>
+                    <td>5. Otros préstamos hipotecarios</td>
+                    <td><input type="number" name="prestamos_hipo_balance1" placeholder="$"></td>
+                    <td><input type="number" name="prestamos_hipo_balance2" placeholder="$"></td>
+                    <td><input type="text" name="prestamos_hipo_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+
+                <!-- Line 8 -->
+                <tr>
+                    <td>6. Préstamos comerciales e industriales</td>
+                    <td><input type="number" name="prestamos_comerciales_industriales_balance1" placeholder="$"></td>
+                    <td><input type="number" name="prestamos_comerciales_industriales_balance2" placeholder="$"></td>
+                    <td><input type="text" name="prestamos_comerciales_industriales_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+
+                <!-- Line 9 -->
+                <tr>
+                    <td>7. Préstamos sobre pólizas</td>
+                    <td><input type="number" name="prestamos_poliza_balance1" placeholder="$"></td>
+                    <td><input type="number" name="prestamos_poliza_balance2" placeholder="$"></td>
+                    <td><input type="text" name="prestamos_poliza_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+                
+                <!-- Line 10 -->
+                <tr>
+                    <td>8. Reservas acumuladas sobre pólizas de <br>
+                        &emsp;seguros</td>
+                    <td><input type="number" name="reservas_poliza_balance1" placeholder="$"></td>
+                    <td><input type="number" name="reservas_poliza_balance2" placeholder="$"></td>
+                    <td><input type="text" name="reservas_poliza_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+
+                <!-- Line 11 -->
+                <tr>
+                    <td>9. Dividendos acumulados sobre pólizas de 
+                        &emsp;seguros</td>
+                    <td><input type="number" name="dividendos_poliza_balance1" placeholder="$"></td>
+                    <td><input type="number" name="dividendos_poliza_balance2" placeholder="$"></td>
+                    <td><input type="text" name="dividendos_poliza_agente" placeholder="Nombre del Agente"></td>
+                </tr>
+            </table>
+        </section>
+
+        <div class="custom-line"></div>
+        <div id="text_button"></div>
+
+        <section>
+            <div class="big-box-bottom">
+              <div class="left-signature">
+                <input id="signature" name="nombre_firma" placeholder="Firma" required></input> <!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                  Nombre de la firma:
+                </p>
+              </div>
+
+              <div class="center-signature">
+                <input id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="phone" placeholder="123-456-7890" required></input> <!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                  Número de Teléfono:
+                </p>
+              </div>
+  
+              <div class="right-signature">
+                <input id="position" name="nombre_persona" placeholder="Persona Autorizada" required></input> <!-- Signature Input -->
+                <hr> <!-- Signature Line -->
+                <p>
+                  Nombre de la persona autorizada:
+                </p>
+              </div>
+            </div>
+          </section>
+
+        <section class = 'submit-button-container'>
+          <input type="submit" value="SUBMIT" class="submit-button"></input>
+        </section>
+      <form>
+    </main>
+  </body>
+</html>

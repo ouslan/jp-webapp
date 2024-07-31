@@ -1,6 +1,6 @@
 services:
   database:
-    image: timescale/timescaledb:latest-pg13
+    image: timescale/timescaledb-ha:pg16
     container_name: timescaledb
     restart: always
     ports:
@@ -22,6 +22,17 @@ services:
       interval: 5s
       timeout: 3s
       retries: 5
+      
+  mkdocs:
+    image: squidfunk/mkdocs-material
+    container_name: web-docs
+    restart: always
+    ports:
+      - "8005:8000"
+    volumes:
+      - ./:/docs
+    stdin_open: true
+    tty: true
 
   webapp:
     container_name: Django
@@ -39,6 +50,7 @@ services:
              python manage.py shell -c 'from django.contrib.auth.models import User; User.objects.filter(username=\"${DJANGO_SUPERUSER_USERNAME}\").exists() or User.objects.create_superuser(\"${DJANGO_SUPERUSER_USERNAME}\", \"${DJANGO_SUPERUSER_EMAIL}\", \"${DJANGO_SUPERUSER_PASSWORD}\")' &&
              python manage.py makemigrations &&
              python manage.py migrate &&
+             python main.py &&
              python manage.py runserver 0.0.0.0:8000"
     ports: 
       - 8000:8000
