@@ -48,5 +48,35 @@ for dirt in os.listdir("data/external/INDICADORES ECÓNOMICOS/"):
  
 master_df.columns = master_df.columns.str.strip().str.replace(",", "")
 master_df.replace(" ","", regex=True, inplace=True)
+
+# Convert month names to month numbers
+month_dict = {
+    'Julio': '01',
+    'Agosto': '02',
+    'Septiembre': '03',
+    'Octubre': '04',
+    'Noviembre': '05',
+    'Diciembre': '06',
+    'Enero': '07',
+    'Febrero': '08',
+    'Marzo': '09',
+    'Abril': '10',
+    'Mayo': '11',
+    'Junio': '12'
+}
+
+master_df['Meses'] = master_df['Meses'].map(month_dict)
+sorted_df = master_df.sort_values(['year', 'Meses'])
+
+month_dict_reverse = {v: k for k, v in month_dict.items()}
+sorted_df['Meses'] = sorted_df['Meses'].map(month_dict_reverse)
+
+process_df = sorted_df.copy()
+process_df['year_month'] = process_df['year'] + '-' + process_df['Meses']
+process_df.drop(['year', 'Meses'], axis=1, inplace=True)
+
+cols = process_df.columns.tolist()
+cols = cols[-1:] + cols[:-1]
+process_df = process_df[cols]
                  
-master_df.to_csv("data/external/indicadores_economicos.csv", index=False)
+process_df.to_csv("data/external/indicadores_economicos.csv", index=False)
