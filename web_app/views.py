@@ -1,14 +1,13 @@
 import pandas as pd
-from django.shortcuts import render
-from .models import *
-from web_app import graphics_function as gf
-import csv
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-import os
-import plotly.graph_objects as go
-from django.shortcuts import render
+from web_app import graphics_function as gf
 from plotly.subplots import make_subplots
+from django.http import HttpResponse
+import plotly.express as px
+from .models import *
+import polars as pl
+import csv
+import os
 
 
 
@@ -155,15 +154,9 @@ def macro(request):
 
 def demographic_graph():
     # Create graph
-    fig = go.Figure()
+    df = pl.read_csv("data/external/ForecastAnual.csv")
 
-    # Example data
-    fig.add_trace(go.Scatter(x=[1, 2, 3], y=[10, 11, 12], mode='lines', name='Birth'))
-    fig.add_trace(go.Scatter(x=[1, 2, 3], y=[15, 14, 13], mode='lines', name='Deaths'))
-    fig.add_trace(go.Scatter(x=[1, 2, 3], y=[17, 5, 20], mode='lines', name='Population'))
-
-    # Layout
-    fig.update_layout(xaxis_title='Time', yaxis_title='Value', width=1500, height=700)
+    fig = px.line(df, x="year", y="population", title='Life expectancy in Canada')
 
     # Convert the figure to HTML
     graph_html = fig.to_html(full_html=False)

@@ -1,12 +1,10 @@
-import pandas as pd
+import polars as pl
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-# Path to the CSV file
-csv_file_path = 'src/Demografic Data/HistoricosMensuales.csv'
 
 # Read the CSV file into a DataFrame
-df = pd.read_csv(csv_file_path)
+df = pl.read_csv("data/external/ForecastAnual.csv")
 
 # Print the first few rows of the DataFrame to verify
 print(df.head())
