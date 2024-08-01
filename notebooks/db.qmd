@@ -21,8 +21,8 @@ load_dotenv()
 ```
 
 ```{python}
-df = pl.read_csv("data/external/INDICADORES ECÓNOMICOS/ENCUESTA DE ESTABLECIMIENTO/Minería, Tala de Árboles y Construcción .csv")
-df.select(pl.when(pl.col("2000")  == "n/d").then(None).otherwise(pl.col("2000")).alias("2000"))
+df = process_file("data/external/INDICADORES ECÓNOMICOS/ENCUESTA DE ESTABLECIMIENTO/Minería, Tala de Árboles y Construcción .csv")
+df
 ```
 
 
@@ -31,8 +31,7 @@ def process_file(file_path: str):
     df = pl.read_csv(file_path)
     column_name = file_path.split("/")[-1][:-4]
     empty_df = [
-        pl.Series("month", [], dtype=pl.Int64),
-        pl.Series("year", [], dtype=pl.Int64),
+        pl.Series("date", [], dtype=pl.Datetime),
         pl.Series(column_name, [], dtype=pl.Float64)
     ]
     clean_df = pl.DataFrame(empty_df)
@@ -73,10 +72,14 @@ def process_file(file_path: str):
                          pl.lit(int(column)).cast(pl.Int64).alias("year"),
                          pl.col(column_name).cast(pl.Float64).alias(column_name)
         )
+
+        tmp = tmp.with_columns((pl.col("year").cast(pl.String) + "-" + pl.col("month").cast(pl.String) + "-01").alias("date"))
+        tmp = tmp.select(pl.col("date").str.to_datetime("%Y-%m-%d").alias("date"),
+                         pl.col(column_name).alias(column_name))
         
         # Append the temporary DataFrame to the list
         clean_df = pl.concat([clean_df, tmp], how="vertical")
-    
+
     
     return clean_df
 
@@ -90,7 +93,7 @@ for dirt in os.listdir("data/external/INDICADORES ECÓNOMICOS/"):
             print(f"data/external/INDICADORES ECÓNOMICOS/{dirt}/{file}")
             df = process_file(f"data/external/INDICADORES ECÓNOMICOS/{dirt}/{file}")
         try:
-            master_df = master_df.join(df, on=["year", "month"], how="outer_coalesce")
+            master_df = master_df.join(df, on=["date"], how="outer_coalesce")
         except NameError:
             master_df = df
 

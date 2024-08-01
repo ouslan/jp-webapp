@@ -14,8 +14,7 @@ class DataProcess:
         df = pl.read_csv(file_path)
         column_name = file_path.split("/")[-1][:-4]
         empty_df = [
-            pl.Series("month", [], dtype=pl.Int64),
-            pl.Series("year", [], dtype=pl.Int64),
+            pl.Series("date", [], dtype=pl.Datetime),
             pl.Series(column_name, [], dtype=pl.Float64)
         ]
         clean_df = pl.DataFrame(empty_df)
@@ -57,6 +56,10 @@ class DataProcess:
                             pl.col(column_name).cast(pl.Float64).alias(column_name)
             )
             
+            tmp = tmp.with_columns((pl.col("year").cast(pl.String) + "-" + pl.col("month").cast(pl.String) + "-01").alias("date"))
+            tmp = tmp.select(pl.col("date").str.to_datetime("%Y-%m-%d").alias("date"),
+                             pl.col(column_name).alias(column_name))
+            
             # Append the temporary DataFrame to the list
             clean_df = pl.concat([clean_df, tmp], how="vertical")
         
@@ -69,7 +72,7 @@ class DataProcess:
                 if file.endswith(".csv"):
                     df = self.process_file(f"{folder_path}{dirt}/{file}")
                 try:
-                    master_df = master_df.join(df, on=["year", "month"], how="outer_coalesce")
+                    master_df = master_df.join(df, on=["date"], how="outer_coalesce")
                 except NameError:
                     master_df = df
         return master_df
