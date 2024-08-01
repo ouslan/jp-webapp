@@ -236,17 +236,6 @@ def indicadores(request):
     return render(request, "indicadores.html", context)
 
 
-
-
-
-
-
-
-
-
-
-
-
 def succesfull_page(request):
     return render(request, "forms/succesfull.html")
 
