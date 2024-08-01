@@ -34,6 +34,7 @@ from src.formularios.form_ip_480a import IP_480a
 from src.formularios.form_ip_490 import IP_490
 from src.formularios.form_ip_520 import IP_520
 from src.formularios.form_jp_536_2 import IP_536_2
+from src.formularios.form_ip_510 import IP_510
 
 
 def home(request):
