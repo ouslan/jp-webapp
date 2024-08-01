@@ -9,11 +9,11 @@ jupyter: python3
 ```{python}
 import os
 os.chdir("..")
-print(os.getcwd())
 ```
 
 ```{python}
 import pandas as pd
+import polars as pl
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 
@@ -21,38 +21,62 @@ load_dotenv()
 ```
 
 ```{python}
-df = process_file("data/external/INDICADORES ECÓNOMICOS/ENCUESTA DE ESTABLECIMIENTO/Actividades Financieras.csv")
-df
+df = pl.read_csv("data/external/INDICADORES ECÓNOMICOS/ENCUESTA DE ESTABLECIMIENTO/Minería, Tala de Árboles y Construcción .csv")
+df.select(pl.when(pl.col("2000")  == "n/d").then(None).otherwise(pl.col("2000")).alias("2000"))
 ```
 
-```{python}
-import pandas as pd
 
+```{python}
 def process_file(file_path: str):
-    df = pd.read_csv(file_path)
-    
-    # Initialize a list to store DataFrames
-    dataframes = []
-    
+    df = pl.read_csv(file_path)
+    column_name = file_path.split("/")[-1][:-4]
+    empty_df = [
+        pl.Series("month", [], dtype=pl.Int64),
+        pl.Series("year", [], dtype=pl.Int64),
+        pl.Series(column_name, [], dtype=pl.Float64)
+    ]
+    clean_df = pl.DataFrame(empty_df)
     for column in df.columns:
         if column == "Meses":
             continue
-        
+        column_name = file_path.split("/")[-1][:-4]
         # Create a temporary DataFrame
-        tmp = df[["Meses", column]].copy()
-        tmp = tmp.rename(columns={column: file_path.split("/")[-1][:-4]})
-        tmp["year"] = column
-        tmp = tmp[["year", "Meses", file_path.split("/")[-1][:-4]]]
+        tmp = df
+        tmp = tmp.rename({column:column_name})
+        tmp = tmp.with_columns(
+        pl.when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "enero").then(1)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "febrero").then(2)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "marzo").then(3)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "abril").then(4)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "mayo").then(5)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "junio").then(6)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "julio").then(7)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "agosto").then(8)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "septiembre").then(9)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "octubre").then(10)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "noviembre").then(11)
+          .when(pl.col("Meses").str.strip_chars().str.to_lowercase() == "diciembre").then(12)
+          .alias("month")           
+            )
+        tmp = tmp.with_columns(
+            pl.col(column_name).str.replace_all("$", "", literal=True).str.replace_all(",", "").str.strip_chars().alias(column_name)
+        )
+        tmp = tmp.with_columns(
+            pl.when(pl.col(column_name)  == "n/d").then(None)
+              .when(pl.col(column_name)  == "**").then(None)
+              .when(pl.col(column_name)  == "-").then(None)
+              .when(pl.col(column_name)  == "no disponible").then(None)
+              .otherwise(pl.col(column_name)).alias(column_name)
+        )
+        tmp = tmp.select(
+                         pl.col("month").cast(pl.Int64).alias("month"),
+                         pl.lit(int(column)).cast(pl.Int64).alias("year"),
+                         pl.col(column_name).cast(pl.Float64).alias(column_name)
+        )
         
         # Append the temporary DataFrame to the list
-        dataframes.append(tmp)
+        clean_df = pl.concat([clean_df, tmp], how="vertical")
     
-    # Concatenate all DataFrames in the list
-    if dataframes:
-        clean_df = pd.concat(dataframes, axis=0)
-    else:
-        # If no dataframes were added, return an empty DataFrame with the desired columns
-        clean_df = pd.DataFrame(columns=['year', 'Meses', file_path.split("/")[-1][:-4]])
     
     return clean_df
 
@@ -63,15 +87,18 @@ def process_file(file_path: str):
 for dirt in os.listdir("data/external/INDICADORES ECÓNOMICOS/"):
     for file in os.listdir(f"data/external/INDICADORES ECÓNOMICOS/{dirt}"):
         if file.endswith(".csv"):
-            print(f"Processing {file}")
+            print(f"data/external/INDICADORES ECÓNOMICOS/{dirt}/{file}")
             df = process_file(f"data/external/INDICADORES ECÓNOMICOS/{dirt}/{file}")
         try:
-            master_df = master_df.merge(df, how="outer", on=["year", "Meses"])
+            master_df = master_df.join(df, on=["year", "month"], how="outer_coalesce")
         except NameError:
             master_df = df
 
 master_df
 ```
 ```{python}
-temp = master_df[["year", "Meses", "Ventas al Detalle en Tiendas por Departamento - Miles de Dólares"]].copy()
-temp[temp["year"] == "2010"]
+master_df
+
+```
+
+```{python}
