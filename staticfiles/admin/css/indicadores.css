@@ -45,6 +45,10 @@ select:focus {
   border-color: #495057;
 }
 
+option {
+  text-align: center;
+}
+
 /* DROPDOWNS */
 .dropdown {
   max-width: auto;
@@ -145,7 +149,7 @@ select:focus {
 
 /* GRAPH */
 #variableY {
-  left: 5%;
+  margin-left: -65px;
   transform: rotate(270deg);
   align-items: center;
   justify-items: center;
@@ -190,4 +194,25 @@ select:focus {
 .y-dropdown-container {
   margin-left: 90px;
   width: 200px;
+}
+
+.update_button {
+  background-color: rgb(0, 179, 255);
+  border: none;
+  width: 8%;
+  text-align: center;
+  margin-left: 648px;
+  appearance: none;
+  border: 1px solid #ced4da;
+  border-radius: 15px;
+  padding: 0.5em;
+  font-size: .9em;
+  cursor: pointer;
+  position: relative;
+}
+
+button {
+  border: none;
+  font-size: 15px;
+  background-color: rgb(0, 179, 255);
 }
