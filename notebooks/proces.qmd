@@ -1,0 +1,21 @@
+---
+title: "Graph development"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+```{python}
+import os
+os.chdir("..")
+```
+
+```{python}
+import polars as pl
+```
+
+```{python}
+df = pl.read_csv("data/external/ForecastTrimestral.csv", ignore_errors=True)
+
+df
+```
