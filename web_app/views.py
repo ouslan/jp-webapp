@@ -85,6 +85,9 @@ def indice_desarrollo_humano(request):
 def datos_demograficos(request):
     return render(request, "demograficos.html")
 
+def salud_ingresos_educacion(request):
+    return render(request, "salud_ingresos_educacion.html")
+
 
 def ciclos_economicos(request):
     x = [
