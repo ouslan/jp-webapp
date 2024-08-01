@@ -23,6 +23,9 @@
         <link rel="stylesheet" href="{% static 'demografico.css' %}" />
 		<link rel="stylesheet" href="{% static 'jquery-ui_1.10.2.css' %}" />
 
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
     <style type="text/css">
     .scrolloff iframe {
         pointer-events: none ;
@@ -176,60 +179,27 @@
                 <h2>Instrucciones</h2>
                 <p>1. Para seleccionar la variable que interesa representar gráficamente debe pasar encima del nombre de la variable continua al eje vertical (horizontal).</p>
                 <p>2. Si desea comparar el dato de la variable presentada con el dato de las otras variables disponibles debe pasar encima del par ordenado (el punto en la gráfica).</p>
-                <p>3. También, puede elegir el mes para el cual usted interesa la representación gráfica seleccionando el botón “Todos los meses”, ubicado debajo del eje horizontal.<strong> Nota:</strong> La serie que aparece en la gráfica no es la variable original, es una serie calculada. Esta serie es la diferencia entre la variable original y la tendencia. Por lo que si la serie original asume valores menores que la tendencia entonces la serie calculada (lo que aparece en la gráfica) tiene que asumir valores negativos.</p>
+                <p>3. También, puede elegir el mes para el cual usted interesa la representación gráfica seleccionando el botón “Todos los meses”, ubicado debajo del eje horizontal.</p>
+                <p><strong>Nota:</strong> La serie que aparece en la gráfica no es la variable original, es una serie calculada. Esta serie es la diferencia entre la variable original y la tendencia. Por lo que si la serie original asume valores menores que la tendencia entonces la serie calculada (lo que aparece en la gráfica) tiene que asumir valores negativos.</p>
             </section>
             <br>
             <br>
 
             <!-- GRAPH -->
-			<section>
+			<!-- <section>
 				<div class="container-time">
 					<select id="timeRange">
 						<option value="anual" class="active">Anual</option>
                         <option value="mensual">Mensual</option>
                         <option value="trimestral">Trimestral</option>
-						<!-- <option value="enero">Enero</option>
-						<option value="febrero">Febrero</option>
-						<option value="marzo">Marzo</option>
-						<option value="abril">Abril</option>
-						<option value="mayo">Mayo</option>
-						<option value="junio">Junio</option>
-						<option value="julio">Julio</option>
-						<option value="agosto">Agosto</option>
-						<option value="septiembre">Septiembre</option>
-						<option value="octubre">Octubre</option>
-						<option value="noviembre">Noviembre</option>
-						<option value="diciembre">Diciembre</option> -->
 					</select>
 				</div>
 
 				<div class="graph-container">
 					<select id="variableY">
-                        <!-- idk why i take this one out and put my options and it just disappears -->
 						<option value="indice_coincidente_jp" class="active">Índice coincidente (JP)</option>
 						<option value="indice_actividad_economica_bgf">Índice de actividad económica (BGF)</option>
 						<option value="indice_actividad_economica_eu">Índice de actividad económica (EU)</option>
-						<option value="empleo_total_ee">Empleo total EE (DT)</option>
-						<option value="indice_precios_dt">Índice de precios (DT)</option>
-						<option value="generacion_energia_electrica_aee">Generación de energía eléctrica (AEE)</option>
-						<option value="consumo_gasolina_daco">Consumo de gasolina (DACO)</option>
-						<option value="ventas_detalle_cce">Ventas al detalle (CCE)</option>
-						<option value="exportaciones_jp">Exportaciones (JP)</option>
-						<option value="importaciones_jp">Importaciones (JP)</option>
-						<option value="indice_coincidente_manufactura_jp">Índice coincidente de manufactura (JP)</option>
-						<option value="empleo_manufactura_dt">Empleo en manufactura (DT)</option>
-						<option value="nomina_manufactura_dt">Nómina en manufactura (DT)</option>
-						<option value="horas_trabajadas_manufactura_dt">Horas trabajadas en manufactura (DT)</option>
-						<option value="indice_coincidente_construccion_jp">Índice coincidente de construcción (JP)</option>
-						<option value="empleo_construccion_dt">Empleo en construcción (DT)</option>
-						<option value="produccion_cemento_bgf">Producción de cemento (BGF)</option>
-						<option value="ventas_cemento_bgf">Ventas de cemento (BGF)</option>
-						<option value="ventas_materiales_construccion_cce">Ventas de materiales de construcción (CCE)</option>
-						<option value="valor_permisos_construccion_jp">Valor de permisos de construcción (JP)</option>
-						<option value="indice_coincidente_turismo_jp">Índice coincidente de turismo (JP)</option>
-						<option value="empleo_turismo_dt">Empleo en turismo (DT)</option>
-						<option value="registro_hoteles_ct">Registro de hoteles (CT)</option>
-						<option value="registro_paradores_ct">Registro de paradores (CT)</option>
 					</select>
 					
 					{{ demograficos|safe }}
@@ -242,8 +212,57 @@
                         <option value="trimestral">Trimestral</option>
 					</select>
 				</div>
-			</section>
+			</section> -->
 
+            <!-- Demographic Graph -->
+            <h1>Graphs</h1>
+            <style>
+                .graph-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh; /* Optional: Adjust the height as needed */
+                }
+            </style>
+        </head>
+        <body>
+            
+            <div class="graph-container">
+                {{ demographic_graph|safe }}
+            </div>
+
+            <!-- Demographic Graph -->
+            <h1>Graphs</h1>
+            <style>
+                .graph-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh; /* Optional: Adjust the height as needed */
+                }
+            </style>
+        </head>
+        <body>
+            <div class="graph-container">
+                {{ demographic_graph|safe }}
+            </div>
+
+
+            <!-- Demographic Graph -->
+            <h1>Graphs</h1>
+            <style>
+                .graph-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh; /* Optional: Adjust the height as needed */
+                }
+            </style>
+        </head>
+        <body>
+            <div class="graph-container">
+                {{ demographic_graph|safe }}
+            </div>
 
             <div class="sct-footer">
                 <div class="footer-top-bar">

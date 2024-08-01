@@ -120,7 +120,7 @@
                             <a href="/indicadores-mensuales/" class="nav-link w-nav-link">INDICADORES ECONOMICOS</a>
                             <a href="/centro-de-datos-macroeconomicos/" class="nav-link w-nav-link">DATOS MACROECONOMICOS</a>
                             <a href="/datos-demograficos/" class="nav-link w-nav-link">DATOS DEMOGRAFICOS</a>
-                            <a href="/gobierno-2/directorio-municipios" class="nav-link w-nav-link">PROYECCIONES POBLACIONALES</a>
+                            <a href="/proyecciones/" class="nav-link w-nav-link">PROYECCIONES POBLACIONALES</a>
                         </nav>
                     </div>
                 </nav>
@@ -141,22 +141,32 @@
         <!-- INTRODUCTION -->
         <section>
             <p>
-                INFO
+                Las proyecciones de población son una herramienta esencial para la planificación económica y 
+                social y la toma de decisiones en un país. Las proyecciones ayudan a preveer cambios 
+                en la demanda futura de servicios tales como agua, electricidad, vivienda, desperdicios 
+                sólidos, escuelas, servicios de salud y la fuerza de trabajo entre otros.
+            </p>
+            <p>
+                El método de componentes es el método más comunmente usado para
+                hacer proyecciones de poblaciónes grandes tales como todo un país o sus
+                regiones. Para este método se indica la trayectoria futura de la fecundidad,
+                mortalidad y migración neta por edad. Para las personas ya nacidas se sobrevive 
+                la población y se le agrega la migración neta para cada grupo de edad.
             </p>
         </section>
 
         <!-- SUBBODY 1 -->
         <section>
-            <h2> Documentos (editar)</h2>
+            <h2> Documentos </h2>
 
             <p>
-                <a href="https://estadisticas.pr/en/inventario-de-estadisticas/estadisticas-vitales" class="custom-link" role="link">Estadísticas Vitales</a>
+                <a href="https://jp.pr.gov/wp-content/uploads/2023/06/Proyecciones-de-Poblacion-por-Municipios-anos-2021-2030.pdf" class="custom-link" role="link">Proyecciones de Población para los Municipios de Puerto Rico 2020-2030</a>
                 <br>
-                <a href="https://www.bde.pr.gov/BDE/PRED.html" class="custom-link" role="link">Puerto Rico Economic Data</a>
+                <a href="https://jp.pr.gov/wp-content/uploads/2021/09/Metodologia-PR-2015-2027-feb-2017.pdf" class="custom-link" role="link">Metodología para las Proyecciones de Población de Puerto Rico 2015-2027 y resultados relevantes</a>
                 <br>
                 <a href="https://estadisticas.pr/en/inventario-de-estadisticas/informe-anual-estadisticas-vitales" class="custom-link" role="link">Informe Anual Estadísticas Vitales</a>
                 <br>
-                <a href="https://jp.pr.gov/centro-de-datos-macroeconomicos/" class="custom-link" role="link">Centro de Datos Macroeconómicos</a>
+                <a href="https://estadisticas.pr/en/inventario-de-estadisticas/estadisticas-vitales" class="custom-link" role="link">Estadísticas Vitales</a>
                 <br>
             </p>
 
@@ -164,17 +174,17 @@
 
             <!-- SUBBODY 2 -->
             <section>
-                <h2>Instrucciones (editar)</h2>
+                <h2>Instrucciones</h2>
                 <p>1. Para seleccionar la variable que interesa representar gráficamente debe pasar encima del nombre de la variable continua al eje vertical (horizontal).</p>
                 <p>2. Si desea comparar el dato de la variable presentada con el dato de las otras variables disponibles debe pasar encima del par ordenado (el punto en la gráfica).</p>
-                <p>3. También, puede elegir el mes para el cual usted interesa la representación gráfica seleccionando el botón “Todos los meses”, ubicado debajo del eje horizontal.<strong> Nota:</strong> La serie que aparece en la gráfica no es la variable original, es una serie calculada. Esta serie es la diferencia entre la variable original y la tendencia. Por lo que si la serie original asume valores menores que la tendencia entonces la serie calculada (lo que aparece en la gráfica) tiene que asumir valores negativos.</p>
+                <p>3. También, puede elegir el mes para el cual usted interesa la representación gráfica seleccionando el botón “Todos los meses”, ubicado debajo del eje horizontal.</p>
+                <p><strong>Nota:</strong> La serie que aparece en la gráfica no es la variable original, es una serie calculada. Esta serie es la diferencia entre la variable original y la tendencia. Por lo que si la serie original asume valores menores que la tendencia entonces la serie calculada (lo que aparece en la gráfica) tiene que asumir valores negativos.</p>
             </section>
             <br>
             <br>
 
             <!-- GRAPH -->
 			<section>
-                <h2>EDITAR LOS EJES Y FILES</h2>
 				<div class="container-time">
 					<select id="timeRange">
 						<option value="anual" class="active">Anual</option>
@@ -221,7 +231,7 @@
 						<option value="registro_paradores_ct">Registro de paradores (CT)</option>
 					</select>
 					
-					{{ demograficos|safe }}
+					{{ proyecciones|safe }}
 				</div>
 
 				<div class="container-X">

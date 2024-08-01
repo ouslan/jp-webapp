@@ -6,12 +6,16 @@ import csv
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import os
+import plotly.graph_objects as go
+from django.shortcuts import render
+from plotly.subplots import make_subplots
+
 
 
 def home(request):
     return render(request, "home.html")
 
-def proyecciones(request):
+def proyecciones_poblacionales(request):
     x = [
         2000,
         2001,
@@ -68,6 +72,7 @@ def proyecciones(request):
     ]
 
     x_title = ""
+
     y_title = ""
 
     fig = gf.graph(x, y, x_title, y_title)
@@ -75,7 +80,7 @@ def proyecciones(request):
     proyecciones = fig.to_html()
 
     context = {"proyecciones": proyecciones}
-    render(request, "proyecciones.html", context)
+    return render(request, "proyecciones.html", context)
 
 
 def macro(request):
@@ -148,71 +153,29 @@ def macro(request):
     return render(request, "macro.html", context)
 
 
+def demographic_graph():
+    # Create graph
+    fig = go.Figure()
+
+    # Example data
+    fig.add_trace(go.Scatter(x=[1, 2, 3], y=[10, 11, 12], mode='lines', name='Birth'))
+    fig.add_trace(go.Scatter(x=[1, 2, 3], y=[15, 14, 13], mode='lines', name='Deaths'))
+    fig.add_trace(go.Scatter(x=[1, 2, 3], y=[17, 5, 20], mode='lines', name='Population'))
+
+    # Layout
+    fig.update_layout(xaxis_title='Time', yaxis_title='Value', width=1500, height=700)
+
+    # Convert the figure to HTML
+    graph_html = fig.to_html(full_html=False)
+    return graph_html
+
 def datos_demograficos(request):
-    x = [
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-    ]
-    y = [
-        14,
-        55,
-        44,
-        13,
-        29,
-        20,
-        45,
-        39,
-        29,
-        10,
-        50,
-        60,
-        39,
-        36,
-        49,
-        18,
-        49,
-        50,
-        69,
-        18,
-        13,
-        11,
-        4,
-        2,
-        1,
-    ]
+    # Generate graph
+    graph_html = demographic_graph()
 
-    x_title = ""
-    y_title = ""
-
-    fig = gf.graph(x, y, x_title, y_title)
-
-    demograficos = fig.to_html()
-
-    context = {"demograficos": demograficos}
-    return render(request, "demograficos.html", context)
+    # Pass the graph HTML to the template
+    context = {'demographic_graph': graph_html}
+    return render(request, 'demograficos.html', context)
 
 
 def ciclos_economicos(request):
