@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Indice Desarrollo Humano</title>
+
+        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
+
+        <link rel="stylesheet" type="text/css" href="{% static 'indice.css' %}">
+        <link rel="stylesheet" href="{% static 'website.css' %}" />
+    </head>
+
+    <body>
+        
+
+        <!-- --------------------- NAVIGATION ----------------- -->
+        <div class="container">
+            <div class="burger" onclick="toggleBurgerMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="burger_menu">
+                <a href='/'>Home</a>
+                <a href='/centro-de-datos-macroeconomicos/'>Centro De Datos Macroeconómicos</a>
+                <a href='/ciclos-economicos/'>Ciclos Económicos</a>
+                <a href='/indicadores-mensuales/'>Indicadores Mensuales</a>
+                <a href='/datos-demograficos/'>Datos Demográficos</a>
+            </ul>
+
+            <img src="{% static 'gobierno_de_puerto_rico.png' %}" alt="logo" id="logo" />
+        </div>
+
+        <main>
+            <section>
+                <h1>Indice Desarrollo Humano</h1>
+            </section>
+
+            <section>
+                <p>
+                    La Junta de Planificación, a través de su Programa de Planificación Económica y Social, publica información sobre las variables macroeconómicas de Puerto Rico. Se incluyen variables como: Producto Bruto, Producto no Bruto, inversión en construcción, gasto de consumo e ingreso neto.
+                    Para información adicional puede comunicarse vía email <a href="mailto:diaz_a@jp.pr.gov" class="custom-link">diaz_a@jp.pr.gov</a> y <a href="mailto:perez_m@jp.pr.gov" class="custom-link">perez_m@jp.pr.gov</a>.
+                </p>
+            </section>
+
+            <section>
+                <h2> Documentos</h2>
+                <p>
+                    <a href="https://jp.pr.gov/wp-content/uploads/2024/03/Series-Historicas-Seleccionadas-2001-2023p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 2001-2023)</a><br>
+                    <a href="https://jp.pr.gov/wp-content/uploads/2021/09/Series-historicas-1950-al-2011p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 1950-2011)</a>
+                </p>
+
+            </section>
+
+
+
+        </main>
+            <!-- ------------------ FOOTER --------------------- -->
+            <footer>
+                <main>
+                    <section>
+                        <h1>Contáctanos</h1>
+                    </section>
+                    <section>
+                        <div class="footer-container">
+                            <div class="left-container">
+                                <h2>Oficiales de Información <br> (Ley 141-2019)</h2>
+                                <p>
+                                    Sr. Edgardo Vázquez Rivera <br>
+                                    Secretario Oficina de Secretaría <br>
+                                    <a href="mailto:Vazquez_e@jp.pr.gov" class="custom-link">Vazquez_e@jp.pr.gov</a> <br>
+                                    787 723-6200 ext. 16637 <br><br>
+                    
+                                    Plan. Erika Rivera Felicié <br>
+                                    Ayudante Especial <br>
+                                    <a href="mailto:ivera_e1@jp.pr.gov" class="custom-link">ivera_e1@jp.pr.gov</a> <br><br>
+                    
+                                    Lcda Aida Silver Cintrón <br>
+                                    Abogada Oficina Asuntos Legales <br>
+                                    <a href="mailto:Silver_A@jp.pr.gov" class="custom-link">Silver_A@jp.pr.gov</a> <br>
+                                    787 723-6200 ext. 16016
+                                </p>
+                                <h2>Oficina de Datos PRITS</h2>
+                                <p>
+                                    Carlos Castillo Domena <br>
+                                    Director Oficina de Administración Interna <br>
+                                    <a href="mailto:castillo_r@jp.pr.gov" class="custom-link">castillo_r@jp.pr.gov</a> <br>
+                                    787 723-6200 ext. 16019 <br><br>
+                                    <a href="https://jppr.sharepoint.com/sites/BibliotecaDigital" class="custom-link">BDV (Uso interno)</a>
+                                </p>
+                            </div>
+                            <div class="right-container">
+                                <h2><strong>Dirección Postal</strong></h2>
+                                <p>
+                                    PO Box 4119 <br>
+                                    San Juan P.R. 00940-1119 <br>
+                                    Tel: (787) 723-6200 (Cuadro)<br>
+                                    <h2><strong>Dirección Física</strong></h2>
+                                    <p>
+                                        Centro Gubernamental<br>
+                                        Roberto Sánchez Vilella<br>
+                                        Ave. De Diego, Pda 22, <br>
+                                        Santurce<br>
+                                    </p>
+                                </p>
+                                <section class="maps">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.7501887340845!2d-66.0698374248245!3d18.
+                                            449648171336893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c036f497801a7b7%3A0x68ace32a0663b72f!2sGov
+                                            ernor%20Roberto%20S%C3%A1nchez%20Vilella%20Government%20Center!5e0!3m2!1sen!2sus!4v1717000266481!5m2!1sen!2sus"
+                                            width="490" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </footer>
+            <!-- ------------------ END OF FOOTER --------------------- -->
+
+        <script src="{% static 'header_menu.js' %}"></script>
+    </body>    
+</html>

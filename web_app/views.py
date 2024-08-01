@@ -78,6 +78,9 @@ def macro(request):
 
     return render(request, "macro.html", context)
 
+def indice_desarrollo_humano(request):
+    return render(request, "indice_desarrollo_humano.html")
+
 
 def datos_demograficos(request):
     return render(request, "demograficos.html")
