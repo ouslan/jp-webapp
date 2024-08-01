@@ -259,9 +259,6 @@ def Forms(request):
 
 
 
-
-
-
 def IP_510(request):
     if request.method == "POST":
         # Retrieve form data
