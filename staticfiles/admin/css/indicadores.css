@@ -26,12 +26,23 @@ p {
   line-height: 1.5;
 }
 
-/* GRAPH */
-.graph-container {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Dropdown select styling */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  padding: 0.5em;
+  font-size: .9em;
+  cursor: pointer;
+  border-radius: 0.25em;
+  position: relative;
+}
+
+select:focus {
+  outline: none;
+  border-color: #495057;
 }
 
 /* DROPDOWNS */
@@ -130,4 +141,53 @@ p {
 .menu-open {
   display: block;
   opacity: 1;
+}
+
+/* GRAPH */
+#variableY {
+  left: 5%;
+  transform: rotate(270deg);
+  align-items: center;
+  justify-items: center;
+}
+
+#variableX {
+  top: 8%;
+}
+
+#timeRange {
+  top: 0;
+  right: 0;
+}
+
+.container-X {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+.container-time {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.graph-container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin-left: 97.5px;
+  margin-right: 98px;
+}
+
+.y-dropdown-container {
+  margin-left: 90px;
+  width: 200px;
 }

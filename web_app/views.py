@@ -160,8 +160,8 @@ def indicadores(request):
     x = df["year_month"]
     y = df["Movimiento de pasajeros en el aeropuerto José Aponte de la Torre (NRR)"]
 
-    x_title = "Años"
-    y_title = "Indices"
+    x_title = ""
+    y_title = ""
 
     fig = gf.graph(x, y, x_title, y_title)
 
