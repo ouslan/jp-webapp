@@ -22,12 +22,8 @@ from src.formularios.form_jp_560_63111 import JP_560_63111
 from src.formularios.form_ip_230 import IP_230
 
 
-
-
-
 def home(request):
     return render(request, "home.html")
-
 
 def macro(request):
     x = [
@@ -98,10 +94,8 @@ def macro(request):
 
     return render(request, "macro.html", context)
 
-
 def datos_demograficos(request):
     return render(request, "demograficos.html")
-
 
 def ciclos_economicos(request):
     x = [
@@ -168,7 +162,6 @@ def ciclos_economicos(request):
 
     context = {"ciclos_economicos": ciclos_economicos}
     return render(request, "ciclos_economicos.html", context)
-
 
 def indicadores(request):
     df = pd.read_csv("src/data/indicadores.csv")
@@ -243,10 +236,8 @@ def indicadores(request):
     }
     return render(request, "indicadores.html", context)
 
-
 def succesfull_page(request):
     return render(request, "forms/succesfull.html")
-
 
 def Forms(request):
     return render(request, "forms/forms.html")
