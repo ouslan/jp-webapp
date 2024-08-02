@@ -2,26 +2,44 @@ body, header {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  margin-bottom: 100px;
 }
 
 h1 {
-  margin-left: 2vw;
-  margin-top: 4vw;
   font-size: 3em;
+  margin-top: 4vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 h2 {
-  margin-left: 2vw;
-  margin-top: 3vw;
-  margin-bottom: 5px;
-  font-size: 25px;
+  font-size: 1.8em;
+  margin-top: 4vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
+h3 {
+  font-size: 1.3em;
+  font-weight: none;
+  margin-top: 2vw;
+  margin-left: 10vw;
+  margin-right: 8vw;
+}
+
+li {
+  font-size: 1.2em;
+  text-align: justify;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  line-height: 1.5;
 }
 
 p {
   display: block;
   font-size: 1.2em;
   text-align: justify;
-  margin-left: 2vw;
+  margin-left: 8vw;
   margin-right: 8vw;
   line-height: 1.5;
 }
@@ -185,6 +203,8 @@ option {
 
 .graph_container {
   position: static;
+  margin-left: 140px;
+  text-align: center;
 }
 
 .y-dropdown-container {
@@ -192,21 +212,7 @@ option {
   width: 200px;
 }
 
-button:hover {
-  background-color: rgb(0, 148, 212);
+.instructions {
+  margin-left: 30px;
 }
 
-button {
-  background-color: rgb(0, 179, 255);
-  border: none;
-  width: 8%;
-  text-align: center;
-  margin-left: 665px;
-  appearance: none;
-  border: 1px solid #ced4da;
-  border-radius: 15px;
-  padding: 0.5em;
-  font-size: .9em;
-  cursor: pointer;
-  position: relative;
-}

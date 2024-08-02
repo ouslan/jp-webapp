@@ -180,16 +180,16 @@ def indicadores(request):
         "Manufactura",
         "Gobierno",
         "Otros Servicios",
-        "Minería Tala de Árboles y Construcción",
+        # "Minería Tala de Árboles y Construcción",
         "Gobierno Estatal",
-        "Recreación y Alojamiento",
+        # "Recreación y Alojamiento",
         "Gobierno Federal",
-        "Empleo No Agrícola- Todas las Industrias",
+        # "Empleo No Agrícola- Todas las Industrias",
         "Servicios Profesionales y Comerciales",
-        "Comercio Transportación y Utilidades",
+        # "Comercio Transportación y Utilidades",
         "Actividades Financieras",
         "Gobierno Municipal",
-        "Servicios Educativos y de Salud",
+        # "Servicios Educativos y de Salud",
         "Índice de Precios al Consumidor - Ropa",
         "Índice de Precios al Consumidor - Educación y Comunicación",
         "Índice de Precios al Consumidor - Todos los Grupos",
@@ -225,10 +225,10 @@ def indicadores(request):
         "Empleo en Recreación y Alojamiento",
         "Empleo en Comercio al Por Mayor",
         "Empleo en Comercio al Detalle",
-        "Empleo en Otros Servicios",
+        # "Empleo en Otros Servicios",
         "Empleo en Servicios Profesionales y Comerciales",
-        "Empleo en Finanzas y Seguros",
-        "Empleo en Gobierno Municipal",
+        # "Empleo en Finanzas y Seguros",
+        # "Empleo en Gobierno Municipal",
         # "Empleo en Comercio Transportación y Utilidades",
         "Empleo No Agrícola- Todas las Industrias _right",
         # "Empleo en Bienes Raíces Alquiler y Arrendamiento",
@@ -278,12 +278,12 @@ def indicadores(request):
         "Tasa de Participación",
         "Grupo Trabajador_right",
         "Empleo Total_right",
-        "Empleo en Administración Pública",
+        # "Empleo en Administración Pública",
         "Población Civil No-Institucional",
         # "Empleo en Finanzas Seguros y Bienes Raíces",
         "Empleo por Cuenta Propia",
         "Empleo en Comercio",
-        "Empleo en Servicios",
+        # "Empleo en Servicios",
         # "Empleo en Transportación Comunicaciones y Utilidades Públicas",
         "Desempleo_right",
         "Tasa de Desempleo_right",
@@ -373,7 +373,7 @@ def indicadores(request):
         hoverinfo='text',
     ))
     fig.update_layout(
-        margin=dict(l=300, r=300, t=25, b=0),
+        margin=dict(l=30, r=30, t=25, b=25),
         plot_bgcolor='#F7F7F7',
         hovermode='x',
         showlegend=False,
@@ -406,93 +406,140 @@ def indicadores(request):
                 color='black'
             ),
         ),
+        width=1100,  # Set the width of the graph
+        height=600  # Set the height of the graph
     )
 
     fig.update_layout(
-    annotations=[
-        dict(
-            x=0.02,
-            y=1.10,
-            xref='paper',
-            yref='paper',
-            text='Y:',
-            showarrow=False,
-            font=dict(
-                family='Arial',
-                size=18,
-                color='black'
+        annotations=[
+            dict(
+                x=0.02,
+                y=1.11,
+                xref='paper',
+                yref='paper',
+                text='Y:',
+                showarrow=False,
+                font=dict(
+                    family='Arial',
+                    size=18,
+                    color='black'
+                ),
+                xanchor='left',
+                yanchor='top'
             ),
-            xanchor='left',
-            yanchor='top'
-        ),
-        dict(
-            x=0.77,
-            y=1.10,
-            xref='paper',
-            yref='paper',
-            text='X:',
-            showarrow=False,
-            font=dict(
-                family='Arial',
-                size=18,
-                color='black'
+            dict(
+                x=0.77,
+                y=1.11,
+                xref='paper',
+                yref='paper',
+                text='X:',
+                showarrow=False,
+                font=dict(
+                    family='Arial',
+                    size=18,
+                    color='black'
+                ),
+                xanchor='left',
+                yanchor='top'
+            )
+        ],
+        updatemenus=[
+            dict(
+                buttons=[
+                    dict(
+                        args=[{"y": [df[col]]}],
+                        label=col,
+                        method="update"
+                    ) for col in y_axis_options
+                ],
+                direction="down",
+                pad={"r": 10, "t": 10},
+                showactive=True,
+                x=0.05,
+                xanchor="left",
+                y=1.14,
+                yanchor="top",
             ),
-            xanchor='left',
-            yanchor='top'
-        )
-    ],
-    updatemenus=[
-        dict(
-            buttons=[
-                dict(
-                    args=[{"y": [df[col]]}],
-                    label=col,
-                    method="update"
-                ) for col in y_axis_options
-            ],
-            direction="down",
-            pad={"r": 10, "t": 10},
-            showactive=True,
-            x=0.05,
-            xanchor="left",
-            y=1.14,
-            yanchor="top",
-        ),
-        dict(
-            buttons=[
-                dict(
-                    args=[{"yaxis.type": "linear"}],
-                    label="Linear",
-                    method="relayout"
-                ),
-                dict(
-                    args=[{"yaxis.type": "log"}],
-                    label="Log",
-                    method="relayout"
-                ),
-                dict(
-                    args=[{"yaxis.range": [0, max(y_axis)]}],
-                    label="Default Range",
-                    method="relayout"
-                ),
-                dict(
-                    args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                    label="Half Range",
-                    method="relayout"
-                ),
-            ],
-            direction="down",
-            pad={"r": 10, "t": 10},
-            showactive=True,
-            x=0.8,
-            xanchor="left",
-            y=1.14,
-            yanchor="top"
-        )
-    ]
-)
+            dict(
+                buttons=[
+                    dict(
+                        args=[{"yaxis.type": "linear"}],
+                        label="Anual",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.type": "log"}],
+                        label="Enero",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [0, max(y_axis)]}],
+                        label="Febrero",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
+                        label="Marzo",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
+                        label="Abril",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
+                        label="Mayo",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
+                        label="Junio",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
+                        label="Julio",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
+                        label="Agosto",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
+                        label="Septiembre",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
+                        label="Octubre",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
+                        label="Noviembre",
+                        method="relayout"
+                    ),
+                    dict(
+                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
+                        label="Diciembre",
+                        method="relayout"
+                    ),
+                ],
+                direction="down",
+                pad={"r": 10, "t": 10},
+                showactive=True,
+                x=0.8,
+                xanchor="left",
+                y=1.14,
+                yanchor="top"
+            )
+        ]
+    )
     indicadores_html = fig.to_html()
-
+    
     context = {
         "indicadores": indicadores_html,
     }
