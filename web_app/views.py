@@ -424,6 +424,21 @@ def indicadores(request):
             ),
             xanchor='left',
             yanchor='top'
+        ),
+        dict(
+            x=0.77,
+            y=1.10,
+            xref='paper',
+            yref='paper',
+            text='X:',
+            showarrow=False,
+            font=dict(
+                family='Arial',
+                size=18,
+                color='black'
+            ),
+            xanchor='left',
+            yanchor='top'
         )
     ],
     updatemenus=[
@@ -473,7 +488,7 @@ def indicadores(request):
             xanchor="left",
             y=1.14,
             yanchor="top"
-        ),
+        )
     ]
 )
     indicadores_html = fig.to_html()
