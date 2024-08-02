@@ -162,6 +162,7 @@ option {
 #timeRange {
   top: 0;
   right: 0;
+  margin-left: 15px;
 }
 
 .container-X {
@@ -182,13 +183,8 @@ option {
   position: relative;
 }
 
-.graph-container {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  text-align: center;
-  margin-left: 97.5px;
-  margin-right: 98px;
+.graph_container {
+  position: static;
 }
 
 .y-dropdown-container {
@@ -196,12 +192,16 @@ option {
   width: 200px;
 }
 
-.update_button {
+button:hover {
+  background-color: rgb(0, 148, 212);
+}
+
+button {
   background-color: rgb(0, 179, 255);
   border: none;
   width: 8%;
   text-align: center;
-  margin-left: 648px;
+  margin-left: 665px;
   appearance: none;
   border: 1px solid #ced4da;
   border-radius: 15px;
@@ -209,10 +209,4 @@ option {
   font-size: .9em;
   cursor: pointer;
   position: relative;
-}
-
-button {
-  border: none;
-  font-size: 15px;
-  background-color: rgb(0, 179, 255);
 }

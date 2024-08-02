@@ -53,42 +53,9 @@
                 </p>
 
                 <!-- GRAPH -->
-                <section>
-                    <div class="container-time">
-                        <select id="timeRange">
-                            <option value="anual" class="active">Anual</option>
-                            <option value="enero">Enero</option>
-                            <option value="febrero">Febrero</option>
-                            <option value="marzo">Marzo</option>
-                            <option value="abril">Abril</option>
-                            <option value="mayo">Mayo</option>
-                            <option value="junio">Junio</option>
-                            <option value="julio">Julio</option>
-                            <option value="agosto">Agosto</option>
-                            <option value="septiembre">Septiembre</option>
-                            <option value="octubre">Octubre</option>
-                            <option value="noviembre">Noviembre</option>
-                            <option value="diciembre">Diciembre</option>
-                        </select>
-                    </div>
-
-                    <div class="graph-container">
-                        <div class="y-dropdown-container">
-                                <select name="y_variable" id="variableY"> 
-                                    <option value="Movimiento de pasajeros en el aeropuerto José Aponte de la Torre (NRR)">Movimiento de pasajeros en el aeropuerto José Aponte de la Torre (NRR)</option>
-                                    <option value="Movimiento de pasajeros en barcos cruceros (Puerto de San Juan)">Movimiento de pasajeros en barcos cruceros (Puerto de San Juan)</option>
-                                    <option value="Movimiento de pasajeros en el aeropuerto Mercedita (PSE)">Movimiento de pasajeros en el aeropuerto Mercedita (PSE)</option>
-                                </select>
-                            </form>
-                        </div>
-                        {{ indicadores|safe }}
-                    </div>
-
-                    <div class="update_button">
-                        <button type="submit">Update Graph</button>
-                    </div>
-                </section>
-
+                <div class="graph_container">
+                    {{ indicadores|safe }}
+                </div>
 
                 {% comment %} BLOCK 2 {% endcomment %}
                 {% comment %} (Miles de Personas) {% endcomment %}
