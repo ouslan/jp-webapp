@@ -260,16 +260,8 @@ def succesfull_page(request):
 def Forms(request):
     return render(request, "forms/forms.html")
 
-
-
-
-
-
 def JP_544_1(request):
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-1.html")
-
-
-
 
 def IP_530(request):
     if request.method == "POST":
