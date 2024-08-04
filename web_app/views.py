@@ -47,7 +47,6 @@ from src.formularios.form_ip_710 import IP_710
 from src.formularios.form_ip_620 import IP_620
 from src.formularios.form_ip_540p import IP_540p
 from src.formularios.form_ip_540s import IP_540s
-from src.formularios.form_ip_540v import IP_540v
 
 def home(request):
     return render(request, "home.html")
@@ -273,9 +272,7 @@ def JP_544_1(request):
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-1.html")
 
 
-
-def IP_540v(request):
-
+def IP_540a(request):
     if request.method == "POST":
         # Retrieve form data
         company_name = request.POST.get("company_name")
@@ -289,57 +286,60 @@ def IP_540v(request):
         cfc = request.POST.get("cfc")
         business_type = request.POST.get("business_type")
         business_function = request.POST.get("business_function")
-        branches = request.POST.get("branches")
-        branches_yes = request.POST.get("branches_yes")
         closing_date = request.POST.get("closing_date")
+
         start_year = request.POST.get("start_year")
         end_year = request.POST.get("end_year")
-        incomes_services_rendered_1 = request.POST.get("incomes_services_rendered_1")
-        incomes_services_rendered_2 = request.POST.get("incomes_services_rendered_2")
-        incomes_to_business_1 = request.POST.get("incomes_to_business_1")
-        incomes_to_business_2 = request.POST.get("incomes_to_business_2")
-        incomes_to_personal_pets_1 = request.POST.get("incomes_to_personal_pets_1")
-        incomes_to_personal_pets_2 = request.POST.get("incomes_to_personal_pets_2")
-        incomes_sale_merchandise_1 = request.POST.get("incomes_sale_merchandise_1")
-        incomes_sale_merchandise_2 = request.POST.get("incomes_sale_merchandise_2")
-        incomes_rent_of_land_and_building_1 = request.POST.get(
-            "incomes_rent_of_land_and_building_1"
+
+        billing_1 = request.POST.get("billing_1")
+        billing_2 = request.POST.get("billing_2")
+        incomes_from_persons_1 = request.POST.get("incomes_from_persons_1")
+        incomes_from_persons_2 = request.POST.get("incomes_from_persons_2")
+        incomes_from_industries_and_businesses_1 = request.POST.get(
+            "incomes_from_industries_and_businesses_1"
         )
-        incomes_rent_of_land_and_building_2 = request.POST.get(
-            "incomes_rent_of_land_and_building_2"
+        incomes_from_industries_and_businesses_2 = request.POST.get(
+            "incomes_from_industries_and_businesses_2"
         )
-        incomes_interests_1 = request.POST.get("incomes_interests_1")
-        incomes_interests_2 = request.POST.get("incomes_interests_2")
-        incomes_capital_gain_or_loss_1 = request.POST.get(
-            "incomes_capital_gain_or_loss_1"
-        )
-        incomes_capital_gain_or_loss_2 = request.POST.get(
-            "incomes_capital_gain_or_loss_2"
-        )
-        incomes_other_operating_income_1 = request.POST.get(
-            "incomes_other_operating_income_1"
-        )
-        incomes_other_operating_income_2 = request.POST.get(
-            "incomes_other_operating_income_2"
-        )
-        incomes_total_1 = request.POST.get("incomes_total_1")
-        incomes_total_2 = request.POST.get("incomes_total_2")
+
+        billing_expenses_1 = request.POST.get("billing_expenses_1")
+        billing_expenses_2 = request.POST.get("billing_expenses_2")
+        expenses_newspapers_1 = request.POST.get("expenses_newspapers_1")
+        expenses_newspapers_2 = request.POST.get("expenses_newspapers_2")
+        expenses_radio_television_1 = request.POST.get("expenses_radio_television_1")
+        expenses_radio_television_2 = request.POST.get("expenses_radio_television_2")
+        expenses_others_1 = request.POST.get("expenses_others_1")
+        expenses_others_2 = request.POST.get("expenses_others_2")
+
+        gross_profit_1 = request.POST.get("gross_profit_1")
+        gross_profit_2 = request.POST.get("gross_profit_2")
+
+        other_incomes_1 = request.POST.get("other_incomes_1")
+        other_incomes_2 = request.POST.get("other_incomes_2")
+        other_interests_1 = request.POST.get("other_interests_1")
+        other_interests_2 = request.POST.get("other_interests_2")
+        rent_of_land_1 = request.POST.get("rent_of_land_1")
+        rent_of_land_2 = request.POST.get("rent_of_land_2")
+        capital_1 = request.POST.get("capital_1")
+        capital_2 = request.POST.get("capital_2")
+        others_1 = request.POST.get("others_1")
+        others_2 = request.POST.get("others_2")
+
+        total_incomes_1 = request.POST.get("total_incomes_1")
+        total_incomes_2 = request.POST.get("total_incomes_2")
+
         total_expenses_1 = request.POST.get("total_expenses_1")
         total_expenses_2 = request.POST.get("total_expenses_2")
-        expenses_salaries_wages_bonus_1 = request.POST.get(
-            "expenses_salaries_wages_bonus_1"
-        )
-        expenses_salaries_wages_bonus_2 = request.POST.get(
-            "expenses_salaries_wages_bonus_2"
-        )
+        expenses_salaries_bonus_1 = request.POST.get("expenses_salaries_bonus_1")
+        expenses_salaries_bonus_2 = request.POST.get("expenses_salaries_bonus_2")
         expenses_interests_1 = request.POST.get("expenses_interests_1")
         expenses_interests_2 = request.POST.get("expenses_interests_2")
         expenses_rent_1 = request.POST.get("expenses_rent_1")
         expenses_rent_2 = request.POST.get("expenses_rent_2")
         expenses_depreciation_1 = request.POST.get("expenses_depreciation_1")
         expenses_depreciation_2 = request.POST.get("expenses_depreciation_2")
-        expenses_bad_debts_1 = request.POST.get("expenses_bad_debts_1")
-        expenses_bad_debts_2 = request.POST.get("expenses_bad_debts_2")
+        expenses_other_donations_1 = request.POST.get("expenses_other_donations_1")
+        expenses_other_donations_2 = request.POST.get("expenses_other_donations_2")
         expenses_donations_1 = request.POST.get("expenses_donations_1")
         expenses_donations_2 = request.POST.get("expenses_donations_2")
         expenses_sales_taxes_1 = request.POST.get("expenses_sales_taxes_1")
@@ -354,22 +354,23 @@ def IP_540v(request):
         expenses_other_purchases_2 = request.POST.get("expenses_other_purchases_2")
         expenses_licenses_1 = request.POST.get("expenses_licenses_1")
         expenses_licenses_2 = request.POST.get("expenses_licenses_2")
-        expenses_other_operating_1 = request.POST.get("expenses_other_operating_1")
-        expenses_other_operating_2 = request.POST.get("expenses_other_operating_2")
-        expenses_total_expenses_1 = request.POST.get("expenses_total_expenses_1")
-        expenses_total_expenses_2 = request.POST.get("expenses_total_expenses_2")
+        expenses_other_operationg_1 = request.POST.get("expenses_other_operationg_1")
+        expenses_other_operationg_2 = request.POST.get("expenses_other_operationg_2")
+
         net_profit_1 = request.POST.get("net_profit_1")
         net_profit_2 = request.POST.get("net_profit_2")
         profit_income_tax_1 = request.POST.get("profit_income_tax_1")
         profit_income_tax_2 = request.POST.get("profit_income_tax_2")
         profit_after_income_tax_1 = request.POST.get("profit_after_income_tax_1")
         profit_after_income_tax_2 = request.POST.get("profit_after_income_tax_2")
+
         sales_tax_withheld_1 = request.POST.get("sales_tax_withheld_1")
         sales_tax_withheld_2 = request.POST.get("sales_tax_withheld_2")
-        name = request.POST.get("name")
-        rank = request.POST.get("name")
 
-        csv_file_path = "data/cuestionarios/ingreso_neto/IP-540v.csv"
+        name = request.POST.get("name")
+        rank = request.POST.get("rank")
+
+        csv_file_path = "data/cuestionarios/ingreso_neto/IP-540a.csv"
         file_exists = (
             os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
         )
@@ -391,41 +392,49 @@ def IP_540v(request):
                         "cfc",
                         "business_type",
                         "business_function",
-                        "branches",
-                        "branches_yes",
                         "closing_date",
                         "start_year",
                         "end_year",
-                        "incomes_services_rendered_1",
-                        "incomes_services_rendered_2",
-                        "incomes_to_business_1",
-                        "incomes_to_business_2",
-                        "incomes_to_personal_pets_1",
-                        "incomes_to_personal_pets_2",
-                        "incomes_sale_merchandise_1",
-                        "incomes_sale_merchandise_2",
-                        "incomes_rent_of_land_and_building_1",
-                        "incomes_rent_of_land_and_building_2",
-                        "incomes_interests_1",
-                        "incomes_interests_2",
-                        "incomes_capital_gain_or_loss_1",
-                        "incomes_capital_gain_or_loss_2",
-                        "incomes_other_operating_income_1",
-                        "incomes_other_operating_income_2",
-                        "incomes_total_1",
-                        "incomes_total_2",
+                        "billing_1",
+                        "billing_2",
+                        "incomes_from_persons_1",
+                        "incomes_from_persons_2",
+                        "incomes_from_industries_and_businesses_1",
+                        "incomes_from_industries_and_businesses_2",
+                        "billing_expenses_1",
+                        "billing_expenses_2",
+                        "expenses_newspapers_1",
+                        "expenses_newspapers_2",
+                        "expenses_radio_television_1",
+                        "expenses_radio_television_2",
+                        "expenses_others_1",
+                        "expenses_others_2",
+                        "gross_profit_1",
+                        "gross_profit_2",
+                        "other_incomes_1",
+                        "other_incomes_2",
+                        "other_interests_1",
+                        "other_interests_2",
+                        "rent_of_land_1",
+                        "rent_of_land_2",
+                        "capital_1",
+                        "capital_2",
+                        "others_1",
+                        "others_2",
+                        "total_incomes_1",
+                        "total_incomes_2",
                         "total_expenses_1",
                         "total_expenses_2",
-                        "expenses_salaries_wages_bonus_1",
-                        "expenses_salaries_wages_bonus_2",
+                        "expenses_salaries_bonus_1",
+                        "expenses_salaries_bonus_2",
                         "expenses_interests_1",
                         "expenses_interests_2",
                         "expenses_rent_1",
                         "expenses_rent_2",
                         "expenses_depreciation_1",
                         "expenses_depreciation_2",
-                        "expenses_bad_debts_1",
-                        "expenses_bad_debts_2",
+                        "expenses_other_donations_1",
+                        "expenses_other_donations_2",
                         "expenses_donations_1",
                         "expenses_donations_2",
                         "expenses_sales_taxes_1",
@@ -436,10 +445,8 @@ def IP_540v(request):
                         "expenses_other_purchases_2",
                         "expenses_licenses_1",
                         "expenses_licenses_2",
-                        "expenses_other_operating_1",
-                        "expenses_other_operating_2",
-                        "expenses_total_expenses_1",
-                        "expenses_total_expenses_2",
+                        "expenses_other_operationg_1",
+                        "expenses_other_operationg_2",
                         "net_profit_1",
                         "net_profit_2",
                         "profit_income_tax_1",
@@ -466,41 +473,49 @@ def IP_540v(request):
                     cfc,
                     business_type,
                     business_function,
-                    branches,
-                    branches_yes,
                     closing_date,
                     start_year,
                     end_year,
-                    incomes_services_rendered_1,
-                    incomes_services_rendered_2,
-                    incomes_to_business_1,
-                    incomes_to_business_2,
-                    incomes_to_personal_pets_1,
-                    incomes_to_personal_pets_2,
-                    incomes_sale_merchandise_1,
-                    incomes_sale_merchandise_2,
-                    incomes_rent_of_land_and_building_1,
-                    incomes_rent_of_land_and_building_2,
-                    incomes_interests_1,
-                    incomes_interests_2,
-                    incomes_capital_gain_or_loss_1,
-                    incomes_capital_gain_or_loss_2,
-                    incomes_other_operating_income_1,
-                    incomes_other_operating_income_2,
-                    incomes_total_1,
-                    incomes_total_2,
+                    billing_1,
+                    billing_2,
+                    incomes_from_persons_1,
+                    incomes_from_persons_2,
+                    incomes_from_industries_and_businesses_1,
+                    incomes_from_industries_and_businesses_2,
+                    billing_expenses_1,
+                    billing_expenses_2,
+                    expenses_newspapers_1,
+                    expenses_newspapers_2,
+                    expenses_radio_television_1,
+                    expenses_radio_television_2,
+                    expenses_others_1,
+                    expenses_others_2,
+                    gross_profit_1,
+                    gross_profit_2,
+                    other_incomes_1,
+                    other_incomes_2,
+                    other_interests_1,
+                    other_interests_2,
+                    rent_of_land_1,
+                    rent_of_land_2,
+                    capital_1,
+                    capital_2,
+                    others_1,
+                    others_2,
+                    total_incomes_1,
+                    total_incomes_2,
                     total_expenses_1,
                     total_expenses_2,
-                    expenses_salaries_wages_bonus_1,
-                    expenses_salaries_wages_bonus_2,
+                    expenses_salaries_bonus_1,
+                    expenses_salaries_bonus_2,
                     expenses_interests_1,
                     expenses_interests_2,
                     expenses_rent_1,
                     expenses_rent_2,
                     expenses_depreciation_1,
                     expenses_depreciation_2,
-                    expenses_bad_debts_1,
-                    expenses_bad_debts_2,
+                    expenses_other_donations_1,
+                    expenses_other_donations_2,
                     expenses_donations_1,
                     expenses_donations_2,
                     expenses_sales_taxes_1,
@@ -511,10 +526,8 @@ def IP_540v(request):
                     expenses_other_purchases_2,
                     expenses_licenses_1,
                     expenses_licenses_2,
-                    expenses_other_operating_1,
-                    expenses_other_operating_2,
-                    expenses_total_expenses_1,
-                    expenses_total_expenses_2,
+                    expenses_other_operationg_1,
+                    expenses_other_operationg_2,
                     net_profit_1,
                     net_profit_2,
                     profit_income_tax_1,
@@ -529,7 +542,7 @@ def IP_540v(request):
             )
 
         DAO().insert_forms(
-            data_path="data/cuestionarios/ingreso_neto/IP-540v.csv",
+            data_path="data/cuestionarios/ingreso_neto/IP-540a.csv",
             dtypes={
                 "company_name": str,
                 "address": str,
@@ -542,41 +555,49 @@ def IP_540v(request):
                 "cfc": str,
                 "business_type": str,
                 "business_function": str,
-                "branches": str,
-                "branches_yes": str,
                 "closing_date": str,
                 "start_year": int,
                 "end_year": int,
-                "incomes_services_rendered_1": float,
-                "incomes_services_rendered_2": float,
-                "incomes_to_business_1": float,
-                "incomes_to_business_2": float,
-                "incomes_to_personal_pets_1": float,
-                "incomes_to_personal_pets_2": float,
-                "incomes_sale_merchandise_1": float,
-                "incomes_sale_merchandise_2": float,
-                "incomes_rent_of_land_and_building_1": float,
-                "incomes_rent_of_land_and_building_2": float,
-                "incomes_interests_1": float,
-                "incomes_interests_2": float,
-                "incomes_capital_gain_or_loss_1": float,
-                "incomes_capital_gain_or_loss_2": float,
-                "incomes_other_operating_income_1": float,
-                "incomes_other_operating_income_2": float,
-                "incomes_total_1": float,
-                "incomes_total_2": float,
+                "billing_1": float,
+                "billing_2": float,
+                "incomes_from_persons_1": float,
+                "incomes_from_persons_2": float,
+                "incomes_from_industries_and_businesses_1": float,
+                "incomes_from_industries_and_businesses_2": float,
+                "billing_expenses_1": float,
+                "billing_expenses_2": float,
+                "expenses_newspapers_1": float,
+                "expenses_newspapers_2": float,
+                "expenses_radio_television_1": float,
+                "expenses_radio_television_2": float,
+                "expenses_others_1": float,
+                "expenses_others_2": float,
+                "gross_profit_1": float,
+                "gross_profit_2": float,
+                "other_incomes_1": float,
+                "other_incomes_2": float,
+                "other_interests_1": float,
+                "other_interests_2": float,
+                "rent_of_land_1": float,
+                "rent_of_land_2": float,
+                "capital_1": float,
+                "capital_2": float,
+                "others_1": float,
+                "others_2": float,
+                "total_incomes_1": float,
+                "total_incomes_2": float,
                 "total_expenses_1": float,
                 "total_expenses_2": float,
-                "expenses_salaries_wages_bonus_1": float,
-                "expenses_salaries_wages_bonus_2": float,
+                "expenses_salaries_bonus_1": float,
+                "expenses_salaries_bonus_2": float,
                 "expenses_interests_1": float,
                 "expenses_interests_2": float,
                 "expenses_rent_1": float,
                 "expenses_rent_2": float,
                 "expenses_depreciation_1": float,
                 "expenses_depreciation_2": float,
-                "expenses_bad_debts_1": float,
-                "expenses_bad_debts_2": float,
+                "expenses_other_donations_1": float,
+                "expenses_other_donations_2": float,
                 "expenses_donations_1": float,
                 "expenses_donations_2": float,
                 "expenses_sales_taxes_1": float,
@@ -587,10 +608,8 @@ def IP_540v(request):
                 "expenses_other_purchases_2": float,
                 "expenses_licenses_1": float,
                 "expenses_licenses_2": float,
-                "expenses_other_operating_1": float,
-                "expenses_other_operating_2": float,
-                "expenses_total_expenses_1": float,
-                "expenses_total_expenses_2": float,
+                "expenses_other_operationg_1": float,
+                "expenses_other_operationg_2": float,
                 "net_profit_1": float,
                 "net_profit_2": float,
                 "profit_income_tax_1": float,
@@ -602,13 +621,14 @@ def IP_540v(request):
                 "name": str,
                 "rank": str,
             },
-            table_name="IP_540v",
-            table_id=12,
+            table_name="IP_540a",
+            table_id=14,
             debug=False,
         )
 
         return render(request, "forms/succesfull.html")
-    return render(request, "forms/yearly/ingreso_neto/IP-540v.html")
+    return render(request, "forms/yearly/ingreso_neto/IP-540a.html")
+
 
 
 def IP_720(request):
