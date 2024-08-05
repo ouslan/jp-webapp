@@ -4,7 +4,7 @@ from plotly.subplots import make_subplots
 
 
 # Read the CSV file into a DataFrame
-df = pl.read_csv("data/external/ForecastAnual.csv")
+df = pl.read_csv("data/external/Anual_Historico.csv")
 
 # Print the first few rows of the DataFrame to verify
 print(df.head())
@@ -60,6 +60,8 @@ fig.update_layout(
     title='Demographic Graph',
     xaxis_title='Time',
     yaxis_title='Value',
+    width = 800,
+    height = 800
 )
 
 # Convert the figure to HTML

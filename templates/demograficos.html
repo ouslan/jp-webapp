@@ -185,34 +185,6 @@
             <br>
             <br>
 
-            <!-- GRAPH -->
-			<!-- <section>
-				<div class="container-time">
-					<select id="timeRange">
-						<option value="anual" class="active">Anual</option>
-                        <option value="mensual">Mensual</option>
-                        <option value="trimestral">Trimestral</option>
-					</select>
-				</div>
-
-				<div class="graph-container">
-					<select id="variableY">
-						<option value="indice_coincidente_jp" class="active">Índice coincidente (JP)</option>
-						<option value="indice_actividad_economica_bgf">Índice de actividad económica (BGF)</option>
-						<option value="indice_actividad_economica_eu">Índice de actividad económica (EU)</option>
-					</select>
-					
-					{{ demograficos|safe }}
-				</div>
-
-				<div class="container-X">
-					<select id="variableX">
-						<option value="anual" class="active">Anual</option>
-                        <option value="mensual">Mensual</option>
-                        <option value="trimestral">Trimestral</option>
-					</select>
-				</div>
-			</section> -->
 
             <!-- Demographic Graph -->
             <h1>Graphs</h1>
@@ -225,45 +197,11 @@
                 }
             </style>
         </head>
-        <body>
-            
             <div class="graph-container">
-                {{ demographic_graph|safe }}
+                {{ graph|safe }}
             </div>
 
-            <!-- Demographic Graph -->
-            <h1>Graphs</h1>
-            <style>
-                .graph-container {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh; /* Optional: Adjust the height as needed */
-                }
-            </style>
-        </head>
         <body>
-            <div class="graph-container">
-                {{ demographic_graph|safe }}
-            </div>
-
-
-            <!-- Demographic Graph -->
-            <h1>Graphs</h1>
-            <style>
-                .graph-container {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh; /* Optional: Adjust the height as needed */
-                }
-            </style>
-        </head>
-        <body>
-            <div class="graph-container">
-                {{ demographic_graph|safe }}
-            </div>
-
             <div class="sct-footer">
                 <div class="footer-top-bar">
                     <div class="content-block flex-hor-end-to-end w-container">

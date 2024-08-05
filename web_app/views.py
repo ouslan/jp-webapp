@@ -1,11 +1,10 @@
 import pandas as pd
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from web_app import graphics_function as gf
 from plotly.subplots import make_subplots
 from django.http import HttpResponse
 import plotly.express as px
 from .models import *
-import polars as pl
 import csv
 import os
 
@@ -153,22 +152,35 @@ def macro(request):
 
 
 def demographic_graph():
-    # Create graph
-    df = pl.read_csv("data/external/ForecastAnual.csv")
+    # Read the CSV file
+    df = pd.read_csv("data/external/Anual_Historico.csv")
 
-    fig = px.line(df, x="year", y="population", title='Life expectancy in Canada')
+    # Extract column names
+    columns = df.columns
+    
+    # The new column is the x-axis
+    x_column = columns[0]
+    
+    # The rest of the columns are y-axes
+    y_columns = columns[1:]
+
+    # Create the graph
+    fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Demográfica', width=1100, height=750)
 
     # Convert the figure to HTML
-    graph_html = fig.to_html(full_html=False)
-    return graph_html
+    demographic_graph_html = fig.to_html(full_html=False)
+    return demographic_graph_html
+
 
 def datos_demograficos(request):
-    # Generate graph
+    # Generate the annual demographic graph
     graph_html = demographic_graph()
 
-    # Pass the graph HTML to the template
-    context = {'demographic_graph': graph_html}
-    return render(request, 'demograficos.html', context)
+    context = {
+        "graph": graph_html,
+    }
+
+    return render(request, "demograficos.html", context)
 
 
 def ciclos_economicos(request):
