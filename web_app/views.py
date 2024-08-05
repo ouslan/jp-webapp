@@ -226,7 +226,7 @@ def indicadores(request):
         # "Empleo en Finanzas y Seguros",
         # "Empleo en Gobierno Municipal",
         # "Empleo en Comercio Transportación y Utilidades",
-        "Empleo No Agrícola- Todas las Industrias _right",
+        "Empleo No Agrícola- Todas las Industrias_right",
         # "Empleo en Bienes Raíces Alquiler y Arrendamiento",
         "Empleo en Actividades Financieras",
         "Empleo en Servicios Educativos y de Salud",
