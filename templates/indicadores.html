@@ -63,10 +63,6 @@
                 </p>
             </section>
 
-            <div class="graph_container">
-                {{ indicadores|safe }}
-            </div>
-
             <section>
                 <h2>Instrucciones para la Gráfica Interactiva</h2>
             </section>
@@ -98,7 +94,7 @@
                 <ul>
                     <li>
                         <strong>Anual:</strong> Selecciona esta opción para ver la gráfica con una escala del 
-                        eje Y ajustada para mostrar todos los datos disponibles a lo largo del año.
+                        eje Y ajustada para mostrar todos los datos disponibles a lo largo de los años.
                     </li>
                     <li>
                         <strong>Enero - Diciembre:</strong> Elige el mes deseado para ajustar el rango del eje 
@@ -115,6 +111,10 @@
                     visualización más detallada de las fluctuaciones dentro de cada periodo.
                 </p>
             </section>
+
+            <div class="graph_container">
+                {{ indicadores|safe }}
+            </div>
 
         <script src="{% static 'indicadores.js' %}" defer></script>
         <script src="{% static 'header_menu.js' %}" defer></script>

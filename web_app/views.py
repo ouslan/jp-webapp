@@ -406,8 +406,8 @@ def indicadores(request):
                 color='black'
             ),
         ),
-        width=1100,  # Set the width of the graph
-        height=600  # Set the height of the graph
+        width=1100, 
+        height=600  
     )
 
     fig.update_layout(
@@ -458,7 +458,7 @@ def indicadores(request):
                 x=0.05,
                 xanchor="left",
                 y=1.14,
-                yanchor="top",
+                yanchor="top"
             ),
             dict(
                 buttons=[
