@@ -1,7 +1,7 @@
-from src.dao.data_db_dao import DAO
+from src.data.data_process import DataProcess
 
 def main() -> None:
-    DAO()
+    DataProcess("data/external/INDICADORES ECÓNOMICOS/", "data/processed/")
 
 if __name__ == "__main__":
     main()
