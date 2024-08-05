@@ -1,4 +1,4 @@
-FROM rust:alpine3.20 as rust_builder
+FROM rust:alpine3.20 AS rust_builder
 
 # Install cmake
 RUN apk add --no-cache cmake
