@@ -29,7 +29,7 @@ df
 ```{python}
 def process_file(file_path: str):
     df = pl.read_csv(file_path)
-    column_name = file_path.split("/")[-1][:-4]
+    column_name = file_path.split("/")[-1][:-4].strip()
     empty_df = [
         pl.Series("date", [], dtype=pl.Datetime),
         pl.Series(column_name, [], dtype=pl.Float64)
@@ -38,7 +38,7 @@ def process_file(file_path: str):
     for column in df.columns:
         if column == "Meses":
             continue
-        column_name = file_path.split("/")[-1][:-4]
+        column_name = file_path.split("/")[-1][:-4].strip()
         # Create a temporary DataFrame
         tmp = df
         tmp = tmp.rename({column:column_name})
@@ -72,14 +72,13 @@ def process_file(file_path: str):
                          pl.lit(int(column)).cast(pl.Int64).alias("year"),
                          pl.col(column_name).cast(pl.Float64).alias(column_name)
         )
-
+  
         tmp = tmp.with_columns((pl.col("year").cast(pl.String) + "-" + pl.col("month").cast(pl.String) + "-01").alias("date"))
         tmp = tmp.select(pl.col("date").str.to_datetime("%Y-%m-%d").alias("date"),
                          pl.col(column_name).alias(column_name))
         
         # Append the temporary DataFrame to the list
         clean_df = pl.concat([clean_df, tmp], how="vertical")
-
     
     return clean_df
 
