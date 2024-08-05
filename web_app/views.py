@@ -165,19 +165,51 @@ def demographic_graph():
     y_columns = columns[1:]
 
     # Create the graph
-    fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Demográfica', width=1100, height=750)
+    fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Anual', width=1400, height=750)
 
     # Convert the figure to HTML
     demographic_graph_html = fig.to_html(full_html=False)
     return demographic_graph_html
 
 
+def trimestral_demographic_graph():
+    # Read the new CSV file
+    df = pd.read_csv("data/external/Trimestral_Historico.csv")
+
+    # Extract column names
+    columns = df.columns
+    
+    # Ensure the year and quarter columns are of correct type
+    year= df[columns[0]].astype(str)
+    qrt = df[columns[1]].astype(str)
+
+    # Create a new column for the formatted x-axis
+    df['YearQuarter'] = year + "Q" + qrt
+    
+    # The new column is the x-axis
+    x_column = 'YearQuarter'
+    
+    # The rest of the columns are y-axes
+    y_columns = columns[2:]
+
+    # Create the graph
+    fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Trimestral', width=1500, height=750)
+    # fig.update_traces(mode='markers+lines', marker=dict(size=8, symbol='x'))
+    
+    # Convert the figure to HTML
+    trimestral_demographic_graph_html = fig.to_html(full_html=False)
+    return trimestral_demographic_graph_html
+
+
+
 def datos_demograficos(request):
     # Generate the annual demographic graph
     graph_html = demographic_graph()
+    t_graph_html = trimestral_demographic_graph()
 
     context = {
         "graph": graph_html,
+        "t_graph": t_graph_html
     }
 
     return render(request, "demograficos.html", context)
