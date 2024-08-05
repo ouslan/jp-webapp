@@ -182,7 +182,7 @@ def indicadores(request):
         "Otros Servicios",
         # "Minería Tala de Árboles y Construcción",
         "Gobierno Estatal",
-        # "Recreación y Alojamiento",
+        "Recreación y Alojamiento",
         "Gobierno Federal",
         # "Empleo No Agrícola- Todas las Industrias",
         "Servicios Profesionales y Comerciales",
@@ -230,7 +230,7 @@ def indicadores(request):
         # "Empleo en Finanzas y Seguros",
         # "Empleo en Gobierno Municipal",
         # "Empleo en Comercio Transportación y Utilidades",
-        "Empleo No Agrícola- Todas las Industrias _right",
+        "Empleo No Agrícola- Todas las Industrias_right",
         # "Empleo en Bienes Raíces Alquiler y Arrendamiento",
         "Empleo en Actividades Financieras",
         "Empleo en Servicios Educativos y de Salud",
@@ -278,12 +278,12 @@ def indicadores(request):
         "Tasa de Participación",
         "Grupo Trabajador_right",
         "Empleo Total_right",
-        # "Empleo en Administración Pública",
+        "Empleo en Administración Pública",
         "Población Civil No-Institucional",
         # "Empleo en Finanzas Seguros y Bienes Raíces",
         "Empleo por Cuenta Propia",
         "Empleo en Comercio",
-        # "Empleo en Servicios",
+        "Empleo en Servicios",
         # "Empleo en Transportación Comunicaciones y Utilidades Públicas",
         "Desempleo_right",
         "Tasa de Desempleo_right",
@@ -469,62 +469,12 @@ def indicadores(request):
                     ),
                     dict(
                         args=[{"yaxis.type": "log"}],
-                        label="Enero",
+                        label="Trimestral",
                         method="relayout"
                     ),
                     dict(
                         args=[{"yaxis.range": [0, max(y_axis)]}],
-                        label="Febrero",
-                        method="relayout"
-                    ),
-                    dict(
-                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                        label="Marzo",
-                        method="relayout"
-                    ),
-                    dict(
-                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                        label="Abril",
-                        method="relayout"
-                    ),
-                    dict(
-                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                        label="Mayo",
-                        method="relayout"
-                    ),
-                    dict(
-                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                        label="Junio",
-                        method="relayout"
-                    ),
-                    dict(
-                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                        label="Julio",
-                        method="relayout"
-                    ),
-                    dict(
-                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                        label="Agosto",
-                        method="relayout"
-                    ),
-                    dict(
-                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                        label="Septiembre",
-                        method="relayout"
-                    ),
-                    dict(
-                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                        label="Octubre",
-                        method="relayout"
-                    ),
-                    dict(
-                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                        label="Noviembre",
-                        method="relayout"
-                    ),
-                    dict(
-                        args=[{"yaxis.range": [min(y_axis), max(y_axis)/2]}],
-                        label="Diciembre",
+                        label="Mensual",
                         method="relayout"
                     ),
                 ],
