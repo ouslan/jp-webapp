@@ -13,7 +13,7 @@ class DAO:
         db_password = os.environ.get("POSTGRES_PASSWORD")
         db_name = os.environ.get("POSTGRES_DB")
         db_host = os.environ.get("POSTGRES_HOST")
-        db_port = os.environ.get("POSTGRES_PORT")
+        db_port = 5432
         self.conn2 = create_engine(
             f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
         )
