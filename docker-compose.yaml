@@ -28,7 +28,7 @@ services:
     container_name: web-docs
     restart: always
     ports:
-      - "8047:8000"
+      - "8005:8000"
     volumes:
       - ./:/docs
     stdin_open: true
@@ -53,7 +53,7 @@ services:
              python main.py &&
              python manage.py runserver 0.0.0.0:8000"
     ports: 
-      - 8000:8000
+      - 8057:8000
     networks:
       - timescale_network
     depends_on:
