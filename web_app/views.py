@@ -8,7 +8,6 @@ from src.dao.data_db_dao import DAO
 import os
 import plotly.graph_objects as go
 import plotly.express as px
-from src.data.proccess_date import trimestral, anual
 from src.visualization.indicadores import web_app_indicadores
 
 
