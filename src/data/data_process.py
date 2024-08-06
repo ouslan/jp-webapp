@@ -12,7 +12,7 @@ class DataProcess:
 
     def process_file(self, file_path: str):
         df = pl.read_csv(file_path)
-        column_name = file_path.split("/")[-1][:-4].strip()
+        column_name = file_path.split("/")[-1][:-4].strip().replace(",", "")
         empty_df = [
             pl.Series("date", [], dtype=pl.Datetime),
             pl.Series(column_name, [], dtype=pl.Float64)
@@ -21,7 +21,7 @@ class DataProcess:
         for column in df.columns:
             if column == "Meses":
                 continue
-            column_name = file_path.split("/")[-1][:-4].strip()
+            column_name = file_path.split("/")[-1][:-4].strip().replace(",", "")
             # Create a temporary DataFrame
             tmp = df
             tmp = tmp.rename({column:column_name})
