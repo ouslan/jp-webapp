@@ -200,16 +200,46 @@ def trimestral_demographic_graph():
     trimestral_demographic_graph_html = fig.to_html(full_html=False)
     return trimestral_demographic_graph_html
 
+def monthly_demographic_graph():
+    # Read the new CSV file
+    df = pd.read_csv("data/external/Mensual_Historico.csv")
+
+    # Extract column names
+    columns = df.columns
+    
+    # Ensure the year and quarter columns are of correct type
+    year= df[columns[0]].astype(str)
+    month = df[columns[1]].astype(str)
+
+    # Create a new column for the formatted x-axis
+    df['Year/Month'] = year + "M" + month
+    
+    # The new column is the x-axis
+    x_column = 'Year/Month'
+    
+    # The rest of the columns are y-axes
+    y_columns = columns[2:]
+
+    # Create the graph
+    fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Mensual', width=1500, height=750)
+    fig.show()
+    
+    # Convert the figure to HTML
+    monthly_demographic_graph_html = fig.to_html(full_html=False)
+    return monthly_demographic_graph_html
+
 
 
 def datos_demograficos(request):
     # Generate the annual demographic graph
     graph_html = demographic_graph()
     t_graph_html = trimestral_demographic_graph()
+    m_graph_html = monthly_demographic_graph()
 
     context = {
         "graph": graph_html,
-        "t_graph": t_graph_html
+        "t_graph": t_graph_html,
+        "m_graph": m_graph_html
     }
 
     return render(request, "demograficos.html", context)
