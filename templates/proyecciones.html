@@ -20,11 +20,8 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{% static 'home.css' %}" />
-        <link rel="stylesheet" href="{% static 'demografico.css' %}" />
+        <link rel="stylesheet" href="{% static 'proyecciones.css' %}" />
 		<link rel="stylesheet" href="{% static 'jquery-ui_1.10.2.css' %}" />
-
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
 
     <style type="text/css">
     .scrolloff iframe {
@@ -135,40 +132,41 @@
 
     <!-- MAIN CONTENT -->
     <main>
-
+        
         <!-- TITLE -->
         <section>
-            <h1>Datos Demográficos</h1>
+            <h1>Proyecciones Poblacionales</h1>
         </section>
 
         <!-- INTRODUCTION -->
         <section>
             <p>
-                Se proporcionan datos consolidados geográficamente que abarcan todo Puerto Rico, clasificados por regiones, 
-                áreas de salud, municipios de residencia y municipios de ocurrencia. En los documentos de 'Informe Anual Estadísticas Vitales' contienen variables socio-demográficas 
-                como edad, sexo, educación, estado jurídico, ocupación y estado civil anterior. También se incluyen datos médicos, 
-                clínicos y procesales específicos para cada evento. Los datos se presentan en números absolutos, porcentajes y tasas. 
-                La información reflejada fue conceguida por 89 tablas, 20 gráficas y 5 mapas, organizados en secciones que incluyen narrativa, resumen y estadísticas 
-                demográficas, datos poblacionales, nacimientos vivos, mortalidad general, mortalidad por causas externas, mortalidad infantil, 
-                mortalidad fetal, mortalidad materna, matrimonios, divorcios y expectativa de vida al nacer. Al final del informe se adjuntan 
-                copias de cada certificado para ilustrar la información recopilada.
-
-                Todos estos datos fueron utilizados para la creación de las gráficas presentadas en esta página.
+                Las proyecciones de población son una herramienta esencial para la planificación económica y 
+                social y la toma de decisiones en un país. Las proyecciones ayudan a preveer cambios 
+                en la demanda futura de servicios tales como agua, electricidad, vivienda, desperdicios 
+                sólidos, escuelas, servicios de salud y la fuerza de trabajo entre otros.
+            </p>
+            <p>
+                El método de componentes es el método más comunmente usado para
+                hacer proyecciones de poblaciónes grandes tales como todo un país o sus
+                regiones. Para este método se indica la trayectoria futura de la fecundidad,
+                mortalidad y migración neta por edad. Para las personas ya nacidas se sobrevive 
+                la población y se le agrega la migración neta para cada grupo de edad.
             </p>
         </section>
 
         <!-- SUBBODY 1 -->
         <section>
-            <h2> Documentos</h2>
+            <h2> Documentos </h2>
 
             <p>
-                <a href="https://estadisticas.pr/en/inventario-de-estadisticas/estadisticas-vitales" class="custom-link" role="link">Estadísticas Vitales</a>
+                <a href="https://jp.pr.gov/wp-content/uploads/2023/06/Proyecciones-de-Poblacion-por-Municipios-anos-2021-2030.pdf" class="custom-link" role="link">Proyecciones de Población para los Municipios de Puerto Rico 2020-2030</a>
                 <br>
-                <a href="https://www.bde.pr.gov/BDE/PRED.html" class="custom-link" role="link">Puerto Rico Economic Data</a>
+                <a href="https://jp.pr.gov/wp-content/uploads/2021/09/Metodologia-PR-2015-2027-feb-2017.pdf" class="custom-link" role="link">Metodología para las Proyecciones de Población de Puerto Rico 2015-2027 y resultados relevantes</a>
                 <br>
                 <a href="https://estadisticas.pr/en/inventario-de-estadisticas/informe-anual-estadisticas-vitales" class="custom-link" role="link">Informe Anual Estadísticas Vitales</a>
                 <br>
-                <a href="https://jp.pr.gov/centro-de-datos-macroeconomicos/" class="custom-link" role="link">Centro de Datos Macroeconómicos</a>
+                <a href="https://estadisticas.pr/en/inventario-de-estadisticas/estadisticas-vitales" class="custom-link" role="link">Estadísticas Vitales</a>
                 <br>
             </p>
 
@@ -185,31 +183,89 @@
             <br>
             <br>
 
+            <!-- GRAPH -->
+			<section>
+				<div class="container-time">
+					<select id="timeRange">
+						<option value="anual" class="active">Anual</option>
+						<!-- <option value="enero">Enero</option>
+						<option value="febrero">Febrero</option>
+						<option value="marzo">Marzo</option>
+						<option value="abril">Abril</option>
+						<option value="mayo">Mayo</option>
+						<option value="junio">Junio</option>
+						<option value="julio">Julio</option>
+						<option value="agosto">Agosto</option>
+						<option value="septiembre">Septiembre</option>
+						<option value="octubre">Octubre</option>
+						<option value="noviembre">Noviembre</option>
+						<option value="diciembre">Diciembre</option> -->
+					</select>
+				</div>
 
-            <!-- Demographic Graph -->
-            <h1>Graphs</h1>
-            <style>
-                .graph-container {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh; /* Optional: Adjust the height as needed */
-                }
-            </style>
-        </head>
-            <div class="graph-container">
-                {{ graph|safe }}
-            </div>
+				<div class="graph-container">
+					<select id="variableY">
+						<option value="indice_coincidente_jp" class="active">Índice coincidente (JP)</option>
+						<option value="indice_actividad_economica_bgf">Índice de actividad económica (BGF)</option>
+						<option value="indice_actividad_economica_eu">Índice de actividad económica (EU)</option>
+						<option value="empleo_total_ee">Empleo total EE (DT)</option>
+						<option value="indice_precios_dt">Índice de precios (DT)</option>
+						<option value="generacion_energia_electrica_aee">Generación de energía eléctrica (AEE)</option>
+						<option value="consumo_gasolina_daco">Consumo de gasolina (DACO)</option>
+						<option value="ventas_detalle_cce">Ventas al detalle (CCE)</option>
+						<option value="exportaciones_jp">Exportaciones (JP)</option>
+						<option value="importaciones_jp">Importaciones (JP)</option>
+						<option value="indice_coincidente_manufactura_jp">Índice coincidente de manufactura (JP)</option>
+						<option value="empleo_manufactura_dt">Empleo en manufactura (DT)</option>
+						<option value="nomina_manufactura_dt">Nómina en manufactura (DT)</option>
+						<option value="horas_trabajadas_manufactura_dt">Horas trabajadas en manufactura (DT)</option>
+						<option value="indice_coincidente_construccion_jp">Índice coincidente de construcción (JP)</option>
+						<option value="empleo_construccion_dt">Empleo en construcción (DT)</option>
+						<option value="produccion_cemento_bgf">Producción de cemento (BGF)</option>
+						<option value="ventas_cemento_bgf">Ventas de cemento (BGF)</option>
+						<option value="ventas_materiales_construccion_cce">Ventas de materiales de construcción (CCE)</option>
+						<option value="valor_permisos_construccion_jp">Valor de permisos de construcción (JP)</option>
+						<option value="indice_coincidente_turismo_jp">Índice coincidente de turismo (JP)</option>
+						<option value="empleo_turismo_dt">Empleo en turismo (DT)</option>
+						<option value="registro_hoteles_ct">Registro de hoteles (CT)</option>
+						<option value="registro_paradores_ct">Registro de paradores (CT)</option>
+					</select>
+					
+					{{ proyecciones|safe }}
+				</div>
 
-            <div class="graph-container">
-                {{ t_graph|safe }}
-            </div>
+				<div class="container-X">
+					<select id="variableX">
+						<option value="1_mes" class="active">(Por Mes)</option>
+						<option value="indice_coincidente_jp">Índice coincidente (JP)</option>
+						<option value="indice_actividad_economica_bgf">Índice de actividad económica (BGF)</option>
+						<option value="indice_actividad_economica_eu">Índice de actividad económica (EU)</option>
+						<option value="empleo_total_ee">Empleo total EE (DT)</option>
+						<option value="indice_precios_dt">Índice de precios (DT)</option>
+						<option value="generacion_energia_electrica_aee">Generación de energía eléctrica (AEE)</option>
+						<option value="consumo_gasolina_daco">Consumo de gasolina (DACO)</option>
+						<option value="ventas_detalle_cce">Ventas al detalle (CCE)</option>
+						<option value="exportaciones_jp">Exportaciones (JP)</option>
+						<option value="importaciones_jp">Importaciones (JP)</option>
+						<option value="indice_coincidente_manufactura_jp">Índice coincidente de manufactura (JP)</option>
+						<option value="empleo_manufactura_dt">Empleo en manufactura (DT)</option>
+						<option value="nomina_manufactura_dt">Nómina en manufactura (DT)</option>
+						<option value="horas_trabajadas_manufactura_dt">Horas trabajadas en manufactura (DT)</option>
+						<option value="indice_coincidente_construccion_jp">Índice coincidente de construcción (JP)</option>
+						<option value="empleo_construccion_dt">Empleo en construcción (DT)</option>
+						<option value="produccion_cemento_bgf">Producción de cemento (BGF)</option>
+						<option value="ventas_cemento_bgf">Ventas de cemento (BGF)</option>
+						<option value="ventas_materiales_construccion_cce">Ventas de materiales de construcción (CCE)</option>
+						<option value="valor_permisos_construccion_jp">Valor de permisos de construcción (JP)</option>
+						<option value="indice_coincidente_turismo_jp">Índice coincidente de turismo (JP)</option>
+						<option value="empleo_turismo_dt">Empleo en turismo (DT)</option>
+						<option value="registro_hoteles_ct">Registro de hoteles (CT)</option>
+						<option value="registro_paradores_ct">Registro de paradores (CT)</option>
+					</select>
+				</div>
+			</section>
 
-            <div class="graph-container">
-                {{ m_graph|safe }}
-            </div>
 
-        <body>
             <div class="sct-footer">
                 <div class="footer-top-bar">
                     <div class="content-block flex-hor-end-to-end w-container">
