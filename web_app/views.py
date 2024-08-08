@@ -277,7 +277,18 @@ def monthly_demographic_graph():
 
 
 def datos_demograficos(request):
-    return render(request, "demograficos.html")
+    # Generate the annual demographic graph
+    graph_html = demographic_graph()
+    t_graph_html = trimestral_demographic_graph()
+    m_graph_html = monthly_demographic_graph()
+
+    context = {
+        "graph": graph_html,
+        "t_graph": t_graph_html,
+        "m_graph": m_graph_html
+    }
+
+    return render(request, "demograficos.html", context)
 
 def ciclos_economicos(request):
     x = [
