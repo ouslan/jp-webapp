@@ -28,7 +28,7 @@ def web_app_indicadores(request):
     ))
 
     fig.update_layout(
-        margin=dict(l=30, r=30, t=25, b=25),
+        margin=dict(l=0, r=0, t=0, b=0),
         plot_bgcolor='#F7F7F7',
         hovermode='x',
         showlegend=False,
@@ -61,8 +61,6 @@ def web_app_indicadores(request):
                 color='black'
             ),
         ),
-        width=1200,
-        height=600
     )
 
     fig.update_layout(
