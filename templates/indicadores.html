@@ -4,15 +4,16 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        
         <title>Índice de Actividad Económica</title>
 
+        <!-- Favicons -->
         <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
-        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
-        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
-        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
-        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
+        <link rel="apple-touch-icon" href="{% static 'favicon-16x16.png' %}" />
+        <link rel="apple-touch-icon" href="{% static 'favicon-32x32.png' %}" />
+        <link rel="apple-touch-icon" href="{% static 'android-chrome-192x192.png' %}" />
+        <link rel="apple-touch-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
+        <!-- CSS -->
         <link rel="stylesheet" href="{% static 'indicadores.css' %}">
         <link rel="stylesheet" href="{% static 'website.css' %}">
     </head>
@@ -25,44 +26,38 @@
                 <span></span>
             </div>
             <ul class="burger_menu">
-                <a href='/'>Home</a>
-                <a href='/centro-de-datos-macroeconomicos/'>Centro De Datos Macroeconómicos</a>
-                <a href='/ciclos-economicos/'>Ciclos Económicos</a>
-                <a href='/indicadores-mensuales/'>Indicadores Mensuales</a>
-                <a href='/datos-demograficos/'>Datos Demográficos</a>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/centro-de-datos-macroeconomicos/">Centro de Datos Macroeconómicos</a></li>
+                <li><a href="/ciclos-economicos/">Ciclos Económicos</a></li>
+                <li><a href="/indicadores-mensuales/">Indicadores Mensuales</a></li>
+                <li><a href="/datos-demograficos/">Datos Demográficos</a></li>
             </ul>
 
-            <img src="{% static 'gobierno_de_puerto_rico.png' %}" alt="logo" id="logo" />
+            <img src="{% static 'gobierno_de_puerto_rico.png' %}" alt="Logo del Gobierno de Puerto Rico" id="logo" />
         </div>
 
         <main>
-            <!-- TITLE -->
-			<section>
-				<h1>Índicadores Económicos</h1>
-			</section>
+            <!-- Título -->
+            <section>
+                <h1>Indicadores Económicos</h1>
+            </section>
 
+            <!-- Descripción -->
             <section>
                 <p>
-                    Los Indicadores Económicos Seleccionados de Puerto Rico proporcionan una 
-                    visión integral del rendimiento económico de la isla, permitiendo a 
-                    analistas, inversionistas y formuladores de políticas evaluar y tomar 
-                    decisiones informadas. Estos indicadores abarcan diversos aspectos 
-                    clave de la economía, reflejando tanto la salud financiera como las 
-                    tendencias de crecimiento. La visión integral que ofrecen estos indicadores 
-                    es fundamental para comprender la complejidad y la dinámica de la economía puertorriqueña. 
-                    Desde la producción de bienes y servicios hasta el comportamiento de los 
-                    mercados laborales y los niveles de ingresos personales, estos indicadores 
-                    permiten una evaluación detallada de cómo se está desempeñando la economía 
-                    en diferentes frentes. En resumen, los Indicadores Económicos Seleccionados de 
-                    Puerto Rico son herramientas esenciales que ofrecen una comprensión profunda y multifacética 
-                    del estado y la evolución de la economía de la isla. Estos indicadores 
-                    no solo permiten la formulación de políticas económicas efectivas y la 
-                    planificación estratégica, sino que también facilitan la atracción de 
-                    inversiones y el desarrollo sostenible, contribuyendo significativamente 
-                    al bienestar y la prosperidad de los ciudadanos de Puerto Rico.
+                    Los Indicadores Económicos Seleccionados de Puerto Rico ofrecen una visión integral del 
+                    rendimiento económico de la isla, permitiendo a analistas, inversionistas y formuladores 
+                    de políticas tomar decisiones informadas. Estos indicadores abarcan diversos aspectos clave 
+                    de la economía, reflejando la salud financiera y las tendencias de crecimiento. Desde la 
+                    producción de bienes y servicios hasta el comportamiento de los mercados laborales y los niveles 
+                    de ingresos personales, estos indicadores permiten una evaluación detallada del desempeño económico 
+                    en diferentes frentes. Son herramientas esenciales para la formulación de políticas efectivas, 
+                    la planificación estratégica y la atracción de inversiones, contribuyendo al bienestar y la prosperidad 
+                    de los ciudadanos de Puerto Rico.
                 </p>
             </section>
 
+            <!-- Instrucciones para la gráfica interactiva -->
             <section>
                 <h2>Instrucciones para la Gráfica Interactiva</h2>
             </section>
@@ -72,16 +67,15 @@
                     <strong>1. Selección de Indicadores:</strong> 
                     Utiliza el menú desplegable en la parte superior izquierda 
                     de la gráfica para seleccionar diferentes indicadores económicos. 
-                    Cada opción del menú cambia los datos mostrados en el eje Y.
+                    Cada opción del menú modifica los datos mostrados en el eje Y.
                 </p>
 
                 <p>
                     <strong>2. Navegación y Visualización:</strong> 
                     Puedes mover el cursor sobre cualquier punto en la gráfica para 
-                    ver detalles específicos del dato en ese punto.
-
-                    La gráfica muestra las fechas en el eje X (horizontal) y los 
-                    valores del indicador seleccionado en el eje Y (vertical).
+                    ver detalles específicos del dato en ese punto. La gráfica muestra 
+                    las fechas en el eje X (horizontal) y los valores del indicador 
+                    seleccionado en el eje Y (vertical).
                 </p>
                 
                 <p>
@@ -90,32 +84,32 @@
                     Puedes elegir diferentes indicadores y ajustar la visualización según tus necesidades.
                 </p>
 
-                <p><strong>4. Ajuste del Rango del Eje Y</strong></p>
+                <p><strong>4. Ajuste del Rango del Eje X:</strong></p>
                 <ul>
                     <li>
-                        <strong>Anual:</strong> Selecciona esta opción para ver la gráfica con una escala del 
-                        eje Y ajustada para mostrar todos los datos disponibles a lo largo de los años.
+                        <strong>Anual:</strong> Selecciona esta opción para ver la gráfica con el eje X mostrando los datos por años completos.
                     </li>
                     <li>
-                        <strong>Enero - Diciembre:</strong> Elige el mes deseado para ajustar el rango del eje 
-                        Y a un rango que muestra solo la mitad superior de los datos para ese 
-                        mes específico. Esto te permite enfocarte en las variaciones dentro de
-                        cada mes a lo largo del año.
+                        <strong>Mensual:</strong> Elige esta opción para ajustar el eje X y ver la gráfica con datos segmentados por meses.
                     </li>
-
-                    <br>
+                    <li>
+                        <strong>Trimestral:</strong> Selecciona esta opción para ajustar el eje X y mostrar los datos segmentados por trimestres.
+                    </li>
                 </ul>
+
                 <p>
-                    <strong>Nota:</strong> Cada opción de mes ajusta el rango del eje Y para enfocarse en el 
-                    rango de datos correspondiente a ese mes específico, permitiendo una 
-                    visualización más detallada de las fluctuaciones dentro de cada periodo.
+                    <strong>Nota:</strong> Las opciones de ajuste del eje X permiten una visualización más detallada y específica según el intervalo de tiempo seleccionado, facilitando un análisis preciso de las tendencias económicas.
                 </p>
             </section>
 
+            <!-- Contenedor de la gráfica -->
             <div class="graph_container">
                 {{ indicadores|safe }}
             </div>
 
+        </main>
+
+        <!-- Scripts -->
         <script src="{% static 'indicadores.js' %}" defer></script>
         <script src="{% static 'header_menu.js' %}" defer></script>
     </body>
