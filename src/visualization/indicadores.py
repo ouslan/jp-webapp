@@ -9,13 +9,10 @@ def web_app_indicadores(request):
     df_quarterly = pd.read_csv("data/processed/quarterly_master.csv").sort_values(by="quarter")
     df_annual = pd.read_csv("data/processed/annual_master.csv").sort_values(by="year")
 
-    y_axis_monthly = df_monthly.columns[1:]
-    y_axis_quarterly = df_quarterly.columns[1:]
-    y_axis_annual = df_annual.columns[1:]
+    y_axis_options = df_monthly.columns[1:]
 
     x_axis = df_monthly["date"]
-    y_axis = df_monthly[y_axis_monthly[0]]
-    y_title = y_axis_monthly[0]
+    y_axis = df_monthly[y_axis_options[0]]
 
     fig = px.scatter(x=x_axis, y=y_axis)
     fig.add_trace(go.Scatter(
@@ -100,18 +97,18 @@ def web_app_indicadores(request):
             dict(
                 buttons=[
                     dict(
-                        args=[{"x": [df_monthly["date"]], "y": [df_monthly[y_axis_monthly[0]]]}],
+                        args=[{"x": [df_monthly["date"]], "y": [df_monthly[y_axis_options[0]]]}],
                         label="Monthly",
                         method="update",
-                        args2=[{"x": [df_quarterly["quarter"]], "y": [df_quarterly[y_axis_quarterly[0]]]}]
+                        args2=[{"x": [df_quarterly["quarter"]], "y": [df_quarterly[y_axis_options[0]]]}]
                     ),
                     dict(
-                        args=[{"x": [df_quarterly["quarter"]], "y": [df_quarterly[y_axis_quarterly[0]]]}],
+                        args=[{"x": [df_quarterly["quarter"]], "y": [df_quarterly[y_axis_options[0]]]}],
                         label="Quarterly",
                         method="update"
                     ),
                     dict(
-                        args=[{"x": [df_annual["year"]], "y": [df_annual[y_axis_annual[0]]]}],
+                        args=[{"x": [df_annual["year"]], "y": [df_annual[y_axis_options[0]]]}],
                         label="Annual",
                         method="update"
                     ),
@@ -130,19 +127,19 @@ def web_app_indicadores(request):
                         args=[{"y": [df_monthly[col]]}],
                         label=col,
                         method="update"
-                    ) for col in y_axis_monthly
+                    ) for col in y_axis_options
                 ] + [
                     dict(
                         args=[{"y": [df_quarterly[col]]}],
                         label=col,
                         method="update"
-                    ) for col in y_axis_quarterly
+                    ) for col in y_axis_options
                 ] + [
                     dict(
                         args=[{"y": [df_annual[col]]}],
                         label=col,
                         method="update"
-                    ) for col in y_axis_annual
+                    ) for col in y_axis_options
                 ],
                 direction="down",
                 pad={"r": 10, "t": 10},
