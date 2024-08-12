@@ -53,7 +53,7 @@ services:
              python main.py &&
              python manage.py runserver 0.0.0.0:8000"
     ports: 
-      - 8000:8000
+      - 8057:8000
     networks:
       - timescale_network
     depends_on:
