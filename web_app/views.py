@@ -368,3 +368,7 @@ def Forms(request):
 
 def JP_544_1(request):
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-1.html")
+
+
+def JP_362_qrt(request):
+    return render(request, "forms/quaterly/balanza_de_pagos/JP-362-qrt.html")
