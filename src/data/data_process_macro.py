@@ -6,8 +6,8 @@ def process_file(file_path: str):
     df.columns = [col.strip().replace(',', "").replace('$', '').replace(" )", ")").replace("  ", " ").replace("( ", " (").replace('"', '').replace(' ', '') for col in df.columns]
 
     df = df.with_columns([
-        pl.when(pl.col(col).str.contains('"') | pl.col(col).str.contains(' ') | pl.col(col).str.contains('()') )
-        .then(pl.col(col).str.replace(',', '').str.replace(' ', '').replace("(", "").replace(")", ""))
+        pl.when(pl.col(col).str.contains(' ') | pl.col(col).str.contains('()') | pl.col(col).str.contains('n/d') | pl.col(col).str.contains('no disponible'))
+        .then(pl.col(col).str.replace(',', '').str.replace(' ', '').replace("(", "").replace(")", "").replace("n/d", None).replace("no disponible", None))
         .otherwise(pl.col(col))
         .alias(col)
         for col in df.columns
