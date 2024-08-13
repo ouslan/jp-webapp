@@ -7,7 +7,7 @@ def main() -> None:
     
     DataProcessByDate("data/processed/master.csv", "data/processed/")
     
-    DataProcessHistoricalSeries("data/raw/Series-historicas-1950-2011.csv", "data/processed/")
+    DataProcessHistoricalSeries("data/raw/Series-historicas-1950-2011.csv", "data/raw/Series-Historicas-Seleccionadas-2001-2023.csv", "data/processed/")
 
 if __name__ == "__main__":
     main()
