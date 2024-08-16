@@ -58,16 +58,55 @@
 
             </section>
 
+            <!-- Instrucciones para la gráfica interactiva -->
             <section>
-                <h2>Gráficas</h2>
+                <h2>Instrucciones para la Gráfica Interactiva</h2>
+            </section>
+            
+            <section class="instructions">
+                <p>
+                    <strong>1. Selección de Datos Macroeconómicos:</strong> 
+                    Utiliza el menú desplegable en la parte superior 
+                    de la gráfica para seleccionar diferentes datos macroeconómicos. 
+                    Cada opción del menú modifica los datos mostrados en el eje Y.
+                    Para desplazar el menú desplegable hacia arriba o hacia abajo, utiliza 
+                    la barra de desplazamiento ubicada en el lado derecho del menú.
+                </p>
+
+                <p>
+                    <strong>2. Navegación y Visualización:</strong> 
+                    Puedes mover el cursor sobre cualquier punto en la gráfica para 
+                    ver detalles específicos del dato en ese punto. La gráfica muestra 
+                    las fechas en el eje X (horizontal) y los valores de los datos macroeconómicos 
+                    seleccionado en el eje Y (vertical).
+                </p>
+                
+                <p>
+                    <strong>3. Personalización de la Gráfica:</strong>
+                    Los botones en la parte superior permiten personalizar la gráfica. 
+                    Puedes elegir diferentes datos macroeconómicos y ajustar la visualización según tus necesidades.
+                </p>
+            </section>
+            
+            <!-- ----------------- FIRST GRAPH ----------------- -->
+            <section id="graph_title">
+                <h2>Series Históricas 1950-2011</h2>
             </section>
 
-            <!-- ----------------- FIRST GRAPH ----------------- -->
             <div class="graph-container">
                 {{ macro2|safe }}
             </div>
 
+            <br>
+            <br>
+            <br>
+
+
             <!-- ----------------- SECOND GRAPH ----------------- -->
+            <section id="graph_title">
+                <h2>Series Históricas 2001-2023</h2>
+            </section>
+
             <div class="graph-container">
                 {{ macro1|safe }}
             </div>

@@ -63,7 +63,7 @@ def web_app_macro(request):
     fig1.update_layout(
         annotations=[
             dict(
-                x=0.30,
+                x=0.01,
                 y=1.11,
                 xref='paper',
                 yref='paper',
@@ -90,7 +90,7 @@ def web_app_macro(request):
                 direction="down",
                 pad={"r": 10, "t": 10},
                 showactive=True,
-                x=0.35,
+                x=0.07,
                 xanchor="left",
                 y=1.15,
                 yanchor="top"
@@ -156,7 +156,7 @@ def web_app_macro(request):
     fig2.update_layout(
         annotations=[
             dict(
-                x=0.30,
+                x=0.01,
                 y=1.11,
                 xref='paper',
                 yref='paper',
@@ -183,7 +183,7 @@ def web_app_macro(request):
                 direction="down",
                 pad={"r": 10, "t": 10},
                 showactive=True,
-                x=0.35,
+                x=0.07,
                 xanchor="left",
                 y=1.15,
                 yanchor="top"
