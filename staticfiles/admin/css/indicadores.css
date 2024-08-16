@@ -2,37 +2,43 @@ body, header {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
+}
+
+main {
+  max-width: 100%;
+  width: 1500px;
+  margin: 0 auto;
 }
 
 h1 {
   font-size: 3em;
   margin-top: 4vw;
-  margin-left: 8vw;
-  margin-right: 8vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
 }
 
 h2 {
   font-size: 1.8em;
   margin-top: 4vw;
-  margin-left: 8vw;
-  margin-right: 8vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
 }
 
 h3 {
   font-size: 1.3em;
   font-weight: none;
   margin-top: 2vw;
-  margin-left: 10vw;
-  margin-right: 8vw;
+  margin-left: 5vw;
+  margin-right: 3vw;
 }
 
 p {
   display: block;
   font-size: 1.2em;
   text-align: justify;
-  margin-left: 8vw;
-  margin-right: 8vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
   line-height: 1.5;
 }
 
@@ -95,9 +101,13 @@ option {
   position: relative;
 }
 
-.graph_container {
-  width: 88vw;
-  margin-left: 60px;
+.graph-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    width: 96%;
+    margin-left: 75vw;
 }
 
 .instructions {

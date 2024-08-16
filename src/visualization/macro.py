@@ -57,7 +57,7 @@ def web_app_macro(request):
                 color='black'
             ),
         ),
-        width=1370
+        width=1380,
     )
 
     fig1.update_layout(

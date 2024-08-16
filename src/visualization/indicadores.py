@@ -58,6 +58,7 @@ def web_app_indicadores(request):
                 color='black'
             ),
         ),
+        width=1380,
     )
 
     fig.update_layout(

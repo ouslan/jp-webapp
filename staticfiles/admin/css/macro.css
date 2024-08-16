@@ -1,43 +1,58 @@
+body, header {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    margin-bottom: 0px;
+}
+
+main {
+    max-width: 100%;
+    width: 1500px;
+    margin: 0 auto;
+}
+
 h1 {
     font-size: 3em;
     margin-top: 4vw;
-    margin-left: 4vw;
-    margin-right: 4vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-top: 4vw;
-    margin-left: 4vw;
-    margin-right: 4vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: none;
+    margin-top: 2vw;
+    margin-left: 5vw;
+    margin-right: 3vw;
 }
 
 p {
     display: block;
-    font-size: 18px;
+    font-size: 1.2em;
     text-align: justify;
-    margin-left: 4vw;
-    margin-right: 4vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
     line-height: 1.5;
+}
+
+a {
+    font-size: 1.2em;
 }
 
 .block {
     justify-content: center;
 }
 
-
-
-main {
-    max-width: 100%;
-    width: 1500px;
-    margin: 0 auto;
-
-}
-
 #header-image {
     width: 100vw;
     height: auto;
-
 }
 
 .graph-container {
