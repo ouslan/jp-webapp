@@ -17,7 +17,7 @@ class DataProcessHistoricalSeries:
     
     
     def process_data1(self, folder_path: str):
-        df1 = pl.read_csv(folder_path)
+        df1 = pl.read_parquet(folder_path)
         
         df1.columns = [col.strip().replace(',', "").replace('$', '').replace(" )", ")").replace("  ", " ").replace("    ", " ").replace("( ", " (").replace('"', '').upper() for col in df1.columns]
 
@@ -46,5 +46,5 @@ class DataProcessHistoricalSeries:
         
         return df2
 
-        
+    
 
