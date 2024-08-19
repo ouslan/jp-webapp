@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
     <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
-    <link rel="stylesheet" href="{% static 'forms/balanza_de_pagos/JP-361.css' %}" />
+    <link rel="stylesheet" href="{% static 'forms/balanza_de_pagos/JP-361-qrt.css' %}" />
     <link rel="stylesheet" href="{% static 'website.css' %}" />
 
 </head>
@@ -41,156 +41,135 @@
                 <table>
                     <tr>
                         <th colspan="2">Part I  : Income and Expenses</th>
-                        <th><input type="number" name="income_expenses_year_1" min="1000" max="9999" placeholder="Year" required></th>
-                        <th><input type="number" name="income_expenses_year_2" min="1000" max="9999" placeholder="Year" required></th>
+                        <th id="center_dropdown"><input type="number" name="income_expenses_year_1" min="1000" max="9999" placeholder="Year" required> &emsp;<br>
+                            <select name="dropdown_fiscal_year">
+                                <option value="">Select an option</option>
+                                <option value="Q1-(Jan-Mar)">Q1-(Jan-Mar)</option>
+                                <option value="Q2-(Apr-Jun)">Q2-(Apr-Jun)</option>
+                                <option value="Q3-(Jul-Sep)">Q3-(Jul-Sep)</option>
+                                <option value="Q4-(Oct-Dec)">Q4-(Oct-Dec)</option>
+                            </th>
                         
                     </tr>
                     
                     <tr>
                         <td colspan="2"><strong>A. Income</strong></td>
                         <td></td>
-                        <td></td>
                     </tr>
                     
                     <tr>
-                        <td colspan="2">&emsp;1.Premiums earned</td>
-                        <td></td>
+                        <td colspan="2">&emsp;1. Premiums earned</td>
                         <td></td>
                     </tr>
 
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;a) Life</td>
                         <td><input type="number" id="input" name="income_life_1" placeholder="$" required></td>
-                        <td><input type="number" id="input" name="income_life_2" placeholder="$" required></td>
                     </tr>
 
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;b) Disability</td>
                         <td><input type="number" name="income_disability_1" placeholder="$" required></td>
-                        <td><input type="number" name="income_disability_2" placeholder="$" required></td>
                     </tr>
 
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;c) Auto</td>
                         <td><input type="number" name="income_auto_1" placeholder="$" required></td>
-                        <td><input type="number" name="income_auto_2" placeholder="$" required></td>
                     </tr>
 
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;d) Other</td>
                         <td><input type="number" name="income_other_1" placeholder="$" required></td>
-                        <td><input type="number" name="income_other_2" placeholder="$" required></td>
                     </tr>
                     
                     <tr>
                         <td colspan="2">&emsp;2. Interest</td>
                         <td><input type="number" name="income_interest_1" placeholder="$" required></td>
-                        <td><input type="number" name="income_interest_2" placeholder="$" required></td>
                     </tr>
 
                     <tr>
                         <td colspan="2">&emsp;3. Rent of land and building</td>
                         <td><input type="number" name="income_rent_1" placeholder="$" required></td>
-                        <td><input type="number" name="income_rent_2" placeholder="$" required></td>
                     </tr>
 
                     <tr>
                         <td colspan="2">&emsp;4. Other</td>
                         <td><input type="number" name="income_other_2_1" placeholder="$" required></td>
-                        <td><input type="number" name="income_other_2_2" placeholder="$" required></td>
                     </tr>
                     
                     <tr>
                         <td colspan="2"><strong>Total income</strong></td>
                         <td><input type="number" name="total_income_1" placeholder="$" required></td>
-                        <td><input type="number" name="total_income_2" placeholder="$" required></td>
                     </tr>
                     
                     <tr>
                         <td colspan="2"><strong>B. Expenses</strong></td>
-                        <td></td>
                         <td></td>
                     </tr>
                     
                     <tr>
                         <td colspan="2">&emsp;1. Benefits paid</td>
                         <td></td>
-                        <td></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;a) Life</td>
                         <td><input type="number" name="expenses_life_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_life_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;b) Disability</td>
                         <td><input type="number" name="expenses_disability_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_disability_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;c) Auto</td>
                         <td><input type="number" name="expenses_auto_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_auto_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;d) Other</td>
                         <td><input type="number" name="expenses_other_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_other_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;2. Salaries</td>
                         <td><input type="number" name="expenses_salaries_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_salaries_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;3. Interest</td>
                         <td><input type="number" name="expenses_interes_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_interes_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;4. Rent of land and building</td>
                         <td><input type="number" name="expenses_rent_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_rent_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;5. Depreciation</td>
                         <td><input type="number" name="expenses_depreciation_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_depreciation_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;6. Donations</td>
                         <td><input type="number" name="expenses_donations_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_donations_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;7. Commissions</td>
                         <td><input type="number" name="expenses_commissions_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_commissions_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;a) To employees</td>
                         <td><input type="number" name="expenses_employees_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_employees_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;&emsp;&emsp;b) To local brokers</td>
                         <td><input type="number" name="expenses_brokers_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_brokers_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">&emsp;8. Other operational expenses</td>
                         <td><input type="number" name="expenses_other_operational_1" placeholder="$" required></td>
-                        <td><input type="number" name="expenses_other_operational_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2"><strong>Total expenses</strong></td>
                         <td><input type="number" name="total_expenses_1" placeholder="$" required></td>
-                        <td><input type="number" name="total_expenses_2" placeholder="$" required></td>
                     </tr>
                     <tr>
                         <td colspan="2"><strong>Net profit or loss</strong></td>
                         <td><input type="number" name="net_profit_1" placeholder="$" required></td>
-                        <td><input type="number" name="net_profit_2" placeholder="$" required></td>
                     </tr>
                 </table>
             </div>

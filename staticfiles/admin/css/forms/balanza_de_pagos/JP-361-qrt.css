@@ -11,6 +11,10 @@ th, td {
     width: 50px;
 }
 
+#center_dropdown {
+    text-align: center;
+}
+
 th {
     background-color: #f2f2f2;
 }
