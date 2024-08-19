@@ -5,7 +5,7 @@ from src.data.data_process_macro import DataProcessHistoricalSeries
 def main() -> None:
     DataProcess("data/external/INDICADORES ECÓNOMICOS/", "data/processed/")
     
-    DataProcessByDate("data/processed/master.csv", "data/processed/")
+    DataProcessByDate("data/processed/Indicadores_Economicos.parquet", "data/processed/")
     
     DataProcessHistoricalSeries("data/raw/Series-Historicas-1950-2011.parquet", "data/raw/Series-Historicas-2001-2023.parquet", "data/processed/")
 

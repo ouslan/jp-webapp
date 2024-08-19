@@ -7,7 +7,7 @@ import plotly.express as px
 def web_app_macro(request):
   
     # FIRST GRAPH DATA 
-    df1 = pd.read_csv("data/processed/Series-Historicas-2001-2023_processes.csv").sort_values(by="PERIODO = AÑO FISCAL")
+    df1 = pd.read_parquet("data/processed/Series-Historicas-2001-2023_processes.parquet").sort_values(by="PERIODO = AÑO FISCAL")
     y_axis_options_1 = df1.columns[1:]
     x_axis_1 = df1["PERIODO = AÑO FISCAL"]
     y_axis_1 = df1[y_axis_options_1[0]]
@@ -100,7 +100,7 @@ def web_app_macro(request):
     # --------------------------------------------------------------------------------------------------------------------------------
     
     # SECOND GRAPH DATA
-    df2 = pd.read_csv("data/processed/Series-Historicas-1950-2011_processes.csv").sort_values(by="PERIODO = AÑO FISCAL")
+    df2 = pd.read_parquet("data/processed/Series-Historicas-1950-2011_processes.parquet").sort_values(by="PERIODO = AÑO FISCAL")
     y_axis_options_2 = df2.columns[1:]
     x_axis_2 = df2["PERIODO = AÑO FISCAL"]
     y_axis_2 = df2[y_axis_options_2[0]]

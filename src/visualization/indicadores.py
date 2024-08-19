@@ -5,9 +5,9 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 def web_app_indicadores(request):
-    df_monthly = pd.read_csv("data/processed/master.csv").sort_values(by="date")
-    df_quarterly = pd.read_csv("data/processed/quarterly_master.csv").sort_values(by="quarter")
-    df_annual = pd.read_csv("data/processed/annual_master.csv").sort_values(by="year")
+    df_monthly = pd.read_parquet("data/processed/Indicadores_Economicos.parquet").sort_values(by="date")
+    df_quarterly = pd.read_parquet("data/processed/Indicadores_Trimestrales.parquet").sort_values(by="quarter")
+    df_annual = pd.read_parquet("data/processed/Indicadores_Anuales.parquet").sort_values(by="year")
 
     y_axis_options = df_monthly.columns[1:]
 

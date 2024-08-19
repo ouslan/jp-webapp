@@ -10,10 +10,10 @@ class DataProcessHistoricalSeries:
         self.debug = debug
         
         self.df1 = self.process_data1(self.folder_path_1)
-        self.df1.write_csv(f"{self.saving_path}Series-Historicas-1950-2011_processes.csv")   
+        self.df1.write_parquet(f"{self.saving_path}Series-Historicas-1950-2011_processes.parquet")   
         
         self.df2 = self.process_data2(self.folder_path_2)
-        self.df2.write_csv(f"{self.saving_path}Series-Historicas-2001-2023_processes.csv")  
+        self.df2.write_parquet(f"{self.saving_path}Series-Historicas-2001-2023_processes.parquet")  
     
     
     def process_data1(self, folder_path: str):
