@@ -9,3 +9,5 @@ python-dotenv==1.0.1
 sqlalchemy==2.0.31
 polars==1.2.1
 pyarrow==17.0.0
+#Added Requests i think this is the correct version????
+#requests==2.27.1
