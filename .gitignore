@@ -166,11 +166,14 @@ data/processed/*
 data/cuestionarios/*
 !data/external/ForecastAnual.parquet
 !data/external/ForecastTrimestral.parquet
-!data/raw/Series-historicas-1950-2011.parquet
+!data/raw/Series-Historicas-1950-2011.parquet
 !data/raw/Series-Historicas-2001-2023.parquet
 
 # ignore mac files
 *.DS_Store
 
+# ignore quarter files 
+notebooks/*
+!notebooks/*.qmd
 # vscode
 .vscode
