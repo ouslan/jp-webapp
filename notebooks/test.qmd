@@ -16,8 +16,8 @@ import pandas as pd
 ```
 
 ```{python}
-df = pd.read_parquet("data/processed/Series-Historicas-1950-2011_processes.parquet")
-df.astype(float)
+df = pl.read_parquet("data/processed/Series-Historicas-1950-2011_processes.parquet")
+df["VENTAS NETAS AL RESTO DEL MUNDO (MILLONES)"]
 
 
 
