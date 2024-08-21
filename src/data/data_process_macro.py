@@ -21,10 +21,10 @@ class DataProcessHistoricalSeries:
         df1.columns = [col.strip().replace(',', "").replace('$', '').replace(" )", ")").replace("  ", " ").replace("    ", " ").replace("( ", " (").replace('"', '').upper() for col in df1.columns]
 
         df1 = df1.with_columns([
-            pl.when(pl.col(col).str.contains(' ') | pl.col(col).str.contains('()') | pl.col(col).str.contains('n/d') | pl.col(col).str.contains('no disponible'))
-            .then(pl.col(col).str.replace(',', '').str.replace(' ', '').replace("(", "").replace(")", "").replace("n/d", None).replace("no disponible", None).cast(pl.Float64))
-            .otherwise(pl.col(col))
-            .alias(col)
+            pl.when(pl.col(col).str.contains(' ') | pl.col(col).str.contains('(') | pl.col(col).str.contains('n/d') | pl.col(col).str.contains('no disponible'))
+              .then(pl.col(col).str.replace(',', '').str.replace(' ', '').replace("(", "-").replace(")", "").replace("n/d", None).replace("no disponible", None).cast(pl.Float64))
+              .otherwise(pl.col(col))
+              .alias(col)
             for col in df1.columns
         ])
 
