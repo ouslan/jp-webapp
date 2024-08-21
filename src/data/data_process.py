@@ -8,7 +8,7 @@ class DataProcess:
         self.saving_path = saving_path
         self.debug = debug
         self.df = self.process_data(self.folder_path)
-        self.df.write_parquet(f"{self.saving_path}Indicadores_Economicos.parquet")
+        self.df.write_parquet(f"{self.saving_path}indicadores_economicos.parquet")
 
     def process_file(self, file_path: str):
         df = pl.read_parquet(file_path)
@@ -55,15 +55,15 @@ class DataProcess:
                             pl.lit(int(column)).cast(pl.Int64).alias("year"),
                             pl.col(column_name).cast(pl.Float64).alias(column_name)
             )
-            
+
             tmp = tmp.with_columns((pl.col("year").cast(pl.String) + "-" + pl.col("month").cast(pl.String) + "-01").alias("date"))
             tmp = tmp.select(pl.col("date").str.to_datetime("%Y-%m-%d").alias("date"),
                              pl.col(column_name).alias(column_name))
-            
+
             # Append the temporary DataFrame to the list
             clean_df = pl.concat([clean_df, tmp], how="vertical")
-        
-        
+
+
         return clean_df
 
     def process_data(self, folder_path: str): 

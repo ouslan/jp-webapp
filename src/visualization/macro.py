@@ -7,7 +7,7 @@ import plotly.express as px
 def web_app_macro(request):
   
     # FIRST GRAPH DATA 
-    df1 = pd.read_parquet("data/processed/Series-Historicas-2001-2023_processed.parquet").sort_values(by="PERIODO = AÑO FISCAL").reset_index()
+    df1 = pd.read_parquet("data/processed/series-historicas-2001-2023_processed.parquet").sort_values(by="PERIODO = AÑO FISCAL").reset_index()
     for i in df1.columns:
         df1[i] = df1[i].astype(float)
         

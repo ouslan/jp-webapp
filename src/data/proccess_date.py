@@ -10,10 +10,10 @@ class DataProcessByDate:
     self.df = pd.read_parquet(self.parquet_path)
     
     self.quarterly_df = self.to_quarterly(self.df)
-    self.quarterly_df.to_parquet(f"{self.saving_path}Indicadores_Trimestrales.parquet")
+    self.quarterly_df.to_parquet(f"{self.saving_path}indicadores_trimestrales.parquet")
     
     self.annual_df = self.to_annual(self.df)
-    self.annual_df.to_parquet(f"{self.saving_path}Indicadores_Anuales.parquet")
+    self.annual_df.to_parquet(f"{self.saving_path}indicadores_anuales.parquet")
     
   def to_quarterly(self, df):
     df["date"] = pd.to_datetime(df["date"])

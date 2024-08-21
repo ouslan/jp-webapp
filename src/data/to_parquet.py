@@ -9,7 +9,7 @@ def to_parquet_file(file_path: str, saving_path: str):
 if __name__ == "__main__":
     to_parquet_file("data/external/ForecastAnual.csv", "data/external/")
     to_parquet_file("data/external/ForecastTrimestral.csv", "data/external/")
-    
+
     for dir_name in os.listdir("data/external/INDICADORES ECÓNOMICOS"):
         dir_path = os.path.join("data/external/INDICADORES ECÓNOMICOS", dir_name)
         if os.path.isdir(dir_path):
@@ -17,4 +17,4 @@ if __name__ == "__main__":
                 if file.endswith(".csv"):
                     file_path = os.path.join(dir_path, file)
                     to_parquet_file(file_path, dir_path)
-                    
+
