@@ -3,7 +3,7 @@ from src.data.proccess_date import DataProcessByDate
 from src.data.data_process_macro import DataProcessHistoricalSeries
 
 def main() -> None:
-    DataProcess("data/external/INDICADORES ECÓNOMICOS/", "data/processed/")
+    DataProcess("data/IndicadoresEconomicos/", "data/processed/")
     
     DataProcessByDate("data/processed/Indicadores_Economicos.parquet", "data/processed/")
     

@@ -5,11 +5,20 @@ import plotly.graph_objects as go
 import plotly.express as px
 
 def web_app_indicadores(request):
-    df_monthly = pd.read_parquet("data/processed/Indicadores_Economicos.parquet").sort_values(by="date")
-    df_quarterly = pd.read_parquet("data/processed/Indicadores_Trimestrales.parquet").sort_values(by="quarter")
-    df_annual = pd.read_parquet("data/processed/Indicadores_Anuales.parquet").sort_values(by="year")
+    df_monthly = pd.read_parquet("data/processed/Indicadores_Economicos.parquet").sort_values(by="date").reset_index()
+    df_quarterly = pd.read_parquet("data/processed/Indicadores_Trimestrales.parquet").sort_values(by="quarter").reset_index()
+    df_annual = pd.read_parquet("data/processed/Indicadores_Anuales.parquet").sort_values(by="year").reset_index()
+    
+    df_monthly["date"] = df_monthly["date"].astype(str)
+    df_quarterly["quarter"] = df_quarterly["quarter"].astype(str)
+    df_annual["year"] = df_annual["year"].astype(str)
+    
+    df_monthly.columns = df_monthly.columns.str.replace('.par$', '', regex=True)
+    df_quarterly.columns = df_quarterly.columns.str.replace('.par$', '', regex=True)
+    df_annual.columns = df_annual.columns.str.replace('.par$', '', regex=True)
 
-    y_axis_options = df_monthly.columns[1:]
+
+    y_axis_options = df_monthly.columns[2:].sort_values()
 
     x_axis = df_monthly["date"]
     y_axis = df_monthly[y_axis_options[0]]

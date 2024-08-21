@@ -20,7 +20,7 @@ class DataProcessByDate:
     df2 = df.copy()
     
     df2["quarter"] = df2["date"].dt.to_period("Q")
-    df2 = df2.groupby("quarter").agg("mean").round(2)
+    df2 = df2.groupby("quarter").agg("mean").round(2).reset_index()
     
     return df2
 
@@ -30,7 +30,7 @@ class DataProcessByDate:
     df3 = df.copy()
     
     df3["year"] = df3["date"].dt.to_period("Y")
-    df3 = df3.groupby("year").agg("mean").round(2)
+    df3 = df3.groupby("year").agg("mean").round(2).reset_index()
 
     return df3
 
