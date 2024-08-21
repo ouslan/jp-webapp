@@ -12,11 +12,6 @@ def web_app_indicadores(request):
     df_monthly["date"] = df_monthly["date"].astype(str)
     df_quarterly["quarter"] = df_quarterly["quarter"].astype(str)
     df_annual["year"] = df_annual["year"].astype(str)
-    
-    df_monthly.columns = df_monthly.columns.str.replace('.par$', '', regex=True)
-    df_quarterly.columns = df_quarterly.columns.str.replace('.par$', '', regex=True)
-    df_annual.columns = df_annual.columns.str.replace('.par$', '', regex=True)
-
 
     y_axis_options = df_monthly.columns[2:].sort_values()
 
