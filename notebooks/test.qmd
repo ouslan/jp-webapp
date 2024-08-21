@@ -16,6 +16,9 @@ import pandas as pd
 ```
 
 ```{python}
-pd.read_parquet("data/processed/Indicadores_Anuales.parquet")
+df = pd.read_parquet("data/processed/Series-Historicas-1950-2011_processes.parquet")
+df.astype(float)
+
+
 
 ```
