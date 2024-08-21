@@ -8,11 +8,11 @@ class DataProcess:
         self.saving_path = saving_path
         self.debug = debug
         self.df = self.process_data(self.folder_path)
-        self.df.write_csv(f"{self.saving_path}master.csv")
+        self.df.write_parquet(f"{self.saving_path}Indicadores_Economicos.parquet")
 
     def process_file(self, file_path: str):
-        df = pl.read_csv(file_path)
-        column_name = file_path.split("/")[-1][:-4].strip().replace(",", "")
+        df = pl.read_parquet(file_path)
+        column_name = file_path.split("/")[-1][:-8].strip().replace(",", "")
         empty_df = [
             pl.Series("date", [], dtype=pl.Datetime),
             pl.Series(column_name, [], dtype=pl.Float64)
@@ -21,7 +21,7 @@ class DataProcess:
         for column in df.columns:
             if column == "Meses":
                 continue
-            column_name = file_path.split("/")[-1][:-4].strip().replace(",", "")
+            column_name = file_path.split("/")[-1][:-8].strip().replace(",", "")
             # Create a temporary DataFrame
             tmp = df
             tmp = tmp.rename({column:column_name})
@@ -69,7 +69,7 @@ class DataProcess:
     def process_data(self, folder_path: str): 
         for dirt in os.listdir(folder_path):
             for file in os.listdir(f"{folder_path}{dirt}"):
-                if file.endswith(".csv"):
+                if file.endswith(".parquet"):
                     df = self.process_file(f"{folder_path}{dirt}/{file}")
                 try:
                     master_df = master_df.join(df, on=["date"], how="outer_coalesce")
