@@ -59,6 +59,9 @@ from src.formularios.form_jp_547 import JP_547
 def home(request):
     return render(request, "home.html")
 
+def proyectos(request):
+    return render(request, "proyectos.html")
+
 def proyecciones_poblacionales(request):
     x = [
         2000,
