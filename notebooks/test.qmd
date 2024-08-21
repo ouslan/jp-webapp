@@ -16,9 +16,9 @@ import pandas as pd
 ```
 
 ```{python}
-df = pl.read_parquet("data/processed/Series-Historicas-1950-2011_processes.parquet")
-df["VENTAS NETAS AL RESTO DEL MUNDO (MILLONES)"]
+df = pd.read_parquet("data/processed/Series-Historicas-2001-2023_processed.parquet")
+for i in df.columns:
+  df[i] = df[i].astype(float)
 
-
-
+df["INDICE PRECIO AL CONSUMIDOR (67=100)"]
 ```

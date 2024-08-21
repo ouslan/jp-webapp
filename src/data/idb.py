@@ -133,7 +133,3 @@ def DataProcessIDB():
     f_m.to_parquet("data/processed/monthly_idb.parquet", index=False)
     f_q.to_parquet("data/processed/quarterly_idb.parquet", index=False)
     f_fy.to_parquet("data/processed/iscal_year_idb.parquet", index=False)
-
-
-if __name__ == "__main__":
-    main()
