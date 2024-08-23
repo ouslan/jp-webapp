@@ -57,7 +57,9 @@ urlpatterns = [
     re_path(r"^IP-720-alojamiento-y-servicio-de-comida/$", views.IP_720, name="IP-720"),
     re_path(r"^IP-810-otros-servicios/$", views.IP_810, name="IP-810"),
     re_path(r"^JP-547-agencies-transactions/$", views.JP_547, name="JP-547"),
-    re_path(r"^Forms/$", views.Forms, name="Forms"),
+    re_path(r"^Forms/$", views.Forms, name="Forms"),     # Asegura los path que estén bien cuando añadas otro
     re_path(r"^JP-361-transactions-in-pr-of-external-insurance-companies-qrt/$", views.JP_361_qrt, name="JP-361-qrt"),
+    re_path(r"^JP-362-transacciones-con-el-exterior-para-la-balanza-de-Puerto-Rico-qtr/$", views.JP_362_qtr, name="JP-362-qtr"),
+    
 ]
 
