@@ -55,6 +55,7 @@ from src.formularios.form_ip_540a import IP_540a
 from src.formularios.form_ip_720 import IP_720
 from src.formularios.form_ip_810 import IP_810
 from src.formularios.form_jp_547 import JP_547
+from src.formularios.quaterly.form_jp_361_qrt import JP_361_qrt
 
 
 def home(request):
@@ -368,7 +369,3 @@ def Forms(request):
 
 def JP_544_1(request):
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-1.html")
-
-
-def JP_361_qrt(request):
-    return render(request, "forms/quaterly/balanza_de_pagos/JP-361-qrt.html")
