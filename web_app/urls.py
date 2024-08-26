@@ -64,6 +64,7 @@ urlpatterns = [
     re_path(r"^JP-362-transacciones-con-el-exterior-para-la-balanza-de-Puerto-Rico-qtr/$", views.JP_362_qtr, name="JP-362-qtr"),
     re_path(r"^JP-363-investment-in-securities-of-the-central-goverment-qtr/$", views.JP_363_qtr, name="JP-363-qtr"),
     re_path(r"^JP-364-informacion-sobre-compañias-de-seguros-qtr/$", views.JP_364_qtr, name="JP-364-qtr"),
-    
+    re_path(r"^JP-375-encuesta-sobre-valor-pendinente-qtr/$", views.JP_375_qtr, name="JP-375-qtr"),
+
 ]
 
