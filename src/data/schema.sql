@@ -335,7 +335,7 @@ CREATE TABLE IF NOT EXISTS "JP_541" (
   "value_fourth_trimester_3_10" NUMERIC NOT NULL,
 
   "encuesta_4" INTEGER NOT NULL,
-  "trimestre_4" INTEGER NOT NULL,
+  "fiscal_year_4" INTEGER NOT NULL,
   "company_name_4" TEXT NOT NULL,
   "liaison_officer_4" TEXT NOT NULL,
   "tel_4" TEXT NOT NULL,
