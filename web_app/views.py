@@ -62,6 +62,9 @@ def home(request):
 def proyectos(request):
     return render(request, "proyectos.html")
 
+def colaboradores(request):
+    return render(request, "colaboradores.html")
+
 def proyecciones_poblacionales(request):
     x = [
         2000,

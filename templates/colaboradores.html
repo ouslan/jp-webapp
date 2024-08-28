@@ -21,10 +21,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{% static 'home.css' %}" />
         <link rel="stylesheet" href="{% static 'demografico.css' %}" />
-		<link rel="stylesheet" href="{% static 'jquery-ui_1.10.2.css' %}" />
-
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
+        <link rel="stylesheet" href="{% static 'colaboradores.css' %}" />
 
     <style type="text/css">
     .scrolloff iframe {
@@ -92,7 +89,7 @@
             <div class="div-block">
                 <div class="agency-header">
                     <div class="div-agency-category">
-                        <h1 class="agency-category">Proyectos</h1>
+                        <h1 class="agency-category">Nuestro Equipo</h1>
                     </div>
                     <div class="div-agency-logo">
                         <div class="div-agency-name">
@@ -125,80 +122,93 @@
 
         <!-- TITLE -->
         <section>
-            <h1>Datos Demográficos</h1>
+            <h1>Equipo</h1>
         </section>
 
         <!-- INTRODUCTION -->
         <section>
             <p>
-                Se proporcionan datos consolidados geográficamente que abarcan todo Puerto Rico, clasificados por regiones, 
-                áreas de salud, municipios de residencia y municipios de ocurrencia. En los documentos de 'Informe Anual Estadísticas Vitales' contienen variables socio-demográficas 
-                como edad, sexo, educación, estado jurídico, ocupación y estado civil anterior. También se incluyen datos médicos, 
-                clínicos y procesales específicos para cada evento. Los datos se presentan en números absolutos, porcentajes y tasas. 
-                La información reflejada fue conceguida por 89 tablas, 20 gráficas y 5 mapas, organizados en secciones que incluyen narrativa, resumen y estadísticas 
-                demográficas, datos poblacionales, nacimientos vivos, mortalidad general, mortalidad por causas externas, mortalidad infantil, 
-                mortalidad fetal, mortalidad materna, matrimonios, divorcios y expectativa de vida al nacer. Al final del informe se adjuntan 
-                copias de cada certificado para ilustrar la información recopilada.
-
-                Todos estos datos fueron utilizados para la creación de las gráficas presentadas en esta página.
+                Nuestro equipo está compuesto por una colaboración única entre estudiantes de 
+                ingeniería de software, economistas y profesores dedicados. 
+                Juntos, combinamos nuestras habilidades y conocimientos para desarrollar 
+                soluciones innovadoras que abordan desafíos complejos. 
+                Cada miembro del equipo aporta una perspectiva única, lo que nos permite 
+                crear proyectos que son tanto técnicamente sólidos como económicamente 
+                viables. Estamos comprometidos con el aprendizaje continuo y la excelencia, 
+                trabajando en conjunto para llevar adelante iniciativas que marcan la 
+                diferencia.
             </p>
         </section>
-
-        <!-- SUBBODY 1 -->
         <section>
-            <h2> Documentos</h2>
-
-            <p>
-                <a href="https://estadisticas.pr/en/inventario-de-estadisticas/estadisticas-vitales" class="custom-link" role="link">Estadísticas Vitales</a>
-                <br>
-                <a href="https://www.bde.pr.gov/BDE/PRED.html" class="custom-link" role="link">Puerto Rico Economic Data</a>
-                <br>
-                <a href="https://estadisticas.pr/en/inventario-de-estadisticas/informe-anual-estadisticas-vitales" class="custom-link" role="link">Informe Anual Estadísticas Vitales</a>
-                <br>
-                <a href="https://jp.pr.gov/centro-de-datos-macroeconomicos/" class="custom-link" role="link">Centro de Datos Macroeconómicos</a>
-                <br>
-            </p>
-
-        </section>
-
-            <!-- SUBBODY 2 -->
-            <section>
-                <h2>Instrucciones</h2>
-                <p>1. Las líneas en cada una de las gráficas están representadas colores diferentes, y la leyenda a la derecha identifica qué color corresponde a cada variable. </p>
-                <p>3. Si desea eliminar una línea de la gráfica, haga clic en su nombre en la leyenda. Para volver a agregarla, haga clic nuevamente en el nombre.</p>
-                <p>4. Las gráficas permiten la manipulación del eje Y, lo que le permite ajustar la escala y visualizar los datos de manera más detallada o más amplia según sus necesidades.</p>
-                <p>5. Si pasa el cursor sobre la línea deseada, se mostrará la información que necesita.</p>
-                <br>
-                <p><strong>Nota:</strong> Las series para la Migración Neta Trimestral y Mensual que aparecen en las gráficas no son las variables originales, son unas series calculadas.</p>
-            </section>
-            <br>
-            <br>
-
-
-            <!-- Demographic Graph -->
-            <h1>Graphs</h1>
-            <style>
-                .graph-container {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh; /* Optional: Adjust the height as needed */
-                }
-            </style>
-        </head>
-            <div class="graph-container">
-                {{ graph|safe }}
+            <!-- PERFIL #1 -->
+            <div class="card">
+                <div class="circle">
+                    <div class="imgBox">
+                        <img src="https://i.ibb.co/qpZV3Qj/419-M26-Fk-XL-AC-UF894-1000-QL80.jpg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <h3>Edzel</h3>
+                    <div class="textIcon">
+                        <h4>Director General</h4>
+                        <a href="#">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="graph-container">
-                {{ t_graph|safe }}
+            <!-- PERFIL #2 -->
+            <div class="card">
+                <div class="circle">
+                    <div class="imgBox">
+                        <img src="https://i.ibb.co/3zKrtYW/download.jpg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <h3>Fernando</h3>
+                    <div class="textIcon">
+                        <h4>Manager</h4>
+                        <a href="#">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="graph-container">
-                {{ m_graph|safe }}
+            <!-- PERFIL #3 -->
+            <div class="card">
+                <div class="circle">
+                    <div class="imgBox">
+                        <img src="https://i.ibb.co/BCQNCLk/download.jpg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <h3>Onnelle</h3>
+                    <div class="textIcon">
+                        <h4>Developer</h4>
+                        <a href="#">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+        
+        <!-- </section>
+        <br>
+        <br>
 
-        <body>
+<!-- FOOTER -->       
+        <footer>
             <div class="sct-footer">
                 <div class="footer-top-bar">
                     <div class="content-block flex-hor-end-to-end w-container">
@@ -256,4 +266,7 @@
              }
             </script>
             <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-            </script></body></html>
+            </script>
+            
+        </footer>
+    </html>
