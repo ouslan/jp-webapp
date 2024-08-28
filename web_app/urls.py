@@ -65,6 +65,7 @@ urlpatterns = [
     re_path(r"^JP-363-investment-in-securities-of-the-central-goverment-qtr/$", views.JP_363_qtr, name="JP-363-qtr"),
     re_path(r"^JP-364-informacion-sobre-compañias-de-seguros-qtr/$", views.JP_364_qtr, name="JP-364-qtr"),
     re_path(r"^JP-375-encuesta-sobre-valor-pendinente-qtr/$", views.JP_375_qtr, name="JP-375-qtr"),
+    re_path(r"^JP-529-relacion-de-aportaciones-qtr/$", views.JP_529_qtr, name="JP-529-qtr"),
 
 ]
 
