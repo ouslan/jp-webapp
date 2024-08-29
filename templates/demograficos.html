@@ -184,8 +184,23 @@
                     align-items: center;
                     height: 100vh; /* Optional: Adjust the height as needed */
                 }
+                .graph-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh; /* Optional: Adjust the height as needed */
+                }
             </style>
         </head>
+        <section>
+            <div class="table-container">
+                <h3>Año Fiscal</h3>
+                <div class="graph-container">
+                    {{ d_table|safe }}
+                </div>
+            </div>
+        </section>
+
             <div class="graph-container">
                 {{ graph|safe }}
             </div>

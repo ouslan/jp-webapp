@@ -280,18 +280,23 @@ def monthly_demographic_graph():
     monthly_demographic_graph_html = fig.to_html(full_html=False)
     return monthly_demographic_graph_html
 
-
+def demographic_table(request):
+    df = pd.read_csv("data/external/fiscal_year_idb.csv")
+    demographic_table = df.to_html(index=False, classes='table table-striped')
+    return demographic_table
 
 def datos_demograficos(request):
     # Generate the annual demographic graph
     graph_html = demographic_graph()
     t_graph_html = trimestral_demographic_graph()
     m_graph_html = monthly_demographic_graph()
+    d_table = demographic_table(request)
 
     context = {
         "graph": graph_html,
         "t_graph": t_graph_html,
-        "m_graph": m_graph_html
+        "m_graph": m_graph_html,
+        "d_table": d_table
     }
 
     return render(request, "demograficos.html", context)
