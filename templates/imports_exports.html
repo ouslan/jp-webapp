@@ -15,6 +15,7 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="{% static 'macro.css' %}">
+        <link rel="stylesheet" href="{% static 'imports_and_exports.css' %}">
         <link rel="stylesheet" href="{% static 'website.css' %}">
     </head>
 
@@ -35,6 +36,10 @@
             </ul>
 
             <img src="{% static 'gobierno_de_puerto_rico.png' %}" alt="Logo del Gobierno de Puerto Rico" id="logo" />
+        </div>
+
+        <div class="graph_container">
+          {{ imports_and_exports|safe }}
         </div>
 
           <!-- ------------------ FOOTER --------------------- -->
