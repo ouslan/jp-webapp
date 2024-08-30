@@ -1381,6 +1381,11 @@ CREATE TABLE IF NOT EXISTS "JP_536_2" (
 CREATE TABLE IF NOT EXISTS "JP_544" (
   "id" SERIAL,
   "form_id" INTEGER NOT NULL,
+  "agencia" TEXT NOT NULL,
+  "prep" TEXT NOT NULL,
+  "titulo" TEXT NOT NULL,
+  "telefono" TEXT NOT NULL,
+  "fecha" TEXT NOT NULL,
   "institucion1" TEXT NOT NULL,
   "proposito1" TEXT NOT NULL,
   "dolares1" NUMERIC NOT NULL,
@@ -1440,11 +1445,6 @@ CREATE TABLE IF NOT EXISTS "JP_544" (
   "quantity_other_3" NUMERIC NOT NULL,
   "name_other_4" TEXT NOT NULL,
   "quantity_other_4" NUMERIC NOT NULL,
-  "agencia" TEXT NOT NULL,
-  "prep" TEXT NOT NULL,
-  "titulo" TEXT NOT NULL,
-  "telefono" TEXT NOT NULL,
-  "fecha" TEXT NOT NULL,
 
   PRIMARY KEY ("id")
 );
