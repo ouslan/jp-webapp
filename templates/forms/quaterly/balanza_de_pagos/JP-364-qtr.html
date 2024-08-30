@@ -43,7 +43,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'JP-364' %}">
+      <form method="POST" action="{% url 'JP-364-qtr' %}">
         {% csrf_token %}
 
         <section class="divider-container">
@@ -65,7 +65,7 @@
                 <tr>
                     <th>
                         <select id="quater_select"name="dropdown_fiscal_year_1">
-                            <option value="">Select an option</option>
+                            <option value="">Select Trimester</option>
                             <option value="Q1-(Jan-Mar)">Q1-(Jan-Mar)</option>
                             <option value="Q2-(Apr-Jun)">Q2-(Apr-Jun)</option>
                             <option value="Q3-(Jul-Sep)">Q3-(Jul-Sep)</option>
@@ -74,7 +74,7 @@
                         <input id="year" type="number" name="year_bono1" required min="1000" max="9999" placeholder="Year" required></th>
                     <th> 
                         <select id="quater_select"name="dropdown_fiscal_year_2">
-                            <option value="">Select an option</option>
+                            <option value="">Select Trimester</option>
                             <option value="Q1-(Jan-Mar)">Q1-(Jan-Mar)</option>
                             <option value="Q2-(Apr-Jun)">Q2-(Apr-Jun)</option>
                             <option value="Q3-(Jul-Sep)">Q3-(Jul-Sep)</option>
@@ -238,7 +238,7 @@
                     <th rowspan="2">Partida</th>
                     <th rowspan="2">
                         <select id="quater_select"name="dropdown_fiscal_year_3">
-                        <option value="">Select an option</option>
+                        <option value="">Select Trimester</option>
                         <option value="Q1-(Jan-Mar)">Q1-(Jan-Mar)</option>
                         <option value="Q2-(Apr-Jun)">Q2-(Apr-Jun)</option>
                         <option value="Q3-(Jul-Sep)">Q3-(Jul-Sep)</option>

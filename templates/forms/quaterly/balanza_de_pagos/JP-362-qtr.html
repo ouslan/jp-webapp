@@ -31,7 +31,7 @@
                 <br>
                 <input id="header_inputs_right" type="number" name="year_1" min="1000" max="9999" placeholder="Año / Year" required><br>
                 <select id="quater_select"name="dropdown_fiscal_year_1">
-                    <option value="">Select an option</option>
+                    <option value="">Select Trimester</option>
                     <option value="Q1-(Jan-Mar)">Q1-(Jan-Mar)</option>
                     <option value="Q2-(Apr-Jun)">Q2-(Apr-Jun)</option>
                     <option value="Q3-(Jul-Sep)">Q3-(Jul-Sep)</option>
@@ -42,6 +42,7 @@
                 <img src="{% static 'JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
                 TRANSACCIONES CON EL EXTERIOR PARA LA BALANZA DE PAGOS DE PUERTO RICO<br>
                 (EN MILES DE DOLARES)<br>
+                quaterly
             </td>
             <td id="header_right">
                 Junta de Planificación de Puerto Rico<br>
@@ -53,7 +54,7 @@
         </section>
         
         <main>
-        <form method="POST" action="{% url 'JP-362' %}">
+        <form method="POST" action="{% url 'JP-362-qtr' %}">
             {% csrf_token %}
             <section>
             <div class="body_header">
