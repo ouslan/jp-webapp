@@ -114,7 +114,8 @@ select:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Optional: Adjust the height as needed */
+  height: auto; /* Adjust the height as needed */
+  padding: 20px; /* Add padding to prevent overlap */
 }
 
 .table-container {
@@ -122,9 +123,31 @@ select:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column; /* Ensures the heading and table are stacked vertically */
+  padding: 20px; /* Add padding to prevent overlap */
 }
 
 .table-responsive {
   width: 100%; /* Ensures the table takes the full width of the container */
   max-width: 800px; /* Optional: Set a max-width for the table */
+}
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .graph-container {
+      height: 80vh; /* Adjust the height for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .graph-container {
+      height: 60vh; /* Adjust the height for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .graph-container {
+      height: 40vh; /* Adjust the height for extra small screens */
+  }
 }
