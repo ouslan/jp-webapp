@@ -1,11 +1,10 @@
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
-import pandas as pd
+import polars as pl
 import psycopg2
 import os
 
 load_dotenv()
-
 
 class DAO:
     def __init__(self):
@@ -32,35 +31,24 @@ class DAO:
 
     def insert_forms(
         self,
-        data_path: str,
-        dtypes: dict,
+        df: pl.DataFrame,
         table_name: str,
         table_id: int,
         debug: bool = False,
     ):
-        df = pd.read_csv(data_path)
-        df.columns = df.columns.str.strip()
-        df["form_id"] = table_id
-        print(df.columns)
-        df = df.astype(dtypes)
-        df.to_sql(
-            name=table_name,
-            con=self.conn2,
-            if_exists="append",
-            chunksize=5000,
-            index=False,
+        df = df.with_columns(form_id=pl.lit(table_id))
+        df.write_database(
+            table_name=table_name,
+            connection=self.conn2,
+            if_table_exists="append",
         )
-        df_id = pd.read_sql(f'SELECT MAX(id) AS id FROM "{table_name}"', self.conn2)
-        df_id["form_id"] = table_id
-        df_id.to_sql(
-            name="Forms",
-            con=self.conn2,
-            if_exists="append",
-            chunksize=5000,
-            index=False,
+        df_id = pl.read_database(f'SELECT MAX(id) AS id FROM "{table_name}"', self.conn2)
+        df_id = df_id.with_columns(form_id=pl.lit(table_id))
+        df_id.write_database(
+            table_name="Forms",
+            connection=self.conn2,
+            if_table_exists="append",
         )
-        os.remove(data_path)
         if debug:
-            print(
-                "\033[0;36mPROCESS: \033[0m" + f"Data inserted into {table_name} table"
-            )
+             print("\033[0;36mINFO: \033[0m" + f"Inserted {table_name} to database")
+

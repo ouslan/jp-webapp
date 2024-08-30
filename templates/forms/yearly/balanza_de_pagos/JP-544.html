@@ -45,6 +45,25 @@
     <main>
       <form method="POST" action="{% url 'JP-544' %}">
         {% csrf_token %}
+        <section>
+            <div class="big-box-bottom-left">
+                <strong>Nombre de la Agencia :</strong>
+                <input class="text-box space-between" name="agencia" placeholder="Agencia" required><br>
+                
+                <strong>Preparado por :</strong>
+                <input class="text-box space-between" name="prep" placeholder="Nombre" required><br>
+            
+                <strong>Título o puesto :</strong>
+                <input class="text-box space-between" name="titulo" placeholder="Título" required><br>
+            
+                <strong>Teléfono :</strong><br>
+                <input class="text-box space-between" name="telefono" placeholder="123-456-7890" required><br>
+            
+                <strong>Fecha :</strong>
+                <input class="text-box space-between" name="fecha" placeholder="MM/DD/YYYY" required><br>
+            </div>
+            </div>
+          </section>
 
         <section class="divider-container">
             <table>
@@ -283,26 +302,6 @@
         <br>
         <br>
         <br>
-        <section>
-            <div class="big-box-bottom-left">
-                <strong>&emsp;Nombre de la Agencia :</strong>
-                <input class="text-box space-between" name="agencia" placeholder="Agencia" required><br>
-                
-                <strong>&emsp;Preparado por :</strong>
-                <input class="text-box space-between" name="prep" placeholder="Nombre" required><br>
-            
-                <strong>&emsp;Título o puesto :</strong>
-                <input class="text-box space-between" name="titulo" placeholder="Título" required><br>
-            
-                <strong>&emsp;Teléfono :</strong><br>
-                <input class="text-box space-between" name="telefono" placeholder="123-456-7890" required><br>
-            
-                <strong>&emsp;Fecha :</strong>
-                <input class="text-box space-between" name="fecha" placeholder="MM/DD/YYYY" required><br>
-            </div>
-            </div>
-          </section>
-
         <section class = 'submit-button-container'>
           <input type="submit" value="SUBMIT" class="submit-button"></input>
         </section>

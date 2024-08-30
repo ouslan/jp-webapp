@@ -249,4 +249,9 @@ background-color: white;
     text-align: left;
 }
 
+#fiscal_year {
+    display: flex;
+    width: 40%;
+}
+
 

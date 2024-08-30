@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from src.dao.data_db_dao import DAO
-import csv
-import os
+import polars as pl
 
 
 def JP_560_63111(request):
@@ -38,120 +37,40 @@ def JP_560_63111(request):
         signature = request.POST.get("signature")
         rank = request.POST.get("rank")
 
-        csv_file_path = "data/cuestionarios/ingreso_neto/JP-560-63111.csv"
-        file_exists = (
-            os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
-        )
-
-        with open(csv_file_path, mode="a", newline="") as file:
-            writer = csv.writer(file)
-
-            if not file_exists:
-                writer.writerow(
-                    [
-                        "ssn",
-                        "tel",
-                        "fax",
-                        "sales_1",
-                        "sales_2",
-                        "premiums_1",
-                        "premiums_2",
-                        "interest_received_1",
-                        "interest_received_2",
-                        "other_income_1",
-                        "other_income_2",
-                        "total_income_1",
-                        "total_income_2",
-                        "interest_paid_1",
-                        "interest_paid_2",
-                        "claims_paid_1",
-                        "claims_paid_2",
-                        "other_expenditures_1",
-                        "other_expenditures_2",
-                        "total_expenditures_1",
-                        "total_expenditures_2",
-                        "net_profit_loss_1",
-                        "net_profit_loss_2",
-                        "initial_inventory_1",
-                        "initial_inventory_2",
-                        "final_inventory_1",
-                        "final_inventory_2",
-                        "signature",
-                        "rank",
-                    ]
-                )
-
-            writer.writerow(
-                [
-                    ssn,
-                    tel,
-                    fax,
-                    sales_1,
-                    sales_2,
-                    premiums_1,
-                    premiums_2,
-                    interest_received_1,
-                    interest_received_2,
-                    other_income_1,
-                    other_income_2,
-                    total_income_1,
-                    total_income_2,
-                    interest_paid_1,
-                    interest_paid_2,
-                    claims_paid_1,
-                    claims_paid_2,
-                    other_expenditures_1,
-                    other_expenditures_2,
-                    total_expenditures_1,
-                    total_expenditures_2,
-                    net_profit_loss_1,
-                    net_profit_loss_2,
-                    initial_inventory_1,
-                    initial_inventory_2,
-                    final_inventory_1,
-                    final_inventory_2,
-                    signature,
-                    rank,
-                ]
-            )
-
-        DAO().insert_forms(
-            data_path="data/cuestionarios/ingreso_neto/JP-560-63111.csv",
-            dtypes={
-                "ssn": str,
-                "tel": str,
-                "fax": str,
-                "sales_1": float,
-                "sales_2": float,
-                "premiums_1": float,
-                "premiums_2": float,
-                "interest_received_1": float,
-                "interest_received_2": float,
-                "other_income_1": float,
-                "other_income_2": float,
-                "total_income_1": float,
-                "total_income_2": float,
-                "interest_paid_1": float,
-                "interest_paid_2": float,
-                "claims_paid_1": float,
-                "claims_paid_2": float,
-                "other_expenditures_1": float,
-                "other_expenditures_2": float,
-                "total_expenditures_1": float,
-                "total_expenditures_2": float,
-                "net_profit_loss_1": float,
-                "net_profit_loss_2": float,
-                "initial_inventory_1": float,
-                "initial_inventory_2": float,
-                "final_inventory_1": float,
-                "final_inventory_2": float,
-                "signature": str,
-                "rank": str,
-            },
-            table_name="JP_560_63111",
-            table_id="19",
-            debug=False,
-        )
+        data = [
+            pl.Series("ssn", [ssn], dtype=pl.String),
+            pl.Series("tel", [tel], dtype=pl.String),
+            pl.Series("fax", [fax], dtype=pl.String),
+            pl.Series("sales_1", [float(sales_1)], dtype=pl.Float64),
+            pl.Series("sales_2", [float(sales_2)], dtype=pl.Float64),
+            pl.Series("premiums_1", [float(premiums_1)], dtype=pl.Float64),
+            pl.Series("premiums_2", [float(premiums_2)], dtype=pl.Float64),
+            pl.Series("interest_received_1", [float(interest_received_1)], dtype=pl.Float64),
+            pl.Series("interest_received_2", [float(interest_received_2)], dtype=pl.Float64),
+            pl.Series("other_income_1", [float(other_income_1)], dtype=pl.Float64),
+            pl.Series("other_income_2", [float(other_income_2)], dtype=pl.Float64),
+            pl.Series("total_income_1", [float(total_income_1)], dtype=pl.Float64),
+            pl.Series("total_income_2", [float(total_income_2)], dtype=pl.Float64),
+            pl.Series("interest_paid_1", [float(interest_paid_1)], dtype=pl.Float64),
+            pl.Series("interest_paid_2", [float(interest_paid_2)], dtype=pl.Float64),
+            pl.Series("claims_paid_1", [float(claims_paid_1)], dtype=pl.Float64),
+            pl.Series("claims_paid_2", [float(claims_paid_2)], dtype=pl.Float64),
+            pl.Series("other_expenditures_1", [float(other_expenditures_1)], dtype=pl.Float64),
+            pl.Series("other_expenditures_2", [float(other_expenditures_2)], dtype=pl.Float64),
+            pl.Series("total_expenditures_1", [float(total_expenditures_1)], dtype=pl.Float64),
+            pl.Series("total_expenditures_2", [float(total_expenditures_2)], dtype=pl.Float64),
+            pl.Series("net_profit_loss_1", [float(net_profit_loss_1)], dtype=pl.Float64),
+            pl.Series("net_profit_loss_2", [float(net_profit_loss_2)], dtype=pl.Float64),
+            pl.Series("initial_inventory_1", [float(initial_inventory_1)], dtype=pl.Float64),
+            pl.Series("initial_inventory_2", [float(initial_inventory_2)], dtype=pl.Float64),
+            pl.Series("final_inventory_1", [float(final_inventory_1)], dtype=pl.Float64),
+            pl.Series("final_inventory_2", [float(final_inventory_2)], dtype=pl.Float64),
+            pl.Series("signature", [signature], dtype=pl.String),
+            pl.Series("rank", [rank], dtype=pl.String),
+        ]
+        
+        df = pl.DataFrame(data)
+        DAO().insert_forms(df, "JP_560_63111", 19)
 
         return render(request, "forms/succesfull.html")
 
