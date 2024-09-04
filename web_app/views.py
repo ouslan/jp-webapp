@@ -63,6 +63,7 @@ from src.formularios.quaterly.form_jp_375_qtr import JP_375_qtr
 from src.formularios.quaterly.form_jp_529_qtr import JP_529_qtr
 from src.formularios.quaterly.form_jp_536_2_qtr import JP_536_2_qtr
 from src.formularios.quaterly.form_jp_544_qtr import JP_544_qtr
+from src.formularios.quaterly.ingreso_neto_qtr.form_ip_110_qtr import IP_110_qtr
 
 def home(request):
     return render(request, "home.html")
