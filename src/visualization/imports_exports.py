@@ -1,9 +1,12 @@
 import polars as pl
 import plotly.express as px
+from ..jp_imports.src.jp_imports.data_process import DataProcess
 from django.shortcuts import render
 
 def web_app_imports_exports(request):
-    df = pl.read_parquet("data/external/temporero.parquet")
+    df = DataProcess(saving_dir="data/", instance="jp_instetute", debug=True).process_int_jp(time="yearly", types="country")
+    df = df.with_columns(data=pl.col("imports"))
+    print(df)
     years = df['year'].unique().to_list()
 
     fig = px.pie(df, values='data', names='country')
