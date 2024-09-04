@@ -1,0 +1,3 @@
+[submodule "src/jp-imports"]
+	path = src/jp-imports
+	url = https://github.com/ouslan/jp-imports.git
