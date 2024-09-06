@@ -88,8 +88,8 @@ DATABASES = {
         "NAME": os.environ.get("POSTGRES_DB"),
         "USER": os.environ.get("POSTGRES_USER"),
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
-        "HOST": "timescaledb",  # set in docker-compose.yml
-        "PORT": 5432,
+        "HOST": "localhost", # set in docker-compose.yml
+        "PORT": os.environ.get("POSTGRES_PORT"),  # default postgres port
     }
 }
 

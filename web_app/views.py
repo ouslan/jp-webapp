@@ -65,7 +65,6 @@ def proyecciones_poblacionales(request):
     
     return render(request, "proyecciones.html")
 
-
 def macro(request):
     return web_app_macro(request)
 
@@ -147,6 +146,9 @@ def monthly_demographic_graph():
     monthly_demographic_graph_html = fig.to_html(full_html=False)
     return monthly_demographic_graph_html
 
+
+def indice_desarrollo_humano(request):
+    return render(request, "indice_desarrollo_humano.html")
 
 
 def datos_demograficos(request):
