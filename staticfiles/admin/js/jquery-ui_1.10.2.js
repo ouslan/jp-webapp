@@ -7194,11 +7194,12 @@
         form = radio.form,
         radios = $( [] );
       if ( name ) {
-        name = name.replace( /'/g, "\\'" );
+        var escapedName = $.escapeSelector(name);
+
         if ( form ) {
-          radios = $( form ).find( "[name='" + name + "']" );
+          radios = $( form ).find( "[name='" + escapedName + "']" );
         } else {
-          radios = $( "[name='" + name + "']", radio.ownerDocument )
+          radios = $( "[name='" + escapedName + "']", radio.ownerDocument )
             .filter(function() {
               return !this.form;
             });

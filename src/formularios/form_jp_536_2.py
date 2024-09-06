@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from src.dao.data_db_dao import DAO
-import csv
-import os
+import polars as pl
 
 
 def JP_536_2(request):
@@ -30,99 +29,33 @@ def JP_536_2(request):
         name_title = request.POST.get("name_title")
         date = request.POST.get("date")
 
-        csv_file_path = "data/cuestionarios/balanza_de_pagos/JP-536-2.csv"
-        file_exists = (
-            os.path.isfile(csv_file_path) and os.path.getsize(csv_file_path) > 0
-        )
-
-        with open(csv_file_path, mode="a", newline="") as file:
-            writer = csv.writer(file)
-
-            if not file_exists:
-                writer.writerow(
-                    [
-                        "start_year",
-                        "end_year",
-                        "inventario1",
-                        "inventario2",
-                        "compras1",
-                        "compras2",
-                        "depre1",
-                        "depre2",
-                        "maquinaria1",
-                        "maquinaria2",
-                        "equipo1",
-                        "equipo2",
-                        "computadora1",
-                        "computadora2",
-                        "alquiler1",
-                        "alquiler2",
-                        "licencia1",
-                        "licencia2",
-                        "company_name",
-                        "phone",
-                        "name_title",
-                        "date",
-                    ]
-                )
-
-            writer.writerow(
-                [
-                    start_year,
-                    end_year,
-                    inventario1,
-                    inventario2,
-                    compras1,
-                    compras2,
-                    depre1,
-                    depre2,
-                    maquinaria1,
-                    maquinaria2,
-                    equipo1,
-                    equipo2,
-                    computadora1,
-                    computadora2,
-                    alquiler1,
-                    alquiler2,
-                    licencia1,
-                    licencia2,
-                    company_name,
-                    phone,
-                    name_title,
-                    date,
-                ]
-            )
-
-        DAO().insert_forms(
-            data_path="data/cuestionarios/balanza_de_pagos/JP-536-2.csv",
-            dtypes={
-                "start_year": int,
-                "end_year": int,
-                "inventario1": float,
-                "inventario2": float,
-                "compras1": float,
-                "compras2": float,
-                "depre1": float,
-                "depre2": float,
-                "maquinaria1": float,
-                "maquinaria2": float,
-                "equipo1": float,
-                "equipo2": float,
-                "computadora1": float,
-                "computadora2": float,
-                "alquiler1": float,
-                "alquiler2": float,
-                "licencia1": float,
-                "licencia2": float,
-                "company_name": str,
-                "phone": str,
-                "name_title": str,
-                "date": str,
-            },
-            table_name="JP_536_2",
-            table_id="18",
-            debug=False,
-        )
+        data = [
+            pl.Series("start_year", [start_year], dtype=pl.String),
+            pl.Series("end_year", [end_year], dtype=pl.String),
+            pl.Series("inventario1", [float(inventario1)], dtype=pl.Float64),
+            pl.Series("inventario2", [float(inventario2)], dtype=pl.Float64),
+            pl.Series("compras1", [float(compras1)], dtype=pl.Float64),
+            pl.Series("compras2", [float(compras2)], dtype=pl.Float64),
+            pl.Series("depre1", [float(depre1)], dtype=pl.Float64),
+            pl.Series("depre2", [float(depre2)], dtype=pl.Float64),
+            pl.Series("maquinaria1", [float(maquinaria1)], dtype=pl.Float64),
+            pl.Series("maquinaria2", [float(maquinaria2)], dtype=pl.Float64),
+            pl.Series("equipo1", [float(equipo1)], dtype=pl.Float64),
+            pl.Series("equipo2", [float(equipo2)], dtype=pl.Float64),
+            pl.Series("computadora1", [float(computadora1)], dtype=pl.Float64),
+            pl.Series("computadora2", [float(computadora2)], dtype=pl.Float64),
+            pl.Series("alquiler1", [float(alquiler1)], dtype=pl.Float64),
+            pl.Series("alquiler2", [float(alquiler2)], dtype=pl.Float64),
+            pl.Series("licencia1", [float(licencia1)], dtype=pl.Float64),
+            pl.Series("licencia2", [float(licencia2)], dtype=pl.Float64),
+            pl.Series("company_name", [company_name], dtype=pl.String),
+            pl.Series("phone", [phone], dtype=pl.String),
+            pl.Series("name_title", [name_title], dtype=pl.String),
+            pl.Series("date", [date], dtype=pl.String),
+        ]
+        
+        df = pl.DataFrame(data)
+        DAO().insert_forms(df, "JP_536_2", 18)
 
         return render(request, "forms/succesfull.html")
     return render(request, "forms/yearly/balanza_de_pagos/JP-536-2.html")

@@ -27,13 +27,6 @@
             <td id="header_left">
                 JP-362<br>
                 Rev. 7/17<br>
-                <br>
-                <br>
-                1 /julio/
-                <input id="header_inputs_right" type="number" name="year_1" min="1000" max="9999" placeholder="Año / Year" required><br>
-                <div id="space_between">al</div>
-                30 /junio/
-                <input id="header_inputs_left" type="number" name="year_2" min="1000" max="9999" placeholder="Año / Year" required><br>
             </td>
             <td id="header_center">
                 <img src="{% static 'JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
@@ -52,6 +45,13 @@
         <main>
         <form method="POST" action="{% url 'JP-362' %}">
             {% csrf_token %}
+            <div id="fiscal_year">
+                <div id="space_between">1 /julio/</div>
+                <input id="header_inputs_right" type="number" name="year_1" min="1000" max="9999" placeholder="Año / Year" required><br>
+                <div id="space_between">al</div>
+                <div id="space_between">30 /junio/</div>
+                <input id="header_inputs_left" type="number" name="year_2" min="1000" max="9999" placeholder="Año / Year" required><br>
+            </div>
             <section>
             <div class="body_header">
                 <strong id="name">Nombre de la Empresa Pública:</strong>
