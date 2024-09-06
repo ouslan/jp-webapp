@@ -224,7 +224,7 @@ def demographic_graph():
     return demographic_graph_html
 
 
-def trimestral_demographic_graph():
+def trimestral_demographic_graph(selected_graph=1):
     # Read the new CSV file
     df = pd.read_csv("data/external/Trimestral_Historico.csv")
 
@@ -246,8 +246,21 @@ def trimestral_demographic_graph():
 
     # Create the graph
     fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Trimestral', width=1500, height=750)
-    # fig.update_traces(mode='markers+lines', marker=dict(size=8, symbol='x'))
     
+    # Update layout with range slider and selectors
+    fig.update_xaxes(
+        rangeslider_visible=True,
+        rangeselector=dict(
+            buttons=list([
+                dict(count=1, label="1m", step="month", stepmode="backward"),
+                dict(count=6, label="6m", step="month", stepmode="backward"),
+                dict(count=1, label="YTD", step="year", stepmode="todate"),
+                dict(count=1, label="1y", step="year", stepmode="backward"),
+                dict(step="all")
+            ])
+        )
+    )
+
     # Convert the figure to HTML
     trimestral_demographic_graph_html = fig.to_html(full_html=False)
     return trimestral_demographic_graph_html
