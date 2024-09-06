@@ -1,33 +1,38 @@
+from calendar import month
 import polars as pl
 import plotly.express as px
 from ..jp_imports.src.jp_imports.data_process import DataProcess
 from django.shortcuts import render
 
 def web_app_imports_exports(request):
-    df = DataProcess(saving_dir="data/", instance="jp_instetute", debug=True).process_int_jp(time="yearly", types="country")
-    df = df.with_columns(data=pl.col("imports"))
-    print(df)
-    years = df['year'].unique().to_list()
+    df1 = DataProcess(saving_dir="data/", instance="jp_instetute", debug=True).process_int_jp(time="yearly", types="country")
+    df2 = DataProcess(saving_dir="data/", instance="jp_instetute", debug=True).process_int_jp(time="monthly", types="country")
+    df3 = DataProcess(saving_dir="data/", instance="jp_instetute", debug=True).process_int_jp(time="qrt", types="country")
+    
+    df1 = df1.with_columns(data=pl.col("imports"))
+    years = df1['year'].unique().to_list()
+    
+    df2 = df2.with_columns(data=pl.col("imports"))
+    months = df2['month'].unique().to_list()
+    
+    df3 = df3.with_columns(data=pl.col("imports"))
+    qrts = df3['qrt'].unique().to_list()
 
-    fig = px.pie(df, values='data', names='country')
+    fig = px.pie(df1, values='data', names='country')
 
     fig.update_traces(textposition='inside', textinfo='percent+label')
-
+    
+    frequency = ["yearly", "monthly", "qtr"]
+    
     buttons = [
         dict(
-            args=[{"x": [df.filter(pl.col("year") == year)["data"].to_list()], "labels": [df.filter(pl.col("year") == year)["country"].to_list()]}],
-            label=str(year),
+            args=[{"data": [df1.to_dicts(), df2.to_dicts(), df3.to_dicts()][frequency.index(freq)], "frequency": freq}],
+            label={"yearly": "Yearly", "monthly": "Monthly", "qtr": "Qtr"}[freq],
             method="update"
-        )
-        for year in years
+        ) for freq in frequency
     ]
-
-    buttons.insert(0, dict(
-        args=[{"x": [df["data"].to_list()], "labels": [df["country"].to_list()]}],
-        label="Annual",
-        method="update"
-    ))
-
+    
+    
     fig.update_layout(
         annotations=[
             dict(

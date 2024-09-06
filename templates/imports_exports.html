@@ -39,6 +39,36 @@
             <img src="{% static 'gobierno_de_puerto_rico.png' %}" alt="Logo del Gobierno de Puerto Rico" id="logo" />
         </div>
 
+        <div class="instructions">
+            <h1>Instrucciones para usar la gráfica interactiva:</h1>
+            <div>
+                <p>
+                    <strong>Descripción de la Gráfica:</strong> La gráfica muestra un desglose de importaciones por país en forma de un gráfico 
+                    de pastel. Cada porción representa el porcentaje de importaciones de un país específico.
+                </p>
+
+                <p>
+                    <strong>Selecciona un Año:</strong> En la esquina superior izquierda de la gráfica, encontrarás un menú desplegable. 
+                    Haz clic en el menú y selecciona un año específico para ver los datos de importaciones de ese año.
+                </p>
+
+                <p>
+                    <strong>Ver Datos Anuales:</strong> Para visualizar los datos de importaciones de todos los años combinados, selecciona 
+                    la opción "Annual" del menú desplegable.
+                </p>
+
+                <p>
+                    <strong>Información Detallada:</strong> La gráfica mostrará el porcentaje correspondiente de importaciones para cada país en el 
+                    interior de cada porción. También puedes pasar el cursor sobre cada porción para ver información detallada.
+                </p>
+
+                <p>
+                    <strong>Actualización de la Gráfica:</strong> Cada vez que selecciones un año o las opciones "Annual", "Monthly", "Quaterly"; la gráfica se actualizará automáticamente 
+                    para mostrar los datos correspondientes.
+                </p>
+            </div>
+        </div>
+
         <div class="graph_container">
           {{ imports_and_exports|safe }}
         </div>
