@@ -56,7 +56,18 @@ from src.formularios.form_ip_540a import IP_540a
 from src.formularios.form_ip_720 import IP_720
 from src.formularios.form_ip_810 import IP_810
 from src.formularios.form_jp_547 import JP_547
-
+from src.formularios.quaterly.form_jp_361_qrt import JP_361_qrt
+from src.formularios.quaterly.form_jp_362_qtr import JP_362_qtr
+from src.formularios.quaterly.form_jp_363_qtr import JP_363_qtr
+from src.formularios.quaterly.form_jp_364_qtr import JP_364_qtr
+from src.formularios.quaterly.form_jp_375_qtr import JP_375_qtr
+from src.formularios.quaterly.form_jp_529_qtr import JP_529_qtr
+from src.formularios.quaterly.form_jp_536_2_qtr import JP_536_2_qtr
+from src.formularios.quaterly.form_jp_544_qtr import JP_544_qtr
+from src.formularios.quaterly.ingreso_neto_qtr.form_ip_110_qtr import IP_110_qtr
+from src.formularios.quaterly.ingreso_neto_qtr.form_ip_210_qtr import IP_210_qtr
+from src.formularios.quaterly.ingreso_neto_qtr.form_ip_220_qtr import IP_220_qtr
+from src.formularios.quaterly.ingreso_neto_qtr.form_ip_230_qtr import IP_230_qtr
 
 def home(request):
     return render(request, "home.html")

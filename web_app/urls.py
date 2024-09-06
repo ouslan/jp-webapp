@@ -59,6 +59,22 @@ urlpatterns = [
     re_path(r"^IP-720-alojamiento-y-servicio-de-comida/$", views.IP_720, name="IP-720"),
     re_path(r"^IP-810-otros-servicios/$", views.IP_810, name="IP-810"),
     re_path(r"^JP-547-agencies-transactions/$", views.JP_547, name="JP-547"),
-    re_path(r"^Forms/$", views.Forms, name="Forms"),
+    re_path(r"^Forms/$", views.Forms, name="Forms"), 
+        
+    # Asegura los path que estén bien cuando añadas otro
+    re_path(r"^JP-361-transactions-in-pr-of-external-insurance-companies-qrt/$", views.JP_361_qrt, name="JP-361-qrt"),
+    re_path(r"^JP-362-transacciones-con-el-exterior-para-la-balanza-de-Puerto-Rico-qtr/$", views.JP_362_qtr, name="JP-362-qtr"),
+    re_path(r"^JP-363-investment-in-securities-of-the-central-goverment-qtr/$", views.JP_363_qtr, name="JP-363-qtr"),
+    re_path(r"^JP-364-informacion-sobre-compañias-de-seguros-qtr/$", views.JP_364_qtr, name="JP-364-qtr"),
+    re_path(r"^JP-375-encuesta-sobre-valor-pendinente-qtr/$", views.JP_375_qtr, name="JP-375-qtr"),
+    re_path(r"^JP-529-relacion-de-aportaciones-qtr/$", views.JP_529_qtr, name="JP-529-qtr"),
+    re_path(r"^JP-536-2-producto-bruto-qtr/$", views.JP_536_2_qtr, name="JP-536-2-qtr"),
+    re_path(r"^JP-544-info-para-balanza-qtr/$", views.JP_544_qtr, name="JP-544-qtr"),
+    re_path(r"^IP-110-agricultura-qtr/$", views.IP_110_qtr, name="IP-110-qtr"),
+    re_path(r"^IP-210-mineria-qtr/$", views.IP_210_qtr, name="IP-210-qtr"),    
+    re_path(r"^IP-220-utilidades-qtr/$", views.IP_220_qtr, name="IP-220_qtr"),
+    re_path(r"^IP-230-construccion-qtr/$", views.IP_230_qtr, name="IP-230-qtr"),
+
+
 ]
 
