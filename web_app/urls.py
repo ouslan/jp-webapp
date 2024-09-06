@@ -69,6 +69,10 @@ urlpatterns = [
     re_path(r"^JP-536-2-producto-bruto-qtr/$", views.JP_536_2_qtr, name="JP-536-2-qtr"),
     re_path(r"^JP-544-info-para-balanza-qtr/$", views.JP_544_qtr, name="JP-544-qtr"),
     re_path(r"^IP-110-agricultura-qtr/$", views.IP_110_qtr, name="IP-110-qtr"),
+    re_path(r"^IP-210-mineria-qtr/$", views.IP_210_qtr, name="IP-210-qtr"),    
+    re_path(r"^IP-220-utilidades-qtr/$", views.IP_220_qtr, name="IP-220_qtr"),
+    re_path(r"^IP-230-construccion-qtr/$", views.IP_230_qtr, name="IP-230-qtr"),
+
 
 ]
 
