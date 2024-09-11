@@ -55,10 +55,36 @@ a {
     align-items: center;
 }
 
-#ins_list {
-    justify-content: center;
-    align-items: center;
+#drop_title {
+    font-size: 1.2em;
     margin-top: 2vw;
     margin-bottom: 2vw;
-    margin-left: 3vw;
+    color: black;
+}
+
+#frequency, #second_dropdown  {
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #EEEEEE;
+    margin-right: 30px;
+}
+
+#submit {
+    font-size: 1em;
+    border-radius: 8px;
+    padding: 6px;
+    background-color: #008cff;
+    border: none;
+    margin-top: -1px;
+}
+
+#submit:hover {
+    background-color: #0071cd;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
 }

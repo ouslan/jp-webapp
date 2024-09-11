@@ -70,7 +70,32 @@
         </div>
 
         <div class="graph_container">
-          {{ imports_and_exports|safe }}
+            <form method="post">
+                {% csrf_token %}
+                <section id="buttons">
+                    <section id="dropdowns">
+                        <label id="drop_title" for="frequency">Frecuencia:</label>
+                        <select name="frequency" id="frequency">
+                            <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
+                            <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
+                            <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
+                        </select>
+                    </section>
+                    
+                    <section id="dropdowns">
+                        <label id="drop_title" for="second_dropdown">Tiempo:</label>
+                        <select name="second_dropdown" id="second_dropdown">
+                            <option value="default_value" {% if selected_second_dropdown == "default_value" %}selected{% endif %}>Default</option>
+                        </select>
+                    </section>
+
+                    <button id="submit" type="submit">Submit</button>
+                </section>
+            </form>
+            
+            <div id="graph">
+                {{ imports_and_exports|safe }}
+            </div>
         </div>
 
           <!-- ------------------ FOOTER --------------------- -->
@@ -134,5 +159,52 @@
               </main>
           </footer>
         <script src="{% static 'header_menu.js' %}"></script>
+        <script>
+            function updateSecondDropdown() {
+                const frequency = document.getElementById('frequency').value;
+                const secondDropdown = document.getElementById('second_dropdown');
+                secondDropdown.innerHTML = ''; 
+        
+                let options = [];
+                if (frequency === 'Yearly') {
+                    options = Array.from({ length: 12 }, (_, i) => 2009 + i); 
+                } else if (frequency === 'Monthly') {
+                    options = [
+                        { value: 1, text: 'January' },
+                        { value: 2, text: 'February' },
+                        { value: 3, text: 'March' },
+                        { value: 4, text: 'April' },
+                        { value: 5, text: 'May' },
+                        { value: 6, text: 'June' },
+                        { value: 7, text: 'July' },
+                        { value: 8, text: 'August' },
+                        { value: 9, text: 'September' },
+                        { value: 10, text: 'October' },
+                        { value: 11, text: 'November' },
+                        { value: 12, text: 'December' }
+                    ];
+                } else if (frequency === 'Quaterly') { 
+                    options = [
+                        { value: 1, text: 'Qtr 1' },
+                        { value: 2, text: 'Qtr 2' },
+                        { value: 3, text: 'Qtr 3' },
+                        { value: 4, text: 'Qtr 4' }
+                    ];
+                }
+        
+                options.forEach(option => {
+                    const opt = document.createElement('option');
+                    opt.value = option.value || option;
+                    opt.text = option.text || option;
+                    secondDropdown.appendChild(opt);
+                });
+            }
+        
+            // Initialize the second dropdown on page load
+            document.addEventListener('DOMContentLoaded', updateSecondDropdown);
+        
+            // Update second dropdown when frequency is changed
+            document.getElementById('frequency').addEventListener('change', updateSecondDropdown);
+        </script>        
     </body>    
 </html>
