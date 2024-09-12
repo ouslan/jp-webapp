@@ -218,7 +218,14 @@ def demographic_graph():
 
     # Create the graph
     fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Anual', width=1400, height=750)
-
+    
+    # Update layout with range slider and selectors
+    fig.update_xaxes(
+        rangeslider_visible=True,
+        rangeselector=dict(
+        )
+    )
+    
     # Convert the figure to HTML
     demographic_graph_html = fig.to_html(full_html=False)
     return demographic_graph_html
@@ -251,13 +258,6 @@ def trimestral_demographic_graph(selected_graph=1):
     fig.update_xaxes(
         rangeslider_visible=True,
         rangeselector=dict(
-            buttons=list([
-                dict(count=1, label="1m", step="month", stepmode="backward"),
-                dict(count=6, label="6m", step="month", stepmode="backward"),
-                dict(count=1, label="YTD", step="year", stepmode="todate"),
-                dict(count=1, label="1y", step="year", stepmode="backward"),
-                dict(step="all")
-            ])
         )
     )
 
@@ -287,7 +287,13 @@ def monthly_demographic_graph():
 
     # Create the graph
     fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Mensual', width=1500, height=750)
-    fig.show()
+    
+    # Update layout with range slider and selectors
+    fig.update_xaxes(
+        rangeslider_visible=True,
+        rangeselector=dict(
+        )
+    )
     
     # Convert the figure to HTML
     monthly_demographic_graph_html = fig.to_html(full_html=False)
