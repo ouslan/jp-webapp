@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>JP-362 Transacciones con el Exterior para la Balanza de Pagos de Puerto Rico</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
+
+    <link rel="stylesheet" href="{% static 'forms/balanza_de_pagos/JP-362-qtr.css' %}" />
+    <link rel="stylesheet" href="{% static 'website.css' %}" />
+  </head>
+
+  <body>
+    <form method="POST" action="{% url 'JP-362-qtr' %}">
+        {% csrf_token %}
+        <!-- Header -->
+        <section class="header">
+        <table id="header_line">
+            <tr>
+            <td id="header_left">
+                JP-362<br>
+                Rev. 7/17<br>
+                <br>
+                <br>
+                <input id="header_inputs_right" type="number" name="year_1" min="1000" max="9999" placeholder="Año / Year" required><br>
+                <select id="quater_select" name="dropdown_fiscal_year_1">
+                    <option value="">Select Trimester</option>
+                    <option value="Q1-(Jan-Mar)">Q1-(Jan-Mar)</option>
+                    <option value="Q2-(Apr-Jun)">Q2-(Apr-Jun)</option>
+                    <option value="Q3-(Jul-Sep)">Q3-(Jul-Sep)</option>
+                    <option value="Q4-(Oct-Dec)">Q4-(Oct-Dec)</option>
+                </select>
+            </td>
+            <td id="header_center">
+                <img src="{% static 'JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
+                TRANSACCIONES CON EL EXTERIOR PARA LA BALANZA DE PAGOS DE PUERTO RICO<br>
+                (EN MILES DE DOLARES)<br>
+                quaterly
+            </td>
+            <td id="header_right">
+                Junta de Planificación de Puerto Rico<br>
+                Programa de Planificación Económica y Social<br>
+                Subprograma de Análisis Económico<br>
+            </td>
+            </tr>
+        </table>
+        </section>
+        
+        <main>
+        <form method="POST" action="{% url 'JP-362-qtr' %}">
+            {% csrf_token %}
+            <section>
+            <div class="body_header">
+                <strong id="name">Nombre de la Empresa Pública:</strong>
+                <input id="name_input" class="text-box space-between" name="company_name" placeholder="Nombre de Empresa Pública" required>
+                </div>
+            </section>
+
+            <br>
+            <div class="custom-line"></div>
+
+            <section class="divider-container">
+                <table>
+                    <tr>
+                        <th rowspan="2">Descripción</th>
+                        <th rowspan="2">Balance Inicial</th>
+                        <th rowspan="2">Emisiones</th>
+                        <th rowspan="2">Amortizaciones</th>
+                        <th rowspan="2">Balance Final</th>
+                        <th rowspan="2">Interés Pagado en el año</th>
+                        <th rowspan="2">Nombre del acreedor en el exterior</th>
+                    </tr>
+                    
+                    <!-- Line 1 -->
+                    <tr>
+                        <tr>
+                        <td><h4 id="table_title">1. Deudas en el Exterios <br>De Largo Plazo, Total</h4></td>
+                        <td><input type="number" name="debts_balance" placeholder="$" required></td>
+                        <td><input type="number" name="debts_emision" placeholder="$" required></td>
+                        <td><input type="number" name="debts_amortizacion" placeholder="$" required></td>
+                        <td><input type="number" name="debts_final" placeholder="$" required></td>
+                        <td><input type="number" name="debts_interes" placeholder="$" required></td>
+                        <td><input type="text" name="debts_acreedor" placeholder="Nombre del acreedor" required></td>
+                    </tr></tr>
+
+                    <!-- Line 2 -->
+                    <tr>
+                        <td>&emsp;Bonos, Valor Par</td>
+                        <td><input type="number" name="debts_bond_balance" placeholder="$" required></td>
+                        <td><input type="number" name="debts_bond_emision" placeholder="$" required></td>
+                        <td><input type="number" name="debts_bond_amortizacion" placeholder="$" required></td>
+                        <td><input type="number" name="debts_bond_final" placeholder="$" required></td>
+                        <td><input type="number" name="debts_bond_interes" placeholder="$" required></td>
+                        <td><input type="text" name="debts_bond_acreedor" placeholder="Nombre del acreedor" required></td>
+                    </tr>
+
+                    <!-- Line 3 -->
+                    <tr>
+                        <td>&emsp;Pagarés, Valor Par</td>
+                        <td><input type="number" name="debts_promossory_notes_balance" placeholder="$" required></td>
+                        <td><input type="number" name="debts_promossory_notes_emision" placeholder="$" required></td>
+                        <td><input type="number" name="debts_promossory_notes_amortizacion" placeholder="$" required></td>
+                        <td><input type="number" name="debts_promossory_notes_final" placeholder="$" required></td>
+                        <td><input type="number" name="debts_promossory_notes_interes" placeholder="$" required></td>
+                        <td><input type="text" name="debts_promossory_notes_acreedor" placeholder="Nombre del acreedor" required></td>
+                    </tr>
+                    
+                    <!-- Line 4 -->
+                    <tr>
+                        <td>&emsp;Otras (especifique)</td>
+                        <td><input type="number" name="debts_others_balance" placeholder="$"></td>
+                        <td><input type="number" name="debts_others_emision" placeholder="$"></td>
+                        <td><input type="number" name="debts_others_amortizacion" placeholder="$"></td>
+                        <td><input type="number" name="debts_others_final" placeholder="$"></td>
+                        <td><input type="number" name="debts_others_interes" placeholder="$"></td>
+                        <td><input type="text" name="debts_others_acreedor" placeholder="Nombre del acreedor"></td>
+                    </tr>
+                    
+                    <!-- Line 5 -->
+                    <tr>
+                        <td id="table_title"><strong>De Corto Plazo, Total<strong></td>
+                        <td><input type="number" name="short_term_balance" placeholder="$" required></td>
+                        <td><input type="number" name="short_term_emision" placeholder="$" required></td>
+                        <td><input type="number" name="short_term_amortizacion" placeholder="$" required></td>
+                        <td><input type="number" name="short_term_final" placeholder="$" required></td>
+                        <td><input type="number" name="short_term_interes" placeholder="$" required></td>
+                        <td><input type="text" name="short_term_acreedor" placeholder="Nombre del acreedor" required></td>
+                    </tr>
+
+                    <!-- Line 6 -->
+                    <tr>
+                        <td>&emsp;Pagarés, Valor Par</td>
+                        <td><input type="number" name="short_promossory_balance" placeholder="$" required></td>
+                        <td><input type="number" name="short_promossory_emision" placeholder="$" required></td>
+                        <td><input type="number" name="short_promossory_amortizacion" placeholder="$" required></td>
+                        <td><input type="number" name="short_promossory_final" placeholder="$" required></td>
+                        <td><input type="number" name="short_promossory_interes" placeholder="$" required></td>
+                        <td><input type="text" name="short_promossory_acreedor" placeholder="Nombre del acreedor" required></td>
+                    </tr>
+
+                    <!-- Line 7 -->
+                    <tr>
+                        <td>&emsp;Cuentas por pagar</td>
+                        <td><input type="number" name="short_account_balance" placeholder="$" required></td>
+                        <td><input type="number" name="short_account_emision" placeholder="$" required></td>
+                        <td><input type="number" name="short_account_amortizacion" placeholder="$" required></td>
+                        <td><input type="number" name="short_account_final" placeholder="$" required></td>
+                        <td><input type="number" name="short_account_interes" placeholder="$" required></td>
+                        <td><input type="text" name="short_account_acreedor" placeholder="Nombre del acreedor" required></td>
+                    </tr>
+
+                    <!-- Line 8 -->
+                    <tr>
+                        <td>&emsp;Otras (especifique)</td>
+                        <td><input type="number" name="short_others_balance" placeholder="$"></td>
+                        <td><input type="number" name="short_others_emision" placeholder="$"></td>
+                        <td><input type="number" name="short_others_amortizacion" placeholder="$"></td>
+                        <td><input type="number" name="short_others_final" placeholder="$"></td>
+                        <td><input type="number" name="short_others_interes" placeholder="$"></td>
+                        <td><input type="text" name="short_others_acreedor" placeholder="Nombre del acreedor"></td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+
+        <main class="divider-container">
+            <section>
+                <table>
+
+                    <!-- Line 9 -->
+                    <tr>
+                        <th rowspan="2">Descripción</th>
+                        <th rowspan="2">Balance Inicial</th>
+                        <th rowspan="2">Emisiones</th>
+                        <th rowspan="2">Amortizaciones</th>
+                        <th rowspan="2">Balance Final</th>
+                        <th rowspan="2">Interés Pagado en el año</th>
+                    </tr>
+
+                    <!-- Line 10 -->
+                    <tr>
+                        <tr>
+                            <td><h4 id="table_title">2. Activos en el Exterior De Largo Plazo, Total</h4></td>
+                            <td><input type="number" name="assets_balance" placeholder="$" required></td>
+                            <td><input type="number" name="assets_emision" placeholder="$" required></td>
+                            <td><input type="number" name="assets_amortizacion" placeholder="$" required></td>
+                            <td><input type="number" name="assets_final" placeholder="$" required></td>
+                            <td><input type="number" name="assets_interes" placeholder="$" required></td>
+                        </tr>
+                    </tr>
+
+                    <!-- Line 11 -->
+                    <tr>
+                        <td>&emsp;Valores del Gobierno de E.E.U.U., Valor Par</td>
+                        <td><input type="number" name="assets_values_balance" placeholder="$" required></td>
+                        <td><input type="number" name="assets_values_emision" placeholder="$" required></td>
+                        <td><input type="number" name="assets_values_amortizacion" placeholder="$" required></td>
+                        <td><input type="number" name="assets_values_final" placeholder="$" required></td>
+                        <td><input type="number" name="assets_values_interes" placeholder="$" required></td>
+                    </tr>
+
+                    <!-- Line 12 -->
+                    <tr>
+                        <td>&emsp;Otros, Valor Par (especifique)</td>
+                        <td><input type="number" name="assets_others_balance" placeholder="$"></td>
+                        <td><input type="number" name="assets_others_emision" placeholder="$"></td>
+                        <td><input type="number" name="assets_others_amortizacion" placeholder="$"></td>
+                        <td><input type="number" name="assets_others_final" placeholder="$"></td>
+                        <td><input type="number" name="assets_others_interes" placeholder="$"></td>
+                    </tr>
+
+                    <!-- Line 13 -->
+                    <tr>
+                        <td id="table_title"><strong>De Corto Plazo, Total</strong></td>
+                        <td><input type="number" name="short_balance" placeholder="$" required></td>
+                        <td><input type="number" name="short_emision" placeholder="$" required></td>
+                        <td><input type="number" name="short_amortizacion" placeholder="$" required></td>
+                        <td><input type="number" name="short_final" placeholder="$" required></td>
+                        <td><input type="number" name="short_interes" placeholder="$" required></td>
+                    </tr>
+
+                    <!-- Line 14 -->
+                    <tr>
+                        <td>&emsp;Balances Bancarios</td>
+                        <td><input type="number" name="short_balance_balance" placeholder="$" required></td>
+                        <td><input type="number" name="short_balance_emision" placeholder="$" required></td>
+                        <td><input type="number" name="short_balance_amortizacion" placeholder="$" required></td>
+                        <td><input type="number" name="short_balance_final" placeholder="$" required></td>
+                        <td><input type="number" name="short_balance_interes" placeholder="$" required></td>
+                    </tr>
+
+                    <!-- Line 15 -->
+                    <tr>
+                        <td>&emsp;Cuentas por Cobrar</td>
+                        <td><input type="number" name="short_accouts_balance" placeholder="$" required></td>
+                        <td><input type="number" name="short_accouts_emision" placeholder="$" required></td>
+                        <td><input type="number" name="short_accouts_amortizacion" placeholder="$" required></td>
+                        <td><input type="number" name="short_accouts_final" placeholder="$" required></td>
+                        <td><input type="number" name="short_accouts_interes" placeholder="$" required></td>
+                    </tr>
+
+                    <!-- Line 16 -->
+                    <tr>
+                        <td>&emsp;Otros (especifique)</td>
+                        <td><input type="number" name="short_others_balance_2" placeholder="$"></td>
+                        <td><input type="number" name="short_others_emision_2" placeholder="$"></td>
+                        <td><input type="number" name="short_others_amortizacion_2" placeholder="$"></td>
+                        <td><input type="number" name="short_others_final_2" placeholder="$"></td>
+                        <td><input type="number" name="short_others_interes_2" placeholder="$"></td>
+                    </tr>
+
+                </table>
+            </section>
+
+            <div id="custom-line"></div>
+
+            <div id="text_button">
+                Solicitamos el nombre del acreedor en el exterior para evitar duplicidad en los datos, ya que se obtienen información de varias fuentes. <br>
+            </div>
+
+            <section>
+                <div class="big-box-bottom">
+                    <div class="left-signature">
+                        <input type="text" id="signature" name="signature" placeholder="Name" required></input> <!-- Signature Input -->
+                        <hr> <!-- Signature Line -->
+                        <p>
+                            Name of person filling the questionnaire<br>
+                        </p>
+                    </div>
+
+                    <div class="right-signature">
+                        <input type="text" id="position" name="position" placeholder="Position" required></input> <!-- Signature Input -->
+                        <hr> <!-- Signature Line -->
+                        <p>
+                            Position<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="big-box-bottom" id="signature-bottom">
+                    <div class="left-signature">
+                        <input type="date" id="date" name="date" placeholder="Date" required></input> <!-- Signature Input -->
+                        <hr> <!-- Signature Line -->
+                        <p>
+                            Date<br>
+                        </p>
+                    </div>
+
+                    <div class="right-signature">
+                        <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="12" maxlength="12" name="phone" placeholder="123-456-7890" required><!-- Signature Input -->
+                        <hr> <!-- Signature Line -->
+                        <p>
+                            Phone Number<br>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class = 'submit-button-container'>
+            <input type="submit" value="SUBMIT" class="submit-button"></input>
+            </section>
+        <form>
+        </main>
+    </form>
+  </body>
+</html>

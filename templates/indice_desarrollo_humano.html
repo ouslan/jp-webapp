@@ -3,22 +3,23 @@
 
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <title>Datos Macroeconómicos</title>
+        <meta charset="UTF-8" />
+        <title>Indice Desarrollo Humano</title>
 
-        <!-- Favicons -->
         <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
-        <link rel="apple-touch-icon" href="{% static 'favicon-16x16.png' %}" />
-        <link rel="apple-touch-icon" href="{% static 'favicon-32x32.png' %}" />
-        <link rel="apple-touch-icon" href="{% static 'android-chrome-192x192.png' %}" />
-        <link rel="apple-touch-icon" href="{% static 'android-chrome-512x512.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-32x32.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-192x192.png' %}" />
+        <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="{% static 'macro.css' %}">
-        <link rel="stylesheet" href="{% static 'website.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'indice.css' %}">
+        <link rel="stylesheet" href="{% static 'website.css' %}" />
     </head>
 
     <body>
+        
+
+        <!-- --------------------- NAVIGATION ----------------- -->
         <div class="container">
             <div class="burger" onclick="toggleBurgerMenu()">
                 <span></span>
@@ -26,92 +27,29 @@
                 <span></span>
             </div>
             <ul class="burger_menu">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/centro-de-datos-macroeconomicos/">Centro de Datos Macroeconómicos</a></li>
-                <li><a href="/ciclos-economicos/">Ciclos Económicos</a></li>
-                <li><a href="/indicadores-mensuales/">Indicadores Mensuales</a></li>
-                <li><a href="/datos-demograficos/">Datos Demográficos</a></li>
+                <a href='/'>Home</a>
+                <a href='/centro-de-datos-macroeconomicos/'>Centro De Datos Macroeconómicos</a>
+                <a href='/ciclos-economicos/'>Ciclos Económicos</a>
+                <a href='/indicadores-mensuales/'>Indicadores Mensuales</a>
+                <a href='/datos-demograficos/'>Datos Demográficos</a>
             </ul>
 
-            <img src="{% static 'gobierno_de_puerto_rico.png' %}" alt="Logo del Gobierno de Puerto Rico" id="logo" />
+            <img src="{% static 'gobierno_de_puerto_rico.png' %}" alt="logo" id="logo" />
         </div>
 
         <main>
             <section>
-                <h1>Centro de Datos Macroeconómicos</h1>
+                <h1>Indice Desarrollo Humano</h1>
             </section>
 
             <section>
                 <p>
-                    La Junta de Planificación, a través de su Programa de Planificación Económica y Social, publica información sobre las variables macroeconómicas de Puerto Rico. Se incluyen variables como: Producto Bruto, Producto no Bruto, inversión en construcción, gasto de consumo e ingreso neto.
-                    Para información adicional puede comunicarse vía email <a href="mailto:diaz_a@jp.pr.gov" class="custom-link">diaz_a@jp.pr.gov</a> y <a href="mailto:perez_m@jp.pr.gov" class="custom-link">perez_m@jp.pr.gov</a>.
+                    Combina los índices de salud, ingresos y educación para calcular el Indice Desarrollo Humano general.
                 </p>
             </section>
 
-            <section>
-                <h2> Documentos</h2>
-                <p>
-                    <a href="https://jp.pr.gov/wp-content/uploads/2024/03/Series-Historicas-Seleccionadas-2001-2023p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 2001-2023)</a><br>
-                    <a href="https://jp.pr.gov/wp-content/uploads/2021/09/Series-historicas-1950-al-2011p.xlsx" class="custom-link" role="link">Serie Histórica Seleccionada (Años Fiscales 1950-2011)</a>
-                </p>
 
-            </section>
 
-            <!-- Instrucciones para la gráfica interactiva -->
-            <section>
-                <h2>Instrucciones para la Gráfica Interactiva</h2>
-            </section>
-            
-            <section class="instructions">
-                <p>
-                    <strong>1. Selección de Datos Macroeconómicos:</strong> 
-                    Utiliza el menú desplegable en la parte superior 
-                    de la gráfica para seleccionar diferentes datos macroeconómicos. 
-                    Cada opción del menú modifica los datos mostrados en el eje Y.
-                    Para desplazar el menú desplegable hacia arriba o hacia abajo, utiliza 
-                    la barra de desplazamiento ubicada en el lado derecho del menú.
-                </p>
-
-                <p>
-                    <strong>2. Navegación y Visualización:</strong> 
-                    Puedes mover el cursor sobre cualquier punto en la gráfica para 
-                    ver detalles específicos del dato en ese punto. La gráfica muestra 
-                    las fechas en el eje X (horizontal) y los valores de los datos macroeconómicos 
-                    seleccionado en el eje Y (vertical).
-                </p>
-                
-                <p>
-                    <strong>3. Personalización de la Gráfica:</strong>
-                    Los botones en la parte superior permiten personalizar la gráfica. 
-                    Puedes elegir diferentes datos macroeconómicos y ajustar la visualización según tus necesidades.
-                </p>
-            </section>
-            
-            <br>
-            <br>
-            <br>
-            
-            <!-- ----------------- FIRST GRAPH ----------------- -->
-            <section id="graph_title">
-                <h2>Series Históricas 1950-2011</h2>
-            </section>
-
-            <div class="graph-container">
-                {{ macro2|safe }}
-            </div>
-
-            <br>
-            <br>
-            <br>
-
-            <!-- ----------------- SECOND GRAPH ----------------- -->
-            <section id="graph_title">
-                <h2>Series Históricas 2001-2023</h2>
-            </section>
-
-            <div class="graph-container">
-                {{ macro1|safe }}
-            </div>
         </main>
             <!-- ------------------ FOOTER --------------------- -->
             <footer>
