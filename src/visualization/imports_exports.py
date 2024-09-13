@@ -33,6 +33,10 @@ def web_app_imports_exports(request):
             df3_imports = df3_imports.filter(pl.col("qrt") == int(second_dropdown))
             fig = px.pie(df3_imports, values='imports', names='country')
         
+        if frequency == None and second_dropdown == None:
+            frequency = "Yearly"
+            second_dropdown = 2009
+            
         fig.update_layout(
             title={
                 'text': f"Gráfica de Importaciones: {frequency} / {second_dropdown}",
@@ -68,7 +72,11 @@ def web_app_imports_exports(request):
             df3_exports = df3_exports.with_columns(exports=pl.col("exports")) # type: ignore
             df3_exports = df3_exports.filter(pl.col("qrt") == int(second_dropdown_2))
             fig1 = px.pie(df3_exports, values='exports', names='country')
-        
+            
+        if frequency_2 == None and second_dropdown_2 == None:
+            frequency_2 = "Yearly"
+            second_dropdown_2 = 2009
+            
         fig1.update_layout(
             title={
                 'text': f"Gráfica de Exportaciones: {frequency_2} / {second_dropdown_2}",
