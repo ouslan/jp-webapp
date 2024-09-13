@@ -86,6 +86,12 @@
                         <label id="drop_title" for="second_dropdown">Tiempo:</label>
                         <select name="second_dropdown" id="second_dropdown">
                             <option value="default_value" {% if selected_second_dropdown == "default_value" %}selected{% endif %}>Default</option>
+                            {% if selected_frequency == "Quarterly" %}
+                                <option value="1" {% if selected_second_dropdown == "1" %}selected{% endif %}>Qtr 1</option>
+                                <option value="2" {% if selected_second_dropdown == "2" %}selected{% endif %}>Qtr 2</option>
+                                <option value="3" {% if selected_second_dropdown == "3" %}selected{% endif %}>Qtr 3</option>
+                                <option value="4" {% if selected_second_dropdown == "4" %}selected{% endif %}>Qtr 4</option>
+                            {% endif %}
                         </select>
                     </section>
 
@@ -167,7 +173,7 @@
         
                 let options = [];
                 if (frequency === 'Yearly') {
-                    options = Array.from({ length: 12 }, (_, i) => 2009 + i); 
+                    options = Array.from({ length: 16 }, (_, i) => 2009 + i); 
                 } else if (frequency === 'Monthly') {
                     options = [
                         { value: 1, text: 'January' },
