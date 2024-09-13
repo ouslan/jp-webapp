@@ -39,7 +39,7 @@ def web_app_imports_exports(request):
             
         fig.update_layout(
             title={
-                'text': f"Gráfica de Importaciones: {frequency} / {second_dropdown}",
+                'text': f"Time: {frequency} / {second_dropdown}",
                 'x': 0.5,
                 'font': {'color': 'black'}
             },
@@ -79,7 +79,7 @@ def web_app_imports_exports(request):
             
         fig1.update_layout(
             title={
-                'text': f"Gráfica de Exportaciones: {frequency_2} / {second_dropdown_2}",
+                'text': f"Time: {frequency_2} / {second_dropdown_2}",
                 'x': 0.5,
                 'font': {'color': 'black'}
             },
