@@ -9,7 +9,6 @@ urlpatterns = [
     re_path(r"^proyecciones/$", views.proyecciones_poblacionales, name="proyecciones_poblacionales"),
     re_path(r"^centro-de-datos-macroeconomicos/$", views.macro, name="macro"),
     re_path(r"^indice-desarrollo-humano/$", views.indice_desarrollo_humano, name="indice-desarrollo-humano"),
-    re_path(r"^salud-ingresos-educacion/$", views.salud_ingresos_educacion, name="salud-ingresos-educacion"),
     re_path(r"^ciclos-economicos/$", views.ciclos_economicos, name="ciclos_economicos"),
     re_path(r"^indicadores-mensuales/$", views.indicadores, name="indicadores"),
     re_path(r"^datos-demograficos/$", views.datos_demograficos, name="datos_demograficos"),
@@ -61,6 +60,7 @@ urlpatterns = [
     re_path(r"^IP-720-alojamiento-y-servicio-de-comida/$", views.IP_720, name="IP-720"),
     re_path(r"^IP-810-otros-servicios/$", views.IP_810, name="IP-810"),
     re_path(r"^JP-547-agencies-transactions/$", views.JP_547, name="JP-547"),
+    re_path(r"^imports-and-exports/$", views.imports_and_exports, name="imports-and-exports"),
     re_path(r"^Forms/$", views.Forms, name="Forms"), 
         
     # Asegura los path que estén bien cuando añadas otro

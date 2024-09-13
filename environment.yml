@@ -15,6 +15,7 @@ dependencies:
   - sqlalchemy=2.0.31
   - python-dotenv=1.0.1
   - requests=2.32.3 
+  - tqdm=4.66.5 
   - pip:
       - Django==5.0.8
       - psycopg2-binary==2.9.9

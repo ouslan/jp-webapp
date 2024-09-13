@@ -10,6 +10,7 @@ import csv
 import os
 from src.visualization.indicadores import web_app_indicadores
 from src.visualization.macro import web_app_macro
+from src.visualization.imports_exports import web_app_imports_exports
 from src.formularios.form_ip_110 import IP_110
 from src.formularios.form_jp_304 import JP_304
 from src.formularios.form_jp_361 import JP_361
@@ -87,6 +88,9 @@ def proyecciones_poblacionales(request):
 
 def macro(request):
     return web_app_macro(request)
+
+def imports_and_exports(request):
+    return web_app_imports_exports(request)
 
 
 def demographic_graph():
