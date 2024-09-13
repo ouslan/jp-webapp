@@ -15,7 +15,6 @@
         <link rel="apple-touch-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="{% static 'macro.css' %}">
         <link rel="stylesheet" href="{% static 'imports_and_exports.css' %}">
         <link rel="stylesheet" href="{% static 'website.css' %}">
     </head>
@@ -39,11 +38,52 @@
             <img src="{% static 'gobierno_de_puerto_rico.png' %}" alt="Logo del Gobierno de Puerto Rico" id="logo" />
         </div>
 
+        <div class="introduction">
+            <h1>Importaciones y Exportaciones en Puerto Rico:</h1>
+        
+            <h2>Introducción</h2>
+            <p>
+                En el contexto de Puerto Rico, las importaciones y exportaciones son fundamentales para la economía de la isla. 
+                Estos intercambios comerciales permiten a Puerto Rico acceder a productos y servicios que no se producen localmente 
+                y al mismo tiempo, proporcionan oportunidades para la exportación de bienes y servicios únicos a mercados internacionales. 
+                Comprender estos aspectos es esencial para la planificación fiscal y el desarrollo económico de la isla.
+            </p>
+        
+            <h2>Importaciones en Puerto Rico</h2>
+            <p>
+                Puerto Rico importa una amplia gama de productos, desde bienes de consumo hasta materias primas necesarias para diversas industrias. 
+                Las importaciones incluyen alimentos, maquinaria, productos farmacéuticos, y otros bienes esenciales que no se producen localmente en la isla. 
+                La gestión eficiente de las importaciones es crucial para mantener el equilibrio en la balanza comercial y asegurar la estabilidad económica.
+            </p>
+        
+            <h2>Exportaciones de Puerto Rico</h2>
+            <p>
+                Puerto Rico también se destaca en la exportación de productos como productos farmacéuticos, dispositivos médicos, y productos manufacturados. 
+                Las exportaciones contribuyen significativamente al ingreso nacional y al desarrollo económico de la isla. Fortalecer las oportunidades de exportación 
+                puede impulsar el crecimiento económico y crear empleos en diversas industrias.
+            </p>
+        
+            {% comment %} <h2>Importancia Económica para Puerto Rico</h2>
+            <p>
+                El comercio internacional, que abarca tanto importaciones como exportaciones, es vital para la economía de Puerto Rico. Facilita el acceso a bienes 
+                y servicios que no están disponibles localmente y abre puertas para que las empresas locales lleguen a mercados internacionales. Una gestión efectiva 
+                de estos intercambios es crucial para el desarrollo económico sostenido y la estabilidad fiscal de la isla.
+            </p>
+        
+            <h2>Tendencias Actuales</h2>
+            <p>
+                Es importante estar al tanto de las tendencias actuales en importaciones y exportaciones para adaptar las políticas y estrategias económicas. 
+                Los cambios en las políticas comerciales, los acuerdos internacionales y las condiciones del mercado global pueden afectar el comercio de Puerto Rico. 
+                Mantenerse informado sobre estas tendencias ayuda a planificar y ajustar las estrategias fiscales y económicas adecuadamente.
+            </p> {% endcomment %}
+        </div>
+        
+
         <div class="instructions">
             <h1>Instrucciones para usar la gráfica interactiva:</h1>
             <div>
                 <p>
-                    <strong>Descripción de la Gráfica:</strong> La gráfica muestra un desglose de importaciones por país en forma de un gráfico 
+                    <strong>Descripción de la Gráfica:</strong> Las gráficas muestran un desglose de importaciones y exportaciones por país en forma de un gráfico 
                     de pastel. Cada porción representa el porcentaje de importaciones de un país específico.
                 </p>
 
@@ -69,40 +109,72 @@
             </div>
         </div>
 
-        <div class="graph_container">
-            <form method="post">
-                {% csrf_token %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="graph_container_1">
+                    <h1 id="graph_title">Importaciones</h1>
+                    <section id="buttons">
+                        <section id="dropdowns">
+                            <label id="drop_title" for="frequency">Frecuencia:</label>
+                            <select name="frequency" id="frequency">
+                                <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
+                                <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
+                                <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
+                            </select>
+                        </section>
+                        
+                        <section id="dropdowns">
+                            <label id="drop_title" for="second_dropdown">Periodo:</label>
+                            <select name="second_dropdown" id="second_dropdown">
+                                <option value="default_value" {% if selected_second_dropdown == "default_value" %}selected{% endif %}>Default</option>
+                                {% if selected_frequency == "Quarterly" %}
+                                    <option value="1" {% if selected_second_dropdown == "1" %}selected{% endif %}>Qtr 1</option>
+                                    <option value="2" {% if selected_second_dropdown == "2" %}selected{% endif %}>Qtr 2</option>
+                                    <option value="3" {% if selected_second_dropdown == "3" %}selected{% endif %}>Qtr 3</option>
+                                    <option value="4" {% if selected_second_dropdown == "4" %}selected{% endif %}>Qtr 4</option>
+                                {% endif %}
+                            </select>
+                        </section>
+
+                        <button id="submit" type="submit">Submit</button>
+                    </section>
+                
+                <div id="graph_1">
+                    {{ imports_and_exports|safe }}
+                </div>
+            </div>
+
+            <div class="graph_container_2">
+                <h1 id="graph_title_2">Exportaciones</h1>
                 <section id="buttons">
                     <section id="dropdowns">
-                        <label id="drop_title" for="frequency">Frecuencia:</label>
-                        <select name="frequency" id="frequency">
-                            <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
-                            <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
-                            <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
+                        <label id="drop_title" for="frequency_2">Frecuencia:</label>
+                        <select name="frequency_2" id="frequency_2">
+                            <option value="Yearly" {% if selected_frequency_2 == "Yearly" %}selected{% endif %}>Yearly</option>
+                            <option value="Monthly" {% if selected_frequency_2 == "Monthly" %}selected{% endif %}>Monthly</option>
+                            <option value="Quarterly" {% if selected_frequency_2 == "Quarterly" %}selected{% endif %}>Quarterly</option>
                         </select>
                     </section>
                     
                     <section id="dropdowns">
-                        <label id="drop_title" for="second_dropdown">Tiempo:</label>
-                        <select name="second_dropdown" id="second_dropdown">
-                            <option value="default_value" {% if selected_second_dropdown == "default_value" %}selected{% endif %}>Default</option>
-                            {% if selected_frequency == "Quarterly" %}
-                                <option value="1" {% if selected_second_dropdown == "1" %}selected{% endif %}>Qtr 1</option>
-                                <option value="2" {% if selected_second_dropdown == "2" %}selected{% endif %}>Qtr 2</option>
-                                <option value="3" {% if selected_second_dropdown == "3" %}selected{% endif %}>Qtr 3</option>
-                                <option value="4" {% if selected_second_dropdown == "4" %}selected{% endif %}>Qtr 4</option>
+                        <label id="drop_title" for="second_dropdown_2">Periodo:</label>
+                        <select name="second_dropdown_2" id="second_dropdown_2">
+                            <option value="default_value" {% if selected_second_dropdown_2 == "default_value" %}selected{% endif %}>Default</option>
+                            {% if selected_frequency_2 == "Quarterly" %}
+                                <option value="1" {% if selected_second_dropdown_2 == "1" %}selected{% endif %}>Qtr 1</option>
+                                <option value="2" {% if selected_second_dropdown_2 == "2" %}selected{% endif %}>Qtr 2</option>
+                                <option value="3" {% if selected_second_dropdown_2 == "3" %}selected{% endif %}>Qtr 3</option>
+                                <option value="4" {% if selected_second_dropdown_2 == "4" %}selected{% endif %}>Qtr 4</option>
                             {% endif %}
                         </select>
                     </section>
 
-                    <button id="submit" type="submit">Submit</button>
-                </section>
+                    <button id="submit_2" type="submit">Submit</button>
+                </section> 
+                <div id="graph_2">
+                    {{ imports_and_exports_2|safe }}
+                </div>
             </form>
-            
-            <div id="graph">
-                {{ imports_and_exports|safe }}
-            </div>
-        </div>
 
           <!-- ------------------ FOOTER --------------------- -->
           <footer>
@@ -205,12 +277,56 @@
                     secondDropdown.appendChild(opt);
                 });
             }
+
+            function updateSecondDropdown2() {
+                const frequency = document.getElementById('frequency_2').value;
+                const secondDropdown = document.getElementById('second_dropdown_2');
+                secondDropdown.innerHTML = ''; 
         
-            // Initialize the second dropdown on page load
-            document.addEventListener('DOMContentLoaded', updateSecondDropdown);
+                let options = [];
+                if (frequency === 'Yearly') {
+                    options = Array.from({ length: 16 }, (_, i) => 2009 + i); 
+                } else if (frequency === 'Monthly') {
+                    options = [
+                        { value: 1, text: 'January' },
+                        { value: 2, text: 'February' },
+                        { value: 3, text: 'March' },
+                        { value: 4, text: 'April' },
+                        { value: 5, text: 'May' },
+                        { value: 6, text: 'June' },
+                        { value: 7, text: 'July' },
+                        { value: 8, text: 'August' },
+                        { value: 9, text: 'September' },
+                        { value: 10, text: 'October' },
+                        { value: 11, text: 'November' },
+                        { value: 12, text: 'December' }
+                    ];
+                } else if (frequency === 'Quarterly') { 
+                    options = [
+                        { value: 1, text: 'Qtr 1' },
+                        { value: 2, text: 'Qtr 2' },
+                        { value: 3, text: 'Qtr 3' },
+                        { value: 4, text: 'Qtr 4' }
+                    ];
+                }
         
-            // Update second dropdown when frequency is changed
+                options.forEach(option => {
+                    const opt = document.createElement('option');
+                    opt.value = option.value || option;
+                    opt.text = option.text || option;
+                    secondDropdown.appendChild(opt);
+                });
+            }
+        
+            // Initialize the second dropdowns on page load
+            document.addEventListener('DOMContentLoaded', () => {
+                updateSecondDropdown();
+                updateSecondDropdown2();
+            });
+        
+            // Update second dropdowns when frequency is changed
             document.getElementById('frequency').addEventListener('change', updateSecondDropdown);
+            document.getElementById('frequency_2').addEventListener('change', updateSecondDropdown2);
         </script>        
     </body>    
 </html>
