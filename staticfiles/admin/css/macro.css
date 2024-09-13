@@ -1,85 +1,80 @@
+body, header {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    margin-bottom: 0px;
+}
+
+main {
+    max-width: 100%;
+    width: 1500px;
+    margin: 0 auto;
+}
+
 h1 {
     font-size: 3em;
     margin-top: 4vw;
-    margin-left: 8vw;
-    margin-right: 8vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin-top: 4vw;
-    margin-left: 8vw;
-    margin-right: 8vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: none;
+    margin-top: 2vw;
+    margin-left: 5vw;
+    margin-right: 3vw;
 }
 
 p {
     display: block;
-    font-size: 18px;
+    font-size: 1.2em;
+    text-align: justify;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    line-height: 1.5;
+}
+
+a {
+    font-size: 1.2em;
+}
+
+.block {
+    justify-content: center;
+}
+
+#header-image {
+    width: 100vw;
+    height: auto;
+}
+
+.graph-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.instructions {
+    margin-left: 30px;
+}
+
+#instruction_li {
+    font-size: 1.2em;
     text-align: justify;
     margin-left: 8vw;
     margin-right: 8vw;
     line-height: 1.5;
 }
 
-.block {
-    /* background-color: lightgreen; */
-
-    /* display: flex; */
-    justify-content: center;
-}
-
-
-
-main {
-    max-width: 100%;
-    width: 1500px;
-    margin: 0 auto;
-
-}
-
-#header-image {
-    width: 100vw;
-    height: auto;
-
-}
-
-/* .graph-container {
-        margin-top: 10px;
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-    } */
-.graph-container {
-    display: flex;
-    align-items: center;
-    margin-left: 8vw;
-
-    justify-content: center;
+#graph_title {
     text-align: center;
-    margin-right: 250px;
 }
-
-#variableY {
-    /* left: 1%; */
-    margin-right: -115px;
-    /* margin-left: 115px; */
-    transform: rotate(270deg);
-    width: 250px;
-}
-
-#variableX {
-    top: 8%;
-    width: 300px;
-    margin-left: 50px;
-}
-
-.container-X {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    padding-bottom: 6rem;
-}
-
-/* } */
