@@ -72,9 +72,18 @@ from src.formularios.quaterly.ingreso_neto_qtr.form_ip_230_qtr import IP_230_qtr
 def home(request):
     return render(request, "home.html")
 
+def proyectos(request):
+    return render(request, "proyectos.html")
+
+def colaboradores(request):
+    return render(request, "colaboradores.html")
+
 def proyecciones_poblacionales(request):
+    d_table = demographic_table(request)
+
+    context = {"d_table": d_table}
     
-    return render(request, "proyecciones.html")
+    return render(request, "proyecciones.html", context)
 
 def macro(request):
     return web_app_macro(request)
@@ -95,13 +104,20 @@ def demographic_graph():
 
     # Create the graph
     fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Anual', width=1400, height=750)
-
+    
+    # Update layout with range slider and selectors
+    fig.update_xaxes(
+        rangeslider_visible=True,
+        rangeselector=dict(
+        )
+    )
+    
     # Convert the figure to HTML
     demographic_graph_html = fig.to_html(full_html=False)
     return demographic_graph_html
 
 
-def trimestral_demographic_graph():
+def trimestral_demographic_graph(selected_graph=1):
     # Read the new CSV file
     df = pd.read_csv("data/external/Trimestral_Historico.csv")
 
@@ -123,8 +139,14 @@ def trimestral_demographic_graph():
 
     # Create the graph
     fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Trimestral', width=1500, height=750)
-    # fig.update_traces(mode='markers+lines', marker=dict(size=8, symbol='x'))
     
+    # Update layout with range slider and selectors
+    fig.update_xaxes(
+        rangeslider_visible=True,
+        rangeselector=dict(
+        )
+    )
+
     # Convert the figure to HTML
     trimestral_demographic_graph_html = fig.to_html(full_html=False)
     return trimestral_demographic_graph_html
@@ -151,27 +173,38 @@ def monthly_demographic_graph():
 
     # Create the graph
     fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Mensual', width=1500, height=750)
-    fig.show()
+    
+    # Update layout with range slider and selectors
+    fig.update_xaxes(
+        rangeslider_visible=True,
+        rangeselector=dict(
+        )
+    )
     
     # Convert the figure to HTML
     monthly_demographic_graph_html = fig.to_html(full_html=False)
     return monthly_demographic_graph_html
 
-
 def indice_desarrollo_humano(request):
     return render(request, "indice_desarrollo_humano.html")
 
+def demographic_table(request):
+    df = pd.read_csv("data/external/fiscal_year_idb.csv")
+    demographic_table = df.to_html(index=False, classes='table table-striped')
+    return demographic_table
 
 def datos_demograficos(request):
     # Generate the annual demographic graph
     graph_html = demographic_graph()
     t_graph_html = trimestral_demographic_graph()
     m_graph_html = monthly_demographic_graph()
+    d_table = demographic_table(request)
 
     context = {
         "graph": graph_html,
         "t_graph": t_graph_html,
-        "m_graph": m_graph_html
+        "m_graph": m_graph_html,
+        "d_table": d_table
     }
 
     return render(request, "demograficos.html", context)

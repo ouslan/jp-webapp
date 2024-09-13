@@ -20,8 +20,8 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{% static 'home.css' %}" />
-        <link rel="stylesheet" href="{% static 'proyecciones.css' %}" />
-		<link rel="stylesheet" href="{% static 'jquery-ui_1.10.2.css' %}" />
+        <link rel="stylesheet" href="{% static 'demografico.css' %}" />
+        <link rel="stylesheet" href="{% static 'colaboradores.css' %}" />
 
     <style type="text/css">
     .scrolloff iframe {
@@ -89,7 +89,7 @@
             <div class="div-block">
                 <div class="agency-header">
                     <div class="div-agency-category">
-                        <h1 class="agency-category">Proyectos</h1>
+                        <h1 class="agency-category">Nuestro Equipo</h1>
                     </div>
                     <div class="div-agency-logo">
                         <div class="div-agency-name">
@@ -119,97 +119,96 @@
 
     <!-- MAIN CONTENT -->
     <main>
-        
+
         <!-- TITLE -->
         <section>
-            <h1>Proyecciones Poblacionales</h1>
+            <h1>Equipo</h1>
         </section>
 
         <!-- INTRODUCTION -->
         <section>
             <p>
-                Las proyecciones de población son una herramienta esencial para la planificación económica y 
-                social y la toma de decisiones en un país. Las proyecciones ayudan a preveer cambios 
-                en la demanda futura de servicios tales como agua, electricidad, vivienda, desperdicios 
-                sólidos, escuelas, servicios de salud y la fuerza de trabajo entre otros.
-            </p>
-            <p>
-                El método de componentes es el método más comunmente usado para
-                hacer proyecciones de poblaciónes grandes tales como todo un país o sus
-                regiones. Para este método se indica la trayectoria futura de la fecundidad,
-                mortalidad y migración neta por edad. Para las personas ya nacidas se sobrevive 
-                la población y se le agrega la migración neta para cada grupo de edad.
+                Nuestro equipo está compuesto por una colaboración única entre estudiantes de 
+                ingeniería de software, economistas y profesores dedicados. 
+                Juntos, combinamos nuestras habilidades y conocimientos para desarrollar 
+                soluciones innovadoras que abordan desafíos complejos. 
+                Cada miembro del equipo aporta una perspectiva única, lo que nos permite 
+                crear proyectos que son tanto técnicamente sólidos como económicamente 
+                viables. Estamos comprometidos con el aprendizaje continuo y la excelencia, 
+                trabajando en conjunto para llevar adelante iniciativas que marcan la 
+                diferencia.
             </p>
         </section>
-
-        <!-- SUBBODY 1 -->
-        <!-- <section>
-            <h2> Documentos </h2>
-
-            <p>
-                <a href="https://jp.pr.gov/wp-content/uploads/2023/06/Proyecciones-de-Poblacion-por-Municipios-anos-2021-2030.pdf" class="custom-link" role="link">Proyecciones de Población para los Municipios de Puerto Rico 2020-2030</a>
-                <br>
-                <a href="https://jp.pr.gov/wp-content/uploads/2021/09/Metodologia-PR-2015-2027-feb-2017.pdf" class="custom-link" role="link">Metodología para las Proyecciones de Población de Puerto Rico 2015-2027 y resultados relevantes</a>
-                <br>
-                <a href="https://estadisticas.pr/en/inventario-de-estadisticas/informe-anual-estadisticas-vitales" class="custom-link" role="link">Informe Anual Estadísticas Vitales</a>
-                <br>
-                <a href="https://estadisticas.pr/en/inventario-de-estadisticas/estadisticas-vitales" class="custom-link" role="link">Estadísticas Vitales</a>
-                <br>
-            </p>
-
-        </section> -->
-
-            <!-- SUBBODY 2 -->
-            <!-- <section>
-                <h2>Instrucciones</h2>
-                <p>1. Para seleccionar la variable que interesa representar gráficamente debe pasar encima del nombre de la variable continua al eje vertical (horizontal).</p>
-                <p>2. Si desea comparar el dato de la variable presentada con el dato de las otras variables disponibles debe pasar encima del par ordenado (el punto en la gráfica).</p>
-                <p>3. También, puede elegir el mes para el cual usted interesa la representación gráfica seleccionando el botón “Todos los meses”, ubicado debajo del eje horizontal.</p>
-                <p><strong>Nota:</strong> La serie que aparece en la gráfica no es la variable original, es una serie calculada. Esta serie es la diferencia entre la variable original y la tendencia. Por lo que si la serie original asume valores menores que la tendencia entonces la serie calculada (lo que aparece en la gráfica) tiene que asumir valores negativos.</p>
-            </section> -->
-            <br>
-            <br>
-            <br>
-
-            <!-- GRAPH -->
-
-             <style>
-            .table-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column; /* Ensures the heading and table are stacked vertically */
-                padding: 20px; /* Add padding to prevent overlap */
-            }
-
-            .table-responsive {
-                width: 100%; /* Ensures the table takes the full width of the container */
-                max-width: 800px; /* Optional: Set a max-width for the table */
-            }
-
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                }
-
-            th, td {
-                width: 150px; /* Set a fixed width for table cells */
-                height: 50px; /* Set a fixed height for table cells */
-                text-align: center; /* Center the text horizontally */
-                vertical-align: middle; /* Center the text vertically */
-                border: 1px solid #ddd; /* Add a border to the cells */
-            }
-            </style>
-			<section>
-                <div class="table-container">
-                    <h3>Año Fiscal</h3>
-                    <div class="table-responsive">
-                        {{ d_table|safe }}
+        <section>
+            <!-- PERFIL #1 -->
+            <div class="card">
+                <div class="circle">
+                    <div class="imgBox">
+                        <img src="https://i.ibb.co/qpZV3Qj/419-M26-Fk-XL-AC-UF894-1000-QL80.jpg" alt="">
                     </div>
                 </div>
-            </section>
+                <div class="content">
+                    <a href="#">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <h3>Edzel</h3>
+                    <div class="textIcon">
+                        <h4>Director General</h4>
+                        <a href="#">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- PERFIL #2 -->
+            <div class="card">
+                <div class="circle">
+                    <div class="imgBox">
+                        <img src="https://i.ibb.co/3zKrtYW/download.jpg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <h3>Fernando</h3>
+                    <div class="textIcon">
+                        <h4>Manager</h4>
+                        <a href="#">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- PERFIL #3 -->
+            <div class="card">
+                <div class="circle">
+                    <div class="imgBox">
+                        <img src="https://i.ibb.co/BCQNCLk/download.jpg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <a href="#">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <h3>Onnelle</h3>
+                    <div class="textIcon">
+                        <h4>Developer</h4>
+                        <a href="#">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- </section>
+        <br>
+        <br>
+
+<!-- FOOTER -->       
+        <footer>
             <div class="sct-footer">
                 <div class="footer-top-bar">
                     <div class="content-block flex-hor-end-to-end w-container">
@@ -267,4 +266,7 @@
              }
             </script>
             <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-            </script></body></html>
+            </script>
+            
+        </footer>
+    </html>

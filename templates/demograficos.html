@@ -111,21 +111,8 @@
                     <nav role="navigation" class="navmenu w-nav-menu">
                         <a href= "/" class="nav-link w-nav-link">INICIO</a>
                         <a href="/Forms/" class="nav-link w-nav-link">CUESTIONARIOS</a>
-                        
-                    <div data-hover="true" data-delay="0" class="w-dropdown">
-                        <div class="nav-link dropdown w-dropdown-toggle">
-                            <div class="w-icon-dropdown-toggle"></div>
-                            <div class="text-block-36">PROYECTOS</div>
-                        </div>
-                    
-                        <nav class="dropdown-list-4 w-dropdown-list">
-                            <a href="/ciclos-economicos/" class="nav-link w-nav-link">CICLOS ECONOMICOS</a>
-                            <a href="/indicadores-mensuales/" class="nav-link w-nav-link">INDICADORES ECONOMICOS</a>
-                            <a href="/centro-de-datos-macroeconomicos/" class="nav-link w-nav-link">DATOS MACROECONOMICOS</a>
-                            <a href="/datos-demograficos/" class="nav-link w-nav-link">DATOS DEMOGRAFICOS</a>
-                            <a href="/proyecciones/" class="nav-link w-nav-link">PROYECCIONES POBLACIONALES</a>
-                        </nav>
-                    </div>
+                        <a href= "/proyectos/" class="nav-link w-nav-link">PROYECTOS</a>
+                        <a href= "/colaboradores/" class="nav-link w-nav-link">NUESTRO EQUIPO</a>
                 </nav>
             </div>
         </div>
@@ -195,10 +182,31 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 100vh; /* Optional: Adjust the height as needed */
+                    height: auto; /* Adjust the height as needed */
+                    padding: 20px; /* Add padding to prevent overlap */
+                }
+                
+                /* Media queries for responsiveness */
+                @media (max-width: 1200px) {
+                    .graph-container {
+                        height: 80vh; /* Adjust the height for medium screens */
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .graph-container {
+                        height: 60vh; /* Adjust the height for small screens */
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .graph-container {
+                        height: 40vh; /* Adjust the height for extra small screens */
+                    }
                 }
             </style>
         </head>
+
             <div class="graph-container">
                 {{ graph|safe }}
             </div>

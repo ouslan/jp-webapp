@@ -4,6 +4,8 @@ from web_app import views
 
 urlpatterns = [
     re_path(r"^$", views.home, name="home"),
+    re_path(r"^proyectos/$", views.proyectos, name="proyectos"),
+    re_path(r"^colaboradores/$", views.colaboradores, name="colaboradores"),
     re_path(r"^proyecciones/$", views.proyecciones_poblacionales, name="proyecciones_poblacionales"),
     re_path(r"^centro-de-datos-macroeconomicos/$", views.macro, name="macro"),
     re_path(r"^indice-desarrollo-humano/$", views.indice_desarrollo_humano, name="indice-desarrollo-humano"),
