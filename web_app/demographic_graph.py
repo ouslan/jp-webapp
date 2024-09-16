@@ -8,35 +8,6 @@ df = pl.read_csv("data/external/Anual_Historico.csv")
 fig = go.Figure()
 
 # Add traces using data from the CSV file
-# Add Annotations and Buttons
-annotations = [
-    dict(x="2022-01-01", y=100, xref="x", yref="y",
-         text="Annotation Text", showarrow=True, arrowhead=1, ax=0, ay=-40)
-]
-
-# Define the update menu options
-update_menu = [
-    dict(label="Option 1",
-         method="update",
-         args=[{"visible": [True, False, True, False, True, False, True, False]},
-               {"title": "Option 1", "annotations": annotations}]),
-    dict(label="Option 2",
-         method="update",
-         args=[{"visible": [False, True, False, True, False, True, False, True]},
-               {"title": "Option 2", "annotations": annotations}]),
-    # Add more options as needed
-]
-
-# Update layout with the updatemenus dropdown
-fig.update_layout(
-    updatemenus=[
-        dict(
-            active=0,
-            buttons=update_menu
-        )
-    ]
-)
-
 # Top left
 fig.add_trace(
     go.Scatter(x=df['x_column'], y=df['y_column1'], name="yaxis data"),
@@ -91,7 +62,34 @@ fig.update_layout(
     height=800
 )
 
-# Add the Update Dropdown functionality here
+# Add Annotations and Buttons
+annotations_1 = [dict(x="2022-01-01", y=100, xref="x", yref="y",
+                      text="Annotation Text", showarrow=True, arrowhead=1, ax=0, ay=-40)]
+annotations_2 = [dict(x="2023-01-01", y=200, xref="x", yref="y",
+                      text="Another Annotation", showarrow=True, arrowhead=1, ax=0, ay=-40)]
+
+# Define the update menu options
+update_menu = [
+    dict(label="Option 1",
+         method="update",
+         args=[{"visible": [True, False, True, False, True, False, True, False]},
+               {"title": "Option 1", "annotations": annotations_1}]),
+    dict(label="Option 2",
+         method="update",
+         args=[{"visible": [False, True, False, True, False, True, False, True]},
+               {"title": "Option 2", "annotations": annotations_2}]),
+    # Add more options as needed
+]
+
+# Update layout with the updatemenus dropdown
+fig.update_layout(
+    updatemenus=[
+        dict(
+            active=0,
+            buttons=update_menu
+        )
+    ]
+)
 
 # Convert the figure to HTML
 graph_html = fig.to_html(full_html=False)
