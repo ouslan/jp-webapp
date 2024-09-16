@@ -2,6 +2,8 @@ import pandas as pd
 from django.shortcuts import render
 from web_app import graphics_function as gf
 from plotly.subplots import make_subplots
+import polars as pl
+import plotly.graph_objects as go
 from django.http import HttpResponse
 from src.dao.data_db_dao import DAO
 import plotly.express as px
@@ -111,50 +113,47 @@ def demographic_graph():
     # Update layout with range slider and selectors
     fig.update_layout(
         xaxis=dict(
-            rangeselector=dict(
-                buttons=list([
-                    dict(count=1, label="1m", step="month", stepmode="backward"),
-                    dict(count=6, label="6m", step="month", stepmode="backward"),
-                    dict(count=1, label="YTD", step="year", stepmode="todate"),
-                    dict(count=1, label="1y", step="year", stepmode="backward"),
-                    dict(step="all")
-                ])
-            ),
             rangeslider=dict(visible=True),
             type="date"
         ),
-        title="Demographic Graph",
+        title="Gráfica Anual",
         xaxis_title="Time",
         yaxis_title="Value",
-        width=800,
-        height=800
+        width=1400,
+        height=750
     )
-
-    # Add Annotations and Buttons
-    annotations_1 = [dict(x="2022-01-01", y=100, xref="x", yref="y",
-                        text="Annotation Text", showarrow=True, arrowhead=1, ax=0, ay=-40)]
-    annotations_2 = [dict(x="2023-01-01", y=200, xref="x", yref="y",
-                        text="Another Annotation", showarrow=True, arrowhead=1, ax=0, ay=-40)]
-
-    # Define the update menu options
-    update_menu = [
-        dict(label="Option 1",
-            method="update",
-            args=[{"visible": [True, False, True, False, True, False, True, False]},
-                {"title": "Option 1", "annotations": annotations_1}]),
-        dict(label="Option 2",
-            method="update",
-            args=[{"visible": [False, True, False, True, False, True, False, True]},
-                {"title": "Option 2", "annotations": annotations_2}]),
-        # Add more options as needed
+    
+    # Add Annotations (if needed, for now static)
+    annotations = [
+        dict(x="2022-01-01", y=100, xref="x", yref="y",
+             text="Annotation Text", showarrow=True, arrowhead=1, ax=0, ay=-40)
     ]
-
+    
+    # Create the button options to toggle y-columns on or off
+    update_menu = [
+        dict(label=f"Show {y_column}",
+             method="update",
+             args=[{"visible": [i == idx or vis for idx, vis in enumerate([False] * len(y_columns))]},  # Make the selected trace visible
+                   {"title": f"Showing {y_column}"}])
+        for i, y_column in enumerate(y_columns)
+    ]
+    
+    # Add a "Show All" button to display all traces
+    update_menu.append(
+        dict(label="Show All",
+             method="update",
+             args=[{"visible": [True] * len(y_columns)},  # Show all traces
+                   {"title": "All Y-Axis Columns"}])
+    )
+    
     # Update layout with the updatemenus dropdown
     fig.update_layout(
         updatemenus=[
             dict(
                 active=0,
-                buttons=update_menu
+                buttons=update_menu,
+                direction="down",
+                showactive=True
             )
         ]
     )
