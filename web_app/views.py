@@ -117,8 +117,8 @@ def demographic_graph():
             type="date"
         ),
         title="Gráfica Anual",
-        xaxis_title="Time",
-        yaxis_title="Value",
+        xaxis_title="Demográfico",
+        yaxis_title=" ",
         width=1400,
         height=750
     )
@@ -184,14 +184,48 @@ def trimestral_demographic_graph(selected_graph=1):
     # The rest of the columns are y-axes
     y_columns = columns[2:]
 
-    # Create the graph
-    fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Trimestral', width=1500, height=750)
-    
-    # Update layout with range slider and selectors
-    fig.update_xaxes(
-        rangeslider_visible=True,
-        rangeselector=dict(
-        )
+    # Create figure
+    fig = go.Figure()
+
+    # Add traces for each y-axis column
+    for i, y_column in enumerate(y_columns):
+        fig.add_trace(go.Scatter(x=df[x_column], y=df[y_column], name=y_column))
+
+    # Create dropdown menu options to toggle traces on or off
+    update_menu = [
+        dict(label=f"Show {y_column}",
+             method="update",
+             args=[{"visible": [i == idx or False for idx in range(len(y_columns))]},  # Make the selected trace visible
+                   {"title": f"Showing {y_column}"}])
+        for i, y_column in enumerate(y_columns)
+    ]
+
+    # Add a "Show All" button to display all traces
+    update_menu.append(
+        dict(label="Show All",
+             method="update",
+             args=[{"visible": [True] * len(y_columns)},  # Show all traces
+                   {"title": "All Y-Axis Columns"}])
+    )
+
+    # Update layout with the updatemenus dropdown and range slider
+    fig.update_layout(
+        updatemenus=[
+            dict(
+                buttons=update_menu,
+                direction="down",
+                showactive=True
+            )
+        ],
+        xaxis=dict(
+            rangeslider=dict(visible=True),
+            type="category"  # Use "category" type for year-quarter format
+        ),
+        title="Gráfica Trimestral",
+        xaxis_title="Trimestre",
+        yaxis_title=" ",
+        width=1500,
+        height=750
     )
 
     # Convert the figure to HTML
@@ -218,14 +252,48 @@ def monthly_demographic_graph():
     # The rest of the columns are y-axes
     y_columns = columns[2:]
 
-    # Create the graph
-    fig = px.line(df, x=x_column, y=y_columns, title='Gráfica Mensual', width=1500, height=750)
-    
-    # Update layout with range slider and selectors
-    fig.update_xaxes(
-        rangeslider_visible=True,
-        rangeselector=dict(
-        )
+    # Create figure
+    fig = go.Figure()
+
+    # Add traces for each y-axis column
+    for i, y_column in enumerate(y_columns):
+        fig.add_trace(go.Scatter(x=df[x_column], y=df[y_column], name=y_column))
+
+    # Create dropdown menu options to toggle traces on or off
+    update_menu = [
+        dict(label=f"Show {y_column}",
+             method="update",
+             args=[{"visible": [i == idx or False for idx in range(len(y_columns))]},  # Make the selected trace visible
+                   {"title": f"Showing {y_column}"}])
+        for i, y_column in enumerate(y_columns)
+    ]
+
+    # Add a "Show All" button to display all traces
+    update_menu.append(
+        dict(label="Show All",
+             method="update",
+             args=[{"visible": [True] * len(y_columns)},  # Show all traces
+                   {"title": "All Y-Axis Columns"}])
+    )
+
+    # Update layout with the updatemenus dropdown and range slider
+    fig.update_layout(
+        updatemenus=[
+            dict(
+                buttons=update_menu,
+                direction="down",
+                showactive=True
+            )
+        ],
+        xaxis=dict(
+            rangeslider=dict(visible=True),
+            type="category"  # Use "category" type for year-quarter format
+        ),
+        title="Gráfica Trimestral",
+        xaxis_title="Mensual",
+        yaxis_title=" ",
+        width=1500,
+        height=750
     )
     
     # Convert the figure to HTML
