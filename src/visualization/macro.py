@@ -103,7 +103,7 @@ def web_app_macro(request):
     # --------------------------------------------------------------------------------------------------------------------------------
     
     # SECOND GRAPH DATA
-    df2 = pd.read_parquet("data/processed/Series-Historicas-1950-2011_processed.parquet").sort_values(by="PERIODO = AÑO FISCAL").reset_index()
+    df2 = pd.read_parquet("data/processed/series-historicas-1950-2011_processed.parquet").sort_values(by="PERIODO = AÑO FISCAL").reset_index()
     for i in df2.columns:
         df2[i] = df2[i].astype(float)
         
