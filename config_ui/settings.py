@@ -15,6 +15,20 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+# Database credentials
+NAME = os.environ.get("POSTGRES_DB")
+USER = os.environ.get("POSTGRES_USER")
+PASSWORD = os.environ.get("POSTGRES_PASSWORD")
+PORT = os.environ.get("POSTGRES_PORT")
+
+if not all([NAME, USER, PASSWORD, PORT]):
+    raise ValueError("Database credentials not set")
+if os.environ.get("DEV") == "True":
+    HOST = "localhost"
+else:
+    HOST = "timescaledb"
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -85,11 +99,11 @@ WSGI_APPLICATION = 'config_ui.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("POSTGRES_DB"),
-        "USER": os.environ.get("POSTGRES_USER"),
-        "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
-        "HOST": "timescaledb",  # set in docker-compose.yml
-        "PORT": 5432,
+        "NAME": NAME,
+        "USER": USER,
+        "PASSWORD": PASSWORD,
+        "HOST": HOST,
+        "PORT": PORT,
     }
 }
 
