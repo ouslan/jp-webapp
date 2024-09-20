@@ -2,5 +2,5 @@
 	path = src/jp_imports
 	url = https://github.com/ouslan/jp-imports.git
 [submodule "src/jp_idh"]
-  path = src/jp_idh
-  url = https://github.com/ouslan/IDH-index.git
+	path = src/jp_idh
+	url = https://github.com/ouslan/IDH-index.git
