@@ -30,3 +30,6 @@ EXPOSE 8000
 
 # Copy the rest of the application code
 COPY . .
+
+# Run the application
+CMD ["python", "main.py"]
