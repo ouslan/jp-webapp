@@ -1,58 +1,51 @@
 import polars as pl
 import plotly.graph_objects as go
 
-
 # Read the CSV file into a DataFrame
 df = pl.read_csv("data/external/Trimestral_Historico.csv")
 
-# Create figure Added now
+# Convert Polars DataFrame to a Pandas DataFrame for Plotly compatibility
+df = df.to_pandas()
+
+# Create figure
 fig = go.Figure()
 
 # Add traces using data from the CSV file
-# Top left
-fig.add_trace(
-    go.Scatter(x=df['x_column'], y=df['y_column1'], name="yaxis data"),
-    )
-fig.add_trace(
-    go.Scatter(x=df['x_column'], y=df['y_column2'], name="yaxis2 data"),
-    )
+traces = []
+y_columns = df.columns[1:]  # Assuming the first column is the x-axis and the rest are y-axes
 
-# Top right
-fig.add_trace(
-    go.Scatter(x=df['x_column'], y=df['y_column3'], name="yaxis3 data"),
-    )
-fig.add_trace(
-    go.Scatter(x=df['x_column'], y=df['y_column4'], name="yaxis4 data"),
-    )
+for i, y_column in enumerate(y_columns):
+    trace = go.Scatter(x=df['x_column'], y=df[y_column], name=y_column)
+    traces.append(trace)
+    fig.add_trace(trace)
 
-# Bottom left
-fig.add_trace(
-    go.Scatter(x=df['x_column'], y=df['y_column5'], name="yaxis5 data"),
-    )
-fig.add_trace(
-    go.Scatter(x=df['x_column'], y=df['y_column6'], name="yaxis6 data"),
-    )
+# Create dropdown menu options to toggle traces on or off
+update_menu = [
+    dict(label=f"Show {y_column}",
+         method="update",
+         args=[{"visible": [i == idx or False for idx in range(len(y_columns))]},
+               {"title": f"Showing {y_column}"}])
+    for i, y_column in enumerate(y_columns)
+]
 
-# Bottom right
-fig.add_trace(
-    go.Scatter(x=df['x_column'], y=df['y_column7'], name="yaxis7 data"),
-    )
-fig.add_trace(
-    go.Scatter(x=df['x_column'], y=df['y_column8'], name="yaxis8 data"),
-    )
+# Add a "Show All" button to display all traces
+update_menu.append(
+    dict(label="Show All",
+         method="update",
+         args=[{"visible": [True] * len(y_columns)},
+               {"title": "All Y-Axis Columns"}])
+)
 
-# Update layout with range slider and selectors
+# Update layout with the updatemenus dropdown
 fig.update_layout(
+    updatemenus=[
+        dict(
+            buttons=update_menu,
+            direction="down",
+            showactive=True
+        )
+    ],
     xaxis=dict(
-        rangeselector=dict(
-            buttons=list([
-                dict(count=1, label="1m", step="month", stepmode="backward"),
-                dict(count=6, label="6m", step="month", stepmode="backward"),
-                dict(count=1, label="YTD", step="year", stepmode="todate"),
-                dict(count=1, label="1y", step="year", stepmode="backward"),
-                dict(step="all")
-            ])
-        ),
         rangeslider=dict(visible=True),
         type="date"
     ),

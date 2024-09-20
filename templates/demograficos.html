@@ -176,7 +176,7 @@
 
 
             <!-- Demographic Graph -->
-            <h1>Graphs</h1>
+            <h1>Grafica Anual</h1>
             <style>
                 .graph-container {
                     display: flex;
@@ -211,9 +211,13 @@
                 {{ graph|safe }}
             </div>
 
+            <h1>Grafica Trimestral</h1>
+
             <div class="graph-container">
                 {{ t_graph|safe }}
             </div>
+
+            <h1>Grafica Mensual</h1>
 
             <div class="graph-container">
                 {{ m_graph|safe }}
