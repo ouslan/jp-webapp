@@ -307,7 +307,7 @@ def indice_desarrollo_humano(request):
     return render(request, "indice_desarrollo_humano.html")
 
 def demographic_table(request):
-    df = pd.read_csv("data/external/fiscal_year_idb.csv")
+    df = pd.read_parquet("data/processed/fiscal_year_idb.parquet")
     demographic_table = df.to_html(index=False, classes='table table-striped')
     return demographic_table
 
