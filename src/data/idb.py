@@ -4,7 +4,7 @@ import requests
 
 def DataProcessIDB():
     # API Call
-    f_censo = requests.get("https://api.census.gov/data/timeseries/idb/5year?get=NAME,GENC,POP,BIRTHS,DEATHS,NIM&YR=2010:2050&for=genc+standard+countries+and+areas:PR&key=892037037db0dddc3c6e430c8107e8540d1cf57e")
+    f_censo = requests.get("https://api.census.gov/data/timeseries/idb/5year?get=NAME,GENC,POP,BIRTHS,DEATHS,NIM&YR=2010:2050&for=genc+standard+countries+and+areas:PR")
     f_censo = f_censo.json()
     
     # Turn API call to Pandas DataFrame
@@ -132,4 +132,4 @@ def DataProcessIDB():
     f_y.to_parquet("data/processed/yearly_idb.parquet", index=False)
     f_m.to_parquet("data/processed/monthly_idb.parquet", index=False)
     f_q.to_parquet("data/processed/quarterly_idb.parquet", index=False)
-    f_fy.to_parquet("data/processed/iscal_year_idb.parquet", index=False)
+    f_fy.to_parquet("data/processed/fiscal_year_idb.parquet", index=False)

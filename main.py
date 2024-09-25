@@ -8,6 +8,6 @@ def main() -> None:
     DataProcessByDate("data/processed/indicadores_economicos.parquet", "data/processed/")
     DataProcessHistoricalSeries("data/raw/series-historicas-1950-2011.parquet", "data/raw/series-historicas-2001-2023.parquet", "data/processed/")
     DataProcessIDB()
-    
+
 if __name__ == "__main__":
     main()

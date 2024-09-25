@@ -2,6 +2,7 @@ site_name: JP WebApp
 
 nav:
   - Home: index.md
+  - Data: data.md
 
 theme:
   name: 'material'
