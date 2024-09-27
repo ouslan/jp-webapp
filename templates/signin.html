@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'landing_page.css' %}" />
 
-<div class="container" id="container">
-  <div class="form-container sign-in-container">
-    <form method="post" action="{% url 'sign-in-page' %}">
-      {% csrf_token %}
-      <h1>Sign In</h1>
-      <h2></h2>
-      <input
-        type="text"
-        placeholder="Username"
-        name="username"
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        name="password"
-      />
-      <a href="#">Forgot your password?</a>
-      <button>Sign In</button>
-    </form>
-  </div>
-  <div class="overlay">
-    <div class="overlay-container overlay-panel">
-      <h3>Welcome Back!</h3>
-      <p>To keep connected with us please login with your information</p>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign In</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+    <link rel="apple-touch-icon" href="{% static 'favicon-16x16.png' %}" />
+    <link rel="apple-touch-icon" href="{% static 'favicon-32x32.png' %}" />
+    <link
+      rel="apple-touch-icon"
+      href="{% static 'android-chrome-192x192.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="{% static 'android-chrome-512x512.png' %}"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'landing_page.css' %}" />
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-in-container">
+        <form method="post" url=" sign-in-page">
+          {% csrf_token %}
+          <h1>Sign In</h1>
+          <h2></h2>
+          <input type="text" placeholder="Username" name="username" />
+          <input type="password" placeholder="Password" name="password" />
+          <a href="#">Forgot your password?</a>
+          <button>Sign In</button>
+        </form>
+      </div>
+      <div class="overlay">
+        <div class="overlay-container overlay-panel">
+          <h3>Welcome Back!</h3>
+          <p>To keep connected with us please login with your information</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </body>
+</html>
 
-{% comment %} <div class="error-message-container">
+<div class="error-message-container">
   {% if messages %}
   <div class="alert alert-danger">
     <ul>
@@ -40,4 +56,4 @@
     </ul>
   </div>
   {% endif %}
-</div> {% endcomment %}
+</div>
