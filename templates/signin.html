@@ -29,7 +29,16 @@
         <form method="post" url=" sign-in-page">
           {% csrf_token %}
           <h1>Sign In</h1>
-          <h2></h2>
+
+          <!-- Mostrar los mensajes de error -->
+          {% if messages %}
+          <div class="error-messages">
+            {% for message in messages %}
+            <p class="messages">{{ message }}</p>
+            {% endfor %}
+          </div>
+          {% endif %}
+
           <input type="text" placeholder="Username" name="username" />
           <input type="password" placeholder="Password" name="password" />
           <a href="#">Forgot your password?</a>
@@ -45,15 +54,3 @@
     </div>
   </body>
 </html>
-
-<div class="error-message-container">
-  {% if messages %}
-  <div class="alert alert-danger">
-    <ul>
-      {% for message in messages %}
-      <li><strong>Error:</strong> {{ message }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-</div>
