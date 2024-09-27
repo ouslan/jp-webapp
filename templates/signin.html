@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'landing_page.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'landing_page.css' %}" />
 
 <div class="container" id="container">
-    <div class="form-container sign-in-container">
-        <form method = "post" action="{% url 'signin' %}">
-            {% csrf_token %}
-            <h1>Sign In</h1>
-            <h2></h2>
-            <span>or use your account</span>
-            <input type="text" placeholder="{{ form.username.label }}" name="{{ form.username.name }}" />
-            <input type="password" placeholder="{{ form.password.label }}" name="{{ form.password.name }}" />
-            <a href="#">Forgot your password?</a>
-            <button>Sign In</button>
-        </form>
+  <div class="form-container sign-in-container">
+    <form method="post" action="{% url 'sign-in-page' %}">
+      {% csrf_token %}
+      <h1>Sign In</h1>
+      <h2></h2>
+      <input
+        type="text"
+        placeholder="Username"
+        name="username"
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        name="password"
+      />
+      <a href="#">Forgot your password?</a>
+      <button>Sign In</button>
+    </form>
+  </div>
+  <div class="overlay">
+    <div class="overlay-container overlay-panel">
+      <h3>Welcome Back!</h3>
+      <p>To keep connected with us please login with your information</p>
     </div>
-    <div class="overlay">
-        <div class="overlay-container overlay-panel">
-            <h3>Welcome Back!</h3>
-            <p>To keep connected with us please login with your personal info</p>
-        </div>
-    </div>
+  </div>
 </div>
 
-<div class="error-message-container"> 
-    {% if messages %}
-    <div class="alert alert-danger">
-        <ul>
-            {% for message in messages %}
-            <li><strong>Error:</strong> {{ message }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endif %}
-</div>
+{% comment %} <div class="error-message-container">
+  {% if messages %}
+  <div class="alert alert-danger">
+    <ul>
+      {% for message in messages %}
+      <li><strong>Error:</strong> {{ message }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div> {% endcomment %}

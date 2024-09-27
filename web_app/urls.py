@@ -62,6 +62,7 @@ urlpatterns = [
     re_path(r"^JP-547-agencies-transactions/$", views.JP_547, name="JP-547"),
     re_path(r"^imports-and-exports/$", views.imports_and_exports, name="imports-and-exports"),
     re_path(r"^Forms/$", views.Forms, name="Forms"), 
+    re_path(r"sign-in-page/$", views.sign_in_page, name="sign-in-page"),
         
     # Asegura los path que estén bien cuando añadas otro
     re_path(r"^JP-361-transactions-in-pr-of-external-insurance-companies-qrt/$", views.JP_361_qrt, name="JP-361-qrt"),
