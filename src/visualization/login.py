@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.views.decorators.csrf import csrf_protect
 
 @csrf_protect
-def sign_in_page(request):
+def log_in_page(request):
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
@@ -17,6 +17,6 @@ def sign_in_page(request):
                 messages.error(request, "Por favor ingrese un nombre de usuario y contraseña.")
             else:
                 messages.error(request, "El usuario no existe o la contraseña es incorrecta.")
-            return render(request, "signin.html")
+            return render(request, "registration/login.html")
     
-    return render(request, "signin.html")
+    return render(request, "registration/login.html")

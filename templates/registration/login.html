@@ -4,7 +4,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Sign In</title>
+    <title>Log In</title>
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
@@ -26,9 +26,9 @@
   <body>
     <div class="container" id="container">
       <div class="form-container sign-in-container">
-        <form method="post" url=" sign-in-page">
+        <form method="post" action="{% url 'web_app:log_in_page' %}">
           {% csrf_token %}
-          <h1>Sign In</h1>
+          <h1>Log In</h1>
 
           <!-- Mostrar los mensajes de error -->
           {% if messages %}
@@ -39,10 +39,15 @@
           </div>
           {% endif %}
 
-          <input type="text" placeholder="Username" name="username" />
-          <input type="password" placeholder="Password" name="password" />
+          <input type="text" placeholder="Username" name="username" required />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
           <a href="#">Forgot your password?</a>
-          <button>Sign In</button>
+          <button>Log In</button>
         </form>
       </div>
       <div class="overlay">
