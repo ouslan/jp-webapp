@@ -156,5 +156,5 @@ STATICFILES_DIRS = [BASE_DIR / 'staticfiles/admin/css',
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = "web_app:Forms"
-LOGIN_URL = "login"
+LOGIN_REDIRECT_URL = 'web_app:forms'
+LOGIN_URL = 'web_app:log_in_page'

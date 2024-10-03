@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, re_path
 from web_app import views
 from django.contrib.auth.views import LoginView
+from django.contrib.auth import logout
 
 app_name = 'web_app'
 
@@ -64,8 +65,9 @@ urlpatterns = [
     re_path(r"^IP-810-otros-servicios/$", views.IP_810, name="IP-810"),
     re_path(r"^JP-547-agencies-transactions/$", views.JP_547, name="JP-547"),
     re_path(r"^imports-and-exports/$", views.imports_and_exports, name="imports-and-exports"),
-    re_path(r"^Forms/$", views.Forms, name="Forms"), 
+    re_path(r"^forms/$", views.Forms, name="forms"), 
     re_path(r"^log-in-page/$", LoginView.as_view(template_name='registration/login.html'), name='log_in_page'),
+    re_path(r"^logout/", views.logout_view, name='logout'),
         
     # Asegura los path que estén bien cuando añadas otro
     re_path(r"^JP-361-transactions-in-pr-of-external-insurance-companies-qrt/$", views.JP_361_qrt, name="JP-361-qrt"),

@@ -1,5 +1,6 @@
 import pandas as pd
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from web_app import graphics_function as gf
@@ -402,9 +403,14 @@ def indicadores(request):
 def succesfull_page(request):
     return render(request, "forms/succesfull.html")
 
-@login_required
+
+@login_required(login_url='web_app:log_in_page')
 def Forms(request):
     return render(request, "forms/forms.html")
 
 def JP_544_1(request):
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-1.html")
+
+def logout_view(request):
+    logout(request)
+    return redirect('web_app:log_in_page')
