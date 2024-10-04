@@ -19,9 +19,9 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v10.0" nonce="6dSWy6dt"></script>
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="{% static 'home.css' %}" />
         <link rel="stylesheet" href="{% static 'demografico.css' %}" />
         <link rel="stylesheet" href="{% static 'colaboradores.css' %}" />
+        <script src="https://kit.fontawesome.com/2550a92b24.js" crossorigin="anonymous"></script>
 
     <style type="text/css">
     .scrolloff iframe {
@@ -84,7 +84,154 @@
         <noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
            </head>
     
-    
+<!--For some reason, it doesn't want to read from the CSS file-->
+        <style>
+            body {
+                margin: 0;
+                padding: 100px 0px;
+                height: 100%;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+
+            h1 {
+                text-align: center;
+                color: #000000;
+                font-size: 45px;
+            }
+
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                margin: auto;
+            }
+
+            .our-team {
+                background: #f7f5ec;
+                text-align: center;
+                overflow: hidden;
+                position: relative;
+                padding: 30px 0 40px;
+                margin: 0px 20px;
+                width: 30%;
+            }
+
+            .our-team .pic {
+                display: inline-block;
+                width: 130px;
+                height: 130px;
+                margin-bottom: 0px;
+                z-index: 1;
+                position: relative;
+            }
+
+            .our-team .pic::before {
+                content: "";
+                width: 100%;
+                height: 0;
+                border-radius: 50%;
+                background: #1785eb;
+                position: absolute;
+                bottom: 135%;
+                right: 0;
+                left: 0;
+                opacity: 0.2;
+                transform: scale(3);
+                transition: all 0.3s linear 0s;
+            }
+
+            .our-team:hover .pic::before {
+                height: 100%;
+            }
+
+            .ou-team .pic:after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: #1785eb;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            .our-team .pic img {
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+                transform: scale(1);
+                transition: all 0.9s ease 0s;
+            }
+
+            .our-team:hover .pic img {
+                box-shadow: 0 0 0 14px #f7f5ec;
+                transform: scale(0.7);
+            }
+
+            .our-team .team-content {
+                margin-bottom: 30px;
+            }
+
+            .our-team .title {
+                font-size: 22px;
+                font-weight: 700;
+                color: #4e5052;
+                letter-spacing: 1px;
+                margin-bottom: 5px;
+            }
+
+            .our-team .post {
+                display: block;
+                font-size: 15px;
+                color: #4e5052;
+            }
+
+            .our-team .social {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                background: #1785eb;
+                position: absolute;
+                bottom: -150px;
+                left: 0;
+                transition: all 0.5s ease 0s;
+            }
+
+            .our-team:hover .social {
+                bottom: 0;
+            }
+
+            .our-team .social li a {
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+                font-size: 17px;
+                color: #fff;
+                transition: all 0.3s ease 0s;
+            }
+
+            .our-team .social li a:hover {
+                color: #1785eb;
+                background: #f7f5ec;
+            }
+
+            @media (max-width: 720px) {
+                .container {
+                    flex-direction: column;
+                }
+
+                .our-team {
+                    width: 80%;
+                    margin-top: 30px; 
+                }
+            }
+
+        </style>
+
+
         <div class="sct-head">
             <div class="div-block">
                 <div class="agency-header">
@@ -120,10 +267,10 @@
     <!-- MAIN CONTENT -->
     <main>
 
-        <!-- TITLE -->
-        <section>
-            <h1>Equipo</h1>
-        </section>
+        <!-- Title -->
+         <section>
+            <h2>Equipo</h2>
+         </section>
 
         <!-- INTRODUCTION -->
         <section>
@@ -139,71 +286,136 @@
                 diferencia.
             </p>
         </section>
+
+        <br>
+        <br>
+        <br>
+
         <section>
-            <!-- PERFIL #1 -->
-            <div class="card">
-                <div class="circle">
-                    <div class="imgBox">
+            <h2>Estudiantes de la Universidad de Puerto Rico - Recinto Universitario de Mayaguez</h2>
+            <div class="container">
+                <!--Team 1-->
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="https://avatars.githubusercontent.com/u/94401170?v=4" alt="">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Adriana Carrasquillo</h3>
+                        <span class="post">Student</span>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://github.com/Adriana-Isabel" class="fab fa-github"></a></li>
+                        <li><a href="https://www.linkedin.com/in/adriana-carrasquillo-cruz-297777263" class="fab fa-linkedin"></a></li>
+                        <li><a href="#" class="fas fa-file-pdf"></a></li>
+                    </ul>
+                </div>
+                
+                <!--Team 2-->
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="https://avatars.githubusercontent.com/u/124413528?v=4" alt="">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Edzel E. Ortiz</h3>
+                        <span class="post">Student</span>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://github.com/EdzelOrtiz" class="fab fa-github"></a></li>
+                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                        <li><a href="#" class="fas fa-file-pdf"></a></li>
+                    </ul>
+                </div>
+
+                <!--Team 3-->
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="https://avatars.githubusercontent.com/u/87619490?v=4" alt="">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Alejandro Ouslan</h3>
+                        <span class="post">Student</span>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://github.com/ouslan" class="fab fa-github"></a></li>
+                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                        <li><a href="#" class="fas fa-file-pdf"></a></li>
+                    </ul>
+                </div>
+
+                <!--Team 4-->
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="https://avatars.githubusercontent.com/u/98779002?v=4" alt="">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Onnelle Lugo</h3>
+                        <span class="post">Student</span>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://github.com/Lennon0926" class="fab fa-github"></a></li>
+                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                        <li><a href="#" class="fas fa-file-pdf"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+<br>
+<br>
+<br>
+        <section>
+            <div class="container">
+                <!--Team 5-->
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="https://avatars.githubusercontent.com/u/98364824?v=4" alt="">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Fernando Sierra</h3>
+                        <span class="post">Student</span>
+                    </div>
+                    <ul class="social">
+                        <li><a href="https://github.com/Fernando2908" class="fab fa-github"></a></li>
+                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                        <li><a href="#" class="fas fa-file-pdf"></a></li>
+                    </ul>
+                </div>
+
+                <!--Team 6-->
+                <div class="our-team">
+                    <div class="pic">
                         <img src="https://i.ibb.co/qpZV3Qj/419-M26-Fk-XL-AC-UF894-1000-QL80.jpg" alt="">
                     </div>
-                </div>
-                <div class="content">
-                    <a href="#">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <h3>Edzel</h3>
-                    <div class="textIcon">
-                        <h4>Director General</h4>
-                        <a href="#">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </a>
+                    <div class="team-content">
+                        <h3 class="title">Name</h3>
+                        <span class="post">Student</span>
                     </div>
+                    <ul class="social">
+                        <li><a href="#" class="fab fa-github"></a></li>
+                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                        <li><a href="#" class="fas fa-file-pdf"></a></li>
+                    </ul>
                 </div>
-            </div>
 
-            <!-- PERFIL #2 -->
-            <div class="card">
-                <div class="circle">
-                    <div class="imgBox">
-                        <img src="https://i.ibb.co/3zKrtYW/download.jpg" alt="">
+                <!--Team 7-->
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="https://i.ibb.co/qpZV3Qj/419-M26-Fk-XL-AC-UF894-1000-QL80.jpg" alt="">
                     </div>
-                </div>
-                <div class="content">
-                    <a href="#">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <h3>Fernando</h3>
-                    <div class="textIcon">
-                        <h4>Manager</h4>
-                        <a href="#">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </a>
+                    <div class="team-content">
+                        <h3 class="title">Name</h3>
+                        <span class="post">Student</span>
                     </div>
+                    <ul class="social">
+                        <li><a href="#" class="fab fa-github"></a></li>
+                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                        <li><a href="#" class="fas fa-file-pdf"></a></li>
+                    </ul>
                 </div>
-            </div>
 
-            <!-- PERFIL #3 -->
-            <div class="card">
-                <div class="circle">
-                    <div class="imgBox">
-                        <img src="https://i.ibb.co/BCQNCLk/download.jpg" alt="">
-                    </div>
-                </div>
-                <div class="content">
-                    <a href="#">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                    <h3>Onnelle</h3>
-                    <div class="textIcon">
-                        <h4>Developer</h4>
-                        <a href="#">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
             </div>
-        
-        <!-- </section>
+        </section>
+
+
         <br>
         <br>
 

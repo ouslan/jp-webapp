@@ -4,9 +4,9 @@ from ..jp_imports.src.jp_imports.data_process import DataProcess
 from django.shortcuts import render
 
 def web_app_imports_exports(request):
-    df1_imports = DataProcess(saving_dir="data/", instance="jp_instetute", debug=True).process_int_jp(time="yearly", types="country").collect() # type: ignore
-    df2_imports = DataProcess(saving_dir="data/", instance="jp_instetute", debug=True).process_int_jp(time="monthly", types="country").collect() # type: ignore
-    df3_imports = DataProcess(saving_dir="data/", instance="jp_instetute", debug=True).process_int_jp(time="qrt", types="country").collect() # type: ignore
+    df1_imports = DataProcess(saving_dir="data/", debug=True).process_int_jp(time="yearly", types="country").collect() # type: ignore
+    df2_imports = DataProcess(saving_dir="data/", debug=True).process_int_jp(time="monthly", types="country").collect() # type: ignore
+    df3_imports = DataProcess(saving_dir="data/", debug=True).process_int_jp(time="qrt", types="country").collect() # type: ignore
 
     df1_exports = df1_imports.clone()
     df2_exports = df2_imports.clone()
