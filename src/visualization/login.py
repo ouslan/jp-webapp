@@ -1,22 +1,17 @@
-from django.shortcuts import render
-from django.contrib.auth import authenticate
 from django.contrib import messages
-from django.views.decorators.csrf import csrf_protect
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
 
-@csrf_protect
 def log_in_page(request):
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
-        
+
         user = authenticate(username=username, password=password)
         if user is not None:
-            return render(request, "forms/forms.html")
+            login(request, user)
+            return redirect('web_app:forms')
         else:
-            if not username or not password:
-                messages.error(request, "Por favor ingrese un nombre de usuario y contraseña.")
-            else:
-                messages.error(request, "El usuario no existe o la contraseña es incorrecta.")
             return render(request, "registration/login.html")
     
     return render(request, "registration/login.html")

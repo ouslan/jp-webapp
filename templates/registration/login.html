@@ -29,23 +29,22 @@
         <form method="post" action="{% url 'web_app:log_in_page' %}">
           {% csrf_token %}
           <h1>Log In</h1>
+          <br />
 
-          <!-- Mostrar los mensajes de error -->
-          {% if messages %}
-          <div class="error-messages">
-            {% for message in messages %}
-            <p class="messages">{{ message }}</p>
-            {% endfor %}
-          </div>
-          {% endif %}
-
-          <input type="text" placeholder="Username" name="username" required />
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            value="{{ request.POST.username }}"
+            required
+          />
           <input
             type="password"
             placeholder="Password"
             name="password"
             required
           />
+
           <a href="#">Forgot your password?</a>
           <button>Log In</button>
         </form>
