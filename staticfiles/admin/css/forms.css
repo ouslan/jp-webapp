@@ -555,7 +555,7 @@ a:hover {
 
 .profile-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: -40px;
@@ -629,3 +629,98 @@ a:hover {
   .Btn:active {
     transform: translate(2px ,2px);
   }
+
+/* Profile Button */
+.profile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(65, 105, 225); /* Color azul */
+}
+
+/* Profile Icon */
+.icon {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon svg {
+    width: 20px;
+}
+
+.icon svg path {
+    fill: white;
+}
+
+/* Hover Effect */
+.profile-btn:hover {
+    width: 120px;
+    border-radius: 40px;
+    transition-duration: .3s;
+}
+
+.profile-btn:hover .icon {
+    width: 35%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+.profile-btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+/* Click Effect */
+.profile-btn:active {
+    transform: translate(2px, 2px);
+}
+
+/* User Info - Hidden initially */
+.user-info {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 1000; /* Ensure it appears above other elements */
+    min-width: 180px;
+}
+
+/* Show user info when hovering over the profile button */
+.profile-btn:hover + .user-info {
+    margin-top: 28px;
+    margin-left: 4px;
+    display: block;
+}
+
+/* Text in profile button */
+.profile-btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+/* Click Effect */
+.profile-btn:active {
+    transform: translate(2px, 2px);
+}

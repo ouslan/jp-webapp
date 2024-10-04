@@ -109,6 +109,23 @@
             </div>
         </div>
         <div class="profile-container">
+            <!-- Profile Button -->
+            <button class="profile-btn">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14c-2.67 0-5.33-1.34-6.58-3.42.03-2.05 4.09-3.18 6.58-3.18 2.48 0 6.55 1.13 6.58 3.18C17.33 17.66 14.67 19 12 19z"/>
+                    </svg>
+                </div>
+                <div class="text">Profile</div>
+            </button>
+        
+            <!-- User Info - Hidden initially, shown on hover -->
+            <div class="user-info">
+                <p><strong>Usuario:</strong> John Doe</p>
+                <p><strong>Email:</strong> johndoe@example.com</p>
+            </div>
+        
+            <!-- Logout Button -->
             <form method="POST" action="{% url 'web_app:logout' %}">
                 {% csrf_token %}
                 <button type="submit" class="Btn">
@@ -120,7 +137,8 @@
                     <div class="text">Logout</div>
                 </button>
             </form>
-        </div>
+        </div>        
+        
         
         <div class="sct-head">
             <div class="div-block">
