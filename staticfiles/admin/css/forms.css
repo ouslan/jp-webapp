@@ -556,11 +556,9 @@ a:hover {
 .profile-container {
     display: flex;
     flex-direction: column;
-    background-color: #394447;
-    border-bottom: 1px solid #ffffff;
-    margin-bottom: 0.01px;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-bottom: -40px;
 }
 
 /* From Uiverse.io by vinodjangid07 */ 
