@@ -406,7 +406,8 @@ def succesfull_page(request):
 
 @login_required(login_url='web_app:log_in_page')
 def Forms(request):
-    return render(request, "forms/forms.html")
+    user = request.user
+    return render(request, "forms/forms.html", {"user": user})
 
 def JP_544_1(request):
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-1.html")
