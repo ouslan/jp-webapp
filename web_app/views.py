@@ -176,7 +176,7 @@ def projection_monthly_graph():
     fig.update_layout(
         xaxis=dict(
             rangeslider=dict(visible=True),
-            type="date"
+            type="category"
         ),
         title="Gráfica Mensual",
         xaxis_title=" ",
