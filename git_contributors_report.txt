@@ -1,0 +1,252 @@
+
+=== Detailed Git Stats for Branch: main ===
+Contribution stats (by author) on the current branch:
+
+	 Alejandro Ouslan <alejandro.ouslan@upr.edu>:
+	  insertions:    898	(100%)
+	  deletions:     747	(100%)
+	  files:         16	(100%)
+	  commits:       1	(100%)
+	  lines changed: 1645	(100%)
+	  first commit:  Wed Sep 25 16:37:43 2024 +0000
+	  last commit:   Wed Sep 25 16:37:43 2024 +0000
+
+	total:
+	  insertions:    898	(100%)
+	  deletions:     747	(100%)
+	  files:         16	(100%)
+	  commits:       1	(100%)
+
+Git changelogs:
+
+
+[2024-09-25 - Wednesday]
+ * 59 hotfix (#60) (Alejandro Ouslan)
+
+Branching tree view:
+
+* --+ Commit:  058b61c 
+|   | Date:    Sun, 29 Sep 2024 09:42:04 -0400 (4 hours ago) 
+|   | Message: update submodules versions #62  (origin/62-migrate-forms, 62-migrate-forms) 
+|   + Author:  Alejandro Ouslan 
+| 
+* --+ Commit:  23dccd5 
+|   | Date:    Fri, 27 Sep 2024 13:59:16 -0400 (2 days ago) 
+|   | Message: change paths and moved db handeling #62  
+|   + Author:  Alejandro Ouslan 
+|   
+| * --+ Commit:  da23e7e 
+| |   | Date:    Fri, 27 Sep 2024 11:43:20 -0400 (2 days ago) 
+| |   | Message: Added the rest of the missing graphs in Projections  (origin/#58-Meet-the-Team, #58-Meet-the-Team) 
+| |   + Author:  Adriana Isabel 
+| | 
+| * --+ Commit:  c7d46e0 
+| |   | Date:    Wed, 25 Sep 2024 12:46:44 -0400 (4 days ago) 
+| |   | Message: Deleted repeated project  
+| |   + Author:  Adriana Isabel 
+| |   
+| *   --+ Commit:  dc9c945 
+| |\    | Date:    Wed, 25 Sep 2024 12:42:48 -0400 (4 days ago) 
+| | |   | Message: Merge branch '#58-Meet-the-Team' of https://github.com/ouslan/jp-webapp into #58-Meet-the-Team  
+| | |   + Author:  Adriana Isabel 
+| | | 
+| | * --+ Commit:  285fbe0 
+| | |   | Date:    Wed, 25 Sep 2024 12:21:03 -0400 (4 days ago) 
+| | |   | Message: Added Annual Projection Graph  
+| | |   + Author:  Adriana Isabel 
+| | | 
+| | * --+ Commit:  63f86ca 
+| |     | Date:    Tue, 24 Sep 2024 18:06:47 -0400 (5 days ago) 
+| |     | Message: Moved the projects from the home page to the project page  
+| |     + Author:  Adriana Isabel 
+| | 
+| * --+ Commit:  2f9ac86 
+| |   | Date:    Wed, 25 Sep 2024 12:21:03 -0400 (4 days ago) 
+| |   | Message: Added Annual Projection Graph  
+| |   + Author:  Adriana Isabel 
+| | 
+| * --+ Commit:  fbad0a9 
+| |   | Date:    Tue, 24 Sep 2024 18:06:47 -0400 (5 days ago) 
+| |   | Message: Moved the projects from the home page to the project page  
+| |   + Author:  Adriana Isabel 
+| |   
+| *   --+ Commit:  aed0306 
+| |\    | Date:    Wed, 25 Sep 2024 12:38:11 -0400 (4 days ago) 
+| |/    | Message: Merge branch 'main' of https://github.com/ouslan/jp-webapp  
+|/|     + Author:  Adriana Isabel 
+| | 
+------------------------------------------
+=== Detailed Git Stats for Branch: #58-Meet-the-Team ===
+Contribution stats (by author) on the current branch:
+
+	 Adriana Isabel <adriana.carrasquillo1@upr.edu>:
+	  insertions:    635	(26%)
+	  deletions:     207	(20%)
+	  files:         14	(37%)
+	  commits:       7	(70%)
+	  lines changed: 842	(24%)
+	  first commit:  Tue Sep 24 18:06:47 2024 -0400
+	  last commit:   Fri Sep 27 11:43:20 2024 -0400
+
+	 Alejandro Ouslan <alejandro.ouslan@upr.edu>:
+	  insertions:    1762	(74%)
+	  deletions:     842	(80%)
+	  files:         24	(63%)
+	  commits:       3	(30%)
+	  lines changed: 2604	(76%)
+	  first commit:  Wed Sep 25 11:58:42 2024 -0400
+	  last commit:   Wed Sep 25 16:37:43 2024 +0000
+
+	total:
+	  insertions:    2397	(100%)
+	  deletions:     1049	(100%)
+	  files:         38	(100%)
+	  commits:       10	(100%)
+
+Git changelogs:
+
+
+[2024-09-27 - Friday]
+ * Added the rest of the missing graphs in Projections (Adriana Isabel)
+
+[2024-09-25 - Wednesday]
+ * Added the rest of the missing graphs in Projections (Adriana Isabel)
+ * Deleted repeated project (Adriana Isabel)
+ * Added Annual Projection Graph (Adriana Isabel)
+ * Moved the projects from the home page to the project page (Adriana Isabel)
+ * 59 hotfix (#60) (Alejandro Ouslan)
+ * Fixed Allowed Hosts for webapp (Adriana Isabel)
+ * Added Annual Projection Graph (Adriana Isabel)
+ * fixed idb bug #59 (Alejandro Ouslan)
+ * added historical data (Alejandro Ouslan)
+ * Moved the projects from the home page to the project page (Adriana Isabel)
+
+[2024-09-24 - Tuesday]
+ * Deleted repeated project (Adriana Isabel)
+ * Added Annual Projection Graph (Adriana Isabel)
+ * Moved the projects from the home page to the project page (Adriana Isabel)
+ * 59 hotfix (#60) (Alejandro Ouslan)
+ * Fixed Allowed Hosts for webapp (Adriana Isabel)
+ * Added Annual Projection Graph (Adriana Isabel)
+ * fixed idb bug #59 (Alejandro Ouslan)
+ * added historical data (Alejandro Ouslan)
+ * Moved the projects from the home page to the project page (Adriana Isabel)
+------------------------------------------
+=== Detailed Git Stats for Branch: 61-Sign-In ===
+Contribution stats (by author) on the current branch:
+
+	 Alejandro Ouslan <alejandro.ouslan@upr.edu>:
+	  insertions:    898	(88%)
+	  deletions:     747	(91%)
+	  files:         16	(59%)
+	  commits:       1	(25%)
+	  lines changed: 1645	(89%)
+	  first commit:  Wed Sep 25 16:37:43 2024 +0000
+	  last commit:   Wed Sep 25 16:37:43 2024 +0000
+
+	 Fernan2908 <fernando.sierra3@upr.edu>:
+	  insertions:    125	(12%)
+	  deletions:     77	(9%)
+	  files:         11	(41%)
+	  commits:       3	(75%)
+	  lines changed: 202	(11%)
+	  first commit:  Fri Sep 27 09:56:49 2024 -0400
+	  last commit:   Fri Sep 27 10:57:39 2024 -0400
+
+	total:
+	  insertions:    1023	(100%)
+	  deletions:     824	(100%)
+	  files:         27	(100%)
+	  commits:       4	(100%)
+
+Git changelogs:
+
+
+[2024-09-27 - Friday]
+ * Add messages error to the sign in (Fernan2908)
+ * Add the sign in authentication (Fernan2908)
+ * Inicializate the Sign In page (Fernan2908)
+
+[2024-09-25 - Wednesday]
+ * Add messages error to the sign in (Fernan2908)
+ * Add the sign in authentication (Fernan2908)
+ * Inicializate the Sign In page (Fernan2908)
+ * 59 hotfix (#60) (Alejandro Ouslan)
+------------------------------------------
+=== Detailed Git Stats for Branch: 62-migrate-forms ===
+Contribution stats (by author) on the current branch:
+
+	 Alejandro Ouslan <alejandro.ouslan@upr.edu>:
+	  insertions:    1034	(100%)
+	  deletions:     1052	(100%)
+	  files:         68	(100%)
+	  commits:       3	(100%)
+	  lines changed: 2086	(100%)
+	  first commit:  Wed Sep 25 16:37:43 2024 +0000
+	  last commit:   Sun Sep 29 09:42:04 2024 -0400
+
+	total:
+	  insertions:    1034	(100%)
+	  deletions:     1052	(100%)
+	  files:         68	(100%)
+	  commits:       3	(100%)
+
+Git changelogs:
+
+
+[2024-09-29 - Sunday]
+ * update submodules versions #62 (Alejandro Ouslan)
+
+[2024-09-27 - Friday]
+ * update submodules versions #62 (Alejandro Ouslan)
+ * change paths and moved db handeling #62 (Alejandro Ouslan)
+
+[2024-09-25 - Wednesday]
+ * 59 hotfix (#60) (Alejandro Ouslan)
+------------------------------------------
+=== Detailed Git Stats for Branch: jp_362_form_quaterly ===
+Contribution stats (by author) on the current branch:
+
+	 EdzelOrtiz <edzel.ortiz@upr.edu>:
+	  insertions:    4669	(100%)
+	  deletions:     14	(100%)
+	  files:         58	(100%)
+	  commits:       13	(100%)
+	  lines changed: 4683	(100%)
+	  first commit:  Wed Sep 25 08:53:28 2024 -0400
+	  last commit:   Fri Sep 27 10:48:51 2024 -0400
+
+	total:
+	  insertions:    4669	(100%)
+	  deletions:     14	(100%)
+	  files:         58	(100%)
+	  commits:       13	(100%)
+
+Git changelogs:
+
+
+[2024-09-27 - Friday]
+ * Reorganized links to annual and quaterly (EdzelOrtiz)
+ * jp 560 63210 front end done (EdzelOrtiz)
+ * jp 63111 qtr front end done (EdzelOrtiz)
+ * jp 560 63110 qtr front end done (EdzelOrtiz)
+ * ip_810 qrt front end done (EdzelOrtiz)
+ * ip_720 front end done (EdzelOrtiz)
+ * Fix dropdown menu and add line break (EdzelOrtiz)
+ * ip_710 front end done (EdzelOrtiz)
+
+[2024-09-25 - Wednesday]
+ * Reorganized links to annual and quaterly (EdzelOrtiz)
+ * jp 560 63210 front end done (EdzelOrtiz)
+ * jp 63111 qtr front end done (EdzelOrtiz)
+ * jp 560 63110 qtr front end done (EdzelOrtiz)
+ * ip_810 qrt front end done (EdzelOrtiz)
+ * ip_720 front end done (EdzelOrtiz)
+ * Fix dropdown menu and add line break (EdzelOrtiz)
+ * ip_710 front end done (EdzelOrtiz)
+ * ip_620 front end done (EdzelOrtiz)
+ * ip-610 qtr front end done (EdzelOrtiz)
+ * form ip 540p front end done (EdzelOrtiz)
+ * ip_540j front end done (EdzelOrtiz)
+ * ip_540v front end done (EdzelOrtiz)
+------------------------------------------
