@@ -1,5 +1,8 @@
 import pandas as pd
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView
 from web_app import graphics_function as gf
 from plotly.subplots import make_subplots
 import polars as pl
@@ -9,9 +12,10 @@ from src.dao.data_db_dao import DAO
 import plotly.express as px
 from .models import *
 import csv
-import os
+import os 
 from src.visualization.indicadores import web_app_indicadores
 from src.visualization.macro import web_app_macro
+from src.visualization.login import log_in_page
 from src.visualization.imports_exports import web_app_imports_exports
 from src.formularios.form_ip_110 import IP_110
 from src.formularios.form_jp_304 import JP_304
@@ -399,8 +403,15 @@ def indicadores(request):
 def succesfull_page(request):
     return render(request, "forms/succesfull.html")
 
+
+@login_required(login_url='web_app:log_in_page')
 def Forms(request):
-    return render(request, "forms/forms.html")
+    user = request.user
+    return render(request, "forms/forms.html", {"user": user})
 
 def JP_544_1(request):
     return render(request, "forms/yearly/balanza_de_pagos/JP-544-1.html")
+
+def logout_view(request):
+    logout(request)
+    return redirect('web_app:log_in_page')

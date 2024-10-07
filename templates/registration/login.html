@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Log In</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+    <link rel="apple-touch-icon" href="{% static 'favicon-16x16.png' %}" />
+    <link rel="apple-touch-icon" href="{% static 'favicon-32x32.png' %}" />
+    <link
+      rel="apple-touch-icon"
+      href="{% static 'android-chrome-192x192.png' %}"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="{% static 'android-chrome-512x512.png' %}"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'landing_page.css' %}" />
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-in-container">
+        <form method="post" action="{% url 'web_app:log_in_page' %}">
+          {% csrf_token %}
+          <h1>Log In</h1>
+          <br />
+
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            value="{{ request.POST.username }}"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+
+          <a href="#">Forgot your password?</a>
+          <button>Log In</button>
+        </form>
+      </div>
+      <div class="overlay">
+        <div class="overlay-container overlay-panel">
+          <h3>Welcome Back!</h3>
+          <p>To keep connected with us please login with your information</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
