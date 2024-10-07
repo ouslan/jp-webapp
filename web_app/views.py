@@ -325,11 +325,11 @@ def normal_indexes_graph():
     y_columns = columns[1::2]  # Starts from the second column and selects every second column
     
     index_names = {
-        'health_index': 'Health Index',
-        'income_index': 'Income Index',
-        'edu_index': 'Education Index',
-        'index': 'Development Index',
-        'growth_rate': 'Growth Rate'
+        'health_index': 'Índice de Salud',
+        'income_index': 'Índice de Ingresos',
+        'edu_index': 'Índice de Educación',
+        'index': 'Índice de Desarrollo',
+        'growth_rate': 'Tasa de Crecimiento'
     }
 
     # Create a figure
@@ -337,19 +337,19 @@ def normal_indexes_graph():
     
     # Create dropdown menu options to toggle traces on or off
     update_menu = [
-        dict(label=f"Show {index_names.get(y_column, y_column)}",
+        dict(label=f"Mostrar {index_names.get(y_column, y_column)}",
              method="update",
              args=[{"visible": [i == idx or False for idx in range(len(y_columns))]},  # Make the selected trace visible
-                   {"title": f"Showing {index_names.get(y_column, y_column)}"}])
+                   {"title": f"Mostrando {index_names.get(y_column, y_column)}"}])
         for i, y_column in enumerate(y_columns)
     ]
 
     # Add a "Show All" button to display all traces
     update_menu.append(
-        dict(label="Show All",
+        dict(label="Mostrar todo",
              method="update",
              args=[{"visible": [True] * len(y_columns)},  # Show all traces
-                   {"title": "All Y-Axis Columns"}])
+                   {"title": "Todas las Columnas"}])
     )
 
     # Update layout with the updatemenus dropdown and range slider
@@ -405,11 +405,11 @@ def adjusted_indexes_graph():
     y_columns = columns[2::2]  # Starts from the second column and selects every second column
     
     adjusted_index_names = {
-        'health_index_adjusted': 'Adjusted Health Index',
-        'income_index_ajusted': 'Adjusted Income Index',
-        'edu_index_ajusted': 'Adjusted Education Index',
-        'index_ajusted': 'Adjusted Development Index',  
-        'growth_rate_ajusted': 'Adjusted Growth Rate'     
+        'health_index_adjusted': 'Índice de Salud Ajustado',
+        'income_index_ajusted': 'Índice de Ingresos Ajustado',
+        'edu_index_ajusted': 'Índice de Educación Ajustado',
+        'index_ajusted': 'Índice de Desarrollo Ajustado',  
+        'growth_rate_ajusted': 'Tasa de Crecimiento Ajustada'    
     }
 
     # Create a figure
@@ -417,19 +417,19 @@ def adjusted_indexes_graph():
     
      # Create dropdown menu options to toggle traces on or off
     update_menu = [
-        dict(label=f"Show {adjusted_index_names.get(y_column, y_column)}",
+        dict(label=f"Mostrar {adjusted_index_names.get(y_column, y_column)}",
              method="update",
              args=[{"visible": [i == idx or False for idx in range(len(y_columns))]},  # Make the selected trace visible
-                   {"title": f"Showing {adjusted_index_names.get(y_column, y_column)}"}])
+                   {"title": f"Mostrando {adjusted_index_names.get(y_column, y_column)}"}])
         for i, y_column in enumerate(y_columns)
     ]
 
     # Add a "Show All" button to display all traces
     update_menu.append(
-        dict(label="Show All",
+        dict(label="Mostrar todo",
              method="update",
              args=[{"visible": [True] * len(y_columns)},  # Show all traces
-                   {"title": "All Y-Axis Columns"}])
+                   {"title": "Todas las Columnas"}])
     )
 
     # Update layout with the updatemenus dropdown and range slider
