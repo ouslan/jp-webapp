@@ -63,7 +63,7 @@ a {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
-	margin: 15px 0;
+	margin-bottom: 10px;
 }
 
 button {
@@ -106,6 +106,7 @@ form {
 input {
 	background-color: #eee;
 	border: none;
+	border-radius: 10px;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
@@ -176,5 +177,10 @@ input {
 	width: 50%;
 	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
+}
+
+#links:hover {
+	transition-duration: .3s;
+	font-size: 15px;
 }
 

@@ -28,8 +28,15 @@
       <div class="form-container sign-in-container">
         <form method="post" action="{% url 'web_app:log_in_page' %}">
           {% csrf_token %}
-          <h1>Log In</h1>
+          <h1>New Email</h1>
           <br />
+          
+          <input
+            type="email"
+            placeholder="New Email"
+            name="email"
+            required
+          />
 
           <input
             type="text"
@@ -44,18 +51,15 @@
             name="password"
             required
           />
-
+          
           <br>
-          <a id="links" href="#">Forgot your password?</a>
-          <a id="links" href="/add-email">Change your email?</a>
-          <br>
-          <button>Log In</button>
+          <button>Add email</button>
         </form>
       </div>
       <div class="overlay">
         <div class="overlay-container overlay-panel">
-          <h3>Acceso a la Junta de Planificación</h3>
-          <p>Por favor, inicie sesión para acceder a sus formularios y gestionar sus datos de manera segura.</p>
+          <h3>Actualiza tu Correo Electrónico</h3>
+          <p>Por favor, proporciona tu nuevo correo electrónico para mantener tus datos actualizados.</p>
         </div>
       </div>
     </div>
