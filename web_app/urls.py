@@ -64,7 +64,7 @@ urlpatterns = [
     re_path(r"^IP-720-alojamiento-y-servicio-de-comida/$", views.IP_720, name="IP-720"),
     re_path(r"^IP-810-otros-servicios/$", views.IP_810, name="IP-810"),
     re_path(r"^JP-547-agencies-transactions/$", views.JP_547, name="JP-547"),
-    re_path(r"^imports-and-exports/$", views.imports_and_exports, name="imports-and-exports"),
+    re_path(r"^transacciones-foraneas/$", views.imports_and_exports, name="imports-and-exports"),
     re_path(r"^forms/$", views.Forms, name="forms"), 
     re_path(r"^log-in-page/$", LoginView.as_view(template_name='registration/login.html'), name='log_in_page'),
     re_path(r"^logout/", views.logout_view, name='logout'),
