@@ -26,7 +26,7 @@
   <body>
     <div class="container" id="container">
       <div class="form-container sign-in-container">
-        <form method="post" action="{% url 'web_app:log_in_page' %}">
+        <form method="post" action="{% url 'web_app:add_email' %}">
           {% csrf_token %}
           <h1>New Email</h1>
           <br />
