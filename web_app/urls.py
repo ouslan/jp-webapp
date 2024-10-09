@@ -68,7 +68,8 @@ urlpatterns = [
     re_path(r"^forms/$", views.Forms, name="forms"), 
     re_path(r"^log-in-page/$", LoginView.as_view(template_name='registration/login.html'), name='log_in_page'),
     re_path(r"^logout/", views.logout_view, name='logout'),
-    re_path(r"^add-email$", views.change_email, name='add_email'),
+    re_path(r"^add-email/$", views.change_email, name='add_email'),
+    re_path(r"^account-settings/$", views.account_setting, name='account_settings'),
         
     # Asegura los path que estén bien cuando añadas otro
     re_path(r"^JP-361-transactions-in-pr-of-external-insurance-companies-qrt/$", views.JP_361_qrt, name="JP-361-qrt"),

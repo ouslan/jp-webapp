@@ -722,12 +722,16 @@ a:hover {
 .setting-container {
     display: flex;
     align-items: center;  
-    margin-top: 1px;     
+    margin-top: 1px;   
+}
+
+#username {
+    margin-top: 5px;
 }
 
 #settings-button {
     width: 80px;
-    height: 12px;
+    color: rgb(56, 56, 56)
 }
 
 #settings-button:hover {
