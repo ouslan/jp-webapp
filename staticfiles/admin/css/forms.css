@@ -693,8 +693,8 @@ a:hover {
 /* User Info - Hidden initially */
 .user-info {
     position: absolute;
-    top: 50px;
-    left: 0;
+    top: 80px;
+    left: 2px;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -703,13 +703,6 @@ a:hover {
     display: none;
     z-index: 1000; /* Ensure it appears above other elements */
     min-width: 180px;
-}
-
-/* Show user info when hovering over the profile button */
-.profile-btn:hover + .user-info {
-    margin-top: 28px;
-    margin-left: 4px;
-    display: block;
 }
 
 /* Text in profile button */

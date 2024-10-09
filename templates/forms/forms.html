@@ -110,7 +110,7 @@
         </div>
         <div class="profile-container">
             <!-- Profile Button -->
-            <button class="profile-btn">
+            <button class="profile-btn" id="profileButton">
                 <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14c-2.67 0-5.33-1.34-6.58-3.42.03-2.05 4.09-3.18 6.58-3.18 2.48 0 6.55 1.13 6.58 3.18C17.33 17.66 14.67 19 12 19z"/>
@@ -119,10 +119,10 @@
                 <div class="text">Profile</div>
             </button>
         
-            <!-- User Info - Hidden initially, shown on hover -->
-            <div class="user-info">
+            <!-- User Info - Hidden initially -->
+            <div class="user-info" id="userInfo">
                 <p><strong>Usuario:</strong> {{ user.username }}</p>
-                <p><strong>Role:</strong> Developer</p>
+                <p><strong>Email:</strong> {{ user.email }}</p>
             </div>
         
             <!-- Logout Button -->
@@ -312,5 +312,42 @@
      }
     </script>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-    </script></body></html>
+    </script>
+    <script>
+        // Manejar el clic en el botón de perfil
+        document.getElementById("profileButton").addEventListener("click", function(event) {
+            var userInfo = document.getElementById("userInfo");
+            var profileButton = document.getElementById("profileButton");
+    
+            // Evitar que el clic en el botón de perfil cierre el cuadro de información
+            event.stopPropagation();
+    
+            // Toggle visibility of user-info div
+            if (userInfo.style.display === "none" || userInfo.style.display === "") {
+                userInfo.style.display = "block";
+                profileButton.classList.add("active");
+            } else {
+                userInfo.style.display = "none";
+                profileButton.classList.remove("active");
+            }
+        });
+    
+        // Cerrar el cuadro de información si se hace clic fuera de él
+        document.addEventListener("click", function(event) {
+            var userInfo = document.getElementById("userInfo");
+            var profileButton = document.getElementById("profileButton");
+    
+            // Verificar si el cuadro de información está visible
+            if (userInfo.style.display === "block") {
+                // Si el clic es fuera del botón de perfil y del cuadro de información, lo ocultamos
+                if (!userInfo.contains(event.target) && !profileButton.contains(event.target)) {
+                    userInfo.style.display = "none";
+                    profileButton.classList.remove("active");
+                }
+            }
+        });
+    </script>
+       
+</body>
+</html>
     
