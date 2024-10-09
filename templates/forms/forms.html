@@ -123,7 +123,8 @@
             <div class="user-info" id="userInfo">
                 <p><strong>Usuario:</strong> {{ user.username }}</p>
                 <p><strong>Email:</strong> {{ user.email }}</p>
-            </div>
+                <p id="settings-button"><strong>Settings</strong></p>
+            </div>            
         
             <!-- Logout Button -->
             <form method="POST" action="{% url 'web_app:logout' %}">
