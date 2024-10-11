@@ -19,7 +19,6 @@ load_dotenv()
 NAME = os.environ.get("POSTGRES_DB")
 USER = os.environ.get("POSTGRES_USER")
 PASSWORD = os.environ.get("POSTGRES_PASSWORD")
-PORT = os.environ.get("POSTGRES_PORT")
 
 if not all([NAME, USER, PASSWORD, PORT]):
     raise ValueError("Database credentials not set")
@@ -103,7 +102,7 @@ DATABASES = {
         "USER": USER,
         "PASSWORD": PASSWORD,
         "HOST": HOST,
-        "PORT": PORT,
+        "PORT": "5432",
     }
 }
 
