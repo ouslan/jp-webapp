@@ -87,7 +87,7 @@ def colaboradores(request):
 
 def projection_annual_graph():
     # Read the CSV file
-    df = pd.read_csv("data/external/yearly_idb.csv")
+    df = pd.read_parquet("data/external/yearly_idb.parquet")
     
     # Extract column names
     columns = df.columns
@@ -159,7 +159,7 @@ def projection_annual_graph():
 
 def projection_monthly_graph():
     # Read the CSV file
-    df = pd.read_csv("data/external/monthly_idb.csv")
+    df = pd.read_parquet("data/external/monthly_idb.parquet")
     
     # Extract column names
     columns = df.columns
@@ -225,13 +225,12 @@ def projection_monthly_graph():
     )
     
     # Convert the figure to HTML
-    projection_monthly_html = fig.to_html(full_html=False)
-    
+    projection_monthly_html = fig
     return projection_monthly_html
 
 def projection_fiscal_graph():
     # Read the CSV file
-    df = pd.read_csv("data/external/fiscal_year_idb.csv")
+    df = pd.read_parquet("data/external/fiscal_year_idb.parquet")
     
     # Extract column names
     columns = df.columns
@@ -303,7 +302,7 @@ def projection_fiscal_graph():
 
 def projection_quarter_graph():
     # Read the CSV file
-    df = pd.read_csv("data/external/quarterly_idb.csv")
+    df = pd.read_parquet("data/external/quarterly_idb.parquet")
     
     # Extract column names
     columns = df.columns
@@ -369,7 +368,7 @@ def projection_quarter_graph():
     )
     
     # Convert the figure to HTML
-    projection_quarter_html = fig.to_html(full_html=False)
+    projection_quarter_html = fig#.to_html(full_html=True)
     
     return projection_quarter_html
 
