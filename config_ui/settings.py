@@ -19,9 +19,8 @@ load_dotenv()
 NAME = os.environ.get("POSTGRES_DB")
 USER = os.environ.get("POSTGRES_USER")
 PASSWORD = os.environ.get("POSTGRES_PASSWORD")
-PORT = os.environ.get("POSTGRES_PORT")
 
-if not all([NAME, USER, PASSWORD, PORT]):
+if not all([NAME, USER, PASSWORD]):
     raise ValueError("Database credentials not set")
 if os.environ.get("DEV") == "True":
     HOST = "localhost"
@@ -103,7 +102,7 @@ DATABASES = {
         "USER": USER,
         "PASSWORD": PASSWORD,
         "HOST": HOST,
-        "PORT": PORT,
+        "PORT": "5432",
     }
 }
 
@@ -155,3 +154,6 @@ STATICFILES_DIRS = [BASE_DIR / 'staticfiles/admin/css',
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'web_app:forms'
+LOGIN_URL = 'web_app:log_in_page'

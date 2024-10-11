@@ -4,7 +4,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
-        <title>Indice Desarrollo Humano</title>
+        <title>Índice de Desarrollo Humano</title>
 
         <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
         <link rel="apple-touch-icon" type="image/x-icon" href="{% static 'favicon-16x16.png' %}" />
@@ -38,17 +38,118 @@
         </div>
 
         <main>
-            <section>
-                <h1>Indice Desarrollo Humano</h1>
-            </section>
+			<!-- TITLE -->
+			<section>
+				<div>
+					<h1>Índice de Desarrollo Humano</h1>
+				</div>
+			</section>
+			<!-- INTRODUCTION -->
+			<section>
+				<div>
+					<p class="main_content">
+						<!-- El Índice de Desarrollo Humano (IDH) es una medida que evalúa el desarrollo de un país 
+						basado en tres dimensiones clave: una vida larga y saludable, el acceso a la educación, 
+						y un nivel de vida digno. El IDH se calcula como la media geométrica de índices normalizados 
+						para estas dimensiones. -->
 
-            <section>
-                <p>
-                    Combina los índices de salud, ingresos y educación para calcular el Indice Desarrollo Humano general.
-                </p>
-            </section>
+                        El Índice de Desarrollo Humano (IDH) es una medida compuesta que evalúa el desarrollo de un país 
+                        basado en tres dimensiones clave: una vida larga y saludable, el acceso a la educación y un nivel 
+                        de vida digno. Creado por el Programa de las Naciones Unidas para el Desarrollo (PNUD), su objetivo 
+                        es proporcionar una visión más integral del desarrollo que va más allá de los indicadores económicos 
+                        tradicionales como el Producto Interno Bruto (PIB) per cápita.
+					</p>
 
+					<p class="main_content">
+						<strong>1. Salud:</strong> 
+						medida por la <strong>esperanza</strong> de vida al nacer.
+					</p>	
 
+					<p class="main_content">
+						<strong>2. Educación:</strong> 
+						evaluada por los <strong>años promedio de escolaridad</strong> en adultos, que sirve como un indicador 
+                        del nivel educativo alcanzado por la población adulta, y los <strong>años esperados de escolarización</strong> 
+                        para niños, que reflejan la duración esperada de la educación para las futuras generaciones
+
+					</p>	
+
+					<p class="main_content">
+						<strong>3. Nivel de vida:</strong> 
+						<!-- Representado por el ingreso nacional bruto per cápita, ajustado para reflejar 
+						la menor importancia del ingreso a niveles más altos. -->
+
+                        representado por el <strong>ingreso nacional bruto (INB) per cápita</strong>, ajustado mediante una 
+                        función logarítmica para reflejar la disminución de la utilidad del ingreso a niveles 
+                        más altos. Reconoce el impacto del ingreso en el bienestar. 
+
+					</p>	
+
+					<p class="main_content">
+						El IDH se calcula como la <strong>media geométrica</strong> de los índices normalizados para estas dimensiones, 
+                        lo que asegura que un desempeño bajo en una dimensión no se compense completamente con un alto desempeño en otra, 
+                        resaltando la necesidad de un desarrollo equilibrado. El IDH permite comparar países con un mismo nivel de ingresos, 
+                        pero con diferentes resultados en desarrollo humano. Sin embargo, este no refleja desigualdades, pobreza u otros 
+                        factores como la seguridad y la equidad de género, por lo que existen otros índices complementarios que ofrecen una 
+                        visión más completa.
+                    </p>
+				</div>
+			</section>
+
+			<!-- SUBBODY 1 -->
+			<section>
+				<div>
+					<h2>Hoja de ruta del Índice de Desarrollo Humano</h2>
+
+					<div class="image-container">
+						<img src="{% static 'hdiRoadMap.png' %}" alt="Hoja de ruta del Índice de Desarrollo Humano" class="responsive-image" />
+					</div>
+					<p class="image_subtitle"><a href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI" target="_blank">Programa de las Naciones Unidas para el Desarrollo (PNUD)</a>.</p>
+
+				</div>
+			</section>
+
+			<!-- SUBBODY 2 -->
+			<section>
+				<div>
+					<h2>Información sobre gráficas</h2>
+					<p class="main_content">
+                        En estas gráficas se muestran los índices normales y ajustados de desarrollo humano, educación, salud, taza de crecimiento e ingresos. Los datos de estas
+						gráficas fueron sacados de la página <span><a href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI"> Programa de las Naciones Unidas para el Desarrollo (PNUD)</a></span>. 
+						Cada línea en la gráfica corresponde a un índice. El eje horizontal representa los años desde el 2012 y el eje vertical los valores de los índices.
+					</p>
+
+                    <h2>Instrucciones para las gráficas interactivas</h2>
+                        <p class="main_content">1. Las líneas en cada una de las gráficas están representadas por colores diferentes, y la leyenda a la derecha identifica qué color corresponde a cada variable. </p>
+                        <p class="main_content">2. Si desea eliminar una línea de la gráfica, haga <i>clic</i> en su nombre en la leyenda. Para volver a agregarla, haga <i>clic</i> nuevamente en el nombre.</p>
+                        <p class="main_content">3. Las gráficas permiten la manipulación del eje <i>Y</i>, lo que le permite ajustar la escala y visualizar los datos de manera más detallada o más amplia según sus necesidades.</p>
+                        <p class="main_content">4. Si pasa el cursor sobre la línea deseada, se mostrará la información que necesita.</p>
+
+                    <!-- Graph 1 (indexes) -->
+
+                    <body>
+                    <h3>Gráfica de Índices</h3>
+                    <div class="graph_container"></div>
+                        <div class="graph1"> <!-- Apply the "graph" class here -->
+                            {{ graph_html | safe }}
+                        </div> <!-- Render adjusted indexes graph -->
+                    </div>
+
+                    <!-- Graph 1 (adjusted indexes) -->
+
+                    <body>
+                    <h3>Gráfica de Índices Ajustados</h3>
+                    <div class="graph_container">
+                        <div class="graph2"> <!-- Apply the "graph" class here -->
+                            {{ adjusted_graph_html | safe }}
+                        </div> <!-- Render adjusted indexes graph -->
+                    </div>
+                    </body>
+
+					<!-- <p class="image_subtitle">
+						<a href="https://hdr.undp.org/sites/default/files/2023-24_HDR/HDR23-24_Statistical_Annex_HDI_Table.xlsx"> Descarga de los datos más recientes del IDH de la página de PNUD</a>.
+					</p> -->
+				</div>
+			</section>
 
         </main>
             <!-- ------------------ FOOTER --------------------- -->
