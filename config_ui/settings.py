@@ -20,7 +20,7 @@ NAME = os.environ.get("POSTGRES_DB")
 USER = os.environ.get("POSTGRES_USER")
 PASSWORD = os.environ.get("POSTGRES_PASSWORD")
 
-if not all([NAME, USER, PASSWORD, PORT]):
+if not all([NAME, USER, PASSWORD]):
     raise ValueError("Database credentials not set")
 if os.environ.get("DEV") == "True":
     HOST = "localhost"
