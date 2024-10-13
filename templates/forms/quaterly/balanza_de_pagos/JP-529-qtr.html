@@ -45,7 +45,7 @@
 
     <!-- Main -->
     <main>
-      <form method="POST" action="{% url 'JP-529-qtr' %}">
+      <form method="POST" action="{% url 'web_app:JP-529-qtr' %}">
         {% csrf_token %}
         <section class="trimester">
             <select name="dropdown_fiscal_year_2">

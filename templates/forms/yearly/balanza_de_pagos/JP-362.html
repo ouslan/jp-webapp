@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <form method="POST" action="{% url 'JP-362' %}">
+    <form method="POST" action="{% url 'web_app:JP-362' %}">
         {% csrf_token %}
         <!-- Header -->
         <section class="header">
@@ -43,7 +43,7 @@
         </section>
         
         <main>
-        <form method="POST" action="{% url 'JP-362' %}">
+        <form method="POST" action="{% url 'web_app:JP-362' %}">
             {% csrf_token %}
             <div id="fiscal_year">
                 <div id="space_between">1 /julio/</div>

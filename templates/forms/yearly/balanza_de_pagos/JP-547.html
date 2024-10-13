@@ -43,7 +43,7 @@
     </section>
     
     <main>
-      <form method="POST" action="{% url 'JP-547' %}">
+      <form method="POST" action="{% url 'web_app:JP-547' %}">
         {% csrf_token %}
         <div id="input" class="big-box-bottom-left">
             From:&emsp;<input id="flex_inputs" class="text-box space-between" name="agency_form" placeholder="Agency" required>

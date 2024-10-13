@@ -43,7 +43,7 @@
 
     <!-- Main -->
     <main>
-      <form method="POST" action="{% url 'JP-529' %}">
+      <form method="POST" action="{% url 'web_app:JP-529' %}">
         {% csrf_token %}
         <section class="trimester">
             1 de julio <input type="number" id="year" name="year1" min="1000" max="9999" placeholder="Año" required>
