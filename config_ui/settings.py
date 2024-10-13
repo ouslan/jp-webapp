@@ -42,6 +42,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "dev.econlabs.net", "127.0.0.1"]
 
+CSRF_TRUSTED_ORIGINS = ['https://dev.econlabs.net']
+
 
 # Application definition
 
@@ -67,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
 ]
 
 ROOT_URLCONF = 'config_ui.urls'
