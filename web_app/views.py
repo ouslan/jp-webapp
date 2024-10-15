@@ -188,7 +188,7 @@ def indicadores(request):
 def succesfull_page(request):
     return render(request, "forms/succesfull.html")
 
-@login_required(login_url='web_app:log_in_page')
+# @login_required(login_url='web_app:log_in_page')
 def Forms(request):
     user = request.user
     return render(request, "forms/forms.html", {"user": user})
