@@ -130,19 +130,19 @@ def web_app_indicadores(request):
                 buttons=[
                     dict(
                         args=[{"y": [df_monthly[col]]}],
-                        label=col,
+                        label=str(col).replace("_", " ").title(),
                         method="update"
                     ) for col in y_axis_options
                 ] + [
                     dict(
                         args=[{"y": [df_quarterly[col]]}],
-                        label=col,
+                        label=str(col).replace("_", " ").title(),
                         method="update"
                     ) for col in y_axis_options
                 ] + [
                     dict(
                         args=[{"y": [df_annual[col]]}],
-                        label=col,
+                        label=str(col).replace("_", " ").title(),
                         method="update"
                     ) for col in y_axis_options
                 ],
