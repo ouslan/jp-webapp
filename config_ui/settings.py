@@ -38,7 +38,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["localhost", "dev.econlabs.net", "127.0.0.1"]
 
@@ -57,12 +57,10 @@ INSTALLED_APPS = [
     'web_app',
 ]
 
-STATIC_URL = '/staticfiles/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -144,14 +142,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [BASE_DIR / 'staticfiles/admin/css', 
-                    BASE_DIR / 'staticfiles/admin/img', 
-                    BASE_DIR / 'staticfiles/admin/favicon_io',
-                    BASE_DIR / 'staticfiles/admin/scripts',
-                    BASE_DIR / 'staticfiles/admin/js',
-                    ]
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
