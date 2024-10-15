@@ -7,7 +7,8 @@
         <meta charset="utf-8"/>
         <title>PR.gov</title>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <link href="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/css/pr-gov.9f47b10d6.css" rel="stylesheet" type="text/css"/>
+        {% comment %} <link href="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/css/pr-gov.9f47b10d6.css" rel="stylesheet" type="text/css"/> {% endcomment %}
+        <link rel="stylesheet" href="{% static 'prgov.css' %}" />
         <link href="https://fonts.googleapis.com" rel="preconnect"/>
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -21,6 +22,8 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{% static 'home.css' %}" />
+       
+
 
     <style type="text/css">
     .scrolloff iframe {
@@ -79,6 +82,7 @@
           s.setAttribute("src", "https://cdn.userway.org/widget.js");
           (d.body || d.head).appendChild(s);
         })(document)
+
         </script>
         <noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
            </head>
@@ -100,7 +104,7 @@
                         <div class="top-bar-text">
                             <strong>Información sobre los miembros del proyecto se puede encontrar en la sección de Nuestro Equipo.</strong>
                         </div>
-                    </div>
+                   </div>
                     <div class="left-line-col w-col w-col-6 w-col-small-small-stack w-col-tiny-tiny-stack">
                         <div class="top-bar-text">
                             <strong>Investigación de la Universidad de Puerto Rico - Mayaguez.</strong> Página web diseñada por Adriana Carrasquillo.
@@ -109,43 +113,58 @@
                 </div>
             </div>
         </div>
-        <div class="sct-head">
-            <div class="div-block">
-                <div class="agency-header">
-                    <div class="div-agency-category">
-                        <h1 class="agency-category">Junta de Planificación</h1>
-                    </div>
-                    <div class="div-agency-logo">
-                        <div class="div-agency-name">
-                            <h1 class="agency-name-sm">Gobierno de</h1>
-                            <h1 class="agency-name-lg">puerto<br/>rico<br/></h1>
-                        </div>
-                        <img src="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png" loading="lazy" height="175" sizes="(max-width: 479px) 62.203125px, (max-width: 767px) 74.640625px, 108.859375px" alt="Gobierno de Puerto Rico" srcset="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico-p-500.png 500w, https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png 800w" class="logo-gobierno"/>
-                    </div>
-                </div>
-                <div data-collapse="medium" data-animation="over-left" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar center-align w-nav">
+    <div class="sct-head">
+        <div class="div-block">
+            <div class="agency-header">
+
+                <div  class="navbar center-align w-nav">
                     <div class="menu-button w-nav-button">
                         <div class="icon w-icon-nav-menu">
-
-                        </div>
-                    </div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div> <!-- Cierra .icon -->
+                    </div> <!-- Cierra .menu-button -->
+                    
                     <nav role="navigation" class="navmenu w-nav-menu">
-                        <a href= "/" class="nav-link w-nav-link">INICIO</a>
-                        <a href="/forms/" class="nav-link w-nav-link">CUESTIONARIOS</a>
-                        <a href= "/proyectos/" class="nav-link w-nav-link">PROYECTOS</a>
-                        <a href= "/colaboradores/" class="nav-link w-nav-link">NUESTRO EQUIPO</a>
-                        
-                </nav>
-            </div>
-        </div>
+                        <a href="/" class="nav-link w-nav-link">INICIO</a>
+                        <a href="/Forms/" class="nav-link w-nav-link">CUESTIONARIOS</a>
+                        <a href="/proyectos/" class="nav-link w-nav-link">PROYECTOS</a>
+                        <a href="/colaboradores/" class="nav-link w-nav-link">NUESTRO EQUIPO</a>
+                    </nav> <!-- Cierra .navmenu -->
+                </div> <!-- Cierra .navbar -->
+
+                <div class="div-agency-category">
+                    <h1 class="agency-category">Junta de Planificación</h1>
+                </div> <!-- Cierra .div-agency-category --> 
+                
+                <div class="div-agency-logo">
+                    <div class="div-agency-name">
+                        <h1 class="agency-name-sm">Gobierno de</h1>
+                        <h1 class="agency-name-lg">puerto<br/>rico<br/></h1>
+                    </div> <!-- Cierra .div-agency-name -->
+                    
+                    <img src="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png" 
+                        loading="lazy" height="175" 
+                        sizes="(max-width: 479px) 62.203125px, (max-width: 767px) 74.640625px, 108.859375px" 
+                        alt="Gobierno de Puerto Rico" 
+                        srcset="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico-p-500.png 500w, 
+                                https://assets-global.website-files.com/60ddbc422188bb3fab87d219/60ddbc422188bbbe5a87d251_gobierno-de-puerto-rico.png 800w" 
+                        class="logo-gobierno"/>
+                </div> <!-- Cierra .div-agency-logo -->
+            </div> <!-- Cierra .agency-header -->
+            
         
-        <div class="hero-banner inside agencias-pr-banner"></div>
-        
-    </div>
+        </div> <!-- Cierra .div-block -->
+
+    </div> <!-- Cierra .sct-head -->
+<div class="hero-banner inside agencias-pr-banner"></div> <!-- Cierra .hero-banner -->
+
 
     <section class="center">
-        <div class="card-grid">
-            <div id="cards" class="sct-content grey">
+        <div class="center-card">
+
+            <div id="cards-1" class="sct-content grey">
                 <div class="content-block-2 w-container">
                     <h1 class="h1">Nuestra misión:</h1> 
                         <p> es guiar a Puerto Rico hacia un desarrollo sostenible y resiliente de forma ordenada, racional, 
@@ -156,7 +175,7 @@
                 </div>
             </div>
 
-            <div id="cards" class="sct-content grey">
+            <div id="cards-1" class="sct-content grey">
                 <div class="content-block-2 w-container">
                     <h1 class="h1">Nuestra visión:</h1> 
                         <p> es fomentar una planificación ágil y dinámica para Puerto Rico 

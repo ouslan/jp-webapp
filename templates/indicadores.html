@@ -4,7 +4,11 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+
         <title>Índice de Actividad Económica</title>
+
+
 
         <!-- Favicons -->
         <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
@@ -13,9 +17,10 @@
         <link rel="apple-touch-icon" href="{% static 'android-chrome-192x192.png' %}" />
         <link rel="apple-touch-icon" href="{% static 'android-chrome-512x512.png' %}" />
 
+
         <!-- CSS -->
         <link rel="stylesheet" href="{% static 'indicadores.css' %}">
-        <link rel="stylesheet" href="{% static 'website.css' %}">
+        <link rel="stylesheet" href="{% static 'website.css' %}">  
     </head>
 
     <body>
@@ -104,10 +109,42 @@
                 </p>
             </section>
 
+
+            <form id="import-form" method="post">
+                {% csrf_token %}
+                <div class="graph_container_1">
+                    <a id="import-graph-anchor"></a>
+                    {% comment %} <h1 id="graph_title">Importaciones</h1> {% endcomment %}
+                    <section id="buttons">
+                        <section id="dropdowns">
+                            <label id="drop_title" for="frequency">Frecuencia:</label>
+                            <select name="frequency" id="frequency">
+                                <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
+                                <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
+                                <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
+                            </select>
+                        </section>
+                        <section id="dropdowns">
+                            <label id="drop_title" for="second_dropdown">Periodo:</label>
+                            <select name="second_dropdown" id="second_dropdown">
+                                <option value="default_value" {% if selected_second_dropdown == "default_value" %}selected{% endif %}>Default</option>
+                                {% if selected_frequency == "Quarterly" %}
+                                    <option value="1" {% if selected_second_dropdown == "1" %}selected{% endif %}>Qtr 1</option>
+                                    <option value="2" {% if selected_second_dropdown == "2" %}selected{% endif %}>Qtr 2</option>
+                                    <option value="3" {% if selected_second_dropdown == "3" %}selected{% endif %}>Qtr 3</option>
+                                    <option value="4" {% if selected_second_dropdown == "4" %}selected{% endif %}>Qtr 4</option>
+                                {% endif %}
+                            </select>
+                        </section>
+                        <button id="submit" type="submit">Submit</button>
+                    </section>
+    
             <!-- Contenedor de la gráfica -->
             <div class="graph_container">
                 {{ indicadores|safe }}
-            </div>
+            </div> 
+            </form>
+
 
         </main>
 
@@ -163,7 +200,7 @@
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.7501887340845!2d-66.0698374248245!3d18.
                                         449648171336893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c036f497801a7b7%3A0x68ace32a0663b72f!2sGov
                                         ernor%20Roberto%20S%C3%A1nchez%20Vilella%20Government%20Center!5e0!3m2!1sen!2sus!4v1717000266481!5m2!1sen!2sus"
-                                        width="490" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                     style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                                 </iframe>
                             </section>
                         </div>

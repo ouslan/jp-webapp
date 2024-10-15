@@ -27,6 +27,7 @@ def web_app_macro(request):
     ))
 
     fig1.update_layout(
+        autosize=True,
         margin=dict(l=0, r=0, t=0, b=0),
         plot_bgcolor='#F7F7F7',
         hovermode='x',
@@ -59,47 +60,46 @@ def web_app_macro(request):
                 size=12,
                 color='black'
             ),
-        ),
-        width=1380,
+        )
     )
 
-    fig1.update_layout(
-        annotations=[
-            dict(
-                x=0.01,
-                y=1.11,
-                xref='paper',
-                yref='paper',
-                text='Y:',
-                showarrow=False,
-                font=dict(
-                    family='Arial',
-                    size=18,
-                    color='black'
-                ),
-                xanchor='left',
-                yanchor='top'
-            )
-        ],
-        updatemenus=[
-            dict(
-                buttons=[
-                    dict(
-                        args=[{"y": [df1[col]]}],
-                        label=col,
-                        method="update"
-                    ) for col in y_axis_options_1
-                ],
-                direction="down",
-                pad={"r": 10, "t": 10},
-                showactive=True,
-                x=0.07,
-                xanchor="left",
-                y=1.15,
-                yanchor="top"
-            )
-        ]
-    )
+    # fig1.update_layout(
+    #     annotations=[
+    #         dict(
+    #             x=0.01,
+    #             y=1.11,
+    #             xref='paper',
+    #             yref='paper',
+    #             text='Y:',
+    #             showarrow=False,
+    #             font=dict(
+    #                 family='Arial',
+    #                 size=18,
+    #                 color='black'
+    #             ),
+    #             xanchor='left',
+    #             yanchor='top'
+    #         )
+    #     ],
+    #     updatemenus=[
+    #         dict(
+    #             buttons=[
+    #                 dict(
+    #                     args=[{"y": [df1[col]]}],
+    #                     label=col,
+    #                     method="update"
+    #                 ) for col in y_axis_options_1
+    #             ],
+    #             direction="down",
+    #             pad={"r": 10, "t": 10},
+    #             showactive=True,
+    #             x=0.07,
+    #             xanchor="left",
+    #             y=1.15,
+    #             yanchor="top"
+    #         )
+    #     ]
+    # )
     # --------------------------------------------------------------------------------------------------------------------------------
     
     # SECOND GRAPH DATA
@@ -123,6 +123,7 @@ def web_app_macro(request):
     ))
 
     fig2.update_layout(
+        autosize=True,
         margin=dict(l=0, r=0, t=0, b=0),
         plot_bgcolor='#F7F7F7',
         hovermode='x',
@@ -156,46 +157,47 @@ def web_app_macro(request):
                 color='black'
             ),
         ),
-        width=1370
+        
     )
 
-    fig2.update_layout(
-        annotations=[
-            dict(
-                x=0.01,
-                y=1.11,
-                xref='paper',
-                yref='paper',
-                text='Y:',
-                showarrow=False,
-                font=dict(
-                    family='Arial',
-                    size=18,
-                    color='black'
-                ),
-                xanchor='left',
-                yanchor='top'
-            )
-        ],
-        updatemenus=[
-            dict(
-                buttons=[
-                    dict(
-                        args=[{"y": [df2[col]]}],
-                        label=col,
-                        method="update"
-                    ) for col in y_axis_options_2
-                ],
-                direction="down",
-                pad={"r": 10, "t": 10},
-                showactive=True,
-                x=0.07,
-                xanchor="left",
-                y=1.15,
-                yanchor="top"
-            )
-        ]
-    )
+    # fig2.update_layout(
+    #     autosize = True,
+    #     annotations=[
+    #         dict(
+    #             x=0.01,
+    #             y=1.11,
+    #             xref='paper',
+    #             yref='paper',
+    #             text='Y:',
+    #             showarrow=False,
+    #             font=dict(
+    #                 family='Arial',
+    #                 size=18,
+    #                 color='black'
+    #             ),
+    #             xanchor='left',
+    #             yanchor='top'
+    #         )
+    #     ],
+    #     updatemenus=[
+    #         dict(
+    #             buttons=[
+    #                 dict(
+    #                     args=[{"y": [df2[col]]}],
+    #                     label=col,
+    #                     method="update"
+    #                 ) for col in y_axis_options_2
+    #             ],
+    #             direction="down",
+    #             pad={"r": 10, "t": 10},
+    #             showactive=True,
+    #             x=0.07,
+    #             xanchor="left",
+    #             y=1.15,
+    #             yanchor="top"
+    #         )
+    #     ]
+    # )
 
     macro_html_1 = fig1.to_html()
     macro_html_2 = fig2.to_html()

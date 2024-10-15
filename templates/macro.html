@@ -92,11 +92,21 @@
             <br>
             
             <!-- ----------------- FIRST GRAPH ----------------- -->
+
+            
             <section id="graph_title">
                 <h2>Series Históricas 1950-2011</h2>
             </section>
 
-            <div class="graph-container">
+
+            <div class="graph_container">
+                <div class = "graph_container-selection"> 
+                    <p>Y: </p>
+                    <select id="custom-dropdown">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                    </select>
+                </div>
+
                 {{ macro2|safe }}
             </div>
 
@@ -109,7 +119,13 @@
                 <h2>Series Históricas 2001-2023</h2>
             </section>
 
-            <div class="graph-container">
+            <div class="graph_container">
+                <div class = "graph_container-selection"> 
+                    <p>Y: </p>
+                    <select id="custom-dropdown">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                    </select>
+                </div>
                 {{ macro1|safe }}
             </div>
         </main>

@@ -78,3 +78,38 @@ a {
 #graph_title {
     text-align: center;
 }
+
+.graph_container{
+    margin: 35px auto auto auto;
+    width: 95%;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 0.5em;
+    font-size: .9em;
+    cursor: pointer;
+    border-radius: 0.25em;
+    position: relative;
+}
+select:focus {
+    outline: none;
+    border-color: #495057;
+}
+
+#custom-dropdown {
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #EEEEEE;
+    margin-right: 30px;
+}
+
+.graph_container-selection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}

@@ -29,6 +29,7 @@ def web_app_indicadores(request):
     ))
 
     fig.update_layout(
+        autosize=True,
         margin=dict(l=0, r=0, t=0, b=0),
         plot_bgcolor='#F7F7F7',
         hovermode='x',
@@ -62,10 +63,6 @@ def web_app_indicadores(request):
                 color='black'
             ),
         ),
-        width=1380,
-    )
-
-    fig.update_layout(
         annotations=[
             dict(
                 x=0.02,
@@ -98,68 +95,78 @@ def web_app_indicadores(request):
                 yanchor='top'
             )
         ],
-        updatemenus=[
-            dict(
-                buttons=[
-                    dict(
-                        args=[{"x": [df_monthly["date"]], "y": [df_monthly[y_axis_options[0]]]}],
-                        label="Monthly",
-                        method="update",
-                        args2=[{"x": [df_quarterly["quarter"]], "y": [df_quarterly[y_axis_options[0]]]}]
-                    ),
-                    dict(
-                        args=[{"x": [df_quarterly["quarter"]], "y": [df_quarterly[y_axis_options[0]]]}],
-                        label="Quarterly",
-                        method="update"
-                    ),
-                    dict(
-                        args=[{"x": [df_annual["year"]], "y": [df_annual[y_axis_options[0]]]}],
-                        label="Annual",
-                        method="update"
-                    ),
-                ],
-                direction="down",
-                pad={"r": 10, "t": 10},
-                showactive=True,
-                x=0.05,
-                xanchor="left",
-                y=1.14,
-                yanchor="top"
-            ),
-            dict(
-                buttons=[
-                    dict(
-                        args=[{"y": [df_monthly[col]]}],
-                        label=str(col).replace("_", " ").title(),
-                        method="update"
-                    ) for col in y_axis_options
-                ] + [
-                    dict(
-                        args=[{"y": [df_quarterly[col]]}],
-                        label=str(col).replace("_", " ").title(),
-                        method="update"
-                    ) for col in y_axis_options
-                ] + [
-                    dict(
-                        args=[{"y": [df_annual[col]]}],
-                        label=str(col).replace("_", " ").title(),
-                        method="update"
-                    ) for col in y_axis_options
-                ],
-                direction="down",
-                pad={"r": 10, "t": 10},
-                showactive=True,
-                x=0.45,
-                xanchor="left",
-                y=1.14,
-                yanchor="top"
-            )
-        ]
+        # updatemenus=[
+        #     dict(
+        #         buttons=[
+        #             dict(
+        #                 args=[{"x": [df_monthly["date"]], "y": [df_monthly[y_axis_options[0]]]}],
+        #                 label="Monthly",
+        #                 method="update",
+        #                 args2=[{"x": [df_quarterly["quarter"]], "y": [df_quarterly[y_axis_options[0]]]}]
+        #             ),
+        #             dict(
+        #                 args=[{"x": [df_quarterly["quarter"]], "y": [df_quarterly[y_axis_options[0]]]}],
+        #                 label="Quarterly",
+        #                 method="update"
+        #             ),
+        #             dict(
+        #                 args=[{"x": [df_annual["year"]], "y": [df_annual[y_axis_options[0]]]}],
+        #                 label="Annual",
+        #                 method="update"
+        #             ),
+        #         ],
+        #         direction="down",
+        #         pad={"r": 10, "t": 10},
+        #         showactive=True,
+        #         x=0.05,
+        #         xanchor="left",
+        #         y=1.14,
+        #         yanchor="top",
+        #         font=dict(size=12),
+        #         bgcolor="white",
+        #         bordercolor="black",
+        #         borderwidth=1
+        #     ),
+        #     dict(
+        #         buttons=[
+        #             dict(
+        #                 args=[{"y": [df_monthly[col]]}],
+        #                 label=col,
+        #                 method="update"
+        #             ) for col in y_axis_options
+        #         ] + [
+        #             dict(
+        #                 args=[{"y": [df_quarterly[col]]}],
+        #                 label=col,
+        #                 method="update"
+        #             ) for col in y_axis_options
+        #         ] + [
+        #             dict(
+        #                 args=[{"y": [df_annual[col]]}],
+        #                 label=col,
+        #                 method="update"
+        #             ) for col in y_axis_options
+        #         ],
+        #         direction="down",
+        #         pad={"r": 10, "t": 10},
+        #         showactive=True,
+        #         x=0.45,
+        #         xanchor="left",
+        #         y=1.14,
+        #         yanchor="top",
+        #         font=dict(size=12),
+        #         bgcolor="white",
+        #         bordercolor="black",
+        #         borderwidth=1
+        #     )
+        # ]
     )
 
+    # Renderizado de HTML
     indicadores_html = fig.to_html()
 
     context = {
         "indicadores": indicadores_html,
     }
     return render(request, "indicadores.html", context)
+

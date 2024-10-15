@@ -1,18 +1,64 @@
 .center {
-    width: 100%;
     text-align: center;
-    margin-left: 250px;
-
+    margin: 0 auto;
+    width: 85%;
 }
 
-#cards {
-    padding-top: 20px;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 130px;
-    margin-top: 70px;
-    margin-bottom: 5px;
+#cards-1 {
+    padding: 90px;
     border-radius: 30px;
-    height: 70%;
-    width: 100%;
+    margin: 48px 20px;
 }
+
+.center-card {
+    display: flex;
+}
+
+@media (min-width: 320px) and (max-width: 426px) {
+    /* .center-card {
+        margin: 55px 20px;
+    } */
+    
+    #cards-1 {
+        padding: 30px;
+        border-radius: 30px;
+        margin: 20px ;
+    }
+    .center {
+        width: 90%;
+    }
+    .center-card {
+        display: block;
+    }
+} 
+
+@media (min-width: 427px) and (max-width: 1013px) {
+    /* .center-card {
+        margin: 55px 20px;
+    } */
+    #cards-1 {
+        padding: 30px;
+        border-radius: 30px;
+        margin: 20px ;
+    }
+    .center {
+        width: 90%;
+    }
+    .center-card {
+        display: block;
+    }
+} 
+
+@media (min-width: 1015px) and (max-width: 1202px) {
+    /* .center-card {
+        margin: 55px 20px;
+    } */
+    #cards-1 {
+        padding: 60px;
+        border-radius: 30px;
+        margin: 20px ;
+    }
+    .center {
+        width: 90%;
+    }
+} 
