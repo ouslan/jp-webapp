@@ -16,6 +16,10 @@ body {
 	margin: -20px 0 50px;
 }
 
+h2 {
+	margin-bottom: 1px;
+}
+
 #signButton {
 	border-radius: 20px;
 	border: 1px solid #eee;
@@ -192,5 +196,17 @@ input {
 	transition-duration: .3s;
 	font-size: 15px;
 	margin-top: 1px;
+}
+
+#change-email {
+	margin-bottom: 8px;
+}
+
+#change-password {
+	margin-bottom: 8px;
+}
+
+.info {
+	margin-top: 8px;
 }
 
