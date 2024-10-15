@@ -26,10 +26,17 @@
   <body>
     <div class="container" id="container">
       <div class="form-container sign-in-container">
-        <form method="post" action="{% url 'web_app:log_in_page' %}">
+        <form method="post" action="{% url 'web_app:add_email' %}">
           {% csrf_token %}
-          <h1>Log In</h1>
+          <h1>New Email</h1>
           <br />
+          
+          <input
+            type="email"
+            placeholder="New Email"
+            name="email"
+            required
+          />
 
           <input
             type="text"
@@ -44,24 +51,15 @@
             name="password"
             required
           />
-
           
-          <div class="links-container">
-            <section>
-              <a id="links" href="#">Forgot password</a>
-            </section>
-          </div>
-          <br />
-          <button>Log In</button>
+          <br>
+          <button>Add email</button>
         </form>
       </div>
       <div class="overlay">
         <div class="overlay-container overlay-panel">
-          <h3>Bienvenido a la Junta de Planificación</h3>
-          <p>
-            Por favor, inicie sesión para acceder a los formularios y gestionar
-            sus datos de manera segura.
-          </p>
+          <h3>Actualiza tu Correo Electrónico</h3>
+          <p>Por favor, proporciona tu nuevo correo electrónico para mantener tus datos actualizados.</p>
         </div>
       </div>
     </div>

@@ -26,41 +26,40 @@
   <body>
     <div class="container" id="container">
       <div class="form-container sign-in-container">
-        <form method="post" action="{% url 'web_app:log_in_page' %}">
+        <form method="post">
           {% csrf_token %}
-          <h1>Log In</h1>
-          <br />
-
-          <input
-            type="text"
-            placeholder="Username"
-            name="username"
-            value="{{ request.POST.username }}"
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            required
-          />
-
-          
-          <div class="links-container">
-            <section>
-              <a id="links" href="#">Forgot password</a>
-            </section>
+          <div class="info" id="username">
+            <h2>Username</h2>
+            {{ user.username }}
           </div>
+          <div class="info" id="email">
+            <h2>Email</h2>
+            {{ user.email }}
+          </div>
+          <div class="info">
+            <h2>Fecha de Creación</h2>
+            {{ user.date_joined }}
+          </div>
+          <div class="info">
+            <h2>Última Actualización</h2>
+            {{ user.last_login }}
+          </div>
+
           <br />
-          <button>Log In</button>
+          <div class="info" id="change-email">
+            <button href="/add-email/">Change Email</button>
+          </div>
+          <div class="info" id="change-password">
+            <button href="/add-password/">Change Password</button>
+          </div>
         </form>
       </div>
       <div class="overlay">
         <div class="overlay-container overlay-panel">
-          <h3>Bienvenido a la Junta de Planificación</h3>
+          <h3>Información de la Cuenta</h3>
           <p>
-            Por favor, inicie sesión para acceder a los formularios y gestionar
-            sus datos de manera segura.
+            Aquí puedes ver la información de tu cuenta. Si deseas cambiar tu
+            email o contraseña, puedes hacerlo aquí.
           </p>
         </div>
       </div>
