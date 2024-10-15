@@ -11,3 +11,4 @@ polars==1.2.1
 tqdm==4.66.5
 pyarrow==17.0.0
 requests==2.32.3 
+whitenoise==6.7.0
