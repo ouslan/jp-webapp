@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from web_app import graphics_function as gf
 from .models import *
+from src.visualization.product_hts import products_hts
 from src.visualization.account_settings import account_setting
 from src.visualization.add_email import change_email
 from src.visualization.indicadores import web_app_indicadores
