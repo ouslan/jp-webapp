@@ -13,7 +13,7 @@ def web_app_imports_exports(request):
     df3_exports = df3_imports.clone()
 
     # IMPORTS GRAPH 
-    fig = px.pie(df1_imports, values='imports', names='country')
+    fig = px.pie(df1_imports, values='imports', names='country_name')
     fig.update_traces(textposition='inside', textinfo='percent+label')
 
     if request.method == "POST":
@@ -23,15 +23,15 @@ def web_app_imports_exports(request):
         if frequency == "Yearly":
             df1_imports = df1_imports.with_columns(imports=pl.col("imports")) # type: ignore
             df1_imports = df1_imports.filter(pl.col("year") == int(second_dropdown))
-            fig = px.pie(df1_imports, values='imports', names='country')
+            fig = px.pie(df1_imports, values='imports', names='country_name')
         elif frequency == "Monthly":
             df2_imports = df2_imports.with_columns(imports=pl.col("imports")) # type: ignore
             df2_imports = df2_imports.filter(pl.col("month") == int(second_dropdown))
-            fig = px.pie(df2_imports, values='imports', names='country')
+            fig = px.pie(df2_imports, values='imports', names='country_name')
         elif frequency == "Quarterly":
             df3_imports = df3_imports.with_columns(imports=pl.col("imports")) # type: ignore
             df3_imports = df3_imports.filter(pl.col("qrt") == int(second_dropdown))
-            fig = px.pie(df3_imports, values='imports', names='country')
+            fig = px.pie(df3_imports, values='imports', names='country_name')
 
         if frequency is None and second_dropdown is None:
             frequency = "Yearly"
@@ -53,7 +53,7 @@ def web_app_imports_exports(request):
 
     # EXPORTS GRAPH
  
-    fig1 = px.pie(df1_exports, values='exports', names='country')
+    fig1 = px.pie(df1_exports, values='exports', names='country_name')
     fig1.update_traces(textposition='inside', textinfo='percent+label')
 
     if request.method == "POST":
@@ -63,15 +63,15 @@ def web_app_imports_exports(request):
         if frequency_2 == "Yearly":
             df1_exports = df1_exports.with_columns(exports=pl.col("exports")) # type: ignore
             df1_exports = df1_exports.filter(pl.col("year") == int(second_dropdown_2))
-            fig1 = px.pie(df1_exports, values='exports', names='country')
+            fig1 = px.pie(df1_exports, values='exports', names='country_name')
         elif frequency_2 == "Monthly":
             df2_exports = df2_exports.with_columns(exports=pl.col("exports")) # type: ignore
             df2_exports = df2_exports.filter(pl.col("month") == int(second_dropdown_2))
-            fig1 = px.pie(df2_exports, values='exports', names='country')
+            fig1 = px.pie(df2_exports, values='exports', names='country_name')
         elif frequency_2 == "Quarterly":
             df3_exports = df3_exports.with_columns(exports=pl.col("exports")) # type: ignore
             df3_exports = df3_exports.filter(pl.col("qrt") == int(second_dropdown_2))
-            fig1 = px.pie(df3_exports, values='exports', names='country')
+            fig1 = px.pie(df3_exports, values='exports', names='country_name')
 
         if frequency_2 is None and second_dropdown_2 is None:
             frequency_2 = "Yearly"
