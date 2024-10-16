@@ -11,15 +11,15 @@ def web_app_imports_exports(request):
     df1_exports = df1_imports.clone()
     df2_exports = df2_imports.clone()
     df3_exports = df3_imports.clone()
-    
+
     # IMPORTS GRAPH 
     fig = px.pie(df1_imports, values='imports', names='country')
     fig.update_traces(textposition='inside', textinfo='percent+label')
-    
+
     if request.method == "POST":
         frequency = request.POST.get("frequency")
         second_dropdown = request.POST.get("second_dropdown")
-        
+
         if frequency == "Yearly":
             df1_imports = df1_imports.with_columns(imports=pl.col("imports")) # type: ignore
             df1_imports = df1_imports.filter(pl.col("year") == int(second_dropdown))
@@ -32,11 +32,11 @@ def web_app_imports_exports(request):
             df3_imports = df3_imports.with_columns(imports=pl.col("imports")) # type: ignore
             df3_imports = df3_imports.filter(pl.col("qrt") == int(second_dropdown))
             fig = px.pie(df3_imports, values='imports', names='country')
-        
-        if frequency == None and second_dropdown == None:
+
+        if frequency is None and second_dropdown is None:
             frequency = "Yearly"
             second_dropdown = 2009
-            
+
         fig.update_layout(
             title={
                 'text': f"Time: {frequency} / {second_dropdown}",
@@ -44,22 +44,22 @@ def web_app_imports_exports(request):
                 'font': {'color': 'black'}
             },
         )
-    
+
     fig.update_traces(textposition='inside', textinfo='percent+label')
 
     imports = fig.to_html(full_html=False, default_height=500, default_width=700)
 
     # ------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
+
     # EXPORTS GRAPH
-    
+ 
     fig1 = px.pie(df1_exports, values='exports', names='country')
     fig1.update_traces(textposition='inside', textinfo='percent+label')
-    
+
     if request.method == "POST":
         frequency_2 = request.POST.get("frequency_2")
         second_dropdown_2 = request.POST.get("second_dropdown_2")
-        
+
         if frequency_2 == "Yearly":
             df1_exports = df1_exports.with_columns(exports=pl.col("exports")) # type: ignore
             df1_exports = df1_exports.filter(pl.col("year") == int(second_dropdown_2))
@@ -72,11 +72,11 @@ def web_app_imports_exports(request):
             df3_exports = df3_exports.with_columns(exports=pl.col("exports")) # type: ignore
             df3_exports = df3_exports.filter(pl.col("qrt") == int(second_dropdown_2))
             fig1 = px.pie(df3_exports, values='exports', names='country')
-            
-        if frequency_2 == None and second_dropdown_2 == None:
+
+        if frequency_2 is None and second_dropdown_2 is None:
             frequency_2 = "Yearly"
             second_dropdown_2 = 2009
-            
+
         fig1.update_layout(
             title={
                 'text': f"Time: {frequency_2} / {second_dropdown_2}",
@@ -84,13 +84,13 @@ def web_app_imports_exports(request):
                 'font': {'color': 'black'}
             },
         )
-    
+
     fig1.update_traces(textposition='inside', textinfo='percent+label')
 
     exports = fig1.to_html(full_html=False, default_height=500, default_width=700)
 
     # ------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
+
     context = {
         "imports": imports,
         "exports": exports
