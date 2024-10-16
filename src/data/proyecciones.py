@@ -84,6 +84,8 @@ def projection_monthly_graph():
     # The new column is the x-axis
     x_column = columns[0]
     
+    df[x_column] = df[x_column].astype(str)
+
     # The rest of the columns are y-axes
     y_columns = columns[1:]
     
@@ -142,7 +144,7 @@ def projection_monthly_graph():
     )
     
     # Convert the figure to HTML
-    projection_monthly_html = fig
+    projection_monthly_html = fig.to_html(full_html=False)
     return projection_monthly_html
 
 def projection_fiscal_graph():
@@ -226,6 +228,8 @@ def projection_quarter_graph():
     
     # The new column is the x-axis
     x_column = columns[0]
+
+    df[x_column] = df[x_column].astype(str)
     
     # The rest of the columns are y-axes
     y_columns = columns[1:]
@@ -285,7 +289,7 @@ def projection_quarter_graph():
     )
     
     # Convert the figure to HTML
-    projection_quarter_html = fig#.to_html(full_html=True)
+    projection_quarter_html = fig.to_html(full_html=True)
     
     return projection_quarter_html
 

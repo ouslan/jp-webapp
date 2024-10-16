@@ -10,4 +10,5 @@ sqlalchemy==2.0.31
 polars==1.2.1
 tqdm==4.66.5
 pyarrow==17.0.0
-requests==2.32.3 
+requests==2.32.3
+sqlmodel==0.0.22
