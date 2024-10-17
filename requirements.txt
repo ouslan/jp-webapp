@@ -10,5 +10,8 @@ sqlalchemy==2.0.31
 polars==1.2.1
 tqdm==4.66.5
 pyarrow==17.0.0
-requests==2.32.3 
 whitenoise==6.7.0
+requests==2.32.3
+sqlmodel==0.0.22
+ibis-framework[sqlite]==9.5.0
+ibis-framework[postgres]==9.5.0

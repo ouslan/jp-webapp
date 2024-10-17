@@ -9,6 +9,7 @@ notebooks/
 *.sqlite3
 *.dbf
 *.db-journal
+*.sqlite
 
 # Ignore Python bytecode files
 *.pyc
