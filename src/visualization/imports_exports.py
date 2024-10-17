@@ -2,11 +2,16 @@ import polars as pl
 import plotly.express as px
 from ..jp_imports.src.jp_imports.data_process import DataProcess
 from django.shortcuts import render
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 def web_app_imports_exports(request):
-    df1_imports = DataProcess(debug=True).process_int_jp(time="yearly", types="country").to_polars()
-    df2_imports = DataProcess(debug=True).process_int_jp(time="monthly", types="country").to_polars()
-    df3_imports = DataProcess(debug=True).process_int_jp(time="qrt", types="country").to_polars()
+    dp = DataProcess(str(os.environ.get("DATABASE_URL")), debug=True)
+    df1_imports = pl.from_pandas(dp.process_int_jp(time="yearly", types="country").to_pandas())
+    df2_imports = pl.from_pandas(dp.process_int_jp(time="monthly", types="country").to_pandas())
+    df3_imports = pl.from_pandas(dp.process_int_jp(time="qrt", types="country").to_pandas())
 
     df1_exports = df1_imports.clone()
     df2_exports = df2_imports.clone()
