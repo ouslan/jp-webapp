@@ -19,9 +19,8 @@ load_dotenv()
 NAME = os.environ.get("POSTGRES_DB")
 USER = os.environ.get("POSTGRES_USER")
 PASSWORD = os.environ.get("POSTGRES_PASSWORD")
-PORT = os.environ.get("POSTGRES_PORT")
 
-if not all([NAME, USER, PASSWORD, PORT]):
+if not all([NAME, USER, PASSWORD]):
     raise ValueError("Database credentials not set")
 if os.environ.get("DEV") == "True":
     HOST = "localhost"
@@ -39,9 +38,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["localhost", "dev.econlabs.net", "127.0.0.1"]
+
+CSRF_TRUSTED_ORIGINS = ['https://dev.econlabs.net']
 
 
 # Application definition
@@ -56,18 +57,17 @@ INSTALLED_APPS = [
     'web_app',
 ]
 
-STATIC_URL = '/staticfiles/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
 ]
 
 ROOT_URLCONF = 'config_ui.urls'
@@ -103,7 +103,7 @@ DATABASES = {
         "USER": USER,
         "PASSWORD": PASSWORD,
         "HOST": HOST,
-        "PORT": PORT,
+        "PORT": "5432",
     }
 }
 
@@ -142,16 +142,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [BASE_DIR / 'staticfiles/admin/css', 
-                    BASE_DIR / 'staticfiles/admin/img', 
-                    BASE_DIR / 'staticfiles/admin/favicon_io',
-                    BASE_DIR / 'staticfiles/admin/scripts',
-                    BASE_DIR / 'staticfiles/admin/js',
-                    ]
+STATICFILES_DIRS = [] 
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'web_app:forms'
+LOGIN_URL = 'web_app:log_in_page'

@@ -97,7 +97,7 @@
                 <div class="top-bar-bottom-content w-row">
                     <div class="left-line-col w-col w-col-6 w-col-small-small-stack w-col-tiny-tiny-stack">
                         <div class="top-bar-text">
-                            <strong>Miembros de la Investigación: Onnelle Lugo, Fernando Sierra, Edzel Ortiz y Adriana Carrasquillo.</strong>
+                            <strong>Información sobre los miembros del proyecto se puede encontrar en la sección de Nuestro Equipo.</strong>
                         </div>
                     </div>
                     <div class="left-line-col w-col w-col-6 w-col-small-small-stack w-col-tiny-tiny-stack">
@@ -108,6 +108,38 @@
                 </div>
             </div>
         </div>
+        <div class="profile-container">
+            <!-- Profile Button -->
+            <button class="profile-btn" id="profileButton">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14c-2.67 0-5.33-1.34-6.58-3.42.03-2.05 4.09-3.18 6.58-3.18 2.48 0 6.55 1.13 6.58 3.18C17.33 17.66 14.67 19 12 19z"/>
+                    </svg>
+                </div>
+                <div class="text">Profile</div>
+            </button>
+        
+            <!-- User Info - Hidden initially -->
+            <div class="user-info" id="userInfo">
+                <p id="username"><strong>Usuario:</strong> {{ user.username }}</p>
+                <p><strong>Email:</strong> {{ user.email }}</p>
+                <p><strong><a id="settings-button" href="/account-settings/">Settings</a></strong></p>
+            </div>            
+        
+            <!-- Logout Button -->
+            <form method="POST" action="{% url 'web_app:logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="Btn">
+                    <div class="sign">
+                        <svg viewBox="0 0 512 512">
+                            <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path>
+                        </svg>
+                    </div>
+                    <div class="text">Logout</div>
+                </button>
+            </form>
+        </div>        
+        
         
         <div class="sct-head">
             <div class="div-block">
@@ -131,7 +163,7 @@
 
                     <nav role="navigation" class="navmenu w-nav-menu">
                         <a href= "/" class="nav-link w-nav-link">INICIO</a>
-                        <a href="/Forms/" class="nav-link w-nav-link">CUESTIONARIOS</a>
+                        <a href="/forms/" class="nav-link w-nav-link">CUESTIONARIOS</a>
                         <a href= "/proyectos/" class="nav-link w-nav-link">PROYECTOS</a>
                         <a href= "/colaboradores/" class="nav-link w-nav-link">NUESTRO EQUIPO</a>
                     </nav>
@@ -281,4 +313,42 @@
      }
     </script>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-    </script></body></html>
+    </script>
+    <script>
+        // Manejar el clic en el botón de perfil
+        document.getElementById("profileButton").addEventListener("click", function(event) {
+            var userInfo = document.getElementById("userInfo");
+            var profileButton = document.getElementById("profileButton");
+    
+            // Evitar que el clic en el botón de perfil cierre el cuadro de información
+            event.stopPropagation();
+    
+            // Toggle visibility of user-info div
+            if (userInfo.style.display === "none" || userInfo.style.display === "") {
+                userInfo.style.display = "block";
+                profileButton.classList.add("active");
+            } else {
+                userInfo.style.display = "none";
+                profileButton.classList.remove("active");
+            }
+        });
+    
+        // Cerrar el cuadro de información si se hace clic fuera de él
+        document.addEventListener("click", function(event) {
+            var userInfo = document.getElementById("userInfo");
+            var profileButton = document.getElementById("profileButton");
+    
+            // Verificar si el cuadro de información está visible
+            if (userInfo.style.display === "block") {
+                // Si el clic es fuera del botón de perfil y del cuadro de información, lo ocultamos
+                if (!userInfo.contains(event.target) && !profileButton.contains(event.target)) {
+                    userInfo.style.display = "none";
+                    profileButton.classList.remove("active");
+                }
+            }
+        });
+    </script>
+       
+</body>
+</html>
+    

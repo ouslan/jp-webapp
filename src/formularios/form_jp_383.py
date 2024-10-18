@@ -2,234 +2,53 @@ from django.shortcuts import render
 from src.dao.data_db_dao import DAO
 import polars as pl
 
-
 def JP_383(request):
     if request.method == "POST":
-        # Retrieve form data
-        other_section = request.POST.get("other_section")
-        año = request.POST.get("año")
-        julio_1 = request.POST.get("julio_1")
-        julio_2 = request.POST.get("julio_2")
-        julio_3 = request.POST.get("julio_3")
-        julio_4 = request.POST.get("julio_4")
-        julio_5 = request.POST.get("julio_5")
-        julio_6 = request.POST.get("julio_6")
-        agosto_1 = request.POST.get("agosto_1")
-        agosto_2 = request.POST.get("agosto_2")
-        agosto_3 = request.POST.get("agosto_3")
-        agosto_4 = request.POST.get("agosto_4")
-        agosto_5 = request.POST.get("agosto_5")
-        agosto_6 = request.POST.get("agosto_6")
-        septiembre_1 = request.POST.get("septiembre_1")
-        septiembre_2 = request.POST.get("septiembre_2")
-        septiembre_3 = request.POST.get("septiembre_3")
-        septiembre_4 = request.POST.get("septiembre_4")
-        septiembre_5 = request.POST.get("septiembre_5")
-        septiembre_6 = request.POST.get("septiembre_6")
-        subtotal_1 = request.POST.get("subtotal_1")
-        subtotal_2 = request.POST.get("subtotal_2")
-        subtotal_3 = request.POST.get("subtotal_3")
-        subtotal_4 = request.POST.get("subtotal_4")
-        subtotal_5 = request.POST.get("subtotal_5")
-        subtotal_6 = request.POST.get("subtotal_6")
-        octubre_1 = request.POST.get("octubre_1")
-        octubre_2 = request.POST.get("octubre_2")
-        octubre_3 = request.POST.get("octubre_3")
-        octubre_4 = request.POST.get("octubre_4")
-        octubre_5 = request.POST.get("octubre_5")
-        octubre_6 = request.POST.get("octubre_6")
-        noviembre_1 = request.POST.get("noviembre_1")
-        noviembre_2 = request.POST.get("noviembre_2")
-        noviembre_3 = request.POST.get("noviembre_3")
-        noviembre_4 = request.POST.get("noviembre_4")
-        noviembre_5 = request.POST.get("noviembre_5")
-        noviembre_6 = request.POST.get("noviembre_6")
-        diciembre_1 = request.POST.get("diciembre_1")
-        diciembre_2 = request.POST.get("diciembre_2")
-        diciembre_3 = request.POST.get("diciembre_3")
-        diciembre_4 = request.POST.get("diciembre_4")
-        diciembre_5 = request.POST.get("diciembre_5")
-        diciembre_6 = request.POST.get("diciembre_6")
-        subtotal_11 = request.POST.get("subtotal_11")
-        subtotal_12 = request.POST.get("subtotal_12")
-        subtotal_13 = request.POST.get("subtotal_13")
-        subtotal_14 = request.POST.get("subtotal_14")
-        subtotal_15 = request.POST.get("subtotal_15")
-        subtotal_16 = request.POST.get("subtotal_16")
-        año_1 = request.POST.get("año_1")
-        enero_1 = request.POST.get("enero_1")
-        enero_2 = request.POST.get("enero_2")
-        enero_3 = request.POST.get("enero_3")
-        enero_4 = request.POST.get("enero_4")
-        enero_5 = request.POST.get("enero_5")
-        enero_6 = request.POST.get("enero_6")
-        febrero_1 = request.POST.get("febrero_1")
-        febrero_2 = request.POST.get("febrero_2")
-        febrero_3 = request.POST.get("febrero_3")
-        febrero_4 = request.POST.get("febrero_4")
-        febrero_5 = request.POST.get("febrero_5")
-        febrero_6 = request.POST.get("febrero_6")
-        marzo_1 = request.POST.get("marzo_1")
-        marzo_2 = request.POST.get("marzo_2")
-        marzo_3 = request.POST.get("marzo_3")
-        marzo_4 = request.POST.get("marzo_4")
-        marzo_5 = request.POST.get("marzo_5")
-        marzo_6 = request.POST.get("marzo_6")
-        subtotal_21 = request.POST.get("subtotal_21")
-        subtotal_22 = request.POST.get("subtotal_22")
-        subtotal_23 = request.POST.get("subtotal_23")
-        subtotal_24 = request.POST.get("subtotal_24")
-        subtotal_25 = request.POST.get("subtotal_25")
-        subtotal_26 = request.POST.get("subtotal_26")
-        abril_1 = request.POST.get("abril_1")
-        abril_2 = request.POST.get("abril_2")
-        abril_3 = request.POST.get("abril_3")
-        abril_4 = request.POST.get("abril_4")
-        abril_5 = request.POST.get("abril_5")
-        abril_6 = request.POST.get("abril_6")
-        mayo_1 = request.POST.get("mayo_1")
-        mayo_2 = request.POST.get("mayo_2")
-        mayo_3 = request.POST.get("mayo_3")
-        mayo_4 = request.POST.get("mayo_4")
-        mayo_5 = request.POST.get("mayo_5")
-        mayo_6 = request.POST.get("mayo_6")
-        junio_1 = request.POST.get("junio_1")
-        junio_2 = request.POST.get("junio_2")
-        junio_3 = request.POST.get("junio_3")
-        junio_4 = request.POST.get("junio_4")
-        junio_5 = request.POST.get("junio_5")
-        junio_6 = request.POST.get("junio_6")
-        subtotal_31 = request.POST.get("subtotal_31")
-        subtotal_32 = request.POST.get("subtotal_32")
-        subtotal_33 = request.POST.get("subtotal_33")
-        subtotal_34 = request.POST.get("subtotal_34")
-        subtotal_35 = request.POST.get("subtotal_35")
-        subtotal_36 = request.POST.get("subtotal_36")
-        total_1 = request.POST.get("total_1")
-        total_2 = request.POST.get("total_2")
-        total_3 = request.POST.get("total_3")
-        total_4 = request.POST.get("total_4")
-        total_5 = request.POST.get("total_5")
-        total_6 = request.POST.get("total_6")
-        signature = request.POST.get("signature")
-        name = request.POST.get("name")
-        title = request.POST.get("title")
-        phone = request.POST.get("phone")
-
-        data = [
-            pl.Series("other_section", [other_section], dtype=pl.String),
-            pl.Series("año", [año], dtype=pl.String),
-            pl.Series("julio_1", [float(julio_1)], dtype=pl.Float64),
-            pl.Series("julio_2", [float(julio_2)], dtype=pl.Float64),
-            pl.Series("julio_3", [float(julio_3)], dtype=pl.Float64),
-            pl.Series("julio_4", [float(julio_4)], dtype=pl.Float64),
-            pl.Series("julio_5", [float(julio_5)], dtype=pl.Float64),
-            pl.Series("julio_6", [float(julio_6)], dtype=pl.Float64),
-            pl.Series("agosto_1", [float(agosto_1)], dtype=pl.Float64),
-            pl.Series("agosto_2", [float(agosto_2)], dtype=pl.Float64),
-            pl.Series("agosto_3", [float(agosto_3)], dtype=pl.Float64),
-            pl.Series("agosto_4", [float(agosto_4)], dtype=pl.Float64),
-            pl.Series("agosto_5", [float(agosto_5)], dtype=pl.Float64),
-            pl.Series("agosto_6", [float(agosto_6)], dtype=pl.Float64),
-            pl.Series("septiembre_1", [float(septiembre_1)], dtype=pl.Float64),
-            pl.Series("septiembre_2", [float(septiembre_2)], dtype=pl.Float64),
-            pl.Series("septiembre_3", [float(septiembre_3)], dtype=pl.Float64),
-            pl.Series("septiembre_4", [float(septiembre_4)], dtype=pl.Float64),
-            pl.Series("septiembre_5", [float(septiembre_5)], dtype=pl.Float64),
-            pl.Series("septiembre_6", [float(septiembre_6)], dtype=pl.Float64),
-            pl.Series("subtotal_1", [float(subtotal_1)], dtype=pl.Float64),
-            pl.Series("subtotal_2", [float(subtotal_2)], dtype=pl.Float64),
-            pl.Series("subtotal_3", [float(subtotal_3)], dtype=pl.Float64),
-            pl.Series("subtotal_4", [float(subtotal_4)], dtype=pl.Float64),
-            pl.Series("subtotal_5", [float(subtotal_5)], dtype=pl.Float64),
-            pl.Series("subtotal_6", [float(subtotal_6)], dtype=pl.Float64),
-            pl.Series("octubre_1", [float(octubre_1)], dtype=pl.Float64),
-            pl.Series("octubre_2", [float(octubre_2)], dtype=pl.Float64),
-            pl.Series("octubre_3", [float(octubre_3)], dtype=pl.Float64),
-            pl.Series("octubre_4", [float(octubre_4)], dtype=pl.Float64),
-            pl.Series("octubre_5", [float(octubre_5)], dtype=pl.Float64),
-            pl.Series("octubre_6", [float(octubre_6)], dtype=pl.Float64),
-            pl.Series("noviembre_1", [float(noviembre_1)], dtype=pl.Float64),
-            pl.Series("noviembre_2", [float(noviembre_2)], dtype=pl.Float64),
-            pl.Series("noviembre_3", [float(noviembre_3)], dtype=pl.Float64),
-            pl.Series("noviembre_4", [float(noviembre_4)], dtype=pl.Float64),
-            pl.Series("noviembre_5", [float(noviembre_5)], dtype=pl.Float64),
-            pl.Series("noviembre_6", [float(noviembre_6)], dtype=pl.Float64),
-            pl.Series("diciembre_1", [float(diciembre_1)], dtype=pl.Float64),
-            pl.Series("diciembre_2", [float(diciembre_2)], dtype=pl.Float64),
-            pl.Series("diciembre_3", [float(diciembre_3)], dtype=pl.Float64),
-            pl.Series("diciembre_4", [float(diciembre_4)], dtype=pl.Float64),
-            pl.Series("diciembre_5", [float(diciembre_5)], dtype=pl.Float64),
-            pl.Series("diciembre_6", [float(diciembre_6)], dtype=pl.Float64),
-            pl.Series("subtotal_11", [float(subtotal_11)], dtype=pl.Float64),
-            pl.Series("subtotal_12", [float(subtotal_12)], dtype=pl.Float64),
-            pl.Series("subtotal_13", [float(subtotal_13)], dtype=pl.Float64),
-            pl.Series("subtotal_14", [float(subtotal_14)], dtype=pl.Float64),
-            pl.Series("subtotal_15", [float(subtotal_15)], dtype=pl.Float64),
-            pl.Series("subtotal_16", [float(subtotal_16)], dtype=pl.Float64),
-            pl.Series("año_1", [año_1], dtype=pl.String),
-            pl.Series("enero_1", [float(enero_1)], dtype=pl.Float64),
-            pl.Series("enero_2", [float(enero_2)], dtype=pl.Float64),
-            pl.Series("enero_3", [float(enero_3)], dtype=pl.Float64),
-            pl.Series("enero_4", [float(enero_4)], dtype=pl.Float64),
-            pl.Series("enero_5", [float(enero_5)], dtype=pl.Float64),
-            pl.Series("enero_6", [float(enero_6)], dtype=pl.Float64),
-            pl.Series("febrero_1", [float(febrero_1)], dtype=pl.Float64),
-            pl.Series("febrero_2", [float(febrero_2)], dtype=pl.Float64),
-            pl.Series("febrero_3", [float(febrero_3)], dtype=pl.Float64),
-            pl.Series("febrero_4", [float(febrero_4)], dtype=pl.Float64),
-            pl.Series("febrero_5", [float(febrero_5)], dtype=pl.Float64),
-            pl.Series("febrero_6", [float(febrero_6)], dtype=pl.Float64),
-            pl.Series("marzo_1", [float(marzo_1)], dtype=pl.Float64),
-            pl.Series("marzo_2", [float(marzo_2)], dtype=pl.Float64),
-            pl.Series("marzo_3", [float(marzo_3)], dtype=pl.Float64),
-            pl.Series("marzo_4", [float(marzo_4)], dtype=pl.Float64),
-            pl.Series("marzo_5", [float(marzo_5)], dtype=pl.Float64),
-            pl.Series("marzo_6", [float(marzo_6)], dtype=pl.Float64),
-            pl.Series("subtotal_21", [float(subtotal_21)], dtype=pl.Float64),
-            pl.Series("subtotal_22", [float(subtotal_22)], dtype=pl.Float64),
-            pl.Series("subtotal_23", [float(subtotal_23)], dtype=pl.Float64),
-            pl.Series("subtotal_24", [float(subtotal_24)], dtype=pl.Float64),
-            pl.Series("subtotal_25", [float(subtotal_25)], dtype=pl.Float64),
-            pl.Series("subtotal_26", [float(subtotal_26)], dtype=pl.Float64),
-            pl.Series("abril_1", [float(abril_1)], dtype=pl.Float64),
-            pl.Series("abril_2", [float(abril_2)], dtype=pl.Float64),
-            pl.Series("abril_3", [float(abril_3)], dtype=pl.Float64),
-            pl.Series("abril_4", [float(abril_4)], dtype=pl.Float64),
-            pl.Series("abril_5", [float(abril_5)], dtype=pl.Float64),
-            pl.Series("abril_6", [float(abril_6)], dtype=pl.Float64),
-            pl.Series("mayo_1", [float(mayo_1)], dtype=pl.Float64),
-            pl.Series("mayo_2", [float(mayo_2)], dtype=pl.Float64),
-            pl.Series("mayo_3", [float(mayo_3)], dtype=pl.Float64),
-            pl.Series("mayo_4", [float(mayo_4)], dtype=pl.Float64),
-            pl.Series("mayo_5", [float(mayo_5)], dtype=pl.Float64),
-            pl.Series("mayo_6", [float(mayo_6)], dtype=pl.Float64),
-            pl.Series("junio_1", [float(junio_1)], dtype=pl.Float64),
-            pl.Series("junio_2", [float(junio_2)], dtype=pl.Float64),
-            pl.Series("junio_3", [float(junio_3)], dtype=pl.Float64),
-            pl.Series("junio_4", [float(junio_4)], dtype=pl.Float64),
-            pl.Series("junio_5", [float(junio_5)], dtype=pl.Float64),
-            pl.Series("junio_6", [float(junio_6)], dtype=pl.Float64),
-            pl.Series("subtotal_31", [float(subtotal_31)], dtype=pl.Float64),
-            pl.Series("subtotal_32", [float(subtotal_32)], dtype=pl.Float64),
-            pl.Series("subtotal_33", [float(subtotal_33)], dtype=pl.Float64),
-            pl.Series("subtotal_34", [float(subtotal_34)], dtype=pl.Float64),
-            pl.Series("subtotal_35", [float(subtotal_35)], dtype=pl.Float64),
-            pl.Series("subtotal_36", [float(subtotal_36)], dtype=pl.Float64),
-            pl.Series("total_1", [float(total_1)], dtype=pl.Float64),
-            pl.Series("total_2", [float(total_2)], dtype=pl.Float64),
-            pl.Series("total_3", [float(total_3)], dtype=pl.Float64),
-            pl.Series("total_4", [float(total_4)], dtype=pl.Float64),
-            pl.Series("total_5", [float(total_5)], dtype=pl.Float64),
-            pl.Series("total_6", [float(total_6)], dtype=pl.Float64),
-            pl.Series("signature", [signature], dtype=pl.String),
-            pl.Series("name", [name], dtype=pl.String),
-            pl.Series("title", [title], dtype=pl.String),
-            pl.Series("phone", [phone], dtype=pl.String),
+        # Define field names
+        field_names = [
+            "other_section", "año", "julio_1", "julio_2", "julio_3", "julio_4", "julio_5", "julio_6",
+            "agosto_1", "agosto_2", "agosto_3", "agosto_4", "agosto_5", "agosto_6",
+            "septiembre_1", "septiembre_2", "septiembre_3", "septiembre_4", "septiembre_5", "septiembre_6",
+            "subtotal_1", "subtotal_2", "subtotal_3", "subtotal_4", "subtotal_5", "subtotal_6",
+            "octubre_1", "octubre_2", "octubre_3", "octubre_4", "octubre_5", "octubre_6",
+            "noviembre_1", "noviembre_2", "noviembre_3", "noviembre_4", "noviembre_5", "noviembre_6",
+            "diciembre_1", "diciembre_2", "diciembre_3", "diciembre_4", "diciembre_5", "diciembre_6",
+            "subtotal_11", "subtotal_12", "subtotal_13", "subtotal_14", "subtotal_15", "subtotal_16",
+            "año_1", "enero_1", "enero_2", "enero_3", "enero_4", "enero_5", "enero_6",
+            "febrero_1", "febrero_2", "febrero_3", "febrero_4", "febrero_5", "febrero_6",
+            "marzo_1", "marzo_2", "marzo_3", "marzo_4", "marzo_5", "marzo_6",
+            "subtotal_21", "subtotal_22", "subtotal_23", "subtotal_24", "subtotal_25", "subtotal_26",
+            "abril_1", "abril_2", "abril_3", "abril_4", "abril_5", "abril_6",
+            "mayo_1", "mayo_2", "mayo_3", "mayo_4", "mayo_5", "mayo_6",
+            "junio_1", "junio_2", "junio_3", "junio_4", "junio_5", "junio_6",
+            "subtotal_31", "subtotal_32", "subtotal_33", "subtotal_34", "subtotal_35", "subtotal_36",
+            "total_1", "total_2", "total_3", "total_4", "total_5", "total_6",
+            "signature", "name", "title", "phone"
         ]
-        
+
+        # Create data dynamically
+        data = []
+        for field in field_names:
+            value = request.POST.get(field)
+            # Attempt to convert to float, fallback to str
+            if value is not None and value.strip():
+                try:
+                    value = float(value)
+                except ValueError:
+                    value = str(value)
+            else:
+                value = None  # Handle None values explicitly
+
+            # Determine the correct dtype based on the field name
+            dtype = pl.Float64 if "subtotal" in field or "total" in field or "enero" in field else pl.String
+            data.append(pl.Series(field, [value], dtype=dtype))
+
+        # Create DataFrame
         df = pl.DataFrame(data)
+
+        # Insert into database
         DAO().insert_forms(df, "JP_383", 45)
 
-        return render(request, "forms/succesfull.html")
+        return render(request, "forms/successful.html")
+
     return render(request, "forms/yearly/balanza_de_pagos/JP-383.html")

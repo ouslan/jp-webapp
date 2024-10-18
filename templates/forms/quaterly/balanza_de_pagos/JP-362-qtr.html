@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <form method="POST" action="{% url 'JP-362-qtr' %}">
+    <form method="POST" action="{% url 'web_app:JP-362-qtr' %}">
         {% csrf_token %}
         <!-- Header -->
         <section class="header">
@@ -54,7 +54,7 @@
         </section>
         
         <main>
-        <form method="POST" action="{% url 'JP-362-qtr' %}">
+        <form method="POST" action="{% url 'web_app:JP-362-qtr' %}">
             {% csrf_token %}
             <section>
             <div class="body_header">

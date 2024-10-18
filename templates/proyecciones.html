@@ -209,6 +209,53 @@
                 </div>
             </section>
 
+            <!-- Pojection Graph -->
+            <h1>Grafica Anual</h1>
+            <style>
+                .graph-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto; /* Adjust the height as needed */
+                    padding: 20px; /* Add padding to prevent overlap */
+                }
+                
+                /* Media queries for responsiveness */
+                @media (max-width: 1200px) {
+                    .graph-container {
+                        height: 80vh; /* Adjust the height for medium screens */
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .graph-container {
+                        height: 60vh; /* Adjust the height for small screens */
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .graph-container {
+                        height: 40vh; /* Adjust the height for extra small screens */
+                    }
+                }
+            </style>
+
+            <div class="graph-container">
+                {{ annual_graph|safe }}
+            </div>
+
+            <div class="graph-container">
+                {{ monthly_graph|safe }}
+            </div>
+
+            <div class="graph-container">
+                {{ fiscal_graph|safe }}
+            </div>
+
+            <div class="graph-container">
+                {{ quarter_graph|safe }}
+            </div>
+
 
             <div class="sct-footer">
                 <div class="footer-top-bar">
