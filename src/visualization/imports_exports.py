@@ -8,7 +8,7 @@ import os
 load_dotenv()
 
 def web_app_imports_exports(request):
-    dp = DataProcess(str(os.environ.get("DATABASE_URL")), debug=True)
+    dp = DataProcess(debug=True)
     df1_imports = pl.from_pandas(dp.process_int_jp(time="yearly", types="country").to_pandas())
     df2_imports = pl.from_pandas(dp.process_int_jp(time="monthly", types="country").to_pandas())
     df3_imports = pl.from_pandas(dp.process_int_jp(time="qrt", types="country").to_pandas())
