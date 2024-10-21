@@ -3,6 +3,7 @@ import os
 
 load_dotenv()
 
+
 # Get the Database credentials
 def get_db_credentials():
     PORT = os.getenv("POSTGRES_PORT")
@@ -21,5 +22,4 @@ def get_db_credentials():
     else:
         HOST = "timescaledb"
         DATABASE_URL = f"postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}"
-    return PORT, USER, PASSWORD, HOST, DATABASE, DATABASE_URL
-
+    return PORT, USER, PASSWORD, HOST, DATABASE, DATABASE_URL, SECRET_KEY
