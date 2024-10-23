@@ -76,7 +76,7 @@ a {
     color: black;
 }
 
-#frequency, #second_dropdown, #frequency_2, #second_dropdown_2 {
+#frequency, #second_dropdown, #frequency_2, #second_dropdown_2, #third_dropdown {
     border-radius: 8px;
     padding: 5px;
     background-color: #EEEEEE;
@@ -121,3 +121,8 @@ a {
 #graph_title_2 {
     margin-top: -1vw;
 }
+
+#third_dropdown {
+    display: none;
+}
+

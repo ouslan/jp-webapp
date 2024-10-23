@@ -103,27 +103,30 @@
                 <section id="buttons">
                     <section id="dropdowns">
                         <label id="drop_title" for="frequency">Frecuencia:</label>
-                        <select name="frequency" id="frequency">
+                        <select name="frequency" id="frequency" onchange="updateSecondDropdown()">
                             <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
                             <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
                             <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
                         </select>
                     </section>
+                
                     <section id="dropdowns">
                         <label id="drop_title" for="second_dropdown">Periodo:</label>
                         <select name="second_dropdown" id="second_dropdown">
                             <option value="default_value" {% if selected_second_dropdown == "default_value" %}selected{% endif %}>Default</option>
-                            {% if selected_frequency == "Quarterly" %}
-                                <option value="1" {% if selected_second_dropdown == "1" %}selected{% endif %}>Qtr 1</option>
-                                <option value="2" {% if selected_second_dropdown == "2" %}selected{% endif %}>Qtr 2</option>
-                                <option value="3" {% if selected_second_dropdown == "3" %}selected{% endif %}>Qtr 3</option>
-                                <option value="4" {% if selected_second_dropdown == "4" %}selected{% endif %}>Qtr 4</option>
-                            {% endif %}
                         </select>
                     </section>
+                
+                    <section id="dropdowns">
+                        <label id="drop_title" for="third_dropdown">Año:</label>
+                        <select name="third_dropdown" id="third_dropdown">
+                            <option value="default_value" {% if selected_third_dropdown == "default_value" %}selected{% endif %}>Default</option>
+                        </select>
+                    </section>
+                
                     <button id="submit" type="submit">Submit</button>
-                </section>
-
+                </section>                                
+        
                 <div id="graph_1">
                     {{ imports|safe }}
                 </div>
@@ -230,43 +233,78 @@
             function updateSecondDropdown() {
                 const frequency = document.getElementById('frequency').value;
                 const secondDropdown = document.getElementById('second_dropdown');
-                secondDropdown.innerHTML = ''; 
+                const thirdDropdown = document.getElementById('third_dropdown');
+                const thirdDropdownLabel = document.querySelector('label[for="third_dropdown"]'); // Select the label for "Año"
+            
+                // Clear existing options
+                secondDropdown.innerHTML = '';
+                thirdDropdown.innerHTML = '';
             
                 let options = [];
+                let options2 = [];
+            
+                // Logic for second dropdown options
                 if (frequency === 'Yearly') {
-                    options = Array.from({ length: 16 }, (_, i) => 2009 + i); 
-                } else if (frequency === 'Monthly') {
-                    options = [
-                        { value: 1, text: 'January' },
-                        { value: 2, text: 'February' },
-                        { value: 3, text: 'March' },
-                        { value: 4, text: 'April' },
-                        { value: 5, text: 'May' },
-                        { value: 6, text: 'June' },
-                        { value: 7, text: 'July' },
-                        { value: 8, text: 'August' },
-                        { value: 9, text: 'September' },
-                        { value: 10, text: 'October' },
-                        { value: 11, text: 'November' },
-                        { value: 12, text: 'December' }
-                    ];
-                } else if (frequency === 'Quarterly') { 
-                    options = [
-                        { value: 1, text: 'Qtr 1' },
-                        { value: 2, text: 'Qtr 2' },
-                        { value: 3, text: 'Qtr 3' },
-                        { value: 4, text: 'Qtr 4' }
-                    ];
+                    options = Array.from({ length: 16 }, (_, i) => ({ value: 2009 + i, text: 2009 + i }));
+            
+                    // Hide third dropdown and label
+                    thirdDropdown.style.visibility = 'hidden';
+                    thirdDropdownLabel.style.visibility = 'hidden';
+                } else if (frequency === 'Monthly' || frequency === 'Quarterly') {
+                    // Show third dropdown and label
+                    thirdDropdown.style.visibility = 'visible';
+                    thirdDropdownLabel.style.visibility = 'visible';
+            
+                    if (frequency === 'Monthly') {
+                        options = [
+                            { value: 1, text: 'January' },
+                            { value: 2, text: 'February' },
+                            { value: 3, text: 'March' },
+                            { value: 4, text: 'April' },
+                            { value: 5, text: 'May' },
+                            { value: 6, text: 'June' },
+                            { value: 7, text: 'July' },
+                            { value: 8, text: 'August' },
+                            { value: 9, text: 'September' },
+                            { value: 10, text: 'October' },
+                            { value: 11, text: 'November' },
+                            { value: 12, text: 'December' }
+                        ];
+                    } else {
+                        options = [
+                            { value: 1, text: 'Qtr 1' },
+                            { value: 2, text: 'Qtr 2' },
+                            { value: 3, text: 'Qtr 3' },
+                            { value: 4, text: 'Qtr 4' }
+                        ];
+                    }
+            
+                    options2 = Array.from({ length: 16 }, (_, i) => ({ value: 2009 + i, text: 2009 + i }));
                 }
             
+                // Populate second dropdown
                 options.forEach(option => {
                     const opt = document.createElement('option');
-                    opt.value = option.value || option;
-                    opt.text = option.text || option;
+                    opt.value = option.value;
+                    opt.text = option.text;
                     secondDropdown.appendChild(opt);
                 });
+            
+                // Populate third dropdown if 'Monthly' or 'Quarterly'
+                if (frequency === 'Monthly' || frequency === 'Quarterly') {
+                    options2.forEach(option => {
+                        const opt = document.createElement('option');
+                        opt.value = option.value;
+                        opt.text = option.text;
+                        thirdDropdown.appendChild(opt);
+                    });
+                }
             }
-    
+            
+            document.addEventListener('DOMContentLoaded', () => {
+                updateSecondDropdown();  // Initialize dropdowns on page load
+            });                      
+            
             function updateSecondDropdown2() {
                 const frequency = document.getElementById('frequency_2').value;
                 const secondDropdown = document.getElementById('second_dropdown_2');
