@@ -76,7 +76,7 @@ a {
     color: black;
 }
 
-#frequency, #second_dropdown, #frequency_2, #second_dropdown_2, #third_dropdown {
+#frequency, #second_dropdown, #frequency_2, #second_dropdown_2, #third_dropdown, #third_dropdown_2 {
     border-radius: 8px;
     padding: 5px;
     background-color: #EEEEEE;

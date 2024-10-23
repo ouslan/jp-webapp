@@ -141,7 +141,7 @@
                 <section id="buttons">
                     <section id="dropdowns">
                         <label id="drop_title" for="frequency_2">Frecuencia:</label>
-                        <select name="frequency_2" id="frequency_2">
+                        <select name="frequency_2" id="frequency_2" onchange="updateSecondDropdown2()">
                             <option value="Yearly" {% if selected_frequency_2 == "Yearly" %}selected{% endif %}>Yearly</option>
                             <option value="Monthly" {% if selected_frequency_2 == "Monthly" %}selected{% endif %}>Monthly</option>
                             <option value="Quarterly" {% if selected_frequency_2 == "Quarterly" %}selected{% endif %}>Quarterly</option>
@@ -159,6 +159,12 @@
                             {% endif %}
                         </select>
                     </section>
+                    <section id="dropdowns">
+                        <label id="drop_title" for="third_dropdown_2">Año:</label>
+                        <select name="third_dropdown_2" id="third_dropdown_2">
+                            <option value="default_value" {% if selected_third_dropdown_2 == "default_value" %}selected{% endif %}>Default</option>
+                        </select>
+                    </section>
                     <button id="submit_2" type="submit">Submit</button>
                 </section>
                 
@@ -167,6 +173,7 @@
                 </div>
             </div>
         </form>
+        
 
           <!-- ------------------ FOOTER --------------------- -->
           <footer>
@@ -306,49 +313,78 @@
             });                      
             
             function updateSecondDropdown2() {
-                const frequency = document.getElementById('frequency_2').value;
-                const secondDropdown = document.getElementById('second_dropdown_2');
-                secondDropdown.innerHTML = ''; 
+                const frequency2 = document.getElementById('frequency_2').value;
+                const secondDropdown2 = document.getElementById('second_dropdown_2');
+                const thirdDropdown2 = document.getElementById('third_dropdown_2');
+                const thirdDropdownLabel2 = document.querySelector('label[for="third_dropdown_2"]'); // Label for the third dropdown
+                
+                // Clear existing options
+                secondDropdown2.innerHTML = '';
+                thirdDropdown2.innerHTML = '';
             
                 let options = [];
-                if (frequency === 'Yearly') {
-                    options = Array.from({ length: 16 }, (_, i) => 2009 + i); 
-                } else if (frequency === 'Monthly') {
-                    options = [
-                        { value: 1, text: 'January' },
-                        { value: 2, text: 'February' },
-                        { value: 3, text: 'March' },
-                        { value: 4, text: 'April' },
-                        { value: 5, text: 'May' },
-                        { value: 6, text: 'June' },
-                        { value: 7, text: 'July' },
-                        { value: 8, text: 'August' },
-                        { value: 9, text: 'September' },
-                        { value: 10, text: 'October' },
-                        { value: 11, text: 'November' },
-                        { value: 12, text: 'December' }
-                    ];
-                } else if (frequency === 'Quarterly') { 
-                    options = [
-                        { value: 1, text: 'Qtr 1' },
-                        { value: 2, text: 'Qtr 2' },
-                        { value: 3, text: 'Qtr 3' },
-                        { value: 4, text: 'Qtr 4' }
-                    ];
+                let options2 = [];
+            
+                if (frequency2 === 'Yearly') {
+                    options = Array.from({ length: 16 }, (_, i) => ({ value: 2009 + i, text: 2009 + i }));
+            
+                    // Hide third dropdown and label
+                    thirdDropdown2.style.visibility = 'hidden';
+                    thirdDropdownLabel2.style.visibility = 'hidden';
+                } else if (frequency2 === 'Monthly' || frequency2 === 'Quarterly') {
+                    // Show third dropdown and label
+                    thirdDropdown2.style.visibility = 'visible';
+                    thirdDropdownLabel2.style.visibility = 'visible';
+            
+                    if (frequency2 === 'Monthly') {
+                        options = [
+                            { value: 1, text: 'January' },
+                            { value: 2, text: 'February' },
+                            { value: 3, text: 'March' },
+                            { value: 4, text: 'April' },
+                            { value: 5, text: 'May' },
+                            { value: 6, text: 'June' },
+                            { value: 7, text: 'July' },
+                            { value: 8, text: 'August' },
+                            { value: 9, text: 'September' },
+                            { value: 10, text: 'October' },
+                            { value: 11, text: 'November' },
+                            { value: 12, text: 'December' }
+                        ];
+                    } else {
+                        options = [
+                            { value: 1, text: 'Qtr 1' },
+                            { value: 2, text: 'Qtr 2' },
+                            { value: 3, text: 'Qtr 3' },
+                            { value: 4, text: 'Qtr 4' }
+                        ];
+                    }
+            
+                    options2 = Array.from({ length: 16 }, (_, i) => ({ value: 2009 + i, text: 2009 + i }));
                 }
             
+                // Populate second dropdown
                 options.forEach(option => {
                     const opt = document.createElement('option');
-                    opt.value = option.value || option;
-                    opt.text = option.text || option;
-                    secondDropdown.appendChild(opt);
+                    opt.value = option.value;
+                    opt.text = option.text;
+                    secondDropdown2.appendChild(opt);
                 });
+            
+                // Populate third dropdown if 'Monthly' or 'Quarterly'
+                if (frequency2 === 'Monthly' || frequency2 === 'Quarterly') {
+                    options2.forEach(option => {
+                        const opt = document.createElement('option');
+                        opt.value = option.value;
+                        opt.text = option.text;
+                        thirdDropdown2.appendChild(opt);
+                    });
+                }
             }
-    
+            
             document.addEventListener('DOMContentLoaded', () => {
-                updateSecondDropdown();
-                updateSecondDropdown2();
-            });
+                updateSecondDropdown2();  // Initialize dropdowns for graph_2 on page load
+            });            
     
             document.getElementById('frequency').addEventListener('change', updateSecondDropdown);
             document.getElementById('frequency_2').addEventListener('change', updateSecondDropdown2);
