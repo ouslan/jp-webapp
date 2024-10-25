@@ -106,12 +106,14 @@ def datos_demograficos(request):
     t_graph_html = trimestral_demographic_graph()
     m_graph_html = monthly_demographic_graph()
     d_table = demographic_table(request)
+    f_graph_html = fiscal_demographic_graph()
 
     context = {
         "graph": graph_html,
         "t_graph": t_graph_html,
         "m_graph": m_graph_html,
-        "d_table": d_table
+        "d_table": d_table,
+        "f_graph": f_graph_html
     }
 
     return render(request, "demograficos.html", context)
