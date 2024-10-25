@@ -1,15 +1,14 @@
 services:
   database:
-    image: timescale/timescaledb-ha:pg16
+    image: postgres:17
     container_name: timescaledb
     restart: always
     ports:
-      - ${POSTGRES_PORT}:5432
+      - 5433:5432
     environment:
-      TIMESCALEDB_TELEMETRY: off
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: timescaledb
     volumes:
       - type: volume
         source: timescale_volume
@@ -22,6 +21,18 @@ services:
       interval: 5s
       timeout: 3s
       retries: 5
+  api:
+    container_name: FastAPI
+    image: ouslan/jp-api:latest
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    ports:
+      - 8051:8000
+    networks:
+      - timescale_network
+    depends_on:
+      database:
+        condition: service_healthy
 networks:
   timescale_network:
 
