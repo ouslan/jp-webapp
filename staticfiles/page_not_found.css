@@ -1,0 +1,22 @@
+h1 {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+p {
+  font-size: large;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
