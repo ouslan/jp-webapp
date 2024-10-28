@@ -46,9 +46,23 @@ services:
     depends_on:
       database:
         condition: service_healthy
-
+  FastAPI:
+      container_name: FastAPI
+      image: ouslan/jp-api
+      environment:
+        DATABASE_URL: ${DATABASE_URL}
+      volumes:
+        - data_folder:/app/data 
+      ports:
+        - 8051:8000
+      networks:
+        - api_network
+      depends_on:
+        database:
+          condition: service_healthy
 networks:
   timescale_network:
 
 volumes:
   timescale_volume:
+  data_folder:

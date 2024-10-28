@@ -21,20 +21,23 @@ services:
       interval: 5s
       timeout: 3s
       retries: 5
-  api:
-    container_name: FastAPI
-    image: ouslan/jp-api:latest
-    environment:
-      DATABASE_URL: ${DATABASE_URL}
-    ports:
-      - 8051:8000
-    networks:
-      - timescale_network
-    depends_on:
-      database:
-        condition: service_healthy
+  FastAPI:
+      container_name: FastAPI
+      image: ouslan/jp-api:latest
+      environment:
+        DATABASE_URL: ${DATABASE_URL}
+      volumes:
+        - data_folder:/app/data 
+      ports:
+        - 8051:8000
+      networks:
+        - timescale_network
+      depends_on:
+        database:
+          condition: service_healthy
 networks:
   timescale_network:
 
 volumes:
   timescale_volume:
+  data_folder:
