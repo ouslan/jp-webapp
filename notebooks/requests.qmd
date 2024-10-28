@@ -15,5 +15,5 @@ import requests
 ```{python}
 url = "http://localhost:8051/data/trade/?time=yearly&types=hts&agr=false&group=false"
 r = requests.get(url).json()
-pd.DataFrame(r)
+pd.DataFrame(r).sort_values(by="year")
 ```
