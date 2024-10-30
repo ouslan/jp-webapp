@@ -13,11 +13,15 @@ DJANGO_SUPERUSER_PASSWORD=admin22
 SECRET_KEY='django-insecure-yvp)7c@8tzbvp35xmc40^r#%qu8x5a#0mcje7ec5&)dk!61o*u'
 
 # TimescaleDB credentials
+DATABASE_URL=postgresql://postgres:password@database:5432/timescaledb
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=password
 POSTGRES_DB=timescaledb
 POSTGRES_HOST=localhost
 POSTGRES_PORT=5432
+
+# Development
+DEV=True
 
 ```
 
