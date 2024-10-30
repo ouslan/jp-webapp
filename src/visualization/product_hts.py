@@ -9,9 +9,18 @@ def products_hts(request):
     # Default data for the graph
     url = "http://localhost:8051/data/trade/?time=yearly&types=hts&agr=false&group=false"
     r = requests.get(url).json()
-    df = pd.DataFrame(r).sort_values(by="year")
-    x_axis = df["year"]
-    y_axis = df["qty_imports"]
+    df_yearly = pd.DataFrame(r).sort_values(by="year")
+    
+    url = "http://localhost:8051/data/trade/?time=monthly&types=hts&agr=false&group=false"
+    r = requests.get(url).json()
+    df_monthly = pl.DataFrame(r).sort(by="year")
+    
+    url = "http://localhost:8051/data/trade/?time=qrt&types=hts&agr=false&group=false"
+    r = requests.get(url).json()
+    df_qrt = pl.DataFrame(r).sort(by="year")
+    
+    x_axis = df_yearly["year"]
+    y_axis = df_yearly["qty_imports"]
     
     # Check if there's POST data to update the graph
     if request.method == "POST":
@@ -19,23 +28,17 @@ def products_hts(request):
         second_dropdown = request.POST.get("second_dropdown")
         third_dropdown = request.POST.get("third_dropdown")
         
-        if frequency == "Yearly":
-            url = "http://localhost:8051/data/trade/?time=yearly&types=hts&agr=false&group=false"
-            y_axis = df["qty_imports"]
-        elif frequency == "Monthly":
-            url = "http://localhost:8051/data/trade/?time=monthly&types=hts&agr=false&group=false"
-            y_axis = df.query("month == @second_dropdown and year == @third_dropdown")["qty_imports"]
-        elif frequency == "Quarterly":
-            url = "http://localhost:8051/data/trade/?time=qrtx&types=hts&agr=false&group=false"
-            y_axis = df.query("qrt == @second_dropdown and year == @third_dropdown")["qty_imports"]
+        if frequency == "Monthly":
+            df_filtered = df_monthly.filter((pl.col("month") == int(second_dropdown)) & (pl.col("year") == int(third_dropdown)))
+            x_axis = df_monthly["monthly"]
+            y_axis = df_filtered["qty_imports"]
+        elif frequency == "Quaterly":
+            df_filtered = df_monthly.filter((pl.col("quarter") == int(second_dropdown)) & (pl.col("year") == int(third_dropdown)))
+            x_axis = df_qrt["quarter"]
+            y_axis = df_filtered["qty_imports"]
         else:
-            url = "http://localhost:8051/data/trade/?time=yearly&types=hts&agr=false&group=false"
-            y_axis = df["qty_imports"]
-
-        # Get and process the data based on selected frequency
-        r = requests.get(url).json()
-        df = pd.DataFrame(r).sort_values(by="year")
-        x_axis = df["year"] if frequency == "Yearly" else df["month"] if frequency == "Monthly" else df["qrt"]
+            x_axis = df_yearly["year"]
+            y_axis = df_yearly["qty_imports"]
 
     # Create the graph with the x and y axis
     fig = px.scatter(x=x_axis, y=y_axis)

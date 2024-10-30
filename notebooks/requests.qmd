@@ -5,15 +5,23 @@ format:
     code-fold: true
 jupyter: python3
 ---
+```{python}
+import os
+os.chdir("..")
+```
 
 ```{python}
 import polars as pl
 import pandas as pd
 import requests
+from src.jp_imports.src.jp_imports.data_process import DataTrade
+```
+
+
+```{python}
+d = DataTrade("postgresql://postgres:password@localhost:5433/timescaledb")
+d.process_price()
 ```
 
 ```{python}
-url = "http://localhost:8051/data/trade/?time=yearly&types=hts&agr=false&group=false"
-r = requests.get(url).json()
-pd.DataFrame(r).sort_values(by="year")
-```
+pd.DataFrame(r)
