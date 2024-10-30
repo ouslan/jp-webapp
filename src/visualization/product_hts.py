@@ -8,16 +8,16 @@ import polars as pl
 def products_hts(request):
     # Default data for the graph
     url = "http://localhost:8051/data/trade/?time=yearly&types=hts&agr=false&group=false"
-    r = requests.get(url).json()
-    df_yearly = pd.DataFrame(r).sort_values(by="year")
+    request = requests.get(url).json()
+    df_yearly = pd.DataFrame(request).sort_values(by="year")
     
     url = "http://localhost:8051/data/trade/?time=monthly&types=hts&agr=false&group=false"
-    r = requests.get(url).json()
-    df_monthly = pl.DataFrame(r).sort(by="year")
+    request = requests.get(url).json()
+    df_monthly = pl.DataFrame(request).sort(by="year")
     
     url = "http://localhost:8051/data/trade/?time=qrt&types=hts&agr=false&group=false"
-    r = requests.get(url).json()
-    df_qrt = pl.DataFrame(r).sort(by="year")
+    request = requests.get(url).json()
+    df_qrt = pl.DataFrame(request).sort(by="year")
     
     x_axis = df_yearly["year"]
     y_axis = df_yearly["qty_imports"]
