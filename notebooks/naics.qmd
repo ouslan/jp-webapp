@@ -1,0 +1,25 @@
+---
+title: "database"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+```{python}
+import os
+os.chdir("..")
+```
+
+```{python}
+import polars as pl
+import plotly.express as px
+```
+
+```{python}
+df = pl.read_parquet("data/processed/naics4_df.parquet")
+print(df)
+naics =  df.filter(pl.col("first_4_naics_code") == 926140).group_by("first_4_naics_code", "year").agg(pl.col("total_wages_sum").sum(), pl.col("total_employment").sum()).sort("year")
+fig = px.line(naics, x="year", y="total_wages_sum", title='Esto es arriba boster')
+fig.show()
+```

@@ -4,7 +4,7 @@
 <html data-wf-domain="www.pr.gov" data-wf-page="60ef3152d22749da0b6a9065" data-wf-site="60ddbc422188bb3fab87d219" lang="es">
     <head>
         <meta charset="utf-8"/>
-        <title>PR.gov</title>
+        <title>Salario y Empleo - PR.gov</title>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <link href="https://assets-global.website-files.com/60ddbc422188bb3fab87d219/css/pr-gov.9f47b10d6.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -162,12 +162,43 @@
                         height: 40vh; /* Adjust the height for extra small screens */
                     }
                 }
+
+                #x-axis-choice, #y-axis-choice, #naics-choice-title {
+                    margin-left: 200px;
+                }
+
             </style>
         </head>
+        <br>
+
+        <!-- Formulario para seleccionar el eje X y NAICS -->
+        <form method="POST" action="">
+            {% csrf_token %}
+            
+            <!-- Selección de Eje X -->
+            <label id="x-axis-choice" for="x-axis-choice">Selecciona el eje X:</label>
+            <select id="x-axis-choice" name="x_axis" style="margin-left: 200px;">
+                <option value="year" {% if x_axis == 'year' %}selected{% endif %}>Año</option>
+                <option value="qtr" {% if x_axis == 'qtr' %}selected{% endif %}>Trimestre</option>
+            </select>
+            
+            <!-- Dropdown para NAICS Code -->
+            <label id="y-axis-choice" for="naics-choice">Selecciona el NAICS Code:</label>
+            <select id="y-axis-choice" name="naics_code" style="margin-left: 200px;">
+                {% for naics in naics_list %}
+                    <option value="{{ naics }}" {% if naics_code == naics %}selected{% endif %}>{{ naics }}</option>
+                {% endfor %}
+            </select>
+
+            <button type="submit" style="margin-left: 200px;">Actualizar</button>
+        </form>
+
 
             <div class="graph-container">
                 {{ graph|safe }}
             </div>
+            
+
 
 
 

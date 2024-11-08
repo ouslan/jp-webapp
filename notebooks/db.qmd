@@ -22,18 +22,7 @@ load_dotenv()
 
 ```{python}
 # Database credentials
-NAME = os.environ.get("POSTGRES_DB")
-USER = os.environ.get("POSTGRES_USER")
-PASSWORD = os.environ.get("POSTGRES_PASSWORD")
-PORT = os.environ.get("POSTGRES_PORT")
-
-if not all([NAME, USER, PASSWORD, PORT]):
-    raise ValueError("Database credentials not set")
-if os.environ.get("DEV") == "True":
-    HOST = "localhost"
-else:
-    HOST = "timescaledb"
-print(NAME, USER, PASSWORD, PORT, HOST)
+pl.read_parquet("data/processed/master_df.parquet")
 ```
 
 
