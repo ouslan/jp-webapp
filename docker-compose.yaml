@@ -1,37 +1,59 @@
 services:
   database:
     image: postgres:17
-    container_name: timescaledb
+    container_name: api_database
     restart: always
+    secrets:
+      - db-password
     ports:
-      - 5433:5432
+      - 5432:5432
     environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/db-password
+      POSTGRES_DB: postgres
     volumes:
-      - type: volume
-        source: timescale_volume
-        target: /var/lib/postgresql/data
-        read_only: false
+      - database_volume:/var/lib/postgresql/data
     networks:
-      - timescale_network
+      - api_network
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER}", "-d", "${POSTGRES_DB}"]
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "postgres"]
       interval: 5s
       timeout: 3s
       retries: 5
-  webapp:
-    container_name: Django
+
+  api:
+    container_name: FastAPI
+    image: ouslan/jp-api:latest
+    restart: always
+    secrets:
+      - db-password
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/db-password
+      POSTGRES_DB: postgres
+
+    volumes:
+      - data_folder:/app/data
+    ports:
+      - 8051:8000
+    networks:
+      - api_network
+    depends_on:
+      database:
+        condition: service_healthy
+  
+  django:
+    container_name: django_server
     build:
       context: .
+    secrets:
+      - db-password
     environment:
       DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME}
       DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL}
       DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
     command: >
       sh -c "python manage.py migrate &&
              python manage.py shell -c 'from django.contrib.auth.models import User; User.objects.filter(username=\"${DJANGO_SUPERUSER_USERNAME}\").exists() or User.objects.create_superuser(\"${DJANGO_SUPERUSER_USERNAME}\", \"${DJANGO_SUPERUSER_EMAIL}\", \"${DJANGO_SUPERUSER_PASSWORD}\")' &&
@@ -39,29 +61,20 @@ services:
              python manage.py migrate &&
              python main.py &&
              python manage.py runserver 0.0.0.0:8000"
-    ports:
+    ports: 
       - 8057:8000
     networks:
-      - timescale_network
+      - api_network
     depends_on:
       database:
         condition: service_healthy
-  FastAPI:
-    image: ouslan/jp-api:latest
-    container_name: api_server
-    restart: always
-    ports:
-      - 9853:8000
-    environment:
-      DATABASE_URL: ${DATABASE_URL}
-    networks:
-      - timescale_network
-    depends_on:
-      database:
-        condition: service_healthy
-
 networks:
-  timescale_network:
+  api_network:
 
 volumes:
-  timescale_volume:
+  database_volume:
+  data_folder:
+
+secrets:
+  db-password:
+    file: password.txt

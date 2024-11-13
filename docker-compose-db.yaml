@@ -1,41 +1,53 @@
 services:
   database:
     image: postgres:17
-    container_name: timescaledb
+    container_name: api_database
     restart: always
+    secrets:
+      - db-password
     ports:
-      - 5433:5432
+      - 5432:5432
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: timescaledb
+      POSTGRES_PASSWORD_FILE: /run/secrets/db-password
+      POSTGRES_DB: postgres
     volumes:
-      - type: volume
-        source: timescale_volume
-        target: /var/lib/postgresql/data
-        read_only: false
+      - database_volume:/var/lib/postgresql/data
     networks:
-      - timescale_network
+      - api_network
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER}", "-d", "${POSTGRES_DB}"]
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "postgres"]
       interval: 5s
       timeout: 3s
       retries: 5
 
-  FastAPI:
+  api:
     container_name: FastAPI
     image: ouslan/jp-api:latest
+    restart: always
+    secrets:
+      - db-password
     environment:
-      DATABASE_URL: ${DATABASE_URL}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/db-password
+      POSTGRES_DB: postgres
+
+    volumes:
+      - data_folder:/app/data
     ports:
       - 8051:8000
     networks:
-      - timescale_network
+      - api_network
     depends_on:
       database:
         condition: service_healthy
 networks:
-  timescale_network:
+  api_network:
 
 volumes:
-  timescale_volume:
+  database_volume:
+  data_folder:
+
+secrets:
+  db-password:
+    file: password.txt
