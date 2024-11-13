@@ -1,6 +1,6 @@
 services:
   database:
-    image: timescale/timescaledb-ha:pg16
+    image: postgres:17
     container_name: timescaledb
     restart: always
     ports:
@@ -39,8 +39,21 @@ services:
              python manage.py migrate &&
              python main.py &&
              python manage.py runserver 0.0.0.0:8000"
-    ports: 
+    ports:
       - 8057:8000
+    networks:
+      - timescale_network
+    depends_on:
+      database:
+        condition: service_healthy
+  FastAPI:
+    image: ouslan/jp-api:latest
+    container_name: api_server
+    restart: always
+    ports:
+      - 9853:8000
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
     networks:
       - timescale_network
     depends_on:

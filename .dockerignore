@@ -2,6 +2,7 @@ notebooks/
 
 # Ignore all pkl files
 *.pkl
+*.env
 
 # Ignore all database files
 *.db

@@ -21,7 +21,8 @@ services:
       interval: 5s
       timeout: 3s
       retries: 5
-  api:
+
+  FastAPI:
     container_name: FastAPI
     image: ouslan/jp-api:latest
     environment:
