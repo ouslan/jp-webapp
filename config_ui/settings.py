@@ -14,7 +14,7 @@ from pathlib import Path
 from env import get_db_credentials
 import os
 
-PORT, USER, PASSWORD, HOST, DATABASE, DATABASE_URL, SECRET_KEY = get_db_credentials()
+USER, PASSWORD, HOST, DATABASE, DATABASE_URL, SECRET_KEY = get_db_credentials()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
