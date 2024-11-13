@@ -21,16 +21,32 @@ services:
       timeout: 3s
       retries: 5
 
+  api:
+    container_name: FastAPI
+    image: ouslan/jp-api:latest
+    restart: always
+    secrets:
+      - db-password
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/db-password
+      POSTGRES_DB: postgres
+
+    volumes:
+      - data_folder:/app/data
+    ports:
+      - 8051:8000
+    networks:
+      - api_network
+    depends_on:
+      database:
+        condition: service_healthy
 networks:
   api_network:
 
 volumes:
   database_volume:
   data_folder:
-
-secrets:
-  db-password:
-    file: password.txt
 
 secrets:
   db-password:

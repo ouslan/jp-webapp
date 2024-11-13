@@ -23,7 +23,7 @@ services:
 
   api:
     container_name: FastAPI
-    image: ouslan/jp-api:dev
+    image: ouslan/jp-api:latest
     restart: always
     secrets:
       - db-password
@@ -41,7 +41,7 @@ services:
     depends_on:
       database:
         condition: service_healthy
-
+  
   django:
     container_name: django_server
     build:
