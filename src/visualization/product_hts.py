@@ -3,97 +3,106 @@ import pandas as pd
 import requests
 import plotly.express as px
 import plotly.graph_objects as go
-import polars as pl
 
 def products_hts(request):
-    # Default data for the graph
-    url = "http://localhost:8051/data/trade/?time=yearly&types=hts&agr=false&group=false"
-    request = requests.get(url).json()
-    df_yearly = pd.DataFrame(request).sort_values(by="year")
-    
-    url = "http://localhost:8051/data/trade/?time=monthly&types=hts&agr=false&group=false"
-    request = requests.get(url).json()
-    df_monthly = pl.DataFrame(request).sort(by="year")
-    
-    url = "http://localhost:8051/data/trade/?time=qrt&types=hts&agr=false&group=false"
-    request = requests.get(url).json()
-    df_qrt = pl.DataFrame(request).sort(by="year")
-    
-    x_axis = df_yearly["year"]
-    y_axis = df_yearly["qty_imports"]
-    
-    # Check if there's POST data to update the graph
+    # URLs for each frequency
+    urls = {
+        "yearly": "https://api.econlabs.net/data/trade/jp/?time=yearly&types=hts&agr=false&group=false",
+        "monthly": "https://api.econlabs.net/data/trade/jp/?time=monthly&types=hts&agr=false&group=false",
+        "quarterly": "https://api.econlabs.net/data/trade/jp/?time=qrt&types=hts&agr=false&group=false",
+    }
+
+    # Load data into the session to avoid repeated downloads
+    if "yearly_data" not in request.session:
+        response = requests.get(urls["yearly"]).json()
+        request.session["yearly_data"] = response
+
+    if "monthly_data" not in request.session:
+        response = requests.get(urls["monthly"]).json()
+        request.session["monthly_data"] = response
+
+    if "quarterly_data" not in request.session:
+        response = requests.get(urls["quarterly"]).json()
+        request.session["quarterly_data"] = response
+
+    # Convert session data into DataFrames
+    df_yearly = pd.DataFrame(request.session["yearly_data"]).sort_values(by="year")
+    df_monthly = pd.DataFrame(request.session["monthly_data"]).sort_values(by="year")
+    df_quarterly = pd.DataFrame(request.session["quarterly_data"]).sort_values(by="year")
+
+    # Validate required columns
+    required_columns = ["year", "month", "qty_imports"]
+    for col in required_columns:
+        if col not in df_monthly.columns:
+            return render(request, 'product_hts.html', {"error": f"Missing column '{col}' in the dataset."})
+
+    # Default data for the graph (Yearly)
+    x_axis = pd.Series(df_yearly["year"])
+    y_axis = pd.Series(df_yearly["qty_imports"])
+
+    # Handle POST to change the frequency
     if request.method == "POST":
         frequency = request.POST.get("frequency")
         second_dropdown = request.POST.get("second_dropdown")
         third_dropdown = request.POST.get("third_dropdown")
-        
+
         if frequency == "Monthly":
-            df_filtered = df_monthly.filter((pl.col("month") == int(second_dropdown)) & (pl.col("year") == int(third_dropdown)))
-            x_axis = df_monthly["monthly"]
-            y_axis = df_filtered["qty_imports"]
-        elif frequency == "Quaterly":
-            df_filtered = df_monthly.filter((pl.col("quarter") == int(second_dropdown)) & (pl.col("year") == int(third_dropdown)))
-            x_axis = df_qrt["quarter"]
-            y_axis = df_filtered["qty_imports"]
-        else:
-            x_axis = df_yearly["year"]
-            y_axis = df_yearly["qty_imports"]
+            # Filter monthly data
+            df_filtered = df_monthly[
+                (df_monthly["month"] == int(second_dropdown)) & (df_monthly["year"] == int(third_dropdown))
+            ]
 
-    # Create the graph with the x and y axis
-    fig = px.scatter(x=x_axis, y=y_axis)
-    fig.add_trace(go.Scatter(
-        x=x_axis,
-        y=y_axis,
-        mode='lines+markers',
-        line=dict(color='#FF2525', width=3),
-        marker=dict(size=4, color='#00CDFF'),
-        hoverinfo='text',
-    ))
-    
-    fig.update_layout(
-        margin=dict(l=0, r=0, t=0, b=0),
-        plot_bgcolor='#F7F7F7',
-        hovermode='x',
-        showlegend=False,
-        xaxis=dict(
-            title="",
-            color='black',
-            showgrid=True,
-            showticklabels=True,
-            linecolor='black',
-            linewidth=2,
-            ticks='outside',
-            tickfont=dict(
-                family='Arial',
-                size=12,
-                color='black'
-            ),
-        ),
-        yaxis=dict(
-            title="",
-            color='black',
-            showline=True,
-            showgrid=True,
-            showticklabels=True,
-            linecolor='black',
-            linewidth=2,
-            ticks='outside',
-            tickfont=dict(
-                family='Arial',
-                size=12,
-                color='black'
-            ),
-        ),
-        width=1380,
-    )
+            # Validate if filtered data exists
+            if not df_filtered.empty:
+                x_axis = pd.Series(df_filtered["month"])
+                y_axis = pd.Series(df_filtered["qty_imports"])
+            else:
+                x_axis = pd.Series([])
+                y_axis = pd.Series([])
 
-    # Convert graph to HTML
-    productos_hts__html = fig.to_html()
+        elif frequency == "Quarterly":
+            # Filter quarterly data
+            df_filtered = df_quarterly[
+                (df_quarterly["qrt"] == int(second_dropdown)) & (df_quarterly["year"] == int(third_dropdown))
+            ]
+            
+            # Validate if filtered data exists
+            if not df_filtered.empty:
+                x_axis = pd.Series(df_filtered["qrt"])
+                y_axis = pd.Series(df_filtered["qty_imports"])
+            else:
+                x_axis = pd.Series([])
+                y_axis = pd.Series([])
 
-    # Pass the graph HTML to the context
+    # Create the graph
+    if x_axis.empty or y_axis.empty:
+        productos_hts__html = "<p>No data available for the selected filters.</p>"
+    else:
+        fig = px.scatter(x=x_axis, y=y_axis)
+        fig.add_trace(go.Scatter(
+            x=x_axis,
+            y=y_axis,
+            mode='lines+markers',
+            line=dict(color='#FF2525', width=3),
+            marker=dict(size=4, color='#00CDFF'),
+            hoverinfo='text',
+        ))
+
+        fig.update_layout(
+            title="HTS Data Visualization",
+            margin=dict(l=0, r=0, t=40, b=0),
+            plot_bgcolor='#F7F7F7',
+            hovermode='x',
+            showlegend=False,
+            xaxis=dict(title="Month", color='black'),
+            yaxis=dict(title="Quantity Imports", color='black'),
+        )
+
+        productos_hts__html = fig.to_html()
+
+    # Pass the graph or error message to the context
     context = {
         "productos_hts__html": productos_hts__html,
     }
-    
+
     return render(request, 'product_hts.html', context)
