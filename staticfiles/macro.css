@@ -78,3 +78,18 @@ a {
 #graph_title {
     text-align: center;
 }
+
+.download_container {
+    text-align: center;
+    margin-left: 645px;
+    background-color: #007bff;
+    border-radius: 10px;
+    width: 150px;
+}
+  
+#download_button {
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px;
+}
