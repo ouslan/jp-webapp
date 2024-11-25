@@ -1,8 +1,10 @@
+from turtle import down
 import pandas as pd
 from django.shortcuts import render
 
 import plotly.graph_objects as go
 import plotly.express as px
+import requests
 
 def web_app_indicadores(request):
     df_monthly = pd.read_parquet("data/processed/indicadores_economicos.parquet").sort_values(by="date").reset_index()
@@ -156,6 +158,7 @@ def web_app_indicadores(request):
             )
         ]
     )
+            
 
     indicadores_html = fig.to_html()
 
