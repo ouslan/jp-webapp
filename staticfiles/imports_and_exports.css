@@ -86,7 +86,7 @@ a {
 #submit, #submit_2 {
     font-size: 1em;
     border-radius: 8px;
-    padding: 6px;
+    padding: 10px;
     background-color: #008cff;
     border: none;
     margin-top: -1px;
@@ -124,4 +124,30 @@ a {
 
 #graph_title_2 {
     margin-top: -1vw;
+}
+
+.download_container {
+    background-color: #008cff;
+    border-radius: 8px;
+    width: 170px;
+    padding: 0.5px;
+}
+  
+#download_button {
+    font-size: 1em;
+    border: none;
+    padding: 10px 20px;
+}
+
+.download_container_2 {
+    background-color: #008cff;
+    border-radius: 8px;
+    width: 170px;
+    padding: 0.5px;
+}
+  
+#download_button_2 {
+    font-size: 1em;
+    border: none;
+    padding: 10px 20px;
 }

@@ -103,7 +103,7 @@
                 <section id="buttons">
                     <section id="dropdowns">
                         <label id="drop_title" for="frequency">Frecuencia:</label>
-                        <select name="frequency" id="frequency" onchange="updateSecondDropdown()">
+                        <select name="frequency" id="frequency" onchange="updateSecondDropdown(); updateDownloadLink();">
                             <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
                             <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
                             <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
@@ -125,12 +125,32 @@
                     </section>
                 
                     <button id="submit" type="submit">Submit</button>
+            
+                    <div class="download_container">
+                        <a id="download_button" href="https://api.econlabs.net/files/trade/jp/?time=yearly&types=country&agg=none&agr=false&group=false" class="button">Descargar Datos</a>
+                    </div>
                 </section>                                
-        
+            
                 <div id="graph_1">
                     {{ imports|safe }}
                 </div>
             </div>
+            
+            <script>
+                function updateDownloadLink() {
+                    const frequency = document.getElementById('frequency').value;
+                    const downloadButton = document.getElementById('download_button');
+                    let timeParam = 'yearly';
+            
+                    if (frequency === 'Monthly') {
+                        timeParam = 'monthly';
+                    } else if (frequency === 'Quarterly') {
+                        timeParam = 'qrt';
+                    }
+            
+                    downloadButton.href = `https://api.econlabs.net/files/trade/jp/?time=${timeParam}&types=country&agg=none&agr=false&group=false`;
+                }
+            </script>
         </form>
     
         <form id="export-form" method="post">
@@ -141,7 +161,7 @@
                 <section id="buttons">
                     <section id="dropdowns">
                         <label id="drop_title" for="frequency_2">Frecuencia:</label>
-                        <select name="frequency_2" id="frequency_2" onchange="updateSecondDropdown2()">
+                        <select name="frequency_2" id="frequency_2" onchange="updateSecondDropdown2(); updateDownloadLink2();">
                             <option value="Yearly" {% if selected_frequency_2 == "Yearly" %}selected{% endif %}>Yearly</option>
                             <option value="Monthly" {% if selected_frequency_2 == "Monthly" %}selected{% endif %}>Monthly</option>
                             <option value="Quarterly" {% if selected_frequency_2 == "Quarterly" %}selected{% endif %}>Quarterly</option>
@@ -166,12 +186,32 @@
                         </select>
                     </section>
                     <button id="submit_2" type="submit">Submit</button>
+        
+                    <div class="download_container_2">
+                        <a id="download_button_2" href="https://api.econlabs.net/files/trade/jp/?time=yearly&types=country&agg=none&agr=false&group=false" class="button">Descargar Datos</a>
+                    </div>
                 </section>
                 
                 <div id="graph_2">
                     {{ exports|safe }}
                 </div>
             </div>
+
+            <script>
+                function updateDownloadLink2() {
+                    const frequency2 = document.getElementById('frequency_2').value;
+                    const downloadButton2 = document.getElementById('download_button_2');
+                    let timeParam2 = 'yearly';
+            
+                    if (frequency2 === 'Monthly') {
+                        timeParam2 = 'monthly';
+                    } else if (frequency2 === 'Quarterly') {
+                        timeParam2 = 'qrt';
+                    }
+            
+                    downloadButton2.href = `https://api.econlabs.net/files/trade/jp/?time=${timeParam2}&types=country&agg=none&agr=false&group=false`;
+                }
+            </script>
         </form>
         
 
