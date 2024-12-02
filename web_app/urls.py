@@ -70,7 +70,11 @@ urlpatterns = [
     re_path(r"^logout/", views.logout_view, name='logout'),
     re_path(r"^add-email/$", views.change_email, name='add_email'),
     re_path(r"^account-settings/$", views.account_setting, name='account_settings'),
+
     re_path(r"^cuestionario-del-viajero/$", views.travel_questionaire, name='travel_questionaire'),
+    re_path(r"^cuestionario-del-viajero-english/$", views.cuestionario_viajero_english, name='cuestionario_viajero_english'),
+    re_path(r"^cuestionario-del-viajero-spanish/$", views.cuestionario_viajero_spanish, name='cuestionario_viajero_spanish'),
+
 
         
     # Asegura los path que estén bien cuando añadas otro
