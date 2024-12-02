@@ -417,7 +417,7 @@ table thead th.sorted .sortoptions a {
     width: 14px;
     height: 14px;
     display: inline-block;
-    background: url(../img/sorting-icons.svg) 0 0 no-repeat;
+    background: url(../svg/sorting-icons.svg) 0 0 no-repeat;
     background-size: 14px auto;
 }
 
@@ -619,12 +619,12 @@ ul.messagelist li {
 }
 
 ul.messagelist li.warning {
-    background: var(--message-warning-bg) url(../img/icon-alert.svg) 40px 14px no-repeat;
+    background: var(--message-warning-bg) url(../svg/icon-alert.svg) 40px 14px no-repeat;
     background-size: 14px auto;
 }
 
 ul.messagelist li.error {
-    background: var(--message-error-bg) url(../img/icon-no.svg) 40px 12px no-repeat;
+    background: var(--message-error-bg) url(../svg/icon-no.svg) 40px 12px no-repeat;
     background-size: 16px auto;
 }
 
@@ -717,27 +717,27 @@ div.breadcrumbs a:focus, div.breadcrumbs a:hover {
 
 .viewlink, .inlineviewlink {
     padding-left: 16px;
-    background: url(../img/icon-viewlink.svg) 0 1px no-repeat;
+    background: url(../svg/icon-viewlink.svg) 0 1px no-repeat;
 }
 
 .hidelink {
     padding-left: 16px;
-    background: url(../img/icon-hidelink.svg) 0 1px no-repeat;
+    background: url(../svg/icon-hidelink.svg) 0 1px no-repeat;
 }
 
 .addlink {
     padding-left: 16px;
-    background: url(../img/icon-addlink.svg) 0 1px no-repeat;
+    background: url(../svg/icon-addlink.svg) 0 1px no-repeat;
 }
 
 .changelink, .inlinechangelink {
     padding-left: 16px;
-    background: url(../img/icon-changelink.svg) 0 1px no-repeat;
+    background: url(../svg/icon-changelink.svg) 0 1px no-repeat;
 }
 
 .deletelink {
     padding-left: 16px;
-    background: url(../img/icon-deletelink.svg) 0 1px no-repeat;
+    background: url(../svg/icon-deletelink.svg) 0 1px no-repeat;
 }
 
 a.deletelink:link, a.deletelink:visited {
@@ -798,11 +798,11 @@ a.deletelink:focus, a.deletelink:hover {
 }
 
 .object-tools a.viewsitelink {
-    background-image: url(../img/tooltag-arrowright.svg);
+    background-image: url(../svg/tooltag-arrowright.svg);
 }
 
 .object-tools a.addlink {
-    background-image: url(../img/tooltag-add.svg);
+    background-image: url(../svg/tooltag-add.svg);
 }
 
 /* OBJECT HISTORY */
