@@ -15,7 +15,7 @@ def get_db_credentials():
         raise ValueError("Database credentials not set")
     if os.environ.get("DEV") == "True":
         HOST = "localhost"
-        PASSWORD = str(read_secret_file('/run/secrets/db-password')).strip()
+        PASSWORD = str(os.getenv("POSTGRES_PASSWORD")).strip()
         DATABASE_URL = f"postgresql://{USER}:{PASSWORD}@{HOST}:5432/{DATABASE}"
     else:
         HOST = "database"
