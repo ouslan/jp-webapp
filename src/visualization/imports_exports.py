@@ -1,10 +1,9 @@
 import polars as pl
-import pandas as pd
 import plotly.express as px
 from django.shortcuts import render
 from dotenv import load_dotenv
 import requests
-import os
+import pandas as pd
 
 API_URL = "https://api.econlabs.net"
 
@@ -29,14 +28,9 @@ def get_time_range(frequency, year, month=None):
     return "2009-01-01", "2010-01-01"  # Default range
 
 def web_app_imports_exports(request):
-    dp = DataTrade(str(os.environ.get("DATABASE_URL")), debug=True)
-    df1_imports = pl.from_pandas(dp.process_int_jp(time="yearly", types="country").to_pandas())
-    df2_imports = pl.from_pandas(dp.process_int_jp(time="monthly", types="country").to_pandas())
-    df3_imports = pl.from_pandas(dp.process_int_jp(time="qrt", types="country").to_pandas())
 
-    df1_exports = df1_imports.clone()
-    df2_exports = df2_imports.clone()
-    df3_exports = df3_imports.clone()
+    df1_imports = requests.get("https://api.econlabs.net/data/trade/jp/?time=yearly&types=country&agg=none&agr=false&group=false&datetime=2009").json()
+    df1_imports = pd.DataFrame(df1_imports)
 
     # IMPORTS GRAPH 
     fig = px.pie(df1_imports, values='imports', names='country_name')
