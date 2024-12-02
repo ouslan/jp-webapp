@@ -4,7 +4,6 @@ from django.shortcuts import render
 from dotenv import load_dotenv
 import requests
 import pandas as pd
-import os
 
 
 load_dotenv()

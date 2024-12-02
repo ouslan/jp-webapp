@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from env import get_db_credentials
-import os
 
 USER, PASSWORD, HOST, DATABASE, DATABASE_URL, SECRET_KEY = get_db_credentials()
 
@@ -88,7 +87,7 @@ DATABASES = {
         "USER": USER,
         "PASSWORD": PASSWORD,
         "HOST": HOST,
-        "PORT": "5433",
+        "PORT": "5432",
     }
 }
 
