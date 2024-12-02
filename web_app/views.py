@@ -76,6 +76,9 @@ from src.formularios.quaterly.ingreso_neto_qtr.form_ip_230_qtr import IP_230_qtr
 from src.data.proyecciones import *
 from src.data.demografic import *
 from src.data.idh import *
+from src.visualization.cuestionario_viajero_english import cuestionario_viajero_english
+from src.visualization.cuestionario_viajero_spanish import cuestionario_viajero_spanish
+
 
 def home(request):
     return render(request, "home.html")
