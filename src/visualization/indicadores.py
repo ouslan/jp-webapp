@@ -1,4 +1,3 @@
-from turtle import down
 import pandas as pd
 from django.shortcuts import render
 
