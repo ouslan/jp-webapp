@@ -21,6 +21,7 @@
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/slider.css' %}" />
 
     <style type="text/css">
     .scrolloff iframe {
@@ -172,11 +173,25 @@
     </section>
     <!-- VERTICAL BANNERS  check in the css file for class div-img-info-card grey-->
 
-<div class="sct-content grey">
-    <div class="content-block-2 w-container">
-        <img src="https://i.ibb.co/fxYrNSS/Whats-App-Image-2024-10-17-at-23-00-11-e36b086d.jpg" alt="foto1"/>
+    <div class="sct-content grey">
+        <div class="content-block-2 w-container">
+    
+            <div class="slider">
+                <div class="slides">
+                    <img class="slide" src="https://i.ibb.co/g75Stc8/editgroup.jpg"  alt="Grupal">
+                    <img class="slide" src="https://i.ibb.co/Ws5B0Hq/editfigura.jpg"  alt="Figura">
+                    <img class="slide" src="https://i.ibb.co/Dp4PHRp/editportico.jpg"  alt="Portico">
+                    <img class="slide" src="https://i.ibb.co/xjbS3kT/RUM.jpg"  alt="RUM">
+                    <img class="slide" src="https://i.ibb.co/c2q8kbX/editjane.jpg" alt="Jane">
+                    
+                </div>
+                <button class="prev" onClick="prevSlide()">&#10094</button>
+                <button class="next" onClick="nextSlide()">&#10095</button>
+            </div>
+    
+            <script src="{% static 'js/slider.js' %}"></script>
+        </div>
     </div>
-</div>
 
     <div class="sct-content">
         <div class="content-block w-container">

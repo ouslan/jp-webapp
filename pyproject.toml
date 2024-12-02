@@ -2,10 +2,11 @@
 authors = [{ name = "Alejandro Ousland", email = "alejandro.ouslan@upr.edu" }]
 maintainers = [
   { name = "Yamilette Alemany", email = "yamilette.alemany@upr.edu" },
+  { name = "Adriana I. Carrasquillo Cruz", email = "adriana.carrasquillo1@upr.edu" },
 ]
 license = { text = "GPL-3.0-or-later" }
 name = "jp-webapp"
-version = "0.2.0"
+version = "0.3.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
