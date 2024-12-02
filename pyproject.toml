@@ -1,15 +1,8 @@
 [project]
-authors = [{ name = "Alejandro Ouslan", email = "alejandro.ouslan@upr.edu" }]
-maintainers = [
-  { name = "Yamilette Alemany", email = "yamilette.alemany@upr.edu" },
-  { name = "Adriana I. Carrasquillo Cruz", email = "adriana.carrasquillo1@upr.edu" },
-  { name = "Fernando J. Sierra Aponte", email = "fernando.sierra3@upr.edu" },
-  { name = "Bryan D. Vega Gonzalez", email = "bryan.vega7@upr.edu" },
-  { name = "Edzel Enrique Ortiz Padilla", email = "edzel.ortiz@upr.edu"}
-]
+authors = [{ name = "Alejandro Ousland", email = "alejandro.ouslan@upr.edu" }]
 license = { text = "GPL-3.0-or-later" }
 name = "jp-webapp"
-version = "1.3.0"
+version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -17,7 +10,6 @@ dependencies = [
   "django>=5.1.3",
   "numpy>=2.1.3",
   "pandas>=2.2.3",
-  "plotly>=5.24.1",
   "polars>=1.16.0",
   "psycopg2-binary>=2.9.10",
   "pyarrow>=18.1.0",
@@ -31,3 +23,7 @@ dependencies = [
   "tqdm>=4.67.1",
   "whitenoise>=6.8.2",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
