@@ -45,8 +45,8 @@ def products_hts(request):
         if col not in df_monthly.columns:
             return render(request, 'product_hts.html', {"error": f"Missing column '{col}' in the dataset."})
 
-    # Filter the data for the first time (Yearly with hts_code "02")
-    df_filtered_yearly = df_yearly_grouped[df_yearly_grouped['hts_code_prefix'] == '00']
+    # Filter the data for the first time (Yearly with hts_code "01")
+    df_filtered_yearly = df_yearly_grouped[df_yearly_grouped['hts_code_prefix'] == '01']
     x_axis = pd.Series(df_filtered_yearly["year"])
     y_axis = pd.Series(df_filtered_yearly["imports"])
 
@@ -84,10 +84,15 @@ def products_hts(request):
             df_filtered_yearly = df_yearly_grouped[df_yearly_grouped['hts_code_prefix'] == hts_code]
             x_axis = pd.Series(df_filtered_yearly["year"])
             y_axis = pd.Series(df_filtered_yearly["imports"])
+            
+        # Add title to the graph
+        title = f"Frequency: {frequency}    HTS Code: {hts_code}"
 
-    # Create the graph with the x and y axis
-    fig = go.Figure()
-    fig.add_trace(go.Scatter(x=x_axis, y=y_axis, mode='lines+markers'))
+        # Create the graph with the x and y axis
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(x=x_axis, y=y_axis, mode='lines+markers'))
 
-    # Render the template with the graph
-    return render(request, 'product_hts.html', {'graph': fig.to_html()})
+        fig.update_layout(title=title)
+
+        # Render the template with the graph
+        return render(request, 'product_hts.html', {'graph': fig.to_html()})
