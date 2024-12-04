@@ -1,0 +1,59 @@
+
+.header, main {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 26px;
+    border-radius: 8px;
+}
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header div {
+    flex: 1;
+    text-align: center;
+}
+
+.header div img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+/* signature */
+
+#signature {
+    width: 110%;
+    border: none;
+    margin-top: 5px;
+    font-size: 30px; 
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+}
+
+#signature-bottom {
+    margin-top: 10px;
+}
+
+.left-signature {
+    width: 290px;
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-right: 500px;
+    margin-bottom: 30px;
+}
+
+.right-signature {
+    width: 290px;
+    padding-top: 1px;
+    line-height: 1.5;
+}
+
+.center-signature {
+    margin-top: 1px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
