@@ -56,38 +56,32 @@
                 </p>
             </section>
 
-            <form id="import-form" method="post">
+            <form id="hts-form" method="post">
                 {% csrf_token %}
-                <section id="buttons">
-                    <section id="dropdowns">
-                        <label id="drop_title" for="frequency">Frecuencia:</label>
-                        <select name="frequency" id="frequency" onchange="updateSecondDropdown()">
-                            <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
-                            <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
-                            <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
-                        </select>
-                    </section>
-                
-                    <section id="dropdowns">
-                        <label id="drop_title" for="second_dropdown">Periodo:</label>
-                        <select name="second_dropdown" id="second_dropdown">
-                            <option value="default_value" {% if selected_second_dropdown == "default_value" %}selected{% endif %}>Default</option>
-                        </select>
-                    </section>
-                
-                    <section id="dropdowns">
-                        <label id="drop_title" for="third_dropdown">Año:</label>
-                        <select name="third_dropdown" id="third_dropdown">
-                            <option value="default_value" {% if selected_third_dropdown == "default_value" %}selected{% endif %}>Default</option>
-                        </select>
-                    </section>
-                
-                    <button id="submit" type="submit">Submit</button>
-                </section>
-
-                <!-- Contenedor de la gráfica -->
                 <div class="graph_container">
-                    {{ productos_hts__html|safe }}
+                    <a id="graph-anchor"></a>
+                    <h1 id="graph_title">HTS Data</h1>
+                    <section id="buttons">
+                        <section id="dropdowns">
+                            <label id="drop_title" for="frequency">Frecuencia:</label>
+                            <select name="frequency" id="frequency" onchange="updateHtsCodeDropdown()">
+                                <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
+                                <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
+                                <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
+                            </select>
+                        </section>
+                    
+                        <section id="dropdowns">
+                            <label id="drop_title" for="hts_code">HTS Code:</label>
+                            <select name="hts_code" id="hts_code"></select>
+                        </section>
+                    
+                        <button id="submit" type="submit">Submit</button>
+                    </section>                                
+            
+                    <div id="graph">
+                        {{ graph|safe }}
+                    </div>
                 </div>
             </form>
         </main>
@@ -158,29 +152,17 @@
         <script>
             function updateSecondDropdown() {
                 const frequency = document.getElementById('frequency').value;
-                const secondDropdown = document.getElementById('second_dropdown');
-                const thirdDropdown = document.getElementById('third_dropdown');
-                const thirdDropdownLabel = document.querySelector('label[for="third_dropdown"]'); // Select the label for "Año"
+                const htsCodeDropdown = document.getElementById('hts_code');
             
                 // Clear existing options
-                secondDropdown.innerHTML = '';
-                thirdDropdown.innerHTML = '';
+                htsCodeDropdown.innerHTML = '';
             
                 let options = [];
-                let options2 = [];
             
                 // Logic for second dropdown options
                 if (frequency === 'Yearly') {
                     options = Array.from({ length: 16 }, (_, i) => ({ value: 2009 + i, text: 2009 + i }));
-            
-                    // Hide third dropdown and label
-                    thirdDropdown.style.visibility = 'hidden';
-                    thirdDropdownLabel.style.visibility = 'hidden';
                 } else if (frequency === 'Monthly' || frequency === 'Quarterly') {
-                    // Show third dropdown and label
-                    thirdDropdown.style.visibility = 'visible';
-                    thirdDropdownLabel.style.visibility = 'visible';
-            
                     if (frequency === 'Monthly') {
                         options = [
                             { value: 1, text: 'January' },
@@ -204,32 +186,53 @@
                             { value: 4, text: 'Qtr 4' }
                         ];
                     }
-            
-                    options2 = Array.from({ length: 16 }, (_, i) => ({ value: 2009 + i, text: 2009 + i }));
                 }
             
-                // Populate second dropdown
+                // Populate the hts_code dropdown
                 options.forEach(option => {
                     const opt = document.createElement('option');
                     opt.value = option.value;
                     opt.text = option.text;
-                    secondDropdown.appendChild(opt);
+                    htsCodeDropdown.add(opt);
                 });
-            
-                // Populate third dropdown if 'Monthly' or 'Quarterly'
-                if (frequency === 'Monthly' || frequency === 'Quarterly') {
-                    options2.forEach(option => {
-                        const opt = document.createElement('option');
-                        opt.value = option.value;
-                        opt.text = option.text;
-                        thirdDropdown.appendChild(opt);
-                    });
-                }
             }
             
             document.addEventListener('DOMContentLoaded', () => {
                 updateSecondDropdown();  // Initialize dropdowns on page load
             });
+
+
+            function updateHtsCodeDropdown() {
+                const frequency = document.getElementById('frequency').value;
+                const htsCodeDropdown = document.getElementById('hts_code');
+                
+                // Clear existing options
+                htsCodeDropdown.innerHTML = '';
+                
+                let options = [];
+                
+                // Logic for hts_code dropdown options
+                if (frequency === 'Yearly' || frequency === 'Monthly' || frequency === 'Quarterly') {
+                    options = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', 
+                    '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', 
+                    '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', 
+                    '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', 
+                    '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', 
+                    '73', '74', '75', '76', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', 
+                    '89', '90', '91', '92', '93', '94', '95', '96', '97', '98'];
+                }
+
+             // Populate the hts_code dropdown
+            options.forEach(option => {
+                const opt = document.createElement('option');
+                opt.value = option;
+                opt.text = option;
+                htsCodeDropdown.add(opt);
+            });
+        }
+        
+        // Initialize the hts_code dropdown on page load
+        document.addEventListener('DOMContentLoaded', updateHtsCodeDropdown);
         </script>
     </body>
 </html>
