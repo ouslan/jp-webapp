@@ -6,11 +6,12 @@ from django.views.generic import TemplateView
 from web_app import graphics_function as gf
 from .models import *
 from src.visualization.product_hts import products_hts
+from src.visualization.productos_ranking import productos_ranking
 from src.visualization.account_settings import account_setting
 from src.visualization.add_email import change_email
 from src.visualization.indicadores import web_app_indicadores
 from src.visualization.macro import web_app_macro
-from src.visualization.login import log_in_page
+from src.visualization.login import log_in_page 
 from src.visualization.imports_exports import web_app_imports_exports
 from src.formularios.form_ip_110 import IP_110
 from src.formularios.form_jp_304 import JP_304
