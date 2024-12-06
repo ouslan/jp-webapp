@@ -72,6 +72,7 @@ urlpatterns = [
     re_path(r"^account-settings/$", views.account_setting, name='account_settings'),
     re_path(r"^productos-hts/$", views.products_hts, name='product_hts'),
     re_path(r"^productos_ranking/$", views.productos_ranking, name='productos_ranking'),
+    re_path(r"^ingresos-de-empleos/$", views.web_app_income_employment, name='income_employment'),
         
     # Asegura los path que estén bien cuando añadas otro
     re_path(r"^JP-361-transactions-in-pr-of-external-insurance-companies-qrt/$", views.JP_361_qrt, name="JP-361-qrt"),
