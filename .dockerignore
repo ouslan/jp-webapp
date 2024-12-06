@@ -18,9 +18,6 @@ notebooks/
 *.pyo
 *.pyd
 
-# Ignore WakaTime log file
-.wakatime-project
-
 # Ignore environment file
 .yaml
 *.qmd
