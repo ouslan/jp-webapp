@@ -1,16 +1,15 @@
-import polars as pl
-import plotly.express as px
+from env import get_db_credentials
 from django.shortcuts import render
-from dotenv import load_dotenv
-import requests
+import plotly.express as px
 import pandas as pd
+import requests
 
+API_URL = "https://api.econlabs.net"
 
-load_dotenv()
 
 def web_app_imports_exports(request):
 
-    df1_imports = requests.get("https://api.econlabs.net/data/trade/jp/?time=yearly&types=country&agg=none&agr=false&group=false&datetime=2009").json()
+    df1_imports = requests.get(f"{API_URL}/data/trade/jp/?agg=yearly&types=country&time=2009-01-01+2010-01-01").json()
     df1_imports = pd.DataFrame(df1_imports)
 
     # IMPORTS GRAPH 
@@ -23,13 +22,13 @@ def web_app_imports_exports(request):
         third_dropdown = request.POST.get("third_dropdown")
 
         if frequency == "Yearly":
-            df1_imports = requests.get(f"https://api.econlabs.net/data/trade/jp/?time=yearly&types=country&agg=none&agr=false&group=false&datetime={second_dropdown}").json()
+            df1_imports = requests.get(f"{API_URL}/data/trade/jp/?agg=yearly&types=country&time={second_dropdown}-01-01+{int(second_dropdown)+1}-01-01").json()
             fig = px.pie(df1_imports, values='imports', names='country_name')
         elif frequency == "Monthly":
-            df1_imports = requests.get(f"https://api.econlabs.net/data/trade/jp/?time=monthly&types=country&agg=none&agr=false&group=false&datetime={second_dropdown}-{third_dropdown}").json()
+            df1_imports = requests.get(f"{API_URL}/data/trade/jp/?agg=monthly&types=country&time={second_dropdown}-{third_dropdown}+{second_dropdown}-{int(third_dropdown)+1}").json()
             fig = px.pie(df1_imports, values='imports', names='country_name')
         elif frequency == "Quarterly":
-            df1_imports = requests.get(f"https://api.econlabs.net/data/trade/jp/?time=qrt&types=country&agg=none&agr=false&group=false&datetime={second_dropdown}-{third_dropdown}").json()
+            df1_imports = requests.get(f"{API_URL}/data/trade/jp/?agg=qrt&types=country&time={second_dropdown}-{third_dropdown}+{second_dropdown}-{int(third_dropdown)+3}").json()
             fig = px.pie(df1_imports, values='imports', names='country_name')
 
         if frequency is None and second_dropdown is None:
@@ -60,10 +59,10 @@ def web_app_imports_exports(request):
     # ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # EXPORTS GRAPH
-    
-    df1_exports = requests.get("https://api.econlabs.net/data/trade/jp/?time=yearly&types=country&agg=none&agr=false&group=false&datetime=2009").json()
+
+    df1_exports = requests.get(f"{API_URL}/data/trade/jp/?agg=yearly&types=country&time=2009-01-01+2010-01-01").json()
     df1_exports = pd.DataFrame(df1_exports)
-    
+
     fig1 = px.pie(df1_exports, values='exports', names='country_name')
     fig1.update_traces(textposition='inside', textinfo='percent+label')
 
@@ -73,13 +72,13 @@ def web_app_imports_exports(request):
         third_dropdown_2 = request.POST.get("third_dropdown_2")
 
         if frequency_2 == "Yearly":
-            df1_exports = requests.get(f"https://api.econlabs.net/data/trade/jp/?time=yearly&types=country&agg=none&agr=false&group=false&datetime={second_dropdown_2}").json()
+            df1_exports = requests.get(f"{API_URL}/data/trade/jp/?agg=yearly&types=country&time={second_dropdown_2}-01-01+{int(second_dropdown_2)+1}-01-01").json()
             fig1 = px.pie(df1_exports, values='exports', names='country_name')
         elif frequency_2 == "Monthly":
-            df1_exports = requests.get(f"https://api.econlabs.net/data/trade/jp/?time=monthly&types=country&agg=none&agr=false&group=false&datetime={second_dropdown_2}-{third_dropdown_2}").json()
+            df1_exports = requests.get(f"{API_URL}/data/trade/jp/?agg=monthly&types=country&time={second_dropdown_2}-{third_dropdown_2}+{second_dropdown_2}-{int(third_dropdown_2)+1}").json()
             fig1 = px.pie(df1_exports, values='exports', names='country_name')
         elif frequency_2 == "Quarterly":
-            df1_exports = requests.get(f"https://api.econlabs.net/data/trade/jp/?time=qrt&types=country&agg=none&agr=false&group=false&datetime={second_dropdown_2}-{third_dropdown_2}").json()
+            df1_exports = requests.get(f"{API_URL}/data/trade/jp/?agg=qrt&types=country&time={second_dropdown_2}-{third_dropdown_2}+{second_dropdown_2}-{int(third_dropdown_2)+3}").json()
             fig1 = px.pie(df1_exports, values='exports', names='country_name')
 
         if frequency_2 is None and second_dropdown_2 is None:

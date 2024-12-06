@@ -8,7 +8,7 @@ def web_app_indicadores(request):
     df_monthly = pd.read_parquet("data/processed/indicadores_economicos.parquet").sort_values(by="date").reset_index()
     df_quarterly = pd.read_parquet("data/processed/indicadores_trimestrales.parquet").sort_values(by="quarter").reset_index()
     df_annual = pd.read_parquet("data/processed/indicadores_anuales.parquet").sort_values(by="year").reset_index()
-    
+
     df_monthly["date"] = df_monthly["date"].astype(str)
     df_quarterly["quarter"] = df_quarterly["quarter"].astype(str)
     df_annual["year"] = df_annual["year"].astype(str)
