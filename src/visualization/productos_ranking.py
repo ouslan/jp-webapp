@@ -9,7 +9,6 @@ def productos_ranking(request):
 
     # Convert session data into DataFrames
     df = pd.DataFrame(response)
-    # print(df.columns)
 
     # Find the last month in the DataFrame
     last_month = df['date'].max()
@@ -27,21 +26,7 @@ def productos_ranking(request):
     top5_imports = df_imports.head(5)
     top5_exports = df_exports.head(5)
     last5_imports = df_imports.tail(5)
-    last5_exports = df_exports.tail(5)
-    # print(top5_exports)
-    # print(last5_exports)
-    # print(top5_imports)
-    # print(last5_imports)
-    # Prepare data for diverging bar chart
-    # For imports (negative values for bottom 5 to move them to the left)
-    # last5_imports['moving_price_imports'] *= -1
-    # print(last5_imports["moving_price_imports"])
-    # imports_data = pd.concat([last5_imports, top5_imports])
-
-    # For exports (negative values for bottom 5 to move them to the left)
-    # last5_exports['moving_price_exports'] *= -1
-    print(top5_exports["moving_price_exports"])
-    # exports_data = pd.concat([last5_exports, top5_exports])
+    last5_exports = df_exports.tail(5)  
 
     # Create histogram for top 5 export ranks
     fig_export_top = go.Figure()
