@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "dev.econlabs.net", "127.0.0.1"]
 
@@ -123,13 +123,21 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage" files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "/staticfiles/"
+STATIC_URL = "/static/"  # URL prefix for serving static files
+
+# Directory where Django will collect static files in production
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_DIRS = []
+
+# Additional directories Django will search for static files in development
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+
 
 
 # Default primary key field type
