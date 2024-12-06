@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ingresos de Empleos</title>
+
+        <!-- Favicons -->
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+        <link rel="apple-touch-icon" href="{% static 'images/favicon-16x16.png' %}" />
+        <link rel="apple-touch-icon" href="{% static 'images/favicon-32x32.png' %}" />
+        <link rel="apple-touch-icon" href="{% static 'images/android-chrome-192x192.png' %}" />
+        <link rel="apple-touch-icon" href="{% static 'images/android-chrome-512x512.png' %}" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static 'css/indicadores.css' %}">
+        <link rel="stylesheet" href="{% static 'css/product_hts.css' %}">
+        <link rel="stylesheet" href="{% static 'css/website.css' %}">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="burger" onclick="toggleBurgerMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="burger_menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/centro-de-datos-macroeconomicos/">Centro de Datos Macroeconómicos</a></li>
+                <li><a href="/ciclos-economicos/">Ciclos Económicos</a></li>
+                <li><a href="/indicadores-mensuales/">Indicadores Mensuales</a></li>
+                <li><a href="/datos-demograficos/">Datos Demográficos</a></li>
+            </ul>
+
+            <img src="{% static 'images/gobierno_de_puerto_rico.png' %}" alt="Logo del Gobierno de Puerto Rico" id="logo" />
+        </div>
+
+        <main>
+            <!-- Título -->
+            <section>
+                <h1>Ingresos de Empleos</h1>
+            </section>
+
+            <!-- Descripción -->
+            <section>
+                <p>
+                  El Sistema de Clasificación Industrial de América del Norte (NAICS, por sus siglas en inglés) 
+                  se utiliza en Puerto Rico para organizar y analizar los datos de ingresos laborales por sector 
+                  económico. Este sistema permite identificar las áreas clave de empleo en la isla, proporcionando 
+                  una base estructurada para comprender la dinámica del mercado laboral. En esta sección, encontrarás 
+                  información detallada sobre los ingresos promedio, las diferencias por industria y las tendencias 
+                  salariales que impactan a la fuerza laboral. Estos datos son fundamentales para evaluar el desempeño 
+                  económico y planificar iniciativas que promuevan la equidad y el desarrollo sostenible.
+                </p>
+            </section>
+
+            <form id="hts-form" method="post">
+                {% csrf_token %}
+                <div class="graph_container">
+                    <a id="graph-anchor"></a>
+                    <section id="buttons">
+                        <section id="dropdowns">
+                            <label id="drop_title" for="frequency">Frecuencia:</label>
+                            <select name="frequency" id="frequency" onchange="updateHtsCodeDropdown()">
+                                <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
+                                <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
+                                <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
+                            </select>
+                        </section>
+                    
+                        <section id="dropdowns">
+                            <label id="drop_title" for="hts_code">HTS Code:</label>
+                            <select name="hts_code" id="hts_code"></select>
+                        </section>
+                    
+                        <button id="submit" type="submit">Submit</button>
+                    </section>                                
+            
+                    <div id="graph">
+                        {{ graph|safe }}
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <!-- ------------------ FOOTER --------------------- -->
+        <footer>
+            <main>
+                <section>
+                    <h1>Contáctanos</h1>
+                </section>
+                <section>
+                    <div class="footer-container">
+                        <div class="left-container">
+                            <h2>Oficiales de Información <br> (Ley 141-2019)</h2>
+                            <p>
+                                Sr. Edgardo Vázquez Rivera <br>
+                                Secretario Oficina de Secretaría <br>
+                                <a href="mailto:Vazquez_e@jp.pr.gov" class="custom-link">Vazquez_e@jp.pr.gov</a> <br>
+                                787 723-6200 ext. 16637 <br><br>
+                
+                                Plan. Erika Rivera Felicié <br>
+                                Ayudante Especial <br>
+                                <a href="mailto:ivera_e1@jp.pr.gov" class="custom-link">ivera_e1@jp.pr.gov</a> <br><br>
+                
+                                Lcda Aida Silver Cintrón <br>
+                                Abogada Oficina Asuntos Legales <br>
+                                <a href="mailto:Silver_A@jp.pr.gov" class="custom-link">Silver_A@jp.pr.gov</a> <br>
+                                787 723-6200 ext. 16016
+                            </p>
+                            <h2>Oficina de Datos PRITS</h2>
+                            <p>
+                                Carlos Castillo Domena <br>
+                                Director Oficina de Administración Interna <br>
+                                <a href="mailto:castillo_r@jp.pr.gov" class="custom-link">castillo_r@jp.pr.gov</a> <br>
+                                787 723-6200 ext. 16019 <br><br>
+                                <a href="https://jppr.sharepoint.com/sites/BibliotecaDigital" class="custom-link">BDV (Uso interno)</a>
+                            </p>
+                        </div>
+                        <div class="right-container">
+                            <h2><strong>Dirección Postal</strong></h2>
+                            <p>
+                                PO Box 4119 <br>
+                                San Juan P.R. 00940-1119 <br>
+                                Tel: (787) 723-6200 (Cuadro)<br>
+                                <h2><strong>Dirección Física</strong></h2>
+                                <p>
+                                    Centro Gubernamental<br>
+                                    Roberto Sánchez Vilella<br>
+                                    Ave. De Diego, Pda 22, <br>
+                                    Santurce<br>
+                                </p>
+                            </p>
+                            <section class="maps">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.7501887340845!2d-66.0698374248245!3d18.
+                                        449648171336893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c036f497801a7b7%3A0x68ace32a0663b72f!2sGov
+                                        ernor%20Roberto%20S%C3%A1nchez%20Vilella%20Government%20Center!5e0!3m2!1sen!2sus!4v1717000266481!5m2!1sen!2sus"
+                                        width="490" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </footer>
+
+        <!-- Scripts -->  
+        <script src="{% static 'header_menu.js' %}" defer></script>
+        <script>
+            function updateSecondDropdown() {
+                const frequency = document.getElementById('frequency').value;
+                const htsCodeDropdown = document.getElementById('hts_code');
+            
+                // Clear existing options
+                htsCodeDropdown.innerHTML = '';
+            
+                let options = [];
+            
+                // Logic for second dropdown options
+                if (frequency === 'Yearly') {
+                    options = Array.from({ length: 16 }, (_, i) => ({ value: 2009 + i, text: 2009 + i }));
+                } else if (frequency === 'Monthly' || frequency === 'Quarterly') {
+                    if (frequency === 'Monthly') {
+                        options = [
+                            { value: 1, text: 'January' },
+                            { value: 2, text: 'February' },
+                            { value: 3, text: 'March' },
+                            { value: 4, text: 'April' },
+                            { value: 5, text: 'May' },
+                            { value: 6, text: 'June' },
+                            { value: 7, text: 'July' },
+                            { value: 8, text: 'August' },
+                            { value: 9, text: 'September' },
+                            { value: 10, text: 'October' },
+                            { value: 11, text: 'November' },
+                            { value: 12, text: 'December' }
+                        ];
+                    } else {
+                        options = [
+                            { value: 1, text: 'Qtr 1' },
+                            { value: 2, text: 'Qtr 2' },
+                            { value: 3, text: 'Qtr 3' },
+                            { value: 4, text: 'Qtr 4' }
+                        ];
+                    }
+                }
+            
+                // Populate the hts_code dropdown
+                options.forEach(option => {
+                    const opt = document.createElement('option');
+                    opt.value = option.value;
+                    opt.text = option.text;
+                    htsCodeDropdown.add(opt);
+                });
+            }
+            
+            document.addEventListener('DOMContentLoaded', () => {
+                updateSecondDropdown();  // Initialize dropdowns on page load
+            });
+
+
+            function updateHtsCodeDropdown() {
+                const frequency = document.getElementById('frequency').value;
+                const htsCodeDropdown = document.getElementById('hts_code');
+                
+                // Clear existing options
+                htsCodeDropdown.innerHTML = '';
+                
+                let options = [];
+                
+                // Logic for hts_code dropdown options
+                if (frequency === 'Yearly' || frequency === 'Monthly' || frequency === 'Quarterly') {
+                    options = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', 
+                    '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', 
+                    '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', 
+                    '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', 
+                    '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', 
+                    '73', '74', '75', '76', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', 
+                    '89', '90', '91', '92', '93', '94', '95', '96', '97', '98'];
+                }
+
+             // Populate the hts_code dropdown
+            options.forEach(option => {
+                const opt = document.createElement('option');
+                opt.value = option;
+                opt.text = option;
+                htsCodeDropdown.add(opt);
+            });
+        }
+        
+        // Initialize the hts_code dropdown on page load
+        document.addEventListener('DOMContentLoaded', updateHtsCodeDropdown);
+        </script>
+    </body>
+</html>
