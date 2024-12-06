@@ -6,11 +6,11 @@ from django.shortcuts import render
 def products_hts(request):
     # URLs for each frequency
     urls = {
-        "yearly": "https://api.econlabs.net/data/trade/jp/?time=yearly&types=hts&agr=false&group=false",
-        "monthly": "https://api.econlabs.net/data/trade/jp/?time=monthly&types=hts&agr=false&group=false",
-        "quarterly": "https://api.econlabs.net/data/trade/jp/?time=qrt&types=hts&agr=false&group=false",
+        "yearly": "https://api.econlabs.net/data/trade/jp/?types=hts&agg=yearly",
+        "monthly": "https://api.econlabs.net/data/trade/jp/?types=hts&agg=monthly",
+        "quarterly": "https://api.econlabs.net/data/trade/jp/?types=hts&agg=qrt"
     }
-    
+
     frequency = "Yearly"
     hts_code = "01"
 
@@ -31,7 +31,7 @@ def products_hts(request):
     df_yearly = pd.DataFrame(request.session["yearly_data"]).sort_values(by="year")
     df_monthly = pd.DataFrame(request.session["monthly_data"]).sort_values(by="year")
     df_quarterly = pd.DataFrame(request.session["quarterly_data"]).sort_values(by="year")
-    
+
     # Create a new column for the first two digits of the hts_code
     df_yearly['hts_code_prefix'] = df_yearly['hts_code'].astype(str).str[:2]
     df_monthly['hts_code_prefix'] = df_monthly['hts_code'].astype(str).str[:2]
