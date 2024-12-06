@@ -14,6 +14,7 @@
         <link rel="apple-touch-icon" href="{% static 'images/android-chrome-512x512.png' %}" />
 
         <!-- CSS -->
+        <link rel="stylesheet" href="{% static 'css/income_employment.css' %}">
         <link rel="stylesheet" href="{% static 'css/indicadores.css' %}">
         <link rel="stylesheet" href="{% static 'css/product_hts.css' %}">
         <link rel="stylesheet" href="{% static 'css/website.css' %}">
@@ -62,17 +63,16 @@
                     <a id="graph-anchor"></a>
                     <section id="buttons">
                         <section id="dropdowns">
-                            <label id="drop_title" for="frequency">Frecuencia:</label>
-                            <select name="frequency" id="frequency" onchange="updateHtsCodeDropdown()">
+                          <label id="drop_title" for="frequency">Frecuencia:</label>
+                            <select name="frequency" id="frequency">
                                 <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
-                                <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
                                 <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
                             </select>
                         </section>
                     
                         <section id="dropdowns">
-                            <label id="drop_title" for="hts_code">HTS Code:</label>
-                            <select name="hts_code" id="hts_code"></select>
+                            <label id="drop_title" for="naics_time">Time:</label>
+                            <select name="naics_time" id="naics_time"></select>
                         </section>
                     
                         <button id="submit" type="submit">Submit</button>
@@ -149,89 +149,49 @@
         <!-- Scripts -->  
         <script src="{% static 'header_menu.js' %}" defer></script>
         <script>
-            function updateSecondDropdown() {
-                const frequency = document.getElementById('frequency').value;
-                const htsCodeDropdown = document.getElementById('hts_code');
-            
-                // Clear existing options
-                htsCodeDropdown.innerHTML = '';
-            
-                let options = [];
-            
-                // Logic for second dropdown options
-                if (frequency === 'Yearly') {
-                    options = Array.from({ length: 16 }, (_, i) => ({ value: 2009 + i, text: 2009 + i }));
-                } else if (frequency === 'Monthly' || frequency === 'Quarterly') {
-                    if (frequency === 'Monthly') {
-                        options = [
-                            { value: 1, text: 'January' },
-                            { value: 2, text: 'February' },
-                            { value: 3, text: 'March' },
-                            { value: 4, text: 'April' },
-                            { value: 5, text: 'May' },
-                            { value: 6, text: 'June' },
-                            { value: 7, text: 'July' },
-                            { value: 8, text: 'August' },
-                            { value: 9, text: 'September' },
-                            { value: 10, text: 'October' },
-                            { value: 11, text: 'November' },
-                            { value: 12, text: 'December' }
-                        ];
-                    } else {
-                        options = [
-                            { value: 1, text: 'Qtr 1' },
-                            { value: 2, text: 'Qtr 2' },
-                            { value: 3, text: 'Qtr 3' },
-                            { value: 4, text: 'Qtr 4' }
-                        ];
-                    }
-                }
-            
-                // Populate the hts_code dropdown
-                options.forEach(option => {
-                    const opt = document.createElement('option');
-                    opt.value = option.value;
-                    opt.text = option.text;
-                    htsCodeDropdown.add(opt);
-                });
-            }
-            
-            document.addEventListener('DOMContentLoaded', () => {
-                updateSecondDropdown();  // Initialize dropdowns on page load
+          document.addEventListener('DOMContentLoaded', () => {
+            const frequencyDropdown = document.getElementById('frequency');
+            const timeCodeDropdown = document.getElementById('naics_time');
+        
+            // Initialize dropdowns on page load
+            updatetimeCodeDropdown();
+        
+            // Update HTS Code dropdown when frequency changes
+            frequencyDropdown.addEventListener('change', () => {
+                updatetimeCodeDropdown();
             });
-
-
-            function updateHtsCodeDropdown() {
-                const frequency = document.getElementById('frequency').value;
-                const htsCodeDropdown = document.getElementById('hts_code');
-                
-                // Clear existing options
-                htsCodeDropdown.innerHTML = '';
-                
-                let options = [];
-                
-                // Logic for hts_code dropdown options
-                if (frequency === 'Yearly' || frequency === 'Monthly' || frequency === 'Quarterly') {
-                    options = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', 
-                    '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', 
-                    '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42', 
-                    '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', 
-                    '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', 
-                    '73', '74', '75', '76', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', 
-                    '89', '90', '91', '92', '93', '94', '95', '96', '97', '98'];
-                }
-
-             // Populate the hts_code dropdown
+        });
+        
+        function updatetimeCodeDropdown() {
+            const frequency = document.getElementById('frequency').value;
+            const timeCodeDropdown = document.getElementById('naics_time');
+        
+            // Clear existing options
+            timeCodeDropdown.innerHTML = '';
+        
+            let options = [];
+        
+            // Logic for HTS Code dropdown options
+            if (frequency === 'Yearly') {
+                options = Array.from({ length: 16 }, (_, i) => ({ value: 2009 + i, text: 2009 + i }));
+            } else if (frequency === 'Quarterly') {
+                options = [
+                    { value: 'Q1', text: 'Qtr 1' },
+                    { value: 'Q2', text: 'Qtr 2' },
+                    { value: 'Q3', text: 'Qtr 3' },
+                    { value: 'Q4', text: 'Qtr 4' }
+                ];
+            }
+        
+            // Populate the HTS Code dropdown
             options.forEach(option => {
                 const opt = document.createElement('option');
-                opt.value = option;
-                opt.text = option;
-                htsCodeDropdown.add(opt);
+                opt.value = option.value;
+                opt.text = option.text;
+                timeCodeDropdown.add(opt);
             });
         }
         
-        // Initialize the hts_code dropdown on page load
-        document.addEventListener('DOMContentLoaded', updateHtsCodeDropdown);
         </script>
     </body>
 </html>
