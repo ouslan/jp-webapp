@@ -1,0 +1,30 @@
+.hidden {
+    display: none;
+}
+
+/* Style for the question container box */
+.question-box {
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Space inside the box */
+    margin: 10px 0; /* Space between boxes */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Optional: Limit the box width */
+}
+
+/* Styling for the question text */
+.question-box label {
+    font-weight: bold;
+    color: #333; /* Dark gray text */
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Optional: Center the entire form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

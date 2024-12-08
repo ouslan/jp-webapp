@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionnaire</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file -->
+    <title>Questionare</title>
+    <link rel="stylesheet" href="{% static 'cuestionario_viajero_spanish.css' %}"> 
     <script defer src="script.js"></script> <!-- Add your JS file -->
     
 </head>
 <body>
-    <form id="questionnaireForm">
+    <form id="questionnaireForm" class="form">
         <!-- Question 1 -->
-        <div>
+        <div id="question1" class="hidden">
             <label for="caseSelection">1. ¿Cuál de los siguientes mejor describe su caso?</label>
             <select id="caseSelection" name="caseSelection" required>
                 <option value="">Seleccione...</option>
@@ -22,7 +23,7 @@
         </div>
 
     <!-- Question 2 -->
-    <div>
+    <div id="question2" class="hidden">
         <label for="expenseCategories">2. Aproximadamente, ¿cuáles fueron sus gastos en las siguientes categorías?</label>
         <div>
             <label for="expense_airplane">Avión:</label>
@@ -55,14 +56,14 @@
     </div>
 
     <!-- Question 3 -->
-    <div>
+    <div id="question3" class="hidden">
         <label for="age">3. ¿Cuál es su edad?</label>
         <input type="number" id="age" name="age" required min="1">
         <button type="button" id="confirmAgeBtn">Confirmar Edad</button>
     </div>
 
      <!-- Question 4 -->
-     <div>
+     <div id="question4" class="hidden">
         <label for="genderIdentity">4. ¿Cuál es su identidad de género? (Seleccione todas las opciones que apliquen)            VERIFICA</label>
         <div>
             <input type="radio" id="gender_identity_woman" name="gender_identity" value="Mujer">
@@ -99,7 +100,7 @@
 
 
     <!-- Question 5 -->
-<div>
+<div id="question5" class="hidden">
     <label for="heritage">5. ¿Cómo describe su herencia racial, étnica o cultural?          VERIFICA</label>
     <div>
         <input type="radio" id="heritage_white" name="heritage" value="Blanca/o">
@@ -136,7 +137,7 @@
 </div>
 
 <!-- Question 6 -->
-<div>
+<div id="question6" class="hidden">
     <label for="hispanicIdentity">6. ¿Se identifica como hispana/o/latine?              VERIFICA</label>
     <div>
         <input type="radio" id="hispanic_identity_puertoRican" name="hispanic_identity" value="Sí, de origen puertorriqueño">
@@ -173,7 +174,7 @@
 </div>
 
     <!-- Question 7 -->
-<div>
+<div id="question7" class="hidden">
     <label for="educationLevel">7. ¿Cuál es su nivel educativo más alto alcanzado?</label>
     <div>
         <input type="radio" id="education_level_noPrimary" name="education_level" value="No completé la escuela primaria" required>
@@ -210,7 +211,7 @@
 </div>
 
 <!-- Question 8 -->
-<div>
+<div id="question8" class="hidden">
     <label for="incomeLevel">8. ¿Cuál es su nivel de ingreso?</label>
     <div>
         <input type="radio" id="income_noIncome" name="income_level" value="No ingreso" required>
@@ -263,10 +264,8 @@
 </div>
 
 
-
-
 <!-- Question 9 -->
-<div>
+<div id="question9" class="hidden">
     <label for="travelCompanion">9. ¿Viaja solo o acompañado?</label>
     <div>
         <input type="radio" id="travel_companion_solo" name="travel_companion" value="Solo" required>
@@ -287,7 +286,7 @@
 </div>
 
 <!-- Question 10 -->
-<div>
+<div id="question10" class="hidden">
     <label for="numberOfCompanions">10. ¿Con cuántas personas viaja?</label>
     <input type="number" id="number_of_companions" name="number_of_companions" min="0" required>
     <div id="confirmCompanionsContainer" style="display: none;">
@@ -298,7 +297,7 @@
 VERIFICA DOC
 
 <!-- Question 11 -->
-<div>
+<div id="question11" class="hidden">
     <label for="visitorOrigin">11. ¿De dónde nos visita?</label>
     <div>
         <input type="radio" id="origin_usa" name="visitor_origin" value="EEUU" required>
@@ -489,7 +488,7 @@ VERIFICA DOC
 
 
 <!-- Question 12 -->
-<div>
+<div id="question12" class="hidden">
     <label for="accommodation">12. ¿Dónde se hospedó durante su estadía?</label>
     <div>
         <input type="radio" id="accommodation_hotel" name="accommodation" value="Hotel" required>
@@ -518,7 +517,7 @@ VERIFICA DOC
 </div>
 
 <!-- Question 13 -->
-<div>
+<div id="question13" class="hidden">
     <label for="visitPurpose">13. ¿Cuáles fueron los propósitos principales de su visita? Marque todos los que apliquen</label>
     <div>
         <input type="checkbox" id="visit_purpose_vacation" name="visit_purpose" value="Vacaciones">
@@ -551,7 +550,7 @@ VERIFICA DOC
 </div>
 
 <!-- Question 14 -->
-<div>
+<div id="question14" class="hidden">
     <label for="activities">14. ¿Qué actividades realizó durante su visita? Marque todas las que apliquen.</label>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 5px;">
         <div>
@@ -622,7 +621,7 @@ VERIFICA DOC
 </div>
 
 <!-- Question 15 -->
-<div>
+<div id="question15" class="hidden">
     <label for="discoveryMethod">15. ¿Cómo se enteró de Puerto Rico como destino de viaje? Marque todas las que apliquen.</label>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; margin-top: 5px;">
         <div>
@@ -661,13 +660,13 @@ VERIFICA DOC
 </div>
 
 <!-- Question 16 -->
-<div>
+<div id="question16" class="hidden">
     <label for="stayDuration">16. ¿De cuántos días fue su estadía?</label>
     <input type="number" id="stay_duration" name="stay_duration" min="0" required placeholder="Ingrese el número de días">
 </div>
 
 <!-- Question 17 -->
-<div>
+<div id="question17" class="hidden">
     <label for="mainMunicipality">17. ¿En qué municipio pernoctó la mayor parte de su estadía?</label>
     <select id="main_municipality" name="main_municipality" required>
         <option value="">Seleccione...</option>
@@ -753,49 +752,8 @@ VERIFICA DOC
 </div>
 
 <!-- Question 18 -->
-
-
-<!-- Question 19 -->
-
-
-<!-- Question 20 -->
-<!-- <div>
-    <label for="expenseCategories">20. Aproximadamente, ¿cuáles fueron sus gastos en las siguientes categorías?</label>
-    <div>
-        <label for="expense_airplane">Avión:</label>
-        <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Ingrese el monto" required>
-    </div>
-    <div>
-        <label for="expense_food">Comida:</label>
-        <input type="number" id="expense_food" name="expense_food" min="0" step="0.01" placeholder="Ingrese el monto" required>
-    </div>
-    <div>
-        <label for="expense_entertainment">Entretenimiento:</label>
-        <input type="number" id="expense_entertainment" name="expense_entertainment" min="0" step="0.01" placeholder="Ingrese el monto" required>
-    </div>
-    <div>
-        <label for="expense_lodging">Estadía:</label>
-        <input type="number" id="expense_lodging" name="expense_lodging" min="0" step="0.01" placeholder="Ingrese el monto" required>
-    </div>
-    <div>
-        <label for="expense_miscellaneous">Artículos misceláneos/Ropa:</label>
-        <input type="number" id="expense_miscellaneous" name="expense_miscellaneous" min="0" step="0.01" placeholder="Ingrese el monto" required>
-    </div>
-    <div>
-        <label for="expense_transportation">Transportación:</label>
-        <input type="number" id="expense_transportation" name="expense_transportation" min="0" step="0.01" placeholder="Ingrese el monto" required>
-    </div>
-    <div>
-        <label for="expense_other">Otros gastos:</label>
-        <input type="number" id="expense_other" name="expense_other" min="0" step="0.01" placeholder="Ingrese el monto" required>
-    </div>
-</div> -->
-
-<!-- Question 21 -->
-
-<!-- Question 22 -->
-<div>
-    <label for="travelDestination">22. ¿Hacia dónde viajas?</label>
+<div id="question18" class="hidden">
+    <label for="travelDestination">18. ¿Hacia dónde viajas?</label>
     <div>
         <input type="radio" id="destination_usa" name="travel_destination" value="EEUU" required>
         <label for="destination_usa">EEUU</label>
@@ -886,9 +844,9 @@ VERIFICA DOC
     </div>
 </div>
 
-<!-- Question 23 -->
-<div>
-    <label for="accommodation">23. ¿Dónde se hospedará durante su viaje?</label>
+<!-- Question 19 -->
+<div id="question19" class="hidden">
+    <label for="accommodation">19. ¿Dónde se hospedará durante su viaje?</label>
     <div>
         <input type="radio" id="accommodation_hotel" name="accommodation_1" value="Hotel" required>
         <label for="accommodation_hotel">Hotel</label>
@@ -913,9 +871,9 @@ VERIFICA DOC
     </div>
 </div>
 
-<!-- Question 24 -->
-<div>
-    <label for="travelPurposes">24. ¿Cuáles son los propósitos principales de su viaje? Marque todos los que apliquen</label>
+<!-- Question 20 -->
+<div id="question20" class="hidden">
+    <label for="travelPurposes">20. ¿Cuáles son los propósitos principales de su viaje? Marque todos los que apliquen</label>
     <div id="travelPurposesContainer">
         <div>
             <input type="checkbox" id="purpose_vacation" name="travel_purposes" value="Vacaciones">
@@ -948,9 +906,9 @@ VERIFICA DOC
     </div>
 </div>
 
-<!-- Question 25 -->
-<div>
-    <label for="plannedActivities">25. ¿Qué actividades realizará durante su visita? Marque todas las que apliquen.</label>
+<!-- Question 21 -->
+<div id="question21" class="hidden">
+    <label for="plannedActivities">21. ¿Qué actividades realizará durante su visita? Marque todas las que apliquen.</label>
     <div id="plannedActivitiesContainer">
         <div>
             <input type="checkbox" id="activity_nightlife" name="planned_activities" value="Vida nocturna">
@@ -987,22 +945,22 @@ VERIFICA DOC
     </div>
 </div>
 
-<!-- Question 26 -->
-<div>
-    <label for="tripDuration">26. ¿De cuántos días será su viaje?</label>
+<!-- Question 22 -->
+<div id="question22" class="hidden">
+    <label for="tripDuration">22. ¿De cuántos días será su viaje?</label>
     <input type="number" id="tripDuration" name="trip_duration" min="1" placeholder="Especifique número de días" required> <br>
     * Si se está mudando, por favor escriba 999.
 </div>
 
-<!-- Question 27 -->
-<div>
-    <label for="estimatedExpenses">27. ¿Cuánto gastará en su viaje (aproximadamente)?</label>
+<!-- Question 23 -->
+<div id="question23" class="hidden">
+    <label for="estimatedExpenses">23. ¿Cuánto gastará en su viaje (aproximadamente)?</label>
     <input type="number" id="estimatedExpenses" name="estimated_expenses" min="0" step="0.01" placeholder="Ingrese el monto en dólares" required>
 </div>
 
-<!-- Question 28 -->
-<div>
-    <label for="spendingCategories">28. ¿En qué categorías estima gastará más durante su viaje? (Seleccione orden de mayor a menor gasto)</label>
+<!-- Question 24 -->
+<div id="question24" class="hidden">
+    <label for="spendingCategories">24. ¿En qué categorías estima gastará más durante su viaje? (Seleccione orden de mayor a menor gasto)</label>
     <div>
         <label for="priority_accommodation">Alojamiento:</label>
         <select id="priority_accommodation" name="priority_accommodation_2" class="prioritySelect" required>
@@ -1305,7 +1263,28 @@ VERIFICA DOC
         });
     });
 
-   
+    document.addEventListener("DOMContentLoaded", () => {
+    const caseSelection = document.getElementById("caseSelection");
+
+    // Add event listener for Question 1
+    caseSelection.addEventListener("change", () => {
+        const value = caseSelection.value;
+
+        if (value === "visitor" || value === "resident") {
+            showQuestion("question2");
+        } else if (value === "layover") {
+            alert("Gracias por su tiempo. El cuestionario ha terminado.");
+        }
+    });
+});
+
+// Utility function to show the next question
+function showQuestion(questionId) {
+    const questionElement = document.getElementById(questionId);
+    if (questionElement) {
+        questionElement.classList.remove("hidden");
+    }
+}
     
 </script>
 </body>
