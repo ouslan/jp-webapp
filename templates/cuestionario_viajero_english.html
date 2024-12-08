@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Questionnaire</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file -->
+    <link rel="stylesheet" href="{% static 'cuestionario_viajero_spanish.css' %}"> 
     <script defer src="script.js"></script> <!-- Add your JS file -->
 </head>
 <body>
@@ -22,15 +23,49 @@
         </div>
 
     <!-- Question 2 -->
-    <div>
-        <label for="age">2. What is your age?</label>
-        <input type="number" id="age" name="age" required min="1">
-        <button type="button" id="confirmAgeBtn">Confirm Age</button>
+    <div id="question2" class="hidden">
+        <label for="expenseCategories">2. Approximately, what were your expenses in the following categories?</label>
+        <div>
+            <label for="expense_airplane">Airplane:</label>
+            <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Enter the amount" required>
+        </div>
+        <div>
+            <label for="expense_food">Food:</label>
+            <input type="number" id="expense_food" name="expense_food" min="0" step="0.01" placeholder="Enter the amount" required>
+        </div>
+        <div>
+            <label for="expense_entertainment">Entertainment:</label>
+            <input type="number" id="expense_entertainment" name="expense_entertainment" min="0" step="0.01" placeholder="Enter the amount" required>
+        </div>
+        <div>
+            <label for="expense_lodging">Lodging:</label>
+            <input type="number" id="expense_lodging" name="expense_lodging" min="0" step="0.01" placeholder="Enter the amount" required>
+        </div>
+        <div>
+            <label for="expense_miscellaneous">Miscellaneous items / Clothing:</label>
+            <input type="number" id="expense_miscellaneous" name="expense_miscellaneous" min="0" step="0.01" placeholder="Enter the amount" required>
+        </div>
+        <div>
+            <label for="expense_transportation">Transportation:</label>
+            <input type="number" id="expense_transportation" name="expense_transportation" min="0" step="0.01" placeholder="Enter the amount" required>
+        </div>
+        <div>
+            <label for="expense_other">Other expenses:</label>
+            <input type="number" id="expense_other" name="expense_other" min="0" step="0.01" placeholder="Enter the amount" required>
+        </div>
     </div>
+    
 
      <!-- Question 3 -->
      <div>
-        <label for="genderIdentity">3. What is your gender identity? (Select all that apply)</label>
+        <label for="age">3. What is your age?</label>
+        <input type="number" id="age" name="age" required min="1">
+        <button type="button" id="confirmAgeBtn">Confirm Age</button>
+    </div>
+     
+    <!-- Question 4 -->
+    <div>
+        <label for="genderIdentity">4. What is your gender identity? (Select all that apply)</label>
         <div>
             <input type="radio" id="gender_identity_woman" name="gender_identity" value="Woman">
             <label for="gender_identity_woman">Woman</label>
@@ -58,42 +93,6 @@
         <div>
             <input type="radio" id="gender_identity_preferNotToSay" name="gender_identity" value="Prefer not to say">
             <label for="gender_identity_preferNotToSay">Prefer not to say</label>
-        </div>
-    </div>
-    <!-- Question 4 -->
-    <div>
-        <label for="sexualOrientation">4. What is your sexual orientation?</label>
-        <div>
-            <input type="radio" id="sexual_orientation_heterosexual" name="sexual_orientation" value="Heterosexual" required>
-            <label for="sexual_orientation_heterosexual">Heterosexual</label>
-        </div>
-        <div>
-            <input type="radio" id="sexual_orientation_gay" name="sexual_orientation" value="Gay">
-            <label for="sexual_orientation_gay">Gay</label>
-        </div>
-        <div>
-            <input type="radio" id="sexual_orientation_lesbian" name="sexual_orientation" value="Lesbian">
-            <label for="sexual_orientation_lesbian">Lesbian</label>
-        </div>
-        <div>
-            <input type="radio" id="sexual_orientation_bisexual" name="sexual_orientation" value="Bisexual">
-            <label for="sexual_orientation_bisexual">Bisexual</label>
-        </div>
-        <div>
-            <input type="radio" id="sexual_orientation_pansexual" name="sexual_orientation" value="Pansexual">
-            <label for="sexual_orientation_pansexual">Pansexual</label>
-        </div>
-        <div>
-            <input type="radio" id="sexual_orientation_asexual" name="sexual_orientation" value="Asexual">
-            <label for="sexual_orientation_asexual">Asexual</label>
-        </div>
-        <div>
-            <input type="radio" id="sexual_orientation_other" name="sexual_orientation" value="Other">
-            <label for="sexual_orientation_other">Other</label>
-        </div>
-        <div>
-            <input type="radio" id="sexual_orientation_preferNotToSay" name="sexual_orientation" value="Prefer not to say">
-            <label for="sexual_orientation_preferNotToSay">Prefer not to say</label>
         </div>
     </div>
 
@@ -732,475 +731,19 @@ VERIFICA DOC
 </div>
 
 <!-- Question 18 -->
-<div>
-    <label for="visitedMunicipalities">18. Which municipalities did you visit during your stay? Select all that apply.</label>
-    <div id="visitedMunicipalitiesContainer" style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;">
-        <div>
-            <input type="checkbox" id="municipality_adjuntas" name="visited_municipalities" value="Adjuntas">
-            <label for="municipality_adjuntas">Adjuntas</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_aguada" name="visited_municipalities" value="Aguada">
-            <label for="municipality_aguada">Aguada</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_aguadilla" name="visited_municipalities" value="Aguadilla">
-            <label for="municipality_aguadilla">Aguadilla</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_aguas_buenas" name="visited_municipalities" value="Aguas Buenas">
-            <label for="municipality_aguas_buenas">Aguas Buenas</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_aibonito" name="visited_municipalities" value="Aibonito">
-            <label for="municipality_aibonito">Aibonito</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_anasco" name="visited_municipalities" value="Anasco">
-            <label for="municipality_anasco">Anasco</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_arecibo" name="visited_municipalities" value="Arecibo">
-            <label for="municipality_arecibo">Arecibo</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_arroyo" name="visited_municipalities" value="Arroyo">
-            <label for="municipality_arroyo">Arroyo</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_barceloneta" name="visited_municipalities" value="Barceloneta">
-            <label for="municipality_barceloneta">Barceloneta</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_barranquitas" name="visited_municipalities" value="Barranquitas">
-            <label for="municipality_barranquitas">Barranquitas</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_bayamon" name="visited_municipalities" value="Bayamon">
-            <label for="municipality_bayamon">Bayamon</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_cabo_rojo" name="visited_municipalities" value="Cabo Rojo">
-            <label for="municipality_cabo_rojo">Cabo Rojo</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_caguas" name="visited_municipalities" value="Caguas">
-            <label for="municipality_caguas">Caguas</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_camuy" name="visited_municipalities" value="Camuy">
-            <label for="municipality_camuy">Camuy</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_canovanas" name="visited_municipalities" value="Canóvanas">
-            <label for="municipality_canovanas">Canóvanas</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_carolina" name="visited_municipalities" value="Carolina">
-            <label for="municipality_carolina">Carolina</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_catano" name="visited_municipalities" value="Cataño">
-            <label for="municipality_catano">Cataño</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_cayey" name="visited_municipalities" value="Cayey">
-            <label for="municipality_cayey">Cayey</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_ceiba" name="visited_municipalities" value="Ceiba">
-            <label for="municipality_ceiba">Ceiba</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_ciales" name="visited_municipalities" value="Ciales">
-            <label for="municipality_ciales">Ciales</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_cidra" name="visited_municipalities" value="Cidra">
-            <label for="municipality_cidra">Cidra</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_coamo" name="visited_municipalities" value="Coamo">
-            <label for="municipality_coamo">Coamo</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_comerio" name="visited_municipalities" value="Comerio">
-            <label for="municipality_comerio">Comerio</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_corozal" name="visited_municipalities" value="Corozal">
-            <label for="municipality_corozal">Corozal</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_culebra" name="visited_municipalities" value="Culebra">
-            <label for="municipality_culebra">Culebra</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_dorado" name="visited_municipalities" value="Dorado">
-            <label for="municipality_dorado">Dorado</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_fajardo" name="visited_municipalities" value="Fajardo">
-            <label for="municipality_fajardo">Fajardo</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_florida" name="visited_municipalities" value="Florida">
-            <label for="municipality_florida">Florida</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_guanica" name="visited_municipalities" value="Guánica">
-            <label for="municipality_guanica">Guánica</label>
-        </div>
-        <div>
-            <input type="checkbox" id="municipality_guayama" name="visited_municipalities" value="Guayama">
-            <label for="municipality_guayama">Guayama</label>
-        </div>
-
-        <div>
-            <input type="checkbox" id="municipality_guayanilla" name="visited_municipalities" value="Guayanilla">
-            <label for="municipality_guayanilla">Guayanilla</label>
-        </div>
-
-        <div>
-            <input type="checkbox" id="municipality_guaynabo" name="visited_municipalities" value="Guaynabo">
-            <label for="municipality_guaynabo">Guaynabo</label>
-        </div>    
-        
-        <div>
-            <input type="checkbox" id="municipality_gurabo" name="visited_municipalities" value="Gurabo">
-            <label for="municipality_gurabo">Gurabo</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_hatillo" name="visited_municipalities" value="Hatillo">
-            <label for="municipality_hatillo">Hatillo</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_hormigueros" name="visited_municipalities" value="Hormigueros">
-            <label for="municipality_hormigueros">Hormigueros</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_humacao" name="visited_municipalities" value="Humacao">
-            <label for="municipality_humacao">Humacao</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_isabela" name="visited_municipalities" value="Isabela">
-            <label for="municipality_isabela">Isabela</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_jayuya" name="visited_municipalities" value="Jayuya">
-            <label for="municipality_jayuya">Jayuya</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_juana_diaz" name="visited_municipalities" value="Juana Diaz">
-            <label for="municipality_juana_diaz">Juana Díaz</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_juncos" name="visited_municipalities" value="Juncos">
-            <label for="municipality_juncos">Juncos</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_lajas" name="visited_municipalities" value="Lajas">
-            <label for="municipality_lajas">Lajas</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_lares" name="visited_municipalities" value="Lares">
-            <label for="municipality_lares">Lares</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_las_marias" name="visited_municipalities" value="Las Marias">
-            <label for="municipality_las_marias">Las Marias</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_las_piedras" name="visited_municipalities" value="Las Piedras">
-            <label for="municipality_las_piedras">Las Piedras</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_loiza" name="visited_municipalities" value="Loiza">
-            <label for="municipality_loiza">Loiza</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_luquillo" name="visited_municipalities" value="Luquillo">
-            <label for="municipality_luquillo">Luquillo</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_manati" name="visited_municipalities" value="Manati">
-            <label for="municipality_manati">Manatí</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_maricao" name="visited_municipalities" value="Maricao">
-            <label for="municipality_maricao">Maricao</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_maunabo" name="visited_municipalities" value="Maunabo">
-            <label for="municipality_maunabo">Maunabo</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_mayaguez" name="visited_municipalities" value="Mayaguez">
-            <label for="municipality_mayaguez">Mayagüez</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_moca" name="visited_municipalities" value="Moca">
-            <label for="municipality_moca">Moca</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_morovis" name="visited_municipalities" value="Morovis">
-            <label for="municipality_morovis">Morovis</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_naguabo" name="visited_municipalities" value="Naguabo">
-            <label for="municipality_naguabo">Naguabo</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_naranjito" name="visited_municipalities" value="Naranjito">
-            <label for="municipality_naranjito">Naranjito</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_orocovis" name="visited_municipalities" value="Orocovis">
-            <label for="municipality_orocovis">Orocovis</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_patillas" name="visited_municipalities" value="Patillas">
-            <label for="municipality_patillas">Patillas</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_penuelas" name="visited_municipalities" value="Penuelas">
-            <label for="municipality_penuelas">Peñuelas</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_ponce" name="visited_municipalities" value="Ponce">
-            <label for="municipality_ponce">Ponce</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_quebradillas" name="visited_municipalities" value="Quebradillas">
-            <label for="municipality_quebradillas">Quebradillas</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_rincon" name="visited_municipalities" value="Rincon">
-            <label for="municipality_rincon">Rincón</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_rio_grande" name="visited_municipalities" value="Rio Grande">
-            <label for="municipality_rio_grande">Río Grande</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_sabana_grande" name="visited_municipalities" value="Sabana Grande">
-            <label for="municipality_sabana_grande">Sábana Grande</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_salinas" name="visited_municipalities" value="Salinas">
-            <label for="municipality_salinas">Salinas</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_san_german" name="visited_municipalities" value="San German">
-            <label for="municipality_san_german">San German</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_san_juan" name="visited_municipalities" value="San Juan">
-            <label for="municipality_san_juan">San Juan</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_san_lorenzo" name="visited_municipalities" value="San Lorenzo">
-            <label for="municipality_san_lorenzo">San Lorenzo</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_san_sebastian" name="visited_municipalities" value="San Sebastian">
-            <label for="municipality_san_sebastian">San Sebastián</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_santa_isabel" name="visited_municipalities" value="Santa Isabel">
-            <label for="municipality_santa_isabel">Santa Isabel</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_toa_alta" name="visited_municipalities" value="Toa Alta">
-            <label for="municipality_toa_alta">Toa Alta</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_toa_baja" name="visited_municipalities" value="Toa Baja">
-            <label for="municipality_toa_baja">Toa Baja</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_trujillo_alto" name="visited_municipalities" value="Trujillo Alto">
-            <label for="municipality_trujillo_alto">Trujillo Alto</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_utuado" name="visited_municipalities" value="Utuado">
-            <label for="municipality_utuado">Utuado</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_vega_alta" name="visited_municipalities" value="Vega Alta">
-            <label for="municipality_gurabo">Vega Alta</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_vega_baja" name="visited_municipalities" value="Vega Baja">
-            <label for="municipality_vega_baja">Vega Baja</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_vieques" name="visited_municipalities" value="Vieques">
-            <label for="municipality_vieques">Vieques</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_villalba" name="visited_municipalities" value="Villalba">
-            <label for="municipality_villalba">Villalba</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_yabucoa" name="visited_municipalities" value="Yabucoa">
-            <label for="municipality_yabucoa">Yabucoa</label>
-        </div> 
-
-        <div>
-            <input type="checkbox" id="municipality_yauco" name="visited_municipalities" value="Yauco">
-            <label for="municipality_yauco">Yauco</label>
-        </div> 
-
-    </div>
-</div>
-
-<!-- Question 19 -->
-<div>
-    <label for="safetyFeeling">19. Did you feel safe during most of your trip?</label>
+<div id="question18" class="hidden">
+    <label for="travelDestination">18. Where are you traveling to?</label>
     <div>
-        <input type="radio" id="safety_very_safe" name="safety_feeling" value="Very safe" required>
-        <label for="safety_very_safe">Very safe</label>
+        <input type="radio" id="destination_usa" name="travel_destination" value="USA" required>
+        <label for="destination_usa">USA</label>
     </div>
     <div>
-        <input type="radio" id="safety_somewhat_safe" name="safety_feeling" value="Somewhat safe">
-        <label for="safety_somewhat_safe">Somewhat safe</label>
-    </div>
-    <div>
-        <input type="radio" id="safety_little_safe" name="safety_feeling" value="A little safe">
-        <label for="safety_little_safe">A little safe</label>
-    </div>
-    <div>
-        <input type="radio" id="safety_not_safe" name="safety_feeling" value="Not safe at all">
-        <label for="safety_not_safe">Not safe at all</label>
-    </div>
-</div>
-<!-- Question 20 -->
-<div>
-    <label for="tripExpense">20. How much did you spend on your trip (approximately, excluding airfare or cruise expenses)?</label>
-    <input type="number" id="tripExpense" name="trip_expense" min="0" step="0.01" placeholder="Enter the amount in your currency" required>
-</div>
-
-<!-- Question 21 -->
-<div>
-    <label for="categoryPriority">21. In which categories did you spend the most during your trip? (Select in order of highest to lowest expenditure)</label>
-    <div id="categoryPriorityContainer">
-        <div>
-            <label for="priority_accommodation">Accommodation:</label>
-            <select id="priority_accommodation" name="priority_accommodation" required>
-                <option value="">Select...</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div>
-            <label for="priority_food">Food:</label>
-            <select id="priority_food" name="priority_food" required>
-                <option value="">Select...</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div>
-            <label for="priority_transportation">Transport:</label>
-            <select id="priority_transportation" name="priority_transportation" required>
-                <option value="">Select...</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div>
-            <label for="priority_activities">Activities and Enterntainment:</label>
-            <select id="priority_activities" name="priority_activities" required>
-                <option value="">Select...</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div>
-            <label for="priority_shopping">Groceries:</label>
-            <select id="priority_shopping" name="priority_shopping" required>
-                <option value="">Select...</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-    </div>
-</div>
-
-<!-- Question 22 -->
-<div>
-    <label for="travelDestination">22. Where are you traveling to?</label>
-    <div>
-        <input type="radio" id="destination_usa" name="travel_destination" value="EEUU" required>
-        <label for="destination_usa">EEUU</label>
-    </div>
-    <div>
-        <input type="radio" id="destination_other" name="travel_destination" value="Otro País">
+        <input type="radio" id="destination_other" name="travel_destination" value="Other Country">
         <label for="destination_other">Other Country</label>
     </div>
     <!-- Dropdown for states (initially hidden) -->
     <div id="usaStatesContainer" style="display: none; margin-top: 10px;">
-        <label for="usaStates">Select the State:</label>
+        <label for="usaStates">Select a state:</label>
         <select id="usaStates" name="usa_states">
             <option value="">Select...</option>
             <option value="Alabama">Alabama</option>
@@ -1257,9 +800,9 @@ VERIFICA DOC
     </div>
     <!-- Dropdown for countries (initially hidden) -->
     <div id="countriesContainer" style="display: none; margin-top: 10px;">
-        <label for="countries">Select the Country:</label>
+        <label for="countries">Select a country:</label>
         <select id="countries" name="countries">
-            <option value="">Seleccione...</option>
+            <option value="">Select...</option>
             <option value="Argentina">Argentina</option>
             <option value="Brazil">Brazil</option>
             <option value="Canada">Canada</option>
@@ -1280,50 +823,51 @@ VERIFICA DOC
     </div>
 </div>
 
-<!-- Question 23 -->
-<div>
-    <label for="accommodation">23. Where will you stay durting your trip?</label>
+<!-- Question 19 -->
+<div id="question19" class="hidden">
+    <label for="accommodation">19. Where will you stay during your trip?</label>
     <div>
-        <input type="radio" id="accommodation_hotel" name="accommodation_2" value="Hotel" required>
+        <input type="radio" id="accommodation_hotel" name="accommodation_1" value="Hotel" required>
         <label for="accommodation_hotel">Hotel</label>
     </div>
     <div>
-        <input type="radio" id="accommodation_airbnb" name="accommodation_2" value="Airbnb">
+        <input type="radio" id="accommodation_airbnb" name="accommodation_1" value="Airbnb">
         <label for="accommodation_airbnb">Airbnb</label>
     </div>
     <div>
-        <input type="radio" id="accommodation_friends_family" name="accommodation_2" value="Friends/Family">
-        <label for="accommodation_friends_family">Friends/Family</label>
+        <input type="radio" id="accommodation_friends_family" name="accommodation_1" value="Friends/Family's house">
+        <label for="accommodation_friends_family">Friends/Family's house</label>
     </div>
     <div>
-        <input type="radio" id="accommodation_own_home" name="accommodation_2" value="Personal House">
-        <label for="accommodation_own_home">Personal House</label>
+        <input type="radio" id="accommodation_own_home" name="accommodation_1" value="Own house">
+        <label for="accommodation_own_home">Own house</label>
     </div>
     <div>
-        <input type="radio" id="accommodation_other" name="accommodation_2" value="Other">
+        <input type="radio" id="accommodation_other" name="accommodation_1" value="Other">
         <label for="accommodation_other">Other</label>
+        <!-- Additional input field for "Other" option -->
+        <input type="text" id="accommodation_other_specify" name="accommodation_1" placeholder="Specify" style="display: none; margin-left: 10px;">
     </div>
 </div>
-
-<!-- Question 24 -->
-<div>
-    <label for="travelPurposes">24. What are the main purposes of your trip? Check all that apply</label>
+<!-- Question 20 -->
+<div id="question20" class="hidden">
+    <label for="travelPurposes">20. What are the main purposes of your trip? Select all that apply</label>
     <div id="travelPurposesContainer">
         <div>
             <input type="checkbox" id="purpose_vacation" name="travel_purposes" value="Vacation">
             <label for="purpose_vacation">Vacation</label>
         </div>
         <div>
-            <input type="checkbox" id="purpose_moving" name="travel_purposes" value="I am moving out of Puerto Rico">
-            <label for="purpose_moving">I am moving out of Puerto Rico</label>
+            <input type="checkbox" id="purpose_moving" name="travel_purposes" value="Moving out of Puerto Rico">
+            <label for="purpose_moving">Moving out of Puerto Rico</label>
         </div>
         <div>
             <input type="checkbox" id="purpose_business" name="travel_purposes" value="Business">
             <label for="purpose_business">Business</label>
         </div>
         <div>
-            <input type="checkbox" id="purpose_family" name="travel_purposes" value="Visit family/friends">
-            <label for="purpose_family">Visit family/friends</label>
+            <input type="checkbox" id="purpose_family" name="travel_purposes" value="Visiting family/friends">
+            <label for="purpose_family">Visiting family/friends</label>
         </div>
         <div>
             <input type="checkbox" id="purpose_study" name="travel_purposes" value="Study">
@@ -1340,9 +884,9 @@ VERIFICA DOC
     </div>
 </div>
 
-<!-- Question 25 -->
-<div>
-    <label for="plannedActivities">25. What activities will you do during your visit? Check all that apply.</label>
+<!-- Question 21 -->
+<div id="question21" class="hidden">
+    <label for="plannedActivities">21. What activities will you participate in during your visit? Select all that apply.</label>
     <div id="plannedActivitiesContainer">
         <div>
             <input type="checkbox" id="activity_nightlife" name="planned_activities" value="Nightlife">
@@ -1365,12 +909,12 @@ VERIFICA DOC
             <label for="activity_ecotourism">Ecotourism</label>
         </div>
         <div>
-            <input type="checkbox" id="activity_jobSearch" name="planned_activities" value="Job Search">
-            <label for="activity_jobSearch">Job Search</label>
+            <input type="checkbox" id="activity_jobSearch" name="planned_activities" value="Job search">
+            <label for="activity_jobSearch">Job search</label>
         </div>
         <div>
-            <input type="checkbox" id="activity_movePreparations" name="planned_activities" value="Moving Preparations">
-            <label for="activity_movePreparations">Moving Preparations</label>
+            <input type="checkbox" id="activity_movePreparations" name="planned_activities" value="Moving preparations">
+            <label for="activity_movePreparations">Moving preparations</label>
         </div>
         <div>
             <input type="checkbox" id="activity_other" name="planned_activities" value="Other">
@@ -1379,22 +923,22 @@ VERIFICA DOC
     </div>
 </div>
 
-<!-- Question 26 -->
+<!-- Question 22 -->
 <div>
-    <label for="tripDuration">26. How many days will your trip last?</label>
+    <label for="tripDuration">22. How many days will your trip last?</label>
     <input type="number" id="tripDuration" name="trip_duration" min="1" placeholder="Specify number of days" required> <br>
     * If you are moving, please enter 999.
 </div>
 
-<!-- Question 27 -->
-<div>
-    <label for="estimatedExpenses">27. How much will you spend on your trip (approximately)?</label>
+<!-- Question 23 -->
+<div id="question23" class="hidden">
+    <label for="estimatedExpenses">23. How much will you spend on your trip (approximately)?</label>
     <input type="number" id="estimatedExpenses" name="estimated_expenses" min="0" step="0.01" placeholder="Enter the amount in dollars" required>
 </div>
 
-<!-- Question 28 -->
+<!-- Question 24 -->
 <div>
-    <label for="spendingCategories">28. In which categories do you estimate you will spend the most during your trip? (Select in order of highest to lowest spending)</label>
+    <label for="spendingCategories">24. In which categories do you estimate you will spend the most during your trip? (Select in order of highest to lowest spending)</label>
     <div>
         <label for="priority_accommodation">Accommodation:</label>
         <select id="priority_accommodation" name="priority_accommodation_2" class="prioritySelect" required>
@@ -1468,7 +1012,6 @@ VERIFICA DOC
         </select>
     </div>
 </div>
-
 
     <!-- Submit Button -->
     <button type="submit" id="submitButton">Submit</button>
