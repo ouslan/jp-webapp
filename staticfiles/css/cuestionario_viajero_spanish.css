@@ -1,30 +1,80 @@
-.hidden {
-    display: none;
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    width: 90%;
+    margin-left: 3.5%;
+    margin-bottom: 40px;
 }
 
-/* Style for the question container box */
-.question-box {
-    border: 2px solid #007bff; /* Blue border */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Space inside the box */
-    margin: 10px 0; /* Space between boxes */
-    background-color: #ffffff; /* White background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-width: 600px; /* Optional: Limit the box width */
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
 }
 
-/* Styling for the question text */
-.question-box label {
-    font-weight: bold;
-    color: #333; /* Dark gray text */
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+th {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    border: 1px solid black;
 }
 
-/* Optional: Center the entire form */
-form {
+td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+
+}
+
+.header, main {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 26px;
+    border-radius: 8px;
+}
+.header {
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+}
+
+/* HEADER */
+#header_image {
+    width: 50px;
+    height: 50px;
+}
+
+#header_left {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-right: 30%;
+    text-align: left;
+    border:none;
+}
+
+#header_center {
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+    border:none;
+}
+
+#header_right {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-left: 30%;
+    text-align: right;
+    border:none;
+}
+
+.body_header {
+    display: block;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-left: 40px;
 }
