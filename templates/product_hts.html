@@ -60,7 +60,6 @@
                 {% csrf_token %}
                 <div class="graph_container">
                     <a id="graph-anchor"></a>
-                    <h1 id="graph_title">HTS Data</h1>
                     <section id="buttons">
                         <section id="dropdowns">
                             <label id="drop_title" for="frequency">Frecuencia:</label>
@@ -70,12 +69,20 @@
                                 <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
                             </select>
                         </section>
-                    
+                        
                         <section id="dropdowns">
                             <label id="drop_title" for="hts_code">HTS Code:</label>
                             <select name="hts_code" id="hts_code"></select>
                         </section>
-                    
+                        
+                        <section id="dropdowns">
+                            <label id="drop_title" for="trade_type">Trade Type:</label>
+                            <select name="trade_type" id="trade_type">
+                                <option value="Import">imports</option>
+                                <option value="Export">exports</option>
+                            </select>
+                        </section>
+                        
                         <button id="submit" type="submit">Submit</button>
                     </section>                                
             
@@ -150,58 +157,6 @@
         <!-- Scripts -->  
         <script src="{% static 'js/header_menu.js' %}" defer></script>
         <script>
-            function updateSecondDropdown() {
-                const frequency = document.getElementById('frequency').value;
-                const htsCodeDropdown = document.getElementById('hts_code');
-            
-                // Clear existing options
-                htsCodeDropdown.innerHTML = '';
-            
-                let options = [];
-            
-                // Logic for second dropdown options
-                if (frequency === 'Yearly') {
-                    options = Array.from({ length: 16 }, (_, i) => ({ value: 2009 + i, text: 2009 + i }));
-                } else if (frequency === 'Monthly' || frequency === 'Quarterly') {
-                    if (frequency === 'Monthly') {
-                        options = [
-                            { value: 1, text: 'January' },
-                            { value: 2, text: 'February' },
-                            { value: 3, text: 'March' },
-                            { value: 4, text: 'April' },
-                            { value: 5, text: 'May' },
-                            { value: 6, text: 'June' },
-                            { value: 7, text: 'July' },
-                            { value: 8, text: 'August' },
-                            { value: 9, text: 'September' },
-                            { value: 10, text: 'October' },
-                            { value: 11, text: 'November' },
-                            { value: 12, text: 'December' }
-                        ];
-                    } else {
-                        options = [
-                            { value: 1, text: 'Qtr 1' },
-                            { value: 2, text: 'Qtr 2' },
-                            { value: 3, text: 'Qtr 3' },
-                            { value: 4, text: 'Qtr 4' }
-                        ];
-                    }
-                }
-            
-                // Populate the hts_code dropdown
-                options.forEach(option => {
-                    const opt = document.createElement('option');
-                    opt.value = option.value;
-                    opt.text = option.text;
-                    htsCodeDropdown.add(opt);
-                });
-            }
-            
-            document.addEventListener('DOMContentLoaded', () => {
-                updateSecondDropdown();  // Initialize dropdowns on page load
-            });
-
-
             function updateHtsCodeDropdown() {
                 const frequency = document.getElementById('frequency').value;
                 const htsCodeDropdown = document.getElementById('hts_code');

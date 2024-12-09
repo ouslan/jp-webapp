@@ -13,6 +13,7 @@ def products_hts(request):
 
     frequency = "Yearly"
     hts_code = "01"
+    trade_type = "imports"
 
     # Load data into the session to avoid repeated downloads
     if "yearly_data" not in request.session:
@@ -37,13 +38,13 @@ def products_hts(request):
     df_monthly['hts_code_prefix'] = df_monthly['hts_code'].astype(str).str[:2]
     df_quarterly['hts_code_prefix'] = df_quarterly['hts_code'].astype(str).str[:2]
 
-    # Group by the new column and sum the qty_imports
-    df_yearly_grouped = df_yearly.groupby(['year', 'hts_code_prefix'])['imports'].sum().reset_index()
-    df_monthly_grouped = df_monthly.groupby(['month', 'hts_code_prefix'])['imports'].sum().reset_index()
-    df_quarterly_grouped = df_quarterly.groupby(['qrt', 'hts_code_prefix'])['imports'].sum().reset_index()
+    # Group by the new column and sum the imports
+    df_yearly_grouped = df_yearly.groupby(['year', 'hts_code_prefix'])[['imports', 'exports']].sum().reset_index()
+    df_monthly_grouped = df_monthly.groupby(['month', 'hts_code_prefix'])[['imports', 'exports']].sum().reset_index()
+    df_quarterly_grouped = df_quarterly.groupby(['qrt', 'hts_code_prefix'])[['imports', 'exports']].sum().reset_index()
 
     # Validate required columns
-    required_columns = ["year", "month", "qty_imports"]
+    required_columns = ["year", "month", "imports"]
     for col in required_columns:
         if col not in df_monthly.columns:
             return render(request, 'product_hts.html', {"error": f"Missing column '{col}' in the dataset."})
@@ -57,8 +58,9 @@ def products_hts(request):
     if request.method == "POST":
         frequency = request.POST.get("frequency")
         hts_code = request.POST.get("hts_code")
+        trade_type = request.POST.get("trade_type")
 
-        if frequency == "Monthly":
+        if frequency == "Monthly" and trade_type == "imports":
             # Filter monthly data
             df_filtered = df_monthly_grouped[df_monthly_grouped["hts_code_prefix"] == hts_code]
 
@@ -70,7 +72,7 @@ def products_hts(request):
                 x_axis = pd.Series([])
                 y_axis = pd.Series([])
 
-        elif frequency == "Quarterly":
+        elif frequency == "Quarterly" and trade_type == "imports":
             # Filter quarterly data
             df_filtered = df_quarterly_grouped[df_quarterly_grouped["hts_code_prefix"] == hts_code]
 
@@ -82,14 +84,45 @@ def products_hts(request):
                 x_axis = pd.Series([])
                 y_axis = pd.Series([])
 
-        else:
+        elif frequency == "Yearly" and trade_type == "imports":
             # Default to yearly data
             df_filtered_yearly = df_yearly_grouped[df_yearly_grouped['hts_code_prefix'] == hts_code]
             x_axis = pd.Series(df_filtered_yearly["year"])
             y_axis = pd.Series(df_filtered_yearly["imports"])
+        
+        elif frequency == "Monthly" and trade_type == "exports":
+            # Filter monthly data
+            df_filtered = df_monthly_grouped[df_monthly_grouped["hts_code_prefix"] == hts_code]
+
+            # Validate if filtered data exists
+            if not df_filtered.empty:
+                x_axis = pd.Series(df_filtered["month"])
+                y_axis = pd.Series(df_filtered["exports"])
+            else:
+                x_axis = pd.Series([])
+                y_axis = pd.Series([])
+
+        elif frequency == "Quarterly" and trade_type == "exports":
+            # Filter quarterly data
+            df_filtered = df_quarterly_grouped[df_quarterly_grouped["hts_code_prefix"] == hts_code]
+
+            # Validate if filtered data exists
+            if not df_filtered.empty:
+                x_axis = pd.Series(df_filtered["qrt"])
+                y_axis = pd.Series(df_filtered["exports"])
+            else:
+                x_axis = pd.Series([])
+                y_axis = pd.Series([])
+
+        else:
+            # Default to yearly data
+            df_filtered_yearly = df_yearly_grouped[df_yearly_grouped['hts_code_prefix'] == hts_code]
+            x_axis = pd.Series(df_filtered_yearly["year"])
+            y_axis = pd.Series(df_filtered_yearly["exports"])    
+        
             
     # Add title to the graph
-    title = f"Frequency: {frequency}    HTS Code: {hts_code}"
+    title = f"Frequency: {frequency}    HTS Code: {hts_code}    Trade Type: {trade_type}"
 
     # Create the graph with the x and y axis
     fig = go.Figure()
