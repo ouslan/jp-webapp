@@ -53,12 +53,12 @@
             <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Ingrese el monto" required>
         </div>
         <div>
-            <label for="expense_food">&emsp;Comida:</label>
-            <input type="number" id="expense_food" name="expense_food" min="0" step="0.01" placeholder="Ingrese el monto" required>
-        </div>
-        <div>
             <label for="expense_entertainment">&emsp;Entretenimiento:</label>
             <input type="number" id="expense_entertainment" name="expense_entertainment" min="0" step="0.01" placeholder="Ingrese el monto" required>
+        </div>
+        <div>
+            <label for="expense_food">&emsp;Comida:</label>
+            <input type="number" id="expense_food" name="expense_food" min="0" step="0.01" placeholder="Ingrese el monto" required>
         </div>
         <div>
             <label for="expense_lodging">&emsp;Estadía:</label>
@@ -69,12 +69,12 @@
             <input type="number" id="expense_miscellaneous" name="expense_miscellaneous" min="0" step="0.01" placeholder="Ingrese el monto" required>
         </div>
         <div>
-            <label for="expense_transportation">&emsp;Transportación:</label>
-            <input type="number" id="expense_transportation" name="expense_transportation" min="0" step="0.01" placeholder="Ingrese el monto" required>
-        </div>
-        <div>
             <label for="expense_other">&emsp;Otros gastos:</label>
             <input type="number" id="expense_other" name="expense_other" min="0" step="0.01" placeholder="Ingrese el monto" required>
+        </div>
+        <div>
+            <label for="expense_transportation">&emsp;Transportación:</label>
+            <input type="number" id="expense_transportation" name="expense_transportation" min="0" step="0.01" placeholder="Ingrese el monto" required>
         </div>
     </div>
     <br>
@@ -88,77 +88,75 @@
     <br>
 
      <!-- Question 4 -->
-     <div id="question4">
-        <label for="genderIdentity"><strong>4. ¿Cuál es su identidad de género? (Seleccione todas las opciones que apliquen)</strong></label>
-        <div>
-            <input type="radio" id="gender_identity_woman" name="gender_identity" value="Mujer">
-            <label for="woman">&emsp;Mujer</label>
-        </div>
-        <div>
-            <input type="radio" id="gender_identity_man" name="gender_identity" value="Hombre">
-            <label for="gender_identity_man">&emsp;Hombre</label>
-        </div>
-        <div>
-            <input type="radio" id="gender_identity_nonBinary" name="gender_identity" value="Persona no binaria">
-            <label for="gender_identity_nonBinary">&emsp;Persona no binaria</label>
-        </div>
-        <div>
-            <input type="radio" id="gender_identity_transgender" name="gender_identity" value="Persona transgénero">
-            <label for="gender_identity_transgender">&emsp;Persona transgénero</label>
-        </div>
-        <div>
-            <input type="radio" id="gender_identity_genderFluid" name="gender_identity" value="Persona de género fluido">
-            <label for="gender_identity_genderFluid">&emsp;Persona de género fluido</label>
-        </div>
-
-        <div>
-            <input type="radio" id="gender_identity_other" name="gender_identity" value="Otro">
-            <label for="gender_identity_other">&emsp;Otro</label>
-        </div>
-
-        <div>
-            <input type="radio" id="gender_identity_preferNotToSay" name="gender_identity" value="Prefiero no responder">
-            <label for=" gender_identity_preferNotToSay">&emsp;Prefiero no responder</label>
-        </div>
+    <div id="question4">
+    <label for="genderIdentity"><strong>4. ¿Cuál es su identidad de género? (Seleccione todas las opciones que apliquen)</strong></label>
+    <div>
+        <input type="radio" id="gender_identity_genderFluid" name="gender_identity" value="Persona de género fluido">
+        <label for="gender_identity_genderFluid">&emsp;Persona de género fluido</label>
+    </div>
+    <div>
+        <input type="radio" id="gender_identity_man" name="gender_identity" value="Hombre">
+        <label for="gender_identity_man">&emsp;Hombre</label>
+    </div>
+    <div>
+        <input type="radio" id="gender_identity_nonBinary" name="gender_identity" value="Persona no binaria">
+        <label for="gender_identity_nonBinary">&emsp;Persona no binaria</label>
+    </div>
+    <div>
+        <input type="radio" id="gender_identity_transgender" name="gender_identity" value="Persona transgénero">
+        <label for="gender_identity_transgender">&emsp;Persona transgénero</label>
+    </div>
+    <div>
+        <input type="radio" id="gender_identity_woman" name="gender_identity" value="Mujer">
+        <label for="gender_identity_woman">&emsp;Mujer</label>
+    </div>
+    <div>
+        <input type="radio" id="gender_identity_other" name="gender_identity" value="Otro">
+        <label for="gender_identity_other">&emsp;Otro</label>
+    </div>
+    <div>
+        <input type="radio" id="gender_identity_preferNotToSay" name="gender_identity" value="Prefiero no responder">
+        <label for="gender_identity_preferNotToSay">&emsp;Prefiero no responder</label>
+    </div>
     </div>
     <br>
 
     <!-- Question 5 -->
-    <div id="question5">
-        <label for="heritage"><strong>5. ¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
-        <div>
-            <input type="radio" id="heritage_white" name="heritage" value="Blanca/o">
-            <label for="heritage_white">&emsp;Blanca/o</label>
-        </div>
-        <div>
-            <input type="radio" id="heritage_black" name="heritage" value="Negra/o">
-            <label for="heritage_black">&emsp;Negra/o</label>
-        </div>
-        <div>
-            <input type="radio" id="heritage_afrodescendant" name="heritage" value="Afrodescendiente">
-            <label for="heritage_afrodescendant">&emsp;Afrodescendiente</label>
-        </div>
-        <div>
-            <input type="radio" id="heritage_indigenous" name="heritage" value="Indígena / Nativa/o de las Américas">
-            <label for="heritage_indigenous">&emsp;Indígena / Nativa/o de las Américas</label>
-        </div>
-        <div>
-            <input type="radio" id="heritage_asian" name="heritage" value="Asiática/o">
-            <label for="heritage_asian">&emsp;Asiática/o</label>
-        </div>
-        <div>
-            <input type="radio" id="heritage_middleEast" name="heritage" value="Persona de Medio Oriente o del Norte de África">
-            <label for="heritage_middleEast">&emsp;Persona de Medio Oriente o del Norte de África</label>
-        </div>
-        <div>
-            <input type="radio" id="heritage_other" name="heritage" value="Otra">
-            <label for="heritage_other">&emsp;Otra</label>
-        </div>
-        <div>
-            <input type="radio" id="heritage_preferNotToSay" name="heritage" value="Prefiero no responder">
-            <label for="heritage_preferNotToSay">&emsp;Prefiero no responder</label>
-        </div>
+<div id="question5">
+    <label for="heritage"><strong>5. ¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
+    <div>
+        <input type="radio" id="heritage_afrodescendant" name="heritage" value="Afrodescendiente">
+        <label for="heritage_afrodescendant">&emsp;Afrodescendiente</label>
     </div>
+    <div>
+        <input type="radio" id="heritage_asian" name="heritage" value="Asiática/o">
+        <label for="heritage_asian">&emsp;Asiática/o</label>
+    </div>
+    <div>
+        <input type="radio" id="heritage_black" name="heritage" value="Negra/o">
+        <label for="heritage_black">&emsp;Negra/o</label>
+    </div>
+    <div>
+        <input type="radio" id="heritage_indigenous" name="heritage" value="Indígena / Nativa/o de las Américas">
+        <label for="heritage_indigenous">&emsp;Indígena / Nativa/o de las Américas</label>
+    </div>
+    <div>
+        <input type="radio" id="heritage_middleEast" name="heritage" value="Persona de Medio Oriente o del Norte de África">
+        <label for="heritage_middleEast">&emsp;Persona de Medio Oriente o del Norte de África</label>
+    </div>
+    <div>
+        <input type="radio" id="heritage_white" name="heritage" value="Blanca/o">
+        <label for="heritage_white">&emsp;Blanca/o</label>
+    </div>
+    <div>
+        <input type="radio" id="heritage_other" name="heritage" value="Otra">
+        <label for="heritage_other">&emsp;Otra</label>
+    </div>
+    <div>
+        <input type="radio" id="heritage_preferNotToSay" name="heritage" value="Prefiero no responder">
+        <label for="heritage_preferNotToSay">&emsp;Prefiero no responder</label>
+    </div>
+</div>
     <br>
 
 <!-- Question 6 -->
@@ -329,6 +327,7 @@
         <div>
             <input type="radio" id="origin_usa" name="visitor_origin" value="EEUU" required>
             <label for="origin_usa">&emsp;EEUU</label>
+            FIX HERE, FALTA LISTA DE ESTADOS
         </div>
         <div>
             <input type="radio" id="origin_other" name="visitor_origin" value="Otro País">
@@ -518,14 +517,6 @@
     <div id="question12">
         <label for="accommodation"><strong>12. ¿Dónde se hospedó durante su estadía?</strong></label>
         <div>
-            <input type="radio" id="accommodation_hotel" name="accommodation" value="Hotel" required>
-            <label for="accommodation_hotel">&emsp;Hotel</label>
-        </div>
-        <div>
-            <input type="radio" id="accommodation_paradores" name="accommodation" value="Paradores">
-            <label for="accommodation_paradores">&emsp;Paradores</label>
-        </div>
-        <div>
             <input type="radio" id="accommodation_airbnb" name="accommodation" value="Airbnb">
             <label for="accommodation_airbnb">&emsp;Airbnb</label>
         </div>
@@ -538,6 +529,14 @@
             <label for="accommodation_own_home">&emsp;Casa propia</label>
         </div>
         <div>
+            <input type="radio" id="accommodation_hotel" name="accommodation" value="Hotel" required>
+            <label for="accommodation_hotel">&emsp;Hotel</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_paradores" name="accommodation" value="Paradores">
+            <label for="accommodation_paradores">&emsp;Paradores</label>
+        </div>
+        <div>
             <input type="radio" id="accommodation_other" name="accommodation" value="Otro">
             <label for="accommodation_other">&emsp;Otro</label>
         </div>
@@ -548,16 +547,12 @@
     <div id="question13">
         <label for="visitPurpose"><strong>13. ¿Cuáles fueron los propósitos principales de su visita? Marque todos los que apliquen</strong></label>
         <div>
-            <input type="checkbox" id="visit_purpose_vacation" name="visit_purpose" value="Vacaciones">
-            <label for="visit_purpose_vacation">&emsp;Vacaciones</label>
+            <input type="checkbox" id="visit_purpose_medical" name="visit_purpose" value="Agroculturismo">
+            <label for="visit_purpose_medical">&emsp;Agroculturismo</label>
         </div>
         <div>
             <input type="checkbox" id="visit_purpose_business" name="visit_purpose" value="Negocios">
             <label for="visit_purpose_business">&emsp;Negocios</label>
-        </div>
-        <div>
-            <input type="checkbox" id="visit_purpose_family_friends" name="visit_purpose" value="Visita a familiares/amigos">
-            <label for="visit_purpose_family_friends">&emsp;Visita a familiares/amigos</label>
         </div>
         <div>
             <input type="checkbox" id="visit_purpose_study" name="visit_purpose" value="Estudio">
@@ -568,8 +563,12 @@
             <label for="visit_purpose_medical">&emsp;Turismo médico</label>
         </div>
         <div>
-            <input type="checkbox" id="visit_purpose_medical" name="visit_purpose" value="Agroculturismo">
-            <label for="visit_purpose_medical">&emsp;Agroculturismo</label>
+            <input type="checkbox" id="visit_purpose_vacation" name="visit_purpose" value="Vacaciones">
+            <label for="visit_purpose_vacation">&emsp;Vacaciones</label>
+        </div>
+        <div>
+            <input type="checkbox" id="visit_purpose_family_friends" name="visit_purpose" value="Visita a familiares/amigos">
+            <label for="visit_purpose_family_friends">&emsp;Visita a familiares/amigos</label>
         </div>
         <div>
             <input type="checkbox" id="visit_purpose_other" name="visit_purpose" value="Otro">
@@ -584,27 +583,31 @@
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 5px;">
             <div>
                 <input type="checkbox" id="activity_nightlife" name="activities" value="Vida nocturna">
-                <label for="activity_nightlife">&emsp;Vida nocturna</label>
-            </div>
-            <div>
-                <input type="checkbox" id="activity_shopping" name="activities" value="Compras">
-                <label for="activity_shopping">&emsp;Compras</label>
-            </div>
-            <div>
-                <input type="checkbox" id="activity_beach" name="activities" value="Playa y actividades acuáticas">
-                <label for="activity_beach">&emsp;Playa y actividades acuáticas</label>
-            </div>
-            <div>
-                <input type="checkbox" id="activity_restaurants" name="activities" value="Restaurantes y Gastronomía">
-                <label for="activity_restaurants">&emsp;Restaurantes y Gastronomía</label>
+                <label for="agroculturismo">&emsp;Agroculturismo</label>
             </div>
             <div>
                 <input type="checkbox" id="activity_concerts" name="activities" value="Conciertos">
                 <label for="activity_concerts">&emsp;Conciertos</label>
             </div>
             <div>
+                <input type="checkbox" id="activity_shopping" name="activities" value="Compras">
+                <label for="activity_shopping">&emsp;Compras</label>
+            </div>
+            <div>
                 <input type="checkbox" id="activity_ecotourism" name="activities" value="Ecoturismo">
                 <label for="activity_ecotourism">&emsp;Ecoturismo</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_restaurants" name="activities" value="Restaurantes y Gastronomía">
+                <label for="activity_restaurants">&emsp;Restaurantes y Gastronomía</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_beach" name="activities" value="Playa y actividades acuáticas">
+                <label for="activity_beach">&emsp;Playa y actividades acuáticas</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_nightlife" name="activities" value="Vida nocturna">
+                <label for="activity_nightlife">&emsp;Vida nocturna</label>
             </div>
             <div>
                 <input type="checkbox" id="activity_visiting_friends" name="activities" value="Visitar familiares/amistades">
@@ -655,8 +658,8 @@
         <label for="discoveryMethod"><strong>15. ¿Cómo se enteró de Puerto Rico como destino de viaje? Marque todas las que apliquen.</strong></label>
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; margin-top: 5px;">
             <div>
-                <input type="checkbox" id="discovery_heritage" name="discovery_method" value="Soy de ascendencia puertorriqueña">
-                <label for="discovery_heritage">&emsp;Soy de ascendencia puertorriqueña</label>
+                <input type="checkbox" id="discovery_travel_agencies" name="discovery_method" value="Agencias de viajes">
+                <label for="discovery_travel_agencies">&emsp;Agencias de viajes</label>
             </div>
             <div>
                 <input type="checkbox" id="discovery_recommendations" name="discovery_method" value="Recomendaciones de amigos/familia">
@@ -665,10 +668,6 @@
             <div>
                 <input type="checkbox" id="discovery_social_media" name="discovery_method" value="Redes sociales">
                 <label for="discovery_social_media">&emsp;Redes sociales</label>
-            </div>
-            <div>
-                <input type="checkbox" id="discovery_travel_agencies" name="discovery_method" value="Agencias de viajes">
-                <label for="discovery_travel_agencies">&emsp;Agencias de viajes</label>
             </div>
             <div>
                 <input type="checkbox" id="discovery_advertising" name="discovery_method" value="Publicidad">
@@ -681,6 +680,10 @@
             <div>
                 <input type="checkbox" id="discovery_advertising" name="discovery_method" value="Revistas">
                 <label for="discovery_advertising">&emsp;Revistas</label>
+            </div>
+            <div>
+                <input type="checkbox" id="discovery_heritage" name="discovery_method" value="Soy de ascendencia puertorriqueña">
+                <label for="discovery_heritage">&emsp;Soy de ascendencia puertorriqueña</label>
             </div>
             <div>
                 <input type="checkbox" id="discovery_other" name="discovery_method" value="Otro">
@@ -882,10 +885,6 @@
     <div id="question19">
         <label for="accommodation"><strong>19. ¿Dónde se hospedará durante su viaje?</strong></label>
         <div>
-            <input type="radio" id="accommodation_hotel" name="accommodation_1" value="Hotel" required>
-            <label for="accommodation_hotel">&emsp;Hotel</label>
-        </div>
-        <div>
             <input type="radio" id="accommodation_airbnb" name="accommodation_1" value="Airbnb">
             <label for="accommodation_airbnb">&emsp;Airbnb</label>
         </div>
@@ -896,6 +895,10 @@
         <div>
             <input type="radio" id="accommodation_own_home" name="accommodation_1" value="Casa propia">
             <label for="accommodation_own_home">&emsp;Casa propia</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_hotel" name="accommodation_1" value="Hotel" required>
+            <label for="accommodation_hotel">&emsp;Hotel</label>
         </div>
         <div>
             <input type="radio" id="accommodation_other" name="accommodation_1" value="Otro">
@@ -909,28 +912,28 @@
         <label for="travelPurposes"><strong>20. ¿Cuáles son los propósitos principales de su viaje? Marque todos los que apliquen</strong></label>
         <div id="travelPurposesContainer">
             <div>
-                <input type="checkbox" id="purpose_vacation" name="travel_purposes" value="Vacaciones">
-                <label for="purpose_vacation">&emsp;Vacaciones</label>
-            </div>
-            <div>
                 <input type="checkbox" id="purpose_moving" name="travel_purposes" value="Me estoy mudando fuera de Puerto Rico">
                 <label for="purpose_moving">&emsp;Me estoy mudando fuera de Puerto Rico</label>
-            </div>
-            <div>
-                <input type="checkbox" id="purpose_business" name="travel_purposes" value="Negocios">
-                <label for="purpose_business">&emsp;Negocios</label>
-            </div>
-            <div>
-                <input type="checkbox" id="purpose_family" name="travel_purposes" value="Visita a familiares/amigos">
-                <label for="purpose_family">&emsp;Visita a familiares/amigos</label>
             </div>
             <div>
                 <input type="checkbox" id="purpose_study" name="travel_purposes" value="Estudio">
                 <label for="purpose_study">&emsp;Estudio</label>
             </div>
             <div>
+                <input type="checkbox" id="purpose_business" name="travel_purposes" value="Negocios">
+                <label for="purpose_business">&emsp;Negocios</label>
+            </div>
+            <div>
                 <input type="checkbox" id="purpose_medical" name="travel_purposes" value="Turismo médico">
                 <label for="purpose_medical">&emsp;Turismo médico</label>
+            </div>
+            <div>
+                <input type="checkbox" id="purpose_vacation" name="travel_purposes" value="Vacaciones">
+                <label for="purpose_vacation">&emsp;Vacaciones</label>
+            </div>
+            <div>
+                <input type="checkbox" id="purpose_family" name="travel_purposes" value="Visita a familiares/amigos">
+                <label for="purpose_family">&emsp;Visita a familiares/amigos</label>
             </div>
             <div>
                 <input type="checkbox" id="purpose_other" name="travel_purposes" value="Otro">
@@ -995,83 +998,6 @@
     </div>
     <br>
 
-    <!-- Question 24 -->
-    <div id="question24">
-        <label for="spendingCategories"><strong>24. ¿En qué categorías estima gastará más durante su viaje? (Seleccione orden de mayor a menor gasto)</strong></label>
-        <div>
-            <label for="priority_accommodation">&emsp;Alojamiento:</label>
-            <select id="priority_accommodation" name="priority_accommodation_2" class="prioritySelect" required>
-                <option value="">Seleccione prioridad</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-        </div>
-        <div>
-            <label for="priority_food">&emsp;Comida:</label>
-            <select id="priority_food" name="priority_food_2" class="prioritySelect" required>
-                <option value="">Seleccione prioridad</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-        </div>
-        <div>
-            <label for="priority_transportation">&emsp;Transporte:</label>
-            <select id="priority_transportation" name="priority_transportation_2" class="prioritySelect" required>
-                <option value="">Seleccione prioridad</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-        </div>
-        <div>
-            <label for="priority_activities">&emsp;Actividades y entretenimiento:</label>
-            <select id="priority_activities" name="priority_activities_2" class="prioritySelect" required>
-                <option value="">Seleccione prioridad</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-        </div>
-        <div>
-            <label for="priority_shopping">&emsp;Compras:</label>
-            <select id="priority_shopping" name="priority_shopping_2" class="prioritySelect" required>
-                <option value="">Seleccione prioridad</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-        </div>
-        <div>
-            <label for="priority_other">&emsp;Otros:</label>
-            <select id="priority_other" name="priority_other_2" class="prioritySelect" required>
-                <option value="">Seleccione prioridad</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
-        </div>
-    </div>
-    <br>
 
 
     <!-- Submit Button -->
