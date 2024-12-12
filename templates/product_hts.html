@@ -60,6 +60,7 @@
                 {% csrf_token %}
                 <div class="graph_container">
                     <a id="graph-anchor"></a>
+                    <h1 id="graph_title">HTS Data</h1>
                     <section id="buttons">
                         <section id="dropdowns">
                             <label id="drop_title" for="frequency">Frecuencia:</label>
@@ -69,20 +70,20 @@
                                 <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
                             </select>
                         </section>
-                        
+                    
                         <section id="dropdowns">
                             <label id="drop_title" for="hts_code">HTS Code:</label>
                             <select name="hts_code" id="hts_code"></select>
                         </section>
-                        
+
                         <section id="dropdowns">
                             <label id="drop_title" for="trade_type">Trade Type:</label>
                             <select name="trade_type" id="trade_type">
-                                <option value="Import">imports</option>
-                                <option value="Export">exports</option>
+                                <option value="imports" {% if selected_trade_type == "Import" %}selected{% endif %}>Imports</option>
+                                <option value="exports" {% if selected_trade_type == "Export" %}selected{% endif %}>Exports</option>
                             </select>
                         </section>
-                        
+                    
                         <button id="submit" type="submit">Submit</button>
                     </section>                                
             
@@ -155,7 +156,7 @@
         </footer>
 
         <!-- Scripts -->  
-        <script src="{% static 'js/header_menu.js' %}" defer></script>
+        <script src="{% static 'header_menu.js' %}" defer></script>
         <script>
             function updateHtsCodeDropdown() {
                 const frequency = document.getElementById('frequency').value;
