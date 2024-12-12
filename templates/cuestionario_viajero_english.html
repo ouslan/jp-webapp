@@ -5,14 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Questionnaire</title>
-    <link rel="stylesheet" href="{% static 'cuestionario_viajero_spanish.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/cuestionario_viajero_spanish.css' %}"> 
     <script defer src="script.js"></script> <!-- Add your JS file -->
 </head>
 <body>
-    <form id="questionnaireForm">
+
+    <!-- Header -->
+    <section class="header">
+        <table id="header_line">
+            <tr>
+            <td id="header_left">
+                Titulo left
+            </td>
+            <td id="header_center">
+                <img src="{% static 'images/JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
+                <h1>Visitor Spending Survey</h1>
+            </td>
+            <td id="header_right">
+                Titulo Right
+            </td>
+            </tr>
+        </table>
+    </section>
+
+<main>
+    <form id="questionnaireForm" class="question-box">
+        <a href="/cuestionario-del-viajero-spanish/" class="red-box-link">Cambiar a Español</a>
+        <br><br>
         <!-- Question 1 -->
         <div>
-            <label for="caseSelection">1. Which of the following best describes your situation?</label>
+            <label for="caseSelection"><strong>1. Which of the following best describes your situation?</strong></label>
             <select id="caseSelection" name="case_selection" required>
                 <option value="">Select...</option>
                 <option value="visitor">I was visiting Puerto Rico</option>
@@ -21,1001 +43,1027 @@
             </select>
             </select>
         </div>
+        <br>
 
     <!-- Question 2 -->
     <div id="question2" class="hidden">
-        <label for="expenseCategories">2. Approximately, what were your expenses in the following categories?</label>
+        <label for="expenseCategories"><strong>2. Approximately, what were your expenses in the following categories?</strong></label>
         <div>
-            <label for="expense_airplane">Airplane:</label>
+            <label for="expense_airplane">&emsp;Airplane:</label>
             <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Enter the amount" required>
         </div>
         <div>
-            <label for="expense_food">Food:</label>
+            <label for="expense_food">&emsp;Food:</label>
             <input type="number" id="expense_food" name="expense_food" min="0" step="0.01" placeholder="Enter the amount" required>
         </div>
         <div>
-            <label for="expense_entertainment">Entertainment:</label>
+            <label for="expense_entertainment">&emsp;Entertainment:</label>
             <input type="number" id="expense_entertainment" name="expense_entertainment" min="0" step="0.01" placeholder="Enter the amount" required>
         </div>
         <div>
-            <label for="expense_lodging">Lodging:</label>
+            <label for="expense_lodging">&emsp;Lodging:</label>
             <input type="number" id="expense_lodging" name="expense_lodging" min="0" step="0.01" placeholder="Enter the amount" required>
         </div>
         <div>
-            <label for="expense_miscellaneous">Miscellaneous items / Clothing:</label>
+            <label for="expense_miscellaneous">&emsp;Miscellaneous items / Clothing:</label>
             <input type="number" id="expense_miscellaneous" name="expense_miscellaneous" min="0" step="0.01" placeholder="Enter the amount" required>
         </div>
         <div>
-            <label for="expense_transportation">Transportation:</label>
+            <label for="expense_transportation">&emsp;Transportation:</label>
             <input type="number" id="expense_transportation" name="expense_transportation" min="0" step="0.01" placeholder="Enter the amount" required>
         </div>
         <div>
-            <label for="expense_other">Other expenses:</label>
+            <label for="expense_other">&emsp;Other expenses:</label>
             <input type="number" id="expense_other" name="expense_other" min="0" step="0.01" placeholder="Enter the amount" required>
         </div>
     </div>
+    <br>
     
 
      <!-- Question 3 -->
      <div>
-        <label for="age">3. What is your age?</label>
+        <label for="age"><strong>3. What is your age?</strong></label>
         <input type="number" id="age" name="age" required min="1">
         <button type="button" id="confirmAgeBtn">Confirm Age</button>
     </div>
+    <br>
      
     <!-- Question 4 -->
     <div>
-        <label for="genderIdentity">4. What is your gender identity? (Select all that apply)</label>
+        <label for="genderIdentity"><strong>4. What is your gender identity? (Select all that apply)</strong></label>
         <div>
             <input type="radio" id="gender_identity_woman" name="gender_identity" value="Woman">
-            <label for="gender_identity_woman">Woman</label>
+            <label for="gender_identity_woman">&emsp;Woman</label>
         </div>
         <div>
             <input type="radio" id="gender_identity_man" name="gender_identity" value="Man">
-            <label for="gender_identity_man">Man</label>
+            <label for="gender_identity_man">&emsp;Man</label>
         </div>
         <div>
             <input type="radio" id="gender_identity_nonBinary" name="gender_identity" value="Non-binary">
-            <label for="gender_identity_nonBinary">Non-binary</label>
+            <label for="gender_identity_nonBinary">&emsp;Non-binary</label>
         </div>
         <div>
             <input type="radio" id="gender_identity_transgender" name="gender_identity" value="Transgender">
-            <label for="gender_identity_transgender">Transgender</label>
+            <label for="gender_identity_transgender">&emsp;Transgender</label>
         </div>
         <div>
             <input type="radio" id="gender_identity_genderFluid" name="gender_identity" value="Gender fluid">
-            <label for="gender_identity_genderFluid">Gender fluid</label>
+            <label for="gender_identity_genderFluid">&emsp;Gender fluid</label>
         </div>
         <div>
             <input type="radio" id="gender_identity_other" name="gender_identity" value="Other">
-            <label for="gender_identity_other">Other</label>
+            <label for="gender_identity_other">&emsp;Other</label>
         </div>
         <div>
             <input type="radio" id="gender_identity_preferNotToSay" name="gender_identity" value="Prefer not to say">
-            <label for="gender_identity_preferNotToSay">Prefer not to say</label>
+            <label for="gender_identity_preferNotToSay">&emsp;Prefer not to say</label>
         </div>
     </div>
+    <br>
 
     <!-- Question 5 -->
     <div>
-        <label for="heritage">5. How would you describe your racial, ethnic, or cultural heritage?</label>
+        <label for="heritage"><strong>5. How would you describe your racial, ethnic, or cultural heritage?</strong></label>
         <div>
             <input type="radio" id="heritage_white" name="heritage" value="White">
-            <label for="heritage_white">White</label>
+            <label for="heritage_white">&emsp;White</label>
         </div>
         <div>
             <input type="radio" id="heritage_black" name="heritage" value="Black">
-            <label for="heritage_black">Black</label>
+            <label for="heritage_black">&emsp;Black</label>
         </div>
         <div>
             <input type="radio" id="heritage_afrodescendant" name="heritage" value="Afrodescendant">
-            <label for="heritage_afrodescendant">Afrodescendant</label>
+            <label for="heritage_afrodescendant">&emsp;Afrodescendant</label>
         </div>
         <div>
             <input type="radio" id="heritage_indigenous" name="heritage" value="Indigenous / Native of the Americas">
-            <label for="heritage_indigenous">Indigenous / Native of the Americas</label>
+            <label for="heritage_indigenous">&emsp;Indigenous / Native of the Americas</label>
         </div>
         <div>
             <input type="radio" id="heritage_asian" name="heritage" value="Asian">
-            <label for="heritage_asian">Asian</label>
+            <label for="heritage_asian">&emsp;Asian</label>
         </div>
         <div>
             <input type="radio" id="heritage_middleEast" name="heritage" value="Middle Eastern or North African">
-            <label for="heritage_middleEast">Middle Eastern or North African</label>
+            <label for="heritage_middleEast">&emsp;Middle Eastern or North African</label>
         </div>
         <div>
             <input type="radio" id="heritage_other" name="heritage" value="Other">
-            <label for="heritage_other">Other</label>
+            <label for="heritage_other">&emsp;Other</label>
         </div>
         <div>
             <input type="radio" id="heritage_preferNotToSay" name="heritage" value="Prefer not to say">
-            <label for="heritage_preferNotToSay">Prefer not to say</label>
+            <label for="heritage_preferNotToSay">&emsp;Prefer not to say</label>
         </div>
     </div>
+    <br>
 
-<!-- Question 6 -->
-<div>
-    <label for="hispanicIdentity">6. Do you identify as Hispanic/Latino/Latine?</label>
+    <!-- Question 6 -->
     <div>
-        <input type="radio" id="hispanic_identity_puertoRican" name="hispanic_identity" value="Yes, of Puerto Rican origin">
-        <label for="hispanic_identity_puertoRican">Yes, of Puerto Rican origin</label>
+        <label for="hispanicIdentity"><strong>6. Do you identify as Hispanic/Latino/Latine?</strong></label>
+        <div>
+            <input type="radio" id="hispanic_identity_puertoRican" name="hispanic_identity" value="Yes, of Puerto Rican origin">
+            <label for="hispanic_identity_puertoRican">&emsp;Yes, of Puerto Rican origin</label>
+        </div>
+        <div>
+            <input type="radio" id="hispanic_identity_dominican" name="hispanic_identity" value="Yes, of Dominican origin">
+            <label for="hispanic_identity_dominican">&emsp;Yes, of Dominican origin</label>
+        </div>
+        <div>
+            <input type="radio" id="hispanic_identity_cuban" name="hispanic_identity" value="Yes, of Cuban origin">
+            <label for="hispanic_identity_cuban">&emsp;Yes, of Cuban origin</label>
+        </div>
+        <div>
+            <input type="radio" id="hispanic_identity_colombian" name="hispanic_identity" value="Yes, of Colombian origin">
+            <label for="hispanic_identity_colombian">&emsp;Yes, of Colombian origin</label>
+        </div>
+        <div>
+            <input type="radio" id="hispanic_identity_mexican" name="hispanic_identity" value="Yes, of Mexican origin">
+            <label for="hispanic_identity_mexican">&emsp;Yes, of Mexican origin</label>
+        </div>
+        <div>
+            <input type="radio" id="hispanic_identity_other" name="hispanic_identity" value="Yes, from another Latin American country">
+            <label for="hispanic_identity_other">&emsp;Yes, from another Latin American country</label>
+        </div>
+        <div>
+            <input type="radio" id="hispanic_identity_no" name="hispanic_identity" value="No">
+            <label for="hispanic_identity_no">&emsp;No</label>
+        </div>
+        <div>
+            <input type="radio" id="hispanic_identity_preferNotToSay" name="hispanic_identity" value="Prefer not to say">
+            <label for="hispanic_identity_preferNotToSay">&emsp;Prefer not to say</label>
+        </div>
     </div>
-    <div>
-        <input type="radio" id="hispanic_identity_dominican" name="hispanic_identity" value="Yes, of Dominican origin">
-        <label for="hispanic_identity_dominican">Yes, of Dominican origin</label>
-    </div>
-    <div>
-        <input type="radio" id="hispanic_identity_cuban" name="hispanic_identity" value="Yes, of Cuban origin">
-        <label for="hispanic_identity_cuban">Yes, of Cuban origin</label>
-    </div>
-    <div>
-        <input type="radio" id="hispanic_identity_colombian" name="hispanic_identity" value="Yes, of Colombian origin">
-        <label for="hispanic_identity_colombian">Yes, of Colombian origin</label>
-    </div>
-    <div>
-        <input type="radio" id="hispanic_identity_mexican" name="hispanic_identity" value="Yes, of Mexican origin">
-        <label for="hispanic_identity_mexican">Yes, of Mexican origin</label>
-    </div>
-    <div>
-        <input type="radio" id="hispanic_identity_other" name="hispanic_identity" value="Yes, from another Latin American country">
-        <label for="hispanic_identity_other">Yes, from another Latin American country</label>
-    </div>
-    <div>
-        <input type="radio" id="hispanic_identity_no" name="hispanic_identity" value="No">
-        <label for="hispanic_identity_no">No</label>
-    </div>
-    <div>
-        <input type="radio" id="hispanic_identity_preferNotToSay" name="hispanic_identity" value="Prefer not to say">
-        <label for="hispanic_identity_preferNotToSay">Prefer not to say</label>
-    </div>
-</div>
+    <br>
 
     <!-- Question 7 -->
     <div>
-        <label for="educationLevel">7. What is the highest level of education you have completed?</label>
+        <label for="educationLevel"><strong>7. What is the highest level of education you have completed?</strong></label>
         <div>
             <input type="radio" id="education_level_noPrimary" name="education_level" value="Did not complete primary school" required>
-            <label for="education_level_noPrimary">Did not complete primary school</label>
+            <label for="education_level_noPrimary">&emsp;Did not complete primary school</label>
         </div>
         <div>
             <input type="radio" id="education_level_primarySchool" name="education_level" value="Primary school">
-            <label for="education_level_primarySchool">Primary school</label>
+            <label for="education_level_primarySchool">&emsp;Primary school</label>
         </div>
         <div>
             <input type="radio" id="education_level_highSchool" name="education_level" value="High school">
-            <label for="education_level_highSchool">High school</label>
+            <label for="education_level_highSchool">&emsp;High school</label>
         </div>
         <div>
             <input type="radio" id="education_level_technical" name="education_level" value="Technical or vocational degree">
-            <label for="education_level_technical">Technical or vocational degree</label>
+            <label for="education_level_technical">&emsp;Technical or vocational degree</label>
         </div>
         <div>
             <input type="radio" id="education_level_bachelor" name="education_level" value="Bachelor's degree">
-            <label for="education_level_bachelor">Bachelor's degree</label>
+            <label for="education_level_bachelor">&emsp;Bachelor's degree</label>
         </div>
         <div>
             <input type="radio" id="education_level_postgraduate" name="education_level" value="Master's, professional degree, or other postgraduate studies">
-            <label for="education_level_postgraduate">Master's, professional degree, or other postgraduate studies</label>
+            <label for="education_level_postgraduate">&emsp;Master's, professional degree, or other postgraduate studies</label>
         </div>
         <div>
             <input type="radio" id="education_level_preferNotToSay" name="education_level" value="Prefer not to say">
-            <label for="education_level_preferNotToSay">Prefer not to say</label>
+            <label for="education_level_preferNotToSay">&emsp;Prefer not to say</label>
         </div>
     </div>
+    <br>
 
-<!-- Question 8 -->
-<div>
-    <label for="incomeLevel">8. What is your income level?</label>
+    <!-- Question 8 -->
     <div>
-        <input type="radio" id="income_noIncome" name="income_level" value="No income" required>
-        <label for="income_noIncome">No income</label>
+        <label for="incomeLevel"><strong>8. What is your income level?</strong></label>
+        <div>
+            <input type="radio" id="income_noIncome" name="income_level" value="No income" required>
+            <label for="income_noIncome">&emsp;No income</label>
+        </div>
+        <div>
+            <input type="radio" id="income_lessThan5000" name="income_level" value="Less than $5,000">
+            <label for="income_lessThan5000">&emsp;Less than $5,000</label>
+        </div>
+        <div>
+            <input type="radio" id="income_5000to14999" name="income_level" value="$5,000 to $14,999">
+            <label for="income_5000to14999">&emsp;$5,000 to $14,999</label>
+        </div>
+        <div>
+            <input type="radio" id="income_15000to24999" name="income_level" value="$15,000 to $24,999">
+            <label for="income_15000to24999">&emsp;$15,000 to $24,999</label>
+        </div>
+        <div>
+            <input type="radio" id="income_25000to34999" name="income_level" value="$25,000 to $34,999">
+            <label for="income_25000to34999">&emsp;$25,000 to $34,999</label>
+        </div>
+        <div>
+            <input type="radio" id="income_35000to44999" name="income_level" value="$35,000 to $44,999">
+            <label for="income_35000to44999">&emsp;$35,000 to $44,999</label>
+        </div>
+        <div>
+            <input type="radio" id="income_45000to54999" name="income_level" value="$45,000 to $54,999">
+            <label for="income_45000to54999">&emsp;$45,000 to $54,999</label>
+        </div>
+        <div>
+            <input type="radio" id="income_55000to64999" name="income_level" value="$55,000 to $64,999">
+            <label for="income_55000to64999">&emsp;$55,000 to $64,999</label>
+        </div>
+        <div>
+            <input type="radio" id="income_65000to74999" name="income_level" value="$65,000 to $74,999">
+            <label for="income_65000to74999">&emsp;$65,000 to $74,999</label>
+        </div>
+        <div>
+            <input type="radio" id="income_75000to84999" name="income_level" value="$75,000 to $84,999">
+            <label for="income_75000to84999">&emsp;$75,000 to $84,999</label>
+        </div>
+        <div>
+            <input type="radio" id="income_85000to99999" name="income_level" value="$85,000 to $99,999">
+            <label for="income_85000to99999">&emsp;$85,000 to $99,999</label>
+        </div>
+        <div>
+            <input type="radio" id="income_moreThan100000" name="income_level" value="More than $100,000">
+            <label for="income_moreThan100000">&emsp;More than $100,000</label>
+        </div>
     </div>
-    <div>
-        <input type="radio" id="income_lessThan5000" name="income_level" value="Less than $5,000">
-        <label for="income_lessThan5000">Less than $5,000</label>
-    </div>
-    <div>
-        <input type="radio" id="income_5000to14999" name="income_level" value="$5,000 to $14,999">
-        <label for="income_5000to14999">$5,000 to $14,999</label>
-    </div>
-    <div>
-        <input type="radio" id="income_15000to24999" name="income_level" value="$15,000 to $24,999">
-        <label for="income_15000to24999">$15,000 to $24,999</label>
-    </div>
-    <div>
-        <input type="radio" id="income_25000to34999" name="income_level" value="$25,000 to $34,999">
-        <label for="income_25000to34999">$25,000 to $34,999</label>
-    </div>
-    <div>
-        <input type="radio" id="income_35000to44999" name="income_level" value="$35,000 to $44,999">
-        <label for="income_35000to44999">$35,000 to $44,999</label>
-    </div>
-    <div>
-        <input type="radio" id="income_45000to54999" name="income_level" value="$45,000 to $54,999">
-        <label for="income_45000to54999">$45,000 to $54,999</label>
-    </div>
-    <div>
-        <input type="radio" id="income_55000to64999" name="income_level" value="$55,000 to $64,999">
-        <label for="income_55000to64999">$55,000 to $64,999</label>
-    </div>
-    <div>
-        <input type="radio" id="income_65000to74999" name="income_level" value="$65,000 to $74,999">
-        <label for="income_65000to74999">$65,000 to $74,999</label>
-    </div>
-    <div>
-        <input type="radio" id="income_75000to84999" name="income_level" value="$75,000 to $84,999">
-        <label for="income_75000to84999">$75,000 to $84,999</label>
-    </div>
-    <div>
-        <input type="radio" id="income_85000to99999" name="income_level" value="$85,000 to $99,999">
-        <label for="income_85000to99999">$85,000 to $99,999</label>
-    </div>
-    <div>
-        <input type="radio" id="income_moreThan100000" name="income_level" value="More than $100,000">
-        <label for="income_moreThan100000">More than $100,000</label>
-    </div>
-</div>
+    <br>
 
-<!-- Question 9 -->
-<div>
-    <label for="travelCompanion">9. Are you traveling alone or accompanied?</label>
+    <!-- Question 9 -->
     <div>
-        <input type="radio" id="travel_companion_solo" name="travel_companion" value="Alone" required>
-        <label for="travel_companion_solo">Alone</label>
+        <label for="travelCompanion"><strong>9. Are you traveling alone or accompanied?</strong></label>
+        <div>
+            <input type="radio" id="travel_companion_solo" name="travel_companion" value="Alone" required>
+            <label for="travel_companion_solo">&emsp;Alone</label>
+        </div>
+        <div>
+            <input type="radio" id="travel_companion_friends" name="travel_companion" value="With friends">
+            <label for="travel_companion_friends">&emsp;With friends</label>
+        </div>
+        <div>
+            <input type="radio" id="travel_companion_family" name="travel_companion" value="With family">
+            <label for="travel_companion_family">&emsp;With family</label>
+        </div>
+        <div>
+            <input type="radio" id="travel_companion_group" name="travel_companion" value="In an organized group">
+            <label for="travel_companion_group">&emsp;In an organized group</label>
+        </div>
     </div>
-    <div>
-        <input type="radio" id="travel_companion_friends" name="travel_companion" value="With friends">
-        <label for="travel_companion_friends">With friends</label>
-    </div>
-    <div>
-        <input type="radio" id="travel_companion_family" name="travel_companion" value="With family">
-        <label for="travel_companion_family">With family</label>
-    </div>
-    <div>
-        <input type="radio" id="travel_companion_group" name="travel_companion" value="In an organized group">
-        <label for="travel_companion_group">In an organized group</label>
-    </div>
-</div>
+    <br>
 
-<!-- Question 10 -->
-<div>
-    <label for="numberOfCompanions">10. How many people are you traveling with?</label>
-    <input type="number" id="number_of_companions" name="number_of_companions" min="0" required>
-    <div id="confirmCompanionsContainer" style="display: none;">
-        <button type="button" id="confirmCompanionsButton">Confirm</button>
-    </div>
-</div>
-
-VERIFICA DOC
-
-<!-- Question 11 -->
-<div>
-    <label for="visitorOrigin">11. Where are you visiting from?</label>
+    <!-- Question 10 -->
     <div>
-        <input type="radio" id="origin_usa" name="visitor_origin" value="USA" required>
-        <label for="origin_usa">USA</label>
+        <label for="numberOfCompanions"><strong>10. How many people are you traveling with?</strong></label>
+        <input type="number" id="number_of_companions" name="number_of_companions" min="0" required>
+        <div id="confirmCompanionsContainer" style="display: none;">
+            <button type="button" id="confirmCompanionsButton">Confirm</button>
+        </div>
     </div>
+    <br>
+
+    VERIFICA DOC
+
+    <!-- Question 11 -->
     <div>
-        <input type="radio" id="origin_other" name="visitor_origin" value="Other Country">
-        <label for="origin_other">Other Country</label>
-    </div>
-    <!-- Dropdown that will appear dynamically -->
-    <div id="countryDropdownContainer" style="display: none; margin-top: 1px;">
-        <label for="countrySelection">Select region:</label>
-        <select id="countrySelection" name="country_selection">
-            <option value="">Select...</option>
-            <option value="puertorico">Puerto Rico</option>
-                <option value="aruba">Aruba</option>
-                <option value="africaeasternsouthern">Africa Eastern and Southern</option>
-                <option value="afghanistan">Afghanistan</option>
-                <option value="africa">Africa</option>
-                <option value="africawesterncentral">Africa Western and Central</option>
-                <option value="angola">Angola</option>
-                <option value="albania">Albania</option>
-                <option value="andorra">Andorra</option>
-                <option value="arabworld">Arab World</option>
-                <option value="unitedarabemirates">United Arab Emirates</option>
-                <option value="argentina">Argentina</option>
-                <option value="armenia">Armenia</option>
-                <option value="americansamoa">American Samoa</option>
-                <option value="antiguaandbarbuda">Antigua and Barbuda</option>
-                <option value="australia">Australia</option>
-                <option value="austria">Austria</option>
-                <option value="azerbaijan">Azerbaijan</option>
-                <option value="burundi">Burundi</option>
-                <option value="belgium">Belgium</option>
-                <option value="benin">Benin</option>
-                <option value="burkinafaso">Burkina Faso</option>
-                <option value="bangladesh">Bangladesh</option>
-                <option value="bulgaria">Bulgaria</option>
-                <option value="bahrain">Bahrain</option>
-                <option value="bahamas">Bahamas, The</option>
-                <option value="bosniaandherzegovina">Bosnia and Herzegovina</option>
-                <option value="belarus">Belarus</option>
-                <option value="belize">Belize</option>
-                <option value="bermuda">Bermuda</option>
-                <option value="bolivia">Bolivia</option>
-                <option value="brazil">Brazil</option>
-                <option value="barbados">Barbados</option>
-                <option value="bruneidarussalam">Brunei Darussalam</option>
-                <option value="bhutan">Bhutan</option>
-                <option value="botswana">Botswana</option>
-                <option value="centralafricanrepublic">Central African Republic</option>
-                <option value="canada">Canada</option>
-                <option value="centralEuropeBaltics">Central Europe and the Baltics</option>
-                <option value="switzerland">Switzerland</option>
-                <option value="chile">Chile</option>
-                <option value="china">China</option>
-                <option value="cotedivoire">Cote d'Ivoire</option>
-                <option value="cameroon">Cameroon</option>
-                <option value="congodemrep">Congo, Dem. Rep.</option>
-                <option value="congorep">Congo, Rep.</option>
-                <option value="colombia">Colombia</option>
-                <option value="comoros">Comoros</option>
-                <option value="caboverde">Cabo Verde</option>
-                <option value="costarica">Costa Rica</option>
-                <option value="cuba">Cuba</option>
-                <option value="curacao">Curacao</option>
-                <option value="cyprus">Cyprus</option>
-                <option value="czechia">Czechia</option>
-                <option value="germany">Germany</option>
-                <option value="djibouti">Djibouti</option>
-                <option value="dominica">Dominica</option>
-                <option value="denmark">Denmark</option>
-                <option value="dominicanrepublic">Dominican Republic</option>
-                <option value="ecuador">Ecuador</option>
-                <option value="egyptarabrep">Egypt, Arab Rep.</option>
-                <option value="eritrea">Eritrea</option>
-                <option value="spain">Spain</option>
-                <option value="estonia">Estonia</option>
-                <option value="ethiopia">Ethiopia</option>
-                <option value="europeanunion">European Union</option>
-                <option value="finland">Finland</option>
-                <option value="fiji">Fiji</option>
-                <option value="france">France</option>
-                <option value="micronesia">Micronesia, Fed. Sts.</option>
-                <option value="gabon">Gabon</option>
-                <option value="unitedkingdom">United Kingdom</option>
-                <option value="georgia">Georgia</option>
-                <option value="ghana">Ghana</option>
-                <option value="gibraltar">Gibraltar</option>
-                <option value="guinea">Guinea</option>
-                <option value="gambia">Gambia, The</option>
-                <option value="guineabissau">Guinea-Bissau</option>
-                <option value="equatorialguinea">Equatorial Guinea</option>
-                <option value="greece">Greece</option>
-                <option value="grenada">Grenada</option>
-                <option value="greenland">Greenland</option>
-                <option value="guatemala">Guatemala</option>
-                <option value="guam">Guam</option>
-                <option value="guyana">Guyana</option>
-                <option value="haiti">Haiti</option>
-                <option value="honduras">Honduras</option>
-                <option value="croatia">Croatia</option>
-                <option value="hungary">Hungary</option>
-                <option value="indonesia">Indonesia</option>
-                <option value="india">India</option>
-                <option value="ireland">Ireland</option>
-                <option value="iran">Iran</option>
-                <option value="iraq">Iraq</option>
-                <option value="iceland">Iceland</option>
-                <option value="israel">Israel</option>
-                <option value="italy">Italy</option>
-                <option value="jamaica">Jamaica</option>
-                <option value="japan">Japan</option>
-                <option value="kazakhstan">Kazakhstan</option>
-                <option value="kenya">Kenya</option>
-                <option value="kyrgyzrepublic">Kyrgyz Republic</option>
-                <option value="cambodia">Cambodia</option>
-                <option value="kiribati">Kiribati</option>
-                <option value="stlucia">St. Lucia</option>
-                <option value="laopdr">Lao PDR</option>
-                <option value="lebanon">Lebanon</option>
-                <option value="liberia">Liberia</option>
-                <option value="libya">Libya</option>
-                <option value="lesotho">Lesotho</option>
-                <option value="lithuania">Lithuania</option>
-                <option value="luxembourg">Luxembourg</option>
-                <option value="latvia">Latvia</option>
-                <option value="macau">Macao SAR, China</option>
-                <option value="morocco">Morocco</option>
-                <option value="monaco">Monaco</option>
-                <option value="moldova">Moldova</option>
-                <option value="madagascar">Madagascar</option>
-                <option value="maldives">Maldives</option>
-                <option value="mexico">Mexico</option>
-                <option value="marshallislands">Marshall Islands</option>
-                <option value="malaysia">Malaysia</option>
-                <option value="malawi">Malawi</option>
-                <option value="namibia">Namibia</option>
-                <option value="netherlands">Netherlands</option>
-                <option value="norway">Norway</option>
-                <option value="nepal">Nepal</option>
-                <option value="newzealand">New Zealand</option>
-                <option value="oman">Oman</option>
-                <option value="pakistan">Pakistan</option>
-                <option value="panama">Panama</option>
-                <option value="peru">Peru</option>
-                <option value="philippines">Philippines</option>
-                <option value="palau">Palau</option>
-                <option value="papuanewguinea">Papua New Guinea</option>
-                <option value="poland">Poland</option>
+        <label for="visitorOrigin"><strong>11. Where are you visiting from?</strong></label>
+        <div>
+            <input type="radio" id="origin_usa" name="visitor_origin" value="USA" required>
+            <label for="origin_usa">&emsp;USA</label>
+        </div>
+        <div>
+            <input type="radio" id="origin_other" name="visitor_origin" value="Other Country">
+            <label for="origin_other">&emsp;Other Country</label>
+        </div>
+        <!-- Dropdown that will appear dynamically -->
+        <div id="countryDropdownContainer" style="display: none; margin-top: 1px;">
+            <label for="countrySelection">Select region:</label>
+            <select id="countrySelection" name="country_selection">
+                <option value="">Select...</option>
                 <option value="puertorico">Puerto Rico</option>
-                <option value="portugal">Portugal</option>
-                <option value="paraguay">Paraguay</option>
-                <option value="qatar">Qatar</option>
-                <option value="romania">Romania</option>
-                <option value="russianfederation">Russian Federation</option>
-                <option value="rwanda">Rwanda</option>
-                <option value="saudiarabia">Saudi Arabia</option>
-                <option value="sudan">Sudan</option>
-                <option value="senegal">Senegal</option>
-                <option value="singapore">Singapore</option>
-                <option value="slovakrepublic">Slovak Republic</option>
-                <option value="slovenia">Slovenia</option>
-                <option value="sweden">Sweden</option>
-                <option value="eswatini">Eswatini</option>
-                <option value="seychelles">Seychelles</option>
-                <option value="syrianarabrepublic">Syrian Arab Republic</option>
-                <option value="chad">Chad</option>
-                <option value="thailand">Thailand</option>
-                <option value="tajikistan">Tajikistan</option>
-                <option value="turkmenistan">Turkmenistan</option>
-                <option value="tonga">Tonga</option>
-                <option value="trinidadandtobago">Trinidad and Tobago</option>
-                <option value="tunisia">Tunisia</option>
-                <option value="turkiye">Turkiye</option>
-                <option value="tanzania">Tanzania</option>
-                <option value="uganda">Uganda</option>
-                <option value="ukraine">Ukraine</option>
-                <option value="uruguay">Uruguay</option>
-                <option value="uzbekistan">Uzbekistan</option>
-                <option value="venezuela">Venezuela, RB</option>
-                <option value="vietnam">Viet Nam</option>
-                <option value="zambia">Zambia</option>
-                <option value="zimbabwe">Zimbabwe</option>
+                    <option value="aruba">Aruba</option>
+                    <option value="africaeasternsouthern">Africa Eastern and Southern</option>
+                    <option value="afghanistan">Afghanistan</option>
+                    <option value="africa">Africa</option>
+                    <option value="africawesterncentral">Africa Western and Central</option>
+                    <option value="angola">Angola</option>
+                    <option value="albania">Albania</option>
+                    <option value="andorra">Andorra</option>
+                    <option value="arabworld">Arab World</option>
+                    <option value="unitedarabemirates">United Arab Emirates</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="armenia">Armenia</option>
+                    <option value="americansamoa">American Samoa</option>
+                    <option value="antiguaandbarbuda">Antigua and Barbuda</option>
+                    <option value="australia">Australia</option>
+                    <option value="austria">Austria</option>
+                    <option value="azerbaijan">Azerbaijan</option>
+                    <option value="burundi">Burundi</option>
+                    <option value="belgium">Belgium</option>
+                    <option value="benin">Benin</option>
+                    <option value="burkinafaso">Burkina Faso</option>
+                    <option value="bangladesh">Bangladesh</option>
+                    <option value="bulgaria">Bulgaria</option>
+                    <option value="bahrain">Bahrain</option>
+                    <option value="bahamas">Bahamas, The</option>
+                    <option value="bosniaandherzegovina">Bosnia and Herzegovina</option>
+                    <option value="belarus">Belarus</option>
+                    <option value="belize">Belize</option>
+                    <option value="bermuda">Bermuda</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="brazil">Brazil</option>
+                    <option value="barbados">Barbados</option>
+                    <option value="bruneidarussalam">Brunei Darussalam</option>
+                    <option value="bhutan">Bhutan</option>
+                    <option value="botswana">Botswana</option>
+                    <option value="centralafricanrepublic">Central African Republic</option>
+                    <option value="canada">Canada</option>
+                    <option value="centralEuropeBaltics">Central Europe and the Baltics</option>
+                    <option value="switzerland">Switzerland</option>
+                    <option value="chile">Chile</option>
+                    <option value="china">China</option>
+                    <option value="cotedivoire">Cote d'Ivoire</option>
+                    <option value="cameroon">Cameroon</option>
+                    <option value="congodemrep">Congo, Dem. Rep.</option>
+                    <option value="congorep">Congo, Rep.</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="comoros">Comoros</option>
+                    <option value="caboverde">Cabo Verde</option>
+                    <option value="costarica">Costa Rica</option>
+                    <option value="cuba">Cuba</option>
+                    <option value="curacao">Curacao</option>
+                    <option value="cyprus">Cyprus</option>
+                    <option value="czechia">Czechia</option>
+                    <option value="germany">Germany</option>
+                    <option value="djibouti">Djibouti</option>
+                    <option value="dominica">Dominica</option>
+                    <option value="denmark">Denmark</option>
+                    <option value="dominicanrepublic">Dominican Republic</option>
+                    <option value="ecuador">Ecuador</option>
+                    <option value="egyptarabrep">Egypt, Arab Rep.</option>
+                    <option value="eritrea">Eritrea</option>
+                    <option value="spain">Spain</option>
+                    <option value="estonia">Estonia</option>
+                    <option value="ethiopia">Ethiopia</option>
+                    <option value="europeanunion">European Union</option>
+                    <option value="finland">Finland</option>
+                    <option value="fiji">Fiji</option>
+                    <option value="france">France</option>
+                    <option value="micronesia">Micronesia, Fed. Sts.</option>
+                    <option value="gabon">Gabon</option>
+                    <option value="unitedkingdom">United Kingdom</option>
+                    <option value="georgia">Georgia</option>
+                    <option value="ghana">Ghana</option>
+                    <option value="gibraltar">Gibraltar</option>
+                    <option value="guinea">Guinea</option>
+                    <option value="gambia">Gambia, The</option>
+                    <option value="guineabissau">Guinea-Bissau</option>
+                    <option value="equatorialguinea">Equatorial Guinea</option>
+                    <option value="greece">Greece</option>
+                    <option value="grenada">Grenada</option>
+                    <option value="greenland">Greenland</option>
+                    <option value="guatemala">Guatemala</option>
+                    <option value="guam">Guam</option>
+                    <option value="guyana">Guyana</option>
+                    <option value="haiti">Haiti</option>
+                    <option value="honduras">Honduras</option>
+                    <option value="croatia">Croatia</option>
+                    <option value="hungary">Hungary</option>
+                    <option value="indonesia">Indonesia</option>
+                    <option value="india">India</option>
+                    <option value="ireland">Ireland</option>
+                    <option value="iran">Iran</option>
+                    <option value="iraq">Iraq</option>
+                    <option value="iceland">Iceland</option>
+                    <option value="israel">Israel</option>
+                    <option value="italy">Italy</option>
+                    <option value="jamaica">Jamaica</option>
+                    <option value="japan">Japan</option>
+                    <option value="kazakhstan">Kazakhstan</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="kyrgyzrepublic">Kyrgyz Republic</option>
+                    <option value="cambodia">Cambodia</option>
+                    <option value="kiribati">Kiribati</option>
+                    <option value="stlucia">St. Lucia</option>
+                    <option value="laopdr">Lao PDR</option>
+                    <option value="lebanon">Lebanon</option>
+                    <option value="liberia">Liberia</option>
+                    <option value="libya">Libya</option>
+                    <option value="lesotho">Lesotho</option>
+                    <option value="lithuania">Lithuania</option>
+                    <option value="luxembourg">Luxembourg</option>
+                    <option value="latvia">Latvia</option>
+                    <option value="macau">Macao SAR, China</option>
+                    <option value="morocco">Morocco</option>
+                    <option value="monaco">Monaco</option>
+                    <option value="moldova">Moldova</option>
+                    <option value="madagascar">Madagascar</option>
+                    <option value="maldives">Maldives</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="marshallislands">Marshall Islands</option>
+                    <option value="malaysia">Malaysia</option>
+                    <option value="malawi">Malawi</option>
+                    <option value="namibia">Namibia</option>
+                    <option value="netherlands">Netherlands</option>
+                    <option value="norway">Norway</option>
+                    <option value="nepal">Nepal</option>
+                    <option value="newzealand">New Zealand</option>
+                    <option value="oman">Oman</option>
+                    <option value="pakistan">Pakistan</option>
+                    <option value="panama">Panama</option>
+                    <option value="peru">Peru</option>
+                    <option value="philippines">Philippines</option>
+                    <option value="palau">Palau</option>
+                    <option value="papuanewguinea">Papua New Guinea</option>
+                    <option value="poland">Poland</option>
+                    <option value="puertorico">Puerto Rico</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="paraguay">Paraguay</option>
+                    <option value="qatar">Qatar</option>
+                    <option value="romania">Romania</option>
+                    <option value="russianfederation">Russian Federation</option>
+                    <option value="rwanda">Rwanda</option>
+                    <option value="saudiarabia">Saudi Arabia</option>
+                    <option value="sudan">Sudan</option>
+                    <option value="senegal">Senegal</option>
+                    <option value="singapore">Singapore</option>
+                    <option value="slovakrepublic">Slovak Republic</option>
+                    <option value="slovenia">Slovenia</option>
+                    <option value="sweden">Sweden</option>
+                    <option value="eswatini">Eswatini</option>
+                    <option value="seychelles">Seychelles</option>
+                    <option value="syrianarabrepublic">Syrian Arab Republic</option>
+                    <option value="chad">Chad</option>
+                    <option value="thailand">Thailand</option>
+                    <option value="tajikistan">Tajikistan</option>
+                    <option value="turkmenistan">Turkmenistan</option>
+                    <option value="tonga">Tonga</option>
+                    <option value="trinidadandtobago">Trinidad and Tobago</option>
+                    <option value="tunisia">Tunisia</option>
+                    <option value="turkiye">Turkiye</option>
+                    <option value="tanzania">Tanzania</option>
+                    <option value="uganda">Uganda</option>
+                    <option value="ukraine">Ukraine</option>
+                    <option value="uruguay">Uruguay</option>
+                    <option value="uzbekistan">Uzbekistan</option>
+                    <option value="venezuela">Venezuela, RB</option>
+                    <option value="vietnam">Viet Nam</option>
+                    <option value="zambia">Zambia</option>
+                    <option value="zimbabwe">Zimbabwe</option>
+            </select>
+        </div>
+    </div>
+    <br>
+
+
+    <!-- Question 12 -->
+    <div>
+        <label for="accommodation"><strong>12. Where did you stay during your visit?</strong></label>
+        <div>
+            <input type="radio" id="accommodation_hotel" name="accommodation" value="Hotel" required>
+            <label for="accommodation_hotel">&emsp;Hotel</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_paradores" name="accommodation" value="Paradores">
+            <label for="accommodation_paradores">&emsp;Paradores</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_airbnb" name="accommodation" value="Airbnb">
+            <label for="accommodation_airbnb">&emsp;Airbnb</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_friends_family" name="accommodation" value="Friends/Family's house">
+            <label for="accommodation_friends_family">&emsp;Friends/Family's house</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_own_home" name="accommodation" value="Own house">
+            <label for="accommodation_own_home">&emsp;Own house</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_other" name="accommodation" value="Other">
+            <label for="accommodation_other">&emsp;Other</label>
+        </div>
+    </div>
+    <br>
+
+    <!-- Question 13 -->
+    <div>
+        <label for="visitPurpose"><strong>13. What were the main purposes of your visit? Select all that apply</strong></label>
+        <div>
+            <input type="checkbox" id="visit_purpose_vacation" name="visit_purpose" value="Vacation">
+            <label for="visit_purpose_vacation">&emsp;Vacation</label>
+        </div>
+        <div>
+            <input type="checkbox" id="visit_purpose_business" name="visit_purpose" value="Business">
+            <label for="visit_purpose_business">&emsp;Business</label>
+        </div>
+        <div>
+            <input type="checkbox" id="visit_purpose_family_friends" name="visit_purpose" value="Visit to family/friends">
+            <label for="visit_purpose_family_friends">&emsp;Visit to family/friends</label>
+        </div>
+        <div>
+            <input type="checkbox" id="visit_purpose_study" name="visit_purpose" value="Study">
+            <label for="visit_purpose_study">&emsp;Study</label>
+        </div>
+        <div>
+            <input type="checkbox" id="visit_purpose_medical" name="visit_purpose" value="Medical tourism">
+            <label for="visit_purpose_medical">&emsp;Medical tourism</label>
+        </div>
+        <div>
+            <input type="checkbox" id="visit_purpose_other" name="visit_purpose" value="Other">
+            <label for="visit_purpose_other">&emsp;Other</label>
+        </div>
+    </div>
+    <br>
+
+    <!-- Question 14 -->
+    <div>
+        <label for="activities"><strong> What activities did you do during your visit? Select all that apply.</strong></label>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 5px;">
+            <div>
+                <input type="checkbox" id="activity_nightlife" name="activities" value="Nightlife">
+                <label for="activity_nightlife">&emsp;Nightlife</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_shopping" name="activities" value="Shopping">
+                <label for="activity_shopping">&emsp;Shopping</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_beach" name="activities" value="Beach and water activities">
+                <label for="activity_beach">&emsp;Beach and water activities</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_restaurants" name="activities" value="Restaurants and Gastronomy">
+                <label for="activity_restaurants">&emsp;Restaurants and Gastronomy</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_concerts" name="activities" value="Concerts">
+                <label for="activity_concerts">&emsp;Concerts</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_ecotourism" name="activities" value="Ecotourism">
+                <label for="activity_ecotourism">&emsp;Ecotourism</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_visiting_friends" name="activities" value="Visiting family/friends">
+                <label for="activity_visiting_friends">&emsp;Visiting family/friends</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_central_municipalities" name="activities" value="Visiting municipalities in the center of the island">
+                <label for="activity_central_municipalities">&emsp;Visiting municipalities in the center of the island</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_north_municipalities" name="activities" value="Visiting municipalities in the north of the island">
+                <label for="activity_north_municipalities">&emsp;Visiting municipalities in the north of the island</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_northwest_municipalities" name="activities" value="Visiting municipalities in the northwest of the island">
+                <label for="activity_northwest_municipalities">&emsp;Visiting municipalities in the northwest of the island</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_southwest_municipalities" name="activities" value="Visiting municipalities in the southwest of the island">
+                <label for="activity_southwest_municipalities">&emsp;Visiting municipalities in the southwest of the island</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_south_municipalities" name="activities" value="Visiting municipalities in the south of the island">
+                <label for="activity_south_municipalities">&emsp;Visiting municipalities in the south of the island</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_northeast_municipalities" name="activities" value="Visiting municipalities in the northeast of the island">
+                <label for="activity_northeast_municipalities">&emsp;Visiting municipalities in the northeast of the island</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_southeast_municipalities" name="activities" value="Visiting municipalities in the southeast of the island">
+                <label for="activity_southeast_municipalities">&emsp;Visiting municipalities in the southeast of the island</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_vieques_culebra" name="activities" value="Visiting Vieques and/or Culebra">
+                <label for="activity_vieques_culebra">&emsp;Visiting Vieques and/or Culebra</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_other" name="activities" value="Other">
+                <label for="activity_other">&emsp;Other</label>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Question 15 -->
+    <div>
+        <label for="discoveryMethod"><strong>15. How did you learn about Puerto Rico as a travel destination? Select all that apply.</strong></label>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; margin-top: 5px;">
+            <div>
+                <input type="checkbox" id="discovery_heritage" name="discovery_method" value="I am of Puerto Rican descent">
+                <label for="discovery_heritage">&emsp;I am of Puerto Rican descent</label>
+            </div>
+            <div>
+                <input type="checkbox" id="discovery_recommendations" name="discovery_method" value="Recommendations from friends/family">
+                <label for="discovery_recommendations">&emsp;Recommendations from friends/family</label>
+            </div>
+            <div>
+                <input type="checkbox" id="discovery_social_media" name="discovery_method" value="Social media">
+                <label for="discovery_social_media">&emsp;Social media</label>
+            </div>
+            <div>
+                <input type="checkbox" id="discovery_travel_agencies" name="discovery_method" value="Travel agencies">
+                <label for="discovery_travel_agencies">&emsp;Travel agencies</label>
+            </div>
+            <div>
+                <input type="checkbox" id="discovery_advertising" name="discovery_method" value="Advertising">
+                <label for="discovery_advertising">&emsp;Advertising</label>
+            </div>
+            <div>
+                <input type="checkbox" id="discovery_other" name="discovery_method" value="Other">
+                <label for="discovery_other">&emsp;Other</label>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Question 16 -->
+    <div>
+        <label for="stayDuration"><strong>16. How many days was your stay?</strong></label>
+        <input type="number" id="stay_duration" name="stay_duration" min="0" required placeholder="Enter the number of days">
+    </div>
+    <br>
+
+    <!-- Question 17 -->
+    <div id="question17">
+        <label for="mainMunicipality"><strong>17. In which municipality did you spend most of your stay?</strong></label>
+        <select id="main_municipality" name="main_municipality" required>
+            <option value="">Select...</option>
+            <option value="Adjuntas">Adjuntas</option>
+                    <option value="Aguada">Aguada</option>
+                    <option value="Aguadilla">Aguadilla</option>
+                    <option value="Aguas Buenas">Aguas Buenas</option>
+                    <option value="Aibonito">Aibonito</option>
+                    <option value="Anasco">Anasco</option>
+                    <option value="Arecibo">Arecibo</option>
+                    <option value="Arroyo">Arroyo</option>
+                    <option value="Barceloneta">Barceloneta</option>
+                    <option value="Barranquitas">Barranquitas</option>
+                    <option value="Bayamon">Bayamon</option>
+                    <option value="Cabo Rojo">Cabo Rojo</option>
+                    <option value="Caguas">Caguas</option>
+                    <option value="Camuy">Camuy</option>
+                    <option value="Canovanas">Canovanas</option>
+                    <option value="Carolina">Carolina</option>
+                    <option value="Catano">Catano</option>
+                    <option value="Cayey">Cayey</option>
+                    <option value="Ceiba">Ceiba</option>
+                    <option value="Ciales">Ciales</option>
+                    <option value="Cidra">Cidra</option>
+                    <option value="Coamo">Coamo</option>
+                    <option value="Comerio">Comerio</option>
+                    <option value="Corozal">Corozal</option>
+                    <option value="Culebra">Culebra</option>
+                    <option value="Dorado">Dorado</option>
+                    <option value="Fajardo">Fajardo</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Guanica">Guanica</option>
+                    <option value="Guayama">Guayama</option>
+                    <option value="Guayanilla">Guayanilla</option>
+                    <option value="Guaynabo">Guaynabo</option>
+                    <option value="Gurabo">Gurabo</option>
+                    <option value="Hatillo">Hatillo</option>
+                    <option value="Hormigueros">Hormigueros</option>
+                    <option value="Humacao">Humacao</option>
+                    <option value="Isabela">Isabela</option>
+                    <option value="Jayuya">Jayuya</option>
+                    <option value="Juana Diaz">Juana Diaz</option>
+                    <option value="Juncos">Juncos</option>
+                    <option value="Lajas">Lajas</option>
+                    <option value="Lares">Lares</option>
+                    <option value="Las Marias">Las Marias</option>
+                    <option value="Las Piedras">Las Piedras</option>
+                    <option value="Loiza">Loiza</option>
+                    <option value="Luquillo">Luquillo</option>
+                    <option value="Manati">Manati</option>
+                    <option value="Maricao">Maricao</option>
+                    <option value="Maunabo">Maunabo</option>
+                    <option value="Mayaguez">Mayaguez</option>
+                    <option value="Moca">Moca</option>
+                    <option value="Morovis">Morovis</option>
+                    <option value="Naguabo">Naguabo</option>
+                    <option value="Naranjito">Naranjito</option>
+                    <option value="Orocovis">Orocovis</option>
+                    <option value="Patillas">Patillas</option>
+                    <option value="Penuelas">Penuelas</option>
+                    <option value="Ponce">Ponce</option>
+                    <option value="Quebradillas">Quebradillas</option>
+                    <option value="Rincon">Rincon</option>
+                    <option value="Rio Grande">Rio Grande</option>
+                    <option value="Sabana Grande">Sabana Grande</option>
+                    <option value="Salinas">Salinas</option>
+                    <option value="San German">San German</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="San Lorenzo">San Lorenzo</option>
+                    <option value="San Sebastian">San Sebastian</option>
+                    <option value="Santa Isabel">Santa Isabel</option>
+                    <option value="Toa Alta">Toa Alta</option>
+                    <option value="Toa Baja">Toa Baja</option>
+                    <option value="Trujillo Alto">Trujillo Alto</option>
+                    <option value="Utuado">Utuado</option>
+                    <option value="Vega Alta">Vega Alta</option>
+                    <option value="Vega Baja">Vega Baja</option>
+                    <option value="Vieques">Vieques</option>
+                    <option value="Villalba">Villalba</option>
+                    <option value="Yabucoa">Yabucoa</option>
+                    <option value="Yauco">Yauco</option>
         </select>
     </div>
-</div>
+    <br>
 
-
-<!-- Question 12 -->
-<div>
-    <label for="accommodation">12. Where did you stay during your visit?</label>
-    <div>
-        <input type="radio" id="accommodation_hotel" name="accommodation" value="Hotel" required>
-        <label for="accommodation_hotel">Hotel</label>
-    </div>
-    <div>
-        <input type="radio" id="accommodation_paradores" name="accommodation" value="Paradores">
-        <label for="accommodation_paradores">Paradores</label>
-    </div>
-    <div>
-        <input type="radio" id="accommodation_airbnb" name="accommodation" value="Airbnb">
-        <label for="accommodation_airbnb">Airbnb</label>
-    </div>
-    <div>
-        <input type="radio" id="accommodation_friends_family" name="accommodation" value="Friends/Family's house">
-        <label for="accommodation_friends_family">Friends/Family's house</label>
-    </div>
-    <div>
-        <input type="radio" id="accommodation_own_home" name="accommodation" value="Own house">
-        <label for="accommodation_own_home">Own house</label>
-    </div>
-    <div>
-        <input type="radio" id="accommodation_other" name="accommodation" value="Other">
-        <label for="accommodation_other">Other</label>
-    </div>
-</div>
-
-<!-- Question 13 -->
-<div>
-    <label for="visitPurpose">13. What were the main purposes of your visit? Select all that apply</label>
-    <div>
-        <input type="checkbox" id="visit_purpose_vacation" name="visit_purpose" value="Vacation">
-        <label for="visit_purpose_vacation">Vacation</label>
-    </div>
-    <div>
-        <input type="checkbox" id="visit_purpose_business" name="visit_purpose" value="Business">
-        <label for="visit_purpose_business">Business</label>
-    </div>
-    <div>
-        <input type="checkbox" id="visit_purpose_family_friends" name="visit_purpose" value="Visit to family/friends">
-        <label for="visit_purpose_family_friends">Visit to family/friends</label>
-    </div>
-    <div>
-        <input type="checkbox" id="visit_purpose_study" name="visit_purpose" value="Study">
-        <label for="visit_purpose_study">Study</label>
-    </div>
-    <div>
-        <input type="checkbox" id="visit_purpose_medical" name="visit_purpose" value="Medical tourism">
-        <label for="visit_purpose_medical">Medical tourism</label>
-    </div>
-    <div>
-        <input type="checkbox" id="visit_purpose_other" name="visit_purpose" value="Other">
-        <label for="visit_purpose_other">Other</label>
-    </div>
-</div>
-
-<!-- Question 14 -->
-<div>
-    <label for="activities">14. What activities did you do during your visit? Select all that apply.</label>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 5px;">
+    <!-- Question 18 -->
+    <div id="question18">
+        <label for="travelDestination"><strong>18. Where are you traveling to?</strong></label>
         <div>
-            <input type="checkbox" id="activity_nightlife" name="activities" value="Nightlife">
-            <label for="activity_nightlife">Nightlife</label>
+            <input type="radio" id="destination_usa" name="travel_destination" value="USA" required>
+            <label for="destination_usa">&emsp;USA</label>
         </div>
         <div>
-            <input type="checkbox" id="activity_shopping" name="activities" value="Shopping">
-            <label for="activity_shopping">Shopping</label>
+            <input type="radio" id="destination_other" name="travel_destination" value="Other Country">
+            <label for="destination_other">&emsp;Other Country</label>
         </div>
-        <div>
-            <input type="checkbox" id="activity_beach" name="activities" value="Beach and water activities">
-            <label for="activity_beach">Beach and water activities</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_restaurants" name="activities" value="Restaurants and Gastronomy">
-            <label for="activity_restaurants">Restaurants and Gastronomy</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_concerts" name="activities" value="Concerts">
-            <label for="activity_concerts">Concerts</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_ecotourism" name="activities" value="Ecotourism">
-            <label for="activity_ecotourism">Ecotourism</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_visiting_friends" name="activities" value="Visiting family/friends">
-            <label for="activity_visiting_friends">Visiting family/friends</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_central_municipalities" name="activities" value="Visiting municipalities in the center of the island">
-            <label for="activity_central_municipalities">Visiting municipalities in the center of the island</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_north_municipalities" name="activities" value="Visiting municipalities in the north of the island">
-            <label for="activity_north_municipalities">Visiting municipalities in the north of the island</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_northwest_municipalities" name="activities" value="Visiting municipalities in the northwest of the island">
-            <label for="activity_northwest_municipalities">Visiting municipalities in the northwest of the island</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_southwest_municipalities" name="activities" value="Visiting municipalities in the southwest of the island">
-            <label for="activity_southwest_municipalities">Visiting municipalities in the southwest of the island</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_south_municipalities" name="activities" value="Visiting municipalities in the south of the island">
-            <label for="activity_south_municipalities">Visiting municipalities in the south of the island</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_northeast_municipalities" name="activities" value="Visiting municipalities in the northeast of the island">
-            <label for="activity_northeast_municipalities">Visiting municipalities in the northeast of the island</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_southeast_municipalities" name="activities" value="Visiting municipalities in the southeast of the island">
-            <label for="activity_southeast_municipalities">Visiting municipalities in the southeast of the island</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_vieques_culebra" name="activities" value="Visiting Vieques and/or Culebra">
-            <label for="activity_vieques_culebra">Visiting Vieques and/or Culebra</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_other" name="activities" value="Other">
-            <label for="activity_other">Other</label>
-        </div>
-    </div>
-</div>
-
-<!-- Question 15 -->
-<div>
-    <label for="discoveryMethod">15. How did you learn about Puerto Rico as a travel destination? Select all that apply.</label>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; margin-top: 5px;">
-        <div>
-            <input type="checkbox" id="discovery_heritage" name="discovery_method" value="I am of Puerto Rican descent">
-            <label for="discovery_heritage">I am of Puerto Rican descent</label>
-        </div>
-        <div>
-            <input type="checkbox" id="discovery_recommendations" name="discovery_method" value="Recommendations from friends/family">
-            <label for="discovery_recommendations">Recommendations from friends/family</label>
-        </div>
-        <div>
-            <input type="checkbox" id="discovery_social_media" name="discovery_method" value="Social media">
-            <label for="discovery_social_media">Social media</label>
-        </div>
-        <div>
-            <input type="checkbox" id="discovery_travel_agencies" name="discovery_method" value="Travel agencies">
-            <label for="discovery_travel_agencies">Travel agencies</label>
-        </div>
-        <div>
-            <input type="checkbox" id="discovery_advertising" name="discovery_method" value="Advertising">
-            <label for="discovery_advertising">Advertising</label>
-        </div>
-        <div>
-            <input type="checkbox" id="discovery_other" name="discovery_method" value="Other">
-            <label for="discovery_other">Other</label>
-        </div>
-    </div>
-</div>
-<!-- Question 16 -->
-<div>
-    <label for="stayDuration">16. How many days was your stay?</label>
-    <input type="number" id="stay_duration" name="stay_duration" min="0" required placeholder="Enter the number of days">
-</div>
-
-<!-- Question 17 -->
-<div>
-    <label for="mainMunicipality">17. In which municipality did you spend most of your stay?</label>
-    <select id="main_municipality" name="main_municipality" required>
-        <option value="">Select...</option>
-        <option value="Adjuntas">Adjuntas</option>
-                <option value="Aguada">Aguada</option>
-                <option value="Aguadilla">Aguadilla</option>
-                <option value="Aguas Buenas">Aguas Buenas</option>
-                <option value="Aibonito">Aibonito</option>
-                <option value="Anasco">Anasco</option>
-                <option value="Arecibo">Arecibo</option>
-                <option value="Arroyo">Arroyo</option>
-                <option value="Barceloneta">Barceloneta</option>
-                <option value="Barranquitas">Barranquitas</option>
-                <option value="Bayamon">Bayamon</option>
-                <option value="Cabo Rojo">Cabo Rojo</option>
-                <option value="Caguas">Caguas</option>
-                <option value="Camuy">Camuy</option>
-                <option value="Canovanas">Canovanas</option>
-                <option value="Carolina">Carolina</option>
-                <option value="Catano">Catano</option>
-                <option value="Cayey">Cayey</option>
-                <option value="Ceiba">Ceiba</option>
-                <option value="Ciales">Ciales</option>
-                <option value="Cidra">Cidra</option>
-                <option value="Coamo">Coamo</option>
-                <option value="Comerio">Comerio</option>
-                <option value="Corozal">Corozal</option>
-                <option value="Culebra">Culebra</option>
-                <option value="Dorado">Dorado</option>
-                <option value="Fajardo">Fajardo</option>
+        <!-- Dropdown for states (initially hidden) -->
+        <div id="usaStatesContainer" style="display: none; margin-top: 10px;">
+            <label for="usaStates">Select a state:</label>
+            <select id="usaStates" name="usa_states">
+                <option value="">Select...</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
                 <option value="Florida">Florida</option>
-                <option value="Guanica">Guanica</option>
-                <option value="Guayama">Guayama</option>
-                <option value="Guayanilla">Guayanilla</option>
-                <option value="Guaynabo">Guaynabo</option>
-                <option value="Gurabo">Gurabo</option>
-                <option value="Hatillo">Hatillo</option>
-                <option value="Hormigueros">Hormigueros</option>
-                <option value="Humacao">Humacao</option>
-                <option value="Isabela">Isabela</option>
-                <option value="Jayuya">Jayuya</option>
-                <option value="Juana Diaz">Juana Diaz</option>
-                <option value="Juncos">Juncos</option>
-                <option value="Lajas">Lajas</option>
-                <option value="Lares">Lares</option>
-                <option value="Las Marias">Las Marias</option>
-                <option value="Las Piedras">Las Piedras</option>
-                <option value="Loiza">Loiza</option>
-                <option value="Luquillo">Luquillo</option>
-                <option value="Manati">Manati</option>
-                <option value="Maricao">Maricao</option>
-                <option value="Maunabo">Maunabo</option>
-                <option value="Mayaguez">Mayaguez</option>
-                <option value="Moca">Moca</option>
-                <option value="Morovis">Morovis</option>
-                <option value="Naguabo">Naguabo</option>
-                <option value="Naranjito">Naranjito</option>
-                <option value="Orocovis">Orocovis</option>
-                <option value="Patillas">Patillas</option>
-                <option value="Penuelas">Penuelas</option>
-                <option value="Ponce">Ponce</option>
-                <option value="Quebradillas">Quebradillas</option>
-                <option value="Rincon">Rincon</option>
-                <option value="Rio Grande">Rio Grande</option>
-                <option value="Sabana Grande">Sabana Grande</option>
-                <option value="Salinas">Salinas</option>
-                <option value="San German">San German</option>
-                <option value="San Juan">San Juan</option>
-                <option value="San Lorenzo">San Lorenzo</option>
-                <option value="San Sebastian">San Sebastian</option>
-                <option value="Santa Isabel">Santa Isabel</option>
-                <option value="Toa Alta">Toa Alta</option>
-                <option value="Toa Baja">Toa Baja</option>
-                <option value="Trujillo Alto">Trujillo Alto</option>
-                <option value="Utuado">Utuado</option>
-                <option value="Vega Alta">Vega Alta</option>
-                <option value="Vega Baja">Vega Baja</option>
-                <option value="Vieques">Vieques</option>
-                <option value="Villalba">Villalba</option>
-                <option value="Yabucoa">Yabucoa</option>
-                <option value="Yauco">Yauco</option>
-    </select>
-</div>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option>
+            </select>
+        </div>
+        <!-- Dropdown for countries (initially hidden) -->
+        <div id="countriesContainer" style="display: none; margin-top: 10px;">
+            <label for="countries">Select a country:</label>
+            <select id="countries" name="countries">
+                <option value="">Select...</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Dominican Republic">Dominican Republic</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Italy">Italy</option>
+                <option value="Japan">Japan</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Peru">Peru</option>
+                <option value="Spain">Spain</option>
+                <option value="United Kingdom">United Kingdom</option>
+            </select>
+        </div>
+    </div>
+    <br>
 
-<!-- Question 18 -->
-<div id="question18" class="hidden">
-    <label for="travelDestination">18. Where are you traveling to?</label>
-    <div>
-        <input type="radio" id="destination_usa" name="travel_destination" value="USA" required>
-        <label for="destination_usa">USA</label>
+    <!-- Question 19 -->
+    <div id="question19">
+        <label for="accommodation"><strong>19. Where will you stay during your trip?</strong></label>
+        <div>
+            <input type="radio" id="accommodation_hotel" name="accommodation_1" value="Hotel" required>
+            <label for="accommodation_hotel">&emsp;Hotel</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_airbnb" name="accommodation_1" value="Airbnb">
+            <label for="accommodation_airbnb">&emsp;Airbnb</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_friends_family" name="accommodation_1" value="Friends/Family's house">
+            <label for="accommodation_friends_family">&emsp;Friends/Family's house</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_own_home" name="accommodation_1" value="Own house">
+            <label for="accommodation_own_home">&emsp;Own house</label>
+        </div>
+        <div>
+            <input type="radio" id="accommodation_other" name="accommodation_1" value="Other">
+            <label for="accommodation_other">&emsp;Other</label>
+        </div>
     </div>
-    <div>
-        <input type="radio" id="destination_other" name="travel_destination" value="Other Country">
-        <label for="destination_other">Other Country</label>
-    </div>
-    <!-- Dropdown for states (initially hidden) -->
-    <div id="usaStatesContainer" style="display: none; margin-top: 10px;">
-        <label for="usaStates">Select a state:</label>
-        <select id="usaStates" name="usa_states">
-            <option value="">Select...</option>
-            <option value="Alabama">Alabama</option>
-            <option value="Alaska">Alaska</option>
-            <option value="Arizona">Arizona</option>
-            <option value="Arkansas">Arkansas</option>
-            <option value="California">California</option>
-            <option value="Colorado">Colorado</option>
-            <option value="Connecticut">Connecticut</option>
-            <option value="Delaware">Delaware</option>
-            <option value="Florida">Florida</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Hawaii">Hawaii</option>
-            <option value="Idaho">Idaho</option>
-            <option value="Illinois">Illinois</option>
-            <option value="Indiana">Indiana</option>
-            <option value="Iowa">Iowa</option>
-            <option value="Kansas">Kansas</option>
-            <option value="Kentucky">Kentucky</option>
-            <option value="Louisiana">Louisiana</option>
-            <option value="Maine">Maine</option>
-            <option value="Maryland">Maryland</option>
-            <option value="Massachusetts">Massachusetts</option>
-            <option value="Michigan">Michigan</option>
-            <option value="Minnesota">Minnesota</option>
-            <option value="Mississippi">Mississippi</option>
-            <option value="Missouri">Missouri</option>
-            <option value="Montana">Montana</option>
-            <option value="Nebraska">Nebraska</option>
-            <option value="Nevada">Nevada</option>
-            <option value="New Hampshire">New Hampshire</option>
-            <option value="New Jersey">New Jersey</option>
-            <option value="New Mexico">New Mexico</option>
-            <option value="New York">New York</option>
-            <option value="North Carolina">North Carolina</option>
-            <option value="North Dakota">North Dakota</option>
-            <option value="Ohio">Ohio</option>
-            <option value="Oklahoma">Oklahoma</option>
-            <option value="Oregon">Oregon</option>
-            <option value="Pennsylvania">Pennsylvania</option>
-            <option value="Rhode Island">Rhode Island</option>
-            <option value="South Carolina">South Carolina</option>
-            <option value="South Dakota">South Dakota</option>
-            <option value="Tennessee">Tennessee</option>
-            <option value="Texas">Texas</option>
-            <option value="Utah">Utah</option>
-            <option value="Vermont">Vermont</option>
-            <option value="Virginia">Virginia</option>
-            <option value="Washington">Washington</option>
-            <option value="West Virginia">West Virginia</option>
-            <option value="Wisconsin">Wisconsin</option>
-            <option value="Wyoming">Wyoming</option>
-        </select>
-    </div>
-    <!-- Dropdown for countries (initially hidden) -->
-    <div id="countriesContainer" style="display: none; margin-top: 10px;">
-        <label for="countries">Select a country:</label>
-        <select id="countries" name="countries">
-            <option value="">Select...</option>
-            <option value="Argentina">Argentina</option>
-            <option value="Brazil">Brazil</option>
-            <option value="Canada">Canada</option>
-            <option value="Chile">Chile</option>
-            <option value="Colombia">Colombia</option>
-            <option value="Cuba">Cuba</option>
-            <option value="Dominican Republic">Dominican Republic</option>
-            <option value="Ecuador">Ecuador</option>
-            <option value="France">France</option>
-            <option value="Germany">Germany</option>
-            <option value="Italy">Italy</option>
-            <option value="Japan">Japan</option>
-            <option value="Mexico">Mexico</option>
-            <option value="Peru">Peru</option>
-            <option value="Spain">Spain</option>
-            <option value="United Kingdom">United Kingdom</option>
-        </select>
-    </div>
-</div>
+    <br>
 
-<!-- Question 19 -->
-<div id="question19" class="hidden">
-    <label for="accommodation">19. Where will you stay during your trip?</label>
-    <div>
-        <input type="radio" id="accommodation_hotel" name="accommodation_1" value="Hotel" required>
-        <label for="accommodation_hotel">Hotel</label>
-    </div>
-    <div>
-        <input type="radio" id="accommodation_airbnb" name="accommodation_1" value="Airbnb">
-        <label for="accommodation_airbnb">Airbnb</label>
-    </div>
-    <div>
-        <input type="radio" id="accommodation_friends_family" name="accommodation_1" value="Friends/Family's house">
-        <label for="accommodation_friends_family">Friends/Family's house</label>
-    </div>
-    <div>
-        <input type="radio" id="accommodation_own_home" name="accommodation_1" value="Own house">
-        <label for="accommodation_own_home">Own house</label>
-    </div>
-    <div>
-        <input type="radio" id="accommodation_other" name="accommodation_1" value="Other">
-        <label for="accommodation_other">Other</label>
-        <!-- Additional input field for "Other" option -->
-        <input type="text" id="accommodation_other_specify" name="accommodation_1" placeholder="Specify" style="display: none; margin-left: 10px;">
-    </div>
-</div>
-<!-- Question 20 -->
-<div id="question20" class="hidden">
-    <label for="travelPurposes">20. What are the main purposes of your trip? Select all that apply</label>
-    <div id="travelPurposesContainer">
-        <div>
-            <input type="checkbox" id="purpose_vacation" name="travel_purposes" value="Vacation">
-            <label for="purpose_vacation">Vacation</label>
-        </div>
-        <div>
-            <input type="checkbox" id="purpose_moving" name="travel_purposes" value="Moving out of Puerto Rico">
-            <label for="purpose_moving">Moving out of Puerto Rico</label>
-        </div>
-        <div>
-            <input type="checkbox" id="purpose_business" name="travel_purposes" value="Business">
-            <label for="purpose_business">Business</label>
-        </div>
-        <div>
-            <input type="checkbox" id="purpose_family" name="travel_purposes" value="Visiting family/friends">
-            <label for="purpose_family">Visiting family/friends</label>
-        </div>
-        <div>
-            <input type="checkbox" id="purpose_study" name="travel_purposes" value="Study">
-            <label for="purpose_study">Study</label>
-        </div>
-        <div>
-            <input type="checkbox" id="purpose_medical" name="travel_purposes" value="Medical tourism">
-            <label for="purpose_medical">Medical tourism</label>
-        </div>
-        <div>
-            <input type="checkbox" id="purpose_other" name="travel_purposes" value="Other">
-            <label for="purpose_other">Other</label>
+    <!-- Question 20 -->
+    <div id="question20">
+        <label for="travelPurposes"><strong>20. What are the main purposes of your trip? Select all that apply</strong></label>
+        <div id="travelPurposesContainer">
+            <div>
+                <input type="checkbox" id="purpose_vacation" name="travel_purposes" value="Vacation">
+                <label for="purpose_vacation">&emsp;Vacation</label>
+            </div>
+            <div>
+                <input type="checkbox" id="purpose_moving" name="travel_purposes" value="Moving out of Puerto Rico">
+                <label for="purpose_moving">&emsp;Moving out of Puerto Rico</label>
+            </div>
+            <div>
+                <input type="checkbox" id="purpose_business" name="travel_purposes" value="Business">
+                <label for="purpose_business">&emsp;Business</label>
+            </div>
+            <div>
+                <input type="checkbox" id="purpose_family" name="travel_purposes" value="Visiting family/friends">
+                <label for="purpose_family">&emsp;Visiting family/friends</label>
+            </div>
+            <div>
+                <input type="checkbox" id="purpose_study" name="travel_purposes" value="Study">
+                <label for="purpose_study">&emsp;Study</label>
+            </div>
+            <div>
+                <input type="checkbox" id="purpose_medical" name="travel_purposes" value="Medical tourism">
+                <label for="purpose_medical">&emsp;Medical tourism</label>
+            </div>
+            <div>
+                <input type="checkbox" id="purpose_other" name="travel_purposes" value="Other">
+                <label for="purpose_other">&emsp;Other</label>
+            </div>
         </div>
     </div>
-</div>
+    <br>
 
-<!-- Question 21 -->
-<div id="question21" class="hidden">
-    <label for="plannedActivities">21. What activities will you participate in during your visit? Select all that apply.</label>
-    <div id="plannedActivitiesContainer">
-        <div>
-            <input type="checkbox" id="activity_nightlife" name="planned_activities" value="Nightlife">
-            <label for="activity_nightlife">Nightlife</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_shopping" name="planned_activities" value="Shopping">
-            <label for="activity_shopping">Shopping</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_restaurants" name="planned_activities" value="Restaurants and Gastronomy">
-            <label for="activity_restaurants">Restaurants and Gastronomy</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_concerts" name="planned_activities" value="Concerts">
-            <label for="activity_concerts">Concerts</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_ecotourism" name="planned_activities" value="Ecotourism">
-            <label for="activity_ecotourism">Ecotourism</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_jobSearch" name="planned_activities" value="Job search">
-            <label for="activity_jobSearch">Job search</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_movePreparations" name="planned_activities" value="Moving preparations">
-            <label for="activity_movePreparations">Moving preparations</label>
-        </div>
-        <div>
-            <input type="checkbox" id="activity_other" name="planned_activities" value="Other">
-            <label for="activity_other">Other</label>
+    <!-- Question 21 -->
+    <div id="question21" class="hidden">
+        <label for="plannedActivities"><strong>21. What activities will you participate in during your visit? Select all that apply.</strong></label>
+        <div id="plannedActivitiesContainer">
+            <div>
+                <input type="checkbox" id="activity_nightlife" name="planned_activities" value="Nightlife">
+                <label for="activity_nightlife">&emsp;Nightlife</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_shopping" name="planned_activities" value="Shopping">
+                <label for="activity_shopping">&emsp;Shopping</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_restaurants" name="planned_activities" value="Restaurants and Gastronomy">
+                <label for="activity_restaurants">&emsp;Restaurants and Gastronomy</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_concerts" name="planned_activities" value="Concerts">
+                <label for="activity_concerts">&emsp;Concerts</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_ecotourism" name="planned_activities" value="Ecotourism">
+                <label for="activity_ecotourism">&emsp;Ecotourism</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_jobSearch" name="planned_activities" value="Job search">
+                <label for="activity_jobSearch">&emsp;Job search</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_movePreparations" name="planned_activities" value="Moving preparations">
+                <label for="activity_movePreparations">&emsp;Moving preparations</label>
+            </div>
+            <div>
+                <input type="checkbox" id="activity_other" name="planned_activities" value="Other">
+                <label for="activity_other">&emsp;Other</label>
+            </div>
         </div>
     </div>
-</div>
+    <br>
 
-<!-- Question 22 -->
-<div>
-    <label for="tripDuration">22. How many days will your trip last?</label>
-    <input type="number" id="tripDuration" name="trip_duration" min="1" placeholder="Specify number of days" required> <br>
-    * If you are moving, please enter 999.
-</div>
+    <!-- Question 22 -->
+    <div id="question22">
+        <label for="tripDuration"><strong>22. How many days will your trip last?</strong></label>
+        <input type="number" id="tripDuration" name="trip_duration" min="1" placeholder="Specify number of days" required> <br>
+        * If you are moving, please enter 999.
+    </div>
+    <br>
 
-<!-- Question 23 -->
-<div id="question23" class="hidden">
-    <label for="estimatedExpenses">23. How much will you spend on your trip (approximately)?</label>
-    <input type="number" id="estimatedExpenses" name="estimated_expenses" min="0" step="0.01" placeholder="Enter the amount in dollars" required>
-</div>
+    <!-- Question 23 -->
+    <div id="question23">
+        <label for="estimatedExpenses"><strong>23. How much will you spend on your trip (approximately)?</strong></label>
+        <input type="number" id="estimatedExpenses" name="estimated_expenses" min="0" step="0.01" placeholder="Enter the amount in dollars" required>
+    </div>
+    <br>
 
-<!-- Question 24 -->
-<div>
-    <label for="spendingCategories">24. In which categories do you estimate you will spend the most during your trip? (Select in order of highest to lowest spending)</label>
-    <div>
-        <label for="priority_accommodation">Accommodation:</label>
-        <select id="priority_accommodation" name="priority_accommodation_2" class="prioritySelect" required>
-            <option value="">Select Priority</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
+    <!-- Question 24 -->
+    <div id="question24">
+        <label for="spendingCategories"><strong>24. In which categories do you estimate you will spend the most during your trip? (Select in order of highest to lowest spending)</strong></label>
+        <div>
+            <label for="priority_accommodation">&emsp;Accommodation:</label>
+            <select id="priority_accommodation" name="priority_accommodation_2" class="prioritySelect" required>
+                <option value="">Select Priority</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
+        <div>
+            <label for="priority_food">&emsp;Food:</label>
+            <select id="priority_food" name="priority_food" class="priority_select_2" required>
+                <option value="">Select Priority</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
+        <div>
+            <label for="priority_transportation">&emsp;Transportation:</label>
+            <select id="priority_transportation" name="priority_transportation_2" class="prioritySelect" required>
+                <option value="">Select Priority</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
+        <div>
+            <label for="priority_activities">&emsp;Activities and Entertainment:</label>
+            <select id="priority_activities" name="priority_activities_2" class="prioritySelect" required>
+                <option value="">Select Priority</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
+        <div>
+            <label for="priority_shopping">&emsp;Shopping:</label>
+            <select id="priority_shopping" name="priority_shopping_2" class="prioritySelect" required>
+                <option value="">Select Priority</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
+        <div>
+            <label for="priority_other">&emsp;Other:</label>
+            <select id="priority_other" name="priority_other_2" class="prioritySelect" required>
+                <option value="">Select Priority</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
     </div>
-    <div>
-        <label for="priority_food">Food:</label>
-        <select id="priority_food" name="priority_food" class="priority_select_2" required>
-            <option value="">Select Priority</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-    </div>
-    <div>
-        <label for="priority_transportation">Transportation:</label>
-        <select id="priority_transportation" name="priority_transportation_2" class="prioritySelect" required>
-            <option value="">Select Priority</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-    </div>
-    <div>
-        <label for="priority_activities">Activities and Entertainment:</label>
-        <select id="priority_activities" name="priority_activities_2" class="prioritySelect" required>
-            <option value="">Select Priority</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-    </div>
-    <div>
-        <label for="priority_shopping">Shopping:</label>
-        <select id="priority_shopping" name="priority_shopping_2" class="prioritySelect" required>
-            <option value="">Select Priority</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-    </div>
-    <div>
-        <label for="priority_other">Other:</label>
-        <select id="priority_other" name="priority_other_2" class="prioritySelect" required>
-            <option value="">Select Priority</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-    </div>
-</div>
+    <br>
 
     <!-- Submit Button -->
     <button type="submit" id="submitButton">Submit</button>
 </form>
+
+</main>
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {

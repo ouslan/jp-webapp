@@ -19,7 +19,7 @@
             </td>
             <td id="header_center">
                 <img src="{% static 'images/JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
-                Titulo Middle
+                <h1>Encuesta de Gastos del Visitante</h1>
             </td>
             <td id="header_right">
                 Titulo Right
@@ -31,6 +31,8 @@
 
 <main>
     <form id="questionnaireForm" class="question-box">
+        <a href="/cuestionario-del-viajero-english/" class="red-box-link">Change to English</a>
+        <br><br>
         <!-- Question 1 -->
         <div id="question1" >
             <label for="caseSelection"><strong>1. ¿Cuál de los siguientes mejor describe su caso?</strong></label>
@@ -997,7 +999,7 @@
     <div id="question24">
         <label for="spendingCategories"><strong>24. ¿En qué categorías estima gastará más durante su viaje? (Seleccione orden de mayor a menor gasto)</strong></label>
         <div>
-            <label for="priority_accommodation">Alojamiento:</label>
+            <label for="priority_accommodation">&emsp;Alojamiento:</label>
             <select id="priority_accommodation" name="priority_accommodation_2" class="prioritySelect" required>
                 <option value="">Seleccione prioridad</option>
                 <option value="1">1</option>
@@ -1009,7 +1011,7 @@
             </select>
         </div>
         <div>
-            <label for="priority_food">Comida:</label>
+            <label for="priority_food">&emsp;Comida:</label>
             <select id="priority_food" name="priority_food_2" class="prioritySelect" required>
                 <option value="">Seleccione prioridad</option>
                 <option value="1">1</option>
@@ -1021,7 +1023,7 @@
             </select>
         </div>
         <div>
-            <label for="priority_transportation">Transporte:</label>
+            <label for="priority_transportation">&emsp;Transporte:</label>
             <select id="priority_transportation" name="priority_transportation_2" class="prioritySelect" required>
                 <option value="">Seleccione prioridad</option>
                 <option value="1">1</option>
@@ -1033,7 +1035,7 @@
             </select>
         </div>
         <div>
-            <label for="priority_activities">Actividades y entretenimiento:</label>
+            <label for="priority_activities">&emsp;Actividades y entretenimiento:</label>
             <select id="priority_activities" name="priority_activities_2" class="prioritySelect" required>
                 <option value="">Seleccione prioridad</option>
                 <option value="1">1</option>
@@ -1045,7 +1047,7 @@
             </select>
         </div>
         <div>
-            <label for="priority_shopping">Compras:</label>
+            <label for="priority_shopping">&emsp;Compras:</label>
             <select id="priority_shopping" name="priority_shopping_2" class="prioritySelect" required>
                 <option value="">Seleccione prioridad</option>
                 <option value="1">1</option>
@@ -1057,7 +1059,7 @@
             </select>
         </div>
         <div>
-            <label for="priority_other">Otros:</label>
+            <label for="priority_other">&emsp;Otros:</label>
             <select id="priority_other" name="priority_other_2" class="prioritySelect" required>
                 <option value="">Seleccione prioridad</option>
                 <option value="1">1</option>
