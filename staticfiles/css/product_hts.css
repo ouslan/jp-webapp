@@ -35,3 +35,21 @@
 #submit:hover {
   background-color: #0071cd;
 }
+
+.download_container {
+  display: flex;
+  justify-content: center;
+}
+
+#link {
+  padding: 20px;
+}
+
+#download_yearly, #download_monthly, #download_quarterly {
+  font-size: 1em;
+  border-radius: 8px;
+  padding: 6px;
+  background-color: #008cff;
+  border: none;
+  margin-top: -1px;
+}

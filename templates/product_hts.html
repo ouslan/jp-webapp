@@ -89,10 +89,6 @@
                         </section>
                     
                         <button id="submit" type="submit">Submit</button>
-
-                        <div class="download_container">
-                            <a id="download_button" href="https://api.econlabs.net/files/trade/jp/?types=hts&agg=yearly&agr=false&group=false" class="button">Descargar Datos</a>
-                        </div>
                     </section>                                
             
                     <div id="graph">
@@ -100,21 +96,17 @@
                     </div>
                 </div>
 
-                <script>
-                    function updateDownloadLink() {
-                        const frequency = document.getElementById('frequency').value;
-                        const downloadButton = document.getElementById('download_button');
-                        let timeParam = 'yearly';
-                    
-                        if (frequency === 'Monthly') {
-                            timeParam = 'monthly';
-                        } else if (frequency === 'Quarterly') {
-                            timeParam = 'qrt';
-                        }
-                    
-                        downloadButton.href = `https://api.econlabs.net/files/trade/jp/?types=hts&agg=${timeParam}&agr=false&group=false`;
-                    }   
-                </script>
+                <div class="download_container">
+                    <div id="link">
+                        <a id="download_yearly" href="https://api.econlabs.net/files/trade/jp/?types=hts&agg=yearly&agr=false&group=false" class="button">Descargar Datos Anuales</a>
+                    </div>
+                    <div id="link">
+                        <a id="download_quarterly" href="https://api.econlabs.net/files/trade/jp/?types=hts&agg=qrt&agr=false&group=false" class="button">Descargar Datos Trimestrales</a>
+                    </div>
+                    <div id="link">
+                        <a id="download_monthly" href="https://api.econlabs.net/files/trade/jp/?types=hts&agg=monthly&agr=false&group=false" class="button">Descargar Datos Mensuales</a>
+                    </div>
+                </div>
             </form>
         </main>
 
