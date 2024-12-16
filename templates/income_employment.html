@@ -63,16 +63,12 @@
                     <a id="graph-anchor"></a>
                     <section id="buttons">
                         <section id="dropdowns">
-                          <label id="drop_title" for="frequency">Frecuencia:</label>
-                            <select name="frequency" id="frequency">
-                                <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
-                                <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
-                            </select>
-                        </section>
-                    
-                        <section id="dropdowns">
                             <label id="drop_title" for="naics_time">Time:</label>
-                            <select name="naics_time" id="naics_time"></select>
+                            <select name="naics_time" id="naics_time">
+                                {% for naics in naics_code %}
+                                    <option value="{{ naics }}">{{ naics }}</option>
+                                {% endfor %}
+                            </select>
                         </section>
                     
                         <button id="submit" type="submit">Submit</button>

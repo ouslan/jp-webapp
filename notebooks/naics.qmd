@@ -16,8 +16,6 @@ import pandas as pd
 
 ```{python}
 df = pd.read_parquet("data/external/naics4_df.parquet")
-
-print(df["first_4_naics_code"].unique())
 ```
 
 
