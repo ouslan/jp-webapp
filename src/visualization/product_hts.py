@@ -52,6 +52,12 @@ def products_hts(request):
     df_filtered_yearly = df_yearly_grouped[df_yearly_grouped['hts_code_prefix'] == '01']
     x_axis = pd.Series(df_filtered_yearly["year"])
     y_axis = pd.Series(df_filtered_yearly["imports"])
+    
+    hts_list = df_yearly_grouped["hts_code_prefix"].unique()
+    
+    context = {
+        'hts_codes': hts_list,
+    }
 
     # Handle POST to change the frequency
     if request.method == "POST":
@@ -135,5 +141,5 @@ def products_hts(request):
     fig.update_layout(title=title)
 
     # Render the template with the graph
-    return render(request, 'product_hts.html', {'graph': fig.to_html()})
+    return render(request, 'product_hts.html', {'graph': fig.to_html(), **context})
     
