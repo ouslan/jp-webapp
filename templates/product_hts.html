@@ -64,7 +64,7 @@
                     <section id="buttons">
                         <section id="dropdowns">
                             <label id="drop_title" for="frequency">Frecuencia:</label>
-                            <select name="frequency" id="frequency" onchange="updateHtsCodeDropdown()">
+                            <select name="frequency" id="frequency" onchange="updateHtsCodeDropdown(); updateDownloadLink();">
                                 <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
                                 <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
                                 <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
@@ -89,12 +89,32 @@
                         </section>
                     
                         <button id="submit" type="submit">Submit</button>
+
+                        <div class="download_container">
+                            <a id="download_button" href="https://api.econlabs.net/files/trade/jp/?types=hts&agg=yearly&agr=false&group=false" class="button">Descargar Datos</a>
+                        </div>
                     </section>                                
             
                     <div id="graph">
                         {{ graph|safe }}
                     </div>
                 </div>
+
+                <script>
+                    function updateDownloadLink() {
+                        const frequency = document.getElementById('frequency').value;
+                        const downloadButton = document.getElementById('download_button');
+                        let timeParam = 'yearly';
+                    
+                        if (frequency === 'Monthly') {
+                            timeParam = 'monthly';
+                        } else if (frequency === 'Quarterly') {
+                            timeParam = 'qrt';
+                        }
+                    
+                        downloadButton.href = `https://api.econlabs.net/files/trade/jp/?types=hts&agg=${timeParam}&agr=false&group=false`;
+                    }   
+                </script>
             </form>
         </main>
 
@@ -160,6 +180,6 @@
         </footer>
 
         <!-- Scripts -->  
-        <script src="{% static 'header_menu.js' %}" defer></script>
+        <script src="{% static 'js/header_menu.js' %}" defer></script>
     </body>
 </html>
