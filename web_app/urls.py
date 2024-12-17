@@ -77,6 +77,7 @@ urlpatterns = [
     re_path(r"^cuestionario-del-viajero/$", views.travel_questionaire, name='travel_questionaire'),
     re_path(r"^cuestionario-del-viajero-english/$", views.cuestionario_viajero_english, name='cuestionario_viajero_english'),
     re_path(r"^cuestionario-del-viajero-spanish/$", views.cuestionario_viajero_spanish, name='cuestionario_viajero_spanish'),
+    re_path(r"^cuestionario-del-viajero-salida/$", views.cuestionario_viajero_salida, name='cuestionario_viajero_salida'),
 
 
         
