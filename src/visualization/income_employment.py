@@ -1,4 +1,3 @@
-import re
 from django.shortcuts import render
 import pandas as pd
 import plotly.graph_objects as go
@@ -24,7 +23,7 @@ def web_app_income_employment(request):
     
     y_axis = df_filtered["total_employment_sum"]
     
-    title = "Employment in the US by Year"
+    title = "Employment in the US by Quater for NAICS " + naics_time
     
   else:
     naics_time = "1111"
