@@ -31,7 +31,7 @@ def DataProcessIDB():
     f_y["net_migration"] = pd.to_numeric(f_y["net_migration"], errors="coerce")
     
     # Change index to yearly
-    index_y = pd.date_range(start="2010", end="2051", freq="Y")
+    index_y = pd.date_range(start="2010", end="2051", freq="YE")
     f_y.set_index(index_y, inplace=True)
     
     # Create column with years
@@ -53,7 +53,7 @@ def DataProcessIDB():
     f_m = f_m.drop("year", axis=1)
     
     # Change Frequency to monthly
-    index_m = pd.date_range(start="2010-01-31", end="2050-12-31", freq="M")
+    index_m = pd.date_range(start="2010-01-31", end="2050-12-31", freq="ME")
     f_m = f_m.resample("M").mean().reindex(index_m)
     
     # Convert to monthly with cubic spline interpolation then round results
@@ -80,7 +80,7 @@ def DataProcessIDB():
     q_pop = f_m.resample("Q")["population"].mean().round(0)
     f_q = f_q.resample("Q")["births", "deaths", "net_migration"].sum()
     f_q.insert(0, "population", q_pop, True)
-    f_q["date"] = pd.PeriodIndex(f_q.index, freq="Q")
+    f_q["date"] = pd.PeriodIndex(f_q.index, freq="QE")
     
     # Calculate product of population equation
     f_q["pop_change"] = f_q["births"] - f_q["deaths"] + f_q["net_migration"]
@@ -102,7 +102,7 @@ def DataProcessIDB():
     
     # Generate new index with updated dates
     f_fy = f_fy.drop("date", axis=1)
-    index_fy = pd.date_range(start="07-2010", end="07-2050", freq="M")
+    index_fy = pd.date_range(start="07-2010", end="07-2050", freq="ME")
     f_fy = f_fy.set_index(index_fy)
     
     # Aggregate births, deaths and net migration in 12-month intervals
