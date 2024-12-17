@@ -1,4 +1,3 @@
-from env import get_db_credentials
 from django.shortcuts import render
 import plotly.express as px
 import pandas as pd
@@ -6,111 +5,71 @@ import requests
 
 API_URL = "https://api.econlabs.net"
 
+def fetch_trade_data(agg, time_start, time_end, trade_type="country"):
+    url = f"{API_URL}/data/trade/jp/?agg={agg}&types={trade_type}&time={time_start}+{time_end}"
+    response = requests.get(url).json()
+    return pd.DataFrame(response)
+
+def generate_pie_chart(data, value_column, name_column, title):
+    fig = px.pie(data, values=value_column, names=name_column, title=title)
+    fig.update_traces(textposition='inside', textinfo='percent+label')
+    fig.update_layout(title={'x': 0.5, 'font': {'color': 'black'}})
+    return fig.to_html(full_html=False, default_height=500, default_width=700)
+
+def get_time_range(frequency, year, month=None):
+    if frequency == "Yearly":
+        return f"{year}-01-01", f"{int(year)+1}-01-01"
+    elif frequency == "Monthly" and month:
+        return f"2010-01-01", f"2010-02-01"
+    elif frequency == "Quarterly" and month:
+        return f"{year}-{month}", f"{year}-{int(month)+3}"
+    return "2009-01-01", "2010-01-01"  # Default range
 
 def web_app_imports_exports(request):
+    frequency_defaults = {"frequency": "Yearly", "second_dropdown": "2009", "third_dropdown": "01"}
 
-    df1_imports = requests.get(f"{API_URL}/data/trade/jp/?agg=yearly&types=country&time=2009-01-01+2010-01-01").json()
-    df1_imports = pd.DataFrame(df1_imports)
-
-    # IMPORTS GRAPH 
-    fig = px.pie(df1_imports, values='imports', names='country_name')
-    fig.update_traces(textposition='inside', textinfo='percent+label')
-
+    # Initialize Imports Data and Graph
     if request.method == "POST":
-        frequency = request.POST.get("frequency")
-        second_dropdown = request.POST.get("second_dropdown")
-        third_dropdown = request.POST.get("third_dropdown")
+        imports_params = {
+            "frequency": request.POST.get("frequency", frequency_defaults["frequency"]),
+            "second_dropdown": request.POST.get("second_dropdown", frequency_defaults["second_dropdown"]),
+            "third_dropdown": request.POST.get("third_dropdown", frequency_defaults["third_dropdown"])
+        }
+    else:
+        imports_params = frequency_defaults
 
-        if frequency == "Yearly":
-            df1_imports = requests.get(f"{API_URL}/data/trade/jp/?agg=yearly&types=country&time={second_dropdown}-01-01+{int(second_dropdown)+1}-01-01").json()
-            fig = px.pie(df1_imports, values='imports', names='country_name')
-        elif frequency == "Monthly":
-            df1_imports = requests.get(f"{API_URL}/data/trade/jp/?agg=monthly&types=country&time={second_dropdown}-{third_dropdown}+{second_dropdown}-{int(third_dropdown)+1}").json()
-            fig = px.pie(df1_imports, values='imports', names='country_name')
-        elif frequency == "Quarterly":
-            df1_imports = requests.get(f"{API_URL}/data/trade/jp/?agg=qrt&types=country&time={second_dropdown}-{third_dropdown}+{second_dropdown}-{int(third_dropdown)+3}").json()
-            fig = px.pie(df1_imports, values='imports', names='country_name')
+    imports_time_start, imports_time_end = get_time_range(imports_params["frequency"], imports_params["second_dropdown"], imports_params["third_dropdown"])
+    
+    imports_data = fetch_trade_data(
+        agg=imports_params["frequency"].lower(), 
+        time_start=imports_time_start,
+        time_end=imports_time_end
+    )
+    imports_chart = generate_pie_chart(imports_data, "imports", "country_name", f"{imports_params['frequency']} / {imports_params['second_dropdown']} / {imports_params['third_dropdown']}")
 
-        if frequency is None and second_dropdown is None:
-            frequency = "Yearly"
-            second_dropdown = 2009
-
-        if third_dropdown is None:
-            fig.update_layout(
-                title={
-                    'text': f"Time: {frequency} / {second_dropdown}",
-                    'x': 0.5,
-                    'font': {'color': 'black'}
-                },
-            )
-        else:
-            fig.update_layout(
-                title={
-                    'text': f"Time: {frequency} / {second_dropdown} / {third_dropdown}",
-                    'x': 0.5,
-                    'font': {'color': 'black'}
-                },
-            )
-
-    fig.update_traces(textposition='inside', textinfo='percent+label')
-
-    imports = fig.to_html(full_html=False, default_height=500, default_width=700)
-
-    # ------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-    # EXPORTS GRAPH
-
-    df1_exports = requests.get(f"{API_URL}/data/trade/jp/?agg=yearly&types=country&time=2009-01-01+2010-01-01").json()
-    df1_exports = pd.DataFrame(df1_exports)
-
-    fig1 = px.pie(df1_exports, values='exports', names='country_name')
-    fig1.update_traces(textposition='inside', textinfo='percent+label')
-
+    # Initialize Exports Data and Graph
     if request.method == "POST":
         frequency_2 = request.POST.get("frequency_2")
         second_dropdown_2 = request.POST.get("second_dropdown_2")
         third_dropdown_2 = request.POST.get("third_dropdown_2")
+        exports_params = {
+            "frequency": frequency_2 if frequency_2 else frequency_defaults["frequency"],
+            "second_dropdown": second_dropdown_2 if second_dropdown_2 else frequency_defaults["second_dropdown"],
+            "third_dropdown": third_dropdown_2 if third_dropdown_2 else frequency_defaults["third_dropdown"]
+        }
+    else:
+        exports_params = frequency_defaults
 
-        if frequency_2 == "Yearly":
-            df1_exports = requests.get(f"{API_URL}/data/trade/jp/?agg=yearly&types=country&time={second_dropdown_2}-01-01+{int(second_dropdown_2)+1}-01-01").json()
-            fig1 = px.pie(df1_exports, values='exports', names='country_name')
-        elif frequency_2 == "Monthly":
-            df1_exports = requests.get(f"{API_URL}/data/trade/jp/?agg=monthly&types=country&time={second_dropdown_2}-{third_dropdown_2}+{second_dropdown_2}-{int(third_dropdown_2)+1}").json()
-            fig1 = px.pie(df1_exports, values='exports', names='country_name')
-        elif frequency_2 == "Quarterly":
-            df1_exports = requests.get(f"{API_URL}/data/trade/jp/?agg=qrt&types=country&time={second_dropdown_2}-{third_dropdown_2}+{second_dropdown_2}-{int(third_dropdown_2)+3}").json()
-            fig1 = px.pie(df1_exports, values='exports', names='country_name')
-
-        if frequency_2 is None and second_dropdown_2 is None:
-            frequency_2 = "Yearly"
-            second_dropdown_2 = 2009
-
-        if third_dropdown_2 is None:
-            fig1.update_layout(
-                title={
-                    'text': f"Time: {frequency_2} / {second_dropdown_2}",
-                    'x': 0.5,
-                    'font': {'color': 'black'}
-                },
-            )
-        else:
-            fig1.update_layout(
-                title={
-                    'text': f"Time: {frequency_2} / {second_dropdown_2} / {third_dropdown_2}",
-                    'x': 0.5,
-                    'font': {'color': 'black'}
-                },
-            )
-
-    fig1.update_traces(textposition='inside', textinfo='percent+label')
-
-    exports = fig1.to_html(full_html=False, default_height=500, default_width=700)
-
-    # ------------------------------------------------------------------------------------------------------------------------------------------------------------
+    exports_time_start, exports_time_end = get_time_range(exports_params["frequency"], exports_params["second_dropdown"], exports_params["third_dropdown"])
+    exports_data = fetch_trade_data(
+        agg=exports_params["frequency"].lower(), 
+        time_start=exports_time_start, 
+        time_end=exports_time_end
+    )
+    exports_chart = generate_pie_chart(exports_data, "exports", "country_name", f"{exports_params['frequency']} / {exports_params['second_dropdown']}")
 
     context = {
-        "imports": imports,
-        "exports": exports
+        "imports": imports_chart,
+        "exports": exports_chart
     }
-
     return render(request, "imports_exports.html", context)
