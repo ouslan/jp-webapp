@@ -1,5 +1,5 @@
 [project]
-authors = [{ name = "Alejandro Ousland", email = "alejandro.ouslan@upr.edu" }]
+authors = [{ name = "Alejandro Ouslan", email = "alejandro.ouslan@upr.edu" }]
 maintainers = [
   { name = "Yamilette Alemany", email = "yamilette.alemany@upr.edu" },
   { name = "Adriana I. Carrasquillo Cruz", email = "adriana.carrasquillo1@upr.edu" },
@@ -30,7 +30,3 @@ dependencies = [
   "tqdm>=4.67.1",
   "whitenoise>=6.8.2",
 ]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
