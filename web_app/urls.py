@@ -73,6 +73,13 @@ urlpatterns = [
     re_path(r"^productos-hts/$", views.products_hts, name='product_hts'),
     re_path(r"^productos_ranking/$", views.productos_ranking, name='productos_ranking'),
     re_path(r"^ingresos-de-empleos/$", views.web_app_income_employment, name='income_employment'),
+
+    re_path(r"^cuestionario-del-viajero/$", views.travel_questionaire, name='travel_questionaire'),
+    re_path(r"^cuestionario-del-viajero-english/$", views.cuestionario_viajero_english, name='cuestionario_viajero_english'),
+    re_path(r"^cuestionario-del-viajero-spanish/$", views.cuestionario_viajero_spanish, name='cuestionario_viajero_spanish'),
+    re_path(r"^cuestionario-del-viajero-salida/$", views.cuestionario_viajero_salida, name='cuestionario_viajero_salida'),
+
+
         
     # Asegura los path que estén bien cuando añadas otro
     re_path(r"^JP-361-transactions-in-pr-of-external-insurance-companies-qrt/$", views.JP_361_qrt, name="JP-361-qrt"),

@@ -8,6 +8,8 @@ from .models import *
 from src.visualization.income_employment import web_app_income_employment
 from src.visualization.product_hts import products_hts
 from src.visualization.productos_ranking import productos_ranking
+from src.visualization.cuestionario_salida import cuestionario_viajero_salida
+from src.visualization.cuestionario_viajero import travel_questionaire
 from src.visualization.account_settings import account_setting
 from src.visualization.add_email import change_email
 from src.visualization.indicadores import web_app_indicadores
@@ -75,6 +77,9 @@ from src.formularios.quaterly.ingreso_neto_qtr.form_ip_230_qtr import IP_230_qtr
 from src.data.proyecciones import *
 from src.data.demografic import *
 from src.data.idh import *
+from src.visualization.cuestionario_viajero_english import cuestionario_viajero_english
+from src.visualization.cuestionario_viajero_spanish import cuestionario_viajero_spanish
+
 
 def home(request):
     return render(request, "home.html")
