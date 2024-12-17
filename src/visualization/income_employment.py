@@ -1,3 +1,4 @@
+import re
 from django.shortcuts import render
 import pandas as pd
 import plotly.graph_objects as go
@@ -11,23 +12,37 @@ def web_app_income_employment(request):
   df_sorted = df.sort_values(by=["year", "qtr"], ascending=True)
   df_sorted = df_sorted[df_sorted["year"] < 2024]
   
+  naics = None
   
-  df_filtered = df_sorted[df_sorted["first_4_naics_code"] == "9999"]
-  df_filtered = df_filtered.sort_values(by=["year", "qtr"], ascending=True)
-  
-  x_axis = df_filtered.apply(lambda row: f"Q{row['qtr']} {row['year']}", axis=1)
-  
-  y_axis = df_filtered["total_employment_sum"]
-  
-  title = "Employment in the US by Year"
-  
+  if request.method == "POST":
+    naics_time = request.POST.get("naics_time")
+    
+    df_filtered = df_sorted[df_sorted["first_4_naics_code"] == naics_time]
+    df_filtered = df_filtered.sort_values(by=["year", "qtr"], ascending=True)
+    
+    x_axis = df_filtered.apply(lambda row: f"Q{row['qtr']} {row['year']}", axis=1)
+    
+    y_axis = df_filtered["total_employment_sum"]
+    
+    title = "Employment in the US by Year"
+    
+  else:
+    naics_time = "1111"
+    df_filtered = df_sorted[df_sorted["first_4_naics_code"] == naics_time]
+    df_filtered = df_filtered.sort_values(by=["year", "qtr"], ascending=True)
+      
+    x_axis = df_filtered.apply(lambda row: f"Q{row['qtr']} {row['year']}", axis=1)
+    y_axis = df_filtered["total_employment_sum"]
+    
+  title = f"Employment in the US by Quater for NAICS {naics_time}"
+    
   naics = df_sorted.sort_values(by="first_4_naics_code")
   naics = naics[naics["first_4_naics_code"] != "0"]["first_4_naics_code"].unique()
-
+    
   context = {
     'naics_code': naics,
   }
-  
+    
   fig = go.Figure()
   fig.add_trace(go.Scatter(x=x_axis, y=y_axis, mode='lines+markers'))
 
