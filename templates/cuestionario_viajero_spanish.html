@@ -28,14 +28,14 @@ Estoy haciendo escala u otro -->
         <table id="header_line">
             <tr>
             <td id="header_left">
-                Titulo left
+                <!-- Titulo left -->
             </td>
             <td id="header_center">
                 <img src="{% static 'images/JP_poster.jpg' %}" alt="Logo Junta Planificación" id="header_image"/><br>
                 <h1>Encuesta de Gastos del Visitante</h1>
             </td>
             <td id="header_right">
-                Titulo Right
+                <!-- Titulo Right -->
             </td>
             </tr>
         </table>
@@ -49,7 +49,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 1 -->
 <div id="question1">
-    <label for="caseSelection"><strong>1. ¿Cuál de los siguientes mejor describe su caso?</strong></label>
+    <label for="caseSelection"><strong>¿Cuál de los siguientes mejor describe su caso?</strong></label>
     <select id="caseSelection" name="caseSelection" required>
         <option value="">Seleccione...</option>
         <!-- <option value="visitor">Estaba de visita en Puerto Rico</option>
@@ -73,7 +73,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 2 -->
     <div id="question2">
-        <label for="expenseCategories"><strong>2. Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
+        <label for="expenseCategories"><strong>Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
         <div>
             <label for="expense_airplane">&emsp;Avión:</label>
             <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Ingrese el monto" required>
@@ -107,7 +107,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 3 -->
     <div id="question3">
-        <label for="age"><strong>3. ¿Cuál es su edad?</strong></label>
+        <label for="age"><strong>¿Cuál es su edad?</strong></label>
         <input type="number" id="age" name="age" required min="1">
         <button type="button" id="confirmAgeBtn">Confirmar Edad</button>
     </div>
@@ -115,22 +115,10 @@ Estoy haciendo escala u otro -->
 
      <!-- Question 4 -->
     <div id="question4">
-    <label for="genderIdentity"><strong>4. ¿Cuál es su identidad de género?  </strong></label>
-    <div>
-        <input type="radio" id="gender_identity_genderFluid" name="gender_identity" value="Persona de género fluido">
-        <label for="gender_identity_genderFluid">&emsp;Persona de género fluido</label>
-    </div>
+    <label for="genderIdentity"><strong>¿Cuál es su identidad de género?  </strong></label>
     <div>
         <input type="radio" id="gender_identity_man" name="gender_identity" value="Hombre">
         <label for="gender_identity_man">&emsp;Hombre</label>
-    </div>
-    <div>
-        <input type="radio" id="gender_identity_nonBinary" name="gender_identity" value="Persona no binaria">
-        <label for="gender_identity_nonBinary">&emsp;Persona no binaria</label>
-    </div>
-    <div>
-        <input type="radio" id="gender_identity_transgender" name="gender_identity" value="Persona transgénero">
-        <label for="gender_identity_transgender">&emsp;Persona transgénero</label>
     </div>
     <div>
         <input type="radio" id="gender_identity_woman" name="gender_identity" value="Mujer">
@@ -149,7 +137,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 5 -->
 <div id="question5">
-    <label for="heritage"><strong>5. ¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
+    <label for="heritage"><strong>¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
     <div>
         <input type="radio" id="heritage_afrodescendant" name="heritage" value="Afrodescendiente">
         <label for="heritage_afrodescendant">&emsp;Afrodescendiente</label>
@@ -187,7 +175,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 6 -->
     <div id="question6">
-        <label for="hispanicIdentity"><strong>6. ¿Se identifica como hispana/o/latine?</strong></label>
+        <label for="hispanicIdentity"><strong>¿Se identifica como hispana/o/latine?</strong></label>
         <div>
             <input type="radio" id="hispanic_identity_puertoRican" name="hispanic_identity" value="Sí, de origen puertorriqueño">
             <label for="hispanic_identity_puertoRican">&emsp;Sí, de origen puertorriqueño</label>
@@ -225,7 +213,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 7 -->
     <div id="question7">
-        <label for="educationLevel"><strong>7. ¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
+        <label for="educationLevel"><strong>¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
         <div>
             <input type="radio" id="education_level_noPrimary" name="education_level" value="No completé la escuela primaria" required>
             <label for="education_level_noPrimary">&emsp;No completé la escuela primaria</label>
@@ -263,7 +251,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 8 -->
     <div id="question8">
-        <label for="incomeLevel"><strong>8. ¿Cuál es su nivel de ingreso?</strong></label>
+        <label for="incomeLevel"><strong>¿Cuál es su nivel de ingreso?</strong></label>
         <div>
             <input type="radio" id="income_noIncome" name="income_level" value="No ingreso" required>
             <label for="income_noIncome">&emsp;No ingreso</label>
@@ -317,7 +305,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 9 -->
 <div id="question9">
-    <label for="travelCompanion"><strong>9. ¿Viaja solo o acompañado?</strong></label>
+    <label for="travelCompanion"><strong>¿Viaja solo o acompañado?</strong></label>
     <div>
         <input type="radio" id="travel_companion_solo" name="travel_companion" value="Solo" required>
         <label for="travel_companion_solo">&emsp;Solo</label>
@@ -339,7 +327,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 10 -->
 <div id="question10">
-    <label for="numberOfCompanions"><strong>10. ¿Con cuántas personas viaja?</strong></label>
+    <label for="numberOfCompanions"><strong>¿Con cuántas personas viaja?</strong></label>
     <input type="number" id="number_of_companions" name="number_of_companions" min="0" required>
     <div id="confirmCompanionsContainer" style="display: none;">
         <button type="button" id="confirmCompanionsButton">Confirmar</button>
@@ -349,7 +337,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 11 -->
     <div id="question11">
-        <label for="visitorOrigin"><strong>11. ¿De dónde nos visita?</strong></label>
+        <label for="visitorOrigin"><strong>¿De dónde nos visita?</strong></label>
         <div>
             <input type="radio" id="origin_usa" name="visitor_origin" value="EEUU" required>
             <label for="origin_usa">&emsp;EEUU</label>
@@ -596,7 +584,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 12 -->
     <div id="question12">
-        <label for="accommodation"><strong>12. ¿Dónde se hospedó durante su estadía?</strong></label>
+        <label for="accommodation"><strong>¿Dónde se hospedó durante su estadía?</strong></label>
         <div>
             <input type="radio" id="accommodation_airbnb" name="accommodation" value="Airbnb">
             <label for="accommodation_airbnb">&emsp;Airbnb</label>
@@ -626,7 +614,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 13 -->
     <div id="question13">
-        <label for="visitPurpose"><strong>13. ¿Cuáles fueron los propósitos principales de su visita? Marque todos los que apliquen</strong></label>
+        <label for="visitPurpose"><strong>¿Cuáles fueron los propósitos principales de su visita? Marque todos los que apliquen</strong></label>
         <div>
             <input type="checkbox" id="visit_purpose_medical" name="visit_purpose" value="Agroculturismo">
             <label for="visit_purpose_medical">&emsp;Agroculturismo</label>
@@ -660,7 +648,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 14 -->
     <div id="question14">
-        <label for="activities"><strong>14. ¿Qué actividades realizó durante su visita? Marque todas las que apliquen.</strong></label>
+        <label for="activities"><strong>¿Qué actividades realizó durante su visita? Marque todas las que apliquen.</strong></label>
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 5px;">
             <div>
                 <input type="checkbox" id="activity_nightlife" name="activities" value="Vida nocturna">
@@ -736,7 +724,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 15 -->
     <div id="question15">
-        <label for="discoveryMethod"><strong>15. ¿Cómo se enteró de Puerto Rico como destino de viaje? Marque todas las que apliquen.</strong></label>
+        <label for="discoveryMethod"><strong>¿Cómo se enteró de Puerto Rico como destino de viaje? Marque todas las que apliquen.</strong></label>
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; margin-top: 5px;">
             <div>
                 <input type="checkbox" id="discovery_travel_agencies" name="discovery_method" value="Agencias de viajes">
@@ -776,14 +764,14 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 16 -->
     <div id="question16">
-        <label for="stayDuration"><strong>16. ¿De cuántos días fue su estadía?</strong></label>
+        <label for="stayDuration"><strong>¿De cuántos días fue su estadía?</strong></label>
         <input type="number" id="stay_duration" name="stay_duration" min="0" required placeholder="Ingrese el número de días">
     </div>
     <br>
 
     <!-- Question 17 -->
     <div id="question17">
-        <label for="mainMunicipality"><strong>17. ¿En qué municipio pernoctó la mayor parte de su estadía?</strong></label>
+        <label for="mainMunicipality"><strong>¿En qué municipio pernoctó la mayor parte de su estadía?</strong></label>
         <select id="main_municipality" name="main_municipality" required>
             <option value="">Seleccione...</option>
             <option value="Adjuntas">Adjuntas</option>
@@ -874,7 +862,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 2 -->
     <div id="question2">
-        <label for="expenseCategories"><strong>2. Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
+        <label for="expenseCategories"><strong>Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
         <div>
             <label for="expense_airplane">&emsp;Avión:</label>
             <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Ingrese el monto" required>
@@ -908,7 +896,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 3 -->
     <div id="question3">
-        <label for="age"><strong>3. ¿Cuál es su edad?</strong></label>
+        <label for="age"><strong>¿Cuál es su edad?</strong></label>
         <input type="number" id="age" name="age" required min="1">
         <button type="button" id="confirmAgeBtn">Confirmar Edad</button>
     </div>
@@ -916,7 +904,7 @@ Estoy haciendo escala u otro -->
 
      <!-- Question 4 -->
     <div id="question4">
-    <label for="genderIdentity"><strong>4. ¿Cuál es su identidad de género?  </strong></label>
+    <label for="genderIdentity"><strong>¿Cuál es su identidad de género?  </strong></label>
     <div>
         <input type="radio" id="gender_identity_genderFluid" name="gender_identity" value="Persona de género fluido">
         <label for="gender_identity_genderFluid">&emsp;Persona de género fluido</label>
@@ -950,7 +938,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 5 -->
     <div id="question5">
-        <label for="heritage"><strong>5. ¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
+        <label for="heritage"><strong>¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
         <div>
             <input type="radio" id="heritage_afrodescendant" name="heritage" value="Afrodescendiente">
             <label for="heritage_afrodescendant">&emsp;Afrodescendiente</label>
@@ -988,7 +976,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 6 -->
     <div id="question6">
-        <label for="hispanicIdentity"><strong>6. ¿Se identifica como hispana/o/latine?</strong></label>
+        <label for="hispanicIdentity"><strong>¿Se identifica como hispana/o/latine?</strong></label>
         <div>
             <input type="radio" id="hispanic_identity_puertoRican" name="hispanic_identity" value="Sí, de origen puertorriqueño">
             <label for="hispanic_identity_puertoRican">&emsp;Sí, de origen puertorriqueño</label>
@@ -1026,7 +1014,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 7 -->
     <div id="question7">
-        <label for="educationLevel"><strong>7. ¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
+        <label for="educationLevel"><strong>¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
         <div>
             <input type="radio" id="education_level_noPrimary" name="education_level" value="No completé la escuela primaria" required>
             <label for="education_level_noPrimary">&emsp;No completé la escuela primaria</label>
@@ -1064,7 +1052,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 8 -->
     <div id="question8">
-        <label for="incomeLevel"><strong>8. ¿Cuál es su nivel de ingreso?</strong></label>
+        <label for="incomeLevel"><strong>¿Cuál es su nivel de ingreso?</strong></label>
         <div>
             <input type="radio" id="income_noIncome" name="income_level" value="No ingreso" required>
             <label for="income_noIncome">&emsp;No ingreso</label>
@@ -1118,7 +1106,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 9 -->
 <div id="question9">
-    <label for="travelCompanion"><strong>9. ¿Viaja solo o acompañado?</strong></label>
+    <label for="travelCompanion"><strong>¿Viaja solo o acompañado?</strong></label>
     <div>
         <input type="radio" id="travel_companion_solo" name="travel_companion_1" value="Solo" required>
         <label for="travel_companion_solo">&emsp;Solo</label>
@@ -1140,7 +1128,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 10 -->
 <div id="question10" style="display: none;">
-    <label for="numberOfCompanions"><strong>10. ¿Con cuántas personas viaja?</strong></label>
+    <label for="numberOfCompanions"><strong>¿Con cuántas personas viaja?</strong></label>
     <input type="number" id="number_of_companions" name="number_of_companions" min="0" required>
     <div id="confirmCompanionsContainer" style="display: none;">
         <button type="button" id="confirmCompanionsButton">Confirmar</button>
@@ -1150,7 +1138,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 18 -->
     <div id="question18">
-        <label for="travelDestination"><strong>18. ¿Hacia dónde viajas?</strong></label>
+        <label for="travelDestination"><strong>¿Hacia dónde viajas?</strong></label>
         <div>
             <input type="radio" id="destination_usa" name="travel_destination" value="EEUU" required>
             <label for="destination_usa">&emsp;EEUU</label>
@@ -1244,7 +1232,7 @@ Estoy haciendo escala u otro -->
     
     <!-- Question 19 -->
     <div id="question19">
-        <label for="accommodation"><strong>19. ¿Dónde se hospedará durante su viaje?</strong></label>
+        <label for="accommodation"><strong>¿Dónde se hospedará durante su viaje?</strong></label>
         <div>
             <input type="radio" id="accommodation_airbnb" name="accommodation_1" value="Airbnb">
             <label for="accommodation_airbnb">&emsp;Airbnb</label>
@@ -1270,7 +1258,7 @@ Estoy haciendo escala u otro -->
     
     <!-- Question 20 -->
     <div id="question20">
-        <label for="travelPurposes"><strong>20. ¿Cuáles son los propósitos principales de su viaje? Marque todos los que apliquen</strong></label>
+        <label for="travelPurposes"><strong>¿Cuáles son los propósitos principales de su viaje? Marque todos los que apliquen</strong></label>
         <div id="travelPurposesContainer">
             <div>
                 <input type="checkbox" id="purpose_study" name="travel_purposes" value="Estudio">
@@ -1302,7 +1290,7 @@ Estoy haciendo escala u otro -->
     
     <!-- Question 21 -->
     <div id="question21">
-        <label for="plannedActivities"><strong>21. ¿Qué actividades realizará durante su visita? Marque todas las que apliquen.</strong></label>
+        <label for="plannedActivities"><strong>¿Qué actividades realizará durante su visita? Marque todas las que apliquen.</strong></label>
         <div id="plannedActivitiesContainer">
             <div>
                 <input type="checkbox" id="activity_nightlife" name="planned_activities" value="Vida nocturna">
@@ -1342,7 +1330,7 @@ Estoy haciendo escala u otro -->
     
     <!-- Question 22 -->
     <div id="question22">
-        <label for="tripDuration"><strong>22. ¿De cuántos días será su viaje?</strong></label>
+        <label for="tripDuration"><strong>¿De cuántos días será su viaje?</strong></label>
         <input type="number" id="tripDuration" name="trip_duration" min="1" placeholder="Especifique número de días" required> <br>
         * Si se está mudando, por favor escriba 999.
     </div>
@@ -1350,7 +1338,7 @@ Estoy haciendo escala u otro -->
     
     <!-- Question 23 -->
     <div id="question23">
-        <label for="estimatedExpenses"><strong>23. ¿Cuánto gastará en su viaje (aproximadamente)?</strong></label>
+        <label for="estimatedExpenses"><strong>¿Cuánto gastará en su viaje (aproximadamente)?</strong></label>
         <input type="number" id="estimatedExpenses" name="estimated_expenses" min="0" step="0.01" placeholder="Ingrese el monto en dólares" required>
     </div>
     <br>
@@ -1365,7 +1353,7 @@ Estoy haciendo escala u otro -->
 <div id="movingToPR" style="display: none;">
     <!-- Question 2 -->
     <div id="question2">
-        <label for="expenseCategories"><strong>2. Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
+        <label for="expenseCategories"><strong>Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
         <div>
             <label for="expense_airplane">&emsp;Avión:</label>
             <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Ingrese el monto" required>
@@ -1399,7 +1387,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 3 -->
     <div id="question3">
-        <label for="age"><strong>3. ¿Cuál es su edad?</strong></label>
+        <label for="age"><strong>¿Cuál es su edad?</strong></label>
         <input type="number" id="age" name="age" required min="1">
         <button type="button" id="confirmAgeBtn">Confirmar Edad</button>
     </div>
@@ -1407,7 +1395,7 @@ Estoy haciendo escala u otro -->
 
      <!-- Question 4 -->
     <div id="question4">
-    <label for="genderIdentity"><strong>4. ¿Cuál es su identidad de género?  </strong></label>
+    <label for="genderIdentity"><strong>¿Cuál es su identidad de género?  </strong></label>
     <div>
         <input type="radio" id="gender_identity_genderFluid" name="gender_identity" value="Persona de género fluido">
         <label for="gender_identity_genderFluid">&emsp;Persona de género fluido</label>
@@ -1441,7 +1429,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 5 -->
 <div id="question5">
-    <label for="heritage"><strong>5. ¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
+    <label for="heritage"><strong>¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
     <div>
         <input type="radio" id="heritage_afrodescendant" name="heritage" value="Afrodescendiente">
         <label for="heritage_afrodescendant">&emsp;Afrodescendiente</label>
@@ -1479,7 +1467,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 6 -->
     <div id="question6">
-        <label for="hispanicIdentity"><strong>6. ¿Se identifica como hispana/o/latine?</strong></label>
+        <label for="hispanicIdentity"><strong>¿Se identifica como hispana/o/latine?</strong></label>
         <div>
             <input type="radio" id="hispanic_identity_puertoRican" name="hispanic_identity" value="Sí, de origen puertorriqueño">
             <label for="hispanic_identity_puertoRican">&emsp;Sí, de origen puertorriqueño</label>
@@ -1517,7 +1505,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 7 -->
     <div id="question7">
-        <label for="educationLevel"><strong>7. ¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
+        <label for="educationLevel"><strong>¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
         <div>
             <input type="radio" id="education_level_noPrimary" name="education_level" value="No completé la escuela primaria" required>
             <label for="education_level_noPrimary">&emsp;No completé la escuela primaria</label>
@@ -1555,7 +1543,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 8 -->
     <div id="question8">
-        <label for="incomeLevel"><strong>8. ¿Cuál es su nivel de ingreso?</strong></label>
+        <label for="incomeLevel"><strong>¿Cuál es su nivel de ingreso?</strong></label>
         <div>
             <input type="radio" id="income_noIncome" name="income_level" value="No ingreso" required>
             <label for="income_noIncome">&emsp;No ingreso</label>
@@ -1609,7 +1597,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 9 -->
 <div id="question9">
-    <label for="travelCompanion"><strong>9. ¿Viaja solo o acompañado?</strong></label>
+    <label for="travelCompanion"><strong>¿Viaja solo o acompañado?</strong></label>
     <div>
         <input type="radio" id="travel_companion_solo" name="travel_companion_2" value="Solo" required>
         <label for="travel_companion_solo">&emsp;Solo</label>
@@ -1631,7 +1619,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 10 -->
 <div id="question10" style="display: none;">
-    <label for="numberOfCompanions"><strong>10. ¿Con cuántas personas viaja?</strong></label>
+    <label for="numberOfCompanions"><strong>¿Con cuántas personas viaja?</strong></label>
     <input type="number" id="number_of_companions" name="number_of_companions" min="0" required>
     <div id="confirmCompanionsContainer" style="display: none;">
         <button type="button" id="confirmCompanionsButton">Confirmar</button>
@@ -1641,7 +1629,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 18 -->
     <div id="question18">
-        <label for="travelDestination"><strong>18. ¿Hacia dónde viajas?</strong></label>
+        <label for="travelDestination"><strong>¿Hacia dónde viajas?</strong></label>
         <div>
             <input type="radio" id="destination_usa" name="travel_destination" value="EEUU" required>
             <label for="destination_usa">&emsp;EEUU</label>
@@ -1707,7 +1695,6 @@ Estoy haciendo escala u otro -->
                 <option value="Wyoming">Wyoming</option>
             </select>
         </div>
-        <!-- Dropdown for countries (initially hidden) -->
         <div id="countriesContainer" style="display: none; margin-top: 10px;">
             <label for="countries">Seleccione el país:</label>
             <select id="countries" name="countries">
@@ -1735,7 +1722,7 @@ Estoy haciendo escala u otro -->
     
     <!-- Question 19 -->
     <div id="question19">
-        <label for="accommodation"><strong>19. ¿Dónde se hospedará durante su viaje?</strong></label>
+        <label for="accommodation"><strong>¿Dónde se hospedará durante su viaje?</strong></label>
         <div>
             <input type="radio" id="accommodation_airbnb" name="accommodation_1" value="Airbnb">
             <label for="accommodation_airbnb">&emsp;Airbnb</label>
@@ -1761,7 +1748,7 @@ Estoy haciendo escala u otro -->
     
         <!-- Question 20 -->
         <div id="question20">
-            <label for="travelPurposes"><strong>20. ¿Cuáles son los propósitos principales de su viaje? Marque todos los que apliquen</strong></label>
+            <label for="travelPurposes"><strong>¿Cuáles son los propósitos principales de su viaje? Marque todos los que apliquen</strong></label>
             <div id="travelPurposesContainer">
                 <div>
                     <input type="checkbox" id="purpose_study" name="travel_purposes" value="Estudio">
@@ -1793,7 +1780,7 @@ Estoy haciendo escala u otro -->
     
         <!-- Question 21 -->
         <div id="question21">
-            <label for="plannedActivities"><strong>21. ¿Qué actividades realizará durante su visita? Marque todas las que apliquen.</strong></label>
+            <label for="plannedActivities"><strong>¿Qué actividades realizará durante su visita? Marque todas las que apliquen.</strong></label>
             <div id="plannedActivitiesContainer">
                 <div>
                     <input type="checkbox" id="activity_nightlife" name="planned_activities" value="Vida nocturna">
@@ -1833,7 +1820,7 @@ Estoy haciendo escala u otro -->
     
         <!-- Question 22 -->
         <div id="question22">
-            <label for="tripDuration"><strong>22. ¿De cuántos días será su viaje?</strong></label>
+            <label for="tripDuration"><strong>¿De cuántos días será su viaje?</strong></label>
             <input type="number" id="tripDuration" name="trip_duration" min="1" placeholder="Especifique número de días" required> <br>
             * Si se está mudando, por favor escriba 999.
         </div>
@@ -1841,7 +1828,7 @@ Estoy haciendo escala u otro -->
     
         <!-- Question 23 -->
         <div id="question23">
-            <label for="estimatedExpenses"><strong>23. ¿Cuánto gastará en su viaje (aproximadamente)?</strong></label>
+            <label for="estimatedExpenses"><strong>¿Cuánto gastará en su viaje (aproximadamente)?</strong></label>
             <input type="number" id="estimatedExpenses" name="estimated_expenses" min="0" step="0.01" placeholder="Ingrese el monto en dólares" required>
         </div>
         <br>
@@ -1850,7 +1837,7 @@ Estoy haciendo escala u otro -->
 <div id="movingOutPR" style="display: none;">
     <!-- Question 2 -->
     <div id="question2">
-        <label for="expenseCategories"><strong>2. Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
+        <label for="expenseCategories"><strong>Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
         <div>
             <label for="expense_airplane">&emsp;Avión:</label>
             <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Ingrese el monto" required>
@@ -1884,7 +1871,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 3 -->
     <div id="question3">
-        <label for="age"><strong>3. ¿Cuál es su edad?</strong></label>
+        <label for="age"><strong>¿Cuál es su edad?</strong></label>
         <input type="number" id="age" name="age" required min="1">
         <button type="button" id="confirmAgeBtn">Confirmar Edad</button>
     </div>
@@ -1892,7 +1879,7 @@ Estoy haciendo escala u otro -->
 
      <!-- Question 4 -->
     <div id="question4">
-    <label for="genderIdentity"><strong>4. ¿Cuál es su identidad de género?  </strong></label>
+    <label for="genderIdentity"><strong>¿Cuál es su identidad de género?  </strong></label>
     <div>
         <input type="radio" id="gender_identity_genderFluid" name="gender_identity" value="Persona de género fluido">
         <label for="gender_identity_genderFluid">&emsp;Persona de género fluido</label>
@@ -1926,7 +1913,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 5 -->
 <div id="question5">
-    <label for="heritage"><strong>5. ¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
+    <label for="heritage"><strong>¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
     <div>
         <input type="radio" id="heritage_afrodescendant" name="heritage" value="Afrodescendiente">
         <label for="heritage_afrodescendant">&emsp;Afrodescendiente</label>
@@ -1964,7 +1951,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 6 -->
     <div id="question6">
-        <label for="hispanicIdentity"><strong>6. ¿Se identifica como hispana/o/latine?</strong></label>
+        <label for="hispanicIdentity"><strong>¿Se identifica como hispana/o/latine?</strong></label>
         <div>
             <input type="radio" id="hispanic_identity_puertoRican" name="hispanic_identity" value="Sí, de origen puertorriqueño">
             <label for="hispanic_identity_puertoRican">&emsp;Sí, de origen puertorriqueño</label>
@@ -2002,7 +1989,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 7 -->
     <div id="question7">
-        <label for="educationLevel"><strong>7. ¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
+        <label for="educationLevel"><strong>¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
         <div>
             <input type="radio" id="education_level_noPrimary" name="education_level" value="No completé la escuela primaria" required>
             <label for="education_level_noPrimary">&emsp;No completé la escuela primaria</label>
@@ -2040,7 +2027,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 8 -->
     <div id="question8">
-        <label for="incomeLevel"><strong>8. ¿Cuál es su nivel de ingreso?</strong></label>
+        <label for="incomeLevel"><strong>¿Cuál es su nivel de ingreso?</strong></label>
         <div>
             <input type="radio" id="income_noIncome" name="income_level" value="No ingreso" required>
             <label for="income_noIncome">&emsp;No ingreso</label>
@@ -2094,7 +2081,7 @@ Estoy haciendo escala u otro -->
 
  <!-- Question 9 -->
 <div id="question9">
-    <label for="travelCompanion"><strong>9. ¿Viaja solo o acompañado?</strong></label>
+    <label for="travelCompanion"><strong>¿Viaja solo o acompañado?</strong></label>
     <div>
         <input type="radio" id="travel_companion_solo" name="travel_companion_3" value="Solo" required>
         <label for="travel_companion_solo">&emsp;Solo</label>
@@ -2116,7 +2103,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 10 -->
 <div id="question10" style="display: none;">
-    <label for="numberOfCompanions"><strong>10. ¿Con cuántas personas viaja?</strong></label>
+    <label for="numberOfCompanions"><strong>¿Con cuántas personas viaja?</strong></label>
     <input type="number" id="number_of_companions" name="number_of_companions" min="0" required>
     <div id="confirmCompanionsContainer" style="display: none;">
         <button type="button" id="confirmCompanionsButton">Confirmar</button>
@@ -2125,7 +2112,7 @@ Estoy haciendo escala u otro -->
 <br>
         <!-- Question 18 -->
         <div id="question18">
-            <label for="travelDestination"><strong>18. ¿Hacia dónde viajas?</strong></label>
+            <label for="travelDestination"><strong>¿Hacia dónde viajas?</strong></label>
             <div>
                 <input type="radio" id="destination_usa" name="travel_destination" value="EEUU" required>
                 <label for="destination_usa">&emsp;EEUU</label>
@@ -2134,7 +2121,6 @@ Estoy haciendo escala u otro -->
                 <input type="radio" id="destination_other" name="travel_destination" value="Otro País">
                 <label for="destination_other">&emsp;Otro País</label>
             </div>
-            <!-- Dropdown for states (initially hidden) -->
             <div id="usaStatesContainer" style="display: none; margin-top: 10px;">
                 <label for="usaStates">Seleccione el estado:</label>
                 <select id="usaStates" name="usa_states">
@@ -2191,7 +2177,6 @@ Estoy haciendo escala u otro -->
                     <option value="Wyoming">Wyoming</option>
                 </select>
             </div>
-            <!-- Dropdown for countries (initially hidden) -->
             <div id="countriesContainer" style="display: none; margin-top: 10px;">
                 <label for="countries">Seleccione el país:</label>
                 <select id="countries" name="countries">
@@ -2219,7 +2204,7 @@ Estoy haciendo escala u otro -->
     
         <!-- Question 19 -->
         <div id="question19">
-            <label for="accommodation"><strong>19. ¿Dónde se hospedará durante su viaje?</strong></label>
+            <label for="accommodation"><strong>¿Dónde se hospedará durante su viaje?</strong></label>
             <div>
                 <input type="radio" id="accommodation_airbnb" name="accommodation_1" value="Airbnb">
                 <label for="accommodation_airbnb">&emsp;Airbnb</label>
@@ -2277,7 +2262,7 @@ Estoy haciendo escala u otro -->
     
         <!-- Question 21 -->
         <div id="question21">
-            <label for="plannedActivities"><strong>21. ¿Qué actividades realizará durante su visita? Marque todas las que apliquen.</strong></label>
+            <label for="plannedActivities"><strong>¿Qué actividades realizará durante su visita? Marque todas las que apliquen.</strong></label>
             <div id="plannedActivitiesContainer">
                 <div>
                     <input type="checkbox" id="activity_nightlife" name="planned_activities" value="Vida nocturna">
@@ -2317,7 +2302,7 @@ Estoy haciendo escala u otro -->
     
         <!-- Question 22 -->
         <div id="question22">
-            <label for="tripDuration"><strong>22. ¿De cuántos días será su viaje?</strong></label>
+            <label for="tripDuration"><strong>¿De cuántos días será su viaje?</strong></label>
             <input type="number" id="tripDuration" name="trip_duration" min="1" placeholder="Especifique número de días" required> <br>
             * Si se está mudando, por favor escriba 999.
         </div>
@@ -2325,7 +2310,7 @@ Estoy haciendo escala u otro -->
     
         <!-- Question 23 -->
         <div id="question23">
-            <label for="estimatedExpenses"><strong>23. ¿Cuánto gastará en su viaje (aproximadamente)?</strong></label>
+            <label for="estimatedExpenses"><strong>¿Cuánto gastará en su viaje (aproximadamente)?</strong></label>
             <input type="number" id="estimatedExpenses" name="estimated_expenses" min="0" step="0.01" placeholder="Ingrese el monto en dólares" required>
         </div>
         <br>
@@ -2335,7 +2320,7 @@ Estoy haciendo escala u otro -->
     Prueba 1
         <!-- Question 2 -->
     <div id="question2">
-        <label for="expenseCategories"><strong>2. Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
+        <label for="expenseCategories"><strong>Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
         <div>
             <label for="expense_airplane">&emsp;Avión:</label>
             <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Ingrese el monto" required>
@@ -2369,7 +2354,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 3 -->
     <div id="question3">
-        <label for="age"><strong>3. ¿Cuál es su edad?</strong></label>
+        <label for="age"><strong>¿Cuál es su edad?</strong></label>
         <input type="number" id="age" name="age" required min="1">
         <button type="button" id="confirmAgeBtn">Confirmar Edad</button>
     </div>
@@ -2377,22 +2362,10 @@ Estoy haciendo escala u otro -->
 
      <!-- Question 4 -->
     <div id="question4">
-    <label for="genderIdentity"><strong>4. ¿Cuál es su identidad de género?  </strong></label>
-    <div>
-        <input type="radio" id="gender_identity_genderFluid" name="gender_identity" value="Persona de género fluido">
-        <label for="gender_identity_genderFluid">&emsp;Persona de género fluido</label>
-    </div>
+    <label for="genderIdentity"><strong>¿Cuál es su identidad de género?  </strong></label>
     <div>
         <input type="radio" id="gender_identity_man" name="gender_identity" value="Hombre">
         <label for="gender_identity_man">&emsp;Hombre</label>
-    </div>
-    <div>
-        <input type="radio" id="gender_identity_nonBinary" name="gender_identity" value="Persona no binaria">
-        <label for="gender_identity_nonBinary">&emsp;Persona no binaria</label>
-    </div>
-    <div>
-        <input type="radio" id="gender_identity_transgender" name="gender_identity" value="Persona transgénero">
-        <label for="gender_identity_transgender">&emsp;Persona transgénero</label>
     </div>
     <div>
         <input type="radio" id="gender_identity_woman" name="gender_identity" value="Mujer">
@@ -2411,7 +2384,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 5 -->
 <div id="question5">
-    <label for="heritage"><strong>5. ¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
+    <label for="heritage"><strong>¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
     <div>
         <input type="radio" id="heritage_afrodescendant" name="heritage" value="Afrodescendiente">
         <label for="heritage_afrodescendant">&emsp;Afrodescendiente</label>
@@ -2449,7 +2422,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 6 -->
     <div id="question6">
-        <label for="hispanicIdentity"><strong>6. ¿Se identifica como hispana/o/latine?</strong></label>
+        <label for="hispanicIdentity"><strong>¿Se identifica como hispana/o/latine?</strong></label>
         <div>
             <input type="radio" id="hispanic_identity_puertoRican" name="hispanic_identity" value="Sí, de origen puertorriqueño">
             <label for="hispanic_identity_puertoRican">&emsp;Sí, de origen puertorriqueño</label>
@@ -2487,7 +2460,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 7 -->
     <div id="question7">
-        <label for="educationLevel"><strong>7. ¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
+        <label for="educationLevel"><strong>¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
         <div>
             <input type="radio" id="education_level_noPrimary" name="education_level" value="No completé la escuela primaria" required>
             <label for="education_level_noPrimary">&emsp;No completé la escuela primaria</label>
@@ -2525,7 +2498,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 8 -->
     <div id="question8">
-        <label for="incomeLevel"><strong>8. ¿Cuál es su nivel de ingreso?</strong></label>
+        <label for="incomeLevel"><strong>¿Cuál es su nivel de ingreso?</strong></label>
         <div>
             <input type="radio" id="income_noIncome" name="income_level" value="No ingreso" required>
             <label for="income_noIncome">&emsp;No ingreso</label>
@@ -2579,7 +2552,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 9 -->
 <div id="question9">
-    <label for="travelCompanion"><strong>9. ¿Viaja solo o acompañado?</strong></label>
+    <label for="travelCompanion"><strong>¿Viaja solo o acompañado?</strong></label>
     <div>
         <input type="radio" id="travel_companion_solo" name="travel_companion_2" value="Solo" required>
         <label for="travel_companion_solo">&emsp;Solo</label>
@@ -2601,7 +2574,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 10 -->
 <div id="question10">
-    <label for="numberOfCompanions"><strong>10. ¿Con cuántas personas viaja?</strong></label>
+    <label for="numberOfCompanions"><strong>¿Con cuántas personas viaja?</strong></label>
     <input type="number" id="number_of_companions" name="number_of_companions" min="0" required>
     <div id="confirmCompanionsContainer" style="display: none;">
         <button type="button" id="confirmCompanionsButton">Confirmar</button>
@@ -2611,7 +2584,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 11 -->
 <div id="question11">
-    <label for="visitorOrigin"><strong>11. ¿De dónde nos visita?</strong></label>
+    <label for="visitorOrigin"><strong>¿De dónde nos visita?</strong></label>
     <div>
         <input type="radio" id="origin_usa" name="visitor_origin" value="EEUU" required>
         <label for="origin_usa">&emsp;EEUU</label>
@@ -2676,7 +2649,6 @@ Estoy haciendo escala u otro -->
             <option value="Wyoming">Wyoming</option>
         </select>
     </div>
-    <!-- Dropdown that will appear dynamically -->
     <div id="countryDropdownContainer" style="display: none; margin-top: 1px;">
         <label for="countrySelection">Seleccione región:</label>
         <select id="countrySelection" name="country_selection">
@@ -2858,7 +2830,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 12 -->
 <div id="question12">
-    <label for="accommodation"><strong>12. ¿Dónde se hospedó durante su estadía?</strong></label>
+    <label for="accommodation"><strong>¿Dónde se hospedó durante su estadía?</strong></label>
     <div>
         <input type="radio" id="accommodation_airbnb" name="accommodation" value="Airbnb">
         <label for="accommodation_airbnb">&emsp;Airbnb</label>
@@ -2888,7 +2860,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 13 -->
 <div id="question13">
-    <label for="visitPurpose"><strong>13. ¿Cuáles fueron los propósitos principales de su visita? Marque todos los que apliquen</strong></label>
+    <label for="visitPurpose"><strong>¿Cuáles fueron los propósitos principales de su visita? Marque todos los que apliquen</strong></label>
     <div>
         <input type="checkbox" id="visit_purpose_medical" name="visit_purpose" value="Agroculturismo">
         <label for="visit_purpose_medical">&emsp;Agroculturismo</label>
@@ -2922,7 +2894,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 14 -->
 <div id="question14">
-    <label for="activities"><strong>14. ¿Qué actividades realizó durante su visita? Marque todas las que apliquen.</strong></label>
+    <label for="activities"><strong>¿Qué actividades realizó durante su visita? Marque todas las que apliquen.</strong></label>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 5px;">
         <div>
             <input type="checkbox" id="activity_nightlife" name="activities" value="Vida nocturna">
@@ -2998,7 +2970,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 15 -->
 <div id="question15">
-    <label for="discoveryMethod"><strong>15. ¿Cómo se enteró de Puerto Rico como destino de viaje? Marque todas las que apliquen.</strong></label>
+    <label for="discoveryMethod"><strong>¿Cómo se enteró de Puerto Rico como destino de viaje? Marque todas las que apliquen.</strong></label>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; margin-top: 5px;">
         <div>
             <input type="checkbox" id="discovery_travel_agencies" name="discovery_method" value="Agencias de viajes">
@@ -3038,14 +3010,14 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 16 -->
 <div id="question16">
-    <label for="stayDuration"><strong>16. ¿De cuántos días fue su estadía?</strong></label>
+    <label for="stayDuration"><strong>¿De cuántos días fue su estadía?</strong></label>
     <input type="number" id="stay_duration" name="stay_duration" min="0" required placeholder="Ingrese el número de días">
 </div>
 <br>
 
 <!-- Question 17 -->
 <div id="question17">
-    <label for="mainMunicipality"><strong>17. ¿En qué municipio pernoctó la mayor parte de su estadía?</strong></label>
+    <label for="mainMunicipality"><strong>¿En qué municipio pernoctó la mayor parte de su estadía?</strong></label>
     <select id="main_municipality" name="main_municipality" required>
         <option value="">Seleccione...</option>
         <option value="Adjuntas">Adjuntas</option>
@@ -3136,7 +3108,7 @@ Estoy haciendo escala u otro -->
         Prueba 2
         <!-- Question 2 -->
     <div id="question2">
-        <label for="expenseCategories"><strong>2. Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
+        <label for="expenseCategories"><strong>Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
         <div>
             <label for="expense_airplane">&emsp;Avión:</label>
             <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Ingrese el monto" required>
@@ -3170,7 +3142,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 3 -->
     <div id="question3">
-        <label for="age"><strong>3. ¿Cuál es su edad?</strong></label>
+        <label for="age"><strong>¿Cuál es su edad?</strong></label>
         <input type="number" id="age" name="age" required min="1">
         <button type="button" id="confirmAgeBtn">Confirmar Edad</button>
     </div>
@@ -3178,22 +3150,10 @@ Estoy haciendo escala u otro -->
 
      <!-- Question 4 -->
     <div id="question4">
-    <label for="genderIdentity"><strong>4. ¿Cuál es su identidad de género?  </strong></label>
-    <div>
-        <input type="radio" id="gender_identity_genderFluid" name="gender_identity" value="Persona de género fluido">
-        <label for="gender_identity_genderFluid">&emsp;Persona de género fluido</label>
-    </div>
+    <label for="genderIdentity"><strong>¿Cuál es su identidad de género?  </strong></label>
     <div>
         <input type="radio" id="gender_identity_man" name="gender_identity" value="Hombre">
         <label for="gender_identity_man">&emsp;Hombre</label>
-    </div>
-    <div>
-        <input type="radio" id="gender_identity_nonBinary" name="gender_identity" value="Persona no binaria">
-        <label for="gender_identity_nonBinary">&emsp;Persona no binaria</label>
-    </div>
-    <div>
-        <input type="radio" id="gender_identity_transgender" name="gender_identity" value="Persona transgénero">
-        <label for="gender_identity_transgender">&emsp;Persona transgénero</label>
     </div>
     <div>
         <input type="radio" id="gender_identity_woman" name="gender_identity" value="Mujer">
@@ -3212,7 +3172,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 5 -->
 <div id="question5">
-    <label for="heritage"><strong>5. ¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
+    <label for="heritage"><strong>¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
     <div>
         <input type="radio" id="heritage_afrodescendant" name="heritage" value="Afrodescendiente">
         <label for="heritage_afrodescendant">&emsp;Afrodescendiente</label>
@@ -3250,7 +3210,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 6 -->
     <div id="question6">
-        <label for="hispanicIdentity"><strong>6. ¿Se identifica como hispana/o/latine?</strong></label>
+        <label for="hispanicIdentity"><strong>¿Se identifica como hispana/o/latine?</strong></label>
         <div>
             <input type="radio" id="hispanic_identity_puertoRican" name="hispanic_identity" value="Sí, de origen puertorriqueño">
             <label for="hispanic_identity_puertoRican">&emsp;Sí, de origen puertorriqueño</label>
@@ -3288,7 +3248,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 7 -->
     <div id="question7">
-        <label for="educationLevel"><strong>7. ¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
+        <label for="educationLevel"><strong>¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
         <div>
             <input type="radio" id="education_level_noPrimary" name="education_level" value="No completé la escuela primaria" required>
             <label for="education_level_noPrimary">&emsp;No completé la escuela primaria</label>
@@ -3326,7 +3286,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 8 -->
     <div id="question8">
-        <label for="incomeLevel"><strong>8. ¿Cuál es su nivel de ingreso?</strong></label>
+        <label for="incomeLevel"><strong>¿Cuál es su nivel de ingreso?</strong></label>
         <div>
             <input type="radio" id="income_noIncome" name="income_level" value="No ingreso" required>
             <label for="income_noIncome">&emsp;No ingreso</label>
@@ -3380,7 +3340,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 9 -->
 <div id="question9">
-    <label for="travelCompanion"><strong>9. ¿Viaja solo o acompañado?</strong></label>
+    <label for="travelCompanion"><strong>¿Viaja solo o acompañado?</strong></label>
     <div>
         <input type="radio" id="travel_companion_solo" name="travel_companion_2" value="Solo" required>
         <label for="travel_companion_solo">&emsp;Solo</label>
@@ -3402,7 +3362,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 10 -->
 <div id="question10">
-    <label for="numberOfCompanions"><strong>10. ¿Con cuántas personas viaja?</strong></label>
+    <label for="numberOfCompanions"><strong>¿Con cuántas personas viaja?</strong></label>
     <input type="number" id="number_of_companions" name="number_of_companions" min="0" required>
     <div id="confirmCompanionsContainer" style="display: none;">
         <button type="button" id="confirmCompanionsButton">Confirmar</button>
@@ -3412,7 +3372,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 11 -->
 <div id="question11">
-    <label for="visitorOrigin"><strong>11. ¿De dónde nos visita?</strong></label>
+    <label for="visitorOrigin"><strong>¿De dónde nos visita?</strong></label>
     <div>
         <input type="radio" id="origin_usa" name="visitor_origin" value="EEUU" required>
         <label for="origin_usa">&emsp;EEUU</label>
@@ -3477,7 +3437,6 @@ Estoy haciendo escala u otro -->
             <option value="Wyoming">Wyoming</option>
         </select>
     </div>
-    <!-- Dropdown that will appear dynamically -->
     <div id="countryDropdownContainer" style="display: none; margin-top: 1px;">
         <label for="countrySelection">Seleccione región:</label>
         <select id="countrySelection" name="country_selection">
@@ -3659,7 +3618,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 12 -->
 <div id="question12">
-    <label for="accommodation"><strong>12. ¿Dónde se hospedó durante su estadía?</strong></label>
+    <label for="accommodation"><strong>¿Dónde se hospedó durante su estadía?</strong></label>
     <div>
         <input type="radio" id="accommodation_airbnb" name="accommodation" value="Airbnb">
         <label for="accommodation_airbnb">&emsp;Airbnb</label>
@@ -3689,7 +3648,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 13 -->
 <div id="question13">
-    <label for="visitPurpose"><strong>13. ¿Cuáles fueron los propósitos principales de su visita? Marque todos los que apliquen</strong></label>
+    <label for="visitPurpose"><strong>¿Cuáles fueron los propósitos principales de su visita? Marque todos los que apliquen</strong></label>
     <div>
         <input type="checkbox" id="visit_purpose_medical" name="visit_purpose" value="Agroculturismo">
         <label for="visit_purpose_medical">&emsp;Agroculturismo</label>
@@ -3723,7 +3682,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 14 -->
 <div id="question14">
-    <label for="activities"><strong>14. ¿Qué actividades realizó durante su visita? Marque todas las que apliquen.</strong></label>
+    <label for="activities"><strong>¿Qué actividades realizó durante su visita? Marque todas las que apliquen.</strong></label>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-top: 5px;">
         <div>
             <input type="checkbox" id="activity_nightlife" name="activities" value="Vida nocturna">
@@ -3799,7 +3758,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 15 -->
 <div id="question15">
-    <label for="discoveryMethod"><strong>15. ¿Cómo se enteró de Puerto Rico como destino de viaje? Marque todas las que apliquen.</strong></label>
+    <label for="discoveryMethod"><strong>¿Cómo se enteró de Puerto Rico como destino de viaje? Marque todas las que apliquen.</strong></label>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; margin-top: 5px;">
         <div>
             <input type="checkbox" id="discovery_travel_agencies" name="discovery_method" value="Agencias de viajes">
@@ -3839,14 +3798,14 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 16 -->
 <div id="question16">
-    <label for="stayDuration"><strong>16. ¿De cuántos días fue su estadía?</strong></label>
+    <label for="stayDuration"><strong>¿De cuántos días fue su estadía?</strong></label>
     <input type="number" id="stay_duration" name="stay_duration" min="0" required placeholder="Ingrese el número de días">
 </div>
 <br>
 
 <!-- Question 17 -->
 <div id="question17">
-    <label for="mainMunicipality"><strong>17. ¿En qué municipio pernoctó la mayor parte de su estadía?</strong></label>
+    <label for="mainMunicipality"><strong>¿En qué municipio pernoctó la mayor parte de su estadía?</strong></label>
     <select id="main_municipality" name="main_municipality" required>
         <option value="">Seleccione...</option>
         <option value="Adjuntas">Adjuntas</option>
@@ -3936,7 +3895,7 @@ Estoy haciendo escala u otro -->
         Prueba 3
         <!-- Question 2 -->
     <div id="question2">
-        <label for="expenseCategories"><strong>2. Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
+        <label for="expenseCategories"><strong>Aproximadamente, ¿Cuáles fueron sus gastos en las siguientes categorías?</strong></label>
         <div>
             <label for="expense_airplane">&emsp;Avión:</label>
             <input type="number" id="expense_airplane" name="expense_airplane" min="0" step="0.01" placeholder="Ingrese el monto" required>
@@ -3970,7 +3929,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 3 -->
     <div id="question3">
-        <label for="age"><strong>3. ¿Cuál es su edad?</strong></label>
+        <label for="age"><strong>¿Cuál es su edad?</strong></label>
         <input type="number" id="age" name="age" required min="1">
         <button type="button" id="confirmAgeBtn">Confirmar Edad</button>
     </div>
@@ -3978,22 +3937,10 @@ Estoy haciendo escala u otro -->
 
      <!-- Question 4 -->
     <div id="question4">
-    <label for="genderIdentity"><strong>4. ¿Cuál es su identidad de género?  </strong></label>
-    <div>
-        <input type="radio" id="gender_identity_genderFluid" name="gender_identity" value="Persona de género fluido">
-        <label for="gender_identity_genderFluid">&emsp;Persona de género fluido</label>
-    </div>
+    <label for="genderIdentity"><strong>¿Cuál es su identidad de género?  </strong></label>
     <div>
         <input type="radio" id="gender_identity_man" name="gender_identity" value="Hombre">
         <label for="gender_identity_man">&emsp;Hombre</label>
-    </div>
-    <div>
-        <input type="radio" id="gender_identity_nonBinary" name="gender_identity" value="Persona no binaria">
-        <label for="gender_identity_nonBinary">&emsp;Persona no binaria</label>
-    </div>
-    <div>
-        <input type="radio" id="gender_identity_transgender" name="gender_identity" value="Persona transgénero">
-        <label for="gender_identity_transgender">&emsp;Persona transgénero</label>
     </div>
     <div>
         <input type="radio" id="gender_identity_woman" name="gender_identity" value="Mujer">
@@ -4012,7 +3959,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 5 -->
 <div id="question5">
-    <label for="heritage"><strong>5. ¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
+    <label for="heritage"><strong>¿Cómo describe su herencia racial, étnica o cultural?</strong></label>
     <div>
         <input type="radio" id="heritage_afrodescendant" name="heritage" value="Afrodescendiente">
         <label for="heritage_afrodescendant">&emsp;Afrodescendiente</label>
@@ -4050,7 +3997,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 6 -->
     <div id="question6">
-        <label for="hispanicIdentity"><strong>6. ¿Se identifica como hispana/o/latine?</strong></label>
+        <label for="hispanicIdentity"><strong>¿Se identifica como hispana/o/latine?</strong></label>
         <div>
             <input type="radio" id="hispanic_identity_puertoRican" name="hispanic_identity" value="Sí, de origen puertorriqueño">
             <label for="hispanic_identity_puertoRican">&emsp;Sí, de origen puertorriqueño</label>
@@ -4088,7 +4035,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 7 -->
     <div id="question7">
-        <label for="educationLevel"><strong>7. ¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
+        <label for="educationLevel"><strong>¿Cuál es su nivel educativo más alto alcanzado?</strong></label>
         <div>
             <input type="radio" id="education_level_noPrimary" name="education_level" value="No completé la escuela primaria" required>
             <label for="education_level_noPrimary">&emsp;No completé la escuela primaria</label>
@@ -4126,7 +4073,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 8 -->
     <div id="question8">
-        <label for="incomeLevel"><strong>8. ¿Cuál es su nivel de ingreso?</strong></label>
+        <label for="incomeLevel"><strong>¿Cuál es su nivel de ingreso?</strong></label>
         <div>
             <input type="radio" id="income_noIncome" name="income_level" value="No ingreso" required>
             <label for="income_noIncome">&emsp;No ingreso</label>
@@ -4180,7 +4127,7 @@ Estoy haciendo escala u otro -->
 
     <!-- Question 9 -->
 <div id="question9">
-    <label for="travelCompanion"><strong>9. ¿Viaja solo o acompañado?</strong></label>
+    <label for="travelCompanion"><strong>¿Viaja solo o acompañado?</strong></label>
     <div>
         <input type="radio" id="travel_companion_solo" name="travel_companion_2" value="Solo" required>
         <label for="travel_companion_solo">&emsp;Solo</label>
@@ -4202,7 +4149,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 10 -->
 <div id="question10">
-    <label for="numberOfCompanions"><strong>10. ¿Con cuántas personas viaja?</strong></label>
+    <label for="numberOfCompanions"><strong>¿Con cuántas personas viaja?</strong></label>
     <input type="number" id="number_of_companions" name="number_of_companions" min="0" required>
     <div id="confirmCompanionsContainer" style="display: none;">
         <button type="button" id="confirmCompanionsButton">Confirmar</button>
@@ -4212,7 +4159,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 18 -->
 <div id="question18">
-    <label for="travelDestination"><strong>18. ¿Hacia dónde viajas?</strong></label>
+    <label for="travelDestination"><strong>¿Hacia dónde viajas?</strong></label>
     <div>
         <input type="radio" id="destination_usa" name="travel_destination" value="EEUU" required>
         <label for="destination_usa">&emsp;EEUU</label>
@@ -4221,7 +4168,6 @@ Estoy haciendo escala u otro -->
         <input type="radio" id="destination_other" name="travel_destination" value="Otro País">
         <label for="destination_other">&emsp;Otro País</label>
     </div>
-    <!-- Dropdown for states (initially hidden) -->
     <div id="usaStatesContainer" style="display: none; margin-top: 10px;">
         <label for="usaStates">Seleccione el estado:</label>
         <select id="usaStates" name="usa_states">
@@ -4278,7 +4224,6 @@ Estoy haciendo escala u otro -->
             <option value="Wyoming">Wyoming</option>
         </select>
     </div>
-    <!-- Dropdown for countries (initially hidden) -->
     <div id="countriesContainer" style="display: none; margin-top: 10px;">
         <label for="countries">Seleccione el país:</label>
         <select id="countries" name="countries">
@@ -4306,7 +4251,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 19 -->
 <div id="question19">
-    <label for="accommodation"><strong>19. ¿Dónde se hospedará durante su viaje?</strong></label>
+    <label for="accommodation"><strong>¿Dónde se hospedará durante su viaje?</strong></label>
     <div>
         <input type="radio" id="accommodation_airbnb" name="accommodation_1" value="Airbnb">
         <label for="accommodation_airbnb">&emsp;Airbnb</label>
@@ -4332,7 +4277,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 20 -->
 <div id="question20">
-    <label for="relocationReason"><strong>20. Razón de mudanza:</strong></label>
+    <label for="relocationReason"><strong>Razón de mudanza:</strong></label>
     <div id="relocationReasonContainer">
         <div>
             <input type="radio" id="reason_cost_of_living" name="relocation_reason" value="Costo de Vida" required>
@@ -4364,7 +4309,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 21 -->
 <div id="question21">
-    <label for="plannedActivities"><strong>21. ¿Qué actividades realizará durante su visita? Marque todas las que apliquen.</strong></label>
+    <label for="plannedActivities"><strong>¿Qué actividades realizará durante su visita? Marque todas las que apliquen.</strong></label>
     <div id="plannedActivitiesContainer">
         <div>
             <input type="checkbox" id="activity_nightlife" name="planned_activities" value="Vida nocturna">
@@ -4404,7 +4349,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 22 -->
 <div id="question22">
-    <label for="tripDuration"><strong>22. ¿De cuántos días será su viaje?</strong></label>
+    <label for="tripDuration"><strong>¿De cuántos días será su viaje?</strong></label>
     <input type="number" id="tripDuration" name="trip_duration" min="1" placeholder="Especifique número de días" required> <br>
     * Si se está mudando, por favor escriba 999.
 </div>
@@ -4412,7 +4357,7 @@ Estoy haciendo escala u otro -->
 
 <!-- Question 23 -->
 <div id="question23">
-    <label for="estimatedExpenses"><strong>23. ¿Cuánto gastará en su viaje (aproximadamente)?</strong></label>
+    <label for="estimatedExpenses"><strong>¿Cuánto gastará en su viaje (aproximadamente)?</strong></label>
     <input type="number" id="estimatedExpenses" name="estimated_expenses" min="0" step="0.01" placeholder="Ingrese el monto en dólares" required>
 </div>
 <br>
