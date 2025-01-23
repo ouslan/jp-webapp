@@ -65,9 +65,9 @@
                         <section id="dropdowns">
                             <label id="drop_title" for="frequency">Frecuencia:</label>
                             <select name="frequency" id="frequency" onchange="updateHtsCodeDropdown(); updateDownloadLink();">
-                                <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
-                                <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
-                                <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
+                                <option value="yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
+                                <option value="monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
+                                <option value="qrt" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
                             </select>
                         </section>
                     
