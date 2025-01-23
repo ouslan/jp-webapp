@@ -1,3 +1,4 @@
+from re import DEBUG
 from dotenv import load_dotenv
 import os
 
@@ -39,7 +40,7 @@ def get_db_credentials() -> list:
         DEBUG,
     ]
 
-
 def read_secret_file(secret_path):
     with open(secret_path, "r") as file:
+
         return file.read().strip()
