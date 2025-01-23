@@ -1,8 +1,8 @@
-from re import DEBUG
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
+
 
 # Get the Database credentials
 def get_db_credentials() -> list:
@@ -22,12 +22,24 @@ def get_db_credentials() -> list:
         DEBUG = True
     else:
         HOST = "database"
-        PASSWORD = str(read_secret_file('/run/secrets/db-password')).strip()
+        PORT = "5432"
+        PASSWORD = str(read_secret_file("/run/secrets/db-password")).strip()
         DATABASE_URL = f"postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}"
         API_URL = "https://api.econlabs.net"
         DEBUG = False
-    return [USER, PASSWORD, HOST, DATABASE, DATABASE_URL, SECRET_KEY, API_URL, PORT, DEBUG]
+    return [
+        USER,
+        PASSWORD,
+        HOST,
+        DATABASE,
+        DATABASE_URL,
+        SECRET_KEY,
+        API_URL,
+        PORT,
+        DEBUG,
+    ]
+
 
 def read_secret_file(secret_path):
-    with open(secret_path, 'r') as file:
+    with open(secret_path, "r") as file:
         return file.read().strip()
