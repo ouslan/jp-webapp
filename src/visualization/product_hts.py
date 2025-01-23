@@ -68,7 +68,6 @@ def get_data_to_graph(frequency, hts_code, trade_type):
     
     
     hts_list = fetch_hts_codes()
-    print(hts_list)
     
     context = {
         'hts_codes': hts_list['hts_code_first2'].tolist(),
@@ -83,29 +82,21 @@ def products_hts(request):
     
     x_axis, y_axis, context = get_data_to_graph(frequency, hts_code, trade_type)
     
-    print(frequency, hts_code, trade_type)
-
     if request.method == 'POST':
         frequency = request.POST.get('frequency')
         hts_code = request.POST.get('hts_code')
         trade_type = request.POST.get('trade_type')
         
-        print(frequency, hts_code, trade_type)
         x_axis, y_axis, context = get_data_to_graph(frequency, hts_code, trade_type)
         
-        
-            
-    # Add title to the graph
     frequency = frequency.capitalize()
     trade_type = trade_type.capitalize()
     title = f"Frequency: {frequency}    HTS Code: {hts_code}    Trade Type: {trade_type}"
 
-    # Create the graph with the x and y axis
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=x_axis, y=y_axis, mode='lines+markers'))
 
     fig.update_layout(title=title)
 
-    # Render the template with the graph
     return render(request, 'product_hts.html', {'graph': fig.to_html(), **context})
     
