@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 from django.shortcuts import render
 
-API_URL = "http://localhost:8057/"
+API_URL = "http://api.econlabs.net/"
 
 def fetch_trade_data(agg, hts_code):
     url = f"{API_URL}data/trade/jp/?&time&types=hts&agr=false&group=false&data_filter={hts_code}&agg={agg}&update=false"
@@ -32,7 +32,6 @@ def fetch_hts_codes():
         except ValueError as e:
             print(f"Error decoding JSON: {e}")
             return pd.DataFrame() 
-
 
 
 def sort_data(data, frequency, trade_type):
@@ -66,7 +65,6 @@ def get_data_to_graph(frequency, hts_code, trade_type):
     x_axis = data[new_frequency]
     y_axis = data[trade_type]
     
-    
     hts_list = fetch_hts_codes()
     
     context = {
@@ -75,23 +73,26 @@ def get_data_to_graph(frequency, hts_code, trade_type):
     
     return x_axis, y_axis, context
 
+
 def products_hts(request):
-    frequency = "yearly"
-    hts_code = "01"
-    trade_type = "imports"
-    
-    x_axis, y_axis, context = get_data_to_graph(frequency, hts_code, trade_type)
-    
     if request.method == 'POST':
         frequency = request.POST.get('frequency')
         hts_code = request.POST.get('hts_code')
         trade_type = request.POST.get('trade_type')
         
         x_axis, y_axis, context = get_data_to_graph(frequency, hts_code, trade_type)
+        print(f"Frequency: {frequency} | HTS Code: {hts_code} | Trade Type: {trade_type}")
+    else:
+        frequency = "yearly"
+        hts_code = "01"
+        trade_type = "imports"
+        
+        x_axis, y_axis, context = get_data_to_graph(frequency, hts_code, trade_type)
+        print(f"Frequency: {frequency} | HTS Code: {hts_code} | Trade Type: {trade_type}")
         
     frequency = frequency.capitalize()
     trade_type = trade_type.capitalize()
-    title = f"Frequency: {frequency}    HTS Code: {hts_code}    Trade Type: {trade_type}"
+    title = f"Frequency: {frequency} | HTS Code: {hts_code} | Trade Type: {trade_type}"
 
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=x_axis, y=y_axis, mode='lines+markers'))
