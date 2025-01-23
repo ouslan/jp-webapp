@@ -31,7 +31,3 @@ volumes:
 secrets:
   db-password:
     file: password.txt
-
-secrets:
-  db-password:
-    file: password.txt
