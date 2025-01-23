@@ -52,10 +52,11 @@ def refactor_frequency(frequency):
         return 'year'
     elif frequency == 'monthly':
         return 'month'
-    elif frequency == 'qrt':
-        return 'qrt'
     elif frequency == 'fiscal':
-        return 'fiscal'
+        return 'fiscal_year'
+    else:
+        return frequency
+    
     
 def get_data_to_graph(frequency, hts_code, trade_type):
     data = fetch_trade_data(frequency, hts_code)
@@ -95,6 +96,8 @@ def products_hts(request):
         
             
     # Add title to the graph
+    frequency = frequency.capitalize()
+    trade_type = trade_type.capitalize()
     title = f"Frequency: {frequency}    HTS Code: {hts_code}    Trade Type: {trade_type}"
 
     # Create the graph with the x and y axis
