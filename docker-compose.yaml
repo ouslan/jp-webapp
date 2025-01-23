@@ -23,7 +23,7 @@ services:
 
   api:
     container_name: FastAPI
-    image: ouslan/jp-api:dev
+    image: ouslan/jp-api:latest
     restart: always
     secrets:
       - db-password
