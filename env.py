@@ -19,13 +19,13 @@ def get_db_credentials() -> list:
         HOST = "localhost"
         PASSWORD = str(os.getenv("POSTGRES_PASSWORD")).strip()
         DATABASE_URL = f"postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}"
-        API_URL = "api"
+        API_URL = str(os.getenv("API_URL")).strip()
     else:
         HOST = "database"
         PORT = "5432"
         PASSWORD = str(read_secret_file("/run/secrets/db-password")).strip()
         DATABASE_URL = f"postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}"
-        API_URL = "https://api.econlabs.net"
+        API_URL = "api"
     return [
         USER,
         PASSWORD,
