@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 DEBUG = creds[8]
 
-ALLOWED_HOSTS = ["localhost", "dev.econlabs.net", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "dev.econlabs.net", "127.0.0.1", "192.168.50.24"]
 
 CSRF_TRUSTED_ORIGINS = ["https://dev.econlabs.net"]
 
