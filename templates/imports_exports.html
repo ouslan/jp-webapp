@@ -103,24 +103,10 @@
                 <section id="buttons">
                     <section id="dropdowns">
                         <label id="drop_title" for="frequency">Frecuencia:</label>
-                        <select name="frequency" id="frequency" onchange="updateSecondDropdown(); updateDownloadLink();">
+                        <select name="frequency" id="frequency">
                             <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
                             <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
                             <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
-                        </select>
-                    </section>
-                
-                    <section id="dropdowns">
-                        <label id="drop_title" for="second_dropdown">Periodo:</label>
-                        <select name="second_dropdown" id="second_dropdown">
-                            <option value="default_value" {% if selected_second_dropdown == "default_value" %}selected{% endif %}>Default</option>
-                        </select>
-                    </section>
-                
-                    <section id="dropdowns">
-                        <label id="drop_title" for="third_dropdown">Año:</label>
-                        <select name="third_dropdown" id="third_dropdown">
-                            <option value="default_value" {% if selected_third_dropdown == "default_value" %}selected{% endif %}>Default</option>
                         </select>
                     </section>
                 
@@ -161,30 +147,13 @@
                 <section id="buttons">
                     <section id="dropdowns">
                         <label id="drop_title" for="frequency_2">Frecuencia:</label>
-                        <select name="frequency_2" id="frequency_2" onchange="updateSecondDropdown2(); updateDownloadLink2();">
-                            <option value="Yearly" {% if selected_frequency_2 == "Yearly" %}selected{% endif %}>Yearly</option>
-                            <option value="Monthly" {% if selected_frequency_2 == "Monthly" %}selected{% endif %}>Monthly</option>
-                            <option value="Quarterly" {% if selected_frequency_2 == "Quarterly" %}selected{% endif %}>Quarterly</option>
+                        <select name="frequency_2" id="frequency_2">
+                            <option value="Yearly" {% if selected_frequency == "Yearly" %}selected{% endif %}>Yearly</option>
+                            <option value="Monthly" {% if selected_frequency == "Monthly" %}selected{% endif %}>Monthly</option>
+                            <option value="Quarterly" {% if selected_frequency == "Quarterly" %}selected{% endif %}>Quarterly</option>
                         </select>
                     </section>
-                    <section id="dropdowns">
-                        <label id="drop_title" for="second_dropdown_2">Periodo:</label>
-                        <select name="second_dropdown_2" id="second_dropdown_2">
-                            <option value="default_value" {% if selected_second_dropdown_2 == "default_value" %}selected{% endif %}>Default</option>
-                            {% if selected_frequency_2 == "Quarterly" %}
-                                <option value="1" {% if selected_second_dropdown_2 == "1" %}selected{% endif %}>Qtr 1</option>
-                                <option value="2" {% if selected_second_dropdown_2 == "2" %}selected{% endif %}>Qtr 2</option>
-                                <option value="3" {% if selected_second_dropdown_2 == "3" %}selected{% endif %}>Qtr 3</option>
-                                <option value="4" {% if selected_second_dropdown_2 == "4" %}selected{% endif %}>Qtr 4</option>
-                            {% endif %}
-                        </select>
-                    </section>
-                    <section id="dropdowns">
-                        <label id="drop_title" for="third_dropdown_2">Año:</label>
-                        <select name="third_dropdown_2" id="third_dropdown_2">
-                            <option value="default_value" {% if selected_third_dropdown_2 == "default_value" %}selected{% endif %}>Default</option>
-                        </select>
-                    </section>
+
                     <button id="submit_2" type="submit">Submit</button>
         
                     <div class="download_container_2">
