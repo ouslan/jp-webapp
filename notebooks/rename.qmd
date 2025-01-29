@@ -1,0 +1,21 @@
+---
+title: "standerlize folders"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+```{python}
+import os
+os.chdir("..")
+```
+
+```{python}
+import polars as pl
+import pandas as pd
+```
+
+```{python}
+for directory in os.listdir("data/indicadores_economicos"):
+  os.rename(directory, directory.lower().replace(" ", "_"))
+```

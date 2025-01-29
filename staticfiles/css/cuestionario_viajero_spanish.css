@@ -1,0 +1,106 @@
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    width: 90%;
+    margin-left: 3.5%;
+    margin-bottom: 40px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.header, main {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 26px;
+    border-radius: 8px;
+}
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* HEADER */
+#header_image {
+    width: 200px;
+    height: 200px;
+}
+
+#header_left {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-right: 30%;
+    text-align: left;
+    border:none;
+}
+
+#header_center {
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 20px;
+    border:none;
+    width: 60%;
+}
+
+#header_right {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-left: 30%;
+    text-align: right;
+    border:none;
+}
+
+.body_header {
+    display: block;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+
+/* Style for the hyperlink box to change language */
+.red-box-link {
+    display: inline-block; /* Makes the link behave like a block but fit content */
+    background-color: rgb(71, 143, 167); /* Red background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for spacing */
+    text-align: center; /* Centers the text inside the box */
+    text-decoration: none; /* Removes the underline */
+    font-weight: bold; /* Makes the text bold */
+    border-radius: 5px; /* Rounds the corners of the box */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.red-box-link:hover {
+    background-color: darkblue; /* Changes to a darker red on hover */
+}
