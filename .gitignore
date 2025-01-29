@@ -172,6 +172,7 @@ data/cuestionarios/*
 # ignore mac files
 *.DS_Store
 *.sqlite
+node_modules/
 
 # ignore quarter files 
 notebooks/*
