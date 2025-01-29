@@ -8,7 +8,7 @@ function Home() {
       <h1>Home Page</h1>
       <button onClick={() => navigate('/cuestionarios')}>Ir a Cuestionarios</button>
       <button onClick={() => navigate('/proyectos')}>Ir a Proyectos</button>
-      <button onClick={() => navigate('/colaboradores')}>Ir a Cuestionarios</button>
+      <button onClick={() => navigate('/colaboradores')}>Ir a Colaboradores</button>
     </div>
   );
 }
