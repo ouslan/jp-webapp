@@ -2,7 +2,6 @@ body {
     overflow-x: hidden;
     margin: 0 auto;
     padding: 0;
-    background-color: #f9f9f9;
     max-width: 1500px;
     width: 90%;
     justify-content: center;
@@ -17,10 +16,15 @@ body {
     margin-top: 26px;
     border-radius: 8px;
 }
+
 .header {
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+.form, main {
+    width: 100.2%;
 }
 
 .header div {
@@ -209,4 +213,10 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
+}
+
+.page {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: auto;
 }

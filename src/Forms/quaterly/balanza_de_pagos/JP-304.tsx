@@ -6,7 +6,7 @@ const JP_304: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+    <div className='page'>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,6 +22,7 @@ const JP_304: React.FC = () => {
         <link rel="stylesheet" href="/css/website.css" />
       </head>
 
+      {/* Encabezado */}
       <section className="header">
         <table>
           <tbody>
@@ -59,7 +60,7 @@ const JP_304: React.FC = () => {
 
       {/* Formulario */}
       <main>
-        <form method="POST" action="/api/submit-form">
+        <form method="POST" action="/api/submit-form" className="form">
           <section className="trimester">
             Trimestre de
             <select id="meses" name="start_month" required>
