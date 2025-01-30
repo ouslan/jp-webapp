@@ -15,6 +15,10 @@ th, td {
     text-align: center;
 }
 
+#center_dropdown_year {
+    text-align: center;
+}
+
 th {
     background-color: #f2f2f2;
 }
@@ -29,11 +33,12 @@ body {
     justify-content: center;
 }
 
-input {
+input, .dropdown_fiscal_year {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #ffffff;
+    height: 28px;
 }
 
 #center-item {

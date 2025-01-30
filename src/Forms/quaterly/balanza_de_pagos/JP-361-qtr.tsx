@@ -54,23 +54,24 @@ const JP_361_qrt: React.FC = () => {
               <tbody>
                 <tr>
                   <th colSpan={2}>Part I : Income and Expenses</th>
-                  <th id="center_dropdown">
-                    <input
-                      type="number"
-                      name="income_expenses_year_1"
-                      min={1000}
-                      max={9999}
-                      placeholder="Year"
-                      required
-                    />{" "}
-                    <br />
-                    <select name="dropdown_fiscal_year_1">
-                      {["Q1-(Jan-Mar)", "Q2-(Apr-Jun)", "Q3-(Jul-Sep)", "Q4-(Oct-Dec)"].map(
-                        (q, i) => (
-                          <option key={i} value={q}>{q}</option>
-                        )
-                      )}
-                    </select>
+                  <th id="center_dropdown_year">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <input
+                        type="number"
+                        name="income_expenses_year_1"
+                        min={1000}
+                        max={9999}
+                        placeholder="Year"
+                        required
+                      />
+                      <select name="dropdown_fiscal_year_1" className='dropdown_fiscal_year' required>
+                        {["Q1-(Jan-Mar)", "Q2-(Apr-Jun)", "Q3-(Jul-Sep)", "Q4-(Oct-Dec)"].map((q, i) => (
+                          <option key={i} value={q}>
+                            {q}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </th>
                 </tr>
 
