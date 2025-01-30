@@ -67,7 +67,6 @@ import IP_110_qtr from  './Forms/quaterly/ingreso_neto/IP-110-qtr';
 import IP_210_qtr from  './Forms/quaterly/ingreso_neto/IP-210-qtr';
 import IP_220_qtr from  './Forms/quaterly/ingreso_neto/IP-220-qtr';
 import IP_230_qtr from  './Forms/quaterly/ingreso_neto/IP-230-qtr';
-
 function App() {
   return (
     <Routes>
@@ -90,7 +89,6 @@ function App() {
       <Route path="/JP-544-2" element={<JP_544_2 />} />
       <Route path="/JP-544" element={<JP_544 />} />
       <Route path="/JP-547" element={<JP_547 />} />
-
       <Route path="/JP-304" element={<JP_304 />} />
       <Route path="/JP-361-qtr" element={<JP_361_qtr />} />
       <Route path="/JP-362-qtr" element={<JP_362_qtr />} />
@@ -100,7 +98,6 @@ function App() {
       <Route path="/JP-529-qtr" element={<JP_529_qtr />} />
       <Route path="/JP-536-2-qtr" element={<JP_536_2_qtr />} />
       <Route path="/JP-544-qtr" element={<JP_544_qtr />} />
-
       <Route path="/IP-110" element={<IP_110 />} />
       <Route path="/IP-210" element={<IP_210 />} />
       <Route path="/IP-220" element={<IP_220 />} />
@@ -133,7 +130,6 @@ function App() {
       <Route path="/JP-560-63110" element={<JP_560_63110 />} />
       <Route path="/JP-560-63111" element={<JP_560_63111 />} />
       <Route path="/JP-560-63210" element={<JP_560_63210 />} />
-
       <Route path="/IP-110-qtr" element={<IP_110_qtr />} />
       <Route path="/IP-210-qtr" element={<IP_210_qtr />} />
       <Route path="/IP-220-qtr" element={<IP_220_qtr />} />
