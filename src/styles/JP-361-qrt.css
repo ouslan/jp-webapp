@@ -89,32 +89,23 @@ input {
 }
 
 #signature, #date {
-    width: 110%;
     border: none;
-    margin-top: 5px;
     font-size: 30px; 
     font-style: italic;
-    height: 80px;
+}
+
+#date {
+    width: 340px;
 }
 
 #position, #phone {
-    width: 110%;
     border: none;
-    margin-top: 5px;
     font-size: 30px; 
     font-style: italic;
 }
 
 #phone {
-    height: 70%;
-}
-
-#position {
-    margin-top: -26px;
-}
-
-#signature-bottom {
-    margin-top: 10px;
+    width: 340px;
 }
 
 .big-box-bottom {
@@ -123,19 +114,20 @@ input {
     margin-top: 80px;
 }
 
-.left-signature {
-    width: 290px;
-    padding-top: 1px;
-    line-height: 1.5;
-    margin-right: 500px;
-    margin-bottom: 30px;
+.left-signature-1 {
+    margin-left: 50px;
 }
 
-.right-signature {
-    width: 290px;
-    padding-top: 10px;
-    line-height: 1.5;
-    margin-top: 90px;
+.left-signature-2 {
+    margin-left: 65px;
+}
+
+.right-signature-1 {
+    margin-left: 200px;
+}
+
+.right-signature-2 {
+    margin-left: 200px;
 }
 
 .submit-button-container {

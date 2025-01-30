@@ -145,24 +145,24 @@ const JP_361_qrt: React.FC = () => {
           {/* Firmas y fecha */}
           <section>
             <div className="big-box-bottom">
-              <div className="left-signature">
+              <div className="left-signature-1">
                 <input type="text" id="signature" name="signature" placeholder="Name" required />
                 <hr />
                 <p>Name of person filling the questionnaire</p>
               </div>
-              <div className="right-signature">
+              <div className="right-signature-1">
                 <input type="text" id="position" name="position" placeholder="Position" required />
                 <hr />
                 <p>Position</p>
               </div>
             </div>
             <div className="big-box-bottom" id="signature-bottom">
-              <div className="left-signature">
+              <div className="left-signature-2">
                 <input type="date" id="date" name="date" required />
                 <hr />
                 <p>Date</p>
               </div>
-              <div className="right-signature">
+              <div className="right-signature-2">
                 <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" placeholder="123-456-7890" required />
                 <hr />
                 <p>Phone Number</p>
