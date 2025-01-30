@@ -23,18 +23,18 @@ function JP_362_qrt() {
                   placeholder="Año / Year"
                   required
                 />
-                <br />
-                <select id="quater_select" name="dropdown_fiscal_year_1">
-                  <option value="">Select Trimester</option>
-                  <option value="Q1-(Jan-Mar)">Q1-(Jan-Mar)</option>
-                  <option value="Q2-(Apr-Jun)">Q2-(Apr-Jun)</option>
-                  <option value="Q3-(Jul-Sep)">Q3-(Jul-Sep)</option>
-                  <option value="Q4-(Oct-Dec)">Q4-(Oct-Dec)</option>
+                <br/>
+                <select name="dropdown_fiscal_year_1" className='dropdown_fiscal_year' required>
+                  {["Q1-(Jan-Mar)", "Q2-(Apr-Jun)", "Q3-(Jul-Sep)", "Q4-(Oct-Dec)"].map((q, i) => (
+                    <option key={i} value={q}>
+                      {q}
+                    </option>
+                  ))}
                 </select>
               </td>
               <td id="header_center">
                 <img
-                  src="/path/to/logo.jpg"
+                  src="src/assets/JP_poster.jpg"
                   alt="Logo Junta Planificación"
                   id="header_image"
                 />
