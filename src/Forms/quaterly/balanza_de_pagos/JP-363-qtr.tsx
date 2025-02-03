@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../../../styles/JP-363-qrt.css";
-import "../../../styles/website.css"
+
 
 function JP_363_qtr() {
   const navigate = useNavigate();

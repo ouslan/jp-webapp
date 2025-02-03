@@ -177,7 +177,7 @@ td {
 #position, #phone, #date {
   width: 110%;
   border: none;
-  margin-top: 5px;
+  margin-top: 18px;
   font-size: 30px; 
   font-style: italic;
 }
