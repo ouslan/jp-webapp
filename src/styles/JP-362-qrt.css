@@ -161,10 +161,6 @@ input {
     margin-bottom: 10px;
 }
 
-.divider-container {
-    margin-top: 30px;
-}
-
 #custom-line {
     border-top: 2px solid #333;
     margin: 20px 0;
@@ -255,10 +251,16 @@ background-color: white;
 
 .body_header {
     display: flex;
+    margin-left: 60px;
 }
 
 #table_title {
     text-align: left;
+}
+
+.divider-container {
+    margin-top: 0px;
+    margin-right: 130px;
 }
 
 
