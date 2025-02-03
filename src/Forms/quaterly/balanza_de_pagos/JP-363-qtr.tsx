@@ -16,27 +16,27 @@ function JP_363_qtr() {
       <link
         rel="icon"
         type="image/x-icon"
-        href="{% static 'images/favicon.ico' %}"
+        
       />
       <link
         rel="apple-touch-icon"
         type="image/x-icon"
-        href="{% static 'images/favicon-16x16.png' %}"
+        
       />
       <link
         rel="apple-touch-icon"
         type="image/x-icon"
-        href="{% static 'images/favicon-32x32.png' %}"
+        
       />
       <link
         rel="apple-touch-icon"
         type="image/x-icon"
-        href="{% static 'images/android-chrome-192x192.png' %}"
+        
       />
       <link
         rel="apple-touch-icon"
         type="image/x-icon"
-        href="{% static 'images/android-chrome-512x512.png' %}"
+        
       />
       {/* Header */}
       <section className="header">
@@ -70,7 +70,7 @@ function JP_363_qtr() {
               <br />
               Quaterly
             </p>
-            <table>
+            <table id='table-container'>
               <tbody>
                 <tr id="table-header">
                   <th rowSpan={3}> INVESTMENT IN: </th>

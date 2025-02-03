@@ -138,9 +138,9 @@ td {
 }
 
 #title {
-  text-align: center;
   font-weight: bold;
   font-size: 18px;
+  margin-left: 10px;
 }
 
 #invest-column {
@@ -182,3 +182,6 @@ td {
   font-style: italic;
 }
 
+#table-container {
+  margin-left: 5px;
+}
