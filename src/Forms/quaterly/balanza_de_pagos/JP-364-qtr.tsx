@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import "../../../styles/JP-364-qtr.css";
 
 function JP_364_qtr() {
   const navigate = useNavigate();
@@ -559,7 +560,7 @@ function JP_364_qtr() {
             <tr>
               <th rowSpan={2}>Partida</th>
               <th rowSpan={2}>
-                <select id="quater_select" name="dropdown_fiscal_year_3">
+                <select id="quater_select_2" name="dropdown_fiscal_year_3">
                   <option value="">Select Trimester</option>
                   <option value="Q1-(Jan-Mar)">Q1-(Jan-Mar)</option>
                   <option value="Q2-(Apr-Jun)">Q2-(Apr-Jun)</option>
