@@ -3,6 +3,7 @@ import Home from './home'; //  Home component
 import Cuestionarios from './cuestionarios'; //  Cuestionarios component
 import Proyectos from './proyectos'; //  Cuestionarios component
 import Colaboradores from './colaboradores'; //  Cuestionarios component
+import Altair_map from './altair_map'
 
           {/* Import all links to forms */}
 import JP_541 from  './Forms/yearly/construccion/JP-541';
@@ -135,6 +136,7 @@ function App() {
       <Route path="/IP-220-qtr" element={<IP_220_qtr />} />
       <Route path="/IP-230-qtr" element={<IP_230_qtr />} />
 
+      <Route path="/altair_map" element={<Altair_map />} />
 
     </Routes>
   );
