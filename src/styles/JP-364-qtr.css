@@ -172,20 +172,23 @@ body {
     margin-top: 80px;
   }
   
-  .center-signature {
-    margin-top: 1px;
-    margin-right: 40px;
-    margin-left: 40px;
-  }
-  
   .left-signature {
     padding-top: 1px;
     line-height: 1.5;
   }
   
+  .center-signature {
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-top: -207px;
+  }
+
   .right-signature {
     padding-top: 1px;
     line-height: 1.5;
+    margin-top: -32px;
   }
   
   #header_inputs_right {
@@ -255,25 +258,16 @@ body {
     border:none;
   }
   
-  #signature {
+  #position, #phone {
     width: 110%;
-    height: 45px;
     border: none;
-    margin-top: 5px;
+    margin-top: 18px;
     font-size: 30px; 
     font-style: italic;
-    font-family: 'Dancing Script', cursive;
-    background-color: white;
   }
-  
-  #phone, #position {
-    width: 110%;
-    height: 45px;
-    border: none;
-    margin-top: 5px;
-    font-size: 30px; 
-    font-style: italic;
-    background-color: white;
+
+  #phone, #position, #signature {
+    height: 30%;;
   }
   
   #signature-bottom {
