@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-DEBUG = creds[8]
+DEBUG = False
 
 ALLOWED_HOSTS = ["localhost", "dev.econlabs.net", "127.0.0.1", "192.168.50.24"]
 
