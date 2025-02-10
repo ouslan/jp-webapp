@@ -49,7 +49,7 @@ const JP_361_qrt: React.FC = () => {
           </h2>
 
           {/* Tabla de ingresos y gastos */}
-          <div>
+          <div className='talble-container'>
             <table>
               <tbody>
                 <tr>
@@ -57,6 +57,7 @@ const JP_361_qrt: React.FC = () => {
                   <th id="center_dropdown_year">
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                       <input
+                        className='year_input'
                         type="number"
                         name="income_expenses_year_1"
                         min={1000}
@@ -119,7 +120,7 @@ const JP_361_qrt: React.FC = () => {
           </div>
 
           {/* Tabla de balances */}
-          <div className="second-table">
+          <div className='talble-container' id='table-2'>
             <table>
               <tbody>
                 <tr>

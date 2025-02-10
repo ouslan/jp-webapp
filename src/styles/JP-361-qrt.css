@@ -156,3 +156,16 @@ input, .dropdown_fiscal_year {
 .submit-button:hover {
     background-color: rgb(6, 122, 255);
 }
+
+.talble-container {
+    margin-right: 100px;
+}
+
+.year_input {
+    width: 100px;
+    margin-top: 4px;
+}
+
+#table-2 {
+    margin-top: 50px;
+}
