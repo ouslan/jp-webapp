@@ -441,3 +441,15 @@ input {
     background-color: white;
   }
 
+  .header_table {
+    margin-right: 50px;
+  }
+
+  .dropdown_fiscal_year {
+    margin-right: 10px;
+  }
+
+  .main_table {
+    margin-right: 5px;
+  }
+

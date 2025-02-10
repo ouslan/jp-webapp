@@ -10,39 +10,10 @@ function JP_529_qtr() {
   <meta charSet="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JP-529</title>
-  <link
-    rel="icon"
-    type="image/x-icon"
-    href="{% static 'images/favicon.ico' %}"
-  />
-  <link
-    rel="apple-touch-icon"
-    type="image/x-icon"
-    href="{% static 'images/favicon-16x16.png' %}"
-  />
-  <link
-    rel="apple-touch-icon"
-    type="image/x-icon"
-    href="{% static 'images/favicon-32x32.png' %}"
-  />
-  <link
-    rel="apple-touch-icon"
-    type="image/x-icon"
-    href="{% static 'images/android-chrome-192x192.png' %}"
-  />
-  <link
-    rel="apple-touch-icon"
-    type="image/x-icon"
-    href="{% static 'images/android-chrome-512x512.png' %}"
-  />
-  <link
-    rel="stylesheet"
-    href="{% static 'css/forms/balanza_de_pagos/JP-529-qtr.css' %}"
-  />
-  <link rel="stylesheet" href="{% static 'css/website.css' %}" />
+
   {/* Header */}
   <section className="header">
-    <table>
+    <table className='header_table'>
       <tbody>
         <tr>
           <td id="header_left">
@@ -84,7 +55,7 @@ function JP_529_qtr() {
   <main>
     <form method="POST" action="{% url 'web_app:JP-529-qtr' %}">
       <section className="trimester">
-        <select name="dropdown_fiscal_year_2">
+        <select name="dropdown_fiscal_year_2" className='dropdown_fiscal_year'>
           <option value="">Select Trimester</option>
           <option value="Q1-(Jan-Mar)">Q1-(Jan-Mar)</option>
           <option value="Q2-(Apr-Jun)">Q2-(Apr-Jun)</option>
@@ -98,10 +69,9 @@ function JP_529_qtr() {
           min={1000}
           max={9999}
           placeholder="Año"
-          
         />
       </section>
-      <table>
+      <table className='main_table'>
         <tbody>
           <tr>
             <th id="left_box" colSpan={2}>
