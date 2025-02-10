@@ -71,639 +71,641 @@ function JP_529_qtr() {
           placeholder="Año"
         />
       </section>
-      <table className='main_table'>
-        <tbody>
-          <tr>
-            <th id="left_box" colSpan={2}>
-              Nombre de la Institución:{" "}
-              <input
-                type="text"
-                id="nombre"
-                name="company"
-                placeholder="Company Name"
-                
-              />
-            </th>
-            <th id="right_box">
-              Dirección:{" "}
-              <input
-                type="text"
-                id="direccion"
-                name="address"
-                placeholder="Address"
-                
-              />
-            </th>
-          </tr>
-          <tr>
-            <th id="left_box">
-              Persona de Contacto:{" "}
-              <input
-                type="text"
-                id="contacto"
-                name="liaison_officer"
-                placeholder="Liaison Officer"
-                
-              />
-            </th>
-            <th id="no_border">
-              Correo Electrónico:{" "}
-              <input
-                type="text"
-                id="title"
-                name="email"
-                placeholder="sophie@email.com"
-                
-              />
-            </th>
-            <th id="right_box">
-              Teléfono:{" "}
-              <input
-                type="tel"
-                id="telefono"
-                name="tel"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                minLength={12}
-                maxLength={12}
-                placeholder="123-456-7890"
-                
-              />
-            </th>
-          </tr>
-        </tbody>
-      </table>
-      <section>
-        <br />
-        Es Institución sin Fines de Lucro?
-        <input
-          type="radio"
-          id="radio-3"
-          name="choice"
-          
-          defaultValue="Si"
-        />
-        Sí
-        <input
-          type="radio"
-          id="radio-3"
-          name="choice"
-          
-          defaultValue="No"
-        />
-        No
-        <p>
-          <strong>I. APORTACIONES FEDERALES RECIBIDAS</strong>
+      <section className='main_table'>
+        <table>
+          <tbody>
+            <tr>
+              <th id="left_box" colSpan={2}>
+                Nombre de la Institución:{" "}
+                <input
+                  type="text"
+                  id="nombre"
+                  name="company"
+                  placeholder="Company Name"
+                  
+                />
+              </th>
+              <th id="right_box">
+                Dirección:{" "}
+                <input
+                  type="text"
+                  id="direccion"
+                  name="address"
+                  placeholder="Address"
+                  
+                />
+              </th>
+            </tr>
+            <tr>
+              <th id="left_box">
+                Persona de Contacto:{" "}
+                <input
+                  type="text"
+                  id="contacto"
+                  name="liaison_officer"
+                  placeholder="Liaison Officer"
+                  
+                />
+              </th>
+              <th id="no_border">
+                Correo Electrónico:{" "}
+                <input
+                  type="text"
+                  id="title"
+                  name="email"
+                  placeholder="sophie@email.com"
+                  
+                />
+              </th>
+              <th id="right_box">
+                Teléfono:{" "}
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  minLength={12}
+                  maxLength={12}
+                  placeholder="123-456-7890"
+                  
+                />
+              </th>
+            </tr>
+          </tbody>
+        </table>
+        <section>
           <br />
-        </p>
-        <ul>A. Aportaciones federales directas</ul>
-        <ul>
-          <h6>En miles de dólares ($000)</h6>
-        </ul>
+          Es Institución sin Fines de Lucro?
+          <input
+            type="radio"
+            id="radio-3"
+            name="choice"
+            
+            defaultValue="Si"
+          />
+          Sí
+          <input
+            type="radio"
+            id="radio-3"
+            name="choice"
+            
+            defaultValue="No"
+          />
+          No
+          <p>
+            <strong>I. APORTACIONES FEDERALES RECIBIDAS</strong>
+            <br />
+          </p>
+          <ul>A. Aportaciones federales directas</ul>
+          <ul>
+            <h6>En miles de dólares ($000)</h6>
+          </ul>
+          <p />
+        </section>
+        <table>
+          <tbody>
+            <tr>
+              <td id="table_header">
+                <p>
+                  Nombre de la
+                  <br />
+                  Agencia Federal
+                </p>
+              </td>
+              <td id="table_header">
+                <p>Programa Federal</p>
+              </td>
+              <td id="table_header">
+                <p>Cantidad Recibida $</p>
+              </td>
+              <td id="table_header">
+                <p>Fecha de Recibo</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_a1"
+                  placeholder="Federal Company Name"
+                  
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_a1"
+                  placeholder="Federal Program"
+                  
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_a1"
+                  placeholder="Recived Money"
+                  
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="date_a1"
+                  placeholder="MM/DD/YYYY"
+                  
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_a2"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_a2"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_a2"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_a2" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_a3"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_a3"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_a3"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_a3" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_a4"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_a4"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_a4"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_a4" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_a5"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_a5"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_a5"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_a5" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_a6"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_a6"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_a6"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_a6" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_a7"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_a7"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_a7"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_a7" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_a8"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_a8"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_a8"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_a8" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p></p>
+        <ul>B. Aportaciones a través de agencias locales</ul>
         <p />
-      </section>
-      <table>
-        <tbody>
-          <tr>
-            <td id="table_header">
-              <p>
-                Nombre de la
-                <br />
-                Agencia Federal
-              </p>
-            </td>
-            <td id="table_header">
-              <p>Programa Federal</p>
-            </td>
-            <td id="table_header">
-              <p>Cantidad Recibida $</p>
-            </td>
-            <td id="table_header">
-              <p>Fecha de Recibo</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_a1"
-                placeholder="Federal Company Name"
-                
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_a1"
-                placeholder="Federal Program"
-                
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_a1"
-                placeholder="Recived Money"
-                
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="date_a1"
-                placeholder="MM/DD/YYYY"
-                
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_a2"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_a2"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_a2"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_a2" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_a3"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_a3"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_a3"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_a3" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_a4"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_a4"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_a4"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_a4" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_a5"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_a5"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_a5"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_a5" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_a6"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_a6"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_a6"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_a6" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_a7"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_a7"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_a7"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_a7" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_a8"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_a8"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_a8"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_a8" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <p></p>
-      <ul>B. Aportaciones a través de agencias locales</ul>
-      <p />
-      <table>
-        <tbody>
-          <tr>
-            <td id="table_header">
-              <p>
-                Nombre de la
-                <br />
-                Agencia Federal
-              </p>
-            </td>
-            <td id="table_header">
-              <p>Programa Federal</p>
-            </td>
-            <td id="table_header">
-              <p>Cantidad Recibida $</p>
-            </td>
-            <td id="table_header">
-              <p>Fecha de Recibo</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_b1"
-                placeholder="Federal Company Name"
-                
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_b1"
-                placeholder="Federal Program"
-                
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_b1"
-                placeholder="Recived Money"
-                
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="date_b1"
-                placeholder="MM/DD/YYYY"
-                
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_b2"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_b2"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_b2"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_b2" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_b3"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_b3"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_b3"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_b3" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_b4"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_b4"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_b4"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_b4" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_b5"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_b5"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_b5"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_b5" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_b6"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_b6"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_b6"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_b6" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_b7"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_b7"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_b7"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_b7" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="agencia_b8"
-                placeholder="Federal Company Name"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="text"
-                name="federal_program_b8"
-                placeholder="Federal Program"
-              />
-            </td>
-            <td>
-              {" "}
-              <input
-                type="number"
-                name="quantity_b8"
-                placeholder="Recived Money"
-              />
-            </td>
-            <td>
-              {" "}
-              <input type="text" name="date_b8" placeholder="MM/DD/YYYY" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        <table>
+          <tbody>
+            <tr>
+              <td id="table_header">
+                <p>
+                  Nombre de la
+                  <br />
+                  Agencia Federal
+                </p>
+              </td>
+              <td id="table_header">
+                <p>Programa Federal</p>
+              </td>
+              <td id="table_header">
+                <p>Cantidad Recibida $</p>
+              </td>
+              <td id="table_header">
+                <p>Fecha de Recibo</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_b1"
+                  placeholder="Federal Company Name"
+                  
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_b1"
+                  placeholder="Federal Program"
+                  
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_b1"
+                  placeholder="Recived Money"
+                  
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="date_b1"
+                  placeholder="MM/DD/YYYY"
+                  
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_b2"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_b2"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_b2"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_b2" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_b3"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_b3"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_b3"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_b3" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_b4"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_b4"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_b4"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_b4" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_b5"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_b5"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_b5"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_b5" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_b6"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_b6"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_b6"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_b6" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_b7"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_b7"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_b7"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_b7" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="agencia_b8"
+                  placeholder="Federal Company Name"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="text"
+                  name="federal_program_b8"
+                  placeholder="Federal Program"
+                />
+              </td>
+              <td>
+                {" "}
+                <input
+                  type="number"
+                  name="quantity_b8"
+                  placeholder="Recived Money"
+                />
+              </td>
+              <td>
+                {" "}
+                <input type="text" name="date_b8" placeholder="MM/DD/YYYY" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </section>
       <p id="page-number">1</p>
     </form>
   </main>
