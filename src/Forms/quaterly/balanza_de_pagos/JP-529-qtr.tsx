@@ -909,54 +909,59 @@ function JP_529_qtr() {
       </table>
     </section>
     <section>
-      <div className="big-box-bottom">
-        <div className="left-signature">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Nombre"
-            
-          />{" "}
-          {/* Signature Input */}
-          <hr /> {/* Signature Line */}
-          <p>
-            Nombre de la persona que suple la información:
-            <br />
-          </p>
-        </div>
-        <div className="center-signature">
-          <input
-            type="text"
-            id="position"
-            name="puesto"
-            placeholder="Título"
-            
-          />
-          {/* Signature Input */}
-          <hr /> {/* Signature Line */}
-          <p>
-            Título o puesto:
-            <br />
-          </p>
-        </div>
-        <div className="right-signature">
-          <input
-            type="date"
-            id="date"
-            name="date"
-            placeholder="Date"
-            
-          />{" "}
-          {/* Signature Input */}
-          <hr /> {/* Signature Line */}
-          <p>
-            Date
-            <br />
-          </p>
-        </div>
-      </div>
-    </section>
+            <div className="big-box-bottom">
+              <div className="left-signature">
+                <input
+                  type="text"
+                  id="signature"
+                  name="signature"
+                  placeholder="Nombre"
+                  
+                />{" "}
+                {/* Signature Input */}
+                <hr /> {/* Signature Line */}
+                <p>
+                  Nombre de la persona que suple la información:
+                  <br />
+                </p>
+              </div>
+              <div className="right-signature">
+                <input
+                  type="text"
+                  id="position"
+                  name="position"
+                  placeholder="Persona Autorizada"
+                  
+                />{" "}
+                {/* Signature Input */}
+                <hr /> {/* Signature Line */}
+                <p>
+                  Nombre de la persona autorizada:
+                  <br />
+                </p>
+              </div>
+            </div>
+            <div className="big-box-bottom" id="signature-bottom">
+              <div className="center-signature">
+                <input
+                  type="tel"
+                  id="phone"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  minLength={12}
+                  maxLength={12}
+                  name="phone"
+                  placeholder="123-456-7890"
+                  
+                />
+                {/* Signature Input */}
+                <hr /> {/* Signature Line */}
+                <p>
+                  Numbero de Telefono:
+                  <br />
+                </p>
+              </div>
+            </div>
+          </section> 
     <section className="submit-button-container">
       <input type="submit" defaultValue="SUBMIT" className="submit-button" />
     </section>

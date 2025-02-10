@@ -231,14 +231,6 @@ table {
     border-collapse: collapse;
   }
   
-  /* th {
-    padding: 10px;
-    text-align: center;
-    font-size: 0.9em;
-    border: 1px solid black;
-    background-color: #dddddd;
-  } */
-  
   td {
     border: 1px solid black;
     padding: 5px;
@@ -368,21 +360,24 @@ input {
     margin-top: 80px;
 }
   
-.center-signature {
-    margin-top: 1px;
-    margin-right: 40px;
-    margin-left: 40px;
-  }
-  
 .left-signature {
     padding-top: 1px;
     line-height: 1.5;
-}
-
-.right-signature {
+  }
+  
+  .center-signature {
+    margin-right: 40px;
+    margin-left: 40px;
     padding-top: 1px;
     line-height: 1.5;
-}
+    margin-top: -180px;
+  }
+
+  .right-signature {
+    padding-top: 1px;
+    line-height: 1.5;
+    margin-top: -1px;
+  }
 
 #header_inputs_right {
     width: 20%;
