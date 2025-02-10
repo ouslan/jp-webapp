@@ -927,16 +927,15 @@ function JP_529_qtr() {
               </div>
               <div className="right-signature">
                 <input
-                  type="text"
+                  type="date"
                   id="position"
-                  name="position"
-                  placeholder="Persona Autorizada"
+                  name="date"
                   
                 />{" "}
                 {/* Signature Input */}
                 <hr /> {/* Signature Line */}
                 <p>
-                  Nombre de la persona autorizada:
+                  Fecha:
                   <br />
                 </p>
               </div>
@@ -949,14 +948,13 @@ function JP_529_qtr() {
                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   minLength={12}
                   maxLength={12}
-                  name="phone"
-                  placeholder="123-456-7890"
-                  
+                  name="title"
+                  placeholder="Titulo"
                 />
                 {/* Signature Input */}
                 <hr /> {/* Signature Line */}
                 <p>
-                  Numbero de Telefono:
+                  Titulo del puesto:
                   <br />
                 </p>
               </div>
