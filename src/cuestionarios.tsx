@@ -205,7 +205,13 @@ function Cuestionarios() {
 
           <div style={{ marginTop: '20px' }}>
             <Link to="/IP-230-qtr">IP-230-qtr</Link></div>
+          
+        <h2>Gastos</h2>
 
+          {/* Link to Gastos Intangibles Form */}
+          <div style={{ marginTop: '20px' }}>
+            <Link to="/Cuestionario-Inovacion-Desarrollo">Cuestionario De Medición De Inovación Y Desarrollo</Link>
+          </div>
 
       </div>
 
