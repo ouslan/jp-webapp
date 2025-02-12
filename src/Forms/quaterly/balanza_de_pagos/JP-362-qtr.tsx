@@ -14,6 +14,7 @@ function JP_362_qrt() {
                 <br />
                 Rev. 7/17
                 <br />
+                
                 <input
                   id="header_inputs_right"
                   type="number"
