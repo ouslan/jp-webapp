@@ -12,6 +12,11 @@ function Proyectos() {
       <button onClick={() => navigate('/cuestionarios')}>Ir a Cuestionarios</button>
       <button onClick={() => navigate('/colaboradores')}>Ir a Colaboradores</button>
 
+
+      <div>
+        <button onClick={() => navigate('/proyectos/indice_desarrollo_humano')}>Índice de Desarrollo Humano</button>
+        </div>
+
     </div>
   );
 }

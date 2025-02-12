@@ -3,7 +3,10 @@ import Home from './home'; //  Home component
 import Cuestionarios from './cuestionarios'; //  Cuestionarios component
 import Proyectos from './proyectos'; //  Cuestionarios component
 import Colaboradores from './colaboradores'; //  Cuestionarios component
-import Altair_map from './altair_map'
+
+          {/* Import all links to projects */}
+import HumanDevelopmentIndex from './proyectos/indice_desarrollo_humano';
+
 
           {/* Import all links to forms */}
 import JP_541 from  './Forms/yearly/construccion/JP-541';
@@ -75,6 +78,8 @@ function App() {
       <Route path="/cuestionarios" element={<Cuestionarios />} />
       <Route path="/proyectos" element={<Proyectos />} />
       <Route path="/colaboradores" element={<Colaboradores />} />
+      <Route path="/proyectos/indice_desarrollo_humano" element={<HumanDevelopmentIndex/>} />
+
 
       <Route path="/JP-541" element={<JP_541 />} />
 
@@ -135,8 +140,6 @@ function App() {
       <Route path="/IP-210-qtr" element={<IP_210_qtr />} />
       <Route path="/IP-220-qtr" element={<IP_220_qtr />} />
       <Route path="/IP-230-qtr" element={<IP_230_qtr />} />
-
-      <Route path="/altair_map" element={<Altair_map />} />
 
     </Routes>
   );
