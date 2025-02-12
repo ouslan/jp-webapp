@@ -212,6 +212,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
+    margin-left: 10px;
   }
   
   #header_left {
@@ -273,6 +274,7 @@ body {
 
 .dropdown {
   display: flex; 
+  margin-left: 50px;
 }
 
 #quater_select {
