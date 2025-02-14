@@ -67,76 +67,84 @@ import IP_110_qtr from  './Forms/quaterly/ingreso_neto/IP-110-qtr';
 import IP_210_qtr from  './Forms/quaterly/ingreso_neto/IP-210-qtr';
 import IP_220_qtr from  './Forms/quaterly/ingreso_neto/IP-220-qtr';
 import IP_230_qtr from  './Forms/quaterly/ingreso_neto/IP-230-qtr';
+
+
+
+import Graficas from './components/grafica';
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/cuestionarios" element={<Cuestionarios />} />
-      <Route path="/proyectos" element={<Proyectos />} />
-      <Route path="/colaboradores" element={<Colaboradores />} />
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cuestionarios" element={<Cuestionarios />} />
+        <Route path="/proyectos" element={<Proyectos />} />
+        <Route path="/colaboradores" element={<Colaboradores />} />
+        
 
-      <Route path="/JP-541" element={<JP_541 />} />
+        <Route path="/JP-541" element={<JP_541 />} />
 
-      <Route path="/JP-361" element={<JP_361 />} />
-      <Route path="/JP-362" element={<JP_362 />} />
-      <Route path="/JP-363" element={<JP_363 />} />
-      <Route path="/JP-364" element={<JP_364 />} />
-      <Route path="/JP-375" element={<JP_375 />} />
-      <Route path="/JP-383" element={<JP_383 />} />
-      <Route path="/JP-529" element={<JP_529 />} />
-      <Route path="/JP-539-2" element={<JP_539_2 />} />
-      <Route path="/JP-544-1" element={<JP_544_1 />} />
-      <Route path="/JP-544-2" element={<JP_544_2 />} />
-      <Route path="/JP-544" element={<JP_544 />} />
-      <Route path="/JP-547" element={<JP_547 />} />
-      <Route path="/JP-304" element={<JP_304 />} />
-      <Route path="/JP-361-qtr" element={<JP_361_qtr />} />
-      <Route path="/JP-362-qtr" element={<JP_362_qtr />} />
-      <Route path="/JP-363-qtr" element={<JP_363_qtr />} />
-      <Route path="/JP-364-qtr" element={<JP_364_qtr />} />
-      <Route path="/JP-375-qtr" element={<JP_375_qtr />} />
-      <Route path="/JP-529-qtr" element={<JP_529_qtr />} />
-      <Route path="/JP-536-2-qtr" element={<JP_536_2_qtr />} />
-      <Route path="/JP-544-qtr" element={<JP_544_qtr />} />
-      <Route path="/IP-110" element={<IP_110 />} />
-      <Route path="/IP-210" element={<IP_210 />} />
-      <Route path="/IP-220" element={<IP_220 />} />
-      <Route path="/IP-230" element={<IP_230 />} />
-      <Route path="/IP-310" element={<IP_310 />} />
-      <Route path="/IP-310b" element={<IP_310b />} />
-      <Route path="/IP-420" element={<IP_420 />} />
-      <Route path="/IP-440" element={<IP_440 />} />
-      <Route path="/IP-440g" element={<IP_440g />} />
-      <Route path="/IP-480" element={<IP_480 />} />
-      <Route path="/IP-480a" element={<IP_480a />} />
-      <Route path="/IP-490" element={<IP_490 />} />
-      <Route path="/IP-510" element={<IP_510 />} />
-      <Route path="/IP-520" element={<IP_520 />} />
-      <Route path="/IP-520a" element={<IP_520a />} />
-      <Route path="/IP-520s" element={<IP_520s />} />
-      <Route path="/IP-530" element={<IP_530 />} />
-      <Route path="/IP-540" element={<IP_540 />} />
-      <Route path="/IP-540a" element={<IP_540a />} />
-      <Route path="/IP-540J" element={<IP_540J />} />
-      <Route path="/IP-540P" element={<IP_540P />} />
-      <Route path="/IP-540S" element={<IP_540S />} />
-      <Route path="/IP-540v" element={<IP_540v />} />
-      <Route path="/IP-610" element={<IP_610 />} />
-      <Route path="/IP-620" element={<IP_620 />} />
-      <Route path="/IP-710" element={<IP_710 />} />
-      <Route path="/IP-720" element={<IP_720 />} />
-      <Route path="/IP-810" element={<IP_810 />} />
-      <Route path="/JP-560-2" element={<JP_560_2 />} />
-      <Route path="/JP-560-63110" element={<JP_560_63110 />} />
-      <Route path="/JP-560-63111" element={<JP_560_63111 />} />
-      <Route path="/JP-560-63210" element={<JP_560_63210 />} />
-      <Route path="/IP-110-qtr" element={<IP_110_qtr />} />
-      <Route path="/IP-210-qtr" element={<IP_210_qtr />} />
-      <Route path="/IP-220-qtr" element={<IP_220_qtr />} />
-      <Route path="/IP-230-qtr" element={<IP_230_qtr />} />
+        <Route path="/JP-361" element={<JP_361 />} />
+        <Route path="/JP-362" element={<JP_362 />} />
+        <Route path="/JP-363" element={<JP_363 />} />
+        <Route path="/JP-364" element={<JP_364 />} />
+        <Route path="/JP-375" element={<JP_375 />} />
+        <Route path="/JP-383" element={<JP_383 />} />
+        <Route path="/JP-529" element={<JP_529 />} />
+        <Route path="/JP-539-2" element={<JP_539_2 />} />
+        <Route path="/JP-544-1" element={<JP_544_1 />} />
+        <Route path="/JP-544-2" element={<JP_544_2 />} />
+        <Route path="/JP-544" element={<JP_544 />} />
+        <Route path="/JP-547" element={<JP_547 />} />
+        <Route path="/JP-304" element={<JP_304 />} />
+        <Route path="/JP-361-qtr" element={<JP_361_qtr />} />
+        <Route path="/JP-362-qtr" element={<JP_362_qtr />} />
+        <Route path="/JP-363-qtr" element={<JP_363_qtr />} />
+        <Route path="/JP-364-qtr" element={<JP_364_qtr />} />
+        <Route path="/JP-375-qtr" element={<JP_375_qtr />} />
+        <Route path="/JP-529-qtr" element={<JP_529_qtr />} />
+        <Route path="/JP-536-2-qtr" element={<JP_536_2_qtr />} />
+        <Route path="/JP-544-qtr" element={<JP_544_qtr />} />
+        <Route path="/IP-110" element={<IP_110 />} />
+        <Route path="/IP-210" element={<IP_210 />} />
+        <Route path="/IP-220" element={<IP_220 />} />
+        <Route path="/IP-230" element={<IP_230 />} />
+        <Route path="/IP-310" element={<IP_310 />} />
+        <Route path="/IP-310b" element={<IP_310b />} />
+        <Route path="/IP-420" element={<IP_420 />} />
+        <Route path="/IP-440" element={<IP_440 />} />
+        <Route path="/IP-440g" element={<IP_440g />} />
+        <Route path="/IP-480" element={<IP_480 />} />
+        <Route path="/IP-480a" element={<IP_480a />} />
+        <Route path="/IP-490" element={<IP_490 />} />
+        <Route path="/IP-510" element={<IP_510 />} />
+        <Route path="/IP-520" element={<IP_520 />} />
+        <Route path="/IP-520a" element={<IP_520a />} />
+        <Route path="/IP-520s" element={<IP_520s />} />
+        <Route path="/IP-530" element={<IP_530 />} />
+        <Route path="/IP-540" element={<IP_540 />} />
+        <Route path="/IP-540a" element={<IP_540a />} />
+        <Route path="/IP-540J" element={<IP_540J />} />
+        <Route path="/IP-540P" element={<IP_540P />} />
+        <Route path="/IP-540S" element={<IP_540S />} />
+        <Route path="/IP-540v" element={<IP_540v />} />
+        <Route path="/IP-610" element={<IP_610 />} />
+        <Route path="/IP-620" element={<IP_620 />} />
+        <Route path="/IP-710" element={<IP_710 />} />
+        <Route path="/IP-720" element={<IP_720 />} />
+        <Route path="/IP-810" element={<IP_810 />} />
+        <Route path="/JP-560-2" element={<JP_560_2 />} />
+        <Route path="/JP-560-63110" element={<JP_560_63110 />} />
+        <Route path="/JP-560-63111" element={<JP_560_63111 />} />
+        <Route path="/JP-560-63210" element={<JP_560_63210 />} />
+        <Route path="/IP-110-qtr" element={<IP_110_qtr />} />
+        <Route path="/IP-210-qtr" element={<IP_210_qtr />} />
+        <Route path="/IP-220-qtr" element={<IP_220_qtr />} />
+        <Route path="/IP-230-qtr" element={<IP_230_qtr />} />
+      </Routes>
 
-
-    </Routes>
+      <Graficas/>
+    </>
   );
 }
 
