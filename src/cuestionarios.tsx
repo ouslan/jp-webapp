@@ -205,12 +205,6 @@ function Cuestionarios() {
 
           <div style={{ marginTop: '20px' }}>
             <Link to="/IP-230-qtr">IP-230-qtr</Link></div>
-
-          <h2>Mapa (temporary)</h2>        {/* Esto se va a mover de aquí*/}
-
-          <div style={{ marginTop: '20px' }}>
-          <Link to="/altair_map">Altair Map</Link></div>
-
       </div>
 
     </div>
