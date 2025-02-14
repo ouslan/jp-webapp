@@ -1,20 +1,35 @@
-// import React, { useEffect } from "react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import vegaEmbed from "vega-embed";
-import '../css/website.css'; // Adjust path as needed
-import '../css/indice.css'; // Adjust path as needed
-import hdiRoadMap from '../assets/hdiRoadMap.png';
+import "../css/website.css"; // Adjust path as needed
+import "../css/indice.css"; // Adjust path as needed
+import hdiRoadMap from "../assets/hdiRoadMap.png";
 
 import logo from "../assets/gobierno_de_puerto_rico.png";
 
-
 const HumanDevelopmentIndex: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // Toggle burger menu
   const toggleBurgerMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // Load Vega-Lite JSON from a static file
+  useEffect(() => {
+    fetch("/graphics/chart.json")
+      .then((response) => response.json())
+      .then((spec) => {
+        <div id="vis"></div>
+        vegaEmbed("#vis", spec)
+          .then((result) => console.log("Graph rendered!", result.view))
+          .catch((error) => console.error("Error rendering graph:", error));
+      })
+      .catch((error) => {
+        setError("Failed to load the chart. Please try again later.");
+        console.error("Error fetching chart:", error);
+      });
+  }, []);
 
   return (
     <>
@@ -38,61 +53,45 @@ const HumanDevelopmentIndex: React.FC = () => {
       <h1>Índice de Desarrollo Humano</h1>
 
       <p className="main_content">
-          El Índice de Desarrollo Humano (IDH) es una medida compuesta que evalúa el desarrollo de un país 
-          basado en tres dimensiones clave: una vida larga y saludable, el acceso a la educación y un nivel 
-          de vida digno. Creado por el Programa de las Naciones Unidas para el Desarrollo (PNUD), su objetivo 
-          es proporcionar una visión más integral del desarrollo que va más allá de los indicadores económicos 
-          tradicionales como el Producto Interno Bruto (PIB) per cápita.
-        </p>
-
-      <p className="main_content">
-          <strong>1. Salud: </strong> 
-           medida por la <strong>esperanza</strong> de vida al nacer.
+        El Índice de Desarrollo Humano (IDH) es una medida compuesta que evalúa el desarrollo de un país basado en tres dimensiones clave: una vida larga y saludable, el acceso a la educación y un nivel de vida digno. 
+        Creado por el Programa de las Naciones Unidas para el Desarrollo (PNUD), su objetivo es proporcionar una visión más integral del desarrollo que va más allá de los indicadores económicos tradicionales como el Producto Interno Bruto (PIB) per cápita.
       </p>
 
-      <p className="main_content">
-          <strong>2. Educación: </strong> 
-          evaluada por los <strong>años promedio de escolaridad </strong> en adultos, que sirve como un indicador 
-          del nivel educativo alcanzado por la población adulta, y los <strong>años esperados de escolarización </strong> 
-          para niños, que reflejan la duración esperada de la educación para las futuras generaciones.
-      </p>	
+      {/* IDH Explanation */}
+      <p className="main_content"><strong>1. Salud:</strong> medida por la <strong>esperanza</strong> de vida al nacer.</p>
+      <p className="main_content"><strong>2. Educación:</strong> evaluada por los <strong>años promedio de escolaridad</strong> en adultos y los <strong>años esperados de escolarización</strong> para niños.</p>
+      <p className="main_content"><strong>3. Nivel de vida:</strong> representado por el <strong>ingreso nacional bruto (INB) per cápita</strong>, ajustado para reflejar la disminución de la utilidad del ingreso a niveles más altos.</p>
 
-      <p className="main_content">
-          <strong>3. Nivel de vida: </strong> 
-          representado por el <strong>ingreso nacional bruto (INB) per cápita</strong>, ajustado mediante una                  
-          función logarítmica para reflejar la disminución de la utilidad del ingreso a niveles 
-          más altos. Reconoce el impacto del ingreso en el bienestar. 
-      </p>	
-      <p className="main_content">
-          El IDH se calcula como la <strong>media geométrica</strong> de los índices normalizados para estas dimensiones, 
-          lo que asegura que un desempeño bajo en una dimensión no se compense completamente con un alto desempeño en otra, 
-          resaltando la necesidad de un desarrollo equilibrado. El IDH permite comparar países con un mismo nivel de ingresos, 
-          pero con diferentes resultados en desarrollo humano. Sin embargo, este no refleja desigualdades, pobreza u otros 
-          factores como la seguridad y la equidad de género, por lo que existen otros índices complementarios que ofrecen una 
-          visión más completa.
-      </p>
-                          {/* SUBBODY 1 */}
-          <section>
-             <div>
-               <h2>Hoja de ruta del Índice de Desarrollo Humano</h2>
-               <div className="image-container">
-            <img
-              src={hdiRoadMap}
-              alt="Hoja de ruta del Índice de Desarrollo Humano"
-              className="responsive-image"
-              />
-            </div>
+      {/* IDH Hoja de Ruta */}
+      <section>
+        <div>
+          <h2>Hoja de ruta del Índice de Desarrollo Humano</h2>
+          <div className="image-container">
+            <img src={hdiRoadMap} alt="Hoja de ruta del Índice de Desarrollo Humano" className="responsive-image" />
+          </div>
+          <p className="image_subtitle">
+            <a href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI" target="_blank" rel="noopener noreferrer">
+              Programa de las Naciones Unidas para el Desarrollo (PNUD)
+            </a>
+          </p>
+        </div>
+      </section>
 
-               <p className="image_subtitle"><a href="https://hdr.undp.org/data-center/human-development-index#/indicies/HDI" target="_blank">Programa de las Naciones Unidas para el Desarrollo (PNUD)</a>.</p>
-             </div>
-          </section>
+      {/* 📊 Vega-Lite Chart Section */}
+      <section>
+        <div>
+          <h2>Gráfica</h2>
+          {error ? (
+            <p style={{ color: "red" }}>{error}</p>
+          ) : (
+            <section style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", width: "100%" }}>
+            <div id="vis" style={{ width: "80vw", height: "80vh" }}></div>       {/*  Vega-Lite Chart will render here */}
+            </section> )}    
 
-          <section>
-            <div>
-              <h2>Gráfica</h2>
-            </div>
-          </section>
+        </div>
+      </section>
 
+      {/* Footer (No Changes) */}  
                   {/* ------------------ FOOTER --------------------- */}
         <footer>
           <main>
@@ -157,19 +156,6 @@ const HumanDevelopmentIndex: React.FC = () => {
 };
 
 export default HumanDevelopmentIndex;
-
-
-
-
-
-
-//       </div>
-//     );
-//   }
-// });
-
-// export default HumanDevelopmentIndex;
-
 
 
 
