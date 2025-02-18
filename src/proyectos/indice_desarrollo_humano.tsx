@@ -80,7 +80,7 @@ const HumanDevelopmentIndex: React.FC = () => {
       {/* 📊 Vega-Lite Chart Section */}
       <section>
         <div>
-          <h2>Gráfica</h2>
+          <h2>Gráfica IDH</h2>
           {error ? (
             <p style={{ color: "red" }}>{error}</p>
           ) : (
