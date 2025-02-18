@@ -67,6 +67,7 @@ import IP_110_qtr from  './Forms/quaterly/ingreso_neto/IP-110-qtr';
 import IP_210_qtr from  './Forms/quaterly/ingreso_neto/IP-210-qtr';
 import IP_220_qtr from  './Forms/quaterly/ingreso_neto/IP-220-qtr';
 import IP_230_qtr from  './Forms/quaterly/ingreso_neto/IP-230-qtr';
+
 function App() {
   return (
     <Routes>
@@ -134,7 +135,6 @@ function App() {
       <Route path="/IP-210-qtr" element={<IP_210_qtr />} />
       <Route path="/IP-220-qtr" element={<IP_220_qtr />} />
       <Route path="/IP-230-qtr" element={<IP_230_qtr />} />
-
 
     </Routes>
   );
