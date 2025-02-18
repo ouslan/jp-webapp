@@ -1,0 +1,138 @@
+/* home.css */
+
+.header, .hero, .about, .footer {
+  width: 100vw;
+}
+
+.home {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.header {
+  background-color: #003366;
+  color: white;
+  padding: 10px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo img {
+  width: 75px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+  background: url('src/assets/morro2.jpg') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.805);
+  font-weight: bold;
+  margin: 0;
+}
+
+.about {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+.about p {
+  font-size: 18px;
+  color: #666;
+}
+
+.hero-logo {
+  width: 200px;
+  margin-top: 20px;
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.info-card {
+  background-color: #e6e6e6;
+  padding: 20px;
+  border-radius: 8px;
+  width: 40%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h2 {
+  font-size: 24px;
+  color: #003366;
+}
+
+.info-card p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
