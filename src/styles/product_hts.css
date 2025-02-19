@@ -58,3 +58,63 @@ body {
   background-color: #fff !important;
   color: #000;
 }
+
+/* FOOTER */
+footer {
+  background-color: #C7C7C7;
+  box-shadow: 0 -10px 10px -10px rgba(131, 131, 131, 0.5);
+}
+
+footer h1 {
+  font-size: 35px;
+  padding-top: 40px;
+  margin-bottom: 1px;
+  margin-left: 8vw;
+}
+
+footer h2 {
+  font-size: 2em;
+  margin-top: 4vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
+footer p {
+  display: block;
+  font-size: 1.2em;
+  text-align: justify;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  line-height: 1.5;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-container {
+  width: 48%;
+  padding-top: 1px;
+}
+
+.right-container {
+  width: 48%;
+  padding-top: 5px;
+}
+
+.maps {
+  padding-top: 50px;
+}
+
+.custom-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.custom-link:hover {
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+}
