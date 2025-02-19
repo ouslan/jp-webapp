@@ -118,3 +118,9 @@ footer p {
   cursor: pointer;
   text-decoration: none;
 }
+
+main {
+  background-color: transparent !important; 
+  border-radius: 0 !important; 
+  box-shadow: none !important;
+}

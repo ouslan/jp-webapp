@@ -98,6 +98,8 @@ const ProductHTS: React.FC = () => {
             />
           </div>
         </form>
+        </main>
+
         <footer>
             <section>
               <h1>Contáctanos</h1>
@@ -141,7 +143,6 @@ const ProductHTS: React.FC = () => {
               </div>
             </section>
         </footer>
-      </main>
     </div>
   );
 };
