@@ -3,41 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Plot from 'react-plotly.js';
 import "../styles/product_hts.css";
 
-
-const API_URL = "https://api.econlabs.net/data/trade/jp/";
-
 const ProductHTS: React.FC = () => {
-  const navigate = useNavigate();
-  const [frequency, setFrequency] = useState('yearly');
-  const [htsCode, setHtsCode] = useState('01');
-  const [tradeType, setTradeType] = useState('imports');
-  const [htsCodes, setHtsCodes] = useState<string[]>([]);
-  const [graphData, setGraphData] = useState<{ x: string[], y: number[] }>({ x: [], y: [] });
-
-  useEffect(() => {
-    fetch(`${API_URL}hts_codes/`)
-      .then(response => response.json())
-      .then(data => setHtsCodes(data.map((item: any) => item.hts_code_first2)))
-      .catch(error => console.error("Error fetching HTS codes:", error));
-  }, []);
-
-  const fetchGraphData = () => {
-    fetch(`${API_URL}?types=hts&agr=false&group=false&data_filter=${htsCode}&agg=${frequency}`)
-      .then(response => response.json())
-      .then(data => {
-        const sortedData = data.sort((a: any, b: any) => a[frequency] - b[frequency]);
-        setGraphData({
-          x: sortedData.map((item: any) => item[frequency]),
-          y: sortedData.map((item: any) => item[tradeType])
-        });
-      })
-      .catch(error => console.error("Error fetching trade data:", error));
-  };
-
-  useEffect(() => {
-    fetchGraphData();
-  }, [frequency, htsCode, tradeType]);
-
   return (
     <div className="container">
       <main>
@@ -60,7 +26,7 @@ const ProductHTS: React.FC = () => {
             <section id="buttons">
               <section id="dropdowns">
                 <label htmlFor="frequency">Frecuencia:</label>
-                <select name="frequency" id="frequency" value={frequency} onChange={(e) => setFrequency(e.target.value)}>
+                <select name="frequency" id="frequency">
                   <option value="yearly">Yearly</option>
                   <option value="monthly">Monthly</option>
                   <option value="qrt">Quarterly</option>
@@ -69,33 +35,19 @@ const ProductHTS: React.FC = () => {
               </section>
               <section id="dropdowns">
                 <label htmlFor="hts_code">HTS Code:</label>
-                <select name="hts_code" id="hts_code" value={htsCode} onChange={(e) => setHtsCode(e.target.value)}>
-                  {htsCodes.map((code) => (
-                    <option key={code} value={code}>{code}</option>
-                  ))}
+                <select name="hts_code" id="hts_code">
+                  
                 </select>
               </section>
               <section id="dropdowns">
                 <label htmlFor="trade_type">Trade Type:</label>
-                <select name="trade_type" id="trade_type" value={tradeType} onChange={(e) => setTradeType(e.target.value)}>
+                <select name="trade_type" id="trade_type">
                   <option value="imports">Imports</option>
                   <option value="exports">Exports</option>
                 </select>
               </section>
-              <button id="submit" type="button" onClick={fetchGraphData}>Submit</button>
+              <button id="submit" type="button">Submit</button>
             </section>
-          </div>
-
-          <div className="graph_display">
-            <Plot
-              data={[{
-                x: graphData.x,
-                y: graphData.y,
-                mode: 'lines+markers',
-                type: 'scatter',
-              }]}
-              layout={{ title: `Frequency: ${frequency} | HTS Code: ${htsCode} | Trade Type: ${tradeType}` }}
-            />
           </div>
         </form>
         </main>
