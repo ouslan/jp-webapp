@@ -124,3 +124,35 @@ main {
   border-radius: 0 !important; 
   box-shadow: none !important;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh; /* Esto asegura que el contenido ocupe toda la pantalla */
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1; /* Se expande para llenar el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+main {
+  flex: 1; /* Asegura que el contenido principal ocupe el espacio restante */
+  width: 100%;
+  padding: 20px;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto; /* Empuja el footer hacia abajo */
+  background-color: #C7C7C7;
+  box-shadow: 0 -10px 10px -10px rgba(131, 131, 131, 0.5);
+}
+
+
+
