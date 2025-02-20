@@ -1,7 +1,7 @@
 // src/pages/home.tsx
 import React, { useState } from 'react';
-import './style/home.css';
-import './style/slider.css';
+import './styles/home.css';
+import './styles/slider.css';
 
 const Home = () => {
 
