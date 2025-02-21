@@ -1,5 +1,5 @@
 // src/pages/home.tsx
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './styles/home.css';
 import './styles/slider.css';
 
